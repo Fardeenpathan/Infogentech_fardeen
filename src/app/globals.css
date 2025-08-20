@@ -42,6 +42,7 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 6px);
 }
 
 :root {
@@ -145,3 +146,24 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #64748b;
 }
+
+/* .gradient-border {
+  border: 4px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to right, #7544E4, #FFFFFF);
+  border-radius: 0.625rem; /* same as Tailwind's rounded-md */
+/*  background-clip: padding-box;
+  } 
+ */
+
+ .gradient-border {
+  border: 4px solid transparent; /* border visible but transparent */
+  border-radius: 12px;
+  background: linear-gradient(90deg, #ff00cc, #3333ff) border-box; /* gradient applies only to border */
+  -webkit-mask:
+    linear-gradient(#fff 0 0) padding-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+          mask-composite: exclude;
+}
+
