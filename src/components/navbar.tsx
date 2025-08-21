@@ -1,11 +1,15 @@
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
+// import { ServicesDropdown } from "./services-dropdown";
 import "../app/globals.css";
+
+import { ServicesDropdown } from "../components/services-dropdown";
+
+
 
 export function Navbar() {
   return (
-    <nav className="flex bg-transparent top-6.25 fixed w-full justify-between items-center z-50 ">
+    <nav className="flex bg-transparent top-6.25 h-15  fixed w-full justify-between items-center z-50 ">
       {/* Left Side Navigation (including Logo) */}
       <div className="flex items-center border-1 border-[#8E8E8E] rounded-md ml-38">
         <div className="flex items-center pl-3.75 py-2.25 space-x-1.5">
@@ -23,14 +27,16 @@ export function Navbar() {
           />
 
         </div>
-        <div className="space-x-12.5 py-4.5 px-12.5 text-lg font-medium font-Jost">
+        <div className="flex flex-row space-x-12.5 py-4.5 px-12.5 text-lg font-medium font-Jost">
           {/* Navigation links */}
-          <Link
+          {/* <Link
             href="/"
             className=""
           >
             Services
-          </Link>
+          </Link> */}
+
+          <ServicesDropdown  />
           <Link
             href="#"
             className=""
