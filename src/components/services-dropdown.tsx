@@ -170,11 +170,11 @@ export function ServicesDropdown() {
   return (
     <div className="inline-flex relative group">
       <button className="cursor-pointer focus:outline-none">Services</button>
-      <div className=" absolute group-hover:flex hidden  shadow-lg rounded-md  ">
+      <div className=" absolute group-hover:flex hidden  shadow-lg rounded-md  top-12 -left-38  ">
         {/* Main Items */}
-        <ul className="py-2  bg-gradient-to-b from-[#A279FF] to-[#3B1C83] background-blur-2xl">
+        <ul className=" bg-gradient-to-b from-[#A279FF] to-[#3B1C83] background-blur-2xl">
           {servicesMenu.map((item, index) => (
-            <li key={index} onClick={() => handleItemClick(item.label)} className="flex flex-col pl-5 pt-6.5 space-y-1.25 w-99 h-31.5 left-71.5 mt-6.5 font-Jost  leading-[120%] tracking-[0.72px] bg-clip-text text-transparent bg-gradient-to-r from-[#C4C4C4] to-[#FFFFFF] background-blur-2xl hover:bg-gradient-to-r hover:from-[#3F1A93] hover:to-[#A279FF] text-left hover:backdrop-blur-2xl">
+            <li key={index} onClick={() => handleItemClick(item.label)} className="flex flex-col pl-5  space-y-1.2 w-99  left-71.5 mt-6.5 font-Jost  leading-[120%] tracking-[0.72px] bg-clip-text text-transparent bg-gradient-to-r from-[#C4C4C4] to-[#FFFFFF] background-blur-2xl hover:bg-gradient-to-r hover:from-[#3F1A93] hover:to-[#A279FF] text-left hover:backdrop-blur-2xl">
               {/* <button
                 onClick={() => handleItemClick(item.label)}
                 className={

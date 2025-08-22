@@ -8,7 +8,7 @@ export default function Home() {
     <main className="relative min-h-screen bg-slate-950 overflow-x-hidden">
       <BackgroundEffects />
       <Navbar />
-      {/* <HeroSection /> */}
+      <HeroSection />
       {/* <StatsSection /> */}
     </main>
   )
