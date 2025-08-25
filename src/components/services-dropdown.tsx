@@ -170,11 +170,11 @@ export function ServicesDropdown() {
   return (
     <div className="inline-flex relative group">
       <button className="cursor-pointer focus:outline-none">Services</button>
-      <div className=" absolute group-hover:flex hidden  shadow-lg rounded-md  top-12 -left-38  ">
+      <div className=" absolute group-hover:flex hidden  shadow-lg    top-12 -left-38 backdrop-blur-3xl">  
         {/* Main Items */}
-        <ul className=" bg-gradient-to-b from-[#A279FF] to-[#3B1C83] background-blur-2xl">
+        <div className=" bg-gradient-to-b from-[#A279FF] to-[#3B1C83] pl-1 pt-1">
           {servicesMenu.map((item, index) => (
-            <li key={index} onClick={() => handleItemClick(item.label)} className="flex flex-col pl-5  space-y-1.2 w-99  left-71.5 mt-6.5 font-Jost  leading-[120%] tracking-[0.72px] bg-clip-text text-transparent bg-gradient-to-r from-[#C4C4C4] to-[#FFFFFF] background-blur-2xl hover:bg-gradient-to-r hover:from-[#3F1A93] hover:to-[#A279FF] text-left hover:backdrop-blur-2xl">
+            <div key={index} onClick={() => handleItemClick(item.label)} className="flex flex-col w-99 pl-4 my-5 font-Jost  leading-[120%] tracking-[0.72px] bg-clip-text text-transparent bg-gradient-to-r from-[#C4C4C4] to-[#FFFFFF] background-blur-2xl hover:bg-gradient-to-r hover:from-[#3F1A93] hover:to-[#A279FF] text-left hover:backdrop-blur-2xl">
               {/* <button
                 onClick={() => handleItemClick(item.label)}
                 className={
@@ -187,9 +187,9 @@ export function ServicesDropdown() {
 
                 {/* </div> */}
               {/* </button> */}
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
 
         {/* Subcategories */}
 
@@ -228,7 +228,7 @@ export function ServicesDropdown() {
               </div>
                
             ))}
-        </div>
+      </div>
       </div>
     </div>
   );
