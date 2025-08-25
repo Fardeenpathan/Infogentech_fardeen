@@ -196,8 +196,8 @@ export function ServicesDropdown() {
         <div className=" grid grid-cols-2 bg-slate-950 gap-x-100 font-Jost">
           {servicesMenu
             .find((item) => item.label === activeItem)
-            ?.subcategories.map((subcategory) => (
-              <div>
+            ?.subcategories.map((subcategory, index) => (
+              <div key={index} className="hover:bg-slate-900">
                  <Link
                   href={subcategory.href}
                 >
