@@ -209,6 +209,7 @@ export function ServicesDropdown() {
                       alt={"infogentech"}
                       width={52}
                       height={52}/>
+
                     <div>
                        {subcategory.label}
 

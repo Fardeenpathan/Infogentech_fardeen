@@ -5,11 +5,11 @@ import { BackgroundEffects } from '@/components/background-effects'
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen bg-slate-950 overflow-x-hidden">
+    <main className="relative bg-slate-950 overflow-x-hidden">
       <BackgroundEffects />
       <Navbar />
       <HeroSection />
-      {/* <StatsSection /> */}
+      <StatsSection />
     </main>
   )
 }

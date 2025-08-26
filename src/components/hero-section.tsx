@@ -3,13 +3,13 @@ import "../app/globals.css"
 
 export function HeroSection() {
   return (
-    <div className="relative min-h-screen flex items-center pt-20">
-      <div className="max-w-7xl  ml-38 h-128 w-190 top-56">
+    <div className="flex items-center">
+      {/* <div className=" ml-38 mt-56 "> */}
         {/* <div className="grid lg:grid-cols-2 gap-12 items-center"> */}
           {/* Left side - Content */}
           {/* <div className="space-y-8"> */}
             {/* Glass card container */}
-            <div className="relative bg-[#1A1A1A]  border border-white/10 rounded-2xl pl-7 pr-12 py-13 max-w-lg gap-8 backdrop-blur-2xl">
+            <div className="ml-38 mt-56 w-190 relative bg-[#1A1A1A] h-128  border border-white/10 rounded-2xl pl-7 pr-12 py-13   backdrop-blur-2xl">
               {/* Icon */}
               {/* <div className="flex items-start space-x-4 mb-6">
                 <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -28,7 +28,7 @@ export function HeroSection() {
               </h1>
               
               {/* Description */}
-              <p className="text-gray-300 text-lg font-Jost mb-8">
+              <p className="text-gray-300 text-lg font-Jost mb-8 font-medium align-middle">
                 We become your digital department bringing strategy, creativity,
                 and technical expertise to accelerate your business growth.
               </p>
@@ -42,7 +42,7 @@ export function HeroSection() {
             </div>
           {/* </div> */}
         {/* </div> */}
-      </div>
+      {/* </div> */}
     </div>
   )
 }
