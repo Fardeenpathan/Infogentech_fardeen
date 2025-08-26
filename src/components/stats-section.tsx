@@ -151,38 +151,38 @@ export function StatsSection() {
 
       <div className="flex flex-row ">
 
-        <div className="flex flex-col space-y-3">
+        <div className="flex flex-col space-y-3 items-center">
 
-          <div className="flex flex-row font-Jost font-bold text-6xl leading-[100%]  tracking-[-0.03em] uppercase">
-            <div className=" bg-gradient-to-r from-[#C4C4C4] to-[#FFFFFF] bg-clip-text text-transparent ml-7">
+          <div className="inline-block flex-row font-Jost font-bold text-6xl leading-[100%]  tracking-[-0.03em] uppercase">
+            <div className="inline-block bg-gradient-to-r from-[#C4C4C4] to-[#FFFFFF] bg-clip-text text-transparent ">
               250
             </div>
-            <div className="text-[#8752FF] font-bold">
+            <div className="text-[#8752FF] font-bold inline-block">
               +
             </div>
 
           </div>
 
-          <div className="font-Jost text-[#FFFFFF] text-2xl leading-6  h-6 mt-3">
+          <div className="inline-block font-Jost text-[#FFFFFF] text-2xl leading-6  h-6 mt-3">
             Projects Delivered
           </div>
 
         </div>
 
         <div className="h-18 border-l border-gray-400 mx-34"></div>
-        <div className="flex flex-col space-y-3">
+        <div className="flex flex-col space-y-3 items-center">
 
-          <div className="flex flex-row font-Jost font-bold text-6xl leading-[100%]  tracking-[-0.03em] uppercase">
-            <div className=" bg-gradient-to-r from-[#C4C4C4] to-[#FFFFFF] bg-clip-text text-transparent ml-15">
+          <div className="inline-block flex-row font-Jost font-bold text-6xl leading-[100%]  tracking-[-0.03em] uppercase">
+            <div className="inline-block bg-gradient-to-r from-[#C4C4C4] to-[#FFFFFF] bg-clip-text text-transparent">
               7
             </div>
-            <div className="text-[#8752FF] font-bold">
+            <div className="inline-block  text-[#8752FF] font-bold">
               +
             </div>
 
           </div>
 
-          <div className="font-Jost text-[#FFFFFF] text-2xl leading-6  h-6 mt-3">
+          <div className="font-Jost text-[#FFFFFF] text-2xl leading-6  h-6 mt-3 inline-block">
             Years of Experience
           </div>
 
@@ -190,19 +190,19 @@ export function StatsSection() {
 
          <div className="h-18 border-l border-gray-400 mx-34"></div>
 
-          <div className="flex flex-col space-y-3">
+          <div className="flex flex-col space-y-3 items-center">
 
-          <div className="flex flex-row font-Jost font-bold text-6xl leading-[100%]  tracking-[-0.03em] uppercase">
-            <div className=" bg-gradient-to-r from-[#C4C4C4] to-[#FFFFFF] bg-clip-text text-transparent ml-12">
+          <div className="inline-block flex-row font-Jost font-bold text-6xl leading-[100%]  tracking-[-0.03em] uppercase">
+            <div className=" bg-gradient-to-r from-[#C4C4C4] to-[#FFFFFF] bg-clip-text text-transparent inline-block">
               25
             </div>
-            <div className="text-[#8752FF] font-bold">
+            <div className="text-[#8752FF] font-bold inline-block">
               +
             </div>
 
           </div>
 
-          <div className="font-Jost text-[#FFFFFF] text-2xl leading-6  h-6 mt-3">
+          <div className="font-Jost text-[#FFFFFF] text-2xl leading-6  h-6 mt-3 inline-block">
            Professional Teams
           </div>
 
@@ -210,19 +210,19 @@ export function StatsSection() {
 
          <div className="h-18 border-l border-gray-400 mx-34"></div>
 
-           <div className="flex flex-col space-y-3">
+           <div className="flex flex-col space-y-3 items-center">
 
-          <div className="flex flex-row font-Jost font-bold text-6xl leading-[100%]  tracking-[-0.03em] uppercase">
-            <div className=" bg-gradient-to-r from-[#C4C4C4] to-[#FFFFFF] bg-clip-text text-transparent ml-1">
+          <div className="inline-block flex-row font-Jost font-bold text-6xl leading-[100%]  tracking-[-0.03em] uppercase">
+            <div className="inline-block bg-gradient-to-r from-[#C4C4C4] to-[#FFFFFF] bg-clip-text text-transparent ml-1">
               80
             </div>
-            <div className="text-[#8752FF] font-bold">
+            <div className="text-[#8752FF] font-bold inline-block">
               %
             </div>
 
           </div>
 
-          <div className="font-Jost text-[#FFFFFF] text-2xl leading-6  h-6 mt-3">
+          <div className="font-Jost text-[#FFFFFF] text-2xl leading-6  h-6 mt-3 inline-block">
            Active Client
           </div>
 
