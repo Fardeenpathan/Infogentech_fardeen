@@ -1,5 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { SVGImage } from "@/components/ui/svgImage";
+import StatsItem from "./stats-item";
+import { VerticalLine } from "./ui/vertical-line";
 
 interface StatItemProps {
   number: string;
@@ -150,84 +152,24 @@ export function StatsSection() {
       </div>
 
       <div className="flex flex-row ">
+        <StatsItem value="250" suffix="+" label="Projects Delivered" />
 
-        <div className="flex flex-col space-y-3 items-center">
+        <VerticalLine height={18} color="gray-400" className="mx-34" />
 
-          <div className="inline-block flex-row font-Jost font-bold text-6xl leading-[100%]  tracking-[-0.03em] uppercase">
-            <div className="inline-block bg-gradient-to-r from-[#C4C4C4] to-[#FFFFFF] bg-clip-text text-transparent ">
-              250
-            </div>
-            <div className="text-[#8752FF] font-bold inline-block">
-              +
-            </div>
+        {/* <div className="h-18 border-l border-gray-400 mx-34"></div> */}
+        <StatsItem value="7" suffix="+" label="Years of Experience" />
 
-          </div>
+        <VerticalLine height={18} color="gray-400" className="mx-34" />
 
-          <div className="inline-block font-Jost text-[#FFFFFF] text-2xl leading-6  h-6 mt-3">
-            Projects Delivered
-          </div>
+        {/* <div className="h-18 border-l border-gray-400 mx-34"></div> */}
 
-        </div>
+        <StatsItem value="25" suffix="+" label="Professional Teams" />
 
-        <div className="h-18 border-l border-gray-400 mx-34"></div>
-        <div className="flex flex-col space-y-3 items-center">
+        {/* <div className="h-18 border-l border-gray-400 mx-34"></div> */}
 
-          <div className="inline-block flex-row font-Jost font-bold text-6xl leading-[100%]  tracking-[-0.03em] uppercase">
-            <div className="inline-block bg-gradient-to-r from-[#C4C4C4] to-[#FFFFFF] bg-clip-text text-transparent">
-              7
-            </div>
-            <div className="inline-block  text-[#8752FF] font-bold">
-              +
-            </div>
+        <VerticalLine height={18} color="gray-400" className="mx-34" />
 
-          </div>
-
-          <div className="font-Jost text-[#FFFFFF] text-2xl leading-6  h-6 mt-3 inline-block">
-            Years of Experience
-          </div>
-
-        </div>
-
-         <div className="h-18 border-l border-gray-400 mx-34"></div>
-
-          <div className="flex flex-col space-y-3 items-center">
-
-          <div className="inline-block flex-row font-Jost font-bold text-6xl leading-[100%]  tracking-[-0.03em] uppercase">
-            <div className=" bg-gradient-to-r from-[#C4C4C4] to-[#FFFFFF] bg-clip-text text-transparent inline-block">
-              25
-            </div>
-            <div className="text-[#8752FF] font-bold inline-block">
-              +
-            </div>
-
-          </div>
-
-          <div className="font-Jost text-[#FFFFFF] text-2xl leading-6  h-6 mt-3 inline-block">
-           Professional Teams
-          </div>
-
-        </div>
-
-         <div className="h-18 border-l border-gray-400 mx-34"></div>
-
-           <div className="flex flex-col space-y-3 items-center">
-
-          <div className="inline-block flex-row font-Jost font-bold text-6xl leading-[100%]  tracking-[-0.03em] uppercase">
-            <div className="inline-block bg-gradient-to-r from-[#C4C4C4] to-[#FFFFFF] bg-clip-text text-transparent ml-1">
-              80
-            </div>
-            <div className="text-[#8752FF] font-bold inline-block">
-              %
-            </div>
-
-          </div>
-
-          <div className="font-Jost text-[#FFFFFF] text-2xl leading-6  h-6 mt-3 inline-block">
-           Active Client
-          </div>
-
-        </div>
-
+        <StatsItem value="80" suffix="%" label="Active Client" />
       </div>
 
       {/* <div className="h-[2px] w-full bg-gradient-to-r from-[#A177FF] to-[#523399]"></div> */}
