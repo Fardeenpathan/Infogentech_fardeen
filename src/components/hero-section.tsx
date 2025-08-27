@@ -1,13 +1,18 @@
 import { Button } from "@/components/ui/button";
+import { Navbar } from "./navbar";  
 import "../app/globals.css";
 
 export function HeroSection() {
   return (
-    <div className="flex items-center">
-      <div className="ml-38 mt-56 w-190 relative bg-[#1A1A1A] h-128  border border-white/10 rounded-2xl pl-7 pr-12 py-13   backdrop-blur-2xl">
+    <div className="">
+      
+    
+
+
+      <div className=" max-w-4xl mt-56  bg-transparent h-128  border border-white/10 rounded-2xl pl-7 pr-12 py-13   backdrop-blur-2xl">
         {/* Main heading */}
         <h1
-          className="text-5xl lg:text-6xl font-avalors mb-6 uppercase align-middle bg-gradient-to-r from-[#6A27FF]  to-[#FFFFFF] 
+          className="text-5xl lg:text-6xl font-avalors  uppercase align-middle bg-gradient-to-r from-[#6A27FF]  to-[#FFFFFF] 
               bg-clip-text text-transparent leading-[120%] tracking-[-0.75px]"
         >
           <span className="">Best Design. </span>

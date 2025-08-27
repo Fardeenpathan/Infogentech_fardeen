@@ -41,7 +41,7 @@ export function StatsSection() {
 
   return (
 
-    <div className="mt-39 mb-200 mx-14 h-85 border  border-[#15152A] px-23">
+    <div className="mt-39 mx-14 h-85 border  border-[#15152A] px-23">
       <div className="flex flex-row py-12">
         <div className="flex flex-row   space-x-8 ">
           <div className="flex flex:row border-1  border-[#8752FF]  px-7 h-11  space-x-2 w-auto  justify:center rounded-2xl items-center  ">
