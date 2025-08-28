@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button"; 
-import "../app/globals.css";
 
 export function HeroSection() {
   return (

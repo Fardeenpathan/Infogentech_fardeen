@@ -53,6 +53,7 @@ module.exports = {
       },
       backgroundImage: {
         'radial-gradient-card': 'radial-gradient(circle at center, rgba(59, 130, 246, 0.2) 0%, rgba(59, 130, 246, 0) 70%)',
+        'linear-gradient-purple-blue': 'linear-gradient(to right, #8B5CF6, #3B82F6)',
       },
       backdropFilter: {
         'none': 'none',
