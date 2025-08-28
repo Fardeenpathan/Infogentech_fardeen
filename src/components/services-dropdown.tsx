@@ -155,8 +155,12 @@ export function ServicesDropdown() {
             {servicesMenu.map((item, index) => (
               <div
                 key={index}
-                onClick={() => handleItemClick(item.label)}
-                className="flex flex-col py-5.5 w-96 h-31 pl-4 hover:bg-[linear-gradient(213deg,rgba(162,121,255,1)_0%,rgba(63,26,147,1)_89%)] rounded-l-md "
+                onMouseEnter={() => handleItemClick(item.label)}
+                className={`flex flex-col py-5.5 w-96 h-31 pl-4 rounded-l-md ${
+                  item.label === activeItem
+                    ? "bg-[linear-gradient(213deg,rgba(162,121,255,1)_0%,rgba(63,26,147,1)_89%)]"
+                    : "hover:bg-[linear-gradient(213deg,rgba(162,121,255,1)_0%,rgba(63,26,147,1)_89%)]"
+                }`}
               >
                 <div className="font-medium text-2xl">{item.label}</div>
                 <div className="justify-center font-['Jost'] leading-6 font-light">{item.description}</div>
