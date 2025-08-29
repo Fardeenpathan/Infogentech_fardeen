@@ -168,3 +168,7 @@
     0% 25%    /* top left */
   );
 }
+
+  .bg-\[url\(\)\] {
+    background-image: none;
+  }

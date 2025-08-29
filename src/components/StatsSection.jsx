@@ -3,28 +3,6 @@ import StatsItem from "./stats-item";
 import { VerticalLine } from "./ui/vertical-line";
 
 
-function StatItem({ number, label, color }) {
-  const colorClasses = {
-    purple: "text-purple-400",
-    blue: "text-blue-400",
-    green: "text-green-400",
-    orange: "text-orange-400",
-  };
-
-  return (
-    <div className="text-center">
-      <div
-        className={`text-5xl lg:text-6xl font-bold mb-3 ${colorClasses[color]}`}
-      >
-        {number}
-      </div>
-      <div className="text-gray-400 text-sm uppercase tracking-wider">
-        {label}
-      </div>
-    </div>
-  );
-}
-
 export function StatsSection() {
   const stats = [
     { number: "250+", label: "Projects Delivered", color: "purple"},
@@ -34,8 +12,7 @@ export function StatsSection() {
   ];
 
   return (
-
-    <div className="mx-14 h-85 border  border-[#15152A] px-23">
+    <div className="mx-14 h-85 px-23 mt-55 bg-[url('/assist/img/stateBackGround.png')]  hover:bg-[url('/assist/img/statebackGroundHover.png')] ">
       <div className="flex flex-row py-12">
         <div className="flex flex-row   space-x-8 ">
           {/* <div className="flex flex:row border-1  border-[#8752FF]  px-7 h-11  space-x-2 w-auto  justify:center rounded-2xl items-center  ">
