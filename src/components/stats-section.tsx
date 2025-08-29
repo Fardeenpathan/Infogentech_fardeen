@@ -1,5 +1,4 @@
-import { Badge } from "@/components/ui/badge";
-import { SVGImage } from "@/components/ui/svgImage";
+
 import StatsItem from "./stats-item";
 import { VerticalLine } from "./ui/vertical-line";
 
@@ -44,16 +43,16 @@ export function StatsSection() {
     <div className="mt-39 mx-14 h-85 border  border-[#15152A] px-23">
       <div className="flex flex-row py-12">
         <div className="flex flex-row   space-x-8 ">
-          <div className="flex flex:row border-1  border-[#8752FF]  px-7 h-11  space-x-2 w-auto  justify:center rounded-2xl items-center  ">
+          {/* <div className="flex flex:row border-1  border-[#8752FF]  px-7 h-11  space-x-2 w-auto  justify:center rounded-2xl items-center  ">
             <SVGImage width="16" height="16" name="globe" />
 
             <div className="text-[#8752FF] font-Jost  text-xl vertical-trim leading-[100%] tracking-tight-3">
               Top US Agency 2025
             </div>
-          </div>
+          </div> */}
 
           <div className="flex flex:row border-1 border-[#8752FF]  px-7 h-11  space-x-2 w-auto  justify:center rounded-2xl items-center ">
-            <SVGImage width="16" height="13" name="award" />
+            {/* <SVGImage width="16" height="13" name="award" /> */}
 
             <div className="text-[#8752FF] font-Jost  text-xl vertical-trim leading-[100%] tracking-tight-3">
               2023 Best Agency

@@ -1,4 +1,5 @@
-import { Button } from "@/components/ui/button"; 
+import Image from "next/image";
+
 
 export function HeroSection() {
   return (
@@ -16,6 +17,14 @@ export function HeroSection() {
           className="text-5xl lg:text-6xl font-avalors  uppercase align-middle bg-gradient-to-r from-[#6A27FF]  to-[#FFFFFF] 
               bg-clip-text text-transparent leading-[120%] tracking-[-0.75px]"
         >
+        <Image
+          src="/assist/img/Polygon.png"
+          alt="Best Design. Development. Marketing."
+          layout="fill"
+          width={46}
+          height={46}
+          objectFit="cover"
+        />
           <span className="">Best Design. </span>
           <br />
           <span className="">Development.</span>
@@ -26,7 +35,7 @@ export function HeroSection() {
           We become your digital department bringing strategy, creativity, and
           technical expertise to accelerate your business growth.
         </p>
-        <Button
+        {/* <Button
           className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white px-8 py-3 rounded-lg 
               font-medium text-lg group"
         >
@@ -34,7 +43,7 @@ export function HeroSection() {
           <span className="ml-2 group-hover:translate-x-1 transition-transform">
             →
           </span>
-        </Button>
+        </Button> */}
       </div>
     </div>
   );

@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
+import Icons from "./ui/Icon";
 
 const servicesMenu = [
   {
@@ -11,25 +12,25 @@ const servicesMenu = [
       {
         href: "/services/graphic-design",
         label: "Graphic Design",
-        imgUrl: "/ServicesSubcategory.svg",
+        icon: "GraphicDesign",
         description: "Designing impactful graphics for various media.",
       },
       {
         href: "/services/ui-ux-design",
         label: "UI/UX Design",
-        imgUrl: "/ServicesSubcategory.svg",
+        icon: "UIUXDesign",
         description: "Creating intuitive and engaging user experiences.",
       },
       {
         href: "/services/branding",
         label: "Branding",
-        imgUrl: "/ServicesSubcategory.svg",
+        icon: "Branding",
         description: "Creating intuitive and engaging user experiences.",
       },
       {
         href: "/services/logo-design",
         label: "Logo Design",
-        imgUrl: "/ServicesSubcategory.svg",
+        icon: "Logo",
         description: "Creating intuitive and engaging user experiences.",
       },
     ],
@@ -41,25 +42,25 @@ const servicesMenu = [
       {
         href: "/services/web-development",
         label: "Web & App Development",
-        imgUrl: "/ServicesSubcategory.svg",
+        icon: "Branding",
         description: "Developing responsive and high-performance websites.",
       },
       {
         href: "/services/mobile-app-development",
         label: "CMS Development",
-        imgUrl: "/ServicesSubcategory.svg",
+        icon: "Branding",
         description: "Creating mobile applications for iOS and Android.",
       },
       {
         href: "/services/mobile-app-development",
         label: "Custom Integrations",
-        imgUrl: "/ServicesSubcategory.svg",
+        icon: "Branding",
         description: "Creating mobile applications for iOS and Android.",
       },
       {
         href: "/services/mobile-app-development",
         label: "AI & Cloud Solutions",
-        imgUrl: "/ServicesSubcategory.svg",
+        icon: "Branding",
         description: "Creating mobile applications for iOS and Android.",
       },
     ],
@@ -71,25 +72,25 @@ const servicesMenu = [
       {
         href: "/services/web-development",
         label: "Photo & Video Production",
-        imgUrl: "/ServicesSubcategory.svg",
+        icon: "Branding",
         description: "Developing responsive and high-performance websites.",
       },
       {
         href: "/services/mobile-app-development",
         label: "Visual Content Design",
-        imgUrl: "/ServicesSubcategory.svg",
+        icon: "Branding",
         description: "Creating mobile applications for iOS and Android.",
       },
       {
         href: "/services/mobile-app-development",
         label: "Auto & Motion Graphics",
-        imgUrl: "/ServicesSubcategory.svg",
+        icon: "Branding",
         description: "Creating mobile applications for iOS and Android.",
       },
       {
         href: "/services/mobile-app-development",
         label: "Blog Posts & Articles",
-        imgUrl: "/ServicesSubcategory.svg",
+        icon: "Branding",
         description: "Creating mobile applications for iOS and Android.",
       },
     ],
@@ -101,38 +102,38 @@ const servicesMenu = [
       {
         href: "/services/web-development",
         label: "Marketing Strategy",
-        imgUrl: "/ServicesSubcategory.svg",
+        icon: "Branding",
         description: "Developing responsive and high-performance websites.",
       },
       {
         href: "/services/mobile-app-development",
         label: "Performance Marketing",
-        imgUrl: "/ServicesSubcategory.svg",
+        icon: "Branding",
         description: "Creating mobile applications for iOS and Android.",
       },
       {
         href: "/services/mobile-app-development",
         label: "CRM & Automation",
-        imgUrl: "/ServicesSubcategory.svg",
+        icon: "Branding",
         description: "Creating mobile applications for iOS and Android.",
       },
       {
         href: "/services/mobile-app-development",
         label: "Audience Engagement Strategy",
-        imgUrl: "/ServicesSubcategory.svg",
+        icon: "Branding",
         description: "Creating mobile applications for iOS and Android.",
       },
 
       {
         href: "/services/mobile-app-development",
         label: "Search Engine Optimization (SEO)",
-        imgUrl: "/ServicesSubcategory.svg",
+        icon: "Branding",
         description: "Creating mobile applications for iOS and Android.",
       },
       {
         href: "/services/mobile-app-development",
         label: "Content Marketing",
-        imgUrl: "/ServicesSubcategory.svg",
+        icon: "Branding",
         description: "Creating mobile applications for iOS and Android.",
       },
     ],
@@ -147,11 +148,11 @@ export function ServicesDropdown() {
   };
 
   return (
-    <div className="inline-flex relative group">
+    <div className="inline-flex relative group ">
       <button className="cursor-pointer  focus:outline-none">Services</button>
       <div className="absolute group-hover:flex hidden shadow-lg  -left-26 z-50 cursor-pointer ">
         <div className="pt-12 flex">
-          <div className="bg-[linear-gradient(213deg,rgba(162,121,255,1)_0%,rgba(63,26,147,1)_89%)]  pl-1 pt-1 rounded-l-md">
+          <div className="bg-[linear-gradient(213deg,rgba(162,121,255,1)_0%,rgba(63,26,147,1)_89%)]  pl-1 pt-1 rounded-l-md h-[500px]">
             {servicesMenu.map((item, index) => (
               <div
                 key={index}
@@ -175,16 +176,11 @@ export function ServicesDropdown() {
                 <div key={index}>
                   <Link href={subcategory.href}>
                     <div className="flex flex-col pl-12.5 pt-18 pb-10  border-[1px] bg-[#15152A] ">
-                      <Image
-                        src={subcategory.imgUrl}
-                        alt={"infogentech"}
-                        width={52}
-                        height={52}
-                      />
-
+                       <Icons name={subcategory.icon} />
                       <div>{subcategory.label}</div>
                       <div className="w-85">{subcategory.description}</div>
                     </div>
+                   
                   </Link>
                 </div>
               ))}
