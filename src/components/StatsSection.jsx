@@ -2,13 +2,8 @@
 import StatsItem from "./stats-item";
 import { VerticalLine } from "./ui/vertical-line";
 
-interface StatItemProps {
-  number: string;
-  label: string;
-  color: "purple" | "blue" | "green" | "orange";
-}
 
-function StatItem({ number, label, color }: StatItemProps) {
+function StatItem({ number, label, color }) {
   const colorClasses = {
     purple: "text-purple-400",
     blue: "text-blue-400",
@@ -32,15 +27,15 @@ function StatItem({ number, label, color }: StatItemProps) {
 
 export function StatsSection() {
   const stats = [
-    { number: "250+", label: "Projects Delivered", color: "purple" as const },
-    { number: "7+", label: "Years of Experience", color: "blue" as const },
-    { number: "25+", label: "Professional Team", color: "green" as const },
-    { number: "80%", label: "Active Client", color: "orange" as const },
+    { number: "250+", label: "Projects Delivered", color: "purple"},
+    { number: "7+", label: "Years of Experience", color: "blue" },
+    { number: "25+", label: "Professional Team", color: "green"  },
+    { number: "80%", label: "Active Client", color: "orange" },
   ];
 
   return (
 
-    <div className="mt-39 mx-14 h-85 border  border-[#15152A] px-23">
+    <div className="mx-14 h-85 border  border-[#15152A] px-23">
       <div className="flex flex-row py-12">
         <div className="flex flex-row   space-x-8 ">
           {/* <div className="flex flex:row border-1  border-[#8752FF]  px-7 h-11  space-x-2 w-auto  justify:center rounded-2xl items-center  ">
@@ -80,20 +75,13 @@ export function StatsSection() {
           </div>
 
           <div className="flex flex-row mt-8">
-            {/* Line */}
             <span className="h-[1px] w-60 bg-[#8752FF] "></span>
-            {/* Dot */}
             <span className="mt-[-1px] w-1 h-1 rounded-full bg-[#8752FF]"></span>
           </div>
 
           <div className="flex mt-4">
-            {/* Circle 1 */}
             <div className="w-8 h-8 border-2 border-[#8752FF] rounded-full"></div>
-
-            {/* Circle 2 (overlaps) */}
             <div className="w-8 h-8 border-2 border-[#8752FF] rounded-full -ml-2"></div>
-
-            {/* Circle 3 (overlaps) */}
             <div className="w-8 h-8 border-2 border-[#8752FF] rounded-full -ml-2"></div>
           </div>
         </div>

@@ -1,16 +1,14 @@
 "use client";
 import { HeroSection } from "@/components/hero-section";
-import { StatsSection } from "@/components/stats-section";
+import { StatsSection } from "@/components/StatsSection";
 import ServicesSection from "@/components/services-section";
 
 export default function Home() {
   return (
     <main className="w-full">
-        <div className="max-w-custom  mx-auto">
         <HeroSection />
-        <StatsSection />
+          <StatsSection /> 
         <ServicesSection />
-        </div>
     </main>
   );
 }

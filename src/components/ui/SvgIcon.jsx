@@ -116,27 +116,19 @@ const Logo = (props) => (
   </svg>
 );
 
-const BoxLogo = (props) => (
-  <svg
-    width="40"
-    height="46"
-    viewBox="0 0 40 46"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="M18.25 1.58789C19.2651 1.0018 20.5012 0.964801 21.5439 1.47754L21.75 1.58789L37.6689 10.7783C38.7517 11.4036 39.4189 12.5592 39.4189 13.8096V32.1904C39.4189 33.4408 38.7517 34.5964 37.6689 35.2217L21.75 44.4121C20.6671 45.0373 19.3329 45.0373 18.25 44.4121L2.33105 35.2217C1.24831 34.5964 0.581055 33.4408 0.581055 32.1904V13.8096C0.581055 12.5592 1.24831 11.4036 2.33105 10.7783L18.25 1.58789Z"
-      fill="url(#pattern0_2843_10840)"
-      stroke="#8955FF"
-    />
-  </svg>
+const Arrow = (props) => (
+<svg width="21" height="10" viewBox="0 0 21 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M21 10H17.01L0 10L0 7.77778L17.01 7.77778L11.13 1.55556L12.6 -9.53674e-07L21 8.88889V10Z" fill="white"/>
+</svg>
 );
+
 
 const Icons = {
   GraphicDesign,
   UIUXDesign,
   Branding,
   Logo,
+  Arrow,
 };
 
 export default Icons;
