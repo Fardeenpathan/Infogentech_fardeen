@@ -8,9 +8,7 @@ export default function Home() {
     <main className="w-full">
       <HeroSection />
       <StatsSection />
-      <div className="mx-30">
         <ServicesSection />
-      </div>
     </main>
   );
 }

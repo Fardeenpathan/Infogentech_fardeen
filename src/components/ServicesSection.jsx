@@ -30,12 +30,15 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <div className="mt-28 mx-auto relative">
-      <TopicHeader
-        name="Our Services"
-        subheading="Explore Our Digital Solutions"
-      />
-      <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-11">
+    <div className="mt-28 mx-auto relative ">
+      <div className="mx-30">
+        <TopicHeader
+          name="Our Services"
+          subheading="Explore Our Digital Solutions"
+        />
+      </div>
+
+      <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-11 mx-30">
         {services.map((service) => (
           <div
             key={service.id}
@@ -62,11 +65,23 @@ export default function ServicesSection() {
               </p>
             </div>
             <div className="flex justify-end">
-              <Icons name="Arrow" width={44}/>
+              <Icons name="Arrow" width={50} height={50} />
             </div>
           </div>
         ))}
-        <div className="absolute font-['Jost']  font-avalors font-normal text-[120px]  tracking-[0.03em] uppercase  top-26 left-18 bg-gradient-to-b from-[#C4C4C4] to-[#FFFFFF] bg-clip-text text-transparent opacity-15 -z-30">INFOGENTECH</div>
+      
+        <div className="absolute font-['Jost'] font-avalors font-normal text-[120px] tracking-[0.03em] uppercase top-26 left-48 bg-gradient-to-b from-[#C4C4C4] to-[#FFFFFF] bg-clip-text text-transparent opacity-15 -z-30 ">
+          INFOGENTECH
+        </div>
+        <div className="absolute font-['Jost'] font-avalors font-normal text-[120px] tracking-[0.03em] uppercase top-26 -right-56 bg-gradient-to-b from-[#C4C4C4] to-[#FFFFFF] bg-clip-text text-transparent opacity-15 -z-30 overflow-hidden">
+          INFOGENTECH
+        </div>
+          <div className="absolute font-['Jost'] font-avalors font-normal text-[120px] tracking-[0.03em] uppercase -bottom-24 right-56 bg-gradient-to-b from-[#C4C4C4] to-[#FFFFFF] bg-clip-text text-transparent opacity-15 -z-30 ">
+          INFOGENTECH
+        </div>
+        <div className="absolute font-['Jost'] font-avalors font-normal text-[120px] tracking-[0.03em] uppercase -bottom-24 -left-72 bg-gradient-to-b from-[#C4C4C4] to-[#FFFFFF] bg-clip-text text-transparent opacity-15 -z-30 overflow-hidden">
+          INFOGENTECH
+        </div>
       </div>
     </div>
   );

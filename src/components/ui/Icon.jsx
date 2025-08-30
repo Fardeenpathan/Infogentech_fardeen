@@ -1,9 +1,9 @@
 import SvgIconsMap from "./SvgIcon";
 
-const Icons = ({ name, ...props }) => {
+const Icons = ({ name, width, height }) => {
   const SvgIcon = SvgIconsMap[name];
   if (!SvgIcon) return null;
-  return <SvgIcon {...props} />;
+  return <SvgIcon width={width} height={height}/>;
 };
 
 export default Icons;

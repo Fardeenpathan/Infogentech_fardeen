@@ -164,11 +164,15 @@ export function ServicesDropdown() {
                 }`}
               >
                 <div className="font-medium text-2xl">{item.label}</div>
-                <div className="justify-center font-['Jost'] leading-6 font-light">{item.description}</div>
+                <div className="justify-center font-['Jost'] leading-6 font-light">
+                  {item.description}
+                </div>
               </div>
             ))}
           </div>
-          <div className="absolute font-['Jost'] right-1/6 font-medium text-[124px] leading-[120%] tracking-[0.03em] top-8 bg-gradient-to-b from-white to-[#15152A] bg-clip-text text-transparent opacity-10">Services</div>
+          <div className="absolute font-['Jost'] right-1/6 font-medium text-[124px] leading-[120%] tracking-[0.03em] top-8 bg-gradient-to-b from-white to-[#15152A] bg-clip-text text-transparent opacity-10">
+            Services
+          </div>
           <div className="grid grid-cols-2 font-Jost gap-[1px] w-[950px] bg-[#535353] ">
             {servicesMenu
               .find((item) => item.label === activeItem)
@@ -176,11 +180,10 @@ export function ServicesDropdown() {
                 <div key={index}>
                   <Link href={subcategory.href}>
                     <div className="flex flex-col pl-12.5 pt-18 pb-10  border-[1px] bg-[#15152A]">
-                       <Icons name={subcategory.icon} />
+                      <Icons name={subcategory.icon} width={30} height={30} />
                       <div>{subcategory.label}</div>
                       <div className="w-85">{subcategory.description}</div>
                     </div>
-                   
                   </Link>
                 </div>
               ))}

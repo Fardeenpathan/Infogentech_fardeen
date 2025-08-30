@@ -116,8 +116,8 @@ const Logo = (props) => (
   </svg>
 );
 
-const Arrow = (props) => (
-<svg width="21" height="10" viewBox="0 0 21 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+const Arrow = ({width='21' , height='10'}) => (
+<svg width={width} height={height} viewBox="0 0 21 10" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M21 10H17.01L0 10L0 7.77778L17.01 7.77778L11.13 1.55556L12.6 -9.53674e-07L21 8.88889V10Z" fill="white"/>
 </svg>
 );
@@ -133,8 +133,8 @@ const Globe = (props) => (
 </svg>
 );
 
-const Circles = (props) => (
-<svg width="70" height="30" viewBox="0 0 70 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+const Circles = ({width='70' , height='30'}) => (
+<svg width={width} height={height} viewBox="0 0 70 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="15" cy="15" r="14.5" stroke="#8752FF"/>
 <circle cx="35" cy="15" r="14.5" stroke="#8752FF"/>
 <circle cx="55" cy="15" r="14.5" stroke="#8752FF"/>
