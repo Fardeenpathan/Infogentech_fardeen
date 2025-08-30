@@ -40,10 +40,16 @@ export default function ServicesSection() {
   
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6 mx-30 relative ">
-        {services.map((service) => (
+        {services.map((service, index) => (
           <div
             key={service.id}
-            className="bg-[#15152A] rounded-md  p-5 shadow-[0px_0px_54px_24px_#1C1C38] flex flex-col justify-between"
+            className={`bg-[#15152A] rounded-md  p-5 shadow-[0px_0px_54px_24px_#1C1C38] flex flex-col justify-between hover:scale-105 transition-transform duration-500 cursor-pointer ${
+              index < 2
+                ? 'animate-in slide-in-from-left-40 fade-in-50'
+                : index >= services.length - 2
+                ? 'animate-in slide-in-from-right-40 fade-in-50'
+                : ''
+            }`}
           >
             <div>
               <span className="font-[jost] font-normal text-[32px] leading-[100%] tracking-[3%] opacity-10">
