@@ -172,3 +172,9 @@
   .bg-\[url\(\)\] {
     background-image: none;
   }
+
+  .gradient-text {
+  background: linear-gradient(93.46deg, #C4C4C4 4.94%, #FFFFFF 98.78%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
