@@ -192,6 +192,18 @@
 
 .moving-text-container {
   white-space: nowrap;
-  overflow: hidden;
-  animation: moveText 15s linear infinite; /* Adjust duration as needed */
+}
+
+.moving-text-content {
+  display: inline-block;
+  animation: moveText 100s linear infinite;
+}
+
+@keyframes moveText {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
