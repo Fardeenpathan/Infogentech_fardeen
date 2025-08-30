@@ -30,19 +30,20 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <div className="mt-28 mx-auto relative ">
+    <div className="mt-28 mx-auto">
       <div className="mx-30">
         <TopicHeader
           name="Our Services"
           subheading="Explore Our Digital Solutions"
         />
       </div>
+  
 
-      <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-11 mx-30">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6 mx-30 relative ">
         {services.map((service) => (
           <div
             key={service.id}
-            className="bg-[#15152A] rounded-md  p-5 shadow-[0px_0px_54px_24px_#1C1C38] flex flex-col justify-between "
+            className="bg-[#15152A] rounded-md  p-5 shadow-[0px_0px_54px_24px_#1C1C38] flex flex-col justify-between"
           >
             <div>
               <span className="font-[jost] font-normal text-[32px] leading-[100%] tracking-[3%] opacity-10">
@@ -69,18 +70,10 @@ export default function ServicesSection() {
             </div>
           </div>
         ))}
-      
-        <div className="absolute font-['Jost'] font-avalors font-normal text-[120px] tracking-[0.03em] uppercase top-26 left-48 bg-gradient-to-b from-[#C4C4C4] to-[#FFFFFF] bg-clip-text text-transparent opacity-15 -z-30 ">
-          INFOGENTECH
+       <div className="absolute moving-text-container -z-30 -top-30">
+          <div className=" font-['Jost'] font-avalors font-normal text-[120px] tracking-[0.03em] uppercase  bg-gradient-to-b from-[#C4C4C4] to-[#FFFFFF] bg-clip-text text-transparent opacity-15 moving-text-container">
+           <div className="flex gap-56"><p>INFOGENTECH</p> <p>INFOGENTECH</p></div>
         </div>
-        <div className="absolute font-['Jost'] font-avalors font-normal text-[120px] tracking-[0.03em] uppercase top-26 -right-56 bg-gradient-to-b from-[#C4C4C4] to-[#FFFFFF] bg-clip-text text-transparent opacity-15 -z-30 overflow-hidden">
-          INFOGENTECH
-        </div>
-          <div className="absolute font-['Jost'] font-avalors font-normal text-[120px] tracking-[0.03em] uppercase -bottom-24 right-56 bg-gradient-to-b from-[#C4C4C4] to-[#FFFFFF] bg-clip-text text-transparent opacity-15 -z-30 ">
-          INFOGENTECH
-        </div>
-        <div className="absolute font-['Jost'] font-avalors font-normal text-[120px] tracking-[0.03em] uppercase -bottom-24 -left-72 bg-gradient-to-b from-[#C4C4C4] to-[#FFFFFF] bg-clip-text text-transparent opacity-15 -z-30 overflow-hidden">
-          INFOGENTECH
         </div>
       </div>
     </div>

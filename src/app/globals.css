@@ -180,3 +180,18 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+@keyframes moveText {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%); /* Adjust as needed */
+  }
+}
+
+.moving-text-container {
+  white-space: nowrap;
+  overflow: hidden;
+  animation: moveText 15s linear infinite; /* Adjust duration as needed */
+}
