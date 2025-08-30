@@ -175,7 +175,7 @@ export function ServicesDropdown() {
               ?.subcategories.map((subcategory, index) => (
                 <div key={index}>
                   <Link href={subcategory.href}>
-                    <div className="flex flex-col pl-12.5 pt-18 pb-10  border-[1px] bg-[#15152A] ">
+                    <div className="flex flex-col pl-12.5 pt-18 pb-10  border-[1px] bg-[#15152A]">
                        <Icons name={subcategory.icon} />
                       <div>{subcategory.label}</div>
                       <div className="w-85">{subcategory.description}</div>
