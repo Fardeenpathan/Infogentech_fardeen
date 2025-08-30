@@ -181,14 +181,7 @@
   -webkit-text-fill-color: transparent;
 }
 
-@keyframes moveText {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%); /* Adjust as needed */
-  }
-}
+
 
 .moving-text-container {
   white-space: nowrap;
@@ -199,11 +192,25 @@
   animation: moveText 100s linear infinite;
 }
 
+.moving-text-left {
+  display: inline-block;
+  animation: moveTextleft 100s linear infinite;
+}
+
 @keyframes moveText {
   0% {
     transform: translateX(0%);
   }
   100% {
     transform: translateX(-50%);
+  }
+}
+
+@keyframes moveTextleft {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0); 
   }
 }
