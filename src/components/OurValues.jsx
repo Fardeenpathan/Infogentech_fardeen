@@ -49,11 +49,7 @@ export default function OurValues() {
         <div className="mx-30 flex justify-center items-center">
           <div
             className="w-50 h-56 bg-transparent border border-white/10 rounded-2xl  flex justify-center items-center backdrop-blur-[51.97px]
-         shadow-[inset_0px_0px_95.27px_0px_rgba(242,242,242,0.5),
-                  inset_0px_0px_0px_4.33px_rgba(153,153,153,1),
-                  inset_-8.66px_-8.66px_4.33px_-8.66px_rgba(179,179,179,1),
-                  inset_8.66px_8.66px_4.33px_-8.66px_rgba(179,179,179,1),
-                  inset_12.99px_12.99px_2.17px_-15.16px_rgba(255,255,255,0.5)] absolute"
+         shadow-[0px_0px_8px_0px_#FFFFFF_inset] absolute"
           >
             <Image
               src="/assist/img/valueImg.png"
