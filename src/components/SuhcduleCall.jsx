@@ -4,7 +4,7 @@ import Icons from "./ui/Icon";
 export default function ScheduleCall() {
   return (
     <div className="bg-[linear-gradient(152.55deg,#7544E4_15.91%,#6B25C0_56.84%,#834EB6_72.43%,#8149B4_84.96%)] h-94 mx-30 rounded-2xl mt-36">
-      <div className="flex justify-between px-36 h-full">
+      <div className="flex justify-between px-30 h-full">
         <div className="flex flex-col justify-center items-start py-10">
           <h2 className="text-white text-2xl font-avalors uppercase text-[52px] leading-[150%]">
             Chat With Our Expert Today

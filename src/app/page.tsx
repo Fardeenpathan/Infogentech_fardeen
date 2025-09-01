@@ -4,6 +4,7 @@ import ServicesSection from "@/components/ServicesSection";
 import { StatsSection } from "@/components/StatsSection";
 import OurValues from "@/components/OurValues";  
 import SuhcduleCall from "@/components/SuhcduleCall";  
+import StrategicProcess from "@/components/StrategicProcess";  
 export default function Home() {    
   return (
     <main className="w-full">
@@ -12,6 +13,7 @@ export default function Home() {
         <ServicesSection />
         <OurValues />
         <SuhcduleCall />
+        <StrategicProcess />
     </main>
   );
 }
