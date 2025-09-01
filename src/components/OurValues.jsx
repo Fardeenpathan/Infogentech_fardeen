@@ -1,6 +1,5 @@
 import Image from "next/image";
 import TopicHeader from "./TopicHeader";
-import Icons from "./ui/Icon";
 const services = [
   {
     id: "01",
@@ -36,7 +35,6 @@ const services = [
   },
 ];
 
-
 export default function OurValues() {
   return (
     <div className="mt-44 mx-auto">
@@ -47,34 +45,59 @@ export default function OurValues() {
         />
       </div>
 
-      <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-11 mx-30">
-        {services.map((service) => (
+      <div className="flex">
+        <div className="mx-30 flex justify-center items-center">
           <div
-            key={service.id}
-            className="bg-[#15152A] rounded-md  p-5 shadow-[0px_0px_54px_24px_#1C1C38] flex flex-col justify-between "
+            className="w-50 h-56 bg-transparent border border-white/10 rounded-2xl  flex justify-center items-center backdrop-blur-[51.97px]
+         shadow-[inset_0px_0px_95.27px_0px_rgba(242,242,242,0.5),
+                  inset_0px_0px_0px_4.33px_rgba(153,153,153,1),
+                  inset_-8.66px_-8.66px_4.33px_-8.66px_rgba(179,179,179,1),
+                  inset_8.66px_8.66px_4.33px_-8.66px_rgba(179,179,179,1),
+                  inset_12.99px_12.99px_2.17px_-15.16px_rgba(255,255,255,0.5)] absolute"
           >
-            <div>
-              <p className="mt-10">
-                <Image
-                  src={service.imageIcon}
-                  alt={service.title}
-                  width={service.width}
-                  height={service.height}
-                  objectFit="cover"
-                />
-              </p>
-              <h2 className="font-[jost] font-medium text-[55px] leading-[120%] tracking-[0.03em]">
-                {service.title}
-              </h2>
-              <p className="text-[#C4C4C4] text-sm mt-9 leading-relaxed">
-                {service.desc}
-              </p>
-            </div>
-            <div className="flex justify-end">
-              <Icons name="Arrow" width={50} height={50} />
-            </div>
+            <Image
+              src="/assist/img/valueImg.png"
+              alt="valueImg"
+              width={100}
+              height={99}
+              objectFit="cover"
+            />
           </div>
-        ))}
+          <Image
+            src="/assist/overValue.gif"
+            alt="valueImg"
+            width={640}
+            height={150}
+            objectFit="cover"
+            className="w-[640px] h-72 relative transform scale-x-[-1] overflow-hidden -z-40 -right-62 -top-6"
+          />
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2  gap-6  mx-30 max-w-3xl">
+          {services.map((service) => (
+            <div
+              key={service.id}
+              className="bg-[#15152A] rounded-md  p-5 shadow-[12px_12px_13px_2px_#1C1C38] flex justify-center items-center flex-col"
+            >
+              <div className="flex flex-col items-center">
+                
+                  <Image
+                    src={service.imageIcon}
+                    alt={service.title}
+                    width={service.width}
+                    height={service.height}
+                    objectFit="cover"
+                  />
+                <h2 className="font-[jost] font-medium text-2xl leading-[120%] tracking-[0.03em] mt-6">
+                  {service.title}
+                </h2>
+                <p className="text-[#C4C4C4] text-xl mt-3 leading-[120%] flex text-center">
+                  {service.desc}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -1,3 +1,5 @@
+import { useRef } from "react";
+import { useInView } from "./useInView";
 import Image from "next/image";
 import TopicHeader from "./TopicHeader";
 import Icons from "./ui/Icon";
@@ -29,8 +31,11 @@ const services = [
 ];
 
 export default function ServicesSection() {
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+
   return (
-    <div className="mt-28 mx-auto">
+    <div className="mt-28 mx-auto" ref={ref}>
       <div className="mx-30">
         <TopicHeader
           name="Our Services"
@@ -44,11 +49,13 @@ export default function ServicesSection() {
           <div
             key={service.id}
             className={`bg-[#15152A] rounded-md  p-5 shadow-[0px_0px_54px_24px_#1C1C38] flex flex-col justify-between hover:scale-105 transition-transform duration-500 cursor-pointer ${
-              index < 2
-                ? 'animate-in slide-in-from-left-40 fade-in-50'
-                : index >= services.length - 2
-                ? 'animate-in slide-in-from-right-40 fade-in-50'
-                : ''
+              isInView
+                ? index < 2
+                  ? "animate-in slide-in-from-left-40 fade-in-50"
+                  : index >= services.length - 2
+                  ? "animate-in slide-in-from-right-40 fade-in-50"
+                  : ""
+                : "opacity-0"
             }`}
           >
             <div>
@@ -76,24 +83,28 @@ export default function ServicesSection() {
             </div>
           </div>
         ))}
-       <div className="absolute moving-text-container -z-30 -top-30">
-          <div className="moving-text-content font-['Jost'] font-avalors font-normal text-[120px] tracking-[0.03em] uppercase  bg-gradient-to-b from-[#C4C4C4] to-[#FFFFFF] bg-clip-text text-transparent opacity-15 moving-text-container">
-           <div className="flex gap-56">
-              {Array.from({ length: 20 }, (_, i) => (
-                <p key={i}>INFOGENTECH</p>
-              ))}
+       {isInView && (
+          <>
+            <div className="absolute moving-text-container -z-30 -top-30">
+              <div className="moving-text-content font-['Jost'] font-avalors font-normal text-[120px] tracking-[0.03em] uppercase  bg-gradient-to-b from-[#C4C4C4] to-[#FFFFFF] bg-clip-text text-transparent opacity-15 moving-text-container">
+                <div className="flex gap-56">
+                  {Array.from({ length: 20 }, (_, i) => (
+                    <p key={i}>INFOGENTECH</p>
+                  ))}
+                </div>
+              </div>
             </div>
-        </div>
-        </div>
-        <div className="absolute moving-text-container -z-30 -bottom-28">
-          <div className="moving-text-left font-['Jost'] font-avalors font-normal text-[120px] tracking-[0.03em] uppercase  bg-gradient-to-b from-[#C4C4C4] to-[#FFFFFF] bg-clip-text text-transparent opacity-15 moving-text-container">
-           <div className="flex gap-56">
-              {Array.from({ length: 20 }, (_, i) => (
-                <p key={i}>INFOGENTECH</p>
-              ))}
+            <div className="absolute moving-text-container -z-30 -bottom-28">
+              <div className="moving-text-left font-['Jost'] font-avalors font-normal text-[120px] tracking-[0.03em] uppercase  bg-gradient-to-b from-[#C4C4C4] to-[#FFFFFF] bg-clip-text text-transparent opacity-15 moving-text-container">
+                <div className="flex gap-56">
+                  {Array.from({ length: 20 }, (_, i) => (
+                    <p key={i}>INFOGENTECH</p>
+                  ))}
+                </div>
+              </div>
             </div>
-        </div>
-        </div>
+          </>
+        )}
       </div>
     </div>
   );
