@@ -3,9 +3,9 @@ import TopicHeader from "./TopicHeader";
 import Icons from "./ui/Icon";
 const services = [
   { id: 1, icon: "Design", label: "Design" },
-  { id: 2, icon: "Development", label: "Content" },
-  { id: 3, icon: "DigitalMarketing", label: "Development" },
-  { id: 4, icon: "Content", label: "Marketing" },
+  { id: 2, icon: "Development", label: "Development" },
+  { id: 3, icon: "DigitalMarketing", label: "Digital Marketing" },
+  { id: 4, icon: "Content", label: "Content" },
 ];
 export default function OurPortfolio() {
   return (
@@ -15,7 +15,7 @@ export default function OurPortfolio() {
         subheading="Check Out Our Recently Completed Projects"
       />
       <div className="flex justify-between mx-14 relative -top-11">
-        <div className="flex  gap-6">
+        <div className="flex gap-6">
           {services.map((service) => (
             <button
               key={service.id}
