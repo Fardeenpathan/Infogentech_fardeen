@@ -1,6 +1,8 @@
-import Image from "next/image";
+
 import TopicHeader from "./TopicHeader";
 import Icons from "./ui/Icon";
+import { useState } from 'react';
+
 const services = [
   { id: 1, icon: "Design", label: "Design" },
   { id: 2, icon: "Development", label: "Development" },
@@ -8,6 +10,13 @@ const services = [
   { id: 4, icon: "Content", label: "Content" },
 ];
 export default function OurPortfolio() {
+const [services, setServices] = useState([
+    { id: 1, icon: "Design", label: "Design", active: true },
+    { id: 2, icon: "Development", label: "Development", active: false },
+    { id: 3, icon: "DigitalMarketing", label: "Digital Marketing", active: false },
+    { id: 4, icon: "Content", label: "Content", active: false },
+  ]);
+
   return (
     <div className="mx-30 mt-36">
       <TopicHeader
@@ -19,19 +28,28 @@ export default function OurPortfolio() {
           {services.map((service) => (
             <button
               key={service.id}
-              className="flex gap-2 items-center justify-center border-[1px] border-white  rounded-md px-7 py-2 cursor-pointer"
+              className={`flex gap-2 items-center justify-center border-[1px] border-white  rounded-md px-7 py-2 cursor-pointer ${
+                service.active ? '' : 'opacity-30'
+              }`}
+              onClick={() => {
+                setServices(
+                  services.map((s) =>
+                    s.id === service.id ? { ...s, active: true } : { ...s, active: false }
+                  )
+                );
+              }}
             >
               <Icons name={service.icon} />
               <p className="text-sm font-[jost] ">{service.label}</p>
             </button>
           ))}
         </div>
-        <div className="flex gap-8 items-center justify-center">
+        <a href="#" className="flex gap-8 items-center justify-center">
           <p className="font-[jost] font-semibold text-[18px] leading-[120%] capitalize ">
             See Our <br /> More Projects
           </p>
           <Icons name="Arrow" width={62} height={28} />
-        </div>
+        </a>
       </div>
     </div>
   );
