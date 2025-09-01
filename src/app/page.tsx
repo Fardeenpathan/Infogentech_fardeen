@@ -5,15 +5,17 @@ import { StatsSection } from "@/components/StatsSection";
 import OurValues from "@/components/OurValues";  
 import SuhcduleCall from "@/components/SuhcduleCall";  
 import StrategicProcess from "@/components/StrategicProcess";  
+import OurPortfolio from "@/components/OurPortfolio";  
 export default function Home() {    
   return (
     <main className="w-full">
       <HeroSection />
-      <StatsSection />
+      <StatsSection />  
         <ServicesSection />
         <OurValues />
         <SuhcduleCall />
         <StrategicProcess />
+        <OurPortfolio/>
     </main>
   );
 }
