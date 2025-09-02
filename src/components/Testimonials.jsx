@@ -67,7 +67,7 @@ export default function Testimonials() {
         subheading="Don’t Take Our Word for It. Over 100+ People Trust Us"
       />
 
-      <div className="relative flex flex-col items-center justify-center py-16 bg-[#0B0B24] text-white">
+      <div className="relative flex flex-col items-center justify-center py-16  text-white">
         {/* Slider */}
         <div className="flex items-center justify-center gap-6">
           {reviews.map((review, index) => {
