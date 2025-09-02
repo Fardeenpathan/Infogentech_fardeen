@@ -2,6 +2,7 @@ import Image from "next/image";
 import TopicHeader from "./TopicHeader";
 import Icons from "./ui/Icon";
 import { useState } from "react";
+import DotIndicators from "./DotIndicators";
 
 const slides = [
   {
@@ -160,17 +161,11 @@ export default function OurPortfolio() {
             </div>
             
             <div className="flex gap-x-10 items-center">
-              <div className="border px-5 py-6 rounded-sm flex items-center shadow-[0px_0px_4px_0px_#8955FF]">
-                {slides.map((slide, index) => (
-                  <button
-                    key={slide.id}
-                    className={`w-2.5 h-2.5 rounded-full mx-1 ${
-                      currentIndex === index ? "bg-[#6D18EF] px-4" : "bg-white"
-                    }`}
-                    onClick={() => setCurrentIndex(index)}
-                  ></button>
-                ))}
-              </div>
+              <DotIndicators
+                slides={slides}
+                currentIndex={currentIndex}
+                setCurrentIndex={setCurrentIndex}
+              />
 
               <button
                 onClick={prevSlide}
