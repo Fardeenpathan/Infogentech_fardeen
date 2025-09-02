@@ -3,12 +3,69 @@ import TopicHeader from "./TopicHeader";
 import Icons from "./ui/Icon";
 import { useState } from "react";
 
-const services = [
-  { id: 1, icon: "Design", label: "Design" },
-  { id: 2, icon: "Development", label: "Development" },
-  { id: 3, icon: "DigitalMarketing", label: "Digital Marketing" },
-  { id: 4, icon: "Content", label: "Content" },
+const slides = [
+  {
+    id: 1,
+    title: (
+      <>
+        Learn. Connect. <span className="text-[#A855F7]">Grow!</span>
+      </>
+    ),
+    desc: "This project showcases our exploration into cutting-edge robotics and AI-driven solutions. From conceptual 3D modeling to real-time user interaction, every element is crafted to reflect the future of automation and smart systems.",
+    points: [
+      "Modern, futuristic designs that capture attention instantly.",
+      "User-first layouts crafted for smooth, engaging experiences.",
+      "Fast, scalable, and SEO-friendly websites built to perform.",
+    ],
+    image: "/assist/img/DesignImg.png",
+  },
+  {
+    id: 2,
+    title: (
+      <>
+        Build. Scale. <span className="text-[#A855F7]">Innovate!</span>
+      </>
+    ),
+    desc: "A futuristic platform designed to deliver efficiency and seamless digital experiences. Combining technology and creativity, we help brands shape their future.",
+    points: [
+      "High-performance solutions for enterprises.",
+      "AI-driven features tailored for modern businesses.",
+      "Creative visuals to elevate brand presence.",
+    ],
+    image: "/assist/img/DesignImg.png",
+  },
+  {
+    id: 3,
+    title: (
+      <>
+        Engage. Market. <span className="text-[#A855F7]">Win!</span>
+      </>
+    ),
+    desc: "Our digital marketing projects focus on growth and engagement. Leveraging data and strategy, we create campaigns that leave a strong digital footprint.",
+    points: [
+      "Targeted campaigns for maximum ROI.",
+      "Data-driven strategies for scaling.",
+      "Creative storytelling for global impact.",
+    ],
+    image: "/assist/img/DesignImg.png",
+  },
+   {
+    id: 4,
+    title: (
+      <>
+        Design PPart <span className="text-[#A855F7]">Win!</span>
+      </>
+    ),
+    desc: "Our digital marketing projects focus on growth and engagement. Leveraging data and strategy, we create campaigns that leave a strong digital footprint.",
+    points: [
+      "Targeted campaigns for maximum ROI.",
+      "Data-driven strategies for scaling.",
+      "Creative storytelling for global impact.",
+    ],
+   image: "/assist/img/DesignImg.png",
+  },
 ];
+
 export default function OurPortfolio() {
   const [services, setServices] = useState([
     { id: 1, icon: "Design", label: "Design", active: true },
@@ -22,13 +79,25 @@ export default function OurPortfolio() {
     { id: 4, icon: "Content", label: "Content", active: false },
   ]);
 
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + 1) % slides.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev - 1 + slides.length) % slides.length);
+  };
+
+  const currentSlide = slides[currentIndex];
+
   return (
     <div className="mx-30 mt-36">
       <TopicHeader
         name="Our Portfolio"
         subheading="Check Out Our Recently Completed Projects"
       />
-      <div className="flex justify-between mx-14 relative -top-11">
+      <div className="flex justify-between mx-14 relative -top-11 ">
         <div className="flex gap-6">
           {services.map((service) => (
             <button
@@ -58,10 +127,9 @@ export default function OurPortfolio() {
           <Icons name="Arrow" width={62} height={28} />
         </a>
       </div>
-
-      <div className="px-4 pt-4 rounded-lg border-b-0 bg-[linear-gradient(180deg,#8752FF_0%,#513199_38.59%)] h-[682px] overflow-hidden ">
-        <div className="w-full h-full bg-black rounded-lg p-6 grid grid-cols-2 gap-4 ">
-          <div className="ml-6.5">
+      <div className="px-4 pt-4 rounded-lg border-b-0 bg-[linear-gradient(180deg,#8752FF_0%,#513199_38.59%)] h-[682px] overflow-hidden">
+        <div className="w-full h-full bg-black rounded-lg p-6 grid grid-cols-2 gap-4 overflow-hidden relative">
+          <div className="ml-6.5 transition-all duration-500 ease-in-out">
             <div className="flex items-center gap-3 ">
               <Icons name="DotCircle" />
               <p className="font-jost font-medium text-sm leading-6 align-middle">
@@ -69,7 +137,7 @@ export default function OurPortfolio() {
               </p>
             </div>
             <p className="font-jost font-semibold text-6xl leading-[150%] capitalize mt-4.5">
-              Learn. connect. <span className="text-[#A855F7]">Grow!</span>
+              {currentSlide.title}
             </p>
             <div className="float-right relative -top-10 mr-10">
               <Icons name="ArrowDirection" />
@@ -78,34 +146,57 @@ export default function OurPortfolio() {
               </div>
             </div>
             <p className="font-kumbh font-medium text-[20px] leading-[150%] align-middle text-[#73737F] mt-19 mr-10">
-              This project showcases our exploration into cutting-edge robotics
-              and AI-driven solutions. From conceptual 3D modeling to real-time
-              user interaction, every element is crafted to reflect the future
-              of automation and smart systems.
+              {currentSlide.desc}
             </p>
-            <ul className="flex flex-col  gap-2 text-[#73737F] leading-[150%] text-[20px] font-medium pt-4.5">
-              <li className="flex gap-2.5  items-center">
-                <Icons name="LiIcon" />
-                Modern, futuristic designs that capture attention instantly.
-              </li>
-              <li className="flex gap-2.5  items-center">
-                <Icons name="LiIcon" />
-                User-first layouts crafted for smooth, engaging experiences.
-              </li>
-              <li className="flex gap-2.5  items-center">
-                <Icons name="LiIcon" />
-                Fast, scalable, and SEO-friendly websites built to perform.
-              </li>
+            <ul className="flex flex-col gap-2 text-[#73737F] leading-[150%] text-[20px] font-medium pt-4.5">
+              {currentSlide.points.map((point, idx) => (
+                <li key={idx} className="flex gap-2.5 items-center">
+                  <Icons name="LiIcon" />
+                  {point}
+                </li>
+              ))}
             </ul>
+            <div className="flex gap-4 mt-10">
+              <div className=" mt-4 border-[1px] px-5 rounded-sm">
+              {slides.map((slide, index) => (
+                <button
+                  key={slide.id}
+                  className={`w-3 h-3 rounded-full mx-1  ${
+                    currentIndex === index ? "bg-[#6D18EF]" : "bg-gray-500"
+                  }`}
+                  onClick={() => setCurrentIndex(index)}
+                ></button>
+              ))}
+            </div>
+              <button
+                onClick={prevSlide}
+                className={`px-8 py-3 rotate-180 rounded-sm border border-white flex justify-center items-center cursor-pointer ${
+                  currentIndex === 0 ? "" : "opacity-30"
+                }`}
+              >
+                <Icons name="Arrow" width={45} height={20} />
+              </button>
+              <button
+                onClick={nextSlide}
+                className={`px-8 py-3  border border-white rounded-sm flex justify-center items-center cursor-pointer ${
+                  currentIndex === slides.length - 1 ? "" : "opacity-30"
+                }`}
+              >
+                <Icons name="Arrow" width={45} height={20} />
+              </button>
+            </div>
+
+            
           </div>
-          <div className="px-2 pt-2 rounded-lg border-b-0 bg-[linear-gradient(180deg,#8752FF_0%,#513199_38.59%)] mt-34 rotate-[-5.03deg] ">
-            <div className="w-full h-[500px] bg-black rounded-xl flex justify-between ">
+
+          <div className="px-2 pt-2 rounded-lg border-b-0 bg-[linear-gradient(180deg,#8752FF_0%,#513199_38.59%)] mt-34 rotate-[-5.03deg] shadow-[7px_-4px_108px_-43px_#8955FF] relative -right-5 transition-all duration-500 ease-in-out">
+            <div className="w-full h-[500px] bg-black rounded-xl flex justify-between overflow-hidden">
               <Image
-                src="/assist/img/DesignImg.png"
+                src={currentSlide.image}
                 alt="valueImg"
                 width={800}
-                height={99}
-                objectFit="object-cover"
+                height={500}
+                className="object-cover rounded-xl"
               />
             </div>
           </div>
