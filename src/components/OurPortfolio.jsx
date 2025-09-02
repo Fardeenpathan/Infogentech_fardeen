@@ -49,7 +49,7 @@ const slides = [
     ],
     image: "/assist/img/DesignImg.png",
   },
-   {
+  {
     id: 4,
     title: (
       <>
@@ -62,7 +62,7 @@ const slides = [
       "Data-driven strategies for scaling.",
       "Creative storytelling for global impact.",
     ],
-   image: "/assist/img/DesignImg.png",
+    image: "/assist/img/DesignImg.png",
   },
 ];
 
@@ -129,8 +129,9 @@ export default function OurPortfolio() {
       </div>
       <div className="px-4 pt-4 rounded-lg border-b-0 bg-[linear-gradient(180deg,#8752FF_0%,#513199_38.59%)] h-[682px] overflow-hidden">
         <div className="w-full h-full bg-black rounded-lg p-6 grid grid-cols-2 gap-4 overflow-hidden relative">
-          <div className="ml-6.5 transition-all duration-500 ease-in-out">
-            <div className="flex items-center gap-3 ">
+          <div className="ml-6.5 transition-all duration-500 ease-in-out flex flex-col justify-between mb-16">
+            <div >
+              <div className="flex items-center gap-3">
               <Icons name="DotCircle" />
               <p className="font-jost font-medium text-sm leading-6 align-middle">
                 Why Enjoy alone?
@@ -156,37 +157,39 @@ export default function OurPortfolio() {
                 </li>
               ))}
             </ul>
-            <div className="flex gap-4 mt-10">
-              <div className=" mt-4  border-[1px] px-5 rounded-sm">
-              {slides.map((slide, index) => (
-                <button
-                  key={slide.id}
-                  className={`w-3 h-3 rounded-full mx-1  ${
-                    currentIndex === index ? "bg-[#6D18EF] px-4" : "bg-gray-500"
-                  }`}
-                  onClick={() => setCurrentIndex(index)}
-                ></button>
-              ))}
             </div>
+            
+            <div className="flex gap-x-10 items-center">
+              <div className="border px-5 py-6 rounded-sm flex items-center shadow-[0px_0px_4px_0px_#8955FF]">
+                {slides.map((slide, index) => (
+                  <button
+                    key={slide.id}
+                    className={`w-2.5 h-2.5 rounded-full mx-1 ${
+                      currentIndex === index ? "bg-[#6D18EF] px-4" : "bg-white"
+                    }`}
+                    onClick={() => setCurrentIndex(index)}
+                  ></button>
+                ))}
+              </div>
+
               <button
                 onClick={prevSlide}
-                className={`px-8   rounded-sm border border-white flex justify-center items-center cursor-pointer ${
-                  currentIndex === 0 ? "" : "opacity-30"
+                className={`border border-white rounded-sm flex justify-center items-center px-5 py-2 cursor-pointer ${
+                  currentIndex === 0 ? "opacity-30" : ""
                 }`}
               >
                 <Icons name="ArrowPortfolioLeft" width={45} height={20} />
               </button>
+
               <button
                 onClick={nextSlide}
-                className={`px-8   border border-white rounded-sm flex justify-center items-center cursor-pointer ${
-                  currentIndex === slides.length - 1 ? "" : "opacity-30"
+                className={`border border-white rounded-sm flex justify-center items-center px-5 py-2 cursor-pointer ${
+                  currentIndex === slides.length - 1 ? "opacity-30" : ""
                 }`}
               >
                 <Icons name="ArrowPortfolioRight" width={45} height={20} />
               </button>
             </div>
-
-            
           </div>
 
           <div className="px-2 pt-2 rounded-lg border-b-0 bg-[linear-gradient(180deg,#8752FF_0%,#513199_38.59%)] mt-34 rotate-[-5.03deg] shadow-[7px_-4px_108px_-43px_#8955FF] relative -right-5 transition-all duration-500 ease-in-out">
