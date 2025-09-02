@@ -6,8 +6,8 @@ const DotIndicators = ({ slides, currentIndex, setCurrentIndex }) => {
       {slides.map((slide, index) => (
         <button
           key={slide.id}
-          className={`w-2.5 h-2.5 rounded-full mx-1 ${
-            currentIndex === index ? "bg-[#6D18EF] px-4" : "bg-white"
+          className={`w-2.5 h-2.5 rounded-full mx-1 transition-all ${
+            currentIndex === index ? "bg-[#6D18EF] px-4 " : "bg-white"
           }`}
           onClick={() => setCurrentIndex(index)}
         ></button>
