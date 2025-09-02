@@ -1,8 +1,8 @@
 // tailwind.config.js
-const defaultTheme = require('tailwindcss/defaultTheme');
+import defaultTheme from 'tailwindcss/defaultTheme';
 
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: [
     "./src/app/**/*.{js,ts,jsx,tsx}",
     "./src/components/**/*.{js,ts,jsx,tsx}"
@@ -16,7 +16,7 @@ module.exports = {
         inter: ['Inter', ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        'primary-blue': '#097FB8',
+        'primary': '#8752FF',
         teal: {
           300: '#4fd1c5',
           400: '#2dd4bf',

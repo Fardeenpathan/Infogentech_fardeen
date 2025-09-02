@@ -14,7 +14,7 @@ export default function TopicHeader({name = "Our Services" , subheading = "Explo
             <div className="w-0.5 h-28 rounded-full mt-4 bg-gradient-to-b from-purple-400 via-purple-500 to-purple-800"></div>
           </div>
           <div>
-            <p className='font-avalors font-normal text-[32px] leading-[24px] align-middle text-[#8752FF]'>{name}</p>
+            <p className='font-avalors font-normal text-[32px] leading-[24px] align-middle text-primary'>{name}</p>
             <p className='font-[jost]font-medium text-[18px] leading-[24px] align-middle mt-3'>{subheading}</p>
           </div>
     </div>
