@@ -787,6 +787,19 @@ const PaperPlane = ({ width = "35", height = "38" }) => (
 </svg>
 );
 
+const ArrowPortfolioLeft = ({ width = "45", height = "20" }) => (
+<svg width="45" height="20" viewBox="0 0 45 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.05566 0.5V2.01562L18.333 19.293L20.7373 16.8887L7.79297 3.94434L44.5 3.94434V0.5L1.05566 0.5Z" fill="white" />
+</svg>
+);
+
+const ArrowPortfolioRight = ({ width = "45", height = "20" }) => (
+<svg width="45" height="20" viewBox="0 0 45 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M43.9443 19.5V17.9844L26.667 0.707031L24.2627 3.11133L37.207 16.0557L0.5 16.0557L0.5 19.5L43.9443 19.5Z" fill="white" stroke="black"/>
+</svg>
+);
+
+
 
 
 const Icons = {
@@ -814,7 +827,9 @@ const Icons = {
   DotCircle,
   LiIcon,
   ArrowDirection,
-  PaperPlane
+  PaperPlane,
+  ArrowPortfolioLeft,
+  ArrowPortfolioRight
   // DotLine
 };
 

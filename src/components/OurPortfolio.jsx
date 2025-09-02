@@ -157,12 +157,12 @@ export default function OurPortfolio() {
               ))}
             </ul>
             <div className="flex gap-4 mt-10">
-              <div className=" mt-4 border-[1px] px-5 rounded-sm">
+              <div className=" mt-4  border-[1px] px-5 rounded-sm">
               {slides.map((slide, index) => (
                 <button
                   key={slide.id}
                   className={`w-3 h-3 rounded-full mx-1  ${
-                    currentIndex === index ? "bg-[#6D18EF]" : "bg-gray-500"
+                    currentIndex === index ? "bg-[#6D18EF] px-4" : "bg-gray-500"
                   }`}
                   onClick={() => setCurrentIndex(index)}
                 ></button>
@@ -170,19 +170,19 @@ export default function OurPortfolio() {
             </div>
               <button
                 onClick={prevSlide}
-                className={`px-8 py-3 rotate-180 rounded-sm border border-white flex justify-center items-center cursor-pointer ${
+                className={`px-8   rounded-sm border border-white flex justify-center items-center cursor-pointer ${
                   currentIndex === 0 ? "" : "opacity-30"
                 }`}
               >
-                <Icons name="Arrow" width={45} height={20} />
+                <Icons name="ArrowPortfolioLeft" width={45} height={20} />
               </button>
               <button
                 onClick={nextSlide}
-                className={`px-8 py-3  border border-white rounded-sm flex justify-center items-center cursor-pointer ${
+                className={`px-8   border border-white rounded-sm flex justify-center items-center cursor-pointer ${
                   currentIndex === slides.length - 1 ? "" : "opacity-30"
                 }`}
               >
-                <Icons name="Arrow" width={45} height={20} />
+                <Icons name="ArrowPortfolioRight" width={45} height={20} />
               </button>
             </div>
 
