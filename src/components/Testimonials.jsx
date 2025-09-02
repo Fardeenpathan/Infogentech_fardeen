@@ -1,6 +1,7 @@
 import MidHeader from "./MidHeader";
 import { useState } from "react";
 import Icons from "./ui/Icon";
+import DotIndicators from "./DotIndicators";
 const reviews = [
   {
     id: 1,
@@ -26,14 +27,38 @@ const reviews = [
     img: "https://via.placeholder.com/50",
     rating: 3,
   },
+  {
+    id: 4,
+    text: "New Testimonial 1",
+    name: "Test User 1",
+    role: "Role 1",
+    img: "https://via.placeholder.com/50",
+    rating: 4,
+  },
+  {
+    id: 5,
+    text: "New Testimonial 2",
+    name: "Test User 2",
+    role: "Role 2",
+    img: "https://via.placeholder.com/50",
+    rating: 4,
+  },
+  {
+    id: 6,
+    text: "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born.",
+    name: "John Doe",
+    role: "Founder of NextGen",
+    img: "https://via.placeholder.com/50",
+    rating: 3,
+  },
 ];
 export default function Testimonials() {
-  const [current, setCurrent] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const prevSlide = () =>
-    setCurrent((prev) => (prev === 0 ? reviews.length - 1 : prev - 1));
+    setCurrentIndex((prev) => (prev === 0 ? reviews.length - 1 : prev - 1));
   const nextSlide = () =>
-    setCurrent((prev) => (prev === reviews.length - 1 ? 0 : prev + 1));
+    setCurrentIndex((prev) => (prev === reviews.length - 1 ? 0 : prev + 1));
 
   return (
     <div className="mt-8">
@@ -46,7 +71,7 @@ export default function Testimonials() {
         {/* Slider */}
         <div className="flex items-center justify-center gap-6">
           {reviews.map((review, index) => {
-            const isActive = index === current;
+            const isActive = index === currentIndex;
             return (
               <div
                 key={review.id}
@@ -88,15 +113,11 @@ export default function Testimonials() {
         </div>
 
         <div className="flex gap-2 mt-6">
-          {reviews.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrent(index)}
-              className={`w-3 h-3 rounded-full ${
-                current === index ? "bg-[#6D18EF] w-6" : "bg-gray-500"
-              } transition-all`}
-            />
-          ))}
+          <DotIndicators
+            slides={reviews}
+            currentIndex={currentIndex}
+            setCurrentIndex={setCurrentIndex}
+          />
         </div>
         <div className="absolute bottom-10 flex justify-between items-center  w-full px-12">
           <button
