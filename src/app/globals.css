@@ -176,6 +176,10 @@
   white-space: nowrap;
 }
 
+.container{
+  max-width: 1680px;
+}
+
 .moving-text-content {
   display: inline-block;
   animation: moveText 100s linear infinite;
