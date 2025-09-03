@@ -68,7 +68,6 @@ export default function Testimonials() {
       />
 
       <div className="relative flex flex-col items-center justify-center py-16  text-white">
-        {/* Slider */}
         <div className="flex items-center justify-center gap-6">
           {reviews.map((review, index) => {
             const isActive = index === currentIndex;

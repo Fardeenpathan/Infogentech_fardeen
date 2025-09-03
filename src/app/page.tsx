@@ -7,6 +7,7 @@ import SuhcduleCall from "@/components/SuhcduleCall";
 import StrategicProcess from "@/components/StrategicProcess";
 import OurPortfolio from "@/components/OurPortfolio";
 import Testimonials from "@/components/Testimonials";
+import LatestBlogs from "@/components/LatestBlogs";
 export default function Home() {
   return (
     <main className="w-full">
@@ -18,6 +19,7 @@ export default function Home() {
       <StrategicProcess />
       <OurPortfolio />
       <Testimonials />
+      <LatestBlogs />
     </main>
   );
 }
