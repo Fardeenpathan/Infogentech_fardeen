@@ -13,8 +13,12 @@ export default function Home() {
     <main className="w-full">
       <HeroSection />
       <StatsSection />
+      <div className="overflow-hidden ">
+       <ServicesSection /> 
+      </div>
+ 
       <div className="container mx-auto">
-        <ServicesSection />
+       
         <OurValues />
         <SuhcduleCall />
         <StrategicProcess />

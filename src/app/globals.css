@@ -204,6 +204,9 @@
 .container{
   max-width: 1680px;
 }
+.maxContainer{
+  max-width: 1740px;
+}
 
 .moving-text-content {
   display: inline-block;
