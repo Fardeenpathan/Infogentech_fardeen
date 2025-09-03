@@ -28,6 +28,7 @@ const reviews = [
     img: "/assist/img/blogs.png",
     rating: 3,
   },
+  
 ];
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);

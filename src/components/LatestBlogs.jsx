@@ -31,7 +31,7 @@ const latest = [
 ];
 export default function LatestBlogs() {
   return (
-    <div className="mt-8 mx-30 ">
+    <div className="mt-8 mx-30">
       <MidHeader
         name="Latest Blogs"
         subheading="Explore Ideas, Trends, and Strategies Shaping Digital Success."
@@ -46,7 +46,7 @@ export default function LatestBlogs() {
         <Icons name="Arrow" width={62} height={28} />
       </a>
       <div className="relative flex flex-col items-center justify-center   text-white">
-        <div className="flex items-center justify-center gap-6">
+        <div className="flex items-center justify-center gap-12">
           {latest.map((blog) => (
             <HomeBlogCardsd key={blog.id} blog={blog} />
           ))}
