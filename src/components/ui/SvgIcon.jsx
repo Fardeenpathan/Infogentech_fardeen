@@ -1,3 +1,4 @@
+import { color } from "framer-motion";
 import React from "react";
 
 const GraphicDesign = ({ width = "53", height = "53" }) => (
@@ -114,7 +115,7 @@ const Logo = ({ width = "53", height = "53" }) => (
   </svg>
 );
 
-const Arrow = ({ width = "21", height = "10" }) => (
+const Arrow = ({ width = "21", height = "10", color = 'white' }) => (
   <svg
     width={width}
     height={height}
@@ -124,7 +125,7 @@ const Arrow = ({ width = "21", height = "10" }) => (
   >
     <path
       d="M21 10H17.01L0 10L0 7.77778L17.01 7.77778L11.13 1.55556L12.6 -9.53674e-07L21 8.88889V10Z"
-      fill="white"
+      fill={color}
     />
   </svg>
 );
