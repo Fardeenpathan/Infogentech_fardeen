@@ -2,53 +2,30 @@ import MidHeader from "./MidHeader";
 import { useState } from "react";
 import Icons from "./ui/Icon";
 import DotIndicators from "./DotIndicators";
+import Image from "next/image";
 const reviews = [
   {
     id: 1,
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ut labore et dolore magna aliqua.",
     name: "Mickael Grants",
     role: "CEO of Apples to Oranges",
-    img: "https://via.placeholder.com/50",
+    img: "/assist/img/blogs.png",
     rating: 5,
   },
   {
     id: 2,
-    text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ut labore et dolore magna aliqua.",
     name: "Jane Cooper",
     role: "CTO of TechFlow",
-    img: "https://via.placeholder.com/50",
+    img: "/assist/img/blogs.png",
     rating: 4,
   },
   {
     id: 3,
-    text: "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born.",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ut labore et dolore magna aliqua.",
     name: "John Doe",
     role: "Founder of NextGen",
-    img: "https://via.placeholder.com/50",
-    rating: 3,
-  },
-  {
-    id: 4,
-    text: "New Testimonial 1",
-    name: "Test User 1",
-    role: "Role 1",
-    img: "https://via.placeholder.com/50",
-    rating: 4,
-  },
-  {
-    id: 5,
-    text: "New Testimonial 2",
-    name: "Test User 2",
-    role: "Role 2",
-    img: "https://via.placeholder.com/50",
-    rating: 4,
-  },
-  {
-    id: 6,
-    text: "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born.",
-    name: "John Doe",
-    role: "Founder of NextGen",
-    img: "https://via.placeholder.com/50",
+    img: "/assist/img/blogs.png",
     rating: 3,
   },
 ];
@@ -61,7 +38,7 @@ export default function Testimonials() {
     setCurrentIndex((prev) => (prev === reviews.length - 1 ? 0 : prev + 1));
 
   return (
-    <div className="mt-8">
+    <div className="mt-8 mx-30">
       <MidHeader
         name="Testimonials"
         subheading="Don’t Take Our Word for It. Over 100+ People Trust Us"
@@ -74,7 +51,7 @@ export default function Testimonials() {
             return (
               <div
                 key={review.id}
-                className={`p-6 rounded-xl border transition-all duration-500 max-w-md ${
+                className={`px-8 pt-6 pb-8 rounded-xl border transition-all duration-500 max-w-[549px] min-h-[272px] flex flex-col justify-between ${
                   isActive
                     ? "border-[#6D18EF] bg-[#111132] scale-105 opacity-100"
                     : "border-transparent bg-[#111132]/40 scale-90 opacity-40"
@@ -83,49 +60,59 @@ export default function Testimonials() {
                 <p className="mb-4 text-sm md:text-base leading-relaxed">
                   {review.text}
                 </p>
-                <div className="flex items-center gap-3">
-                  <img
-                    src={review.img}
-                    alt={review.name}
-                    className="w-10 h-10 rounded-full"
-                  />
-                  <div>
-                    <h4 className="font-semibold">{review.name}</h4>
-                    <p className="text-xs text-gray-400">{review.role}</p>
+                <div className="flex items-center justify-between gap-3">
+                  <div className="flex gap-4">
+                    <Image
+                      src={review.img}
+                      alt="Review"
+                      width={55}
+                      height={55}
+                      className=" rounded-full w-14 h-14 object-cover"
+                    />
+
+                    <div>
+                      <h4 className="font-[jost] text-2xl text-[#C2C4C8]">
+                        {review.name}
+                      </h4>
+                      <p className="text-sm text-[#C2C4C8] mt-1.5">
+                        {review.role}
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <div className="mt-4 flex gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <span
-                      key={i}
-                      className={`text-lg ${
-                        i < review.rating ? "text-purple-500" : "text-gray-500"
-                      }`}
-                    >
-                      ★
-                    </span>
-                  ))}
+
+                  <div className="mt-4 flex gap-1 bg-[#2F3E42] border-2 rounded-3xl border-[#372E4C] px-2.5 py-1.5">
+                    {[...Array(5)].map((_, i) => (
+                      <span
+                        key={i}
+                        className={`text-lg ${
+                          i < review.rating
+                            ? "text-purple-500"
+                            : "text-gray-500"
+                        }`}
+                      >
+                        <Icons name="Star" />
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             );
           })}
         </div>
 
-        <div className="flex gap-2 mt-6">
-          <DotIndicators
-            slides={reviews}
-            currentIndex={currentIndex}
-            setCurrentIndex={setCurrentIndex}
-          />
-        </div>
-        <div className="absolute bottom-10 flex justify-between items-center  w-full px-12">
+        <div className=" flex justify-between w-full mt-5.5">
           <button
             onClick={prevSlide}
             className="font-jost font-semibold text-[20px] leading-[20px] flex gap-2 items-center cursor-pointer"
           >
             <Icons name="ArrowPortfolioLeft" /> Previous
-          </button>
-          <button 
+          </button>{" "}
+          <DotIndicators
+            slides={reviews}
+            currentIndex={currentIndex}
+            setCurrentIndex={setCurrentIndex}
+          />
+          <button
             onClick={nextSlide}
             className="font-jost font-semibold text-[20px] leading-[20px] flex gap-2 items-center cursor-pointer"
           >
