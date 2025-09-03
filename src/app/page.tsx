@@ -13,13 +13,15 @@ export default function Home() {
     <main className="w-full">
       <HeroSection />
       <StatsSection />
-      <ServicesSection />
-      <OurValues />
-      <SuhcduleCall />
-      <StrategicProcess />
-      <OurPortfolio />
-      <Testimonials />
-      <LatestBlogs />
+      <div className="container mx-auto">
+        <ServicesSection />
+        <OurValues />
+        <SuhcduleCall />
+        <StrategicProcess />
+        <OurPortfolio />
+        <Testimonials />
+        <LatestBlogs />
+      </div>
     </main>
   );
 }

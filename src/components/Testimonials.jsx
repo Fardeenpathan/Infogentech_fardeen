@@ -39,7 +39,7 @@ export default function Testimonials() {
     setCurrentIndex((prev) => (prev === reviews.length - 1 ? 0 : prev + 1));
 
   return (
-    <div className="mt-8 mx-30">
+    <div className="mt-8 ">
       <MidHeader
         name="Testimonials"
         subheading="Don’t Take Our Word for It. Over 100+ People Trust Us"

@@ -31,7 +31,7 @@ const latest = [
 ];
 export default function LatestBlogs() {
   return (
-    <div className="mt-8 mx-30">
+    <div className="mt-8 ">
       <MidHeader
         name="Latest Blogs"
         subheading="Explore Ideas, Trends, and Strategies Shaping Digital Success."

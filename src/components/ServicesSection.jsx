@@ -35,16 +35,13 @@ export default function ServicesSection() {
   const isInView = useInView(ref);
 
   return (
-    <div className="mt-28 mx-auto" ref={ref}>
-      <div className="mx-30">
+    <div className="mt-28 " ref={ref}>
         <TopicHeader
           name="Our Services"
           subheading="Explore Our Digital Solutions"
         />
-      </div>
   
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6 mx-30 relative ">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6  relative ">
         {services.map((service, index) => (
           <div
             key={service.id}

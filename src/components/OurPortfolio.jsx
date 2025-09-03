@@ -93,7 +93,7 @@ export default function OurPortfolio() {
   const currentSlide = slides[currentIndex];
 
   return (
-    <div className="mx-30 mt-36">
+    <div className=" mt-36">
       <TopicHeader
         name="Our Portfolio"
         subheading="Check Out Our Recently Completed Projects"

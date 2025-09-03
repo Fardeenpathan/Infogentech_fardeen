@@ -37,16 +37,14 @@ const services = [
 
 export default function OurValues() {
   return (
-    <div className="mt-44 mx-auto">
-      <div className="mx-30">
+    <div className="mt-44 ">
         <TopicHeader
           name="Our Values"
           subheading="Core beliefs behind everything we build"
         />
-      </div>
 
       <div className="flex">
-        <div className="mx-30 flex justify-center items-center">
+        <div className=" flex justify-center items-center">
           <div
             className="w-50 h-56 bg-transparent border border-white/10 rounded-2xl  flex justify-center items-center backdrop-blur-[51.97px]
          shadow-[0px_0px_8px_0px_#FFFFFF_inset] absolute"
