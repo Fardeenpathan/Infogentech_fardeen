@@ -35,13 +35,13 @@ export function Footer() {
                 focus on achieving real, measurable results, keeping up with the
                 trends.
               </p>
-              <p className="text-gray-400 text-sm font-kumbh-sans">
+              <div className="text-gray-400 text-sm font-kumbh-sans">
                 For Infogentech Queries:
                 <br />
                 <p className="space-x-3">
                   <a href="mailto:info@infogentech.com">info@infogentech.com</a> <span>|</span> <span>9999999999</span>
                 </p>
-              </p>
+              </div>
               <div className=" max-w-[300px] text-white border-1 mt-7.5"></div>
               <div className="flex gap-10 mt-3.5 items-center">
                 <Image

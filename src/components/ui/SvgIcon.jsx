@@ -876,8 +876,8 @@ const LogoFooter = ({ width = "49", height = "51" }) => (
         y2="4.74152"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#522BBF" />
-        <stop offset="1" stop-color="#9169FF" />
+        <stop stopColor="#522BBF" />
+        <stop offset="1" stopColor="#9169FF" />
       </linearGradient>
       <linearGradient
         id="paint1_linear_2834_8647"
@@ -887,8 +887,8 @@ const LogoFooter = ({ width = "49", height = "51" }) => (
         y2="8.91462"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#522BBF" />
-        <stop offset="1" stop-color="#9169FF" />
+        <stop stopColor="#522BBF" />
+        <stop offset="1" stopColor="#9169FF" />
       </linearGradient>
     </defs>
   </svg>
@@ -897,7 +897,7 @@ const LogoFooter = ({ width = "49", height = "51" }) => (
 
 const Facebook = ({width='10' , height='20'})=>(
   <svg width={width} height={height} viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M10 7.69231H6.66667V4.61538C6.66667 3.76615 7.264 3.84615 8 3.84615H9.33333V0H6.66667C5.6058 0 4.58838 0.486263 3.83824 1.35181C3.08809 2.21737 2.66667 3.39131 2.66667 4.61538V7.69231H0V11.5385H2.66667V20H6.66667V11.5385H8.66667L10 7.69231Z" fill="white"/>
+<path fillRule="evenodd" clipRule="evenodd" d="M10 7.69231H6.66667V4.61538C6.66667 3.76615 7.264 3.84615 8 3.84615H9.33333V0H6.66667C5.6058 0 4.58838 0.486263 3.83824 1.35181C3.08809 2.21737 2.66667 3.39131 2.66667 4.61538V7.69231H0V11.5385H2.66667V20H6.66667V11.5385H8.66667L10 7.69231Z" fill="white"/>
 </svg>
 )
 
@@ -910,7 +910,7 @@ const Twitter = ({width='20' , height='20'})=>(
 
 const LinkedIn = ({width='20' , height='20'})=>(
   <svg width={width} height={height} viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M20 20H15.5796V12.969C15.5796 11.129 14.8886 9.8725 13.3677 9.8725C12.205 9.8725 11.5582 10.7205 11.2573 11.5375C11.1441 11.8305 11.1618 12.239 11.1618 12.6475V20H6.78273C6.78273 20 6.83909 7.5455 6.78273 6.4135H11.1618V8.54601C11.4209 7.61351 12.82 6.283 15.0527 6.283C17.8232 6.283 20 8.237 20 12.4455V20ZM2.35454 4.714H2.32591C0.915002 4.714 0 3.67549 0 2.35899C0 1.01699 0.941824 0 2.38137 0C3.81955 0 4.70408 1.0145 4.73181 2.355C4.73181 3.6715 3.81954 4.714 2.35454 4.714ZM0.504539 6.4135H4.40272V20H0.504539V6.4135Z" fill="white"/>
+<path fillRule="evenodd" clipRule="evenodd" d="M20 20H15.5796V12.969C15.5796 11.129 14.8886 9.8725 13.3677 9.8725C12.205 9.8725 11.5582 10.7205 11.2573 11.5375C11.1441 11.8305 11.1618 12.239 11.1618 12.6475V20H6.78273C6.78273 20 6.83909 7.5455 6.78273 6.4135H11.1618V8.54601C11.4209 7.61351 12.82 6.283 15.0527 6.283C17.8232 6.283 20 8.237 20 12.4455V20ZM2.35454 4.714H2.32591C0.915002 4.714 0 3.67549 0 2.35899C0 1.01699 0.941824 0 2.38137 0C3.81955 0 4.70408 1.0145 4.73181 2.355C4.73181 3.6715 3.81954 4.714 2.35454 4.714ZM0.504539 6.4135H4.40272V20H0.504539V6.4135Z" fill="white"/>
 </svg>
 )
 
