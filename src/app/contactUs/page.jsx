@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Icons from "@/components/ui/Icon";
 const ContactUs = () => {
   return (
     <div className="mt-30 container mx-auto">
@@ -26,7 +25,19 @@ const ContactUs = () => {
             contact us at.
           </p>
         </div>
-        <Icons name = "Contact"/>
+
+        <div class="relative w-48 h-56 flex items-center justify-center  rotate-30 ">
+            play.gif
+          <div>
+            <Image
+              src="/assist/img/polygon.png"
+              alt="valueImg"
+              width={108}
+              height={54}
+              objectFit="cover w-[252px]"
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

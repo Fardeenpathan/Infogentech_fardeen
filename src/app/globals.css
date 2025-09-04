@@ -195,7 +195,9 @@
   -webkit-text-fill-color: transparent;
 }
 
-
+.hexagon {
+  clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+}
 
 .moving-text-container {
   white-space: nowrap;

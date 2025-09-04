@@ -36,7 +36,7 @@ export function Navbar() {
       <div className="flex items-center border-1 border-[#8E8E8E] rounded-md pr-3.75">
         <div className="md:flex items-center space-x-12.5 px-12.5 py-4.5 text-lg font-medium font-Jost">
           <Link href="#">Blogs</Link>
-          <Link href="#">Contact us</Link>
+          <Link href="/contactUs">Contact us</Link>
           <Link href="#">About us</Link>
         </div>
         <div className="p-[4px] rounded-[10px] bg-gradient-to-r from-[#7544E4] to-[#FFFFFF] inline-block">
