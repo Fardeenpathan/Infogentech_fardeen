@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Icons from "@/components/ui/Icon";
+import ContactForm from "@/components/ContactForm";
 const ContactUs = () => {
   return (
     <div className="mt-35 subContainer mx-auto">
@@ -54,6 +55,7 @@ const ContactUs = () => {
           />
         </div>
       </div>
+    <ContactForm/>
     </div>
   );
 };
