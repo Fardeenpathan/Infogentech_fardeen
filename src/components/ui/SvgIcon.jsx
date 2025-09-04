@@ -914,12 +914,13 @@ const LinkedIn = ({width='20' , height='20'})=>(
 </svg>
 )
 
-const contactStyle = {
-  backdropFilter: "blur(2px)",
-  clipPath: "url(#bgblur_1_159_1546_clip_path)",
-  height: "100%",
-  width: "100%"
-};
+const Slide =({width="22",height="24"})=>(
+  <svg  width={width} height={height} viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.75 19.5C6.407 19.5 4.5 17.593 4.5 15.25V5H2.75C1.233 5 0 6.233 0 7.75V21.25C0 22.767 1.233 24 2.75 24H15.25C16.767 24 18 22.767 18 21.25V19.5H8.75Z" fill="white"/>
+<path d="M22 2.75C22 1.231 20.769 0 19.25 0H8.75C7.231 0 6 1.231 6 2.75V15.25C6 16.769 7.231 18 8.75 18H19.25C20.769 18 22 16.769 22 15.25V2.75Z" fill="white"/>
+</svg>
+)
+
 
 
 const Icons = {
@@ -955,6 +956,7 @@ const Icons = {
   Facebook,
   Twitter,
   LinkedIn,
+  Slide
   // DotLine
 };
 
