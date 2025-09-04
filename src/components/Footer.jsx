@@ -4,9 +4,11 @@ import Icons from "./ui/Icon";
 
 export function Footer() {
   return (
-    <footer className="bg-[#101021] mx-auto mt-56">
-      <div className="container mx-auto pt-11">
-        <div className="flex justify-between items-center">
+    <footer className="bg-[#101021] mx-auto mt-56 relative overflow-hidden">
+      <div className="container mx-auto pt-11 ">
+        <div className="flex justify-between items-center ">
+          <div className="w-[162px] h-[162px] -top-[26px] -left-3.5 rounded-[81px] absolute bg-[#8752ff] blur-[100px]" />
+          <div className="w-[148px] h-[87px] top-[533px] right-0 rounded-[74px/43.5px] absolute bg-[#8752ff] blur-[100px]" />
           <p className="font-[jost] font-medium text-[45px] leading-[60px]">
             Start Earlier, Grow Faster <br /> Without Hidden Costs.
           </p>
@@ -39,7 +41,8 @@ export function Footer() {
                 For Infogentech Queries:
                 <br />
                 <p className="space-x-3">
-                  <a href="mailto:info@infogentech.com">info@infogentech.com</a> <span>|</span> <span>9999999999</span>
+                  <a href="mailto:info@infogentech.com">info@infogentech.com</a>{" "}
+                  <span>|</span> <span>9999999999</span>
                 </p>
               </div>
               <div className=" max-w-[300px] text-white border-1 mt-7.5"></div>
@@ -62,7 +65,7 @@ export function Footer() {
                 </Link>
               </div>
             </div>
-              <div></div>
+            <div></div>
             <div className="flex flex-wrap justify-between items-start mb-12 font-kumbh-sans">
               <div className="w-full md:w-1/4 mb-6 md:mb-0">
                 <h3 className="text-lg font-semibold mb-4 font-jost">Links</h3>
@@ -96,7 +99,9 @@ export function Footer() {
               </div>
 
               <div className="w-full md:w-1/4 mb-6 md:mb-0">
-                <h3 className="text-lg font-semibold mb-4 font-jost">Services</h3>
+                <h3 className="text-lg font-semibold mb-4 font-jost">
+                  Services
+                </h3>
                 <ul className="space-y-3.5">
                   <li>
                     <Link href="#" className="text-gray-400 hover:text-white">
@@ -132,7 +137,9 @@ export function Footer() {
               </div>
 
               <div className="w-full md:w-1/4">
-                <h3 className="text-lg font-semibold mb-4 font-jost">General</h3>
+                <h3 className="text-lg font-semibold mb-4 font-jost">
+                  General
+                </h3>
                 <ul className="space-y-3.5">
                   <li>
                     <Link href="#" className="text-gray-400 hover:text-white">
