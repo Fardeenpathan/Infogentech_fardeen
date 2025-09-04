@@ -1,4 +1,5 @@
-import Image from 'next/image';
+import Image from "next/image";
+
 
 export default function TopicHeader({name = "Our Services" , subheading = "Explore Our Digital Solutions"}) {
   return (
