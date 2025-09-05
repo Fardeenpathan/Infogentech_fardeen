@@ -3,6 +3,7 @@ import { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import Image from "next/image";
 import Icons from "./ui/Icon";
+import PurpleCheckbox from "./ui/Checkbox";
 
 const contactInfo = [
   {
@@ -38,7 +39,7 @@ const socialMedia = [
   },
 ];
 const ContactForm = () => {
-  const [isVerified, setIsVerified] = useState(false);
+  const [isVerified, setIsVerified] = useState(true);
 
   const handleCaptcha = (value) => {
     if (value) {
@@ -63,7 +64,7 @@ const ContactForm = () => {
             <div className="w-0.5 h-[721px] rounded-full mt-4 bg-gradient-to-b from-purple-400 via-purple-500 to-purple-800 "></div>
           </div>
         </div>
-        <div className=" w-full rounded-2xl ">
+        <div className="w-full rounded-2xl">
           <div className="text-center mb-14">
             <p className="font-avalors text-[#6A27FF] text-[32px] leading-[24px]  align-middle">
               Get in Touch
@@ -75,7 +76,7 @@ const ContactForm = () => {
             </p>
           </div>
           <section className="p-2.5 bg-[#202037] rounded-2xl flex gap-5">
-            <div className="max-w-[491px] bg-[#000026] rounded-xl py-12 px-10 relative overflow-hidden">
+            <div className="min-w-[491px] bg-[#000026] rounded-xl py-12 px-10 relative overflow-hidden">
               <p className="font-[jost] font-medium text-2xl leading-[24px] align-middle">
                 Contact Information
               </p>
@@ -116,12 +117,11 @@ const ContactForm = () => {
               <div className="w-[269px] h-[269px] bg-[#301F56] rounded-full absolute -bottom-25 -right-25 "></div>
               <div className="w-[138px] h-[138px] bg-[#48484880] rounded-full absolute bottom-13 right-13"></div>
             </div>
-            <div>
-              <div className="flex items-center justify-center p-6 ">
-                <form className="w-full text-white space-y-6">
+              <div className="flex items-center justify-center p-6 w-full">
+                <form className="w-full  text-white space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-[18px] mb-2 font-jost font-light">
+                      <label className="block text-[#E4E4E4] text-[18px] mb-2 font-jost font-light">
                         Name
                       </label>
                       <input
@@ -131,7 +131,7 @@ const ContactForm = () => {
                       />
                     </div>
                     <div>
-                      <label className="block text-[18px] mb-2 font-jost font-light">
+                      <label className="block text-[#E4E4E4] text-[18px] mb-2 font-jost font-light">
                         Email
                       </label>
                       <input
@@ -143,7 +143,7 @@ const ContactForm = () => {
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-[18px] mb-2 font-jost font-light">
+                      <label className="block text-[#E4E4E4] text-[18px] mb-2 font-jost font-light">
                         Phone Number
                       </label>
                       <input
@@ -153,7 +153,7 @@ const ContactForm = () => {
                       />
                     </div>
                     <div>
-                      <label className="block text-[18px] mb-5">
+                      <label className="block text-[#E4E4E4] text-[18px] mb-2 font-light">
                         Product Question
                       </label>
                       <select className="w-full  py-2  border-b-2 border-[#FFFFFF] bg-transparent  focus:outline-none focus:border-[#8752FF]">
@@ -165,27 +165,16 @@ const ContactForm = () => {
                   </div>
 
                   <div>
-                    <label className="block text-[18px] mb-2 font-jost font-light">
+                    <label className="block text-[#E4E4E4] text-[18px] mb-2 font-jost font-light">
                       Message
                     </label>
-                    <textarea
-                      rows="4"
+                    <input
                       className="w-full  py-2  border-b-2 border-[#FFFFFF] bg-transparent  focus:outline-none focus:border-[#8752FF]"
                       placeholder="Write your message.."
-                    ></textarea>
+                    ></input>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <input
-                      type="checkbox"
-                      id="subscribe"
-                      className="accent-purple-500"
-                    />
-                    <label
-                      htmlFor="subscribe"
-                      className="text-sm text-gray-300"
-                    >
-                      Subscribe to receive the latest news and exclusive offers
-                    </label>
+                 <PurpleCheckbox label="subscribe to receive the latest news and exclusive offers" />
                   </div>
 
                   <ReCAPTCHA
@@ -206,7 +195,6 @@ const ContactForm = () => {
                   </button>
                 </form>
               </div>
-            </div>
           </section>
         </div>
       </div>
