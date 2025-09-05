@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export function HeroSection() {
   return (
-    <div>
+    <div className="container mx-auto">
       <video
-        className="absolute top-0 left-0 w-full h-240  object-cover bg-transparent -z-10"
+        className="absolute top-0 left-0 w-full h-240  object-cover bg-transparent -z-10 "
         src="/assist/hero-bg.mp4"
         autoPlay
         loop
@@ -12,7 +12,7 @@ export function HeroSection() {
         playsInline
       />
       <div
-        className="max-w-3xl mt-36 bg-transparent h-128 border border-white/10 rounded-2xl pl-7 pr-7 pt-13 mx-38  backdrop-blur-[51.97px] z-20
+        className="max-w-3xl mt-36 bg-transparent h-128 border border-white/10 rounded-2xl pl-7 pr-7 pt-13   backdrop-blur-[51.97px] z-20
          shadow-[inset_0px_0px_95.27px_0px_rgba(242,242,242,0.5),
                   inset_0px_0px_0px_4.33px_rgba(153,153,153,1),
                   inset_-8.66px_-8.66px_4.33px_-8.66px_rgba(179,179,179,1),

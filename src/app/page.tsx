@@ -13,7 +13,7 @@ export default function Home() {
     <main className="w-full">
       <HeroSection />
       <StatsSection />
-      <div className="overflow-hidden ">
+      <div className="overflow-hidden">
        <ServicesSection /> 
       </div>
  

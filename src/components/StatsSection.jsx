@@ -4,17 +4,10 @@ import Icons from "./ui/Icon";
 import { VerticalLine } from "./ui/vertical-line";
 
 export function StatsSection() {
-  const stats = [
-    { number: "250+", label: "Projects Delivered", color: "purple" },
-    { number: "7+", label: "Years of Experience", color: "blue" },
-    { number: "25+", label: "Professional Team", color: "green" },
-    { number: "80%", label: "Active Client", color: "orange" },
-  ];
-
   return (
-    <div className="mx-14 h-85 px-23 mt-55 bg-[url('/assist/img/stateBackGround.png')]  hover:bg-[url('/assist/img/statebackGroundHover.png')] ">
-      <div className="flex flex-row  items-center justify-between mb-10 py-12">
-        <div className="flex flex-row   space-x-8 ">
+    <div className="mx-14 h-85 px-23 mt-55 bg-[url('/assist/img/stateBackGround.png')]  hover:bg-[url('/assist/img/statebackGroundHover.png')] longContainer mx-auto">
+      <div className="flex flex-row  items-center justify-between mb-10 py-12 container mx-auto">
+        <div className="flex flex-row  space-x-8 ">
          
           <div className="flex flex:row border-1 border-[#8752FF]  px-7 h-11  space-x-2 w-auto  justify:center rounded-md items-center ">
             <div className="text-[#8752FF] font-Jost  text-xl vertical-trim  tracking-tight-3 flex justify-center items-center gap-2">

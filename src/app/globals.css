@@ -209,7 +209,9 @@
 .maxContainer{
   max-width: 1740px;
 }
-
+.longContainer{
+  max-width: 1800px;
+}
 .subContainer{
   max-width: 1380px;
 }
