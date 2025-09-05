@@ -184,7 +184,7 @@ const ContactForm = () => {
                   disabled={!isVerified}
                   className="text-[#6A27FF] mt-7.5"
                 >
-                  <GradientButton bg="#202037" paddingX="14" paddingY="4.5">
+                  <GradientButton bg="bg-[#202037]" paddingX="px-12" paddingY="py-4.5">
                     Send Message
                   </GradientButton>
                 </button>

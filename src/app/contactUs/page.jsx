@@ -3,6 +3,7 @@ import Image from "next/image";
 import Icons from "@/components/ui/Icon";
 import ContactForm from "@/components/ContactForm";
 import SubContact from "@/components/SubContact";
+import MoreContact from "@/components/MoreContact";
 const ContactUs = () => {
   return (
     <div className="mt-35 subContainer mx-auto">
@@ -58,8 +59,11 @@ const ContactUs = () => {
         </div>
       </div>
       <ContactForm />
-      <div className="32">
+      <div className="mt-32">
         <SubContact />
+      </div>
+      <div className="mt-32">
+        <MoreContact/>
       </div>
     </div>
   );
