@@ -10,8 +10,8 @@ export default function MoreContact() {
           Check out our FAQs or About Us page for quick answers.
         </p>
         <div className="flex justify-center items-center gap-20 mt-14">
-          <div class="p-[1px] rounded-lg bg-[linear-gradient(106.97deg,#492B8D_10.89%,#5F439D_100.67%)] inline-block">
-            <div class="rounded-lg bg-[#15152a] p-6 w-[313px] h-[173px]">
+          <div className="p-[1px] rounded-lg bg-[linear-gradient(106.97deg,#492B8D_10.89%,#5F439D_100.67%)] inline-block">
+            <div className="rounded-lg bg-[#15152a] p-6 w-[313px] h-[173px]">
               <div className="bg-[#262626] px-5 py-2.5 flex gap-2 w-fit radius">
                 <Icons name="Questionmark" />
                 <span className="font-jost font-medium text-[20px] leading-[24px] align-middle">
@@ -26,8 +26,8 @@ export default function MoreContact() {
               </p>
             </div>
           </div>
-          <div class="p-[1px] rounded-lg bg-[linear-gradient(106.97deg,#492B8D_10.89%,#5F439D_100.67%)] inline-block">
-            <div class="rounded-lg bg-[#15152a] p-6 w-[313px] h-[173px]">
+          <div className="p-[1px] rounded-lg bg-[linear-gradient(106.97deg,#492B8D_10.89%,#5F439D_100.67%)] inline-block">
+            <div className="rounded-lg bg-[#15152a] p-6 w-[313px] h-[173px]">
               <div className="bg-[#262626] px-5 py-2.5 flex gap-2 w-fit radius">
                 <Icons name="People" />
                 <span className="font-jost font-medium text-[20px] leading-[24px] align-middle">

@@ -16,7 +16,7 @@ export default function SubscribeContact() {
             <input
           type="text"
           id="email"
-          class="w-[360px] h-[48px] 
+          className="w-[360px] h-[48px] 
          radius border bg-white text-black placeholder:text-[#667085] px-4 py-3 outline-none focus:border-[#8752FF]"
           placeholder="Enter your email"
         />

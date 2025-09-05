@@ -1,11 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import GradientButton from "./ui/GradientButton";
-import { ServicesDropdown } from "../components/services-dropdown";
-
+import { ServicesDropdown } from "./services-dropdown";
 export function Navbar() {
   return (
-    <nav className="flex bg-transparent mt-6 h-15  justify-between items-center z-50 mx-38 font-jost font-medium text-[18px] leading-[24px] align-middle">
+    <nav className="flex bg-transparent mt-6 h-15 mx-auto justify-between items-center z-50 font-jost font-medium text-[18px] leading-[24px] container">
       <div className="flex items-center border-1 border-[#8E8E8E] rounded-md">
         <div className="flex items-center pl-3.75 py-2.25 space-x-1.5">
           <Image

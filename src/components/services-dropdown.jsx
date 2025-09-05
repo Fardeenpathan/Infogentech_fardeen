@@ -142,7 +142,7 @@ const servicesMenu = [
 export function ServicesDropdown() {
   const [activeItem, setActiveItem] = useState(servicesMenu[0].label);
 
-  const handleItemClick = (label: string) => {
+  const handleItemClick = (label) => {
     setActiveItem(label);
   };
 
@@ -179,7 +179,7 @@ export function ServicesDropdown() {
                 <div key={index}>
                   <Link href={subcategory.href}>
                     <div className="flex flex-col pl-12.5 pt-18 pb-10  border-[1px] bg-[#15152A]">
-                      <Icons name={subcategory.icon} width={30} height={30} />
+                      <Icons name={subcategory.icon} width={53} height={53} />
                       <div>{subcategory.label}</div>
                       <div className="w-85">{subcategory.description}</div>
                     </div>
