@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import Icons from "./ui/Icon";
+import Button from "./ui/Button";
 
 export function Footer() {
   return (
@@ -16,9 +17,7 @@ export function Footer() {
             <button className="bg-white text-black  py-5 px-12.5 rounded-[10px]">
               Get Started
             </button>
-            <button className="bg-[#9747FF] text-white  py-5 px-12.5 rounded-[10px]">
-              Contact Us
-            </button>
+            <Button text="Contact Us" />
           </div>
         </div>
         <div className=" w-full text-white border-1 mt-7.5"></div>

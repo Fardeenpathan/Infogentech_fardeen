@@ -4,6 +4,7 @@ import Icons from "@/components/ui/Icon";
 import ContactForm from "@/components/ContactForm";
 import SubContact from "@/components/SubContact";
 import MoreContact from "@/components/MoreContact";
+import SubscribeContact from "@/components/SubscribeContact";
 const ContactUs = () => {
   return (
     <div className="mt-35 subContainer mx-auto">
@@ -58,13 +59,13 @@ const ContactUs = () => {
           />
         </div>
       </div>
-      <ContactForm />
-      <div className="mt-32">
+      <div className="flex flex-col gap-8">
+         <ContactForm />
         <SubContact />
-      </div>
-      <div className="mt-32">
         <MoreContact/>
+        <SubscribeContact/> 
       </div>
+    
     </div>
   );
 };
