@@ -1,3 +1,6 @@
+"use client";
+import { useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 import Image from "next/image";
 import Icons from "./ui/Icon";
 
@@ -34,8 +37,16 @@ const socialMedia = [
     link: "https://twitter.com/",
   },
 ];
-
 const ContactForm = () => {
+  const [isVerified, setIsVerified] = useState(false);
+
+  const handleCaptcha = (value) => {
+    if (value) {
+      setIsVerified(true);
+    } else {
+      setIsVerified(false);
+    }
+  };
   return (
     <div className="mt-35 subContainer mx-auto ">
       <div className="flex justify-between ">
@@ -63,7 +74,7 @@ const ContactForm = () => {
               we’re happy to help!
             </p>
           </div>
-          <section className="p-2.5 bg-[#202037] rounded-2xl">
+          <section className="p-2.5 bg-[#202037] rounded-2xl flex gap-5">
             <div className="max-w-[491px] bg-[#000026] rounded-xl py-12 px-10 relative overflow-hidden">
               <p className="font-[jost] font-medium text-2xl leading-[24px] align-middle">
                 Contact Information
@@ -103,7 +114,98 @@ const ContactForm = () => {
                 ))}
               </div>
               <div className="w-[269px] h-[269px] bg-[#301F56] rounded-full absolute -bottom-25 -right-25 "></div>
-             <div className="w-[138px] h-[138px] bg-[#48484880] rounded-full absolute bottom-13 right-13"></div>
+              <div className="w-[138px] h-[138px] bg-[#48484880] rounded-full absolute bottom-13 right-13"></div>
+            </div>
+            <div>
+              <div className="flex items-center justify-center p-6 ">
+                <form className="w-full text-white space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label className="block text-[18px] mb-2 font-jost font-light">
+                        Name
+                      </label>
+                      <input
+                        type="text"
+                        className="w-full  py-2  border-b-2 border-[#FFFFFF] bg-transparent  focus:outline-none focus:border-[#8752FF]"
+                        placeholder="Enter your name"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-[18px] mb-2 font-jost font-light">
+                        Email
+                      </label>
+                      <input
+                        type="email"
+                        className="w-full  py-2  border-b-2 border-[#FFFFFF] bg-transparent  focus:outline-none focus:border-[#8752FF]"
+                        placeholder="Enter your email"
+                      />
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label className="block text-[18px] mb-2 font-jost font-light">
+                        Phone Number
+                      </label>
+                      <input
+                        type="tel"
+                        className="w-full  py-2  border-b-2 border-[#FFFFFF] bg-transparent  focus:outline-none focus:border-[#8752FF]"
+                        placeholder="+1 012 3456 789"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-[18px] mb-5">
+                        Product Question
+                      </label>
+                      <select className="w-full  py-2  border-b-2 border-[#FFFFFF] bg-transparent  focus:outline-none focus:border-[#8752FF]">
+                        <option className="bg-[#1C1B2D]">Select</option>
+                        <option className="bg-[#1C1B2D]">Option 1</option>
+                        <option className="bg-[#1C1B2D]">Option 2</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-[18px] mb-2 font-jost font-light">
+                      Message
+                    </label>
+                    <textarea
+                      rows="4"
+                      className="w-full  py-2  border-b-2 border-[#FFFFFF] bg-transparent  focus:outline-none focus:border-[#8752FF]"
+                      placeholder="Write your message.."
+                    ></textarea>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input
+                      type="checkbox"
+                      id="subscribe"
+                      className="accent-purple-500"
+                    />
+                    <label
+                      htmlFor="subscribe"
+                      className="text-sm text-gray-300"
+                    >
+                      Subscribe to receive the latest news and exclusive offers
+                    </label>
+                  </div>
+
+                  <ReCAPTCHA
+                    sitekey="YOUR_RECAPTCHA_SITE_KEY"
+                    onChange={handleCaptcha}
+                  />
+
+                  <button
+                    type="submit"
+                    disabled={!isVerified}
+                    className={`w-full py-3 rounded-md transition ${
+                      isVerified
+                        ? "bg-purple-600 hover:bg-purple-700 cursor-pointer"
+                        : "bg-gray-600 cursor-not-allowed"
+                    }`}
+                  >
+                    Send Message
+                  </button>
+                </form>
+              </div>
             </div>
           </section>
         </div>

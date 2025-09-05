@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Icons from "@/components/ui/Icon";
 import ContactForm from "@/components/ContactForm";
@@ -39,7 +40,7 @@ const ContactUs = () => {
           </div>
         </div>
 
-        <div class="relative  flex items-center justify-center mb-8">
+        <div className="relative  flex items-center justify-center mb-8">
           <img
             src="assist/video/play.gif"
             alt="valueImg"
