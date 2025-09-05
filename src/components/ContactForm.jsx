@@ -49,10 +49,10 @@ const ContactForm = () => {
     }
   };
   return (
-    <div className="mt-35 subContainer mx-auto ">
+    <div className="mt-35 subContainer mx-auto overflow-hidden">
       <div className="flex justify-between ">
         <div className="flex gap-10">
-          <div className="flex justify-center items-center flex-col">
+          <div className="flex justify-center flex-col">
             <Image
               src="/assist/img/Polygon.png"
               alt="Best Design. Development. Marketing."
@@ -117,7 +117,7 @@ const ContactForm = () => {
               <div className="w-[269px] h-[269px] bg-[#301F56] rounded-full absolute -bottom-25 -right-25 "></div>
               <div className="w-[138px] h-[138px] bg-[#48484880] rounded-full absolute bottom-13 right-13"></div>
             </div>
-            <div className="flex items-center justify-center p-6 w-full relative">
+            <div className="flex items-center justify-center p-6 w-full ">
               <form className="w-full  text-white space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
@@ -182,9 +182,9 @@ const ContactForm = () => {
                 <button
                   type="submit"
                   disabled={!isVerified}
-                  className="text-[#6A27FF]"
+                  className="text-[#6A27FF] mt-7.5"
                 >
-                  <GradientButton bg="#202037" paddingX="10" paddingY="4.5">
+                  <GradientButton bg="#202037" paddingX="14" paddingY="4.5">
                     Send Message
                   </GradientButton>
                 </button>
@@ -192,14 +192,13 @@ const ContactForm = () => {
                   <Image
                   src="/assist/img/ContactPlane.png"
                   alt="valueImg"
-                  width={183}
+                  width={203}
                   height={85}
                   objectFit="cover"
-                  className="rotate-200 scale-y-[-1] absolute text flex items-center justify-center"
+                  className="rotate-200 scale-y-[-1] absolute"
+                  style={{ left: '59%', transform: 'translateX(35%)' }}
                 />
-                
               </form>
-              
             </div>
           </section>
         </div>

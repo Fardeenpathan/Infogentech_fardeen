@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function MidHeader({ name = "", subheading = "" }) {
+export default function MidHeader({ name = "", subheading = "", paragraph="", className=""}) {
   return (
     <div className="flex gap-7 flex-row justify-center items-center">
       <div className="flex justify-center items-center flex-col">
@@ -21,6 +21,9 @@ export default function MidHeader({ name = "", subheading = "" }) {
         <p className="font-[jost] font-medium text-[18px] leading-[24px] align-middle mt-3">
           {subheading}
         </p>
+        {paragraph && (
+          <p className="font-[jost] font-medium text-[18px] leading-[24px] align-middle mt-6 text-[#79787B]">{paragraph}</p>
+        )}
       </div>
     </div>
   );

@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Icons from "@/components/ui/Icon";
 import ContactForm from "@/components/ContactForm";
+import SubContact from "@/components/SubContact";
 const ContactUs = () => {
   return (
     <div className="mt-35 subContainer mx-auto">
@@ -25,7 +26,7 @@ const ContactUs = () => {
             <p className="text-[#6A27FF] font-avalors align-middle text-[75px] leading-[120%] tracking-[-0.75px]">
               just ask!
             </p>
-            <p className="font-[jost] font-medium text-[18px] leading-[24px] align-middle mt-9">
+            <p className="font-jost font-medium text-[18px] leading-[24px] align-middle mt-9">
               We’re here to help! Reach out with any real questions, and we’ll
               get back to you within 48 hours. For support or inquiries, feel
               free to contact us at.
@@ -56,7 +57,10 @@ const ContactUs = () => {
           />
         </div>
       </div>
-    <ContactForm/>
+      <ContactForm />
+      <div className="32">
+        <SubContact />
+      </div>
     </div>
   );
 };
