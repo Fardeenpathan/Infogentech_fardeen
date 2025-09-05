@@ -117,7 +117,7 @@ const ContactForm = () => {
               <div className="w-[269px] h-[269px] bg-[#301F56] rounded-full absolute -bottom-25 -right-25 "></div>
               <div className="w-[138px] h-[138px] bg-[#48484880] rounded-full absolute bottom-13 right-13"></div>
             </div>
-            <div className="flex items-center justify-center p-6 w-full">
+            <div className="flex items-center justify-center p-6 w-full relative">
               <form className="w-full  text-white space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
@@ -188,7 +188,18 @@ const ContactForm = () => {
                     Send Message
                   </GradientButton>
                 </button>
+                
+                  <Image
+                  src="/assist/img/ContactPlane.png"
+                  alt="valueImg"
+                  width={183}
+                  height={85}
+                  objectFit="cover"
+                  className="rotate-200 scale-y-[-1] absolute text flex items-center justify-center"
+                />
+                
               </form>
+              
             </div>
           </section>
         </div>
