@@ -14,8 +14,8 @@ export default function MissionAbout() {
           <Icons name="BigCurve" />
         </div>
       </div>
-      <div className="flex absolute left-50">
-        <div className="flex flex-col justify-between basis-[60%]">
+      <div className="flex absolute gap-50 left-50">
+        <div className="flex flex-col justify-between basis-[50%]">
           <p className="text-[32px] leading-[150%] capitalize font-avalors text-[#8752FF]">
             Our Vision And Mission
           </p>
@@ -32,7 +32,7 @@ export default function MissionAbout() {
           </p>
         </div>
         <div className="basis-[30%]">
-          <img src="/assist/img/sphere.png" alt="" className="w-96 h-96" />
+          <img src="/assist/video/about.gif"  alt="" className="opacity-40" />
         </div>
       </div>
     </div>
