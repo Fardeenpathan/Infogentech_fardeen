@@ -8,14 +8,11 @@ export default function TopicHeader({
   return (
     <div className="flex gap-7 flex-row">
       <div className="flex justify-center items-center flex-col">
-        <div className="relative w-12 h-12 overflow-hidden ">
-          <div className="w-full h-full relative z-10 overflow-hidden">
-            <Icons name="Pentagon" />
-          </div>
+        <div className="relative w-12 h-12">
           <img
             src="/assist/video/pentagonVideo.gif"
             alt="valueImg"
-            className="absolute inset-0 w-full h-full object-cover "
+            className="absolute inset-0 w-full h-full"
           />
         </div>
 
