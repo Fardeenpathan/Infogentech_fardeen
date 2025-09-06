@@ -1755,7 +1755,30 @@ const PortHomeRight =()=>(
 </linearGradient>
 </defs>
 </svg>
+)
 
+const CurveGradient=()=>(
+  <svg width="552" height="302" viewBox="0 0 552 302" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d_205_2355)">
+<ellipse cx="276" cy="171" rx="250" ry="125" fill="url(#paint0_linear_205_2355)" shape-rendering="crispEdges"/>
+</g>
+<defs>
+<filter id="filter0_d_205_2355" x="0" y="0" width="552" height="302" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="-20"/>
+<feGaussianBlur stdDeviation="13"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.472068 0 0 0 0 0.234675 0 0 0 0 1 0 0 0 0.33 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_205_2355"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_205_2355" result="shape"/>
+</filter>
+<linearGradient id="paint0_linear_205_2355" x1="276" y1="46" x2="276" y2="296" gradientUnits="userSpaceOnUse">
+<stop stop-color="#222245"/>
+<stop offset="0.720853" stop-color="#5555AB" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>
 )
 
 
@@ -1824,7 +1847,8 @@ const Icons = {
   GoalAbout,
   BigCurve,
   PortHome,
-  PortHomeRight
+  PortHomeRight,
+  CurveGradient
     // DotLine
 };
 
