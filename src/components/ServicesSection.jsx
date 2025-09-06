@@ -35,13 +35,11 @@ export default function ServicesSection() {
   const isInView = useInView(ref);
 
   return (
-    <div className="mt-28 mx-auto pb-10" ref={ref} >
-      <div className="mx-30">
+    <div className="mt-28 mx-auto pb-10 container" ref={ref} >
         <TopicHeader
           name="Our Services"
           subheading="Explore Our Digital Solutions"
         />
-      </div>
   
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6 relative container mx-auto">
