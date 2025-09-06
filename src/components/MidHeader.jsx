@@ -1,5 +1,4 @@
-import Image from "next/image";
-import Icons from "./ui/Icon";
+
 export default function MidHeader({ name = "", subheading = "", paragraph="", className=""}) {
   return (
     <div className="flex gap-7 flex-row justify-center items-center">

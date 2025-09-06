@@ -1582,11 +1582,11 @@ const LinesAbout = ({ width = "482", height = "243" }) => (
 const RightCurve=({ width="107", height="85" })=>(
  <svg width={width}
     height={height} viewBox="0 0 107 85" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M106.5 2V2C93.2969 2 82.5936 12.7033 82.5936 25.9064V49C82.5936 67.7777 67.3713 83 48.5936 83H0.499997" stroke="url(#paint0_linear_179_1099)" stroke-width="2.5"/>
+<path d="M106.5 2V2C93.2969 2 82.5936 12.7033 82.5936 25.9064V49C82.5936 67.7777 67.3713 83 48.5936 83H0.499997" stroke="url(#paint0_linear_179_1099)" strokeWidth="2.5"/>
 <defs>
 <linearGradient id="paint0_linear_179_1099" x1="53.5757" y1="2" x2="53.5757" y2="83.3576" gradientUnits="userSpaceOnUse">
-<stop stop-color="#A177FF"/>
-<stop offset="1" stop-color="#523399"/>
+<stop stopColor="#A177FF"/>
+<stop offset="1" stopColor="#523399"/>
 </linearGradient>
 </defs>
 </svg> 
@@ -1595,11 +1595,11 @@ const RightCurve=({ width="107", height="85" })=>(
 const RightCurveBottom=({ width="107", height="85" })=>(
 <svg width={width}
     height={height} viewBox="0 0 107 85" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M106.5 83V83C93.2969 83 82.5936 72.2967 82.5936 59.0936V36C82.5936 17.2223 67.3713 2 48.5936 2H0.499997" stroke="url(#paint0_linear_179_1100)" stroke-width="2.5"/>
+<path d="M106.5 83V83C93.2969 83 82.5936 72.2967 82.5936 59.0936V36C82.5936 17.2223 67.3713 2 48.5936 2H0.499997" stroke="url(#paint0_linear_179_1100)" strokeWidth="2.5"/>
 <defs>
 <linearGradient id="paint0_linear_179_1100" x1="53.5757" y1="83" x2="53.5757" y2="1.64245" gradientUnits="userSpaceOnUse">
-<stop stop-color="#A177FF"/>
-<stop offset="1" stop-color="#523399"/>
+<stop stopColor="#A177FF"/>
+<stop offset="1" stopColor="#523399"/>
 </linearGradient>
 </defs>
 </svg> 
@@ -1607,11 +1607,11 @@ const RightCurveBottom=({ width="107", height="85" })=>(
 
 const LeftCurve=({ width="107", height="85" })=>(
 <svg  width={width} viewBox="0 0 106 85" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 2V2C13.2031 2 23.9064 12.7033 23.9064 25.9064V49C23.9064 67.7777 39.1287 83 57.9064 83H106" stroke="url(#paint0_linear_179_1097)" stroke-width="2.5"/>
+<path d="M0 2V2C13.2031 2 23.9064 12.7033 23.9064 25.9064V49C23.9064 67.7777 39.1287 83 57.9064 83H106" stroke="url(#paint0_linear_179_1097)" strokeWidth="2.5"/>
 <defs>
 <linearGradient id="paint0_linear_179_1097" x1="52.9243" y1="2" x2="52.9243" y2="83.3576" gradientUnits="userSpaceOnUse">
-<stop stop-color="#A177FF"/>
-<stop offset="1" stop-color="#523399"/>
+<stop stopColor="#A177FF"/>
+<stop offset="1" stopColor="#523399"/>
 </linearGradient>
 </defs>
 </svg>
@@ -1620,11 +1620,11 @@ const LeftCurve=({ width="107", height="85" })=>(
 
 const leftCurveBottom=({ width="107", height="85" })=>(
 <svg     height={height} viewBox="0 0 106 85" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 83V83C13.2031 83 23.9064 72.2967 23.9064 59.0936V36C23.9064 17.2223 39.1287 2 57.9064 2H106" stroke="url(#paint0_linear_179_1098)" stroke-width="2.5"/>
+<path d="M0 83V83C13.2031 83 23.9064 72.2967 23.9064 59.0936V36C23.9064 17.2223 39.1287 2 57.9064 2H106" stroke="url(#paint0_linear_179_1098)" strokeWidth="2.5"/>
 <defs>
 <linearGradient id="paint0_linear_179_1098" x1="52.9243" y1="83" x2="52.9243" y2="1.64245" gradientUnits="userSpaceOnUse">
-<stop stop-color="#A177FF"/>
-<stop offset="1" stop-color="#523399"/>
+<stop stopColor="#A177FF"/>
+<stop offset="1" stopColor="#523399"/>
 </linearGradient>
 </defs>
 </svg>
@@ -1664,6 +1664,17 @@ const GoalAbout=()=>(
 </svg>
 )
 
+const BigCurve=()=>(
+  <svg width="703" height="610" viewBox="0 0 703 610" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 0V301.54C2 376.039 83.4 431.732 156.889 443.955V443.955C228.545 455.873 332.813 447.862 405.212 447.405C459.273 447.064 486.054 447.568 540.116 447.405C602.571 447.405 659.021 443.494 689 489.5C703.809 512.226 701 609 701 609" stroke="url(#paint0_linear_179_920)" stroke-width="2.5"/>
+<defs>
+<linearGradient id="paint0_linear_179_920" x1="351.5" y1="0" x2="351.5" y2="611.688" gradientUnits="userSpaceOnUse">
+<stop stopColor="#A177FF"/>
+<stop offset="1" stopColor="#523399"/>
+</linearGradient>
+</defs>
+</svg>
+)
 
 
 
@@ -1720,7 +1731,8 @@ const Icons = {
   QualtiyAbout,
   AgileAbout,
   DigitalAbout,
-  GoalAbout
+  GoalAbout,
+  BigCurve
   // DotLine
 };
 

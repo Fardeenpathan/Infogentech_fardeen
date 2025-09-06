@@ -11,13 +11,13 @@ const ContactUs = () => {
       <div className="flex justify-between items-center">
         <div className="flex gap-10">
           <div className="flex justify-center items-center mb-40 flex-col">
-            <Image
-              src="/assist/img/Polygon.png"
-              alt="Best Design. Development. Marketing."
-              width={46}
-              height={46}
-              objectFit="cover"
-            />
+           <div className="relative w-12 h-12">
+          <img
+            src="/assist/video/pentagonVideo.gif"
+            alt="valueImg"
+            className=" w-full h-full object-cover"
+          />
+        </div>
 
             <div className="w-0.5 h-28 rounded-full mt-4 bg-gradient-to-b from-purple-400 via-purple-500 to-purple-800 "></div>
           </div>

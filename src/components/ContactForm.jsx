@@ -49,17 +49,19 @@ const ContactForm = () => {
     }
   };
   return (
-    <div className="mt-35 subContainer mx-auto overflow-hidden">
-      <div className="flex justify-between ">
+    <div className="mt-35 container mx-auto overflow-hidden">
+      <div className="flex justify-between gap-8">
         <div className="flex gap-10">
-          <div className="flex justify-center flex-col">
-            <Image
-              src="/assist/img/Polygon.png"
-              alt="Best Design. Development. Marketing."
-              width={46}
-              height={46}
-              objectFit="cover"
-            />
+
+          
+          <div className="flex justify-center items-center flex-col">
+           <div className="relative w-12 h-12">
+          <img
+            src="/assist/video/pentagonVideo.gif"
+            alt="valueImg"
+            className=" w-full h-full object-cover"
+          />
+        </div>
 
             <div className="w-0.5 h-[721px] rounded-full mt-4 bg-gradient-to-b from-purple-400 via-purple-500 to-purple-800 "></div>
           </div>
