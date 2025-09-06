@@ -1676,6 +1676,96 @@ const BigCurve=()=>(
 </svg>
 )
 
+const PortHome =()=>(
+  <svg width="545" height="555" viewBox="0 0 545 555" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.2">
+<path d="M21.5 128L94.6791 170V254L21.5 296L-51.6791 254V170L21.5 128Z" fill="url(#paint0_linear_204_2239)"/>
+<path d="M459.5 129L532.679 171V255L459.5 297L386.321 255V171L459.5 129Z" fill="url(#paint1_linear_204_2239)"/>
+<path d="M239.862 171.182V255.817L167 298.132L94.1377 255.817V171.182L167 128.867L239.862 171.182Z" stroke="#79098A" stroke-width="1.5"/>
+<path d="M385.862 171.933V256.066L313 298.134L240.138 256.066V171.933L313 129.865L385.862 171.933Z" stroke="#79098A" stroke-width="1.5"/>
+<path d="M532.862 171.933V256.066L460 298.134L387.138 256.066V171.933L460 129.865L532.862 171.933Z" stroke="#79098A" stroke-width="1.5"/>
+<path d="M20.7949 296.68V382.319L-52.5 425.131L-125.795 382.319V296.68L-52.5 253.868L20.7949 296.68Z" stroke="#79098A" stroke-width="1.5"/>
+<path d="M94.6611 423.186V507.813L20.5 550.136L-53.6611 507.813V423.186L20.5 380.863L94.6611 423.186Z" stroke="#79098A" stroke-width="1.5"/>
+<path d="M166.729 296.682V382.317L93 425.132L19.2715 382.317V296.682L93 253.867L166.729 296.682Z" stroke="#79098A" stroke-width="1.5"/>
+<path d="M313.862 297.431V382.568L241 425.131L168.138 382.568V297.431L241 254.868L313.862 297.431Z" fill="url(#paint2_linear_204_2239)" stroke="#79098A" stroke-width="1.5"/>
+<path d="M458.862 297.679V383.32L386 426.13L313.138 383.32V297.679L386 254.869L458.862 297.679Z" stroke="#79098A" stroke-width="1.5"/>
+<path d="M239.795 423.431V508.568L166.5 551.132L93.2051 508.568V423.431L166.5 380.867L239.795 423.431Z" stroke="#79098A" stroke-width="1.5"/>
+<path d="M385.862 424.933V509.066L313 551.134L240.138 509.066V424.933L313 382.865L385.862 424.933Z" stroke="#79098A" stroke-width="1.5"/>
+<path d="M532.862 425.679V511.32L460 554.13L387.138 511.32V425.679L460 382.869L532.862 425.679Z" stroke="#79098A" stroke-width="1.5"/>
+<path d="M20.7949 43.6797V129.319L-52.5 172.131L-125.795 129.319V43.6797L-52.5 0.868164L20.7949 43.6797Z" stroke="#79098A" stroke-width="1.5"/>
+<path d="M166.862 43.6787V129.32L94 172.13L21.1377 129.32V43.6787L94 0.869141L166.862 43.6787Z" stroke="#79098A" stroke-width="1.5"/>
+<path d="M313.862 44.4307V129.568L241 172.131L168.138 129.568V44.4307L241 1.86816L313.862 44.4307Z" stroke="#79098A" stroke-width="1.5"/>
+<path d="M458.862 44.6787V130.32L386 173.13L313.138 130.32V44.6787L386 1.86914L458.862 44.6787Z" stroke="#79098A" stroke-width="1.5"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_204_2239" x1="21.5" y1="128" x2="21.5" y2="296" gradientUnits="userSpaceOnUse">
+<stop stop-color="#39216E"/>
+<stop offset="1" stop-color="#E5D9FF"/>
+</linearGradient>
+<linearGradient id="paint1_linear_204_2239" x1="459.5" y1="129" x2="459.5" y2="297" gradientUnits="userSpaceOnUse">
+<stop stop-color="#39216E"/>
+<stop offset="1" stop-color="#E5D9FF"/>
+</linearGradient>
+<linearGradient id="paint2_linear_204_2239" x1="241" y1="254" x2="241" y2="426" gradientUnits="userSpaceOnUse">
+<stop stop-color="#39216E"/>
+<stop offset="1" stop-color="#E5D9FF"/>
+</linearGradient>
+</defs>
+</svg>
+)
+
+
+
+
+const PortHomeRight =()=>(
+  <svg width="599" height="555" viewBox="0 0 599 555" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.2">
+<path d="M233.5 128L306.679 170V254L233.5 296L160.321 254V170L233.5 128Z" fill="url(#paint0_linear_204_2240)"/>
+<path d="M671.5 129L744.679 171V255L671.5 297L598.321 255V171L671.5 129Z" fill="url(#paint1_linear_204_2240)"/>
+<path d="M160.661 170.937V255.062L86.5 297.137L12.3389 255.062V170.937L86.5 128.862L160.661 170.937Z" stroke="#79098A" stroke-width="1.5"/>
+<path d="M451.862 171.182V255.817L379 298.132L306.138 255.817V171.182L379 128.867L451.862 171.182Z" stroke="#79098A" stroke-width="1.5"/>
+<path d="M597.862 171.933V256.066L525 298.134L452.138 256.066V171.933L525 129.865L597.862 171.933Z" stroke="#79098A" stroke-width="1.5"/>
+<path d="M744.862 171.933V256.066L672 298.134L599.138 256.066V171.933L672 129.865L744.862 171.933Z" stroke="#79098A" stroke-width="1.5"/>
+<path d="M157.862 423.182V507.817L85 550.132L12.1377 507.817V423.182L85 380.867L157.862 423.182Z" stroke="#79098A" stroke-width="1.5"/>
+<path d="M232.795 296.68V382.319L159.5 425.131L86.2051 382.319V296.68L159.5 253.868L232.795 296.68Z" stroke="#79098A" stroke-width="1.5"/>
+<path d="M306.661 423.186V507.813L232.5 550.136L158.339 507.813V423.186L232.5 380.863L306.661 423.186Z" stroke="#79098A" stroke-width="1.5"/>
+<path d="M378.729 296.682V382.317L305 425.132L231.271 382.317V296.682L305 253.867L378.729 296.682Z" stroke="#79098A" stroke-width="1.5"/>
+<path d="M525.862 297.431V382.568L453 425.131L380.138 382.568V297.431L453 254.868L525.862 297.431Z" fill="url(#paint2_linear_204_2240)" stroke="#79098A" stroke-width="1.5"/>
+<path d="M670.862 297.679V383.32L598 426.13L525.138 383.32V297.679L598 254.869L670.862 297.679Z" stroke="#79098A" stroke-width="1.5"/>
+<path d="M451.795 423.431V508.568L378.5 551.132L305.205 508.568V423.431L378.5 380.867L451.795 423.431Z" stroke="#79098A" stroke-width="1.5"/>
+<path d="M597.862 424.933V509.066L525 551.134L452.138 509.066V424.933L525 382.865L597.862 424.933Z" stroke="#79098A" stroke-width="1.5"/>
+<path d="M744.862 425.679V511.32L672 554.13L599.138 511.32V425.679L672 382.869L744.862 425.679Z" stroke="#79098A" stroke-width="1.5"/>
+<path d="M232.795 43.6797V129.319L159.5 172.131L86.2051 129.319V43.6797L159.5 0.868164L232.795 43.6797Z" stroke="#79098A" stroke-width="1.5"/>
+<path d="M378.862 43.6787V129.32L306 172.13L233.138 129.32V43.6787L306 0.869141L378.862 43.6787Z" stroke="#79098A" stroke-width="1.5"/>
+<path d="M525.862 44.4307V129.568L453 172.131L380.138 129.568V44.4307L453 1.86816L525.862 44.4307Z" stroke="#79098A" stroke-width="1.5"/>
+<path d="M670.862 44.6787V130.32L598 173.13L525.138 130.32V44.6787L598 1.86914L670.862 44.6787Z" stroke="#79098A" stroke-width="1.5"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_204_2240" x1="233.5" y1="128" x2="233.5" y2="296" gradientUnits="userSpaceOnUse">
+<stop stop-color="#39216E"/>
+<stop offset="1" stop-color="#E5D9FF"/>
+</linearGradient>
+<linearGradient id="paint1_linear_204_2240" x1="671.5" y1="129" x2="671.5" y2="297" gradientUnits="userSpaceOnUse">
+<stop stop-color="#39216E"/>
+<stop offset="1" stop-color="#E5D9FF"/>
+</linearGradient>
+<linearGradient id="paint2_linear_204_2240" x1="453" y1="254" x2="453" y2="426" gradientUnits="userSpaceOnUse">
+<stop stop-color="#39216E"/>
+<stop offset="1" stop-color="#E5D9FF"/>
+</linearGradient>
+</defs>
+</svg>
+
+)
+
+
+
+
+
+
+
+
+
 
 
 const Icons = {
@@ -1732,8 +1822,10 @@ const Icons = {
   AgileAbout,
   DigitalAbout,
   GoalAbout,
-  BigCurve
-  // DotLine
+  BigCurve,
+  PortHome,
+  PortHomeRight
+    // DotLine
 };
 
 export default Icons;

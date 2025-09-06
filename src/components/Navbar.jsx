@@ -17,7 +17,7 @@ export function Navbar() {
         </div>
         <div className="flex flex-row space-x-12.5 py-4.5 px-12.5 text-lg font-medium font-Jost">
           <ServicesDropdown />
-          <Link href="#" className="">
+          <Link href="/portfolio" className="">
             Portfolio
           </Link>
         </div>
