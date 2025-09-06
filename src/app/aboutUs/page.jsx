@@ -1,7 +1,8 @@
-"use client";
+
 import Image from "next/image";
 import StatsItem from "@/components/stats-item";
 import SubscribeContact from "@/components/SubscribeContact";
+import FocusPart from "@/components/FocusPart";
 import Icons from "@/components/ui/Icon";
 const stats = [
   { value: "250", suffix: "+", label: "Projects Delivered" },
@@ -11,7 +12,7 @@ const stats = [
 ];
 const AboutUs = () => {
   return (
-    <div className="longContainer mx-auto">
+    <>
       <div className="mx-14 h-85 px-23 mt-30 bg-[url('/assist/img/aboutBg.png')]  longContainer mx-auto relative">
         <div className="flex gap-10 absolute top-10">
           <div className="flex justify-center items-center mb-40 flex-col shrink-0">
@@ -54,11 +55,12 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center">
+      <div className="flex justify-center flex-col items-center gap-32 mt-96">
+        <FocusPart/>
         <Icons name="LinesAbout" />
       </div>
       <SubscribeContact />
-    </div>
+    </>
   );
 };
 
