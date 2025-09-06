@@ -26,9 +26,9 @@ export function Navbar() {
         <div className="md:flex items-center space-x-12.5 px-12.5 py-4.5 text-lg font-medium font-Jost">
           <Link href="#">Blogs</Link>
           <Link href="/contactUs">Contact us</Link>
-          <Link href="#">About us</Link>
+          <Link href="aboutUs">About us</Link>
         </div>
-        <Link href="/contact">
+        <Link href="/contactUs">
           <GradientButton>Free Consultation</GradientButton>
         </Link>
       </div>
