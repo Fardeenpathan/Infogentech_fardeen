@@ -2,8 +2,7 @@
 import SubscribeContact from "@/components/SubscribeContact";
 import Icons from "@/components/ui/Icon";
 import Image from "next/image";
-import { useState, useEffect } from "react";
-
+import { useState, useEffect,useRef } from "react";
 const servicesData = [
   {
     id: 1,
@@ -183,6 +182,28 @@ const PortFolio = () => {
     setOpenCategory(openCategory === id ? null : id);
   };
 
+    const videoRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const handlePlay = () => {
+    if (videoRef.current) {
+      videoRef.current.play();
+      setIsPlaying(true);
+    }
+  };
+
+  const handleVideoClick = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause();
+        setIsPlaying(false);
+      } else {
+        videoRef.current.play();
+        setIsPlaying(true);
+      }
+    }
+  };
+
   return (
     <div className="container mx-auto mt-24 overflow-hidden">
       <div className="flex justify-center items-center flex-col">
@@ -232,21 +253,21 @@ const PortFolio = () => {
               }`}
               onClick={() => toggleCategory(category.id)}
             >
-              <div className="flex gap-50 "> <span>{category.id}</span> <span>{category.title}</span></div>
-              
-              {
-                openCategory === category.id &&(
-                  <Image
-                src="/assist/img/DesignImg.png"
-                alt="Blogs"
-                width={400}
-                height={377}
-                objectFit="cover"
-                className="rounded-2xl rotate-12 absolute -top-15 right-9 animate-slide-in-right overflow-hidden"
-              />
-                )
-              }
-              
+              <div className="flex gap-50 ">
+                {" "}
+                <span>{category.id}</span> <span>{category.title}</span>
+              </div>
+
+              {openCategory === category.id && (
+                <Image
+                  src="/assist/img/DesignImg.png"
+                  alt="Blogs"
+                  width={400}
+                  height={377}
+                  objectFit="cover"
+                  className="rounded-2xl rotate-12 absolute -top-15 right-9 animate-slide-in-right overflow-hidden"
+                />
+              )}
             </div>
 
             {openCategory === category.id && (
@@ -276,9 +297,9 @@ const PortFolio = () => {
                       <p className="font-jost font-normal text-[16px] leading-[140%] tracking-[0.03em] capitalize mt-8 opacity-30">
                         {subService.desc}
                       </p>
-                      <div className="flex justify-end mt-4">
+                      <a className="flex justify-end mt-4" href="contactUs">
                         <Icons name="Arrow" width={40} height={20} />
-                      </div>
+                      </a>
                     </div>
                   ))}
                 </div>
@@ -288,6 +309,32 @@ const PortFolio = () => {
             <div className="border-b-2 border-[#7e7d7d] opacity-15"></div>
           </div>
         ))}
+      </div>
+      <div className="mt-34 flex justify-center items-center flex-col relative">
+        <div className="absolute -top-20">
+          <Icons name="gradientServices" />
+        </div>
+         
+         <div className="relative subContainer h-[640px] flex items-center justify-center ">
+      <video
+        ref={videoRef}
+        className="w-full h-full object-cover cursor-pointer rounded-3xl"
+        onClick={handleVideoClick}
+        loop
+        playsInline
+        muted
+      >
+        <source src="/assist/hero-bg.mp4" type="video/mp4" />
+      </video>
+      {!isPlaying && (
+        <button
+          onClick={handlePlay}
+          className="absolute z-10 flex items-center justify-center w-20 h-20 bg-white rounded-full shadow-lg"
+        >
+          <Icons name="Play" />
+        </button>
+      )}
+    </div>
       </div>
 
       <SubscribeContact />
