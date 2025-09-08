@@ -145,13 +145,13 @@ const servicesData = [
         title: "Marketing Strategy",
         subServices: [
           {
-            id: "07-1",
+            id: "01",
             title: "Funnel Optimization",
             desc: "Data-driven marketing with continuous improvement.",
             imageIcon: "/assist/img/serviceMarket.png",
           },
           {
-            id: "07-2",
+            id: "02",
             title: "Growth Strategy",
             desc: "Long-term strategies powered by analytics.",
             imageIcon: "/assist/img/serviceMarket.png",
@@ -217,13 +217,14 @@ const PortFolio = () => {
       <div>
         {activeService.categories.map((category) => (
           <div key={category.id}>
+            
             <p
-              className={`font-jost font-normal text-[64px] leading-[100%] tracking-[0.03em] flex justify-between items-center py-5 cursor-pointer transition-opacity duration-300 ${
+              className={`font-jost font-normal text-[64px] leading-[100%] tracking-[0.03em] flex gap-50 items-center py-5 cursor-pointer transition-opacity duration-300 ${
                 openCategory === category.id ? "opacity-100" : "opacity-15"
               }`}
               onClick={() => toggleCategory(category.id)}
             >
-              {category.title}
+             <span>{category.id}</span> <span>{category.title}</span> 
             </p>
             {openCategory === category.id && (
               <div>
