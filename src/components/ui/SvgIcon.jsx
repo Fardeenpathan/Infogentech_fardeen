@@ -1784,10 +1784,18 @@ const CurveGradient=()=>(
 
 
 
+const Add =()=>(
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 18V2M2 10H18" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+)
 
 
-
-
+const Minus =()=>(
+<svg width="20" height="4" viewBox="0 0 20 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 2H18" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+)
 
 
 
@@ -1848,7 +1856,9 @@ const Icons = {
   BigCurve,
   PortHome,
   PortHomeRight,
-  CurveGradient
+  CurveGradient,
+  Add,
+  Minus
     // DotLine
 };
 

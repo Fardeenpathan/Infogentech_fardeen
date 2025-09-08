@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-
+import Icons from "@/components/ui/Icon";
 const faqs = [
   {
     id: 1,
@@ -61,7 +61,7 @@ const FAQs = () => {
           </div>
         </div>
       </div>
-      <div className="flex gap-20">
+      <section className="flex gap-20 container mx-auto">
         <div className="flex gap-10">
           <div className="flex justify-center items-center mb-40 flex-col">
             <div className="relative w-12 h-12">
@@ -71,9 +71,9 @@ const FAQs = () => {
                 className=" w-full h-full object-cover"
               />
             </div>
-            <div className="w-0.5 h-28 rounded-full mt-4 bg-gradient-to-b from-purple-400 via-purple-500 to-purple-800 "></div>
+            <div className="w-0.5 h-28 rounded-full mt-4 bg-gradient-to-b from-purple-400 via-purple-500 to-purple-800"></div>
           </div>
-          <div className="">
+          <di className="text-nowrap">
             <p className="font-jost mb-10 text-[16px] leading-[24px]  align-middle">
               General & Services
             </p>
@@ -83,52 +83,41 @@ const FAQs = () => {
             <p className="font-jost mb-10 text-[16px] leading-[24px]  align-middle">
               Support & Maintenance
             </p>
-          </div>
+          </di>
         </div>
-        <div>
+        <aside className="w-full">
           <p className="font-avalors font-normal text-[30px] leading-[100%] tracking-[0.03em]">
             General & Services
           </p>
-          <section className=" mx-auto ">
-            <div className=" px-7 md:px-10 xl:px-2 py-4">
-              <div className="  rounded-lg">
+          <section>
+              <div className="rounded-lg">
                 {faqs.map((faq) => (
                   <div
                     key={faq.id}
-                    className={`border-b border-[#0A071B]/10 ${
+                    className={`border-b border-[#0A071B]/10 linearGradientFaq mb-2 ${
                       openId === faq.id ? "" : ""
                     }`}
                   >
                     <button
-                      className="question-btn flex w-full items-start gap-x-5 justify-between rounded-lg text-left text-lg font-bold text-slate-800 focus:outline-none p-5"
+                      className="question-btn flex w-full items-start gap-x-5 justify-between rounded-lg text-left text-lg font-bold  focus:outline-none p-5"
                       onClick={() => toggleFAQ(faq.id)}
                     >
-                      <span>{faq.question}</span>
-                      <svg
-                        stroke="currentColor"
-                        fill="currentColor"
-                        strokeWidth="0"
-                        viewBox="0 0 24 24"
-                        className={`mt-1.5 md:mt-0 flex-shrink-0 h-5 w-5 text-[#5B5675] transition-transform duration-200 ${
-                          openId === faq.id ? "rotate-180" : ""
-                        }`}
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
-                      </svg>
+                      <div>{faq.question}</div>
+                      <div className="cursor-pointer">
+                        <Icons name = {openId===faq.id ? "Minus" : "Add"}/>
+                      </div>
                     </button>
                     {openId === faq.id && (
-                      <div className="answer pt-2 pb-5 px-5 text-sm lg:text-base text-[#343E3A] font-medium">
+                      <div className="answer flex w-full items-start gap-x-5 justify-between rounded-lg text-left text-lg font-bold  focus:outline-none p-5">
                         {faq.answer}
                       </div>
                     )}
                   </div>
                 ))}
               </div>
-            </div>
           </section>
-        </div>
-      </div>
+        </aside>
+      </section>
     </div>
   );
 };

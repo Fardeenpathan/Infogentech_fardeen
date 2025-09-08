@@ -82,7 +82,7 @@ export default function ServicesSection() {
           </div>
         ))}
        {isInView && (
-          <div div className=" overflow-hidden">
+          <div className="overflow-hidden">
             <div className="absolute moving-text-container -z-30 -top-30">
               <div className="moving-text-content font-['Jost'] font-avalors font-normal text-[120px] tracking-[0.03em] uppercase  bg-gradient-to-b from-[#C4C4C4] to-[#FFFFFF] bg-clip-text text-transparent opacity-15 moving-text-container">
                 <div className="flex gap-56">

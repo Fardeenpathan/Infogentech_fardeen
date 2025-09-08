@@ -121,7 +121,7 @@ export default function OurPortfolio() {
             </button>
           ))}
         </div>
-        <a href="#" className="flex gap-8 items-center justify-center">
+        <a href="/portfolio" className="flex gap-8 items-center justify-center">
           <p className="font-[jost] font-semibold text-[18px] leading-[120%] capitalize ">
             See Our <br /> More Projects
           </p>

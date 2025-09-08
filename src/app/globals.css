@@ -195,6 +195,11 @@
   -webkit-text-fill-color: transparent;
 }
 
+.linearGradientFaq{
+  background: linear-gradient(180deg, #15152A 0%, #1D1D3B 191.25%);
+
+}
+
 .hexagon {
   clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
 }
