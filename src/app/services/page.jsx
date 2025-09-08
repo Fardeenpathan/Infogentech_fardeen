@@ -2,165 +2,9 @@
 import SubscribeContact from "@/components/SubscribeContact";
 import Icons from "@/components/ui/Icon";
 import Image from "next/image";
-import { useState, useEffect,useRef } from "react";
-const servicesData = [
-  {
-    id: 1,
-    key: "design",
-    icon: "Design",
-    label: "Design",
-    title: "Graphic Design",
-    categories: [
-      {
-        id: "01",
-        title: "Content",
-        subServices: [
-          {
-            id: "01",
-            title: "Copywriting",
-            desc: "Engaging and impactful content strategies.",
-          },
-          {
-            id: "02",
-            title: "Storytelling",
-            desc: "Narrative-driven approaches for brands.",
-          },
-        ],
-      },
-      {
-        id: "02",
-        title: "Design",
-        subServices: [
-          {
-            id: "01",
-            title: "Digital Design",
-            desc: "Modern Digital Design, Bold Print Design, and User-Focused UX/UI.",
-          },
-          {
-            id: "02",
-            title: "Branding Solutions",
-            desc: "Consistent branding solutions for all platforms.",
-          },
-        ],
-      },
-      {
-        id: "03",
-        title: "Marketing",
-        subServices: [
-          {
-            id: "01",
-            title: "Social Media",
-            desc: "Creative strategies, impactful storytelling, and adaptive journeys.",
-          },
-          {
-            id: "02",
-            title: "Engagement",
-            desc: "Strong social media engagement and user growth.",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: 2,
-    key: "uiux",
-    icon: "Development",
-    label: "Development",
-    title: "Development",
-    categories: [
-      {
-        id: "04",
-        title: "Development",
-        subServices: [
-          {
-            id: "01",
-            title: "Web Development",
-            desc: "Reliable web development and ongoing support.",
-            imageIcon: "/assist/img/serviceDevelopment.png",
-          },
-          {
-            id: "02",
-            title: "Data Analytics",
-            desc: "Accessible design and actionable analytics.",
-            imageIcon: "/assist/img/serviceDevelopment.png",
-          },
-        ],
-      },
-      {
-        id: "05",
-        title: "Marketing",
-        subServices: [
-          {
-            id: "01",
-            title: "SEO",
-            desc: "Advanced SEO and data-driven strategies.",
-            imageIcon: "/assist/img/serviceMarket.png",
-          },
-          {
-            id: "02",
-            title: "Advertising",
-            desc: "Precision ads and scalable long-term strategies.",
-            imageIcon: "/assist/img/serviceMarket.png",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: 3,
-    key: "marketing",
-    icon: "DigitalMarketing",
-    label: "Digital Marketing",
-    title: "Digital Marketing",
-    categories: [
-      {
-        id: "06",
-        title: "Brand Strategy",
-        subServices: [
-          {
-            id: "06-1",
-            title: "Identity Design",
-            desc: "Building a unique and recognizable visual identity.",
-            imageIcon: "/assist/img/serviceContent.png",
-          },
-          {
-            id: "06-2",
-            title: "Messaging",
-            desc: "Strategic messaging for stronger brand recognition.",
-            imageIcon: "/assist/img/serviceContent.png",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: 4,
-    key: "content",
-    icon: "Content",
-    label: "Content",
-    title: "Content",
-    categories: [
-      {
-        id: "07",
-        title: "Marketing Strategy",
-        subServices: [
-          {
-            id: "01",
-            title: "Funnel Optimization",
-            desc: "Data-driven marketing with continuous improvement.",
-            imageIcon: "/assist/img/serviceMarket.png",
-          },
-          {
-            id: "02",
-            title: "Growth Strategy",
-            desc: "Long-term strategies powered by analytics.",
-            imageIcon: "/assist/img/serviceMarket.png",
-          },
-        ],
-      },
-    ],
-  },
-];
+import { useState, useEffect, useRef } from "react";
+import SubServiceCard from "@/components/SubServiceCard";
+import servicesData from "@/data/servicesData.json";
 
 const PortFolio = () => {
   const [activeKey, setActiveKey] = useState("design");
@@ -174,7 +18,6 @@ const PortFolio = () => {
   useEffect(() => {
     const service = servicesData.find((s) => s.key === activeKey);
     setActiveService(service);
-    // Auto open first category of the selected service
     setOpenCategory(service?.categories[0]?.id || null);
   }, [activeKey]);
 
@@ -182,7 +25,7 @@ const PortFolio = () => {
     setOpenCategory(openCategory === id ? null : id);
   };
 
-    const videoRef = useRef(null);
+  const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
   const handlePlay = () => {
@@ -226,8 +69,6 @@ const PortFolio = () => {
           />
         </div>
       </div>
-
-      {/* Service Buttons */}
       <div className="flex gap-6 justify-center mt-10 ">
         {servicesData.map((service) => (
           <button
@@ -254,10 +95,8 @@ const PortFolio = () => {
               onClick={() => toggleCategory(category.id)}
             >
               <div className="flex gap-50 ">
-                {" "}
                 <span>{category.id}</span> <span>{category.title}</span>
               </div>
-
               {openCategory === category.id && (
                 <Image
                   src="/assist/img/DesignImg.png"
@@ -269,7 +108,6 @@ const PortFolio = () => {
                 />
               )}
             </div>
-
             {openCategory === category.id && (
               <div>
                 <div className="py-10 flex flex-col items-center gap-2 text-center">
@@ -284,28 +122,14 @@ const PortFolio = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
                   {category.subServices.map((subService) => (
-                    <div
+                    <SubServiceCard
                       key={subService.id}
-                      className="shadow-[0px_0px_54px_24px_#1C1C38] p-5 rounded-2xl"
-                    >
-                      <span className="font-jost font-normal text-[32px] leading-[100%] tracking-[3%] opacity-10">
-                        {subService.id}
-                      </span>
-                      <h2 className="font-jost font-medium text-[32px] leading-[120%] tracking-[0.03em] mt-8">
-                        {subService.title}
-                      </h2>
-                      <p className="font-jost font-normal text-[16px] leading-[140%] tracking-[0.03em] capitalize mt-8 opacity-30">
-                        {subService.desc}
-                      </p>
-                      <a className="flex justify-end mt-4" href="contactUs">
-                        <Icons name="Arrow" width={40} height={20} />
-                      </a>
-                    </div>
+                      subService={subService}
+                    />
                   ))}
                 </div>
               </div>
             )}
-
             <div className="border-b-2 border-[#7e7d7d] opacity-15"></div>
           </div>
         ))}
@@ -314,29 +138,28 @@ const PortFolio = () => {
         <div className="absolute -top-20">
           <Icons name="gradientServices" />
         </div>
-         
-         <div className="relative subContainer h-[640px] flex items-center justify-center ">
-      <video
-        ref={videoRef}
-        className="w-full h-full object-cover cursor-pointer rounded-3xl"
-        onClick={handleVideoClick}
-        loop
-        playsInline
-        muted
-      >
-        <source src="/assist/hero-bg.mp4" type="video/mp4" />
-      </video>
-      {!isPlaying && (
-        <button
-          onClick={handlePlay}
-          className="absolute z-10 flex items-center justify-center w-20 h-20 bg-white rounded-full shadow-lg"
-        >
-          <Icons name="Play" />
-        </button>
-      )}
-    </div>
-      </div>
 
+        <div className="relative subContainer h-[640px] flex items-center justify-center ">
+          <video
+            ref={videoRef}
+            className="w-full h-full object-cover cursor-pointer rounded-3xl"
+            onClick={handleVideoClick}
+            loop
+            playsInline
+            muted
+          >
+            <source src="/assist/hero-bg.mp4" type="video/mp4" />
+          </video>
+          {!isPlaying && (
+            <button
+              onClick={handlePlay}
+              className="absolute z-10 flex items-center justify-center w-20 h-20 bg-white rounded-full shadow-lg"
+            >
+              <Icons name="Play" />
+            </button>
+          )}
+        </div>
+      </div>
       <SubscribeContact />
     </div>
   );

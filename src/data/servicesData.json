@@ -1,0 +1,158 @@
+[
+  {
+    "id": 1,
+    "key": "design",
+    "icon": "Design",
+    "label": "Design",
+    "title": "Graphic Design",
+    "categories": [
+      {
+        "id": "01",
+        "title": "Content",
+        "subServices": [
+          {
+            "id": "01",
+            "title": "Copywriting",
+            "desc": "Engaging and impactful content strategies."
+          },
+          {
+            "id": "02",
+            "title": "Storytelling",
+            "desc": "Narrative-driven approaches for brands."
+          }
+        ]
+      },
+      {
+        "id": "02",
+        "title": "Design",
+        "subServices": [
+          {
+            "id": "01",
+            "title": "Digital Design",
+            "desc": "Modern Digital Design, Bold Print Design, and User-Focused UX/UI."
+          },
+          {
+            "id": "02",
+            "title": "Branding Solutions",
+            "desc": "Consistent branding solutions for all platforms."
+          }
+        ]
+      },
+      {
+        "id": "03",
+        "title": "Marketing",
+        "subServices": [
+          {
+            "id": "01",
+            "title": "Social Media",
+            "desc": "Creative strategies, impactful storytelling, and adaptive journeys."
+          },
+          {
+            "id": "02",
+            "title": "Engagement",
+            "desc": "Strong social media engagement and user growth."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "key": "uiux",
+    "icon": "Development",
+    "label": "Development",
+    "title": "Development",
+    "categories": [
+      {
+        "id": "04",
+        "title": "Development",
+        "subServices": [
+          {
+            "id": "01",
+            "title": "Web Development",
+            "desc": "Reliable web development and ongoing support.",
+            "imageIcon": "/assist/img/serviceDevelopment.png"
+          },
+          {
+            "id": "02",
+            "title": "Data Analytics",
+            "desc": "Accessible design and actionable analytics.",
+            "imageIcon": "/assist/img/serviceDevelopment.png"
+          }
+        ]
+      },
+      {
+        "id": "05",
+        "title": "Marketing",
+        "subServices": [
+          {
+            "id": "01",
+            "title": "SEO",
+            "desc": "Advanced SEO and data-driven strategies.",
+            "imageIcon": "/assist/img/serviceMarket.png"
+          },
+          {
+            "id": "02",
+            "title": "Advertising",
+            "desc": "Precision ads and scalable long-term strategies.",
+            "imageIcon": "/assist/img/serviceMarket.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "key": "marketing",
+    "icon": "DigitalMarketing",
+    "label": "Digital Marketing",
+    "title": "Digital Marketing",
+    "categories": [
+      {
+        "id": "06",
+        "title": "Brand Strategy",
+        "subServices": [
+          {
+            "id": "06-1",
+            "title": "Identity Design",
+            "desc": "Building a unique and recognizable visual identity.",
+            "imageIcon": "/assist/img/serviceContent.png"
+          },
+          {
+            "id": "06-2",
+            "title": "Messaging",
+            "desc": "Strategic messaging for stronger brand recognition.",
+            "imageIcon": "/assist/img/serviceContent.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "key": "content",
+    "icon": "Content",
+    "label": "Content",
+    "title": "Content",
+    "categories": [
+      {
+        "id": "07",
+        "title": "Marketing Strategy",
+        "subServices": [
+          {
+            "id": "01",
+            "title": "Funnel Optimization",
+            "desc": "Data-driven marketing with continuous improvement.",
+            "imageIcon": "/assist/img/serviceMarket.png"
+          },
+          {
+            "id": "02",
+            "title": "Growth Strategy",
+            "desc": "Long-term strategies powered by analytics.",
+            "imageIcon": "/assist/img/serviceMarket.png"
+          }
+        ]
+      }
+    ]
+  }
+]

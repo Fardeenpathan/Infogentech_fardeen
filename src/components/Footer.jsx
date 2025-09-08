@@ -80,7 +80,7 @@ export function Footer() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="text-gray-400 hover:text-white">
+                    <Link href="/blogs" className="text-gray-400 hover:text-white">
                       Blog
                     </Link>
                   </li>
