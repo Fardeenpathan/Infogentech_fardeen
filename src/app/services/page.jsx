@@ -65,8 +65,8 @@ const servicesData = [
     id: 2,
     key: "uiux",
     icon: "Development",
-    label: "UI/UX Design",
-    title: "UI/UX Design",
+    label: "Development",
+    title: "Development",
     categories: [
       {
         id: "04",
@@ -108,10 +108,10 @@ const servicesData = [
   },
   {
     id: 3,
-    key: "branding",
-    icon: "Content",
-    label: "Branding",
-    title: "Branding",
+    key: "marketing",
+    icon: "DigitalMarketing",
+    label: "Digital Marketing",
+    title: "Digital Marketing",
     categories: [
       {
         id: "06",
@@ -135,10 +135,10 @@ const servicesData = [
   },
   {
     id: 4,
-    key: "marketing",
-    icon: "DigitalMarketing",
-    label: "Digital Marketing",
-    title: "Logo Design",
+    key: "content",
+    icon: "Content",
+    label: "Content",
+    title: "Content",
     categories: [
       {
         id: "07",
@@ -264,7 +264,7 @@ const PortFolio = () => {
           </div>
         ))}
       </div>
-      <SubscribeContact/>
+      <SubscribeContact />
     </div>
   );
 };
