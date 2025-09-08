@@ -14,24 +14,24 @@ const servicesData = [
         id: "01",
         title: "Content",
         subServices: [
-          { id: "01-1", title: "Copywriting", desc: "Engaging and impactful content strategies." },
-          { id: "01-2", title: "Storytelling", desc: "Narrative-driven approaches for brands." },
+          { id: "01", title: "Copywriting", desc: "Engaging and impactful content strategies." },
+          { id: "02", title: "Storytelling", desc: "Narrative-driven approaches for brands." },
         ],
       },
       {
         id: "02",
         title: "Design",
         subServices: [
-          { id: "02-1", title: "Digital Design", desc: "Modern Digital Design, Bold Print Design, and User-Focused UX/UI." },
-          { id: "02-2", title: "Branding Solutions", desc: "Consistent branding solutions for all platforms." },
+          { id: "01", title: "Digital Design", desc: "Modern Digital Design, Bold Print Design, and User-Focused UX/UI." },
+          { id: "02", title: "Branding Solutions", desc: "Consistent branding solutions for all platforms." },
         ],
       },
       {
         id: "03",
         title: "Marketing",
         subServices: [
-          { id: "03-1", title: "Social Media", desc: "Creative strategies, impactful storytelling, and adaptive journeys." },
-          { id: "03-2", title: "Engagement", desc: "Strong social media engagement and user growth." },
+          { id: "01", title: "Social Media", desc: "Creative strategies, impactful storytelling, and adaptive journeys." },
+          { id: "02", title: "Engagement", desc: "Strong social media engagement and user growth." },
         ],
       },
     ],
@@ -47,16 +47,16 @@ const servicesData = [
         id: "04",
         title: "Development",
         subServices: [
-          { id: "04-1", title: "Web Development", desc: "Reliable web development and ongoing support.", imageIcon: "/assist/img/serviceDevelopment.png" },
-          { id: "04-2", title: "Data Analytics", desc: "Accessible design and actionable analytics.", imageIcon: "/assist/img/serviceDevelopment.png" },
+          { id: "01", title: "Web Development", desc: "Reliable web development and ongoing support.", imageIcon: "/assist/img/serviceDevelopment.png" },
+          { id: "02", title: "Data Analytics", desc: "Accessible design and actionable analytics.", imageIcon: "/assist/img/serviceDevelopment.png" },
         ],
       },
       {
         id: "05",
         title: "Marketing",
         subServices: [
-          { id: "05-1", title: "SEO", desc: "Advanced SEO and data-driven strategies.", imageIcon: "/assist/img/serviceMarket.png" },
-          { id: "05-2", title: "Advertising", desc: "Precision ads and scalable long-term strategies.", imageIcon: "/assist/img/serviceMarket.png" },
+          { id: "01", title: "SEO", desc: "Advanced SEO and data-driven strategies.", imageIcon: "/assist/img/serviceMarket.png" },
+          { id: "02", title: "Advertising", desc: "Precision ads and scalable long-term strategies.", imageIcon: "/assist/img/serviceMarket.png" },
         ],
       },
     ],
@@ -99,17 +99,16 @@ const servicesData = [
 
 const PortFolio = () => {
   const [activeKey, setActiveKey] = useState("design");
-  const [openCategory, setOpenCategory] = useState(null); // track which category is open
+  const [openCategory, setOpenCategory] = useState(null);
 
   const activeService = servicesData.find((s) => s.key === activeKey);
 
   const toggleCategory = (id) => {
-    setOpenCategory(openCategory === id ? null : id); // open/close accordion
+    setOpenCategory(openCategory === id ? null : id);
   };
 
   return (
     <div className="container mx-auto mt-24">
-      {/* Title */}
       <div className="flex justify-center items-center flex-col">
         <p className="font-avalors font-normal text-[75px] leading-none bg-[linear-gradient(91.32deg,_#6A27FF_-32.61%,_#FFFFFF_19.98%,_#6A27FF_112.29%)] bg-clip-text text-transparent">
           Our Services
@@ -125,8 +124,6 @@ const PortFolio = () => {
           <img src="/assist/video/pentagonVideo.gif" alt="valueImg" className="w-full h-full object-cover" />
         </div>
       </div>
-
-      {/* Service Tabs */}
       <div className="flex gap-6 justify-center mt-10">
         {servicesData.map((service) => (
           <button
@@ -136,7 +133,7 @@ const PortFolio = () => {
             }`}
             onClick={() => {
               setActiveKey(service.key);
-              setOpenCategory(null); // reset open category when switching service
+              setOpenCategory(null);
             }}
           >
             <Icons name={service.icon} />
@@ -144,18 +141,18 @@ const PortFolio = () => {
           </button>
         ))}
       </div>
-
-      {/* Categories & SubServices */}
-      <div className="mt-20">
+      <div className="border-b-2 border-[#7e7d7d] mt-15 opacity-15"></div>
+      <div>
         {activeService.categories.map((category) => (
           <div key={category.id} >
             <p
-              className="font-jost font-normal text-[64px] leading-[100%] tracking-[0.03em] flex justify-between items-center border-b-2 border-[#7e7d7d] py-5 cursor-pointer"
+              className="font-jost font-normal text-[64px] leading-[100%] tracking-[0.03em] flex justify-between items-center  py-5 cursor-pointer"
               onClick={() => toggleCategory(category.id)}
             >
               {category.title}
+              
             </p>
-
+            
             {openCategory === category.id && (
               <div>
                 <div className="py-10 flex flex-col items-center gap-2 text-center">
@@ -165,7 +162,7 @@ const PortFolio = () => {
                   </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
                   {category.subServices.map((subService) => (
                     <div key={subService.id} className="shadow-[0px_0px_54px_24px_#1C1C38] p-5 rounded-2xl">
                       <span className="font-jost font-normal text-[32px] leading-[100%] tracking-[3%] opacity-10">
@@ -185,6 +182,7 @@ const PortFolio = () => {
                 </div>
               </div>
             )}
+            <div className="border-b-2 border-[#7e7d7d] opacity-15"></div>
           </div>
         ))}
       </div>
