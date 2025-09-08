@@ -1,30 +1,31 @@
 "use client";
-
-import { Navbar } from "@/components/navbar";
 import { HeroSection } from "@/components/hero-section";
-import { StatsSection } from "@/components/stats-section";
-import ServicesSection from "@/components/services-section";
-
+import ServicesSection from "@/components/ServicesSection";
+import { StatsSection } from "@/components/StatsSection";
+import OurValues from "@/components/OurValues";
+import SuhcduleCall from "@/components/SuhcduleCall";
+import StrategicProcess from "@/components/StrategicProcess";
+import OurPortfolio from "@/components/OurPortfolio";
+import Testimonials from "@/components/Testimonials";
+import LatestBlogs from "@/components/LatestBlogs";
 export default function Home() {
   return (
-    <main className="w-full   relative">
-      <video
-        className="absolute top-0 left-0 w-full h-220  object-cover bg-transparent -z-10"
-        src="/assist/hero-bg.mp4"
-        autoPlay
-        loop
-        muted
-        playsInline
-      />
-      
-     
-        <div className="max-w-custom  mx-auto">
-        <Navbar />
-        <HeroSection />
-        <StatsSection />
-        <ServicesSection />
-        </div>
-    
+    <main className="w-full">
+      <HeroSection />
+      <StatsSection />
+      <div className="overflow-hidden">
+       <ServicesSection /> 
+      </div>
+ 
+      <div className="container mx-auto">
+       
+        <OurValues />
+        <SuhcduleCall />
+        <StrategicProcess />
+        <OurPortfolio />
+        <Testimonials />
+        <LatestBlogs />
+      </div>
     </main>
   );
 }

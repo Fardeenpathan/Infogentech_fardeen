@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -119,7 +120,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-slate-950 text-foreground;
+    @apply bg-[#15152a] text-foreground;
   }
 }
 
@@ -127,6 +128,7 @@
   .text-balance {
     text-wrap: balance;
   }
+
 }
 
 /* Custom scrollbar */
@@ -154,17 +156,97 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Kumbh Sans";
+  src: url("/fonts/KumbhSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Kumbh Sans";
+  src: url("/fonts/KumbhSans-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter/Inter-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+.font-kumbh-sans {
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
 .font-avalors {
   font-family: 'Avalors', sans-serif;
 }
 
-.clip-hexagon {
-  clip-path: polygon(
-    50% 0%,   /* top */
-    100% 25%, /* top right */
-    100% 75%, /* bottom right */
-    50% 100%, /* bottom */
-    0% 75%,   /* bottom left */
-    0% 25%    /* top left */
-  );
+  .bg-\[url\(\)\] {
+    background-image: none;
+  }
+
+  .gradient-text {
+  background: linear-gradient(93.46deg, #C4C4C4 4.94%, #FFFFFF 98.78%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.linearGradientFaq{
+  background: linear-gradient(180deg, #15152A 0%, #1D1D3B 191.25%);
+
+}
+
+.hexagon {
+  clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+}
+
+.moving-text-container {
+  white-space: nowrap;
+}
+
+.container{
+  max-width: 1680px;
+}
+.maxContainer{
+  max-width: 1740px;
+}
+.longContainer{
+  max-width: 1800px;
+}
+.subContainer{
+  max-width: 1380px;
+}
+.radius{
+  border-radius: 10px;
+}
+.moving-text-content {
+  display: inline-block;
+  animation: moveText 100s linear infinite;
+}
+
+.moving-text-left {
+  display: inline-block;
+  animation: moveTextleft 100s linear infinite;
+}
+
+@keyframes moveText {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes moveTextleft {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0); 
+  }
 }
