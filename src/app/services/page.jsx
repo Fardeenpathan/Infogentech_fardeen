@@ -1,7 +1,8 @@
 "use client";
 import SubscribeContact from "@/components/SubscribeContact";
 import Icons from "@/components/ui/Icon";
-import { useState } from "react";
+import Image from "next/image";
+import { useState, useEffect } from "react";
 
 const servicesData = [
   {
@@ -167,8 +168,16 @@ const PortFolio = () => {
   const [openCategory, setOpenCategory] = useState(
     servicesData.find((s) => s.key === "design")?.categories[0].id
   );
+  const [activeService, setActiveService] = useState(
+    servicesData.find((s) => s.key === activeKey)
+  );
 
-  const activeService = servicesData.find((s) => s.key === activeKey);
+  useEffect(() => {
+    const service = servicesData.find((s) => s.key === activeKey);
+    setActiveService(service);
+    // Auto open first category of the selected service
+    setOpenCategory(service?.categories[0]?.id || null);
+  }, [activeKey]);
 
   const toggleCategory = (id) => {
     setOpenCategory(openCategory === id ? null : id);
@@ -196,6 +205,8 @@ const PortFolio = () => {
           />
         </div>
       </div>
+
+      {/* Service Buttons */}
       <div className="flex gap-6 justify-center mt-10">
         {servicesData.map((service) => (
           <button
@@ -203,29 +214,41 @@ const PortFolio = () => {
             className={`flex gap-2 items-center border border-white rounded-md px-7 py-2 cursor-pointer transition-opacity duration-300 ${
               activeKey === service.key ? "opacity-100" : "opacity-30"
             }`}
-            onClick={() => {
-              setActiveKey(service.key);
-              setOpenCategory(null);
-            }}
+            onClick={() => setActiveKey(service.key)}
           >
             <Icons name={service.icon} />
             <span className="text-sm font-jost">{service.label}</span>
           </button>
         ))}
       </div>
+
       <div className="border-b-2 border-[#7e7d7d] mt-15 opacity-15"></div>
       <div>
-        {activeService.categories.map((category) => (
+        {activeService?.categories?.map((category) => (
           <div key={category.id}>
-            
             <p
-              className={`font-jost font-normal text-[64px] leading-[100%] tracking-[0.03em] flex gap-50 items-center py-5 cursor-pointer transition-opacity duration-300 ${
+              className={`relative font-jost font-normal text-[64px] leading-[100%] tracking-[0.03em] flex justify-between items-center py-5 cursor-pointer transition-opacity duration-300 ${
                 openCategory === category.id ? "opacity-100" : "opacity-15"
               }`}
               onClick={() => toggleCategory(category.id)}
             >
-             <span>{category.id}</span> <span>{category.title}</span> 
+              <div className="flex gap-50 "> <span>{category.id}</span> <span>{category.title}</span></div>
+              
+              {
+                openCategory === category.id &&(
+                  <Image
+                src="/assist/img/DesignImg.png"
+                alt="Blogs"
+                width={400}
+                height={377}
+                objectFit="cover"
+                className="rounded-2xl rotate-12 absolute -top-15 right-9"
+              />
+                )
+              }
+              
             </p>
+
             {openCategory === category.id && (
               <div>
                 <div className="py-10 flex flex-col items-center gap-2 text-center">
@@ -261,10 +284,12 @@ const PortFolio = () => {
                 </div>
               </div>
             )}
+
             <div className="border-b-2 border-[#7e7d7d] opacity-15"></div>
           </div>
         ))}
       </div>
+
       <SubscribeContact />
     </div>
   );
