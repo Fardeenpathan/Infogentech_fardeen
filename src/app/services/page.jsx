@@ -1,4 +1,5 @@
 "use client";
+import SubscribeContact from "@/components/SubscribeContact";
 import Icons from "@/components/ui/Icon";
 import { useState } from "react";
 
@@ -14,24 +15,48 @@ const servicesData = [
         id: "01",
         title: "Content",
         subServices: [
-          { id: "01", title: "Copywriting", desc: "Engaging and impactful content strategies." },
-          { id: "02", title: "Storytelling", desc: "Narrative-driven approaches for brands." },
+          {
+            id: "01",
+            title: "Copywriting",
+            desc: "Engaging and impactful content strategies.",
+          },
+          {
+            id: "02",
+            title: "Storytelling",
+            desc: "Narrative-driven approaches for brands.",
+          },
         ],
       },
       {
         id: "02",
         title: "Design",
         subServices: [
-          { id: "01", title: "Digital Design", desc: "Modern Digital Design, Bold Print Design, and User-Focused UX/UI." },
-          { id: "02", title: "Branding Solutions", desc: "Consistent branding solutions for all platforms." },
+          {
+            id: "01",
+            title: "Digital Design",
+            desc: "Modern Digital Design, Bold Print Design, and User-Focused UX/UI.",
+          },
+          {
+            id: "02",
+            title: "Branding Solutions",
+            desc: "Consistent branding solutions for all platforms.",
+          },
         ],
       },
       {
         id: "03",
         title: "Marketing",
         subServices: [
-          { id: "01", title: "Social Media", desc: "Creative strategies, impactful storytelling, and adaptive journeys." },
-          { id: "02", title: "Engagement", desc: "Strong social media engagement and user growth." },
+          {
+            id: "01",
+            title: "Social Media",
+            desc: "Creative strategies, impactful storytelling, and adaptive journeys.",
+          },
+          {
+            id: "02",
+            title: "Engagement",
+            desc: "Strong social media engagement and user growth.",
+          },
         ],
       },
     ],
@@ -47,16 +72,36 @@ const servicesData = [
         id: "04",
         title: "Development",
         subServices: [
-          { id: "01", title: "Web Development", desc: "Reliable web development and ongoing support.", imageIcon: "/assist/img/serviceDevelopment.png" },
-          { id: "02", title: "Data Analytics", desc: "Accessible design and actionable analytics.", imageIcon: "/assist/img/serviceDevelopment.png" },
+          {
+            id: "01",
+            title: "Web Development",
+            desc: "Reliable web development and ongoing support.",
+            imageIcon: "/assist/img/serviceDevelopment.png",
+          },
+          {
+            id: "02",
+            title: "Data Analytics",
+            desc: "Accessible design and actionable analytics.",
+            imageIcon: "/assist/img/serviceDevelopment.png",
+          },
         ],
       },
       {
         id: "05",
         title: "Marketing",
         subServices: [
-          { id: "01", title: "SEO", desc: "Advanced SEO and data-driven strategies.", imageIcon: "/assist/img/serviceMarket.png" },
-          { id: "02", title: "Advertising", desc: "Precision ads and scalable long-term strategies.", imageIcon: "/assist/img/serviceMarket.png" },
+          {
+            id: "01",
+            title: "SEO",
+            desc: "Advanced SEO and data-driven strategies.",
+            imageIcon: "/assist/img/serviceMarket.png",
+          },
+          {
+            id: "02",
+            title: "Advertising",
+            desc: "Precision ads and scalable long-term strategies.",
+            imageIcon: "/assist/img/serviceMarket.png",
+          },
         ],
       },
     ],
@@ -72,8 +117,18 @@ const servicesData = [
         id: "06",
         title: "Brand Strategy",
         subServices: [
-          { id: "06-1", title: "Identity Design", desc: "Building a unique and recognizable visual identity.", imageIcon: "/assist/img/serviceContent.png" },
-          { id: "06-2", title: "Messaging", desc: "Strategic messaging for stronger brand recognition.", imageIcon: "/assist/img/serviceContent.png" },
+          {
+            id: "06-1",
+            title: "Identity Design",
+            desc: "Building a unique and recognizable visual identity.",
+            imageIcon: "/assist/img/serviceContent.png",
+          },
+          {
+            id: "06-2",
+            title: "Messaging",
+            desc: "Strategic messaging for stronger brand recognition.",
+            imageIcon: "/assist/img/serviceContent.png",
+          },
         ],
       },
     ],
@@ -89,8 +144,18 @@ const servicesData = [
         id: "07",
         title: "Marketing Strategy",
         subServices: [
-          { id: "07-1", title: "Funnel Optimization", desc: "Data-driven marketing with continuous improvement.", imageIcon: "/assist/img/serviceMarket.png" },
-          { id: "07-2", title: "Growth Strategy", desc: "Long-term strategies powered by analytics.", imageIcon: "/assist/img/serviceMarket.png" },
+          {
+            id: "07-1",
+            title: "Funnel Optimization",
+            desc: "Data-driven marketing with continuous improvement.",
+            imageIcon: "/assist/img/serviceMarket.png",
+          },
+          {
+            id: "07-2",
+            title: "Growth Strategy",
+            desc: "Long-term strategies powered by analytics.",
+            imageIcon: "/assist/img/serviceMarket.png",
+          },
         ],
       },
     ],
@@ -99,7 +164,9 @@ const servicesData = [
 
 const PortFolio = () => {
   const [activeKey, setActiveKey] = useState("design");
-  const [openCategory, setOpenCategory] = useState(null);
+  const [openCategory, setOpenCategory] = useState(
+    servicesData.find((s) => s.key === "design")?.categories[0].id
+  );
 
   const activeService = servicesData.find((s) => s.key === activeKey);
 
@@ -117,11 +184,16 @@ const PortFolio = () => {
           What We <span className="text-[#6A27FF]">Provide</span>
         </p>
         <p className="font-jost text-[18px] font-medium leading-[24px] text-center mt-6">
-          Shaping digital futures with customized digital solutions that deliver results.
+          Shaping digital futures with customized digital solutions that deliver
+          results.
         </p>
         <div className="w-0.5 h-28 rounded-full mb-10 bg-gradient-to-b from-purple-400 via-purple-500 to-purple-800 mt-10"></div>
         <div className="relative w-12 h-12">
-          <img src="/assist/video/pentagonVideo.gif" alt="valueImg" className="w-full h-full object-cover" />
+          <img
+            src="/assist/video/pentagonVideo.gif"
+            alt="valueImg"
+            className="w-full h-full object-cover"
+          />
         </div>
       </div>
       <div className="flex gap-6 justify-center mt-10">
@@ -144,27 +216,33 @@ const PortFolio = () => {
       <div className="border-b-2 border-[#7e7d7d] mt-15 opacity-15"></div>
       <div>
         {activeService.categories.map((category) => (
-          <div key={category.id} >
+          <div key={category.id}>
             <p
-              className="font-jost font-normal text-[64px] leading-[100%] tracking-[0.03em] flex justify-between items-center  py-5 cursor-pointer"
+              className={`font-jost font-normal text-[64px] leading-[100%] tracking-[0.03em] flex justify-between items-center py-5 cursor-pointer transition-opacity duration-300 ${
+                openCategory === category.id ? "opacity-100" : "opacity-15"
+              }`}
               onClick={() => toggleCategory(category.id)}
             >
               {category.title}
-              
             </p>
-            
             {openCategory === category.id && (
               <div>
                 <div className="py-10 flex flex-col items-center gap-2 text-center">
-                  <p className="font-jost font-bold text-[32px] leading-[24px] text-[#8752FF]">Our Value</p>
+                  <p className="font-jost font-bold text-[32px] leading-[24px] text-[#8752FF]">
+                    Our Value
+                  </p>
                   <p className="font-jost font-medium text-[18px] leading-[24px]">
-                    How we work at Untitled guided by shared values that keep us connected as one team
+                    How we work at Untitled guided by shared values that keep us
+                    connected as one team
                   </p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
                   {category.subServices.map((subService) => (
-                    <div key={subService.id} className="shadow-[0px_0px_54px_24px_#1C1C38] p-5 rounded-2xl">
+                    <div
+                      key={subService.id}
+                      className="shadow-[0px_0px_54px_24px_#1C1C38] p-5 rounded-2xl"
+                    >
                       <span className="font-jost font-normal text-[32px] leading-[100%] tracking-[3%] opacity-10">
                         {subService.id}
                       </span>
@@ -186,6 +264,7 @@ const PortFolio = () => {
           </div>
         ))}
       </div>
+      <SubscribeContact/>
     </div>
   );
 };
