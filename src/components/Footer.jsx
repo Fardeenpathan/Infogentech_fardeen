@@ -103,27 +103,27 @@ export function Footer() {
                 </h3>
                 <ul className="space-y-3.5">
                   <li>
-                    <Link href="#" className="text-gray-400 hover:text-white">
+                    <Link href="/services" className="text-gray-400 hover:text-white">
                       Web / App Design
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="text-gray-400 hover:text-white">
+                    <Link href="/services" className="text-gray-400 hover:text-white">
                       Development
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="text-gray-400 hover:text-white">
+                    <Link href="/services" className="text-gray-400 hover:text-white">
                       Branding
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="text-gray-400 hover:text-white">
+                    <Link href="/services" className="text-gray-400 hover:text-white">
                       Graphic Design
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="text-gray-400 hover:text-white">
+                    <Link href="/services" className="text-gray-400 hover:text-white">
                       Video & Photo
                     </Link>
                   </li>

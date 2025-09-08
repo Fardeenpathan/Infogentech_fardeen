@@ -148,7 +148,7 @@ export function ServicesDropdown() {
 
   return (
     <div className="inline-flex relative group ">
-      <button className="cursor-pointer  focus:outline-none">Services</button>
+      <p className="cursor-pointer  focus:outline-none">Services</p>
       <div className="absolute group-hover:flex hidden shadow-lg  -left-26 z-50 cursor-pointer ">
         <div className="pt-12 flex">
           <div className="bg-[linear-gradient(213deg,rgba(162,121,255,1)_0%,rgba(63,26,147,1)_89%)]  pl-1 pt-1 rounded-l-md h-[500px]">

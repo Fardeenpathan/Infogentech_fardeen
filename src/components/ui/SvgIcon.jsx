@@ -1713,10 +1713,6 @@ const PortHome =()=>(
 </defs>
 </svg>
 )
-
-
-
-
 const PortHomeRight =()=>(
   <svg width="599" height="555" viewBox="0 0 599 555" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.2">

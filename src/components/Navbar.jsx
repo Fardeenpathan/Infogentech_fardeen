@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import GradientButton from "./ui/GradientButton";
 import { ServicesDropdown } from "./services-dropdown";
 import Icons from "./ui/Icon";
@@ -16,8 +15,10 @@ export function Navbar() {
           </a>
         </div>
         <div className="flex flex-row space-x-12.5 py-4.5 px-12.5 text-lg font-medium font-Jost">
-          <ServicesDropdown />
-          <Link href="/portfolio" className="">
+          
+            <ServicesDropdown />
+          
+          <Link href="/portfolio">
             Portfolio
           </Link>
         </div>
