@@ -1,8 +1,9 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { useInView } from "./useInView";
 import Image from "next/image";
 import TopicHeader from "./TopicHeader";
 import Icons from "./ui/Icon";
+
 const services = [
   {
     id: "01",
@@ -15,6 +16,12 @@ const services = [
     title: "Design",
     desc: "Modern Digital Design, Bold Print Design, User-Focused UX/UI, And Consistent Branding Solutions.",
     imageIcon: "/assist/img/serviceDesign.png",
+    subcategories: [
+      { name: "Graphic Design", content: "Content for Graphic Design" },
+      { name: "Branding", content: "Content for Branding" },
+      { name: "Logo Design", content: "Content for Logo Design" },
+      { name: "UI/UX Design", content: "Content for UI/UX Design" },
+    ],
   },
   {
     id: "03",
@@ -31,16 +38,22 @@ const services = [
 ];
 
 export default function ServicesSection() {
+  const [activeSubcategory, setActiveSubcategory] = useState(null);
   const ref = useRef(null);
   const isInView = useInView(ref);
 
+  const handleSubcategoryClick = (subcategoryName) => {
+    setActiveSubcategory(
+      subcategoryName === activeSubcategory ? null : subcategoryName
+    );
+  };
+
   return (
-    <div className="mt-28 mx-auto pb-10 container" ref={ref} >
-        <TopicHeader
-          name="Our Services"
-          subheading="Explore Our Digital Solutions"
-        />
-  
+    <div className="mt-28 mx-auto pb-10 container" ref={ref}>
+      <TopicHeader
+        name="Our Services"
+        subheading="Explore Our Digital Solutions"
+      />
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6 relative container mx-auto">
         {services.map((service, index) => (
@@ -79,9 +92,34 @@ export default function ServicesSection() {
             <div className="flex justify-end">
               <Icons name="Arrow" width={50} height={50} />
             </div>
+            {service.title === "Design" && service.subcategories && (
+              <div className="mt-4">
+                {service.subcategories.map((subcategory) => (
+                  <button
+                    key={subcategory.name}
+                    className="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded"
+                    onClick={() => handleSubcategoryClick(subcategory.name)}
+                  >
+                    {subcategory.name}
+                  </button>
+                ))}
+              </div>
+            )}
+            {service.title === "Design" && activeSubcategory && (
+              <div>
+                {service.subcategories.map(
+                  (subcategory) =>
+                    subcategory.name === activeSubcategory && (
+                      <div key={subcategory.name} className="mt-4">
+                        {subcategory.content}
+                      </div>
+                    )
+                )}
+              </div>
+            )}
           </div>
         ))}
-       {isInView && (
+        {isInView && (
           <div className="overflow-hidden">
             <div className="absolute moving-text-container -z-30 -top-30">
               <div className="moving-text-content font-['Jost'] font-avalors font-normal text-[120px] tracking-[0.03em] uppercase  bg-gradient-to-b from-[#C4C4C4] to-[#FFFFFF] bg-clip-text text-transparent opacity-15 moving-text-container">
