@@ -184,7 +184,7 @@ const PortFolio = () => {
   };
 
   return (
-    <div className="container mx-auto mt-24">
+    <div className="container mx-auto mt-24 overflow-hidden">
       <div className="flex justify-center items-center flex-col">
         <p className="font-avalors font-normal text-[75px] leading-none bg-[linear-gradient(91.32deg,_#6A27FF_-32.61%,_#FFFFFF_19.98%,_#6A27FF_112.29%)] bg-clip-text text-transparent">
           Our Services
@@ -207,7 +207,7 @@ const PortFolio = () => {
       </div>
 
       {/* Service Buttons */}
-      <div className="flex gap-6 justify-center mt-10">
+      <div className="flex gap-6 justify-center mt-10 ">
         {servicesData.map((service) => (
           <button
             key={service.id}
@@ -226,8 +226,8 @@ const PortFolio = () => {
       <div>
         {activeService?.categories?.map((category) => (
           <div key={category.id}>
-            <p
-              className={`relative font-jost font-normal text-[64px] leading-[100%] tracking-[0.03em] flex justify-between items-center py-5 cursor-pointer transition-opacity duration-300 ${
+            <div
+              className={`relative  font-jost font-normal text-[64px] leading-[100%] tracking-[0.03em] flex justify-between items-center py-5 cursor-pointer transition-opacity duration-300 ${
                 openCategory === category.id ? "opacity-100" : "opacity-15"
               }`}
               onClick={() => toggleCategory(category.id)}
@@ -242,12 +242,12 @@ const PortFolio = () => {
                 width={400}
                 height={377}
                 objectFit="cover"
-                className="rounded-2xl rotate-12 absolute -top-15 right-9"
+                className="rounded-2xl rotate-12 absolute -top-15 right-9 animate-slide-in-right overflow-hidden"
               />
                 )
               }
               
-            </p>
+            </div>
 
             {openCategory === category.id && (
               <div>
