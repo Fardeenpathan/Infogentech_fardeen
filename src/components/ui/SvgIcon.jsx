@@ -1782,14 +1782,14 @@ const CurveGradient=()=>(
 
 const Add =()=>(
   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M10 18V2M2 10H18" stroke="white" strokeWidth="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10 18V2M2 10H18" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
 </svg>
 )
 
 
 const Minus =()=>(
 <svg width="20" height="4" viewBox="0 0 20 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M2 2H18" stroke="white" strokeWidth="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2 2H18" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
 </svg>
 )
 
@@ -1798,8 +1798,8 @@ const gradientServices=()=>(
 <path d="M825.619 178.285C802.362 121.476 746.48 72.8377 667.663 40.8034C588.846 8.76919 492.064 -4.64066 394.099 2.89913C296.134 10.4389 203.164 38.4529 131.31 82.0834C59.4564 125.714 13.2498 182.209 0.70278 241.774L113.327 245.711C122.483 202.245 156.201 161.018 208.636 129.179C261.07 97.3404 328.914 76.8976 400.403 71.3955C471.891 65.8935 542.517 75.6792 600.033 99.0557C657.549 122.432 698.328 157.926 715.299 199.381L825.619 178.285Z" fill="url(#paint0_linear_257_1061)"/>
 <defs>
 <linearGradient id="paint0_linear_257_1061" x1="442.637" y1="3.02993" x2="440.652" y2="228.381" gradientUnits="userSpaceOnUse">
-<stop stopColor="white" stop-opacity="0.1"/>
-<stop offset="0.406501" stopColor="white" stop-opacity="0"/>
+<stop stopColor="white" stopOpacity="0.1"/>
+<stop offset="0.406501" stopColor="white" stopOpacity="0"/>
 </linearGradient>
 </defs>
 </svg>
