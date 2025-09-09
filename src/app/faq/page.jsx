@@ -69,7 +69,7 @@ const FAQs = () => {
     setOpenId((prevId) => (prevId === id ? null : id));
   };
   const currentFaqs = faqsByCategory[activeCategory] || [];
-  
+
   return (
     <div className="mt-35 subContainer mx-auto">
       <div className="flex justify-between items-center">
@@ -133,8 +133,8 @@ const FAQs = () => {
           <p className="font-avalors font-normal text-[30px] leading-[100%] tracking-[0.03em] capitalize mb-6">
             {categoryList.find((c) => c.key === activeCategory)?.label}
           </p>
-             {loading ? (
-            <Loader/>
+          {loading ? (
+            <Loader />
           ) : (
             <section>
               <div className="rounded-lg">
