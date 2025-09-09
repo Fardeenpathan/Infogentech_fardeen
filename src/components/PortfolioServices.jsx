@@ -1,22 +1,19 @@
 "use client";
 import Icons from "@/components/ui/Icon";
 import Link from "next/link";
-import { useState } from "react";
 
-const PortfolioServices = () => {
-  const [activeService, setActiveService] = useState("Design");
-  const [services, setServices] = useState([
-    { id: 1, icon: "Design", label: "Design", slug: "design", active: true },
-    { id: 2, icon: "Development", label: "Development", slug: "development", active: false },
+const PortfolioServices = ({ activeService }) => {
+  const services = [
+    { id: 1, icon: "Design", label: "Design", slug: "design" },
+    { id: 2, icon: "Development", label: "Development", slug: "development" },
     {
       id: 3,
       icon: "DigitalMarketing",
       label: "Digital Marketing",
       slug: "marketing",
-      active: false,
     },
-    { id: 4, icon: "Content", label: "Content", slug: "content", active: false },
-  ]);
+    { id: 4, icon: "Content", label: "Content", slug: "content" },
+  ];
 
   return (
     <div className="flex gap-6 justify-self-center mt-5">
@@ -29,7 +26,7 @@ const PortfolioServices = () => {
           }`}
         >
           <Icons name={service.icon} />
-          <p className="text-sm font-[jost] ">{service.label}</p>
+          <p className="text-sm font-jost">{service.label}</p>
         </Link>
       ))}
     </div>

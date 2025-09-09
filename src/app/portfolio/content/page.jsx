@@ -5,7 +5,10 @@ import SubscribeContact from "@/components/SubscribeContact";
 import PortfolioHeader from "@/components/PortfolioHeader";
 import PortfolioServices from "@/components/PortfolioServices";
 import Link from "next/link";
+import { useState } from "react";
+
 const Content = () => {
+  const [activeService, setActiveService] = useState("Content");
   const contentProjects = [
     {
       id: 1,
@@ -31,7 +34,7 @@ const Content = () => {
   return (
     <>
       <PortfolioHeader />
-      <PortfolioServices />
+      <PortfolioServices activeService={activeService} />
       <div>
         <div className="container mx-auto mt-10 relative top-48 -z-20">
           <div className="mx-auto w-fit">
