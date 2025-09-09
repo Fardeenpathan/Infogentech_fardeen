@@ -27,7 +27,7 @@ const Design = () => {
       <PortfolioHeader />
       <PortfolioServices activeService={activeService} />
       <div>
-        <div className="container mx-auto mt-10  -z-20">
+        <div className="container mx-auto mt-10 -z-20">
           <div className="mx-auto w-fit">
             <Icons name="CurveGradient" />
           </div>
@@ -49,7 +49,7 @@ const Design = () => {
                     <p className="font-[jost] text-[24px] font-normal leading-[28px] tracking-normal">
                       {project.title}
                     </p>
-                    <Link href="#">
+                    <Link href={`/portfolio/design/${project.title}`}>
                       <Icons
                         name="Arrow"
                         height={26}
@@ -63,7 +63,7 @@ const Design = () => {
             </div>
           ))}
         </div>
-        <div className="text-[#82828C] mt-24 border-2 container mx-auto"></div>
+        <div className="text-[#82828C] border-2 container mx-auto"></div>
         <SubscribeContact />
       </div>
     </>

@@ -7,9 +7,9 @@ import Icons from "@/components/ui/Icon";
 import Link from "next/link";
 import { useState } from "react";
 
-const Development = () => {
-  const [activeService, setActiveService] = useState("Development");
-  const developmentProjects = [
+const Portfolio = () => {
+  const [activeService, setActiveService] = useState("Design");
+  const designProjects = [
     {
       id: 1,
       title: "Green House Gardening Landing Page",
@@ -21,8 +21,9 @@ const Development = () => {
       image: "/assist/img/DesignImg.png",
     },
   ];
+
   return (
-    <>
+    <div>
       <PortfolioHeader />
       <PortfolioServices activeService={activeService} />
       <div>
@@ -32,7 +33,7 @@ const Development = () => {
           </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 container mx-auto relative -top-48">
-          {developmentProjects?.map((project) => (
+          {designProjects.map((project) => (
             <div key={project.id} className="p-2.5 rounded-xl">
               <div className="w-full max-w-[774px]">
                 <Image
@@ -48,7 +49,7 @@ const Development = () => {
                     <p className="font-[jost] text-[24px] font-normal leading-[28px] tracking-normal">
                       {project.title}
                     </p>
-                    <Link href={`/portfolio/development/${project.title}`}>
+                    <Link href={`/portfolio/design/${project.title}`}>
                       <Icons
                         name="Arrow"
                         height={26}
@@ -65,8 +66,8 @@ const Development = () => {
         <div className="text-[#82828C] border-2 container mx-auto"></div>
         <SubscribeContact />
       </div>
-    </>
+    </div>
   );
 };
 
-export default Development;
+export default Portfolio;

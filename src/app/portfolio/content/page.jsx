@@ -30,6 +30,11 @@ const Content = () => {
       title: "AI SaaS Dashboard UI",
       image: "/assist/img/DesignImg.png",
     },
+    {
+      id: 5,
+      title: "Slug Page",
+      image: "/assist/img/DesignImg.png",
+    },
   ];
   return (
     <>
@@ -58,7 +63,7 @@ const Content = () => {
                     <p className="font-[jost] text-[24px] font-normal leading-[28px] tracking-normal">
                       {project.title}
                     </p>
-                    <Link href="#">
+                    <Link href={`/portfolio/content/${project.title}`}>
                       <Icons
                         name="Arrow"
                         height={26}
@@ -72,7 +77,7 @@ const Content = () => {
             </div>
           ))}
         </div>
-        <div className="text-[#82828C] mt-24 border-2 container mx-auto"></div>
+        <div className="text-[#82828C] border-2 container mx-auto"></div>
         <SubscribeContact />
       </div>
     </>

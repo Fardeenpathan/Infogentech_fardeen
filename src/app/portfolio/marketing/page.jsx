@@ -48,7 +48,7 @@ const DigitalMarketing = () => {
                     <p className="font-[jost] text-[24px] font-normal leading-[28px] tracking-normal">
                       {project.title}
                     </p>
-                    <Link href="#">
+                    <Link href={`/portfolio/marketing/${project.title}`}>
                       <Icons
                         name="Arrow"
                         height={26}
@@ -62,7 +62,7 @@ const DigitalMarketing = () => {
             </div>
           ))}
         </div>
-        <div className="text-[#82828C] mt-24 border-2 container mx-auto"></div>
+        <div className="text-[#82828C]  border-2 container mx-auto"></div>
         <SubscribeContact />
       </div>
     </>

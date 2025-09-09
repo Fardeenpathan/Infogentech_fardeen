@@ -1811,11 +1811,71 @@ const Play =()=>(
 <circle cx="70" cy="70" r="70" fill="black"/>
 <path d="M87.7473 65.7932L64.4145 52.6536C63.6525 52.2189 62.7888 51.9935 61.9112 52.0001C61.0336 52.0068 60.1734 52.2454 59.4181 52.6917C58.6823 53.1117 58.071 53.7187 57.6463 54.4509C57.2216 55.1831 56.9986 56.0145 57 56.8605V83.1398C56.9986 83.9859 57.2216 84.8173 57.6463 85.5495C58.071 86.2817 58.6823 86.8886 59.4181 87.3087C60.1735 87.7547 61.0336 87.9932 61.9112 87.9999C62.7888 88.0065 63.6525 87.7812 64.4145 87.3468L87.7473 74.2071C88.4998 73.7911 89.127 73.1815 89.5637 72.4417C90.0005 71.7019 90.2308 70.8588 90.2308 70.0002C90.2308 69.1415 90.0005 68.2985 89.5637 67.5587C89.127 66.8189 88.4998 66.2093 87.7473 65.7932Z" fill="#8752FF"/>
 </svg>
+)
 
-
+const BlurEffectLeft=()=>(
+  <svg width="831" height="811" viewBox="0 0 831 811" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.3" filter="url(#filter0_f_204_2195)">
+<rect x="-86" y="392.144" width="697.661" height="289.487" rx="10" transform="rotate(-39.8604 -86 392.144)" fill="#8752FF" fill-opacity="0.6"/>
+</g>
+<defs>
+<filter id="filter0_f_204_2195" x="-281.915" y="-250.915" width="1112.9" height="1061.19" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_204_2195"/>
+</filter>
+</defs>
+</svg>
 
 )
 
+const BlurEffectRight=()=>(
+  <svg width="831" height="811" viewBox="0 0 831 811" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.3" filter="url(#filter0_f_204_2196)">
+<rect width="697.661" height="289.487" rx="10" transform="matrix(-0.767609 -0.640919 -0.640919 0.767609 917.068 392.144)" fill="#8752FF" fill-opacity="0.6"/>
+</g>
+<defs>
+<filter id="filter0_f_204_2196" x="0.0849609" y="-250.915" width="1112.9" height="1061.19" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_204_2196"/>
+</filter>
+</defs>
+</svg>
+
+)
+
+
+
+const BlogBlurRight=()=>(
+  <svg width="811" height="703" viewBox="0 0 811 703" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.3" filter="url(#filter0_f_222_1477)">
+<rect width="724.453" height="253.453" rx="10" transform="matrix(0.799455 -0.600726 0.680139 0.733083 196 320.198)" fill="#8752FF" fill-opacity="0.6"/>
+</g>
+<defs>
+<filter id="filter0_f_222_1477" x="0.298828" y="-311.14" width="1142.95" height="1013.28" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_222_1477"/>
+</filter>
+</defs>
+</svg>
+
+)
+const BlogBlurLeft=()=>(
+<svg width="811" height="703" viewBox="0 0 811 703" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.3" filter="url(#filter0_f_222_1476)">
+<rect width="724.453" height="253.453" rx="10" transform="matrix(-0.799455 -0.600726 -0.680139 0.733083 614.705 320.198)" fill="#8752FF" fill-opacity="0.6"/>
+</g>
+<defs>
+<filter id="filter0_f_222_1476" x="-332.547" y="-311.14" width="1142.95" height="1013.28" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_222_1476"/>
+</filter>
+</defs>
+</svg>
+)
 const Icons = {
   GraphicDesign,
   UIUXDesign,
@@ -1877,7 +1937,11 @@ const Icons = {
   Add,
   Minus,
   gradientServices,
-Play    // DotLine
+Play,
+BlurEffectLeft,
+BlurEffectRight,
+BlogBlurRight,
+BlogBlurLeft  // DotLine
 };
 
 export default Icons;
