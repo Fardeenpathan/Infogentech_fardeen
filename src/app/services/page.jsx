@@ -48,7 +48,7 @@ const PortFolio = () => {
   };
 
   return (
-    <div className="container mx-auto mt-24 overflow-hidden">
+    <div className="container mx-auto mt-24">
       <div className="flex justify-center items-center flex-col">
         <p className="font-avalors font-normal text-[75px] leading-none bg-[linear-gradient(91.32deg,_#6A27FF_-32.61%,_#FFFFFF_19.98%,_#6A27FF_112.29%)] bg-clip-text text-transparent">
           Our Services
@@ -85,7 +85,7 @@ const PortFolio = () => {
       </div>
 
       <div className="border-b-2 border-[#7e7d7d] mt-15 opacity-15"></div>
-      <div>
+      <div >
         {activeService?.categories?.map((category) => (
           <div key={category.id}>
             <div
@@ -120,7 +120,7 @@ const PortFolio = () => {
                   </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10 overflow-visible">
                   {category.subServices.map((subService) => (
                     <SubServiceCard
                       key={subService.id}

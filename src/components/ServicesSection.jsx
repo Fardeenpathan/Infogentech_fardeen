@@ -16,12 +16,6 @@ const services = [
     title: "Design",
     desc: "Modern Digital Design, Bold Print Design, User-Focused UX/UI, And Consistent Branding Solutions.",
     imageIcon: "/assist/img/serviceDesign.png",
-    subcategories: [
-      { name: "Graphic Design", content: "Content for Graphic Design" },
-      { name: "Branding", content: "Content for Branding" },
-      { name: "Logo Design", content: "Content for Logo Design" },
-      { name: "UI/UX Design", content: "Content for UI/UX Design" },
-    ],
   },
   {
     id: "03",
@@ -92,31 +86,6 @@ export default function ServicesSection() {
             <div className="flex justify-end">
               <Icons name="Arrow" width={50} height={50} />
             </div>
-            {service.title === "Design" && service.subcategories && (
-              <div className="mt-4">
-                {service.subcategories.map((subcategory) => (
-                  <button
-                    key={subcategory.name}
-                    className="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded"
-                    onClick={() => handleSubcategoryClick(subcategory.name)}
-                  >
-                    {subcategory.name}
-                  </button>
-                ))}
-              </div>
-            )}
-            {service.title === "Design" && activeSubcategory && (
-              <div>
-                {service.subcategories.map(
-                  (subcategory) =>
-                    subcategory.name === activeSubcategory && (
-                      <div key={subcategory.name} className="mt-4">
-                        {subcategory.content}
-                      </div>
-                    )
-                )}
-              </div>
-            )}
           </div>
         ))}
         {isInView && (
