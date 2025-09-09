@@ -26,12 +26,12 @@ const DigitalMarketing = () => {
       <PortfolioHeader />
       <PortfolioServices activeService={activeService} />
       <div>
-        <div className="container mx-auto mt-10 relative top-48 -z-20">
+        <div className="container mx-auto mt-10 -z-20">
           <div className="mx-auto w-fit">
             <Icons name="CurveGradient" />
           </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 container mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 container mx-auto relative -top-48">
           {marketingProjects?.map((project) => (
             <div key={project.id} className="p-2.5 rounded-xl">
               <div className="w-full max-w-[774px]">
