@@ -36,12 +36,6 @@ export default function ServicesSection() {
   const ref = useRef(null);
   const isInView = useInView(ref);
 
-  const handleSubcategoryClick = (subcategoryName) => {
-    setActiveSubcategory(
-      subcategoryName === activeSubcategory ? null : subcategoryName
-    );
-  };
-
   return (
     <div className="mt-28 mx-auto pb-10 container" ref={ref}>
       <TopicHeader

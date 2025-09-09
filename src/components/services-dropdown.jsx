@@ -147,7 +147,7 @@ export function ServicesDropdown() {
   };
 
   return (
-    <div className="inline-flex relative group ">
+    <div className="inline-flex relative group">
       <p className="cursor-pointer  focus:outline-none">Services</p>
       <div className="absolute group-hover:flex hidden shadow-lg  -left-26 z-50 cursor-pointer ">
         <div className="pt-12 flex">
@@ -178,7 +178,7 @@ export function ServicesDropdown() {
               ?.subcategories.map((subcategory, index) => (
                 <div key={index}>
                   <Link href={subcategory.href}>
-                    <div className="flex flex-col pl-12.5 pt-18 pb-10  border-[1px] bg-[#15152A]">
+                    <div className="flex flex-col pl-12.5 pt-18 pb-10  border-[1px] bg-[#15152A] h-full">
                       <Icons name={subcategory.icon} width={53} height={53} />
                       <div>{subcategory.label}</div>
                       <div className="w-85">{subcategory.description}</div>
