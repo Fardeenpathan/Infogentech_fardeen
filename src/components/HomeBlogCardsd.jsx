@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Icons from "./ui/Icon";
+import Link from "next/link";
 
 export default function HomeBlogCardsd({ blog }) {
   return (
@@ -28,14 +29,14 @@ export default function HomeBlogCardsd({ blog }) {
             <p className="text-[#73737F] font-[jost] font-medium text-sm leading-[120%] ">
               {blog.date}
             </p>
-            <a href="#">
+            <Link href={`/blogs/${blog.slug}`}>
               <Icons
                 name="Arrow"
                 height={14}
                 width={31}
                 color="#8752FF"
               />
-            </a>
+            </Link>
           </div>
         </div>
       </div>
