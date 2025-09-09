@@ -1,8 +1,23 @@
+"use client"
+
 import Button from "@/components/ui/Button";
 import Image from "next/image";
+import { useState } from "react";
+
+const category = [
+  "All",
+  "Tech Trends",
+  "Case Studies",
+  "Development",
+  "UI/UX Design",
+  "Cybersecurity",
+  "Digital Strategy",
+];
+
 const Blogs = () => {
+  const [activeCategory, setActiveCategory] = useState("All");
   return (
-    <div className="container mx-auto mt-24 overflow-hidden">
+    <div className="container mx-auto mt-24 ">
       <div className="flex justify-center items-center flex-col">
         <p className="font-avalors font-normal text-[75px] leading-none bg-[linear-gradient(91.32deg,_#6A27FF_-32.61%,_#FFFFFF_19.98%,_#6A27FF_112.29%)] bg-clip-text text-transparent">
           Insights & Innovation
@@ -33,30 +48,51 @@ const Blogs = () => {
             alt="Blog"
             width={1200}
             height={660}
-            className="object-cover"
+            className="object-cover rounded-2xl"
           />
-          <div className="absolute -bottom-16  bg-[#15152A] p-6 text-white rounded-b-2xl mx-30">
+          <div className="absolute -bottom-16  bg-[#15152A] p-6 text-white rounded-4xl mx-30">
             <div className="flex items-center gap-4 mb-3">
-              <span className="border border-white rounded-md px-4 py-1 text-sm">
+              <span className="border border-white rounded-md px-4 py-1 text-sm font-jost">
                 Popular
               </span>
-              <span className="text-sm text-[#7E8EF1]">April 28, 2024</span>
+              <span className="text-sm text-[#8752FF] font-jost">
+                April 28, 2024
+              </span>
             </div>
 
-            <h3 className="text-2xl font-semibold mb-2">
+            <h3 className="text-2xl font-semibold mb-2 font-jost">
               10 Best Design Resources for 2024: After trying 100+ Here are My
               Top Picks
             </h3>
-
-            <p className="text-gray-300 text-base leading-relaxed">
+            <p className="text-gray-300 text-base leading-relaxed font-kumbh-sans">
               In the ever-evolving world of design, where innovation meets
               aesthetics, finding the perfect resources to fuel your creative
               journey can be a rewarding yet daunting ...
-              <a href="#" className="text-[#7E8EF1] underline">
+              <a href="#" className="text-[#8752FF] underline">
                 Continue reading
               </a>
             </p>
           </div>
+        </div>
+      </div>
+      <div className="mt-36">
+        <p className="text-[#8752FF] font-avalors text-[32px] leading-[24px]">
+          Select Your Category
+        </p>
+        <div className="flex gap-16 text-[#C4C4C4] mt-13 font-kumbh-sans">
+          {category.map((item, index) => (
+            <button
+              key={index}
+              onClick={() => setActiveCategory(item)}
+              className={`relative pb-1 transition-all duration-300 cursor-pointer ${
+                activeCategory === item
+                  ? "text-[#8752FF] opacity-100 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#8752FF] after:rounded-full "
+                  : "opacity-60 hover:opacity-100"
+              }`}
+            >
+              {item}
+            </button>
+          ))}
         </div>
       </div>
     </div>

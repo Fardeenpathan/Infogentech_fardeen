@@ -12,7 +12,7 @@ const SubServiceCard = ({ subService }) => {
       <h2 className="font-jost font-medium text-[32px] leading-[120%] tracking-[0.03em] mt-8">
         {subService.title}
       </h2>
-      <p className="font-jost font-normal text-[16px] leading-[140%] tracking-[0.03em] capitalize mt-8 opacity-30">
+      <p className="font-jost font-normal text-[16px] leading-[140%] tracking-[0.03em] capitalize mt-8 opacity-30 font-kumbh-sans">
         {subService.desc}
       </p>
       <a className="flex justify-end mt-4" href="contactUs">
