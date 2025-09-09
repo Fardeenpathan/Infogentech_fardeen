@@ -1,9 +1,9 @@
 "use client"
-
 import Button from "@/components/ui/Button";
 import Image from "next/image";
 import { useState } from "react";
-
+import HomeBlogCardsd from "@/components/HomeBlogCardsd";
+import SubscribeContact from "@/components/SubscribeContact";
 const category = [
   "All",
   "Tech Trends",
@@ -13,7 +13,56 @@ const category = [
   "Cybersecurity",
   "Digital Strategy",
 ];
-
+const latest = [
+  {
+    id: 1,
+    title: "Madhya Pradesh Partners with Submer for AI‑Ready Data Centres",
+    content:
+      "What happens when a middle school friendship, a shared love for music, and a global pandemic come together? In...",
+    date: "19 Jul, 2025",
+    img: "/assist/img/blogs.png",
+  },
+  {
+    id: 2,
+    title: "Centre of Excellence for Emerging Tech at DAVV, Indore.",
+    content:
+      "DAVV University me AI aur emerging tech ka Centre of Excellence banega, jisme students aur teachers dono ko upskill kiya jayega.",
+    date: "19 Jul, 2025",
+    img: "/assist/img/blogs.png",
+  },
+  {
+    id: 3,
+    title: "AI Summit in Vizag This Month",
+    content:
+      "Vizag me 25–26 July ko Fusion AI Summit hoga, jahan startups, experts aur govt milke AI future pe baat karenge.",
+    date: "19 Jul, 2025",
+    img: "/assist/img/blogs.png",
+  },
+    {
+    id: 4,
+    title: "Madhya Pradesh Partners with Submer for AI‑Ready Data Centres",
+    content:
+      "What happens when a middle school friendship, a shared love for music, and a global pandemic come together? In...",
+    date: "19 Jul, 2025",
+    img: "/assist/img/blogs.png",
+  },
+  {
+    id: 5,
+    title: "Centre of Excellence for Emerging Tech at DAVV, Indore.",
+    content:
+      "DAVV University me AI aur emerging tech ka Centre of Excellence banega, jisme students aur teachers dono ko upskill kiya jayega.",
+    date: "19 Jul, 2025",
+    img: "/assist/img/blogs.png",
+  },
+  {
+    id: 6,
+    title: "AI Summit in Vizag This Month",
+    content:
+      "Vizag me 25–26 July ko Fusion AI Summit hoga, jahan startups, experts aur govt milke AI future pe baat karenge.",
+    date: "19 Jul, 2025",
+    img: "/assist/img/blogs.png",
+  },
+];
 const Blogs = () => {
   const [activeCategory, setActiveCategory] = useState("All");
   return (
@@ -94,6 +143,15 @@ const Blogs = () => {
             </button>
           ))}
         </div>
+        <div className=" flex flex-col items-center justify-center mt-12 text-white">
+        <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-12">
+          {latest.map((blog) => (
+            <HomeBlogCardsd key={blog.id} blog={blog} />
+          ))}
+        </div>
+      </div>
+      <div className="text-[#82828C] mt-24 border-2 container mx-auto"></div>
+        <SubscribeContact />
       </div>
     </div>
   );

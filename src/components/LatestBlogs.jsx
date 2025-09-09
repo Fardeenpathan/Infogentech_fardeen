@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import MidHeader from "./MidHeader";
 import Icons from "./ui/Icon";
 import HomeBlogCardsd from "./HomeBlogCardsd";
