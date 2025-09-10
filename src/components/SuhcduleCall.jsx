@@ -16,10 +16,10 @@ export default function ScheduleCall() {
             href="#"
             className="p-[2px] rounded-xl bg-[linear-gradient(95.64deg,#6807FF_31.79%,#5900E5_64.61%,#AB00E6_78.22%)]"
           >
-            <span className="flex gap-2 flex-row text-lg font-jost px-10 py-3  rounded-[10px]  bg-transparent border border-white/10  justify-center items-center backdrop-blur-[51.97px] shadow-[0px_0px_8px_0px_#FFFFFF_inset]">
+            <a href="/contactUs" className="flex gap-2 flex-row text-lg font-jost px-10 py-3  rounded-[10px]  bg-transparent border border-white/10  justify-center items-center backdrop-blur-[51.97px] shadow-[0px_0px_8px_0px_#FFFFFF_inset]">
               <Icons name="Calls" />
               Schedule a Call
-            </span>
+            </a>
           </a>
         </div>
         <div className="flex items-end">
