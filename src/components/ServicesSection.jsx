@@ -37,7 +37,6 @@ const services = [
 ];
 
 export default function ServicesSection() {
-  const [activeSubcategory, setActiveSubcategory] = useState(null);
   const ref = useRef(null);
   const isInView = useInView(ref);
 
