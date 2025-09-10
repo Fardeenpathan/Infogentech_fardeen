@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <main className="w-full">  
         <HeroSection />
-      {/* <StatsSection /> */}
+      <StatsSection />
       <div className="overflow-hidden">
        <ServicesSection /> 
       </div>
