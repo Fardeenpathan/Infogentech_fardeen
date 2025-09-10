@@ -70,7 +70,7 @@ export function Footer() {
                 <h3 className="text-lg font-semibold mb-4 font-jost">Links</h3>
                 <ul className="space-y-3.5">
                   <li>
-                    <Link href="#" className="text-gray-400 hover:text-white">
+                    <Link href="/" className="text-gray-400 hover:text-white">
                       Home
                     </Link>
                   </li>
@@ -90,7 +90,7 @@ export function Footer() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="text-gray-400 hover:text-white">
+                    <Link href="/aboutUs" className="text-gray-400 hover:text-white">
                       About us
                     </Link>
                   </li>
@@ -123,12 +123,12 @@ export function Footer() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/services" className="text-gray-400 hover:text-white">
+                    <Link href="/services" className="text-gray-400 hover:text-white cursor-not-allowed">
                       Video & Photo
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="text-gray-400 hover:text-white">
+                    <Link href="#" className="text-gray-400 hover:text-white cursor-not-allowed">
                       Help Center
                     </Link>
                   </li>
@@ -146,12 +146,12 @@ export function Footer() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="text-gray-400 hover:text-white">
+                    <Link href="#" className="text-gray-400 hover:text-white cursor-not-allowed">
                       Careers
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="text-gray-400 hover:text-white">
+                    <Link href="contactUs" className="text-gray-400 hover:text-white">
                       Contact Support
                     </Link>
                   </li>

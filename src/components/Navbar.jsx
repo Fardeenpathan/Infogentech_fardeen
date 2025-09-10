@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import GradientButton from "./ui/GradientButton";
-import { ServicesDropdown } from "./services-dropdown";
+import { ServicesDropdown } from "./servicesDropdown";
 import Icons from "./ui/Icon";
 import { motion, useScroll } from "framer-motion";
 import { useEffect, useState } from "react";

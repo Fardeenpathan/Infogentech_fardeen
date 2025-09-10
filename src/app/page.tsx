@@ -10,15 +10,13 @@ import Testimonials from "@/components/Testimonials";
 import LatestBlogs from "@/components/LatestBlogs";
 export default function Home() {
   return (
-    <main className="w-full">
-      <HeroSection />
+    <main className="w-full">  
+        <HeroSection />
       <StatsSection />
       <div className="overflow-hidden">
        <ServicesSection /> 
       </div>
- 
       <div className="container mx-auto">
-       
         <OurValues />
         <SuhcduleCall />
         <StrategicProcess />

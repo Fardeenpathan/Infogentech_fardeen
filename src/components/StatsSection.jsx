@@ -5,7 +5,7 @@ import { VerticalLine } from "./ui/vertical-line";
 
 export function StatsSection() {
   return (
-    <div className="mx-14 h-85 px-23 mt-55 bg-[url('/assist/img/stateBackGround.png')]  hover:bg-[url('/assist/img/statebackGroundHover.png')] longContainer mx-auto">
+    <div className="mx-14 h-85 px-23 mt-76 bg-[url('/assist/img/stateBackGround.png')]  hover:bg-[url('/assist/img/statebackGroundHover.png')] longContainer mx-auto">
       <div className="flex flex-row  items-center justify-between mb-10 py-12 container mx-auto">
         <div className="flex flex-row  space-x-8 ">
          

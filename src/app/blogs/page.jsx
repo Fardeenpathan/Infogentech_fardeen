@@ -76,10 +76,10 @@ const Blogs = () => {
   const [activeCategory, setActiveCategory] = useState("All");
   return (
     <div className="flex justify-between">
-      <div class="absolute overflow-hidden -top-20">
+      <div className="absolute overflow-hidden -top-20">
         <Icons name="BlogBlurLeft" />
       </div>
-      <div class="absolute overflow-hidden right-0 -top-20">
+      <div className="absolute overflow-hidden right-0 -top-20">
         <Icons name="BlogBlurRight" />
       </div>
       <div className="container mx-auto mt-24">
