@@ -1,5 +1,4 @@
-// tailwind.config.js
-import defaultTheme from 'tailwindcss/defaultTheme';
+
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -9,12 +8,6 @@ export default {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        sans: ['Poppins', ...defaultTheme.fontFamily.sans],
-        heading: ['Raleway', ...defaultTheme.fontFamily.sans],
-        mono: ['Courier New', ...defaultTheme.fontFamily.mono],
-        inter: ['Inter', ...defaultTheme.fontFamily.sans],
-      },
       colors: {
         'primary': '#8752FF',
         teal: {
