@@ -5,7 +5,7 @@ import Button from "./ui/Button";
 
 export function Footer() {
   return (
-    <footer className="bg-[#101021] mx-auto mt-36 relative overflow-hidden">
+    <footer className="bg-[#101021] mx-auto mt-36 relative overflow-hidden px-10">
       <div className="container mx-auto pt-11 ">
         <div className="flex justify-between items-center ">
           <div className="w-[162px] h-[162px] -top-[26px] -left-3.5 rounded-[81px] absolute bg-[#8752ff] blur-[100px]" />

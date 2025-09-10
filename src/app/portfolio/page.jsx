@@ -32,9 +32,9 @@ const Portfolio = () => {
             <Icons name="CurveGradient" />
           </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 container mx-auto relative -top-48">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 container mx-auto relative -top-48 px-10">
           {designProjects.map((project) => (
-            <div key={project.id} className="p-2.5 rounded-xl">
+            <div key={project.id} className="p-2.5 rounded-xl px-10">
               <div className="w-full max-w-[774px]">
                 <Image
                   src={project.image}
@@ -63,7 +63,7 @@ const Portfolio = () => {
             </div>
           ))}
         </div>
-        <div className="text-[#82828C] border-2 container mx-auto"></div>
+        <div className="text-[#82828C] border-2 container mx-auto px-10"></div>
         <SubscribeContact />
       </div>
     </div>

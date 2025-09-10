@@ -76,7 +76,7 @@ const BlogSlugPage = () => {
           massa. Eu dolor aliquet risus gravida nunc at feugiat consequat purus.
           Non massa enim vitae duis mattis. Vel in ultricies vel fringilla.
         </h1>
-        <div className="text-[#82828C] mt-12 border-2 container mx-auto"></div>
+        <div className="text-[#82828C] mt-12 border-2 container mx-auto px-10"></div>
       </div>
       <div className="font-avalors text-[32px] leading-[24px] font-normal mt-12 text-[#8752FF] uppercase">
         Introduction

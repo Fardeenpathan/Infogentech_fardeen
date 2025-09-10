@@ -140,7 +140,7 @@ const Blogs = () => {
             </div>
           </div>
         </div>
-        <div className="mt-36">
+        <div className="mt-36 px-10">
           <p className="text-[#8752FF] font-avalors text-[32px] leading-[24px]">
             Select Your Category
           </p>
@@ -166,7 +166,7 @@ const Blogs = () => {
               ))}
             </div>
           </div>
-          <div className="text-[#82828C] mt-24 border-2 container mx-auto"></div>
+          <div className="text-[#82828C] mt-24 border-2 container mx-auto px-10"></div>
           <SubscribeContact />
         </div>
       </div>

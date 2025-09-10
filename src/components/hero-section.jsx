@@ -2,7 +2,7 @@ import Icons from "./ui/Icon";
 
 export function HeroSection() {
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto px-10">
       <video
         className="absolute top-0 left-0 w-full h-240  object-cover bg-transparent -z-10 "
         src="/assist/hero-bg.mp4"

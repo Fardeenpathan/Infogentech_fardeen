@@ -37,13 +37,13 @@ const services = [
 
 export default function OurValues() {
   return (
-    <div className="mt-30 ">
+    <div className="mt-30">
         <TopicHeader
           name="Our Values"
           subheading="Core beliefs behind everything we build"
         />
 
-      <div className="flex">
+      <div className=" flex justify-between">
         <div className=" flex justify-center items-center">
           <div
             className="w-50 h-56 bg-transparent border border-white/10 rounded-2xl  flex justify-center items-center backdrop-blur-[51.97px]
@@ -73,7 +73,7 @@ export default function OurValues() {
               key={service.id}
               className="bg-[#15152A] rounded-md  p-5 shadow-[12px_12px_13px_2px_#1C1C38] flex justify-center items-center flex-col"
             >
-              <div className="flex flex-col items-center">
+              <div className="flex flex-col items-center font-kumbh-sans">
                 
                   <Image
                     src={service.imageIcon}

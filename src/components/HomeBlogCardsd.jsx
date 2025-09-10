@@ -6,7 +6,7 @@ export default function HomeBlogCardsd({ blog }) {
   return (
     <div
       key={blog.id}
-      className="p-2.5 rounded-xl w-[522px] h-[475px] bg-[#15152A] shadow-[0px_0px_54px_24px_#1C1C38]"
+      className="p-2.5 rounded-xl  h-[475px] bg-[#15152A] shadow-[0px_0px_54px_24px_#1C1C38]"
     >
       <div>
         <Image

@@ -12,11 +12,11 @@ export default function Home() {
   return (
     <main className="w-full">  
         <HeroSection />
-      <StatsSection />
+      {/* <StatsSection /> */}
       <div className="overflow-hidden">
        <ServicesSection /> 
       </div>
-      <div className="container mx-auto">
+      <div className="container mx-auto px-10">
         <OurValues />
         <SuhcduleCall />
         <StrategicProcess />
