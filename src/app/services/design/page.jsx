@@ -123,7 +123,7 @@ const Design = () => {
                     <p className="font-jost font-bold text-[32px] leading-[24px] text-[#8752FF]">
                       Our Value
                     </p>
-                    <p className="font-jost font-medium text-[18px] leading-[24px]">
+                    <p className="font-jost font-medium text-lg leading-[24px]">
                       How we work at Untitled guided by shared values that keep
                       us connected as one team
                     </p>

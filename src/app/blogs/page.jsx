@@ -87,7 +87,7 @@ const Blogs = () => {
           <p className="font-avalors font-normal text-[75px] leading-none bg-[linear-gradient(91.32deg,_#6A27FF_-32.61%,_#FFFFFF_19.98%,_#6A27FF_112.29%)] bg-clip-text text-transparent">
             Insights & Innovation
           </p>
-          <p className="font-jost text-[18px] font-medium leading-[24px] text-center mt-6">
+          <p className="font-jost text-lg font-medium leading-[24px] text-center mt-6">
             Check out our latest ideas, tech trends, and success stories where
             smart planning meets real results and creative ideas make an impact.
           </p>

@@ -43,7 +43,7 @@ export default function LatestBlogs() {
         href="#"
         className="flex gap-8 items-center justify-end mr-10 relative -top-10"
       >
-        <p className="font-[jost] font-semibold text-[18px] leading-[120%] capitalize ">
+        <p className="font-[jost] font-semibold text-lg leading-[120%] capitalize ">
           See Our <br /> More Blogs
         </p>
         <Icons name="Arrow" width={62} height={28} />

@@ -91,7 +91,7 @@ const FAQs = () => {
             <p className="font-avalors font-normal text-[75px] leading-none bg-[linear-gradient(91.32deg,_#6A27FF_-32.61%,_#FFFFFF_19.98%,_#6A27FF_112.29%)] bg-clip-text text-transparent">
               Your questions answered
             </p>
-            <p className="font-jost font-medium text-[18px] leading-[24px] align-middle mt-9">
+            <p className="font-jost font-medium text-lg leading-[24px] align-middle mt-9">
               Find answers to common questions about our services, project
               process, updates, and support at Infogentech.
             </p>

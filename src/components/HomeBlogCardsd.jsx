@@ -21,7 +21,7 @@ export default function HomeBlogCardsd({ blog }) {
             <p className="font-[jost] font-medium text-xl leading-[120%] mt-3">
               {blog.title}
             </p>
-            <p className="font-[kumbh] text-[18px] text-[#73737F] leading-[120%] mt-1 font-kumbh-sans">
+            <p className="font-[kumbh] text-lg text-[#73737F] leading-[120%] mt-1 font-kumbh-sans">
               {blog.content}
             </p>
           </div>

@@ -33,7 +33,7 @@ export function StatsSection() {
             <div className="font-[Avalors] font-normal text-[32px] leading-[24px] tracking-[0] align-middle text-[#8752FF]">
               FACTS AND NUMBERS
             </div>
-            <div className="font-[Jost] font-medium text-[18px] leading-[24px] tracking-[0] align-middle">
+            <div className="font-[Jost] font-medium text-lg leading-[24px] tracking-[0] align-middle">
               Our dedication to delivering exceptional results
             </div>
           </div>

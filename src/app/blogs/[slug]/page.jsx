@@ -59,7 +59,7 @@ const BlogSlugPage = () => {
         <p className="font-avalors text-[32px] font-normal leading-[100%] tracking-[0.03em] mt-6">
           Madhya Pradesh Partners with Submer for AI‑Ready Data Centres
         </p>
-        <p className="font-jost font-medium text-[18px] leading-[24px] text-center align-middle mt-8">
+        <p className="font-jost font-medium text-lg leading-[24px] text-center align-middle mt-8">
           What happens when a middle school friendship, a shared love for music,
           and a global pandemic come together? In...
         </p>

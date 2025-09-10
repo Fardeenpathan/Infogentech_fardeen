@@ -56,7 +56,7 @@ const PortFolio = () => {
         <p className="font-avalors font-normal text-[75px] leading-none bg-[linear-gradient(91.32deg,_#6A27FF_-32.61%,_#FFFFFF_19.98%,_#6A27FF_112.29%)] bg-clip-text text-transparent">
           What We <span className="text-[#6A27FF]">Provide</span>
         </p>
-        <p className="font-jost text-[18px] font-medium leading-[24px] text-center mt-6">
+        <p className="font-jost text-lg font-medium leading-[24px] text-center mt-6">
           Shaping digital futures with customized digital solutions that deliver
           results.
         </p>
@@ -114,7 +114,7 @@ const PortFolio = () => {
                   <p className="font-jost font-bold text-[32px] leading-[24px] text-[#8752FF]">
                     Our Value
                   </p>
-                  <p className="font-jost font-medium text-[18px] leading-[24px]">
+                  <p className="font-jost font-medium text-lg leading-[24px]">
                     How we work at Untitled guided by shared values that keep us
                     connected as one team
                   </p>

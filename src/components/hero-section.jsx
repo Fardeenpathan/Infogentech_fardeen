@@ -1,4 +1,3 @@
-
 import Icons from "./ui/Icon";
 
 export function HeroSection() {
@@ -56,13 +55,14 @@ export function HeroSection() {
           >
             <span
               className="flex gap-2 items-center 
-                  text-[18px] font-jost px-10 py-3 
+                  text-lg font-jost px-10 py-3 
                   rounded-[10px] 
                   bg-[#7544E4] 
                   text-white 
                   shadow-[0px_0px_8px_0px_#FFFFFF_inset]"
             >
-              Get Start &nbsp;<Icons name="Arrow" />
+              Get Start &nbsp;
+              <Icons name="Arrow" />
             </span>
           </a>
         </div>

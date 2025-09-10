@@ -26,7 +26,7 @@ const linkClasses = (href) =>
 
   if (!scrolled) {
     return (
-      <nav className="relative flex bg-transparent mt-6 h-15 mx-auto justify-between items-center z-50 font-jost font-medium text-[18px] leading-[24px] container">
+      <nav className="relative flex bg-transparent mt-6 h-15 mx-auto justify-between items-center z-50 font-jost font-medium text-lg leading-[24px] container">
         <div className="flex items-center border border-[#8E8E8E] rounded-md">
           <div className="flex items-center pl-3.75 py-2.25 space-x-1.5">
             <Link href="/" className="flex items-center gap-1.5">
@@ -68,7 +68,7 @@ const linkClasses = (href) =>
       initial={{ opacity: 0, y: -60 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4 }}
-      className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] flex items-center justify-between border rounded-md bg-white/10 backdrop-blur-sm px-6 py-3 font-jost font-medium text-[18px] leading-[24px]"
+      className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] flex items-center justify-between border rounded-md bg-white/10 backdrop-blur-sm px-6 py-3 font-jost font-medium text-lg leading-[24px]"
     >
       <div className="flex items-center gap-10 justify-between container">
         <Link href="/" className="flex items-center gap-2">
