@@ -144,8 +144,6 @@ const Marketing = () => {
             </div>
           ))}
         </div>
-
-        {/* Video Section */}
         <div className="mt-34 flex justify-center items-center flex-col relative">
           <div className="absolute -top-20">
             <Icons name="gradientServices" />

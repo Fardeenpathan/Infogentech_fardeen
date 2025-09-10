@@ -9,25 +9,25 @@ const servicesMenu = [
     description: "Crafting visually stunning and user-friendly designs.",
     subcategories: [
       {
-        href: "/services/graphic-design",
+        href: "/services/design",
         label: "Graphic Design",
         icon: "GraphicDesign",
         description: "Designing impactful graphics for various media.",
       },
       {
-        href: "/services/ui-ux-design",
+        href: "/services/design",
         label: "UI/UX Design",
         icon: "UIUXDesign",
         description: "Creating intuitive and engaging user experiences.",
       },
       {
-        href: "/services/branding",
+         href: "/services/design",
         label: "Branding",
         icon: "Branding",
         description: "Creating intuitive and engaging user experiences.",
       },
       {
-        href: "/services/logo-design",
+         href: "/services/design",
         label: "Logo Design",
         icon: "Logo",
         description: "Creating intuitive and engaging user experiences.",
@@ -39,25 +39,25 @@ const servicesMenu = [
     description: "Building robust and scalable web applications.",
     subcategories: [
       {
-        href: "/services/web-development",
+        href: "/services/development",
         label: "Web & App Development",
         icon: "Branding",
         description: "Developing responsive and high-performance websites.",
       },
       {
-        href: "/services/mobile-app-development",
+        href: "/services/development",
         label: "CMS Development",
         icon: "Branding",
         description: "Creating mobile applications for iOS and Android.",
       },
       {
-        href: "/services/mobile-app-development",
+        href: "/services/development",
         label: "Custom Integrations",
         icon: "Branding",
         description: "Creating mobile applications for iOS and Android.",
       },
       {
-        href: "/services/mobile-app-development",
+        href: "/services/development",
         label: "AI & Cloud Solutions",
         icon: "Branding",
         description: "Creating mobile applications for iOS and Android.",
@@ -69,25 +69,25 @@ const servicesMenu = [
     description: "Building robust and scalable web applications.",
     subcategories: [
       {
-        href: "/services/web-development",
+        href: "/services/content",
         label: "Photo & Video Production",
         icon: "Branding",
         description: "Developing responsive and high-performance websites.",
       },
       {
-        href: "/services/mobile-app-development",
+        href: "/services/content",
         label: "Visual Content Design",
         icon: "Branding",
         description: "Creating mobile applications for iOS and Android.",
       },
       {
-        href: "/services/mobile-app-development",
+        href: "/services/content",
         label: "Auto & Motion Graphics",
         icon: "Branding",
         description: "Creating mobile applications for iOS and Android.",
       },
       {
-        href: "/services/mobile-app-development",
+        href: "/services/content",
         label: "Blog Posts & Articles",
         icon: "Branding",
         description: "Creating mobile applications for iOS and Android.",
@@ -99,38 +99,38 @@ const servicesMenu = [
     description: "Building robust and scalable web applications.",
     subcategories: [
       {
-        href: "/services/web-development",
+        href: "/services/marketing",
         label: "Marketing Strategy",
         icon: "Branding",
         description: "Developing responsive and high-performance websites.",
       },
       {
-        href: "/services/mobile-app-development",
+        href: "/services/marketing",
         label: "Performance Marketing",
         icon: "Branding",
         description: "Creating mobile applications for iOS and Android.",
       },
       {
-        href: "/services/mobile-app-development",
+        href: "/services/marketing",
         label: "CRM & Automation",
         icon: "Branding",
         description: "Creating mobile applications for iOS and Android.",
       },
       {
-        href: "/services/mobile-app-development",
+        href: "/services/marketing",
         label: "Audience Engagement Strategy",
         icon: "Branding",
         description: "Creating mobile applications for iOS and Android.",
       },
 
       {
-        href: "/services/mobile-app-development",
+        href: "/services/marketing",
         label: "Search Engine Optimization (SEO)",
         icon: "Branding",
         description: "Creating mobile applications for iOS and Android.",
       },
       {
-        href: "/services/mobile-app-development",
+        href: "/services/marketing",
         label: "Content Marketing",
         icon: "Branding",
         description: "Creating mobile applications for iOS and Android.",

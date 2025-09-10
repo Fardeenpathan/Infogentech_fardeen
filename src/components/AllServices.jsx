@@ -10,7 +10,7 @@ const AllServices = ({ activeService }) => {
       id: 3,
       icon: "DigitalMarketing",
       label: "Digital Marketing",
-      slug: "Marketing",
+      slug: "marketing",
     },
     { id: 4, icon: "Content", label: "Content", slug: "content" },
   ];
