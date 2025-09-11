@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { useParams } from "next/navigation";
 import Icons from "@/components/ui/Icon";
 import { useState } from "react";
 import SubscribeContact from "@/components/SubscribeContact";
@@ -44,14 +43,12 @@ const mockApiResponse = [
 ];
 
 const BlogSlugPage = () => {
-  const params = useParams();
-  const { slug } = params;
   const [openId, setOpenId] = useState(null);
   const toggleFAQ = (id) => {
     setOpenId((prevId) => (prevId === id ? null : id));
   };
   return (
-    <div className="container mx-auto mt-24 text-wrap">
+    <div className="container mx-auto mt-24 text-wrap px-10">
       <div className="flex justify-center items-center flex-col">
         <p className="font-avalors text-[32px] leading-[24px] font-normal align-middle text-[#8752FF]">
           Published 20 jan 2025

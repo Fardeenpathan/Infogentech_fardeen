@@ -1,23 +1,22 @@
-
 export default function MissionAbout() {
   return (
-    <div className="flex container mx-auto px-30">
-   <div className="flex justify-center items-center mb-10 flex-col shrink-0">
-         <div className="relative w-12 h-12">
+    <div className="flex container justify-between mx-auto px-30">
+      <div className="flex justify-center items-center mb-10 flex-col ">
+        <div className=" w-12 h-12 ">
           <img
             src="/assist/video/pentagonVideo.gif"
             alt="valueImg"
-            className=" w-full h-full object-cover"
+            className="w-full h-full object-cover"
           />
         </div>
-            <div className="w-0.5 h-[400px] rounded-full mt-4 bg-gradient-to-b from-purple-400 via-purple-500 to-purple-800"></div>
-          </div>
-      <div className="flex relative gap-50 left-10">
+        <div className="w-0.5 h-[400px] xl:h-[300px] rounded-full mt-4 bg-gradient-to-b from-purple-400 via-purple-500 to-purple-800"></div>
+      </div>
+      <div className="flex pl-10 gap-50 left-10">
         <div className="flex flex-col basis-[50%]">
           <p className="text-[32px] leading-[150%] capitalize font-avalors text-[#8752FF]">
             Our Vision And Mission
           </p>
-          <p className="text-[26px] font-medium leading-[150%]  align-middle font-jost text-[#C9C9C9]">
+          <p className="lg:text-[26px] font-medium leading-[150%]  align-middle font-jost text-[#C9C9C9] xl:text-xl">
             We at Infogentech are working towards creating the future through
             new thought, smart automation, and strong strategy. Our Vision is to
             develop a stable provider that offers innovative solutions that will
@@ -30,7 +29,7 @@ export default function MissionAbout() {
           </p>
         </div>
         <div className="basis-[30%]">
-          <img src="/assist/video/about.gif"  alt="" className="opacity-40" />
+          <img src="/assist/video/about.gif" alt="" className="opacity-40" />
         </div>
       </div>
     </div>

@@ -1,4 +1,3 @@
-
 import StatsItem from "@/components/stats-item";
 import SubscribeContact from "@/components/SubscribeContact";
 import FocusPart from "@/components/FocusPart";
@@ -15,22 +14,22 @@ const AboutUs = () => {
   return (
     <>
       <div className=" h-85 mt-30 bg-[url('/assist/img/aboutBg.png')]  longContainer mx-auto relative">
-        <div className="flex gap-10 absolute top-2 pl-45 pr-20">
+        <div className="flex gap-10 absolute top-2 px-30">
           <div className="flex justify-center items-center mb-40 flex-col shrink-0">
-         <div className="relative w-12 h-12">
-          <img
-            src="/assist/video/pentagonVideo.gif"
-            alt="valueImg"
-            className=" w-full h-full object-cover"
-          />
-        </div>
-            <div className="w-0.5 h-[600px] rounded-full mt-4 bg-gradient-to-b from-purple-400 via-purple-500 to-purple-800"></div>
+            <div className="relative w-12 h-12">
+              <img
+                src="/assist/video/pentagonVideo.gif"
+                alt="valueImg"
+                className=" w-full h-full object-cover"
+              />
+            </div>
+            <div className="w-0.5 h-[600px] xl:h-[400px] rounded-full mt-4 bg-gradient-to-b from-purple-400 via-purple-500 to-purple-800"></div>
           </div>
-          <div className="flex flex-col ">
+          <div className="flex flex-col">
             <p className="font-avalors font-normal text-[75px] leading-none  bg-[linear-gradient(91.32deg,_#6A27FF_-32.61%,_#FFFFFF_-19.98%,_#6A27FF_70.29%)] bg-clip-text text-transparent">
               About Us
             </p>
-            <p className="font-[Jost] font-medium text-[26px] leading-[150%] align-middle mt-4 text-[#C9C9C9]">
+            <p className="font-[Jost] font-medium text-[26px] xl:text-xl leading-[150%] align-middle mt-4 text-[#C9C9C9]">
               At Infogentech, our story began with a simple goal: helping
               businesses get noticed online. We saw how, in today’s world,
               people search for everything on the internet and if a company
@@ -42,7 +41,7 @@ const AboutUs = () => {
               with friendly support, professional guidance, and a money-back
               guarantee—because your success is what drives us every day.
             </p>
-            <div className="flex flex-row justify-between items-center font-[Jost] mt-10 mr-10">
+            <div className="flex flex-row justify-between items-center font-[Jost] mt-10 mr-10 xl:mt-20">
               {stats.map((item, index) => (
                 <StatsItem
                   key={index}
@@ -55,15 +54,16 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
-      
-        
       </div>
-      <div className="mt-96">
+      <div className="mt-96 xl:mt-60">
         <MissionAbout />
       </div>
-         <MidHeader name="Quality-driven digital solutions" subheading="We move quickly and adapt to keep you ahead."/>
+      <MidHeader
+        name="Quality-driven digital solutions"
+        subheading="We move quickly and adapt to keep you ahead."
+      />
       <div className="flex justify-center flex-col items-center gap-32">
-        <FocusPart/>
+        <FocusPart />
         <Icons name="LinesAbout" />
       </div>
       <SubscribeContact />
