@@ -71,10 +71,11 @@ export default function ServicesSection() {
                   alt={service.title}
                   width={117}
                   height={110}
-                  objectFit="cover"
+                  objectFit="cover "
+                  className="xl:w-25 xl:h-25"
                 />
               </p>
-              <h2 className="font-[jost] font-medium text-[55px] leading-[120%] tracking-[0.03em]">
+              <h2 className="font-[jost] font-medium text-[55px] xl:text-[40px] leading-[120%] tracking-[0.03em]">
                 {service.title}
               </h2>
               <p className="text-[#C4C4C4] text-sm mt-9 leading-relaxed">
