@@ -1,7 +1,9 @@
+import ComingSoon from "@/components/ComingSoon";
+
 const SlugPage = () => {
   return (
     <div>
-      <h1>Slug Page</h1>
+      <ComingSoon/>
     </div>
   );
 };
