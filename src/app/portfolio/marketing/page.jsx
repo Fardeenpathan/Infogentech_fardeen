@@ -6,21 +6,10 @@ import Image from "next/image";
 import Icons from "@/components/ui/Icon";
 import Link from "next/link";
 import { useState } from "react";
+import marketingProjects from "./marketingProjects.json";
 
 const DigitalMarketing = () => {
   const [activeService, setActiveService] = useState("Digital Marketing");
-  const marketingProjects = [
-    {
-      id: 1,
-      title: "Green House Gardening Landing Page",
-      image: "/assist/img/DesignImg.png",
-    },
-    {
-      id: 2,
-      title: "AI SaaS Dashboard UI",
-      image: "/assist/img/DesignImg.png",
-    },
-  ];
   return (
     <>
       <PortfolioHeader />
@@ -32,7 +21,7 @@ const DigitalMarketing = () => {
           </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 container mx-auto relative -top-48">
-          {marketingProjects?.map((project) => (
+          {marketingProjects.map((project) => (
             <div key={project.id} className="p-2.5 rounded-xl px-10">
               <div className="w-full max-w-[774px]">
                 <Image
@@ -40,7 +29,7 @@ const DigitalMarketing = () => {
                   alt={project.title}
                   width={774}
                   height={380}
-                  objectFit="cover"
+                  style={{ objectFit: "cover", width: 774, height: 480 }}
                   className="rounded-xl"
                 />
                 <div className="px-2.5 pb-2.5 flex justify-between flex-col">
@@ -48,7 +37,7 @@ const DigitalMarketing = () => {
                     <p className="font-[jost] text-[24px] font-normal leading-[28px] tracking-normal">
                       {project.title}
                     </p>
-                    <Link href={`/portfolio/marketing/${project.title}`}>
+                    <Link href={`/portfolio/marketing/${project.slug}`}>
                       <Icons
                         name="Arrow"
                         height={26}
@@ -62,7 +51,7 @@ const DigitalMarketing = () => {
             </div>
           ))}
         </div>
-        <div className="text-[#82828C]  border-2 container mx-auto px-10"></div>
+        <div className="text-[#82828C] border-2 container mx-auto px-10"></div>
         <SubscribeContact />
       </div>
     </>

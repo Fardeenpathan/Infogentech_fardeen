@@ -8,17 +8,17 @@ import Link from "next/link";
 import { useState } from "react";
 
 const Portfolio = () => {
-  const [activeService, setActiveService] = useState("Design");
+  const [activeService, setActiveService] = useState("");
   const designProjects = [
-    {
+     {
       id: 1,
-      title: "Green House Gardening Landing Page",
-      image: "/assist/img/DesignImg.png",
+      title: "BookPremiumFare Transforming Online Travel Booking",
+      image: "/assist/portfolio/design/bookPremiumFare.png",
     },
     {
       id: 2,
       title: "AI SaaS Dashboard UI",
-      image: "/assist/img/DesignImg.png",
+      image: "/assist/portfolio/design/dryCleaning.webp",
     },
   ];
 
@@ -40,8 +40,8 @@ const Portfolio = () => {
                   src={project.image}
                   alt={project.title}
                   width={774}
-                  height={380}
-                  objectFit="cover"
+                  height={480}
+                  style={{ objectFit: "cover", width: 774, height: 480 }}
                   className="rounded-xl"
                 />
                 <div className="px-2.5 pb-2.5 flex justify-between flex-col">
