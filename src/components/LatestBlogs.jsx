@@ -1,9 +1,9 @@
-import Image from "next/image";
+
 import MidHeader from "./MidHeader";
 import Icons from "./ui/Icon";
 import HomeBlogCardsd from "./HomeBlogCardsd";
 
-const latest = [
+const blogData = [
   {
     id: 1,
     title: "Madhya Pradesh Partners with Submer for AI‑Ready Data Centres",
@@ -11,6 +11,7 @@ const latest = [
       "What happens when a middle school friendship, a shared love for music, and a global pandemic come together? In...",
     date: "19 Jul, 2025",
     img: "/assist/img/blogs.png",
+    slug: "madhya-pradesh-partners-with-submer-for-ai-ready-data-centres",
   },
   {
     id: 2,
@@ -19,6 +20,7 @@ const latest = [
       "DAVV University me AI aur emerging tech ka Centre of Excellence banega, jisme students aur teachers dono ko upskill kiya jayega.",
     date: "19 Jul, 2025",
     img: "/assist/img/blogs.png",
+    slug: "centre-of-excellence-for-emerging-tech-at-davv-indore",
   },
   {
     id: 3,
@@ -27,6 +29,7 @@ const latest = [
       "Vizag me 25–26 July ko Fusion AI Summit hoga, jahan startups, experts aur govt milke AI future pe baat karenge.",
     date: "19 Jul, 2025",
     img: "/assist/img/blogs.png",
+    slug: "ai-summit-in-vizag-this-month",
   },
 ];
 export default function LatestBlogs() {
@@ -40,14 +43,14 @@ export default function LatestBlogs() {
         href="#"
         className="flex gap-8 items-center justify-end mr-10 relative -top-10"
       >
-        <p className="font-[jost] font-semibold text-[18px] leading-[120%] capitalize ">
+        <p className="font-[jost] font-semibold text-lg leading-[120%] capitalize ">
           See Our <br /> More Blogs
         </p>
         <Icons name="Arrow" width={62} height={28} />
       </a>
       <div className="relative flex flex-col items-center justify-center   text-white">
         <div className="flex items-center justify-center gap-12">
-          {latest.map((blog) => (
+          {blogData.map((blog) => (
             <HomeBlogCardsd key={blog.id} blog={blog} />
           ))}
         </div>

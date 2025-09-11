@@ -46,6 +46,28 @@
   --radius-2xl: calc(var(--radius) + 6px);
 }
 
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(100%) rotate(0deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) rotate(360deg);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 1s ease-in-out forwards, shake 1s ease-in-out 1s forwards;
+}
+
+@keyframes shake {
+  0% { transform: translate(0); }
+  25% { transform: translate(-5px, 0); }
+  50% { transform: translate(5px, 0); }
+  75% { transform: translate(-5px, 0); }
+  100% { transform: translate(0); }
+}
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);

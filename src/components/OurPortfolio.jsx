@@ -122,7 +122,7 @@ export default function OurPortfolio() {
           ))}
         </div>
         <a href="/portfolio" className="flex gap-8 items-center justify-center">
-          <p className="font-[jost] font-semibold text-[18px] leading-[120%] capitalize ">
+          <p className="font-[jost] font-semibold text-lg leading-[120%] capitalize ">
             See Our <br /> More Projects
           </p>
           <Icons name="Arrow" width={62} height={28} />

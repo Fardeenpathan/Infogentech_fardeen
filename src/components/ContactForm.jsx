@@ -72,7 +72,7 @@ const ContactForm = () => {
               Get in Touch
             </p>
 
-            <p className="font-[jost] font-medium text-[18px] leading-[24px] align-middle mt-3">
+            <p className="font-[jost] font-medium text-lg leading-[24px] align-middle mt-3">
               Have a question or need help? Just send us a message or email
               we’re happy to help!
             </p>
@@ -82,7 +82,7 @@ const ContactForm = () => {
               <p className="font-[jost] font-medium text-2xl leading-[24px] align-middle">
                 Contact Information
               </p>
-              <p className="font-[jost] text-[18px] leading-[24px] align-middle text-[#C9C9C9] mt-5">
+              <p className="font-[jost] text-lg leading-[24px] align-middle text-[#C9C9C9] mt-5">
                 Say something to start a live chat!
               </p>
 
@@ -123,7 +123,7 @@ const ContactForm = () => {
               <form className="w-full  text-white space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-[#E4E4E4] text-[18px] mb-2 font-jost font-light">
+                    <label className="block text-[#E4E4E4] text-lg mb-2 font-jost font-light">
                       Name
                     </label>
                     <input
@@ -133,7 +133,7 @@ const ContactForm = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-[#E4E4E4] text-[18px] mb-2 font-jost font-light">
+                    <label className="block text-[#E4E4E4] text-lg mb-2 font-jost font-light">
                       Email
                     </label>
                     <input
@@ -145,7 +145,7 @@ const ContactForm = () => {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-[#E4E4E4] text-[18px] mb-2 font-jost font-light">
+                    <label className="block text-[#E4E4E4] text-lg mb-2 font-jost font-light">
                       Phone Number
                     </label>
                     <input
@@ -155,7 +155,7 @@ const ContactForm = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-[#E4E4E4] text-[18px] mb-2 font-light">
+                    <label className="block text-[#E4E4E4] text-lg mb-2 font-light">
                       Product Question
                     </label>
                     <select className="w-full  py-2  border-b-2 border-[#FFFFFF] bg-transparent  focus:outline-none focus:border-[#8752FF]">
@@ -166,7 +166,7 @@ const ContactForm = () => {
                   </div>
                 </div>
                 <div>
-                  <label className="block text-[#E4E4E4] text-[18px] mb-2 font-jost font-light">
+                  <label className="block text-[#E4E4E4] text-lg mb-2 font-jost font-light">
                     Message
                   </label>
                   <input

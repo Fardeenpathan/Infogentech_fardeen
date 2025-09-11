@@ -27,7 +27,7 @@ export default function SubContact() {
             </p>
             <Icons name="Globe" width={23} height={23} color="#8F8F9B" />
           </div>
-          <p className="font-jost font-semibold text-[18px] tracking-[0.03em] items-center pr-2">
+          <p className="font-jost font-semibold text-lg tracking-[0.03em] items-center pr-2">
             Proudly Headquartered in the USA, Digital solutions the Digital
             World.
           </p>

@@ -11,7 +11,7 @@ export default function SubscribeContact() {
           Stay in the loop with everything you need to know.
         </p>
       </div>
-      <div className=" font-normal text-[18px] leading-[24px] font-jost">
+      <div className=" font-normal text-lg leading-[24px] font-jost">
         <div className="flex gap-1">
             <input
           type="text"
@@ -23,7 +23,7 @@ export default function SubscribeContact() {
          <Button text="Subscribe" className="!py-3 !px-5"/> 
         </div>
        
-        <p className="font-jost font-normal text-[18px] leading-[24px] text-[#C4C4C4] mt-2">
+        <p className="font-jost font-normal text-lg leading-[24px] text-[#C4C4C4] mt-2">
           We care about your data in our <a href="#" className="underline">privacy policy</a>
         </p>
       </div>

@@ -1,8 +1,8 @@
-import Image from "next/image";
+import Icons from "./ui/Icon";
 
 export function HeroSection() {
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto px-10">
       <video
         className="absolute top-0 left-0 w-full h-240  object-cover bg-transparent -z-10 "
         src="/assist/hero-bg.mp4"
@@ -21,16 +21,16 @@ export function HeroSection() {
       >
         <div className="flex mb-8 gap-9">
           <div className="flex justify-center items-center flex-col">
-            <Image
-              src="/assist/img/Polygon.png"
-              alt="Best Design. Development. Marketing."
-              width={46}
-              height={46}
-              objectFit="cover"
-            />
+            <div className="relative w-12 h-12">
+              <img
+                src="/assist/video/pentagonVideo.gif"
+                alt="valueImg"
+                className=" w-full h-full object-cover"
+              />
+            </div>
             <div className="w-0.5 h-40 rounded-full mt-4 bg-gradient-to-b from-purple-400 via-purple-500 to-purple-800"></div>
           </div>
-          <div className="">
+          <div>
             <h1
               className="text-7xl lg:text-6xl font-avalors uppercase align-middle bg-[linear-gradient(91.32deg,#6A27FF_-32.61%,#FFFFFF_19.98%,#6A27FF_112.29%)]
               bg-clip-text text-transparent leading-[120%] tracking-[-0.75px]"
@@ -43,12 +43,29 @@ export function HeroSection() {
             </h1>
           </div>
         </div>
-
-        <p className="text-gray-300 text-lg font-Jost mb-8 font-medium align-middle">
-          We become your digital department bringing strategy, creativity, and
-          technical expertise to accelerate your business growth.
-        </p>
-       {/* <Button className="" variant="primary" children="Get Started" /> */}
+        <div className="mt-9 ml-20">
+          <p className="text-gray-300 text-lg font-Jost mb-8 font-medium align-middle">
+            We become your digital department bringing strategy, creativity, and
+            technical expertise to accelerate your business growth.
+          </p>
+          <a
+            href="contactUs"
+            className="inline-block p-[2px] rounded-xl 
+             [background:linear-gradient(270deg,rgba(0,0,0,0)_4.64%,rgba(0,0,0,0.63)_82.81%)]"
+          >
+            <span
+              className="flex gap-2 items-center 
+                  text-lg font-jost px-10 py-3 
+                  rounded-[10px] 
+                  bg-[#7544E4] 
+                  text-white 
+                  shadow-[0px_0px_8px_0px_#FFFFFF_inset]"
+            >
+              Get Start &nbsp;
+              <Icons name="Arrow" />
+            </span>
+          </a>
+        </div>
       </div>
     </div>
   );

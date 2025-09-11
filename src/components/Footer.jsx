@@ -5,7 +5,7 @@ import Button from "./ui/Button";
 
 export function Footer() {
   return (
-    <footer className="bg-[#101021] mx-auto mt-36 relative overflow-hidden">
+    <footer className="bg-[#101021] mx-auto mt-36 relative overflow-hidden px-10">
       <div className="container mx-auto pt-11 ">
         <div className="flex justify-between items-center ">
           <div className="w-[162px] h-[162px] -top-[26px] -left-3.5 rounded-[81px] absolute bg-[#8752ff] blur-[100px]" />
@@ -13,23 +13,28 @@ export function Footer() {
           <p className="font-[jost] font-medium text-[45px] leading-[60px]">
             Start Earlier, Grow Faster <br /> Without Hidden Costs.
           </p>
-          <div className="w-full md:w-1/2 lg:w-1/3 flex justify-end items-start space-x-5 font-jost">
-            <button className="bg-white text-black  py-5 px-12.5 rounded-[10px]">
+          <div className="w-full md:w-1/2 lg:w-1/3 flex justify-end items-start space-x-5 font-jost ">
+            <Link
+              href="/contactUs"
+              className="bg-white text-black  py-5 px-12.5 rounded-[10px] "
+            >
               Get Started
-            </button>
-            <Button text="Contact Us" />
+            </Link>
+            <Link href="/contactUs">
+              <Button text="Contact Us" />
+            </Link>
           </div>
         </div>
         <div className=" w-full text-white border-1 mt-7.5"></div>
         <div className="flex flex-wrap justify-between items-center">
           <div className="w-full grid grid-cols-3 mt-6.5">
             <div>
-              <div className="flex items-center mb-4 gap-1.5">
+              <a className="flex items-center mb-4 gap-1.5" href="/">
                 <Icons name="LogoFooter" />
                 <p className="font-avalors text-[24px] leading-[32px] tracking-[3px] font-bold">
                   INFOGENTECH
                 </p>
-              </div>
+              </a>
               <p className="text-gray-400 text-sm mb-4">
                 Infogentech delivers smart digital solutions that move with the
                 times, crafted for every generation, inspired by change. We
@@ -70,27 +75,39 @@ export function Footer() {
                 <h3 className="text-lg font-semibold mb-4 font-jost">Links</h3>
                 <ul className="space-y-3.5">
                   <li>
-                    <Link href="#" className="text-gray-400 hover:text-white">
+                    <Link href="/" className="text-gray-400 hover:text-white">
                       Home
                     </Link>
                   </li>
                   <li>
-                    <Link href="/portfolio" className="text-gray-400 hover:text-white">
+                    <Link
+                      href="/portfolio"
+                      className="text-gray-400 hover:text-white"
+                    >
                       Portfolio
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="text-gray-400 hover:text-white">
+                    <Link
+                      href="/blogs"
+                      className="text-gray-400 hover:text-white"
+                    >
                       Blog
                     </Link>
                   </li>
                   <li>
-                    <Link href="/contactUs" className="text-gray-400 hover:text-white">
+                    <Link
+                      href="/contactUs"
+                      className="text-gray-400 hover:text-white"
+                    >
                       Contact us
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="text-gray-400 hover:text-white">
+                    <Link
+                      href="/aboutUs"
+                      className="text-gray-400 hover:text-white"
+                    >
                       About us
                     </Link>
                   </li>
@@ -103,32 +120,50 @@ export function Footer() {
                 </h3>
                 <ul className="space-y-3.5">
                   <li>
-                    <Link href="/services" className="text-gray-400 hover:text-white">
+                    <Link
+                      href="/services/design"
+                      className="text-gray-400 hover:text-white"
+                    >
                       Web / App Design
                     </Link>
                   </li>
                   <li>
-                    <Link href="/services" className="text-gray-400 hover:text-white">
+                    <Link
+                      href="/services/development"
+                      className="text-gray-400 hover:text-white"
+                    >
                       Development
                     </Link>
                   </li>
                   <li>
-                    <Link href="/services" className="text-gray-400 hover:text-white">
+                    <Link
+                      href="/services/marketing"
+                      className="text-gray-400 hover:text-white"
+                    >
                       Branding
                     </Link>
                   </li>
                   <li>
-                    <Link href="/services" className="text-gray-400 hover:text-white">
+                    <Link
+                      href="/services/design"
+                      className="text-gray-400 hover:text-white"
+                    >
                       Graphic Design
                     </Link>
                   </li>
                   <li>
-                    <Link href="/services" className="text-gray-400 hover:text-white">
+                    <Link
+                      href="/services/design"
+                      className="text-gray-400 hover:text-white "
+                    >
                       Video & Photo
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="text-gray-400 hover:text-white">
+                    <Link
+                      href="#"
+                      className="text-gray-400 hover:text-white cursor-not-allowed"
+                    >
                       Help Center
                     </Link>
                   </li>
@@ -141,22 +176,34 @@ export function Footer() {
                 </h3>
                 <ul className="space-y-3.5">
                   <li>
-                    <Link href="#" className="text-gray-400 hover:text-white">
+                    <Link
+                      href="/aboutUs"
+                      className="text-gray-400 hover:text-white"
+                    >
                       About us
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="text-gray-400 hover:text-white">
+                    <Link
+                      href="#"
+                      className="text-gray-400 hover:text-white cursor-not-allowed"
+                    >
                       Careers
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="text-gray-400 hover:text-white">
+                    <Link
+                      href="/contactUs"
+                      className="text-gray-400 hover:text-white"
+                    >
                       Contact Support
                     </Link>
                   </li>
                   <li>
-                    <Link href="/faq" className="text-gray-400 hover:text-white">
+                    <Link
+                      href="/faq"
+                      className="text-gray-400 hover:text-white"
+                    >
                       FAQs
                     </Link>
                   </li>
