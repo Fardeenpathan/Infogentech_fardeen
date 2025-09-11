@@ -4,6 +4,7 @@ import SubscribeContact from "@/components/SubscribeContact";
 import FocusPart from "@/components/FocusPart";
 import Icons from "@/components/ui/Icon";
 import MissionAbout from "@/components/MissionAbout";
+import MidHeader from "@/components/MidHeader";
 const stats = [
   { value: "250", suffix: "+", label: "Projects Delivered" },
   { value: "7", suffix: "+", label: "Years of Experience" },
@@ -58,8 +59,9 @@ const AboutUs = () => {
         
       </div>
       <div className="mt-96">
-        <MissionAbout/>
+        <MissionAbout />
       </div>
+         <MidHeader name="Quality-driven digital solutions" subheading="We move quickly and adapt to keep you ahead."/>
       <div className="flex justify-center flex-col items-center gap-32">
         <FocusPart/>
         <Icons name="LinesAbout" />

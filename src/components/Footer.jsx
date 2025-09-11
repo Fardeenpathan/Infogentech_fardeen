@@ -24,12 +24,12 @@ export function Footer() {
         <div className="flex flex-wrap justify-between items-center">
           <div className="w-full grid grid-cols-3 mt-6.5">
             <div>
-              <div className="flex items-center mb-4 gap-1.5">
+              <a className="flex items-center mb-4 gap-1.5" href="/">
                 <Icons name="LogoFooter" />
                 <p className="font-avalors text-[24px] leading-[32px] tracking-[3px] font-bold">
                   INFOGENTECH
                 </p>
-              </div>
+              </a>
               <p className="text-gray-400 text-sm mb-4">
                 Infogentech delivers smart digital solutions that move with the
                 times, crafted for every generation, inspired by change. We

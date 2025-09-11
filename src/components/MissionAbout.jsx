@@ -1,21 +1,19 @@
-import Icons from "@/components/ui/Icon";
+
 export default function MissionAbout() {
   return (
-    <div className="flex container mx-auto relative px-30">
-      <div className="flex justify-center flex-col shrink-0 ">
-        <div className="relative w-12 h-12">
+    <div className="flex container mx-auto px-30">
+   <div className="flex justify-center items-center mb-10 flex-col shrink-0">
+         <div className="relative w-12 h-12">
           <img
             src="/assist/video/pentagonVideo.gif"
             alt="valueImg"
             className=" w-full h-full object-cover"
           />
         </div>
-        <div className=" ml-5 mt-8">
-          <Icons name="BigCurve" />
-        </div>
-      </div>
-      <div className="flex absolute gap-50 left-50">
-        <div className="flex flex-col justify-between basis-[50%]">
+            <div className="w-0.5 h-[400px] rounded-full mt-4 bg-gradient-to-b from-purple-400 via-purple-500 to-purple-800"></div>
+          </div>
+      <div className="flex relative gap-50 left-10">
+        <div className="flex flex-col basis-[50%]">
           <p className="text-[32px] leading-[150%] capitalize font-avalors text-[#8752FF]">
             Our Vision And Mission
           </p>

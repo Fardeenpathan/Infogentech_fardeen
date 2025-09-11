@@ -85,7 +85,7 @@ export default function OurValues() {
                 <h2 className="font-[jost] font-medium text-2xl leading-[120%] tracking-[0.03em] mt-6">
                   {service.title}
                 </h2>
-                <p className="text-[#C4C4C4] text-xl mt-3 leading-[120%] flex text-center">
+                <p className="text-[#C4C4C4] text-xl mt-3 leading-[120%] flex text-center xl:text-lg">
                   {service.desc}
                 </p>
               </div>

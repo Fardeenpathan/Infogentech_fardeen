@@ -13,7 +13,7 @@ const SlugPage = () => {
   return (
     <>
       <PortfolioHeader />
-      <div className="container mx-auto">
+      <div className="container mx-auto px-10">
         <div className=" mt-10  -z-20 border-2 rounded-3xl pt-10">
           <PortfolioServices activeService={activeService} />
           <div className="mx-auto w-fit mt-10">
@@ -106,7 +106,7 @@ const SlugPage = () => {
             </div>
           </div>
         </div>
-        <div className="bg-[#0E0F27]  p-10 rounded-3xl mt-5 shadow-[0px_0px_54px_24px_#1C1C38]">
+        <div className="bg-[#0E0F27]  p-10 rounded-3xl mt-5 shadow-[0px_0px_54px_24px_#1C1C38] px-10">
           <div className="space-y-6">
             <h2 className="text-2xl text-gray-300">
               We crafted a vibrant website for a greenhouse gardening brand,
