@@ -10,7 +10,7 @@ export default function ScheduleCall() {
             Chat With Our Expert Today
           </h2>
           <p className="text-white font-jost text-lg mt-4 mb-12">
-            Turn Your Idea Into Reality Let’s Make It Happen!
+            Turn Your Idea Into Reality — Let’s Make It Happen!
           </p>
           <div
             className="p-[2px] rounded-xl bg-[linear-gradient(95.64deg,#6807FF_31.79%,#5900E5_64.61%,#AB00E6_78.22%)]"

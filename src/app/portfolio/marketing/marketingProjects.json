@@ -3,12 +3,14 @@
     "id": 1,
     "title": "BookPremiumFare Transforming Online Travel Booking",
     "slug": "BookPremiumFare-Transforming-Online-Travel-Booking",
-    "image": "/assist/portfolio/design/bookPremiumFare.png"
+    "image": "/assist/portfolio/design/BookpremiumfareCase.png",
+     "subImage": "/assist/portfolio/design/bookPremiumFare.png"
   },
   {
     "id": 2,
     "title": "Dry Cleaning service",
     "slug": "dry-cleaning-service",
-    "image": "/assist/portfolio/design/dryCleaning.webp"
+    "image": "/assist/portfolio/design/LaraCleanCasestudy.png",
+    "subImage": "/assist/portfolio/design/dryCleaning.webp"
   }
 ]

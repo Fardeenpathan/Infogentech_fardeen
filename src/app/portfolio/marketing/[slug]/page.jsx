@@ -5,15 +5,15 @@ import SubscribeContact from "@/components/SubscribeContact";
 import PortfolioHeader from "@/components/PortfolioHeader";
 import PortfolioServices from "@/components/PortfolioServices";
 import ShinyButton from "@/components/ui/ShinyButton";
-import { useState } from "react";
-import marketingProjects from "./marketingProjects.json";
-import { useParams } from 'next/navigation';
+import { useState,useEffect } from "react";
+import marketingProjects from "../marketingProjects.json";
+import { useParams} from 'next/navigation';
 import Loader from "@/components/loader/Loader";
 
 const SlugPage = () => {
   const { slug } = useParams();
   const [project, setProject] = useState(null);
-  const [activeService, setActiveService] = useState("Marketing");
+  const [activeService, setActiveService] = useState("Digital Marketing");
   const [expanded, setExpanded] = useState(false);
 
   useEffect(() => {
