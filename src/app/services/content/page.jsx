@@ -11,50 +11,49 @@ const Content = () => {
   const categories = [
     {
       id: "01",
-      title: "Content",
+      title: "Photo & Video Production",
       subServices: [
-        {
-          id: "01",
-          title: "Copywriting",
-          desc: "Engaging and impactful content strategies.",
-        },
-        {
-          id: "02",
-          title: "Storytelling",
-          desc: "Narrative-driven approaches for brands.",
-        },
+        { id: "01", title: "Video Production & Motion Design", desc: "" },
+        { id: "02", title: "Video Production", desc: "" },
+        { id: "03", title: "Commercials & Hero Videos", desc: "" },
+        { id: "04", title: "Product Demo Videos", desc: "" },
+        { id: "05", title: "Animated Explainer Videos", desc: "" },
+        { id: "06", title: "2D/3D Animations & AR Design", desc: "" },
+        { id: "07", title: "Social Media Video Content", desc: "" },
+        { id: "08", title: "Promotional & Marketing Videos", desc: "" },
+        { id: "09", title: "Video Editing & Post-Production", desc: "" },
+        { id: "10", title: "Interactive Animations", desc: "" },
+        { id: "11", title: "Sound & Music Design", desc: "" },
       ],
     },
     {
       id: "02",
-      title: "Design",
+      title: "Visual Content Design",
       subServices: [
-        {
-          id: "01",
-          title: "Digital Design",
-          desc: "Modern Digital Design, Bold Print Design, and User-Focused UX/UI.",
-        },
-        {
-          id: "02",
-          title: "Branding Solutions",
-          desc: "Consistent branding solutions for all platforms.",
-        },
+        { id: "01", title: " Infographic Design", desc: "" },
+        { id: "02", title: "Visual & Written Content", desc: "" },
+        { id: "03", title: "Brand Storytelling & Messaging", desc: "" },
+        { id: "04", title: " Content Strategy & Execution", desc: "" },
       ],
     },
     {
       id: "03",
-      title: "Marketing",
+      title: "Audio & Motion Graphics",
       subServices: [
-        {
-          id: "01",
-          title: "Social Media",
-          desc: "Creative strategies, impactful storytelling, and adaptive journeys.",
-        },
-        {
-          id: "02",
-          title: "Engagement",
-          desc: "Strong social media engagement and user growth.",
-        },
+        { id: "01", title: "Sound & Music Design", desc: "" },
+        { id: "02", title: "Video Production & Motion Design", desc: "" },
+        { id: "03", title: "Interactive Animations", desc: "" },
+        { id: "04", title: "Explainer Video Scripting", desc: "" },
+      ],
+    },
+      {
+      id: "04",
+      title: "Blog Posts & Articles",
+      subServices: [
+        { id: "01", title: "Blog Writing & SEO Articles", desc: "" },
+        { id: "02", title: "Case Studies & Whitepapers", desc: "" },
+        { id: "03", title: "Website & Landing Page Copy", desc: "" },
+        { id: "04", title: "Email Content & Newsletters", desc: "" },
       ],
     },
   ];
@@ -89,7 +88,7 @@ const Content = () => {
   return (
     <>
       <ServicesHeader />
-      <AllServices activeService="Content"/>
+      <AllServices activeService="Content" />
 
       <div className="container mx-auto mt-24 px-10">
         <div className="border-b-2 border-[#7e7d7d] mt-15 opacity-15"></div>

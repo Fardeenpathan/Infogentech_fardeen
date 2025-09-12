@@ -11,49 +11,74 @@ const Design = () => {
   const categories = [
     {
       id: "01",
-      title: "Content",
+      title: "Graphic Design",
       subServices: [
         {
           id: "01",
-          title: "Copywriting",
+          title: "Print and Digital Graphic Design",
           desc: "Engaging and impactful content strategies.",
         },
         {
           id: "02",
-          title: "Storytelling",
+          title: "Presentation Design",
           desc: "Narrative-driven approaches for brands.",
         },
+        { id: "03", title: " Ad Creative Design", desc: "" },
+        { id: "04", title: "Illustrations & Iconography", desc: "" },
+        { id: "05", title: "Print & Packaging Design", desc: "" },
+        { id: "06", title: "Product Sheets & One Pagers", desc: "" },
+        { id: "07", title: "Corporate Reports", desc: "" },
       ],
     },
     {
       id: "02",
-      title: "Design",
+      title: "UI/UX Design",
       subServices: [
         {
           id: "01",
-          title: "Digital Design",
+          title: "UI/UX Design & Wireframing",
           desc: "Modern Digital Design, Bold Print Design, and User-Focused UX/UI.",
         },
         {
           id: "02",
-          title: "Branding Solutions",
+          title: "Mobile-first Responsive Design",
           desc: "Consistent branding solutions for all platforms.",
         },
+        { id: "03", title: " Visual Design Systems & Style Guides", desc: "" },
+        {
+          id: "04",
+          title: "Website Design (Desktop, Mobile, eCommerce)",
+          desc: "",
+        },
+        { id: "05", title: "Landing Page Design", desc: "" },
       ],
     },
     {
       id: "03",
-      title: "Marketing",
+      title: "Branding",
       subServices: [
         {
           id: "01",
-          title: "Social Media",
+          title: "Corporate Identity Design",
           desc: "Creative strategies, impactful storytelling, and adaptive journeys.",
         },
         {
           id: "02",
-          title: "Engagement",
+          title: "Brand Guidelines",
           desc: "Strong social media engagement and user growth.",
+        },
+        { id: "03", title: "Brand Identity Messaging", desc: "" },
+        { id: "04", title: "Rebranding Services", desc: "" },
+      ],
+    },
+    {
+      id: "04",
+      title: "Logo Design",
+      subServices: [
+        {
+          id: "01",
+          title: "Corporate Identity Design",
+          desc: "Creative strategies, impactful storytelling, and adaptive journeys.",
         },
       ],
     },
@@ -89,7 +114,7 @@ const Design = () => {
   return (
     <>
       <PortfolioHeader />
-      <AllServices activeService="Design"/>
+      <AllServices activeService="Design" />
 
       <div className="container mx-auto mt-24 px-10">
         <div className="border-b-2 border-[#7e7d7d] mt-15 opacity-15"></div>

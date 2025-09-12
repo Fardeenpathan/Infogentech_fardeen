@@ -11,50 +11,93 @@ const Development = () => {
   const categories = [
     {
       id: "01",
-      title: "Content",
+      title: "Web & App Development",
       subServices: [
-        {
-          id: "01",
-          title: "Copywriting",
-          desc: "Engaging and impactful content strategies.",
-        },
+        { id: "01", title: "Website Development", desc: "" },
         {
           id: "02",
-          title: "Storytelling",
-          desc: "Narrative-driven approaches for brands.",
+          title: "Custom Websites & Business Landing Pages",
+          desc: "",
         },
+        { id: "03", title: "E-commerce Platforms & Online Stores", desc: "" },
+        { id: "04", title: "Personal Portfolios & Showcase Sites", desc: "" },
+        { id: "05", title: "Application Development", desc: "" },
+        { id: "06", title: "Web-based Application Development", desc: "" },
+        { id: "07", title: "Mobile App Development (iOS & Android)", desc: "" },
+        { id: "08", title: "Progressive Web Applications (PWA)", desc: "" },
+        { id: "09", title: "Cross-platform Mobile Solutions", desc: "" },
+        { id: "10", title: "Portal & Dashboard Development", desc: "" },
+        { id: "11", title: "Enterprise App Development", desc: "" },
+        { id: "12", title: "Software Development & SaaS", desc: "" },
+        { id: "13", title: "Custom Software Development", desc: "" },
+        {
+          id: "14",
+          title: "SaaS Platform Setup, Deployment & Support",
+          desc: "",
+        },
+        { id: "15", title: "Scalability & Performance Optimization", desc: "" },
+        { id: "16", title: "Application Maintenance", desc: "" },
       ],
     },
     {
       id: "02",
-      title: "Design",
+      title: "CMS Development",
       subServices: [
-        {
-          id: "01",
-          title: "Digital Design",
-          desc: "Modern Digital Design, Bold Print Design, and User-Focused UX/UI.",
-        },
+        { id: "01", title: "WordPress (Custom Themes & Plugins)", desc: "" },
         {
           id: "02",
-          title: "Branding Solutions",
-          desc: "Consistent branding solutions for all platforms.",
+          title: "Shopify Store Development & Customization",
+          desc: "",
         },
+        { id: "03", title: "Joomla & WooCommerce Solutions", desc: "" },
+        { id: "04", title: "Custom CMS Development", desc: "" },
+        { id: "05", title: "LMS Development", desc: "" },
       ],
     },
     {
       id: "03",
-      title: "Marketing",
+      title: "Custom Integrations",
       subServices: [
         {
           id: "01",
-          title: "Social Media",
+          title: "Database Design & API Integration",
           desc: "Creative strategies, impactful storytelling, and adaptive journeys.",
         },
         {
           id: "02",
-          title: "Engagement",
+          title: "System Integration & Custom Software",
           desc: "Strong social media engagement and user growth.",
         },
+        {
+          id: "03",
+          title: "CRM Integration",
+          desc: "Strong social media engagement and user growth.",
+        },
+      ],
+    },
+    {
+      id: "04",
+      title: "AI & Cloud Solutions",
+      subServices: [
+        {
+          id: "01",
+          title: "Advanced AI Development",
+          desc: "Creative strategies, impactful storytelling, and adaptive journeys.",
+        },
+        {
+          id: "02",
+          title: "Cloud Hosting Services",
+          desc: "Strong social media engagement and user growth.",
+        },
+        {
+          id: "03",
+          title: "Advanced Solutions",
+          desc: "Strong social media engagement and user growth.",
+        },
+        { id: "04", title: "Node.js Development", desc: "" },
+        { id: "05", title: "React Development", desc: "" },
+        { id: "06", title: "Laravel Development", desc: "" },
+        { id: "06", title: "No-Code Development", desc: "" },
       ],
     },
   ];
@@ -89,7 +132,7 @@ const Development = () => {
   return (
     <>
       <PortfolioHeader />
-      <AllServices activeService="Development"/>
+      <AllServices activeService="Development" />
 
       <div className="container mx-auto mt-24 px-10">
         <div className="border-b-2 border-[#7e7d7d] mt-15 opacity-15"></div>

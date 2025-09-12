@@ -11,50 +11,103 @@ const Marketing = () => {
   const categories = [
     {
       id: "01",
-      title: "Content",
+      title: "Marketing Strategy",
       subServices: [
-        {
-          id: "01",
-          title: "Copywriting",
-          desc: "Engaging and impactful content strategies.",
-        },
-        {
-          id: "02",
-          title: "Storytelling",
-          desc: "Narrative-driven approaches for brands.",
-        },
+        { id: "01", title: "ROI-Driven Campaign Strategies", desc: "" },
+        { id: "02", title: "B2B Content Strategies", desc: "" },
+        { id: "03", title: "Brand Messaging & Narratives", desc: "" },
+        { id: "04", title: "Content Strategy & Execution", desc: "" },
+        { id: "05", title: "Performance Tracking & ROI Analysis", desc: "" },
+        { id: "06", title: "Long-Term Partnerships", desc: "" },
+        { id: "07", title: "Competitor Benchmarking", desc: "" },
       ],
     },
     {
       id: "02",
-      title: "Design",
+      title: "Performance Marketing",
       subServices: [
-        {
-          id: "01",
-          title: "Digital Design",
-          desc: "Modern Digital Design, Bold Print Design, and User-Focused UX/UI.",
-        },
-        {
-          id: "02",
-          title: "Branding Solutions",
-          desc: "Consistent branding solutions for all platforms.",
-        },
+        { id: "01", title: "Pay-Per-Click Advertising (PPC)", desc: "" },
+        { id: "02", title: "Google Ads Campaign Management", desc: "" },
+        { id: "03", title: "Display Ads & Retargeting", desc: "" },
+        { id: "04", title: "Shopping Ads & Product Listings", desc: "" },
+        { id: "05", title: "Conversion Tracking & Optimization", desc: "" },
+        { id: "06", title: "E-commerce Marketing", desc: "" },
+        { id: "07", title: "Online Store Optimization", desc: "" },
+        { id: "08", title: "Shopping Campaign Management", desc: "" },
+        { id: "09", title: "Shopping Ads & Product Listings", desc: "" },
+        { id: "10", title: "Cart Abandonment Recovery", desc: "" },
+        { id: "11", title: "CLV Optimization", desc: "" },
+        { id: "12", title: "Marketplace Marketing (Amazon, eBay)", desc: "" },
       ],
     },
     {
       id: "03",
-      title: "Marketing",
+      title: "CRM & Automation",
       subServices: [
-        {
-          id: "01",
-          title: "Social Media",
-          desc: "Creative strategies, impactful storytelling, and adaptive journeys.",
-        },
+        { id: "01", title: "Email Marketing", desc: "" },
+        { id: "02", title: "Email Campaign Design", desc: "" },
+        { id: "03", title: "Newsletter Creation & Management", desc: "" },
+        { id: "04", title: "Automation Sequences", desc: "" },
+        { id: "05", title: "Customer Retention Strategies", desc: "" },
+        { id: "06", title: "List Building & Segmentation", desc: "" },
+      ],
+    },
+    {
+      id: "04",
+      title: "Audience Engagement Strategy",
+      subServices: [
+        { id: "01", title: "Social Media Marketing (SMO)", desc: "" },
         {
           id: "02",
-          title: "Engagement",
-          desc: "Strong social media engagement and user growth.",
+          title: "Instagram, Facebook & YouTube Marketing",
+          desc: "",
         },
+        { id: "03", title: "WhatsApp & Twitter Engagement", desc: "" },
+        { id: "04", title: "Social Strategy Development", desc: "" },
+        {
+          id: "05",
+          title: "Content Creation & Community Management",
+          desc: "",
+        },
+        { id: "06", title: "Channel Optimization", desc: "" },
+        { id: "07", title: "Social Analytics & Reporting", desc: "" },
+        { id: "08", title: "Influencer Marketing", desc: "" },
+        { id: "09", title: "Influencer Outreach & Collaboration", desc: "" },
+        { id: "10", title: "Campaign Strategy & Management", desc: "" },
+      ],
+    },
+    {
+      id: "05",
+      title: "Search Engine Optimization (SEO)",
+      subServices: [
+        { id: "01", title: "Search Engine Optimization (SEO)", desc: "" },
+        { id: "02", title: "Technical SEO Audits", desc: "" },
+        { id: "03", title: "On-Page SEO & Content Optimization", desc: "" },
+        { id: "04", title: "Off-Page SEO & Link Building", desc: "" },
+        { id: "05", title: "Local SEO for Businesses", desc: "" },
+        { id: "06", title: "Mobile & E-commerce SEO", desc: "" },
+        { id: "07", title: "Keyword Research & Competitor Analysis", desc: "" },
+      ],
+    },
+    {
+      id: "06",
+      title: "Content Marketing",
+      subServices: [
+        { id: "01", title: "Blog Writing & SEO Copy", desc: "" },
+        { id: "02", title: "Social Content & Captions", desc: "" },
+        { id: "03", title: "Video Scripts & Storytelling", desc: "" },
+        { id: "04", title: "Marketing Copywriting", desc: "" },
+        { id: "05", title: "Content Calendar Planning", desc: "" },
+      ],
+    },
+    {
+      id: "07",
+      title: "Analytics & Reporting",
+      subServices: [
+        { id: "01", title: "Google Analytics Setup", desc: "" },
+        { id: "02", title: "Performance Monitoring & CRO", desc: "" },
+        { id: "03", title: "Custom Dashboards & Reporting", desc: "" },
+        { id: "04", title: "ROI & Insight Reports", desc: "" },
       ],
     },
   ];
@@ -89,7 +142,7 @@ const Marketing = () => {
   return (
     <>
       <PortfolioHeader />
-      <AllServices activeService="Digital Marketing"/>
+      <AllServices activeService="Digital Marketing" />
 
       <div className="container mx-auto mt-24 px-10">
         <div className="border-b-2 border-[#7e7d7d] mt-15 opacity-15"></div>
