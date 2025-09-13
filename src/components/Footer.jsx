@@ -10,7 +10,7 @@ export function Footer() {
         <div className="flex justify-between items-center ">
           <div className="w-[162px] h-[162px] -top-[26px] -left-3.5 rounded-[81px] absolute bg-[#8752ff] blur-[100px]" />
           <div className="w-[148px] h-[87px] top-[533px] right-0 rounded-[74px/43.5px] absolute bg-[#8752ff] blur-[100px]" />
-          <p className="font-[jost] font-medium text-[45px] leading-[60px]">
+          <p className="font-jost font-medium text-[45px] leading-[60px]">
             Start Earlier, Grow Faster <br /> Without Hidden Costs.
           </p>
           <div className="w-full md:w-1/2 lg:w-1/3 flex justify-end items-start space-x-5 font-jost ">
@@ -35,7 +35,7 @@ export function Footer() {
                   INFOGENTECH
                 </p>
               </a>
-              <p className="text-gray-400 text-sm mb-4">
+              <p className="text-gray-400 text-xl mb-4 font-jost font-medium">
                 Infogentech delivers smart digital solutions that move with the
                 times, crafted for every generation, inspired by change. We
                 focus on achieving real, measurable results, keeping up with the
@@ -45,7 +45,7 @@ export function Footer() {
                 For Infogentech Queries:
                 <br />
                 <p className="space-x-3">
-                  <a href="mailto:info@infogentech.com">info@infogentech.com</a>{" "}
+                  <a href="mailto:info@infogentech.com">info@infogentech.com</a>
                   <span>|</span> <span>9999999999</span>
                 </p>
               </div>

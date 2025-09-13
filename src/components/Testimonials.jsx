@@ -72,7 +72,7 @@ export default function Testimonials() {
                     />
 
                     <div>
-                      <h4 className="font-[jost] text-2xl text-[#C2C4C8]">
+                      <h4 className="font-jost text-2xl text-[#C2C4C8]">
                         {review.name}
                       </h4>
                       <p className="text-sm text-[#C2C4C8] mt-1.5">

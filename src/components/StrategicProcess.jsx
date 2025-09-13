@@ -30,7 +30,7 @@ const strategicItems = [
   {
     image: "/assist/img/ServiceBg.png",
     icon: "Launch",
-    text: "Launch &Continued Support",
+    text: "Launch & Continued Support",
   },
 ];
 export default function StrategicProcess() {
@@ -65,7 +65,7 @@ export default function StrategicProcess() {
             <div className="absolute left-6 flex items-center justify-center">
               <Icons name={item.icon} />
             </div>
-            <p className="font-[jost]  text-[20px] leading-[120%] tracking-[0.03em]">
+            <p className="font-jost  text-[20px] leading-[120%] tracking-[0.03em]">
               {item.text}
             </p>
           </div>
