@@ -97,7 +97,7 @@ const Development = () => {
         { id: "04", title: "Node.js Development", desc: "" },
         { id: "05", title: "React Development", desc: "" },
         { id: "06", title: "Laravel Development", desc: "" },
-        { id: "06", title: "No-Code Development", desc: "" },
+        { id: "07", title: "No-Code Development", desc: "" },
       ],
     },
   ];
