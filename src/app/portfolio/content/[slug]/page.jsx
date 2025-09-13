@@ -4,7 +4,6 @@ import Image from "next/image";
 import SubscribeContact from "@/components/SubscribeContact";
 import PortfolioHeader from "@/components/PortfolioHeader";
 import PortfolioServices from "@/components/PortfolioServices";
-import Link from "next/link";
 import { useState } from "react";
 
 const SlugPage = () => {

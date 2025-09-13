@@ -12,5 +12,19 @@
     "slug": "dry-cleaning-service",
     "image": "/assist/portfolio/design/LaraCleanCasestudy.png",
     "subImage": "/assist/portfolio/design/dryCleaning.webp"
+  },
+    {
+    "id": 3,
+    "title": "Madirakshi app",
+    "slug": "madirakshi-app",
+    "image": "/assist/portfolio/design/MadirakshiStudycase.png",
+     "subImage": "/assist/portfolio/design/madrirakshi.png"
+  },
+  {
+    "id": 4,
+    "title": "Avarta Jewellery",
+    "slug": "Avarta-jewellery",
+    "image": "/assist/portfolio/design/AvartaJewelleryCaseStudy.png",
+    "subImage": "/assist/portfolio/design/avartajewellery.png"
   }
 ]

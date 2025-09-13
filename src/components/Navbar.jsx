@@ -84,7 +84,7 @@ export function Navbar() {
             type: "spring",
             stiffness: 150,
           }}
-          className="fixed top-2 left-1/2 -translate-x-1/2 z-50 w-[90%] flex items-center justify-between border rounded-xl bg-white/10 backdrop-blur-lg shadow-xl px-6 py-4 font-jost font-medium text-lg leading-[24px]"
+          className="fixed top-2 left-1/2 -translate-x-1/2 z-50  flex items-center justify-between border container  rounded-xl bg-white/10 backdrop-blur-lg shadow-xl px-6 py-4 font-jost font-medium text-lg leading-[24px]"
         >
           <div className="flex items-center gap-10 justify-between w-full">
             <Link href="/" className="flex items-center gap-2">

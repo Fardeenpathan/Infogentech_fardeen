@@ -137,7 +137,7 @@ export function Footer() {
                   </li>
                   <li>
                     <Link
-                      href="/services/marketing"
+                      href="/services/design"
                       className="text-gray-400 hover:text-white"
                     >
                       Branding
@@ -153,7 +153,7 @@ export function Footer() {
                   </li>
                   <li>
                     <Link
-                      href="/services/design"
+                      href="/services/content"
                       className="text-gray-400 hover:text-white "
                     >
                       Video & Photo

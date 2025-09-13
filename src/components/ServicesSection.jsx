@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef} from "react";
 import { useInView } from "./useInView";
 import Image from "next/image";
 import TopicHeader from "./TopicHeader";
