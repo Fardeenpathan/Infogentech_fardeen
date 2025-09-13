@@ -45,7 +45,7 @@ const contentMap = {
       title: (
         <>
           API Integration & Performance Optimization for
-          <span className="text-[#A855F7]">Soouqna Platform</span>
+          <span className="text-[#A855F7]"> Soouqna Platform</span>
         </>
       ),
       desc: "Soouqna, a growing e-commerce platform, partnered with Zebra to enhance logistics and delivery. API connectivity enabled seamless barcode scanning, better printer efficiency, and improved operational accuracy for faster, more reliable customer service.",
@@ -163,7 +163,7 @@ const contentMap = {
       title: (
         <>
           BookPremiumFare.com Driving Travel
-          <span className="text-[#A855F7]">Website Growth </span>
+          <span className="text-[#A855F7]"> Website Growth </span>
         </>
       ),
       desc: "BookPremiumFare.com is a travel booking platform offering premium and discounted airfares. It offers convenient booking, up-to-date airfare, and secure checkout, and draws organic traffic.",
@@ -246,28 +246,30 @@ export default function OurPortfolio() {
       </div>
       <div className="px-4 pt-4 rounded-lg border-b-0 bg-[linear-gradient(180deg,#8752FF_0%,#513199_38.59%)] min-h-[682px] overflow-hidden">
         <div className="w-full h-full bg-black rounded-lg p-6 grid grid-cols-2 gap-4 overflow-hidden relative">
+          
           <div className="ml-6.5 transition-all duration-500 ease-in-out flex flex-col justify-between mb-6">
-            <div>
-              <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3">
                 <Icons name="DotCircle" />
                 <p className="font-jost font-medium text-sm leading-6 align-middle">
                   Why Enjoy alone?
                 </p>
               </div>
-              <p className="font-jost font-semibold md:text-5xl leading-[150%] capitalize mt-4.5 pr-20">
-                {currentSlide.title}
+              <p className="font-jost font-semibold md:text-5xl leading-[150%] capitalize  pr-20">
+                {currentSlide?.title}
               </p>
-              <div className="float-right relative -top-10 mr-10">
+            <div>
+              
+              <div className="float-right relative -top-20">
                 <Icons name="ArrowDirection" />
                 <div className="w-28 flex justify-end">
                   <Icons name="PaperPlane" />
                 </div>
               </div>
-              <p className="font-kumbh-sans font-medium text-[20px] leading-[150%] align-middle text-[#73737F] mt-19 mr-10">
-                {currentSlide.desc}
+              <p className="font-kumbh-sans font-medium text-lg leading-[150%] align-middle text-[#73737F] mr-10">
+                {currentSlide?.desc}
               </p>
-              <ul className="flex flex-col gap-2 text-[#73737F] leading-[150%] text-[20px] font-medium pt-4.5">
-                {currentSlide.points.map((point, idx) => (
+              <ul className="flex flex-col gap-2 text-[#73737F] leading-[150%] text-[16px] font-medium pt-4.5">
+                {currentSlide?.points.map((point, idx) => (
                   <li key={idx} className="flex gap-2.5 items-center">
                     <Icons name="LiIcon" />
                     {point}
@@ -275,7 +277,7 @@ export default function OurPortfolio() {
                 ))}
               </ul>
             </div>
-            <div className="flex gap-x-10 items-center">
+            <div className="flex gap-x-10 items-center mt-10">
               <DotIndicators
                 slides={slides}
                 currentIndex={subIndex}
@@ -303,12 +305,13 @@ export default function OurPortfolio() {
           </div>
 
           <div className="px-2 pt-2 rounded-lg border-b-0 bg-[linear-gradient(180deg,#8752FF_0%,#513199_38.59%)] mt-34 rotate-[-5.03deg] shadow-[7px_-4px_108px_-43px_#8955FF] relative -right-5 transition-all duration-500 ease-in-out">
-            <div className="w-full min-h-[580px] bg-black rounded-xl flex justify-between overflow-hidden">
+            <div className="w-full min-h-[580px] bg-black rounded-xl flex justify-between overflow-hidden h-full">
               <Image
                 src={currentSlide.image}
                 alt="valueImg"
                 width={800}
                 height={500}
+                 objectFit="cover"
                 className="object-cover rounded-xl"
               />
             </div>

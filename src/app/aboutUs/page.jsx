@@ -55,7 +55,7 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-      <div className="mt-96 xl:mt-60">
+      <div className="mt-96 xl:mt-60 px-30">
         <MissionAbout />
       </div>
       <MidHeader
