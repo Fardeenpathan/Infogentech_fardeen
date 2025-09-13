@@ -49,7 +49,7 @@ export default function LatestBlogs() {
         <Icons name="Arrow" width={62} height={28} />
       </a>
       <div className="relative flex flex-col items-center justify-center">
-        <div className="flex items-center justify-center gap-12">
+        <div className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-12">
           {blogData.map((blog) => (
             <HomeBlogCardsd key={blog.id} blog={blog} />
           ))}
