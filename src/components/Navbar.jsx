@@ -47,8 +47,30 @@ export function Navbar() {
               </Link>
             </div>
             <div className="flex flex-row space-x-12.5 py-4.5 px-12.5 text-lg font-Jost">
-              {/* <ServicesDropdown /> */}
-              <Link href="/portfolio/design" className={linkClasses("/portfolio/design")}>
+              <div class="relative group">
+                <button class=" flex items-center justify-center cursor-pointer">
+                  Products
+                  <svg
+                    class="ml-1 h-5 w-5"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+                <div class="absolute left-0 max-w-6xl rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 transform ">
+                  <ServicesDropdown />
+                </div>
+              </div>
+              <Link
+                href="/portfolio/design"
+                className={linkClasses("/portfolio/design")}
+              >
                 Portfolio
               </Link>
             </div>
@@ -94,7 +116,10 @@ export function Navbar() {
               </p>
             </Link>
             <ServicesDropdown />
-            <Link href={`/portfolio/design`} className={linkClasses("/portfolio/design")}>
+            <Link
+              href={`/portfolio/design`}
+              className={linkClasses("/portfolio/design")}
+            >
               Portfolio
             </Link>
             <Link href="/blogs" className={linkClasses("/blogs")}>
