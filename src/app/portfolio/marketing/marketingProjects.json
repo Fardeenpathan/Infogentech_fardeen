@@ -3,28 +3,28 @@
     "id": 1,
     "title": "BookPremiumFare Transforming Online Travel Booking",
     "slug": "BookPremiumFare-Transforming-Online-Travel-Booking",
-    "image": "/assist/portfolio/design/BookpremiumfareCase.png",
-     "subImage": "/assist/portfolio/design/bookPremiumFare.png"
+    "image": "/assist/portfolio/marketing/BookpremiumfareCase.png",
+     "subImage": "/assist/portfolio/marketing/bookPremiumFare.png"
   },
   {
     "id": 2,
     "title": "Dry Cleaning service",
     "slug": "dry-cleaning-service",
-    "image": "/assist/portfolio/design/LaraCleanCasestudy.png",
-    "subImage": "/assist/portfolio/design/dryCleaning.webp"
+    "image": "/assist/portfolio/marketing/LaraCleanCasestudy.png",
+    "subImage": "/assist/portfolio/marketing/dryCleaning.webp"
   },
     {
     "id": 3,
     "title": "Madirakshi app",
     "slug": "madirakshi-app",
-    "image": "/assist/portfolio/design/MadirakshiStudycase.png",
-     "subImage": "/assist/portfolio/design/madrirakshi.png"
+    "image": "/assist/portfolio/marketing/MadirakshiStudycase.png",
+     "subImage": "/assist/portfolio/marketing/madrirakshi.png"
   },
   {
     "id": 4,
     "title": "Avarta Jewellery",
     "slug": "Avarta-jewellery",
-    "image": "/assist/portfolio/design/AvartaJewelleryCaseStudy.png",
-    "subImage": "/assist/portfolio/design/avartajewellery.png"
+    "image": "/assist/portfolio/marketing/AvartaJewelleryCaseStudy.png",
+    "subImage": "/assist/portfolio/marketing/avartajewellery.png"
   }
 ]

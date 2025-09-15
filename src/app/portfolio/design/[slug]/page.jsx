@@ -5,11 +5,25 @@ import SubscribeContact from "@/components/SubscribeContact";
 import PortfolioHeader from "@/components/PortfolioHeader";
 import PortfolioServices from "@/components/PortfolioServices";
 import ShinyButton from "@/components/ui/ShinyButton";
-import { useState } from "react";
+import { useState,useEffect } from "react";
+import designProjects from "../designProjects.json";
+import { useParams} from 'next/navigation';
+import Loader from "@/components/loader/Loader";
 
 const SlugPage = () => {
+  const { slug } = useParams();
+  const [project, setProject] = useState(null);
   const [activeService, setActiveService] = useState("Design");
   const [expanded, setExpanded] = useState(false);
+
+  useEffect(() => {
+    const foundProject = designProjects.find((project) => project.slug === slug);
+    setProject(foundProject);
+  }, [slug]);
+
+  if (!project) {
+    return <Loader/>;
+  }
 
   return (
     <>
@@ -28,7 +42,7 @@ const SlugPage = () => {
               }`}
             >
               <Image
-                src="/assist/portfolio/design/BookpremiumfareCase.png"
+                src={project.image}
                 alt="Blog"
                 width={1400}
                 height={460}
@@ -47,7 +61,7 @@ const SlugPage = () => {
             </div>
             <div className="mx-5 mt-6 font-jost">
               <p className=" font-normal text-[32px] leading-[28px]">
-                Green House Gardening Landing Page
+                {project.title}
               </p>
             </div>
           </div>

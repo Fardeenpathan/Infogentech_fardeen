@@ -6,23 +6,10 @@ import Image from "next/image";
 import Icons from "@/components/ui/Icon";
 import Link from "next/link";
 import { useState } from "react";
+import designProjects from "./designProjects.json";
 
 const Design = () => {
   const [activeService, setActiveService] = useState("Design");
-  const designProjects = [
-    {
-      id: 1,
-      title: "BookPremiumFare Transforming Online Travel Booking",
-      slug: "BookPremiumFare-Transforming-Online-Travel-Booking",
-      image: "/assist/portfolio/design/bookPremiumFare.png",
-    },
-    {
-      id: 2,
-      title: "Dry Cleaning service",
-      slug: "dry-cleaning-service",
-      image: "/assist/portfolio/design/dryCleaning.webp",
-    },
-  ];
   return (
     <>
       <PortfolioHeader />
