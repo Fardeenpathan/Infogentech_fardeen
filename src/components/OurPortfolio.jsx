@@ -19,7 +19,7 @@ const contentMap = {
         "Customization of WordPress using Elementor, styling of the theme, and integration of plugins.",
         "The use of custom typography, colors, and visual hierarchy ensures the brand identity is consistent.",
       ],
-      image: "/assist/img/DesignImg.png",
+      image: "/assist/img/homePortfolio/laraClean.png",
     },
     {
       id: "design-2",
@@ -54,7 +54,7 @@ const contentMap = {
         "Smart Search: Enabled location, QR & image-based product discovery.",
         "Faster Performance: Optimized backend for speed & stability.",
       ],
-      image: "/assist/img/homeportfolio/soupana.png",
+      image: "/assist/img/homeportfolio/soouqna.png",
     },
     {
       id: "dev-2",
@@ -70,7 +70,7 @@ const contentMap = {
         "Modern UI: Designed clean, user-friendly screens with consistent style.",
         "Smooth Workflows: Built booking, orders, and vendor task flows for easy planning.",
       ],
-      image: "/assist/img/homePortfolio/shaadi.png",
+      image: "/assist/img/homeportfolio/shaadi.png",
     },
   ],
 
@@ -111,7 +111,7 @@ const contentMap = {
       id: "dm-3",
       title: (
         <>
-          @ananyakhurana_30 A brand-ready
+          @ananyakhurana_30
           <span className="text-[#A855F7]"> Instagram profile</span>
         </>
       ),

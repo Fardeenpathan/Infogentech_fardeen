@@ -47,8 +47,8 @@ export function Navbar() {
               </Link>
             </div>
             <div className="flex flex-row space-x-12.5 py-4.5 px-12.5 text-lg font-Jost">
-              <ServicesDropdown />
-              <Link href="/portfolio" className={linkClasses("/portfolio")}>
+              {/* <ServicesDropdown /> */}
+              <Link href="/portfolio/design" className={linkClasses("/portfolio/design")}>
                 Portfolio
               </Link>
             </div>
@@ -94,7 +94,7 @@ export function Navbar() {
               </p>
             </Link>
             <ServicesDropdown />
-            <Link href="/portfolio" className={linkClasses("/portfolio")}>
+            <Link href={`/portfolio/design`} className={linkClasses("/portfolio/design")}>
               Portfolio
             </Link>
             <Link href="/blogs" className={linkClasses("/blogs")}>
