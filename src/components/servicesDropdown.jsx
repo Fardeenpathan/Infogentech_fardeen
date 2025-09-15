@@ -160,7 +160,7 @@ export function ServicesDropdown() {
                 }`}
               >
                 <div className="font-medium text-2xl xl:text-lg">{item.label}</div>
-                <div className="justify-center font-['Jost'] leading-6 font-light xl:text-sm">
+                <div className="justify-center font-jost leading-6 font-light xl:text-sm">
                   {item.description}
                 </div>
               </div>

@@ -15,10 +15,10 @@ export function Footer() {
           </p>
           <div className="w-full md:w-1/2 lg:w-1/3 flex justify-end items-start space-x-5 font-jost ">
             <Link
-              href="/contactUs"
+              href="/portfolio"
               className="bg-white text-black  py-5 px-12.5 rounded-[10px] "
             >
-              Get Started
+             View Portfolio
             </Link>
             <Link href="/contactUs">
               <Button text="Contact Us" />
