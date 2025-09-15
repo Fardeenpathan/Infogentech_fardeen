@@ -47,7 +47,7 @@ export function Navbar() {
               </Link>
             </div>
             <div className="flex flex-row space-x-12.5 py-4.5 px-12.5 text-lg font-Jost">
-              <ServicesDropdown />  
+              <ServicesDropdown />
               <Link href="/portfolio" className={linkClasses("/portfolio")}>
                 Portfolio
               </Link>
@@ -75,16 +75,16 @@ export function Navbar() {
       {scrolled && (
         <motion.nav
           key="scrolled-navbar"
-          initial={{ opacity: 0, y: -60, scale: 0.95, filter: "blur(50px)" }}
-          animate={{ opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }}
-          exit={{ opacity: 0, y: -60, scale: 0.9 }}
+          initial={{ opacity: 0, y: -60, filter: "blur(50px)" }}
+          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          exit={{ opacity: 0, y: -60 }}
           transition={{
             duration: 0.25,
             ease: "easeOut",
             type: "spring",
             stiffness: 150,
           }}
-          className="fixed top-2 left-1/2 -translate-x-1/2 z-50  flex items-center justify-between border container  rounded-xl bg-white/10 backdrop-blur-lg shadow-xl px-6 py-4 font-jost font-medium text-lg leading-[24px] mx-auto"
+          className="fixed top-2 left-1/2 -translate-x-1/2 z-50 flex items-center justify-between border container rounded-xl bg-white/10 backdrop-blur-lg shadow-xl px-6 py-4 font-jost font-medium text-lg leading-[24px] mx-auto"
         >
           <div className="flex items-center gap-10 justify-between w-full">
             <Link href="/" className="flex items-center gap-2">

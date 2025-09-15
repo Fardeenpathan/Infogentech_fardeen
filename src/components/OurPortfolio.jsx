@@ -35,7 +35,7 @@ const contentMap = {
         "Storyboarding & Design: Used maps, archival images, animated timelines, historical palettes & typography.",
         "Video Production: Motion graphics, character illustrations, cinematic transitions, narration & score.",
       ],
-      image: "/assist/img/DesignImg.png",
+      image: "/assist/img/homePortfolio/britishRaj.png",
     },
   ],
 
@@ -44,8 +44,8 @@ const contentMap = {
       id: "dev-1",
       title: (
         <>
-          API Integration & Performance Optimization for
-          <span className="text-[#A855F7]"> Soouqna Platform</span>
+          API Integration
+          <span className="text-[#A855F7]"> Performance Optimization</span>
         </>
       ),
       desc: "Soouqna, a growing e-commerce platform, partnered with Zebra to enhance logistics and delivery. API connectivity enabled seamless barcode scanning, better printer efficiency, and improved operational accuracy for faster, more reliable customer service.",
@@ -54,7 +54,7 @@ const contentMap = {
         "Smart Search: Enabled location, QR & image-based product discovery.",
         "Faster Performance: Optimized backend for speed & stability.",
       ],
-      image: "/assist/img/DesignImg.png",
+      image: "/assist/img/homeportfolio/soupana.png",
     },
     {
       id: "dev-2",
@@ -70,7 +70,7 @@ const contentMap = {
         "Modern UI: Designed clean, user-friendly screens with consistent style.",
         "Smooth Workflows: Built booking, orders, and vendor task flows for easy planning.",
       ],
-      image: "/assist/img/DesignImg.png",
+      image: "/assist/img/homePortfolio/shaadi.png",
     },
   ],
 
@@ -307,7 +307,7 @@ export default function OurPortfolio() {
           <div className="px-2 pt-2 rounded-lg border-b-0 bg-[linear-gradient(180deg,#8752FF_0%,#513199_38.59%)] mt-34 rotate-[-5.03deg] shadow-[7px_-4px_108px_-43px_#8955FF] relative -right-5 transition-all duration-500 ease-in-out">
             <div className="w-full min-h-[580px] bg-black rounded-xl flex justify-between overflow-hidden h-full">
               <Image
-                src={currentSlide.image}
+                src={currentSlide?.image}
                 alt="valueImg"
                 width={800}
                 height={500}

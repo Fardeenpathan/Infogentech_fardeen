@@ -9,80 +9,113 @@ import SubServiceCard from "@/components/SubServiceCard";
 
 const Design = () => {
   const categories = [
-    {
-      id: "01",
-      title: "Graphic Design",
-      subServices: [
-        {
-          id: "01",
-          title: "Print and Digital Graphic Design",
-          desc: "Engaging and impactful content strategies.",
-        },
-        {
-          id: "02",
-          title: "Presentation Design",
-          desc: "Narrative-driven approaches for brands.",
-        },
-        { id: "03", title: " Ad Creative Design", desc: "" },
-        { id: "04", title: "Illustrations & Iconography", desc: "" },
-        { id: "05", title: "Print & Packaging Design", desc: "" },
-        { id: "06", title: "Product Sheets & One Pagers", desc: "" },
-        { id: "07", title: "Corporate Reports", desc: "" },
-      ],
-    },
-    {
-      id: "02",
-      title: "UI/UX Design",
-      subServices: [
-        {
-          id: "01",
-          title: "UI/UX Design & Wireframing",
-          desc: "Modern Digital Design, Bold Print Design, and User-Focused UX/UI.",
-        },
-        {
-          id: "02",
-          title: "Mobile-first Responsive Design",
-          desc: "Consistent branding solutions for all platforms.",
-        },
-        { id: "03", title: " Visual Design Systems & Style Guides", desc: "" },
-        {
-          id: "04",
-          title: "Website Design (Desktop, Mobile, eCommerce)",
-          desc: "",
-        },
-        { id: "05", title: "Landing Page Design", desc: "" },
-      ],
-    },
-    {
-      id: "03",
-      title: "Branding",
-      subServices: [
-        {
-          id: "01",
-          title: "Corporate Identity Design",
-          desc: "Creative strategies, impactful storytelling, and adaptive journeys.",
-        },
-        {
-          id: "02",
-          title: "Brand Guidelines",
-          desc: "Strong social media engagement and user growth.",
-        },
-        { id: "03", title: "Brand Identity Messaging", desc: "" },
-        { id: "04", title: "Rebranding Services", desc: "" },
-      ],
-    },
-    {
-      id: "04",
-      title: "Logo Design",
-      subServices: [
-        {
-          id: "01",
-          title: "Corporate Identity Design",
-          desc: "Creative strategies, impactful storytelling, and adaptive journeys.",
-        },
-      ],
-    },
-  ];
+  {
+    id: "01",
+    title: "Graphic Design",
+    subServices: [
+      {
+        id: "01",
+        title: "Print and Digital Graphic Design",
+        desc: "Creating impactful visual content across media.",
+      },
+      {
+        id: "02",
+        title: "Presentation Design",
+        desc: "Crafting narrative-driven brand presentations.",
+      },
+      {
+        id: "03",
+        title: "Ad Creative Design",
+        desc: "Designing engaging ads that capture attention.",
+      },
+      {
+        id: "04",
+        title: "Illustrations & Iconography",
+        desc: "Custom visuals to enhance storytelling.",
+      },
+      {
+        id: "05",
+        title: "Print & Packaging Design",
+        desc: "Innovative packaging and print solutions.",
+      },
+      {
+        id: "06",
+        title: "Product Sheets & One Pagers",
+        desc: "Clear and concise product communication.",
+      },
+      {
+        id: "07",
+        title: "Corporate Reports",
+        desc: "Professional, data-driven report designs.",
+      },
+    ],
+  },
+  {
+    id: "02",
+    title: "UI/UX Design",
+    subServices: [
+      {
+        id: "01",
+        title: "UI/UX Design & Wireframing",
+        desc: "Intuitive, user-focused digital experiences.",
+      },
+      {
+        id: "02",
+        title: "Mobile-first Responsive Design",
+        desc: "Seamless design across every device.",
+      },
+      {
+        id: "03",
+        title: "Visual Design Systems & Style Guides",
+        desc: "Consistent branding with clear design standards.",
+      },
+      {
+        id: "04",
+        title: "Website Design (Desktop, Mobile, eCommerce)",
+        desc: "Engaging, functional websites that convert.",
+      },
+      {
+        id: "05",
+        title: "Landing Page Design",
+        desc: "High-impact pages built to drive results.",
+      },
+    ],
+  },
+  {
+    id: "03",
+    title: "Branding",
+    subServices: [
+      {
+        id: "01",
+        title: "Corporate Identity Design",
+        desc: "Building strong, memorable brand identities.",
+      },
+      {
+        id: "02",
+        title: "Brand Guidelines",
+        desc: "Defining consistent rules for brand expression.",
+      },
+      {
+        id: "03",
+        title: "Brand Identity Messaging",
+        desc: "Clear communication of your brand’s voice.",
+      },
+      {
+        id: "04",
+        title: "Rebranding Services",
+        desc: "Transforming brands for modern relevance.",
+      },
+    ],
+  },
+  {
+    id: "04",
+    title: "Logo Design",
+    subServices: [
+      // Currently no sub-services, you can add if needed
+    ],
+  },
+];
+
   const [openCategory, setOpenCategory] = useState(categories[0].id);
 
   const toggleCategory = (id) => {

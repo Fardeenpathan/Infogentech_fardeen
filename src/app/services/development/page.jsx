@@ -8,99 +8,64 @@ import { useRef, useState } from "react";
 import SubServiceCard from "@/components/SubServiceCard";
 
 const Development = () => {
-  const categories = [
-    {
-      id: "01",
-      title: "Web & App Development",
-      subServices: [
-        { id: "01", title: "Website Development", desc: "" },
-        {
-          id: "02",
-          title: "Custom Websites & Business Landing Pages",
-          desc: "",
-        },
-        { id: "03", title: "E-commerce Platforms & Online Stores", desc: "" },
-        { id: "04", title: "Personal Portfolios & Showcase Sites", desc: "" },
-        { id: "05", title: "Application Development", desc: "" },
-        { id: "06", title: "Web-based Application Development", desc: "" },
-        { id: "07", title: "Mobile App Development (iOS & Android)", desc: "" },
-        { id: "08", title: "Progressive Web Applications (PWA)", desc: "" },
-        { id: "09", title: "Cross-platform Mobile Solutions", desc: "" },
-        { id: "10", title: "Portal & Dashboard Development", desc: "" },
-        { id: "11", title: "Enterprise App Development", desc: "" },
-        { id: "12", title: "Software Development & SaaS", desc: "" },
-        { id: "13", title: "Custom Software Development", desc: "" },
-        {
-          id: "14",
-          title: "SaaS Platform Setup, Deployment & Support",
-          desc: "",
-        },
-        { id: "15", title: "Scalability & Performance Optimization", desc: "" },
-        { id: "16", title: "Application Maintenance", desc: "" },
-      ],
-    },
-    {
-      id: "02",
-      title: "CMS Development",
-      subServices: [
-        { id: "01", title: "WordPress (Custom Themes & Plugins)", desc: "" },
-        {
-          id: "02",
-          title: "Shopify Store Development & Customization",
-          desc: "",
-        },
-        { id: "03", title: "Joomla & WooCommerce Solutions", desc: "" },
-        { id: "04", title: "Custom CMS Development", desc: "" },
-        { id: "05", title: "LMS Development", desc: "" },
-      ],
-    },
-    {
-      id: "03",
-      title: "Custom Integrations",
-      subServices: [
-        {
-          id: "01",
-          title: "Database Design & API Integration",
-          desc: "Creative strategies, impactful storytelling, and adaptive journeys.",
-        },
-        {
-          id: "02",
-          title: "System Integration & Custom Software",
-          desc: "Strong social media engagement and user growth.",
-        },
-        {
-          id: "03",
-          title: "CRM Integration",
-          desc: "Strong social media engagement and user growth.",
-        },
-      ],
-    },
-    {
-      id: "04",
-      title: "AI & Cloud Solutions",
-      subServices: [
-        {
-          id: "01",
-          title: "Advanced AI Development",
-          desc: "Creative strategies, impactful storytelling, and adaptive journeys.",
-        },
-        {
-          id: "02",
-          title: "Cloud Hosting Services",
-          desc: "Strong social media engagement and user growth.",
-        },
-        {
-          id: "03",
-          title: "Advanced Solutions",
-          desc: "Strong social media engagement and user growth.",
-        },
-        { id: "04", title: "Node.js Development", desc: "" },
-        { id: "05", title: "React Development", desc: "" },
-        { id: "06", title: "Laravel Development", desc: "" },
-        { id: "07", title: "No-Code Development", desc: "" },
-      ],
-    },
-  ];
+ const categories = [
+  {
+    id: "01",
+    title: "Web & App Development",
+    subServices: [
+      { id: "01", title: "Website Development", desc: "Scalable websites built for performance." },
+      { id: "02", title: "Custom Websites & Business Landing Pages", desc: "Tailored solutions for unique business needs." },
+      { id: "03", title: "E-commerce Platforms & Online Stores", desc: "Powerful online shopping experiences." },
+      { id: "04", title: "Personal Portfolios & Showcase Sites", desc: "Sleek designs to highlight your work." },
+      { id: "05", title: "Application Development", desc: "End-to-end custom software solutions." },
+      { id: "06", title: "Web-based Application Development", desc: "Secure and scalable web apps." },
+      { id: "07", title: "Mobile App Development (iOS & Android)", desc: "Engaging apps across platforms." },
+      { id: "08", title: "Progressive Web Applications (PWA)", desc: "Modern, app-like web experiences." },
+      { id: "09", title: "Cross-platform Mobile Solutions", desc: "Apps that work seamlessly across devices." },
+      { id: "10", title: "Portal & Dashboard Development", desc: "Smart dashboards for data-driven insights." },
+      { id: "11", title: "Enterprise App Development", desc: "Scalable apps tailored for enterprises." },
+      { id: "12", title: "Software Development & SaaS", desc: "Cloud-based software for modern businesses." },
+      { id: "13", title: "Custom Software Development", desc: "Bespoke solutions for unique challenges." },
+      { id: "14", title: "SaaS Platform Setup, Deployment & Support", desc: "End-to-end SaaS implementation." },
+      { id: "15", title: "Scalability & Performance Optimization", desc: "Faster, more efficient applications." },
+      { id: "16", title: "Application Maintenance", desc: "Reliable support and ongoing improvements." },
+    ],
+  },
+  {
+    id: "02",
+    title: "CMS Development",
+    subServices: [
+      { id: "01", title: "WordPress (Custom Themes & Plugins)", desc: "Custom WordPress solutions." },
+      { id: "02", title: "Shopify Store Development & Customization", desc: "Scalable Shopify stores." },
+      { id: "03", title: "Joomla & WooCommerce Solutions", desc: "Smart eCommerce solutions." },
+      { id: "04", title: "Custom CMS Development", desc: "Tailored CMS platforms." },
+      { id: "05", title: "LMS Development", desc: "Powerful online learning systems." },
+    ],
+  },
+  {
+    id: "03",
+    title: "Custom Integrations",
+    subServices: [
+      { id: "01", title: "Database Design & API Integration", desc: "Seamless data connectivity." },
+      { id: "02", title: "System Integration & Custom Software", desc: "Unified custom solutions." },
+      { id: "03", title: "CRM Integration", desc: "Smarter customer management." },
+    ],
+  },
+  {
+    id: "04",
+    title: "AI & Cloud Solutions",
+    subServices: [
+      { id: "01", title: "Advanced AI Development", desc: "Smart AI solutions." },
+      { id: "02", title: "Cloud Hosting Services", desc: "Secure cloud hosting." },
+      { id: "03", title: "Advanced Solutions", desc: "Innovative tech services." },
+      { id: "04", title: "Node.js Development", desc: "Fast Node.js apps." },
+      { id: "05", title: "React Development", desc: "Dynamic React apps." },
+      { id: "06", title: "Laravel Development", desc: "Powerful Laravel sites." },
+      { id: "07", title: "No-Code Development", desc: "Build without coding." },
+    ],
+  },
+];
+
   const [openCategory, setOpenCategory] = useState(categories[0].id);
 
   const toggleCategory = (id) => {
@@ -188,7 +153,6 @@ const Development = () => {
           ))}
         </div>
 
-        {/* Video Section */}
         <div className="mt-34 flex justify-center items-center flex-col relative">
           <div className="absolute -top-20">
             <Icons name="gradientServices" />
