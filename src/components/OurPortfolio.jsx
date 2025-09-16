@@ -306,14 +306,20 @@ export default function OurPortfolio() {
 
           <div className="px-2 pt-2 rounded-lg border-b-0 bg-[linear-gradient(180deg,#8752FF_0%,#513199_38.59%)] mt-34 rotate-[-5.03deg] shadow-[7px_-4px_108px_-43px_#8955FF] relative -right-5 transition-all duration-500 ease-in-out">
             <div className="w-full min-h-[580px] bg-black rounded-xl flex justify-between overflow-hidden h-full">
-              <Image
-                src={currentSlide?.image}
-                alt="valueImg"
-                width={800}
-                height={500}
-                 objectFit="cover"
-                className="object-cover rounded-xl"
-              />
+              {currentSlide?.image ? (
+                <Image
+                  src={currentSlide?.image}
+                  alt="valueImg"
+                  width={800}
+                  height={500}
+                  objectFit="cover"
+                  className="object-cover rounded-xl"
+                />
+              ) : (
+                <div className="w-full h-full flex items-center justify-center">
+                  No Image Available
+                </div>
+              )}
             </div>
           </div>
         </div>

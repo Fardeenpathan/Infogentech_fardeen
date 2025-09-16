@@ -17,7 +17,7 @@ const SubServiceCard = ({ subService }) => {
       </p>
       <a
         className="flex justify-end absolute right-5 bottom-[10px]"
-        href="contactUs"
+        href="/contactUs"
       >
         <Icons name="Arrow" width={40} height={20} />
       </a>

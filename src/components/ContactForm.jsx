@@ -42,14 +42,14 @@ const socialMedia = [
 const ContactForm = () => {
   const [isVerified, setIsVerified] = useState(true);
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phoneNumber: '',
-    productQuestion: '',
-    message: ''
+    name: "",
+    email: "",
+    phoneNumber: "",
+    productQuestion: "",
+    message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitMessage, setSubmitMessage] = useState('');
+  const [submitMessage, setSubmitMessage] = useState("");
 
   const handleCaptcha = (value) => {
     if (value) {
@@ -61,48 +61,55 @@ const ContactForm = () => {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!isVerified) {
-      setSubmitMessage('Please complete the reCAPTCHA verification.');
+      setSubmitMessage("Please complete the reCAPTCHA verification.");
       return;
     }
 
     setIsSubmitting(true);
-    setSubmitMessage('');
+    setSubmitMessage("");
 
     try {
-      const response = await fetch(`${config.api.baseUrl}${config.api.endpoints.contact}`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        `${config.api.baseUrl}${config.api.endpoints.contact}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       const result = await response.json();
 
       if (response.ok) {
-        setSubmitMessage('Message sent successfully! We will get back to you soon.');
+        setSubmitMessage(
+          "Message sent successfully! We will get back to you soon."
+        );
         setFormData({
-          name: '',
-          email: '',
-          phoneNumber: '',
-          productQuestion: '',
-          message: ''
+          name: "",
+          email: "",
+          phoneNumber: "",
+          productQuestion: "",
+          message: "",
         });
       } else {
-        setSubmitMessage(result.message || 'Failed to send message. Please try again.');
+        setSubmitMessage(
+          result.message || "Failed to send message. Please try again."
+        );
       }
     } catch (error) {
-      setSubmitMessage('Error sending message. Please try again later.');
-      console.error('Contact form error:', error);
+      setSubmitMessage("Error sending message. Please try again later.");
+      console.error("Contact form error:", error);
     } finally {
       setIsSubmitting(false);
     }
@@ -111,18 +118,16 @@ const ContactForm = () => {
     <div className="mt-35 container mx-auto overflow-hidden">
       <div className="flex justify-between gap-8">
         <div className="flex gap-10">
-
-          
           <div className="flex justify-center items-center flex-col">
-           <div className="relative w-12 h-12">
-          <img
-            src="/assist/video/pentagonVideo.gif"
-            alt="valueImg"
-            className=" w-full h-full object-cover"
-          />
-        </div>
+            <div className="relative w-12 h-12">
+              <img
+                src="/assist/video/pentagonVideo.gif"
+                alt="valueImg"
+                className=" w-full h-full object-cover"
+              />
+            </div>
 
-            <div className="w-0.5 h-[721px] rounded-full mt-4 bg-gradient-to-b from-purple-400 via-purple-500 to-purple-800 "></div>
+            <div className="w-0.5 h-[731px] rounded-full mt-4 bg-gradient-to-b from-purple-400 via-purple-500 to-purple-800"></div>
           </div>
         </div>
         <div className="w-full rounded-2xl">
@@ -178,8 +183,11 @@ const ContactForm = () => {
               <div className="w-[269px] h-[269px] bg-[#301F56] rounded-full absolute -bottom-25 -right-25 "></div>
               <div className="w-[138px] h-[138px] bg-[#48484880] rounded-full absolute bottom-13 right-13"></div>
             </div>
-            <div className="flex items-center justify-center p-6 w-full ">
-              <form className="w-full  text-white space-y-6" onSubmit={handleSubmit}>
+            <div className="flex items-center justify-center px-6 w-full relative">
+              <form
+                className="w-full  text-white space-y-6"
+                onSubmit={handleSubmit}
+              >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-[#E4E4E4] text-lg mb-2 font-jost font-light">
@@ -229,19 +237,34 @@ const ContactForm = () => {
                     <label className="block text-[#E4E4E4] text-lg mb-2 font-light">
                       Product Question
                     </label>
-                    <select 
+                    <select
                       name="productQuestion"
                       value={formData.productQuestion}
                       onChange={handleInputChange}
                       className="w-full  py-2  border-b-2 border-[#FFFFFF] bg-transparent  focus:outline-none focus:border-[#8752FF]"
                       required
                     >
-                      <option value="" className="bg-[#1C1B2D]">Select</option>
-                      <option value="General Inquiry" className="bg-[#1C1B2D]">General Inquiry</option>
-                      <option value="Technical Support" className="bg-[#1C1B2D]">Technical Support</option>
-                      <option value="Pricing" className="bg-[#1C1B2D]">Pricing</option>
-                      <option value="Partnership" className="bg-[#1C1B2D]">Partnership</option>
-                      <option value="Other" className="bg-[#1C1B2D]">Other</option>
+                      <option value="" className="bg-[#1C1B2D]">
+                        Select
+                      </option>
+                      <option value="General Inquiry" className="bg-[#1C1B2D]">
+                        General Inquiry
+                      </option>
+                      <option
+                        value="Technical Support"
+                        className="bg-[#1C1B2D]"
+                      >
+                        Technical Support
+                      </option>
+                      <option value="Pricing" className="bg-[#1C1B2D]">
+                        Pricing
+                      </option>
+                      <option value="Partnership" className="bg-[#1C1B2D]">
+                        Partnership
+                      </option>
+                      <option value="Other" className="bg-[#1C1B2D]">
+                        Other
+                      </option>
                     </select>
                   </div>
                 </div>
@@ -267,7 +290,13 @@ const ContactForm = () => {
                   onChange={handleCaptcha}
                 />
                 {submitMessage && (
-                  <div className={`text-sm ${submitMessage.includes('successfully') ? 'text-green-400' : 'text-red-400'}`}>
+                  <div
+                    className={`text-sm ${
+                      submitMessage.includes("successfully")
+                        ? "text-green-400"
+                        : "text-red-400"
+                    }`}
+                  >
                     {submitMessage}
                   </div>
                 )}
@@ -276,19 +305,22 @@ const ContactForm = () => {
                   disabled={!isVerified || isSubmitting}
                   className="text-[#6A27FF] mt-7.5"
                 >
-                  <GradientButton bg="bg-[#202037]" paddingX="px-12" paddingY="py-4.5">
-                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                  <GradientButton
+                    bg="bg-[#202037]"
+                    paddingX="px-12"
+                    paddingY="py-4.5"
+                  >
+                    {isSubmitting ? "Sending..." : "Send Message"}
                   </GradientButton>
                 </button>
-                
-                  <Image
+
+                <Image
                   src="/assist/img/ContactPlane.png"
                   alt="valueImg"
                   width={203}
                   height={85}
                   objectFit="cover"
-                  className="rotate-200 scale-y-[-1] absolute"
-                  style={{ left: '59%', transform: 'translateX(35%)' }}
+                  className="rotate-200 scale-y-[-1] absolute -bottom-2 left-1/3"
                 />
               </form>
             </div>
