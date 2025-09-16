@@ -5,9 +5,9 @@ import SubscribeContact from "@/components/SubscribeContact";
 import PortfolioHeader from "@/components/PortfolioHeader";
 import PortfolioServices from "@/components/PortfolioServices";
 import ShinyButton from "@/components/ui/ShinyButton";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import marketingProjects from "../marketingProjects.json";
-import { useParams} from 'next/navigation';
+import { useParams } from "next/navigation";
 import Loader from "@/components/loader/Loader";
 
 const SlugPage = () => {
@@ -17,12 +17,14 @@ const SlugPage = () => {
   const [expanded, setExpanded] = useState(false);
 
   useEffect(() => {
-    const foundProject = marketingProjects.find((project) => project.slug === slug);
+    const foundProject = marketingProjects.find(
+      (project) => project.slug === slug
+    );
     setProject(foundProject);
   }, [slug]);
 
   if (!project) {
-    return <Loader/>;
+    return <Loader />;
   }
 
   return (
@@ -52,17 +54,24 @@ const SlugPage = () => {
               />
             </div>
             <div className="mx-34 mt-10 font-jost text-center">
-              <ShinyButton
-                onClick={() => setExpanded((s) => !s)}
-              >
+              <ShinyButton onClick={() => setExpanded((s) => !s)}>
                 {expanded ? "Know less" : "Know more"}
                 <Icons name="Arrow" />
               </ShinyButton>
             </div>
             <div className="mx-5 mt-6 font-jost">
-              <p className=" font-normal text-[32px] leading-[28px]">
+              <p className="font-normal text-[32px] leading-[28px] font-jost">
                 {project.title}
               </p>
+              <p className="mt-4 text-xl leading-[28px] opacity-80 font-kumbh-sans">
+                {project.description}
+              </p>
+
+              <ul className="list-disc list-inside mt-4 space-y-2 text-lg leading-[24px] opacity-70 font-kumbh-sans">
+                {project.points.map((point, index) => (
+                  <li key={index}>{point}</li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>

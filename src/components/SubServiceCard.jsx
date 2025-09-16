@@ -4,7 +4,7 @@ import Icons from "@/components/ui/Icon";
 const SubServiceCard = ({ subService }) => {
   return (
     <div
-      className="shadow-[0px_0px_54px_24px_#1C1C38] p-5 rounded-2xl"
+      className="shadow-[0px_0px_54px_24px_#1C1C38] p-5 rounded-2xl relative min-h-80"
     >
       <span className="font-jost font-normal text-[32px] leading-[100%] tracking-[3%] opacity-10">
         {subService.id}
@@ -15,7 +15,10 @@ const SubServiceCard = ({ subService }) => {
       <p className="font-jost font-normal text-[16px] leading-[140%] tracking-[0.03em] capitalize mt-8 opacity-30 font-kumbh-sans">
         {subService.desc}
       </p>
-      <a className="flex justify-end mt-4" href="contactUs">
+      <a
+        className="flex justify-end absolute right-5 bottom-[10px]"
+        href="contactUs"
+      >
         <Icons name="Arrow" width={40} height={20} />
       </a>
     </div>
@@ -23,3 +26,4 @@ const SubServiceCard = ({ subService }) => {
 };
 
 export default SubServiceCard;
+

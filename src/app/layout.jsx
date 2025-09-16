@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="dark">
       <body>
-        {children}
+        <ClientLayoutControls>{children}</ClientLayoutControls>
       </body>
     </html>
   );

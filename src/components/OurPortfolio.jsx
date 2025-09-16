@@ -89,7 +89,7 @@ const contentMap = {
         "Content Strategy: Guide, FAQ, and career tips posting plans.",
         "Growth: Optimized bio, playlists, and highlights to increase engagement and course inquiries",
       ],
-      image: "/assist/img/DesignImg.png",
+      image: "/assist/img/homeportfolio/theexamques.png",
     },
     {
       id: "dm-2",
@@ -105,7 +105,7 @@ const contentMap = {
         "Growth & SEO: SEO, website optimization, and traffic and conversion campaigns.",
         "Customer Experience: Better satisfaction and loyalty towards 24/7 customer care and information-based optimization.",
       ],
-      image: "/assist/img/DesignImg.png",
+      image: "/assist/img/homeportfolio/airline.png",
     },
     {
       id: "dm-3",
@@ -121,7 +121,7 @@ const contentMap = {
         "Optimization: Made profile brand-ready with CTAs.s",
         "Growth: Increased engagement and brand inquiries.",
       ],
-      image: "/assist/img/DesignImg.png",
+      image: "/assist/img/homeportfolio/ananya.png",
     },
     {
       id: "dm-4",
@@ -137,7 +137,7 @@ const contentMap = {
         "Technical: Improved speed, mobile usability, and navigation.",
         "Growth: Tracked performance, increased clicks, and engagement.",
       ],
-      image: "/assist/img/DesignImg.png",
+      image: "/assist/img/homeportfolio/examStudy.png",
     },
   ],
 
@@ -156,7 +156,7 @@ const contentMap = {
         "Resource Creation: Development of study guides, practice documents, and articles with a focus on certification.",
         "Updating of Contents: Frequent updating of contents to keep up to date and relevant.",
       ],
-      image: "/assist/img/DesignImg.png",
+      image: "/assist/img/homeportfolio/certStudy.png",
     },
     {
       id: "content-2",
@@ -172,7 +172,7 @@ const contentMap = {
         "Blog & Guides: Composed travel tips, offers, and destination pieces.",
         "Content Updates: Updating content regularly to enhance relevance and search performance.",
       ],
-      image: "/assist/img/DesignImg.png",
+      image: "/assist/img/homeportfolio/Bookpremiumfare.png",
     },
   ],
 };

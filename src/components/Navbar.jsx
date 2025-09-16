@@ -49,7 +49,7 @@ export function Navbar() {
             <div className="flex flex-row space-x-12.5 py-4.5 px-12.5 text-lg font-Jost">
               <div className="relative group">
                 <button className=" flex items-center justify-center cursor-pointer">
-                  Products
+                  Services
                  <Icons name="Downarrow"/>
                 </button>
                 <div className="absolute left-0 max-w-6xl rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 transform ">
@@ -106,7 +106,7 @@ export function Navbar() {
             </Link>
              <div className="relative group">
                 <button className=" flex items-center justify-center cursor-pointer">
-                  Products
+                  Services
                  <Icons name="Downarrow"/>
                 </button>
                 <div className="absolute left-0 max-w-6xl rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 transform ">
