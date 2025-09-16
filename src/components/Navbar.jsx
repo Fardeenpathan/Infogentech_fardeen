@@ -12,6 +12,7 @@ export function Navbar() {
   const { scrollY } = useScroll();
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  const [isServicesHovered, setIsServicesHovered] = useState(false);
 
   useEffect(() => {
     return scrollY.on("change", (y) => {
@@ -25,6 +26,28 @@ export function Navbar() {
         ? "text-[#8752FF] font-semibold"
         : "text-white hover:text-[#8752FF]"
     }`;
+  const dropdownVariants = {
+    hidden: {
+      opacity: 0,
+      y: -10,
+      scale: 0.98, 
+      transition: {
+        duration: 0.2,
+        ease: "easeOut",
+      },
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        type: "spring",
+        stiffness: 300,
+        damping: 25,
+        duration: 0.3,
+      },
+    },
+  };
 
   return (
     <AnimatePresence mode="sync">
@@ -40,21 +63,36 @@ export function Navbar() {
           <div className="flex items-center border border-[#8E8E8E] rounded-md ">
             <div className="flex items-center pl-3.75 py-2.25 space-x-1.5">
               <Link href="/" className="flex items-center gap-1.5">
-                <Icons name="LogoFooter" /> 
+                <Icons name="LogoFooter" />
                 <p className="font-avalors text-[24px] leading-[32px] tracking-[3px] font-bold">
                   INFOGENTECH
                 </p>
               </Link>
             </div>
             <div className="flex flex-row space-x-12.5 py-4.5 px-12.5 text-lg font-Jost">
-              <div className="relative group">
+              <div
+                className="relative group"
+                onMouseEnter={() => setIsServicesHovered(true)}
+                onMouseLeave={() => setIsServicesHovered(false)}
+              >
                 <button className=" flex items-center justify-center cursor-pointer">
                   Services
-                 <Icons name="Downarrow"/>
+                  <Icons name="Downarrow" />
                 </button>
-                <div className="absolute left-0 max-w-6xl rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 transform ">
-                  <ServicesDropdown />
-                </div>
+                <AnimatePresence>
+                  {isServicesHovered && (
+                    <motion.div
+                      key="services-dropdown"
+                      variants={dropdownVariants}
+                      initial="hidden"
+                      animate="visible"
+                      exit="hidden"
+                      className="absolute left-0 max-w-6xl rounded-lg shadow-lg z-50 transform"
+                    >
+                      <ServicesDropdown />
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
               <Link
                 href="/portfolio/design"
@@ -104,15 +142,30 @@ export function Navbar() {
                 INFOGENTECH
               </p>
             </Link>
-             <div className="relative group">
-                <button className=" flex items-center justify-center cursor-pointer">
-                  Services
-                 <Icons name="Downarrow"/>
-                </button>
-                <div className="absolute left-0 max-w-6xl rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 transform ">
-                  <ServicesDropdown />
-                </div>
-              </div>
+            <div
+              className="relative group"
+              onMouseEnter={() => setIsServicesHovered(true)}
+              onMouseLeave={() => setIsServicesHovered(false)}
+            >
+              <button className=" flex items-center justify-center cursor-pointer">
+                Services
+                <Icons name="Downarrow" />
+              </button>
+              <AnimatePresence>
+                {isServicesHovered && (
+                  <motion.div
+                    key="services-dropdown"
+                    variants={dropdownVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="hidden"
+                    className="absolute left-0 max-w-6xl rounded-lg shadow-lg z-50 transform"
+                  >
+                    <ServicesDropdown />
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
             <Link
               href={`/portfolio/design`}
               className={linkClasses("/portfolio/design")}
