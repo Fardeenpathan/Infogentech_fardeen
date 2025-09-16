@@ -29,7 +29,7 @@ const AboutUs = () => {
             <p className="font-avalors font-normal text-[75px] leading-none  bg-[linear-gradient(91.32deg,_#6A27FF_-32.61%,_#FFFFFF_-19.98%,_#6A27FF_70.29%)] bg-clip-text text-transparent">
               About Us
             </p>
-            <p className="font-[Jost] font-medium text-[26px] xl:text-xl leading-[150%] align-middle mt-4 text-[#C9C9C9]">
+            <p className="font-jost font-medium text-[26px] xl:text-xl leading-[150%] align-middle mt-4 text-[#C9C9C9]">
               At Infogentech, our story began with a simple goal: helping
               businesses get noticed online. We saw how, in today’s world,
               people search for everything on the internet and if a company
@@ -41,7 +41,7 @@ const AboutUs = () => {
               with friendly support, professional guidance, and a money-back
               guarantee—because your success is what drives us every day.
             </p>
-            <div className="flex flex-row justify-between items-center font-[Jost] mt-10 mr-10 xl:mt-20">
+            <div className="flex flex-row justify-between items-center font-jost mt-10 mr-10 xl:mt-20">
               {stats.map((item, index) => (
                 <StatsItem
                   key={index}
@@ -55,7 +55,7 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-      <div className="mt-96 xl:mt-60">
+      <div className="mt-96 xl:mt-60 px-30">
         <MissionAbout />
       </div>
       <MidHeader

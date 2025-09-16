@@ -10,12 +10,12 @@ export function StatsSection() {
           <div className="flex flex:row border-1 border-[#8752FF]  px-7 h-11  space-x-2 w-auto  rounded-md items-center ">
             <div className="text-[#8752FF] font-Jost  md:text-xl text-lg vertical-trim  tracking-tight-3 flex justify-center items-center gap-2 text-nowrap">
               <Icons name="Globe" />
-              2023 Best Agency
+              Top US Agency 2025 
             </div>
           </div>
           <div className="flex flex:row border-1 border-[#8752FF]  px-7 h-11  space-x-2 w-auto  rounded-md items-center ">
             <div className="text-[#8752FF] font-Jost  text-xl vertical-trim  tracking-tight-3 flex justify-center items-center gap-2 text-nowrap">
-              <Icons name="Crown" /> 2023 Best Agency
+              <Icons name="Crown" /> Awarded Digital Partner
             </div>
           </div>
         </div>
@@ -43,11 +43,11 @@ export function StatsSection() {
       <div className="flex flex-row justify-between font-jost">
         <StatsItem value="250" suffix="+" label="Projects Delivered" />
         <VerticalLine height={18} color="gray-400" />
-        <StatsItem value="7" suffix="+" label="Years of Experience" />
+        <StatsItem value="7" suffix="+" label="Years of Expertise" />
         <VerticalLine height={18} color="gray-400" />
-        <StatsItem value="25" suffix="+" label="Professional Teams" />
+        <StatsItem value="25" suffix="+" label="Professional Team" />
         <VerticalLine height={18} color="gray-400" />
-        <StatsItem value="80" suffix="%" label="Active Client" />
+        <StatsItem value="80" suffix="+" label="Active Client" />
       </div>
     </div>
   );

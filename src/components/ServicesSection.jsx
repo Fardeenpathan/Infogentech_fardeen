@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef} from "react";
 import { useInView } from "./useInView";
 import Image from "next/image";
 import TopicHeader from "./TopicHeader";
@@ -62,7 +62,7 @@ export default function ServicesSection() {
             }`}
           >
             <div>
-              <span className="font-[jost] font-normal text-[32px] leading-[100%] tracking-[3%] opacity-10">
+              <span className="font-jost font-normal text-[32px] leading-[100%] tracking-[3%] opacity-10">
                 {service.id}
               </span>
               <p className="mt-10">
@@ -75,7 +75,7 @@ export default function ServicesSection() {
                   className="xl:w-25 xl:h-25"
                 />
               </p>
-              <h2 className="font-[jost] font-medium text-[55px] xl:text-[40px] leading-[120%] tracking-[0.03em]">
+              <h2 className="font-jost font-medium text-[55px] xl:text-[40px] leading-[120%] tracking-[0.03em]">
                 {service.title}
               </h2>
               <p className="text-[#C4C4C4] text-sm mt-9 leading-relaxed">

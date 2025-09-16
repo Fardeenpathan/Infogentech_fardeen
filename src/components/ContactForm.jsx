@@ -131,17 +131,17 @@ const ContactForm = () => {
               Get in Touch
             </p>
 
-            <p className="font-[jost] font-medium text-lg leading-[24px] align-middle mt-3">
+            <p className="font-jost font-medium text-lg leading-[24px] align-middle mt-3">
               Have a question or need help? Just send us a message or email
               we’re happy to help!
             </p>
           </div>
           <section className="p-2.5 bg-[#202037] rounded-2xl flex gap-5">
             <div className="min-w-[491px] bg-[#000026] rounded-xl py-12 px-10 relative overflow-hidden">
-              <p className="font-[jost] font-medium text-2xl leading-[24px] align-middle">
+              <p className="font-jost font-medium text-2xl leading-[24px] align-middle">
                 Contact Information
               </p>
-              <p className="font-[jost] text-lg leading-[24px] align-middle text-[#C9C9C9] mt-5">
+              <p className="font-jost text-lg leading-[24px] align-middle text-[#C9C9C9] mt-5">
                 Say something to start a live chat!
               </p>
 

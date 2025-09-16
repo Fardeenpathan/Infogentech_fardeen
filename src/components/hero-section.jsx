@@ -45,8 +45,7 @@ export function HeroSection() {
         </div>
         <div className="mt-9 ml-20">
           <p className="text-gray-300 text-lg font-Jost mb-8 font-medium align-middle">
-            We become your digital department bringing strategy, creativity, and
-            technical expertise to accelerate your business growth.
+            We don’t just build solutions – we create possibilities. From startups to enterprises, let us make tech work for you, not the other way around.
           </p>
           <a
             href="contactUs"
@@ -61,7 +60,7 @@ export function HeroSection() {
                   text-white 
                   shadow-[0px_0px_8px_0px_#FFFFFF_inset]"
             >
-              Get Start &nbsp;
+             Get Started &nbsp;
               <Icons name="Arrow" />
             </span>
           </a>

@@ -6,22 +6,10 @@ import Image from "next/image";
 import Icons from "@/components/ui/Icon";
 import Link from "next/link";
 import { useState } from "react";
+import designProjects from "./designProjects.json";
 
 const Design = () => {
   const [activeService, setActiveService] = useState("Design");
-  const designProjects = [
-    {
-      id: 1,
-      title: "Green House Gardening Landing Page",
-      image: "/assist/img/DesignImg.png",
-    },
-    {
-      id: 2,
-      title: "AI SaaS Dashboard UI",
-      image: "/assist/img/DesignImg.png",
-    },
-  ];
-
   return (
     <>
       <PortfolioHeader />
@@ -41,15 +29,15 @@ const Design = () => {
                   alt={project.title}
                   width={774}
                   height={380}
-                  objectFit="cover"
+                  style={{ objectFit: "cover", width: 774, height: 480 }}
                   className="rounded-xl"
                 />
                 <div className="px-2.5 pb-2.5 flex justify-between flex-col">
                   <div className="flex items-center justify-between mt-4">
-                    <p className="font-[jost] text-[24px] font-normal leading-[28px] tracking-normal">
+                    <p className="font-jost text-[24px] font-normal leading-[28px] tracking-normal">
                       {project.title}
                     </p>
-                    <Link href={`/portfolio/design/${project.title}`}>
+                    <Link href={`/portfolio/design/${project.slug}`}>
                       <Icons
                         name="Arrow"
                         height={26}

@@ -4,7 +4,7 @@ const services = [
   {
     id: "01",
     title: "Client-First Approach",
-    desc: "We prioritize building meaningful relationships with our clients, understanding their vision, and working as true partners in their digital journey.",
+    desc: "We focus on truly understanding our clients’ goals and vision. By working closely together, we become partners in your digital journey, not just a service provider.",
     imageIcon: "/assist/img/Client-FirstApproach.png",
     width: 99,
     height: 65,
@@ -12,7 +12,7 @@ const services = [
   {
     id: "02",
     title: "Affordability with Quality",
-    desc: "We believe great digital solutions should be accessible that's why we deliver high-quality work at transparent and affordable pricing.",
+    desc: "We believe great digital solutions shouldn’t break the bank. That’s why we offer top-quality work at fair, transparent prices you can trust.",
     imageIcon: "/assist/img/AffordabilityQuality.png",
     width: 94,
     height: 69,
@@ -20,7 +20,7 @@ const services = [
   {
     id: "03",
     title: "Excellence & Integrity",
-    desc: "Our work meets industry standards and beyond, built with a strong foundation of honesty, ethics, and accountability.",
+    desc: "We hold ourselves to high standards, built on honesty, ethics, and accountability. You can count on us for reliable, professional results every time.",
     imageIcon: "/assist/img/ExcellenceIntegrity.png",
     width: 70,
     height: 75,
@@ -28,7 +28,7 @@ const services = [
   {
     id: "04",
     title: "Trust That Lasts",
-    desc: "We earn our clients' trust through reliability, clear communication, and a deep commitment to their growth.",
+    desc: "We earn trust through clear communication, dependable service, and a true commitment to helping your business grow for the long term.",
     imageIcon: "/assist/img/trustQuality.png",
     width: 80,
     height: 78,
@@ -82,7 +82,7 @@ export default function OurValues() {
                     height={service.height}
                     objectFit="cover"
                   />
-                <h2 className="font-[jost] font-medium text-2xl leading-[120%] tracking-[0.03em] mt-6">
+                <h2 className="font-jost font-medium text-2xl leading-[120%] tracking-[0.03em] mt-6">
                   {service.title}
                 </h2>
                 <p className="text-[#C4C4C4] text-xl mt-3 leading-[120%] flex text-center xl:text-lg">

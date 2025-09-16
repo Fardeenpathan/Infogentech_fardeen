@@ -6,25 +6,25 @@ import Image from "next/image";
 const reviews = [
   {
     id: 1,
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ut labore et dolore magna aliqua.",
-    name: "Mickael Grants",
-    role: "CEO of Apples to Oranges",
+    text: "Their SEO work took us from barely showing up in searches to ranking on the first page for important keywords. They clearly know the healthcare space inside and out.",
+    name: "— Ethan Roberts",
+    role: "Owner, Cascade Remodeling",
     img: "/assist/img/blogs.png",
     rating: 5,
   },
   {
     id: 2,
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ut labore et dolore magna aliqua.",
-    name: "Jane Cooper",
-    role: "CTO of TechFlow",
+    text: "From a new logo to a refreshed social media strategy, they completely elevated our brand. Customer engagement is way up, and foot traffic to our store has been better than eve",
+    name: "Jessica Collins",
+    role: "Marketing Director, Nova Dental Group",
     img: "/assist/img/blogs.png",
     rating: 4,
   },
   {
     id: 3,
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ut labore et dolore magna aliqua.",
-    name: "John Doe",
-    role: "Founder of NextGen",
+    text: "They brought our vision to life with modern design and a smart strategy that really connects with our clients. We constantly get compliments on our new website and branding",
+    name: "Marcus Lee",
+    role: " Co-Founder, Leaf & Brew",
     img: "/assist/img/blogs.png",
     rating: 3,
   },
@@ -72,7 +72,7 @@ export default function Testimonials() {
                     />
 
                     <div>
-                      <h4 className="font-[jost] text-2xl text-[#C2C4C8]">
+                      <h4 className="font-jost text-2xl text-[#C2C4C8]">
                         {review.name}
                       </h4>
                       <p className="text-sm text-[#C2C4C8] mt-1.5">

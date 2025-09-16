@@ -147,10 +147,7 @@ export function ServicesDropdown() {
   };
 
   return (
-    <div className="inline-flex relative group">
-      <p className="cursor-pointer  focus:outline-none">Services</p>
-      <div className="absolute group-hover:flex hidden shadow-lg  -left-26 z-50 cursor-pointer ">
-        <div className="pt-12 flex">
+      <div className="relative group-hover:flex hidden shadow-lg  -left-26 z-50 cursor-pointer top-5 group">
           <div className="bg-[linear-gradient(213deg,rgba(162,121,255,1)_0%,rgba(63,26,147,1)_89%)]  pl-1 pt-1 rounded-l-md h-[500px]">
             {servicesMenu.map((item, index) => (
               <div
@@ -163,7 +160,7 @@ export function ServicesDropdown() {
                 }`}
               >
                 <div className="font-medium text-2xl xl:text-lg">{item.label}</div>
-                <div className="justify-center font-['Jost'] leading-6 font-light xl:text-sm">
+                <div className="justify-center font-jost leading-6 font-light xl:text-sm">
                   {item.description}
                 </div>
               </div>
@@ -188,8 +185,6 @@ export function ServicesDropdown() {
               ))}
           </div>
         </div>
-      </div>
-    </div>
   );
 }
 

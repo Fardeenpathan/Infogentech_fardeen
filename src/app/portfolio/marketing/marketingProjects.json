@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": "BookPremiumFare Transforming Online Travel Booking",
+    "slug": "BookPremiumFare-Transforming-Online-Travel-Booking",
+    "image": "/assist/portfolio/marketing/BookpremiumfareCase.png",
+     "subImage": "/assist/portfolio/marketing/bookPremiumFare.png"
+  },
+  {
+    "id": 2,
+    "title": "Dry Cleaning service",
+    "slug": "dry-cleaning-service",
+    "image": "/assist/portfolio/marketing/LaraCleanCasestudy.png",
+    "subImage": "/assist/portfolio/marketing/dryCleaning.webp"
+  },
+    {
+    "id": 3,
+    "title": "Madirakshi app",
+    "slug": "madirakshi-app",
+    "image": "/assist/portfolio/marketing/MadirakshiStudycase.png",
+     "subImage": "/assist/portfolio/marketing/madrirakshi.png"
+  },
+  {
+    "id": 4,
+    "title": "Avarta Jewellery",
+    "slug": "Avarta-jewellery",
+    "image": "/assist/portfolio/marketing/AvartaJewelleryCaseStudy.png",
+    "subImage": "/assist/portfolio/marketing/avartajewellery.png"
+  }
+]

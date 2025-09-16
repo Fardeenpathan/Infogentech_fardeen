@@ -43,13 +43,13 @@ export default function LatestBlogs() {
         href="#"
         className="flex gap-8 items-center justify-end mr-10 relative -top-10"
       >
-        <p className="font-[jost] font-semibold text-lg leading-[120%] capitalize ">
+        <p className="font-jost font-semibold text-lg leading-[120%] capitalize ">
           See Our <br /> More Blogs
         </p>
         <Icons name="Arrow" width={62} height={28} />
       </a>
-      <div className="relative flex flex-col items-center justify-center   text-white">
-        <div className="flex items-center justify-center gap-12">
+      <div className="relative flex flex-col items-center justify-center">
+        <div className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-12">
           {blogData.map((blog) => (
             <HomeBlogCardsd key={blog.id} blog={blog} />
           ))}

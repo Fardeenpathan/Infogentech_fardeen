@@ -1,6 +1,6 @@
 export default function MissionAbout() {
   return (
-    <div className="flex container justify-between mx-auto px-30">
+    <div className="flex container justify-between mx-auto">
       <div className="flex justify-center items-center mb-10 flex-col ">
         <div className=" w-12 h-12 ">
           <img
