@@ -5,14 +5,10 @@ import {
   ArrowLeft,
   Mail,
   Phone,
-  Clock,
   User,
   MessageSquare,
-  Tag,
   Calendar,
   Globe,
-  Monitor,
-  Plus,
   Edit,
   Save,
   X
@@ -137,7 +133,6 @@ export default function ContactDetail() {
 
   return (
     <div className="space-y-6">
-      {/* Header */}
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-4">
           <button
@@ -184,9 +179,7 @@ export default function ContactDetail() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {/* Contact Information */}
         <div className="lg:col-span-2 space-y-6">
-          {/* Basic Info */}
           <div className="bg-[#1A1A1A] border border-gray-700 rounded-lg p-6">
             <h3 className="text-lg font-semibold text-white mb-4">Contact Information</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -246,69 +239,7 @@ export default function ContactDetail() {
               <p className="text-gray-300 whitespace-pre-wrap">{contact.message}</p>
             </div>
           </div>
-
-          {/* Notes */}
-          <div className="bg-[#1A1A1A] border border-gray-700 rounded-lg p-6">
-            <div className="flex items-center justify-between mb-4">
-              <h3 className="text-lg font-semibold text-white">Notes</h3>
-              <button
-                onClick={() => setAddingNote(!addingNote)}
-                className="inline-flex items-center px-3 py-1 bg-[#6A27FF] hover:bg-[#5a1fdd] text-white rounded-lg transition-colors text-sm"
-              >
-                <Plus className="mr-1 h-4 w-4" />
-                Add Note
-              </button>
-            </div>
-
-            {addingNote && (
-              <div className="mb-4 space-y-3">
-                <textarea
-                  value={newNote}
-                  onChange={(e) => setNewNote(e.target.value)}
-                  placeholder="Add a note..."
-                  className="w-full p-3 bg-[#0A0A0A] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#6A27FF] resize-none"
-                  rows="3"
-                />
-                <div className="flex items-center space-x-2">
-                  <button
-                    onClick={handleAddNote}
-                    disabled={!newNote.trim() || addingNote}
-                    className="px-4 py-2 bg-[#6A27FF] hover:bg-[#5a1fdd] text-white rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                  >
-                    {addingNote ? 'Adding...' : 'Add Note'}
-                  </button>
-                  <button
-                    onClick={() => {
-                      setAddingNote(false);
-                      setNewNote('');
-                    }}
-                    className="px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white rounded-lg transition-colors"
-                  >
-                    Cancel
-                  </button>
-                </div>
-              </div>
-            )}
-
-            <div className="space-y-3">
-              {contact.notes && contact.notes.length > 0 ? (
-                contact.notes.map((note, index) => (
-                  <div key={index} className="bg-[#0A0A0A] border border-gray-600 rounded-lg p-4">
-                    <p className="text-gray-300 mb-2">{note.content}</p>
-                    <div className="flex items-center space-x-4 text-xs text-gray-500">
-                      <span>Added {formatDate(note.createdAt)}</span>
-                      {note.createdBy && <span>by {note.createdBy}</span>}
-                    </div>
-                  </div>
-                ))
-              ) : (
-                <p className="text-gray-400 text-center py-8">No notes added yet</p>
-              )}
-            </div>
-          </div>
         </div>
-
-        {/* Sidebar */}
         <div className="space-y-6">
           {/* Status & Priority */}
           <div className="bg-[#1A1A1A] border border-gray-700 rounded-lg p-6">

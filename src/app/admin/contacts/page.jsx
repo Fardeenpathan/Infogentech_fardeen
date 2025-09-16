@@ -3,20 +3,13 @@ import { useState, useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import {
   Search,
-  Filter,
   Download,
   Eye,
-  Edit,
-  Trash2,
-  Plus,
-  Clock,
-  CheckCircle,
-  AlertCircle,
-  MoreHorizontal,
   MessageSquare
 } from 'lucide-react';
 import adminApiService from '@/lib/adminApi';
 import { useDebounce } from '@/hooks/useDebounce';
+import Loader from "@/components/loader/Loader";
 import config from '@/config';
 
 const ITEMS_PER_PAGE = config.app.pagination.defaultLimit;
@@ -140,19 +133,11 @@ export default function ContactsList() {
     );
   };
 
-  const handleSelectAll = () => {
-    setSelectedContacts(
-      selectedContacts.length === contacts.length
-        ? []
-        : contacts.map(contact => contact._id)
-    );
-  };
 
   const handleExport = async () => {
     try {
       const response = await adminApiService.exportContacts();
       if (response.data) {
-        // Create CSV content
         const csvContent = convertToCSV(response.data);
         downloadCSV(csvContent, 'contacts.csv');
       }
@@ -199,8 +184,8 @@ export default function ContactsList() {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center h-96">
-        <div className="text-white">Loading contacts...</div>
+      <div className="flex items-center justify-center min-h-screen">
+        <Loader/>
       </div>
     );
   }
@@ -289,7 +274,6 @@ export default function ContactsList() {
         </div>
       </div>
 
-      {/* Results Summary */}
       <div className="flex items-center justify-between text-sm text-gray-400">
         <span>
           Showing {((filters.page - 1) * ITEMS_PER_PAGE) + 1} to {Math.min(filters.page * ITEMS_PER_PAGE, pagination.total)} of {pagination.total} contacts
@@ -306,12 +290,7 @@ export default function ContactsList() {
             <thead className="bg-[#0A0A0A] border-b border-gray-700">
               <tr>
                 <th className="px-4 py-3 text-left">
-                  <input
-                    type="checkbox"
-                    checked={selectedContacts.length === contacts.length && contacts.length > 0}
-                    onChange={handleSelectAll}
-                    className="rounded border-gray-600 bg-[#1A1A1A] text-[#6A27FF] focus:ring-[#6A27FF]"
-                  />
+                 S.No
                 </th>
                 <th className="px-4 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
                   Contact
@@ -334,15 +313,10 @@ export default function ContactsList() {
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-700">
-              {contacts.map((contact) => (
+              {contacts.map((contact , index) => (
                 <tr key={contact._id} className="hover:bg-[#0A0A0A] transition-colors">
                   <td className="px-4 py-3">
-                    <input
-                      type="checkbox"
-                      checked={selectedContacts.includes(contact._id)}
-                      onChange={() => handleSelectContact(contact._id)}
-                      className="rounded border-gray-600 bg-[#1A1A1A] text-[#6A27FF] focus:ring-[#6A27FF]"
-                    />
+                   {index+1}
                   </td>
                   <td className="px-4 py-3">
                     <div>
@@ -376,20 +350,13 @@ export default function ContactsList() {
                     {formatDate(contact.createdAt)}
                   </td>
                   <td className="px-4 py-3">
-                    <div className="flex items-center space-x-2">
+                    <div className="flex items-center">
                       <button
                         onClick={() => router.push(`/admin/contacts/${contact._id}`)}
                         className="p-1 text-gray-400 hover:text-white transition-colors"
                         title="View Details"
                       >
                         <Eye className="h-4 w-4" />
-                      </button>
-                      <button
-                        onClick={() => router.push(`/admin/contacts/${contact._id}/edit`)}
-                        className="p-1 text-gray-400 hover:text-white transition-colors"
-                        title="Edit"
-                      >
-                        <Edit className="h-4 w-4" />
                       </button>
                     </div>
                   </td>

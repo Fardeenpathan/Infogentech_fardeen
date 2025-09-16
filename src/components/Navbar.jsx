@@ -40,19 +40,19 @@ export function Navbar() {
           <div className="flex items-center border border-[#8E8E8E] rounded-md">
             <div className="flex items-center pl-3.75 py-2.25 space-x-1.5">
               <Link href="/" className="flex items-center gap-1.5">
-                <Icons name="LogoFooter" />
+                <Icons name="LogoFooter" /> 
                 <p className="font-avalors text-[24px] leading-[32px] tracking-[3px] font-bold">
                   INFOGENTECH
                 </p>
               </Link>
             </div>
             <div className="flex flex-row space-x-12.5 py-4.5 px-12.5 text-lg font-Jost">
-              <div class="relative group">
-                <button class=" flex items-center justify-center cursor-pointer">
+              <div className="relative group">
+                <button className=" flex items-center justify-center cursor-pointer">
                   Products
                  <Icons name="Downarrow"/>
                 </button>
-                <div class="absolute left-0 max-w-6xl rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 transform ">
+                <div className="absolute left-0 max-w-6xl rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 transform ">
                   <ServicesDropdown />
                 </div>
               </div>
@@ -104,12 +104,12 @@ export function Navbar() {
                 INFOGENTECH
               </p>
             </Link>
-             <div class="relative group">
-                <button class=" flex items-center justify-center cursor-pointer">
+             <div className="relative group">
+                <button className=" flex items-center justify-center cursor-pointer">
                   Products
                  <Icons name="Downarrow"/>
                 </button>
-                <div class="absolute left-0 max-w-6xl rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 transform ">
+                <div className="absolute left-0 max-w-6xl rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 transform ">
                   <ServicesDropdown />
                 </div>
               </div>
