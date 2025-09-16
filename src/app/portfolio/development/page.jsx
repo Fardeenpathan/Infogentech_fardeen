@@ -6,21 +6,10 @@ import Image from "next/image";
 import Icons from "@/components/ui/Icon";
 import Link from "next/link";
 import { useState } from "react";
+import developmentProjects from "./developmentProjects.json";
 
-const Development = () => {
+const DigitalMarketing = () => {
   const [activeService, setActiveService] = useState("Development");
-  const developmentProjects = [
-    {
-      id: 1,
-      title: "Green House Gardening Landing Page",
-      image: "/assist/img/DesignImg.png",
-    },
-    {
-      id: 2,
-      title: "AI SaaS Dashboard UI",
-      image: "/assist/img/DesignImg.png",
-    },
-  ];
   return (
     <>
       <PortfolioHeader />
@@ -32,15 +21,15 @@ const Development = () => {
           </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 container mx-auto relative -top-48">
-          {developmentProjects?.map((project) => (
+          {developmentProjects.map((project) => (
             <div key={project.id} className="p-2.5 rounded-xl px-10">
               <div className="w-full max-w-[774px]">
                 <Image
-                  src={project.image}
+                  src={project.subImage}
                   alt={project.title}
                   width={774}
                   height={380}
-                  objectFit="cover"
+                  style={{ objectFit: "cover", width: 774, height: 480 }}
                   className="rounded-xl"
                 />
                 <div className="px-2.5 pb-2.5 flex justify-between flex-col">
@@ -48,7 +37,7 @@ const Development = () => {
                     <p className="font-jost text-[24px] font-normal leading-[28px] tracking-normal">
                       {project.title}
                     </p>
-                    <Link href={`/portfolio/development/${project.title}`}>
+                    <Link href={`/portfolio/development/${project.slug}`}>
                       <Icons
                         name="Arrow"
                         height={26}
@@ -62,11 +51,11 @@ const Development = () => {
             </div>
           ))}
         </div>
-        <div className="text-[#82828C] border-2 container mx-auto px-10"></div> 
+        <div className="text-[#82828C] border-2 container mx-auto px-10"></div>
         <SubscribeContact />
       </div>
     </>
   );
 };
 
-export default Development;
+export default DigitalMarketing;

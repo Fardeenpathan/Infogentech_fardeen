@@ -3,14 +3,14 @@
     "id": 1,
     "title": "British Raj",
     "slug": "british-raj",
-    "image": "/assist/portfolio/design/birtishRajDesign01.png",
+    "image": "/assist/portfolio/design/britishRajcaseStudy.png",
      "subImage": "/assist/portfolio/design/birtishRajDesign02.png"
   },
   {
     "id": 2,
-    "title": "Dry Cleaning service",
-    "slug": "dry-cleaning-service",
-    "image": "/assist/portfolio/design/birtishRajDesign02.png",
+    "title": "Portfolio Logo",
+    "slug": "portfolio-logo",
+    "image": "/assist/portfolio/design/logo.png",
     "subImage": "/assist/portfolio/design/birtishRajDesign02.png"
   }
 ]

@@ -6,42 +6,16 @@ import PortfolioHeader from "@/components/PortfolioHeader";
 import PortfolioServices from "@/components/PortfolioServices";
 import Link from "next/link";
 import { useState } from "react";
+import contentProjects from "./contentProjects.json";
 
 const Content = () => {
   const [activeService, setActiveService] = useState("Content");
-  const contentProjects = [
-    {
-      id: 1,
-      title: "Green House Gardening Landing Page",
-      image: "/assist/img/DesignImg.png",
-    },
-    {
-      id: 2,
-      title: "AI SaaS Dashboard UI",
-      image: "/assist/img/DesignImg.png",
-    },
-    {
-      id: 3,
-      title: "Green House Gardening Landing Page",
-      image: "/assist/img/DesignImg.png",
-    },
-    {
-      id: 4,
-      title: "AI SaaS Dashboard UI",
-      image: "/assist/img/DesignImg.png",
-    },
-    {
-      id: 5,
-      title: "Slug Page",
-      image: "/assist/img/DesignImg.png",
-    },
-  ];
   return (
     <>
       <PortfolioHeader />
       <PortfolioServices activeService={activeService} />
       <div>
-        <div className="container mx-auto mt-10  -z-20">
+        <div className="container mx-auto mt-10 -z-20">
           <div className="mx-auto w-fit">
             <Icons name="CurveGradient" />
           </div>
@@ -51,7 +25,7 @@ const Content = () => {
             <div key={project.id} className="p-2.5 rounded-xl px-10">
               <div className="w-full max-w-[774px]">
                 <Image
-                  src={project.image}
+                  src={project.subImage}
                   alt={project.title}
                   width={774}
                   height={380}
@@ -63,7 +37,7 @@ const Content = () => {
                     <p className="font-jost text-[24px] font-normal leading-[28px] tracking-normal">
                       {project.title}
                     </p>
-                    <Link href={`/portfolio/content/${project.title}`}>
+                    <Link href={`/portfolio/content/${project.slug}`}>
                       <Icons
                         name="Arrow"
                         height={26}

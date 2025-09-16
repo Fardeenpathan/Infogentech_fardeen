@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": "LaraClean service",
+    "slug": "laraClean-service",
+    "image": "/assist/portfolio/development/LaraCleanCasestudy.png",
+    "subImage": "/assist/portfolio/development/dryCleaning.webp",
+    "description": "This project highlights the design process of developing a clean, functional, and engaging website for LaraClean. It was designed to offer an easy booking experience to users and demonstrate the professionalism and trust of the brand. ",
+      "points": [
+        "Wireframes, Prototypes, and High-fidelity design were created to be understandable and easy to use.",
+        "Customization of WordPress using Elementor, styling of the theme, and integration of plugins.",
+        "The use of custom typography, colors, and visual hierarchy ensures the brand identity is consistent."
+      ]
+  },
+    {
+    "id": 2,
+    "title": "Madirakshi app",
+    "slug": "madirakshi-app",
+    "image": "/assist/portfolio/development/MadirakshiStudycase.png",
+     "subImage": "/assist/portfolio/development/madrirakshi.png",
+     "description": "",
+     "points": []
+  },
+  {
+    "id": 3,
+    "title": "Avarta Jewellery",
+    "slug": "Avarta-jewellery",
+    "image": "/assist/portfolio/development/AvartaJewelleryCaseStudy.png",
+    "subImage": "/assist/portfolio/development/avartajewellery.png",
+     "description": "",
+     "points": []
+  },
+   {
+    "id": 4,
+    "title": "Soouqna’s E-Commerce Platform",
+    "slug": "soouqna-Commerce-Platform",
+    "image": "/assist/portfolio/development/SoouqnaCasestudy.png",
+    "subImage": "/assist/portfolio/development/avartajewellery.png",
+     "description": "",
+     "points": []
+  }
+]

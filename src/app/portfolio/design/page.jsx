@@ -25,7 +25,7 @@ const Design = () => {
             <div key={project.id} className="p-2.5 rounded-xl px-10">
               <div className="w-full max-w-[774px]">
                 <Image
-                  src={project.image}
+                  src={project.subImage}
                   alt={project.title}
                   width={774}
                   height={380}
