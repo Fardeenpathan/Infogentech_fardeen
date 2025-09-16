@@ -18,7 +18,7 @@
     "slug": "madirakshi-app",
     "image": "/assist/portfolio/development/MadirakshiStudycase.png",
      "subImage": "/assist/portfolio/development/madrirakshi.png",
-     "description": "",
+     "description": "Madirakshi, an emerging digital platform, became our marketing partner to improve their app onboarding experience. We redefined the onboarding flow to retain and satisfy our customers while ensuring that they adopt the features. Figma and WordPress aided in creating a fluid, useful process and a higher level of engagement while bringing long engagement periods and customer success with it.",
      "points": []
   },
   {
@@ -27,7 +27,7 @@
     "slug": "Avarta-jewellery",
     "image": "/assist/portfolio/development/AvartaJewelleryCaseStudy.png",
     "subImage": "/assist/portfolio/development/avartajewellery.png",
-     "description": "",
+     "description": "Avarta Jewellery is a luxury brand that has a reputation for classic beauty and contemporary workmanship. They collaborated with us to design and develop a rich site. We provided the construction of category-based collections, blogs, customer resource, and e-commerce functionality, which would be smooth and user-friendly, so that the experience provided would be interesting to the jewellery lovers of today.",
      "points": []
   },
    {
@@ -36,7 +36,9 @@
     "slug": "soouqna-Commerce-Platform",
     "image": "/assist/portfolio/development/SoouqnaCasestudy.png",
     "subImage": "/assist/portfolio/development/avartajewellery.png",
-     "description": "",
-     "points": []
+     "description": "Soouqna, a growing e-commerce platform, partnered with Zebra to enhance logistics and delivery. API connectivity enabled seamless barcode scanning, better printer efficiency, and improved operational accuracy for faster, more reliable customer service.",
+     "points": ["Secure Login: Added OTP & email/password authentication.",
+        "Smart Search: Enabled location, QR & image-based product discovery.",
+        "Faster Performance: Optimized backend for speed & stability."]
   }
 ]

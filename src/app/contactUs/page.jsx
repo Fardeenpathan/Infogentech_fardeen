@@ -33,13 +33,16 @@ const ContactUs = () => {
               get back to you within 48 hours. For support or inquiries, feel
               free to contact us at.
             </p>
-            <button
-              className={`border border-white radius flex justify-center items-center px-8 py-3 cursor-pointer max-w-[274px] mt-8.5 space-x-2.5
+            <a href={`mailto:Info@infogentech.com`}>
+              <button
+                className={`border border-white radius flex justify-center items-center px-8 py-3 cursor-pointer max-w-[274px] mt-8.5 space-x-2.5
                 }`}
-            >
-              <p className="font-jost">Info@infogentech.com</p>
-              <Icons name="Slide" />
-            </button>
+              >
+                <p className="font-jost">Info@infogentech.com</p>
+                <Icons name="Slide" />
+              </button>
+            </a>
+          
           </div>
         </div>
 

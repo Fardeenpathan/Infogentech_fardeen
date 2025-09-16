@@ -13,8 +13,8 @@ const stats = [
 const AboutUs = () => {
   return (
     <>
-      <div className=" h-85 mt-30 bg-[url('/assist/img/aboutBg.png')]  longContainer mx-auto relative">
-        <div className="flex gap-10 absolute top-2 px-30">
+      <div className=" h-85 mt-30 bg-[url('/assist/img/aboutBg.png')]  container mx-auto relative px-10">
+        <div className="flex gap-10 absolute top-2">
           <div className="flex justify-center items-center mb-40 flex-col shrink-0">
             <div className="relative w-12 h-12">
               <img
@@ -55,7 +55,7 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-      <div className="mt-96 xl:mt-60 px-30">
+      <div className="mt-96 xl:mt-60  container mx-auto relative px-10">
         <MissionAbout />
       </div>
       <MidHeader

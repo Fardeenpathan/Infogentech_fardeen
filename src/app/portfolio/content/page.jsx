@@ -30,6 +30,7 @@ const Content = () => {
                   width={774}
                   height={380}
                   objectFit="cover"
+                  style={{ objectFit: "cover", width: 774, height: 480 }}
                   className="rounded-xl"
                 />
                 <div className="px-2.5 pb-2.5 flex justify-between flex-col">
