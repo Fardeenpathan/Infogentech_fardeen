@@ -1,5 +1,5 @@
 "use client";
-import PortfolioHeader from "@/components/PortfolioHeader";
+import ServicesHeader from "@/components/ServicesHeader";
 import AllServices from "@/components/AllServices";
 import SubscribeContact from "@/components/SubscribeContact";
 import Image from "next/image";
@@ -13,6 +13,7 @@ const Design = () => {
     {
       id: "01",
       title: "Graphic Design",
+      image: "/assist/services/design/graphic.jpeg",
       subServices: [
         {
           id: "01",
@@ -54,6 +55,7 @@ const Design = () => {
     {
       id: "02",
       title: "UI/UX Design",
+      image: "/assist/img/uiux-design.png", // 🖼️ added image
       subServices: [
         {
           id: "01",
@@ -85,6 +87,7 @@ const Design = () => {
     {
       id: "03",
       title: "Branding",
+      image: "/assist/img/branding.png", // 🖼️ added image
       subServices: [
         {
           id: "01",
@@ -111,6 +114,7 @@ const Design = () => {
     {
       id: "04",
       title: "Logo Design",
+      image: "/assist/img/logo-design.png", // 🖼️ added image
       subServices: [
         // empty by design
       ],
@@ -147,7 +151,7 @@ const Design = () => {
 
   return (
     <>
-      <PortfolioHeader />
+      <ServicesHeader />
       <AllServices activeService="Design" />
 
       <div className="container mx-auto mt-24 px-10">
@@ -168,16 +172,14 @@ const Design = () => {
                 </div>
                 {openCategory === category.id && (
                   <Image
-                    src="/assist/img/DesignImg.png"
-                    alt="Design"
+                    src={category.image}
+                    alt={category.title}
                     width={400}
                     height={377}
-                    className="rounded-2xl rotate-12 absolute -top-15 right-9 animate-slide-in-right overflow-hidden object-cover"
+                    className="w-[400px] h-[377px] md:w-[300px] md:h-[280px] lg:w-[400px] lg:h-[277px] rounded-2xl rotate-12 absolute -top-10 right-6 animate-slide-in-right object-cover z-10"
                   />
                 )}
               </div>
-
-              {/* Framer Motion animated panel */}
               <AnimatePresence initial={false}>
                 {openCategory === category.id && (
                   <motion.div
@@ -193,12 +195,12 @@ const Design = () => {
                         Our Value
                       </p>
                       <p className="font-jost font-medium text-lg leading-[24px]">
-                        How we work at Untitled guided by shared values that keep
-                        us connected as one team
+                        How we work at Untitled guided by shared values that
+                        keep us connected as one team
                       </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10 overflow-visible">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10 overflow-visible px-10">
                       {category.subServices.length > 0 ? (
                         category.subServices.map((subService) => (
                           <motion.div
@@ -229,13 +231,12 @@ const Design = () => {
           ))}
         </div>
 
-        {/* Video Section */}
         <div className="mt-34 flex justify-center items-center flex-col relative">
           <div className="absolute -top-20">
             <Icons name="gradientServices" />
           </div>
 
-          <div className="relative subContainer h-[640px] flex items-center justify-center">
+          {/* <div className="relative subContainer h-[640px] flex items-center justify-center">
             <video
               ref={videoRef}
               className="w-full h-full object-cover cursor-pointer rounded-3xl"
@@ -255,7 +256,7 @@ const Design = () => {
                 <Icons name="Play" />
               </button>
             )}
-          </div>
+          </div> */}
         </div>
 
         <SubscribeContact />

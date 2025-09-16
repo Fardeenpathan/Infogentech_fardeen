@@ -37,7 +37,7 @@ export function Navbar() {
           transition={{ duration: 0.2, ease: "easeInOut" }}
           className="relative flex bg-transparent mt-6 h-15 mx-auto justify-between items-center z-50 font-jost font-medium text-lg leading-[24px] container px-10"
         >
-          <div className="flex items-center border border-[#8E8E8E] rounded-md">
+          <div className="flex items-center border border-[#8E8E8E] rounded-md ">
             <div className="flex items-center pl-3.75 py-2.25 space-x-1.5">
               <Link href="/" className="flex items-center gap-1.5">
                 <Icons name="LogoFooter" /> 
@@ -95,7 +95,7 @@ export function Navbar() {
             type: "spring",
             stiffness: 150,
           }}
-          className="fixed top-2 left-1/2 -translate-x-1/2 z-50 flex items-center justify-between border container rounded-xl bg-white/10 backdrop-blur-lg shadow-xl px-6 py-4 font-jost font-medium text-lg leading-[24px] mx-auto"
+          className="fixed top-2 left-1/2 -translate-x-1/2 z-50 flex items-center justify-between border container rounded-xl bg-[#15152A] px-6 py-4 font-jost font-medium text-lg leading-[24px] mx-auto"
         >
           <div className="flex items-center gap-10 justify-between w-full">
             <Link href="/" className="flex items-center gap-2">

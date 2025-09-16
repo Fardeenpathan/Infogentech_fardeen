@@ -1,5 +1,5 @@
 "use client";
-import PortfolioHeader from "@/components/PortfolioHeader";
+import ServicesHeader from "@/components/ServicesHeader";
 import AllServices from "@/components/AllServices";
 import SubscribeContact from "@/components/SubscribeContact";
 import Image from "next/image";
@@ -135,7 +135,7 @@ const Marketing = () => {
 
   return (
     <>
-      <PortfolioHeader />
+      <ServicesHeader />
       <AllServices activeService="Digital Marketing" />
 
       <div className="container mx-auto mt-24 px-10">
@@ -160,7 +160,7 @@ const Marketing = () => {
                     alt="Blogs"
                     width={400}
                     height={377}
-                    className="rounded-2xl rotate-12 absolute -top-15 right-9 animate-slide-in-right overflow-hidden object-cover"
+                    className="rounded-2xl rotate-12 absolute -top-15 right-9 animate-slide-in-right overflow-hidden object-cover z-10"
                   />
                 )}
               </div>
@@ -186,7 +186,7 @@ const Marketing = () => {
                       </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10 overflow-visible">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10 overflow-visible px-10">
                       {category.subServices.length > 0 ? (
                         category.subServices.map((subService) => (
                           <motion.div
@@ -221,7 +221,7 @@ const Marketing = () => {
           <div className="absolute -top-20">
             <Icons name="gradientServices" />
           </div>
-
+{/* 
           <div className="relative subContainer h-[640px] flex items-center justify-center">
             <video
               ref={videoRef}
@@ -242,7 +242,7 @@ const Marketing = () => {
                 <Icons name="Play" />
               </button>
             )}
-          </div>
+          </div> */}
         </div>
 
         <SubscribeContact />
