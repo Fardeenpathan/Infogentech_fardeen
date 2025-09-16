@@ -5,6 +5,7 @@ import Image from "next/image";
 import Icons from "./ui/Icon";
 import PurpleCheckbox from "./ui/Checkbox";
 import GradientButton from "./ui/GradientButton";
+import config from "@/config";
 const contactInfo = [
   {
     icon: "Contact",
@@ -40,12 +41,70 @@ const socialMedia = [
 ];
 const ContactForm = () => {
   const [isVerified, setIsVerified] = useState(true);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phoneNumber: '',
+    productQuestion: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState('');
 
   const handleCaptcha = (value) => {
     if (value) {
       setIsVerified(true);
     } else {
       setIsVerified(false);
+    }
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!isVerified) {
+      setSubmitMessage('Please complete the reCAPTCHA verification.');
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitMessage('');
+
+    try {
+      const response = await fetch(`${config.api.baseUrl}${config.api.endpoints.contact}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setSubmitMessage('Message sent successfully! We will get back to you soon.');
+        setFormData({
+          name: '',
+          email: '',
+          phoneNumber: '',
+          productQuestion: '',
+          message: ''
+        });
+      } else {
+        setSubmitMessage(result.message || 'Failed to send message. Please try again.');
+      }
+    } catch (error) {
+      setSubmitMessage('Error sending message. Please try again later.');
+      console.error('Contact form error:', error);
+    } finally {
+      setIsSubmitting(false);
     }
   };
   return (
@@ -120,7 +179,7 @@ const ContactForm = () => {
               <div className="w-[138px] h-[138px] bg-[#48484880] rounded-full absolute bottom-13 right-13"></div>
             </div>
             <div className="flex items-center justify-center p-6 w-full ">
-              <form className="w-full  text-white space-y-6">
+              <form className="w-full  text-white space-y-6" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-[#E4E4E4] text-lg mb-2 font-jost font-light">
@@ -128,8 +187,12 @@ const ContactForm = () => {
                     </label>
                     <input
                       type="text"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
                       className="w-full  py-2  border-b-2 border-[#FFFFFF] bg-transparent  focus:outline-none focus:border-[#8752FF]"
                       placeholder="Enter your name"
+                      required
                     />
                   </div>
                   <div>
@@ -138,8 +201,12 @@ const ContactForm = () => {
                     </label>
                     <input
                       type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
                       className="w-full  py-2  border-b-2 border-[#FFFFFF] bg-transparent  focus:outline-none focus:border-[#8752FF]"
                       placeholder="Enter your email"
+                      required
                     />
                   </div>
                 </div>
@@ -150,18 +217,31 @@ const ContactForm = () => {
                     </label>
                     <input
                       type="tel"
+                      name="phoneNumber"
+                      value={formData.phoneNumber}
+                      onChange={handleInputChange}
                       className="w-full  py-2  border-b-2 border-[#FFFFFF] bg-transparent  focus:outline-none focus:border-[#8752FF]"
                       placeholder="+1 012 3456 789"
+                      required
                     />
                   </div>
                   <div>
                     <label className="block text-[#E4E4E4] text-lg mb-2 font-light">
                       Product Question
                     </label>
-                    <select className="w-full  py-2  border-b-2 border-[#FFFFFF] bg-transparent  focus:outline-none focus:border-[#8752FF]">
-                      <option className="bg-[#1C1B2D]">Select</option>
-                      <option className="bg-[#1C1B2D]">Option 1</option>
-                      <option className="bg-[#1C1B2D]">Option 2</option>
+                    <select 
+                      name="productQuestion"
+                      value={formData.productQuestion}
+                      onChange={handleInputChange}
+                      className="w-full  py-2  border-b-2 border-[#FFFFFF] bg-transparent  focus:outline-none focus:border-[#8752FF]"
+                      required
+                    >
+                      <option value="" className="bg-[#1C1B2D]">Select</option>
+                      <option value="General Inquiry" className="bg-[#1C1B2D]">General Inquiry</option>
+                      <option value="Technical Support" className="bg-[#1C1B2D]">Technical Support</option>
+                      <option value="Pricing" className="bg-[#1C1B2D]">Pricing</option>
+                      <option value="Partnership" className="bg-[#1C1B2D]">Partnership</option>
+                      <option value="Other" className="bg-[#1C1B2D]">Other</option>
                     </select>
                   </div>
                 </div>
@@ -169,25 +249,35 @@ const ContactForm = () => {
                   <label className="block text-[#E4E4E4] text-lg mb-2 font-jost font-light">
                     Message
                   </label>
-                  <input
-                    className="w-full  py-2  border-b-2 border-[#FFFFFF] bg-transparent  focus:outline-none focus:border-[#8752FF]"
+                  <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    className="w-full  py-2  border-b-2 border-[#FFFFFF] bg-transparent  focus:outline-none focus:border-[#8752FF] resize-none"
                     placeholder="Write your message.."
-                  ></input>
+                    rows="3"
+                    required
+                  ></textarea>
                 </div>
                 <div className="flex items-center space-x-2">
                   <PurpleCheckbox label="subscribe to receive the latest news and exclusive offers" />
                 </div>
                 <ReCAPTCHA
-                  sitekey="YOUR_RECAPTCHA_SITE_KEY"
+                  sitekey={config.recaptcha.siteKey}
                   onChange={handleCaptcha}
                 />
+                {submitMessage && (
+                  <div className={`text-sm ${submitMessage.includes('successfully') ? 'text-green-400' : 'text-red-400'}`}>
+                    {submitMessage}
+                  </div>
+                )}
                 <button
                   type="submit"
-                  disabled={!isVerified}
+                  disabled={!isVerified || isSubmitting}
                   className="text-[#6A27FF] mt-7.5"
                 >
                   <GradientButton bg="bg-[#202037]" paddingX="px-12" paddingY="py-4.5">
-                    Send Message
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
                   </GradientButton>
                 </button>
                 
