@@ -10,7 +10,6 @@ import Loader from "@/components/loader/Loader";
 import contentProjects from "../contentProjects.json";
 import ShinyButton from "@/components/ui/ShinyButton";
 const SlugPage = () => {
-  const [activeService, setActiveService] = useState("Content");
   const { slug } = useParams();
   const [project, setProject] = useState(null);
   const [expanded, setExpanded] = useState(false);
@@ -32,14 +31,14 @@ const SlugPage = () => {
       <PortfolioHeader />
       <div className="container mx-auto px-10">
         <div className=" mt-10  -z-20 border-2 rounded-3xl pt-10">
-          <PortfolioServices activeService={activeService} />
+          <PortfolioServices activeService="Content" />
           <div className="mx-auto w-fit mt-10">
             <Icons name="CurveGradient" />
           </div>
           <div className="relative -top-48 px-10 ">
             <div
               className={`mx-auto rounded-2xl overflow-hidden bg-black transition-[max-height] duration-500 ${
-                expanded ? "h-full" : "h-[1200px]"
+                expanded ? "h-full" : "h-[1200px] md:h-[900px]"
               }`}
             >
               <Image

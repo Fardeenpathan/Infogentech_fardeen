@@ -177,7 +177,7 @@ export function Footer() {
                 <ul className="space-y-3.5">
                   <li>
                     <Link
-                      href="#"
+                      href=""
                       className="text-gray-400 hover:text-white cursor-not-allowed"
                     >
                       Careers
