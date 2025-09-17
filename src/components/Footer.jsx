@@ -31,7 +31,7 @@ export function Footer() {
             <div>
               <a className="flex items-center mb-4 gap-1.5" href="/">
                 <Icons name="LogoFooter" />
-                <p className="font-avalors text-[24px] leading-[32px] tracking-[3px] font-bold">
+                <p className="font-avalors text-[24px] leading-8 tracking-[3px] font-bold">
                   INFOGENTECH
                 </p>
               </a>

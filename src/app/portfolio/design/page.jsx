@@ -1,26 +1,24 @@
-"use client";
+
 import PortfolioHeader from "@/components/PortfolioHeader";
 import PortfolioServices from "@/components/PortfolioServices";
 import SubscribeContact from "@/components/SubscribeContact";
 import Image from "next/image";
 import Icons from "@/components/ui/Icon";
 import Link from "next/link";
-import { useState } from "react";
 import designProjects from "./designProjects.json";
 
 const Design = () => {
-  const [activeService, setActiveService] = useState("Design");
   return (
     <>
       <PortfolioHeader />
-      <PortfolioServices activeService={activeService} />
+      <PortfolioServices activeService="Design" />
       <div>
         <div className="container mx-auto mt-10 -z-20">
           <div className="mx-auto w-fit">
             <Icons name="CurveGradient" />
           </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 container mx-auto relative -top-48">
+        <div className="grid grid-cols-1 lg:grid-cols-2 container mx-auto relative -top-48">
           {designProjects.map((project) => (
             <div key={project.id} className="p-2.5 rounded-xl px-10">
               <div className="w-full max-w-[774px]">

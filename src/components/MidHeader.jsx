@@ -8,7 +8,7 @@ export default function MidHeader({ name = "", subheading = "", paragraph="", cl
           <img
             src="/assist/video/pentagonVideo.gif"
             alt="valueImg"
-            className=" w-full h-full object-cover "
+            className="w-full h-full object-cover"
           />
         </div>
 {/* shadow-[0px_0px_40px_5px_rgba(106,39,255,0.35)] */}
