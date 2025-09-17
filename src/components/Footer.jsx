@@ -177,14 +177,6 @@ export function Footer() {
                 <ul className="space-y-3.5">
                   <li>
                     <Link
-                      href="/aboutUs"
-                      className="text-gray-400 hover:text-white"
-                    >
-                      About us
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
                       href="#"
                       className="text-gray-400 hover:text-white cursor-not-allowed"
                     >
@@ -219,7 +211,7 @@ export function Footer() {
             &copy; {new Date().getFullYear()} Infogentech. All rights reserved.
           </p>
           <div className="space-x-4 ">
-            <Link href="#" className="hover:text-white ">
+            <Link href="/privacyPolicy" className="hover:text-white ">
               Privacy Policy
             </Link>
             <Link href="#" className="hover:text-white">
