@@ -37,7 +37,7 @@ const SlugPage = () => {
 
           <div className="relative -top-48 px-10">
             <div
-              className={`mx-auto rounded-2xl overflow-hidden bg-black transition-[max-height] duration-500 ${
+              className={`mx-auto rounded-2xl overflow-hidden bg-black transition-[max-height] duration-500 relative  ${
                 expanded ? "h-full" : "h-[1200px]"
               }`}
             >
@@ -48,16 +48,17 @@ const SlugPage = () => {
                 height={460}
                 style={{ objectFit: "cover", width: "100%", height: "auto" }}
                 sizes="(max-width: 768px) 100vw, 1400px"
-                className="rounded-2xl mx-auto p-2"
+                className="rounded-2xl mx-auto p-2 overflow-hidden"
               />
-            </div>
-            <div className="mx-34 mt-10 font-jost text-center">
-              <ShinyButton
+              <div className="font-jost text-center absolute w-full bottom-0 py-14  glass-fallback bg-white/6"></div>
+              <div className="font-jost text-center absolute w-full bottom-0 py-6">
+                 <ShinyButton className="!py-4 !px-5 !text-lg"
                 onClick={() => setExpanded((s) => !s)}
               >
                 {expanded ? "Know less" : "Know more"}
-                <Icons name="Arrow" />
+               <span className="pl-3"><Icons name="Arrow" /></span> 
               </ShinyButton>
+              </div>
             </div>
             <div className="mx-5 mt-6 font-jost">
               <p className=" font-normal text-[32px] leading-[28px]">
