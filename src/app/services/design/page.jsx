@@ -153,7 +153,6 @@ const Design = () => {
     <>
       <ServicesHeader />
       <AllServices activeService="Design" />
-
       <div className="container mx-auto mt-24 px-10">
         <div className="border-b-2 border-[#7e7d7d] mt-15 opacity-15"></div>
 

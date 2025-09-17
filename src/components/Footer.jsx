@@ -18,10 +18,13 @@ export function Footer() {
               href="/portfolio"
               className="bg-white text-black  xl:py-5 lg:px-12.5  radius py-3.5 px-8 text-nowrap"
             >
-             View Portfolio
+              View Portfolio
             </Link>
             <Link href="/contactUs">
-              <Button text="Contact Us" className="!py-3.5 !px-10 xl:!py-5.5 lg:!px-12.5 text-nowrap"/>
+              <Button
+                text="Contact Us"
+                className="!py-3.5 !px-10 xl:!py-5.5 lg:!px-12.5 text-nowrap"
+              />
             </Link>
           </div>
         </div>
@@ -199,6 +202,22 @@ export function Footer() {
                       FAQs
                     </Link>
                   </li>
+                  <li className="block md:hidden">
+                    <Link
+                      href="/privacyPolicy"
+                      className="text-gray-400 hover:text-white"
+                    >
+                      Privacy Policy
+                    </Link>
+                  </li>
+                  <li className="block md:hidden">
+                    <Link
+                      href="/terms"
+                      className="text-gray-400 hover:text-white"
+                    >
+                      Terms & Conditions
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -206,11 +225,11 @@ export function Footer() {
           <div className=" w-full text-white border-1 mt-3.5"></div>
         </div>
 
-        <div className="flex flex-wrap justify-between items-center mt-3.5 pb-6 font-kumbh-sans">
+        <div className="flex flex-wrap md:justify-between justify-center items-center mt-3.5 pb-6 font-kumbh-sans">
           <p>
             &copy; {new Date().getFullYear()} Infogentech. All rights reserved.
           </p>
-          <div className="space-x-4 ">
+          <div className="space-x-4  md:block hidden">
             <Link href="/privacyPolicy" className="hover:text-white ">
               Privacy Policy
             </Link>
