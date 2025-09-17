@@ -1,6 +1,5 @@
 "use client";
 import Icons from "@/components/ui/Icon";
-import Image from "next/image";
 import SubscribeContact from "@/components/SubscribeContact";
 import PortfolioHeader from "@/components/PortfolioHeader";
 import PortfolioServices from "@/components/PortfolioServices";
@@ -8,7 +7,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
 import Loader from "@/components/loader/Loader";
 import contentProjects from "../contentProjects.json";
-import ShinyButton from "@/components/ui/ShinyButton";
+import ProjectImageSection from "@/components/ProjectImageSection";
 const SlugPage = () => {
   const { slug } = useParams();
   const [project, setProject] = useState(null);
@@ -19,7 +18,6 @@ const SlugPage = () => {
       (project) => project.slug === slug
     );
     setProject(foundProject);
-    console.log(foundProject, "apsdasdAsf");
   }, [slug]);
 
   if (!project) {
@@ -36,27 +34,11 @@ const SlugPage = () => {
             <Icons name="CurveGradient" />
           </div>
           <div className="relative -top-48 px-10 ">
-            <div
-              className={`mx-auto rounded-2xl overflow-hidden bg-black transition-[max-height] duration-500 ${
-                expanded ? "h-full" : "h-[1200px] md:h-[900px]"
-              }`}
-            >
-              <Image
-                src={project.image}
-                alt="Blog"
-                width={1400}
-                height={460}
-                style={{ objectFit: "cover", width: "100%", height: "auto" }}
-                sizes="(max-width: 768px) 100vw, 1400px"
-                className="rounded-2xl mx-auto p-2"
-              />
-            </div>
-            <div className="mx-34 mt-10 font-jost text-center">
-              <ShinyButton onClick={() => setExpanded((s) => !s)}>
-                {expanded ? "Know less" : "Know more"}
-                <Icons name="Arrow" />
-              </ShinyButton>
-            </div>
+           <ProjectImageSection
+              project={project}
+              expanded={expanded}
+              setExpanded={setExpanded}
+            />
             <div className="mx-5 mt-6 font-jost"></div>
             <div className="mx-34 mt-10 font-jost">
               <p className=" font-normal text-[32px] leading-[28px]">

@@ -6,7 +6,7 @@ const ProjectImageSection = ({ project, expanded, setExpanded }) => {
   return (
     <div
       className={`mx-auto rounded-2xl overflow-hidden bg-black transition-[max-height] duration-500 relative  ${
-        expanded ? "h-full" : "h-[1200px]"
+        expanded ? "h-full" : "h-[1200px] md:[900px]"
       }`}
     >
       <Image
