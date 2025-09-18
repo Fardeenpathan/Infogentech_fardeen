@@ -44,8 +44,9 @@ const SlugPage = () => {
               </p>
             </div>
           </div>
-        <SubscribeContact />
+      
       </div>
+        <SubscribeContact />
     </div>
     </>
   );

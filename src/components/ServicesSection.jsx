@@ -1,4 +1,4 @@
-import { useRef} from "react";
+import { useRef } from "react";
 import { useInView } from "./useInView";
 import Image from "next/image";
 import TopicHeader from "./TopicHeader";
@@ -41,13 +41,13 @@ export default function ServicesSection() {
   const isInView = useInView(ref);
 
   return (
-    <div className="mt-28 mx-auto pb-10 container px-10" ref={ref}>
+    <div className="mt-28 mx-auto pb-10 container sm:px-10 px-4" ref={ref}>
       <TopicHeader
         name="Our Services"
         subheading="Explore Our Digital Solutions"
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6 relative container mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 :xlgap-6 gap-6 mt-6 relative container mx-auto">
         {services.map((service, index) => (
           <div
             key={service.id}
@@ -75,7 +75,7 @@ export default function ServicesSection() {
                   className="xl:w-25 xl:h-25"
                 />
               </p>
-              <h2 className="font-jost font-medium text-[55px] xl:text-[40px] leading-[120%] tracking-[0.03em]">
+              <h2 className="font-jost font-medium xl:text-[55px] text-[40px]  leading-[120%] tracking-[0.03em]">
                 {service.title}
               </h2>
               <p className="text-[#C4C4C4] text-sm mt-9 leading-relaxed">

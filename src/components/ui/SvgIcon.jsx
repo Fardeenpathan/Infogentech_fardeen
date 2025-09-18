@@ -193,8 +193,8 @@ const Calls = ({ width = "26", height = "26" }) => (
 
 const Snakepath = ({ width = "570", height = "293" }) => (
   <svg
-    width="590"
-    height="360"
+   width={width}
+    height={height}
     viewBox="0 0 590 360"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"

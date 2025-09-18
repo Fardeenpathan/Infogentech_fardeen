@@ -214,12 +214,12 @@ export default function OurPortfolio() {
         name="Our Portfolio"
         subheading="Check Out Our Recently Completed Projects"
       />
-      <div className="flex justify-between mx-14 relative -top-11 ">
-        <div className="flex gap-6">
+      <div className="flex justify-between xl:mx-14 ml-14 xl:ml-0 relative xl:-top-11 -top-20">
+        <div className="grid xl:grid-cols-4 grid-cols-2 gap-6 text-nowrap">
           {services.map((service) => (
             <button
               key={service.id}
-              className={`flex gap-2 items-center justify-center border-[1px] border-white  rounded-md px-7 py-2 cursor-pointer ${
+              className={`flex gap-2 items-center justify-center border-[1px] border-white  rounded-md sm:px-7 py-2  px-4 cursor-pointer ${
                 service.active ? "" : "opacity-30"
               }`}
               onClick={() =>
@@ -233,11 +233,11 @@ export default function OurPortfolio() {
               }
             >
               <Icons name={service.icon} />
-              <p className="text-sm font-jost ">{service.label}</p>
+              <p className="sm:text-sm font-jost text-[10px]">{service.label}</p>
             </button>
           ))}
-        </div>
-        <a href="/portfolio" className="flex gap-8 items-center justify-center">
+        </div> 
+        <a href="/portfolio" className="flex gap-8 items-center justify-center md:block hidden">
           <p className="font-jost font-semibold text-lg leading-[120%] capitalize ">
             See Our <br /> More Projects
           </p>

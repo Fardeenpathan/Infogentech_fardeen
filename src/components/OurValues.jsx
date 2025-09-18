@@ -43,8 +43,8 @@ export default function OurValues() {
           subheading="Core beliefs behind everything we build"
         />
 
-      <div className=" flex justify-between">
-        <div className=" flex justify-center items-center">
+      <div className="flex justify-between flex-col xl:flex-row">
+        <div className=" flex justify-center items-center flex-col xl:flex-row">
           <div
             className="w-50 h-56 bg-transparent border border-white/10 rounded-2xl  flex justify-center items-center backdrop-blur-[51.97px]
          shadow-[0px_0px_8px_0px_#FFFFFF_inset] absolute"
@@ -63,11 +63,10 @@ export default function OurValues() {
             width={640}
             height={150}
             objectFit="cover"
-            className="w-[640px] h-72 relative transform scale-x-[-1] overflow-hidden -z-40 -right-62 -top-6"
+            className="w-[640px] md:h-72 h-40 relative transform xl:scale-x-[-1] overflow-hidden -z-40 xl:-right-62 xl:-top-6 scale-x-[-1] rotate-90 xl:rotate-0 md:top-60 top-45 -right-5"
           />
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2  gap-6  mx-30 max-w-3xl">
+        <div className="grid grid-cols-1 md:grid-cols-2  gap-6 max-w-3xl mt-40 mx-auto">
           {services.map((service) => (
             <div
               key={service.id}
