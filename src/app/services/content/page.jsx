@@ -222,10 +222,10 @@ const Content = () => {
                     className="overflow-hidden"
                   >
                     <div className="py-10 flex flex-col items-center gap-2 text-center">
-                      <p className="font-jost font-bold text-[32px] leading-[24px] text-[#8752FF]">
+                      <p className="font-jost font-bold text-[32px] leading-6 text-[#8752FF]">
                         Our Value
                       </p>
-                      <p className="font-jost font-medium text-lg leading-[24px]">
+                      <p className="font-jost font-medium text-lg leading-6">
                         How we work at Untitled guided by shared values that
                         keep us connected as one team
                       </p>

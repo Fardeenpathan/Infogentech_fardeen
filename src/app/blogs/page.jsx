@@ -87,7 +87,7 @@ const Blogs = () => {
           <p className="font-avalors font-normal text-[75px] leading-none bg-[linear-gradient(91.32deg,_#6A27FF_-32.61%,_#FFFFFF_19.98%,_#6A27FF_112.29%)] bg-clip-text text-transparent">
             Insights & Innovation
           </p>
-          <p className="font-jost text-lg font-medium leading-[24px] text-center mt-6">
+          <p className="font-jost text-lg font-medium leading-6 text-center mt-6">
             Check out our latest ideas, tech trends, and success stories where
             smart planning meets real results and creative ideas make an impact.
           </p>
@@ -141,7 +141,7 @@ const Blogs = () => {
           </div>
         </div>
         <div className="mt-36 px-10">
-          <p className="text-[#8752FF] font-avalors text-[32px] leading-[24px]">
+          <p className="text-[#8752FF] font-avalors text-[32px] leading-6">
             Select Your Category
           </p>
           <div className="flex gap-16 text-[#C4C4C4] mt-13 font-kumbh-sans">

@@ -50,13 +50,13 @@ const BlogSlugPage = () => {
   return (
     <div className="container mx-auto mt-24 text-wrap px-10">
       <div className="flex justify-center items-center flex-col">
-        <p className="font-avalors text-[32px] leading-[24px] font-normal align-middle text-[#8752FF]">
+        <p className="font-avalors text-[32px] leading-6 font-normal align-middle text-[#8752FF]">
           Published 20 jan 2025
         </p>
         <p className="font-avalors text-[32px] font-normal leading-[100%] tracking-[0.03em] mt-6">
           Madhya Pradesh Partners with Submer for AI‑Ready Data Centres
         </p>
-        <p className="font-jost font-medium text-lg leading-[24px] text-center align-middle mt-8">
+        <p className="font-jost font-medium text-lg leading-6 text-center align-middle mt-8">
           What happens when a middle school friendship, a shared love for music,
           and a global pandemic come together? In...
         </p>
@@ -75,7 +75,7 @@ const BlogSlugPage = () => {
         </h1>
         <div className="text-[#82828C] mt-12 border-2 container mx-auto px-10"></div>
       </div>
-      <div className="font-avalors text-[32px] leading-[24px] font-normal mt-12 text-[#8752FF] uppercase">
+      <div className="font-avalors text-[32px] leading-6 font-normal mt-12 text-[#8752FF] uppercase">
         Introduction
       </div>
       <h1 className="mt-18 font-kumbh-sans text-[20px]  leading-[30px]">

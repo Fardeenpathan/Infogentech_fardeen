@@ -20,7 +20,7 @@ const Terms = () => {
             <p className="font-avalors font-normal text-[75px] leading-none bg-[linear-gradient(91.32deg,_#6A27FF_-32.61%,_#FFFFFF_19.98%,_#6A27FF_112.29%)] bg-clip-text text-transparent">
               Your Agreement Matters to Us
             </p>
-            <p className="font-jost font-medium text-lg leading-[24px] align-middle mt-9">
+            <p className="font-jost font-medium text-lg leading-6 align-middle mt-9">
               Welcome to [Your Website Name]. These Terms and Conditions govern
               your access to and use of our website, located at [the “Site”]. By
               accessing or using our Site, you agree to comply with and be bound

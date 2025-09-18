@@ -49,7 +49,7 @@ const SlugPage = () => {
                 {project.description}
               </p>
 
-              <ul className="list-disc list-inside mt-4 space-y-2 text-lg leading-[24px] opacity-70 font-kumbh-sans">
+              <ul className="list-disc list-inside mt-4 space-y-2 text-lg leading-6 opacity-70 font-kumbh-sans">
                 {project.points.map((point, index) => (
                   <li key={index}>{point}</li>
                 ))}

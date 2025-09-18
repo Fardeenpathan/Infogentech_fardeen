@@ -143,7 +143,7 @@ const SlugPage = () => {
           </div>
           <div className="mt-12 justify-between flex gap-12 rounded-lg pb-10">
             <div>
-              <h3 className="font-avalors text-[32px] font-normal leading-[24px] align-middle text-[#8752FF]">
+              <h3 className="font-avalors text-[32px] font-normal leading-6 align-middle text-[#8752FF]">
                 DESIGN STYLE
               </h3>
               <p className="font-jost my-5 underline">Typography</p>
