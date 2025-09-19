@@ -2,7 +2,7 @@ import React from "react";
 
 const DotIndicators = ({ slides, currentIndex, setCurrentIndex }) => {
   return (
-    <div className="border px-5 py-6 rounded-sm flex items-center shadow-[0px_0px_4px_0px_#8955FF]">
+    <div className="border md:px-5 md:py-6 px-2 py-3 rounded-sm flex items-center shadow-[0px_0px_4px_0px_#8955FF]">
       {slides.map((slide, index) => (
         <button
           key={slide.id}
