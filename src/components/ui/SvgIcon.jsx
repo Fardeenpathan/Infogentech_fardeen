@@ -1014,10 +1014,11 @@ const ArrowPortfolioRight = ({ width = "45", height = "20" }) => (
   </svg>
 );
 
-const Star = ({ width = "45", height = "20" }) => (
+const Star = ({ width = "18", height = "17" ,className}) => (
   <svg
-    width="18"
-    height="17"
+    width={width}
+    height={height}
+    className={className}
     viewBox="0 0 18 17"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -2431,6 +2432,15 @@ const Downarrow = () => (
     />
   </svg>
 );
+
+
+
+const SmallStar =({className})=>(
+  <svg width="9" height="9" className={className} viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.05207 0.870074L5.73209 2.24137C5.82483 2.43226 6.0721 2.61536 6.28077 2.65042L7.5133 2.85689C8.30153 2.98935 8.48701 3.56592 7.91901 4.13469L6.9608 5.10082C6.7985 5.26443 6.70966 5.57999 6.75986 5.80597L7.03422 7.00194C7.25058 7.9486 6.75213 8.31481 5.92144 7.82004L4.76615 7.13051C4.55752 7.00585 4.21365 7.00585 4.00111 7.13051L2.84586 7.82004C2.019 8.31481 1.51671 7.9447 1.73308 7.00194L2.00741 5.80597C2.05764 5.57999 1.96877 5.26443 1.80649 5.10082L0.848274 4.13469C0.28416 3.56592 0.465759 2.98935 1.25397 2.85689L2.48652 2.65042C2.6913 2.61536 2.93859 2.43226 3.03131 2.24137L3.71134 0.870074C4.08226 0.125991 4.685 0.125991 5.05207 0.870074Z" fill="#8752FF"/>
+</svg>
+
+)
 const Icons = {
   GraphicDesign,
   UIUXDesign,
@@ -2497,7 +2507,8 @@ const Icons = {
   BlurEffectRight,
   BlogBlurRight,
   BlogBlurLeft, 
-  Downarrow
+  Downarrow,
+  SmallStar
 };
 
 export default Icons;

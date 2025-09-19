@@ -87,7 +87,7 @@ const Design = () => {
     {
       id: "03",
       title: "Branding",
-      image: "/assist/img/branding.png", // 🖼️ added image
+      image: "/assist/services/design/branding.png",
       subServices: [
         {
           id: "01",
@@ -114,7 +114,7 @@ const Design = () => {
     {
       id: "04",
       title: "Logo Design",
-      image: "/assist/img/logo-design.png", // 🖼️ added image
+      image: "/assist/img/logo-design.png",
       subServices: [
         // empty by design
       ],

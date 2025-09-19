@@ -214,12 +214,12 @@ export default function OurPortfolio() {
         name="Our Portfolio"
         subheading="Check Out Our Recently Completed Projects"
       />
-      <div className="flex justify-between xl:mx-14 ml-14 xl:ml-0 relative xl:-top-11 -top-20">
-        <div className="grid xl:grid-cols-4 grid-cols-2 gap-6 text-nowrap">
+      <div className="flex justify-between xl:mx-14 ml-14 xl:ml-20  relative xl:-top-11 -top-20 ">
+        <div className="grid md:grid-cols-4 grid-cols-2 gap-3 sm:gap-6 text-nowrap w-full xl:flex">
           {services.map((service) => (
             <button
               key={service.id}
-              className={`flex gap-2 items-center justify-center border-[1px] border-white  rounded-md sm:px-7 py-2  px-4 cursor-pointer ${
+              className={`flex gap-2 items-center justify-center border-[1px] border-white  rounded-md sm:px-7 py-2 px-4 cursor-pointer ${
                 service.active ? "" : "opacity-30"
               }`}
               onClick={() =>
@@ -233,7 +233,7 @@ export default function OurPortfolio() {
               }
             >
               <Icons name={service.icon} />
-              <p className="sm:text-sm font-jost text-[10px]">
+              <p className="sm:text-sm font-jost text-[12px]">
                 {service.label}
               </p>
             </button>
@@ -241,9 +241,9 @@ export default function OurPortfolio() {
         </div>
         <a
           href="/portfolio"
-          className="flex gap-8 items-center justify-center md:block hidden"
+          className="hidden xl:flex gap-8 items-center justify-center"
         >
-          <p className="font-jost font-semibold text-lg leading-[120%] capitalize ">
+          <p className="font-jost font-semibold text-lg leading-[120%] capitalize text-nowrap">
             See Our <br /> More Projects
           </p>
           <Icons name="Arrow" width={62} height={28} />
@@ -306,7 +306,8 @@ export default function OurPortfolio() {
                 ))}
               </ul>
             </div>
-            <div className="flex gap-x-3 md:gap-x-10 items-center mt-10 xl:block hidden">
+            <div className="hidden xl:flex gap-x-3 md:gap-x-10 items-center mt-10">
+
               <DotIndicators
                 slides={slides}
                 currentIndex={subIndex}

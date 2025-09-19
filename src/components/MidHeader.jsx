@@ -12,10 +12,10 @@ export default function MidHeader({ name = "", subheading = "", paragraph="", cl
           />
         </div>
 {/* shadow-[0px_0px_40px_5px_rgba(106,39,255,0.35)] */}
-        <p className="font-avalors font-normal text-[32px] leading-6 align-middle text-primary mt-5">
+        <p className="font-avalors font-normal md:text-[32px] text-2xl leading-6 align-middle text-primary">
           {name}
         </p>
-        <p className="font-jost font-medium text-lg leading-6 align-middle mt-3">
+        <p className="font-jost font-medium md:text-lg  text-sm leading-6 align-middle md:mt-3 mt-1">
           {subheading}
         </p>
         {paragraph && (
