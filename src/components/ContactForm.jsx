@@ -6,6 +6,7 @@ import Icons from "./ui/Icon";
 import PurpleCheckbox from "./ui/Checkbox";
 import GradientButton from "./ui/GradientButton";
 import config from "@/config";
+import adminApiService from "@/lib/adminApi";
 const contactInfo = [
   {
     icon: "Contact",
@@ -78,23 +79,14 @@ const ContactForm = () => {
     setSubmitMessage("");
 
     try {
-      const response = await fetch(
-        `${config.api.baseUrl}${config.api.endpoints.contact}`,
-        {
+      // Use centralized API helper which builds the URL and headers
+      const result = await adminApiService.request(config.api.endpoints.contact, {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        }
-      );
+        body: JSON.stringify(formData),
+      });
 
-      const result = await response.json();
-
-      if (response.ok) {
-        setSubmitMessage(
-          "Message sent successfully! We will get back to you soon."
-        );
+      // If request succeeds, adminApiService.request will return parsed JSON
+      setSubmitMessage(result.message || "Message sent successfully! We will get back to you soon.");
         setFormData({
           name: "",
           email: "",
@@ -102,13 +94,8 @@ const ContactForm = () => {
           productQuestion: "",
           message: "",
         });
-      } else {
-        setSubmitMessage(
-          result.message || "Failed to send message. Please try again."
-        );
-      }
     } catch (error) {
-      setSubmitMessage("Error sending message. Please try again later.");
+      setSubmitMessage(error.message || "Error sending message. Please try again later.");
       console.error("Contact form error:", error);
     } finally {
       setIsSubmitting(false);
@@ -286,9 +273,9 @@ const ContactForm = () => {
                   <PurpleCheckbox label="subscribe to receive the latest news and exclusive offers" />
                 </div>
                 <ReCAPTCHA
-                  sitekey={config.recaptcha.siteKey}
-                  onChange={handleCaptcha}
-                />
+  sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+  onChange={(value) => setFormData({ ...formData, captcha: value })}
+/>
                 {submitMessage && (
                   <div
                     className={`text-sm ${
