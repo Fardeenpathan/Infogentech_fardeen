@@ -13,7 +13,7 @@ export default function MissionAbout() {
       </div>
       <div className="flex pl-10 gap-50 left-10">
         <div className="flex flex-col basis-[50%]">
-          <p className="text-[32px] leading-[150%] capitalize font-avalors text-[#8752FF]">
+          <p className="text-[32px] leading-[150%] capitalize font-avalors text-primary">
             Our Vision And Mission
           </p>
           <p className="lg:text-[26px] font-medium leading-[150%]  align-middle font-jost text-[#C9C9C9] xl:text-xl">
