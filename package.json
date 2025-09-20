@@ -11,6 +11,13 @@
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",
     "@tailwindcss/forms": "^0.5.10",
+    "@tiptap/extension-color": "^3.4.4",
+    "@tiptap/extension-image": "^3.4.4",
+    "@tiptap/extension-link": "^3.4.4",
+    "@tiptap/extension-text-align": "^3.4.4",
+    "@tiptap/extension-text-style": "^3.4.4",
+    "@tiptap/react": "^3.4.4",
+    "@tiptap/starter-kit": "^3.4.4",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.12",
@@ -19,6 +26,7 @@
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-google-recaptcha": "^3.1.0",
+    "react-hot-toast": "^2.6.0",
     "tailwind-merge": "^3.3.1",
     "tailwindcss-animate": "^1.0.7"
   },
