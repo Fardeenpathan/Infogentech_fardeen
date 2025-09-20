@@ -4,6 +4,7 @@ import PortfolioServices from "@/components/PortfolioServices";
 import SubscribeContact from "@/components/SubscribeContact";
 import Image from "next/image";
 import Icons from "@/components/ui/Icon";
+import CustomLine from "@/components/CustomLine";
 import Link from "next/link";
 import designProjects from "./designProjects.json";
 
@@ -49,7 +50,7 @@ const Design = () => {
             </div>
           ))}
         </div>
-        <div className="text-[#82828C] border-2 container mx-auto px-10"></div>
+        <CustomLine/>
         <SubscribeContact />
       </div>
     </>

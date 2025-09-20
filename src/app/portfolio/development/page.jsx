@@ -6,6 +6,7 @@ import Image from "next/image";
 import Icons from "@/components/ui/Icon";
 import Link from "next/link";
 import { useState } from "react";
+import CustomLine from "@/components/CustomLine";
 import developmentProjects from "./developmentProjects.json";
 
 const DigitalMarketing = () => {
@@ -51,7 +52,7 @@ const DigitalMarketing = () => {
             </div>
           ))}
         </div>
-        <div className="text-[#82828C] border-2 container mx-auto px-10"></div>
+        <CustomLine/>
         <SubscribeContact />
       </div>
     </>

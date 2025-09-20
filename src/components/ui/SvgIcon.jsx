@@ -2162,10 +2162,11 @@ const PortHomeRight = () => (
   </svg>
 );
 
-const CurveGradient = () => (
+const CurveGradient = ({width="552", height="302"}) => (
   <svg
-    width="552"
-    height="302"
+    width={width}
+    height={height}
+    className={`md:w-[552px] h-[302px] w-[350px]`}
     viewBox="0 0 552 302"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
