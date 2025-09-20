@@ -87,7 +87,7 @@ const Design = () => {
     {
       id: "03",
       title: "Branding",
-      image: "/assist/img/branding.png", // 🖼️ added image
+      image: "/assist/services/design/branding.png",
       subServices: [
         {
           id: "01",
@@ -114,7 +114,7 @@ const Design = () => {
     {
       id: "04",
       title: "Logo Design",
-      image: "/assist/img/logo-design.png", // 🖼️ added image
+      image: "/assist/img/logo-design.png",
       subServices: [
         // empty by design
       ],
@@ -190,7 +190,7 @@ const Design = () => {
                     className="overflow-hidden"
                   >
                     <div className="py-10 flex flex-col items-center gap-2 text-center">
-                      <p className="font-jost font-bold text-[32px] leading-6 text-[#8752FF]">
+                      <p className="font-jost font-bold text-[32px] leading-6 text-primary">
                         Our Value
                       </p>
                       <p className="font-jost font-medium text-lg leading-6">

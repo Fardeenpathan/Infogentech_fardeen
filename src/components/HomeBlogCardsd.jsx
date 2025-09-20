@@ -27,7 +27,7 @@ export default function HomeBlogCardsd({ blog }) {
             </p>
           </div>
         </div>
-        <div className="flex items-center justify-between text-[#8752FF] bottom-4 ">
+        <div className="flex items-center justify-between text-primary bottom-4 ">
               <p className="text-[#73737F] font-jost font-medium text-sm leading-[120%] ">
                 {blog.date}
               </p>

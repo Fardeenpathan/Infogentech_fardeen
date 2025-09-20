@@ -1,6 +1,6 @@
 
 
-export default function StatsItem({value, suffix, label ,color ="text-[#8752FF]"}) {
+export default function StatsItem({value, suffix, label ,color ="text-primary"}) {
     return (
           <div className="flex flex-col space-y-3 items-center text-nowrap">
 

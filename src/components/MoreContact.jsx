@@ -3,7 +3,7 @@ export default function MoreContact() {
   return (
     <div className="flex gap-7 flex-row justify-center items-center ">
       <div className="flex justify-center items-center flex-col">
-        <p className="font-avalors font-normal text-[32px] leading-6 align-middle text-[#8752FF] mt-5">
+        <p className="font-avalors font-normal text-[32px] leading-6 align-middle text-primary mt-5">
           Looking for More Information?
         </p>
         <p className="font-jost font-medium text-lg leading-6 align-middle mt-3">

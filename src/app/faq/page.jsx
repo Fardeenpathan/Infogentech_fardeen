@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import Icons from "@/components/ui/Icon";
 import Loader from "@/components/loader/Loader";
-
+import Slider from "@/components/slider/Slider";
 const categoryList = [
   { key: "general", label: "General & Services" },
   { key: "pricing", label: "Pricing & Timeline" },
@@ -164,6 +164,7 @@ const FAQs = () => {
           )}
         </aside>
       </section>
+      <Slider/>
     </div>
   );
 };

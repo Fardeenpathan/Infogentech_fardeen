@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import Image from "next/image";
 import Icons from "./ui/Icon";
@@ -45,22 +45,27 @@ const socialMedia = [
   },
 ];
 const ContactForm = () => {
-  const [isVerified, setIsVerified] = useState(true);
+  const [isVerified, setIsVerified] = useState(false);
+  const recaptchaRef = useRef(null);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phoneNumber: "",
     productQuestion: "",
     message: "",
+    captcha: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState("");
 
-  const handleCaptcha = (value) => {
-    if (value) {
+  const handleCaptcha = (token) => {
+    if (token) {
       setIsVerified(true);
+      setFormData((prev) => ({ ...prev, captcha: token }));
     } else {
       setIsVerified(false);
+      setFormData((prev) => ({ ...prev, captcha: "" }));
     }
   };
 
@@ -74,7 +79,7 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!isVerified) {
+    if (!isVerified || !formData.captcha) {
       setSubmitMessage("Please complete the reCAPTCHA verification.");
       return;
     }
@@ -84,30 +89,30 @@ const ContactForm = () => {
 
     try {
       // Use centralized API helper which builds the URL and headers
-      const result = await adminApiService.request(
-        config.api.endpoints.contact,
-        {
-          method: "POST",
-          body: JSON.stringify(formData),
-        }
-      );
-
-      // If request succeeds, adminApiService.request will return parsed JSON
-      setSubmitMessage(
-        result.message ||
-          "Message sent successfully! We will get back to you soon."
-      );
+      const result = await adminApiService.request(config.api.endpoints.contact, {
+        method: "POST",
+        body: JSON.stringify(formData),
+      });
+      setSubmitMessage(result.message || "Contact form submitted successfully. We will get back to you soon.");
       setFormData({
         name: "",
         email: "",
         phoneNumber: "",
         productQuestion: "",
         message: "",
+        captcha: "",
       });
+
+   
+      if (recaptchaRef.current) {
+        recaptchaRef.current.reset();
+      }
+      setIsVerified(false);
+
+      // clear success message after a short time (optional)
+      setTimeout(() => setSubmitMessage(""), 6000);
     } catch (error) {
-      setSubmitMessage(
-        error.message || "Error sending message. Please try again later."
-      );
+      setSubmitMessage(error?.message || "Error sending message. Please try again later.");
       console.error("Contact form error:", error);
     } finally {
       setIsSubmitting(false);
@@ -295,10 +300,9 @@ const ContactForm = () => {
                   <PurpleCheckbox label="subscribe to receive the latest news and exclusive offers" />
                 </div>
                 <ReCAPTCHA
+                  ref={recaptchaRef}
                   sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-                  onChange={(value) =>
-                    setFormData({ ...formData, captcha: value })
-                  }
+                  onChange={handleCaptcha}
                 />
                 {submitMessage && (
                   <div

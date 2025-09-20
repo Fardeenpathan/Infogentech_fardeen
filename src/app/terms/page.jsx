@@ -144,7 +144,7 @@ const Terms = () => {
               </h2>
               <p className="mt-3 list-disc list-inside text-lg space-y-2 text-jost pl-4">
                 Email Address : Info@infogentech.com <br /> Phone Number :
-                9999999999 <br /> Company Name & Address : Infogentech , model
+                +91 991-013-0963 <br /> Company Name & Address : Infogentech , model
                 Town
               </p>
             </section>

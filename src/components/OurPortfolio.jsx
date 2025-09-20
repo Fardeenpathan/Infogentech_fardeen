@@ -209,17 +209,17 @@ export default function OurPortfolio() {
   };
 
   return (
-    <div className="mt-36">
+    <div className=" xl:mt-30 md:mt-20 mt-10">
       <TopicHeader
         name="Our Portfolio"
         subheading="Check Out Our Recently Completed Projects"
       />
-      <div className="flex justify-between xl:mx-14 ml-14 xl:ml-0 relative xl:-top-11 -top-20">
-        <div className="grid xl:grid-cols-4 grid-cols-2 gap-6 text-nowrap">
+      <div className="flex justify-between xl:mx-14 ml-14 xl:ml-20  relative xl:-top-11 -top-20 ">
+        <div className="grid md:grid-cols-4 grid-cols-2 gap-3 sm:gap-6 text-nowrap w-full xl:flex">
           {services.map((service) => (
             <button
               key={service.id}
-              className={`flex gap-2 items-center justify-center border-[1px] border-white  rounded-md sm:px-7 py-2  px-4 cursor-pointer ${
+              className={`flex gap-2 items-center justify-center border-[1px] border-white  rounded-md sm:px-7 py-2 px-4 cursor-pointer ${
                 service.active ? "" : "opacity-30"
               }`}
               onClick={() =>
@@ -233,7 +233,7 @@ export default function OurPortfolio() {
               }
             >
               <Icons name={service.icon} />
-              <p className="sm:text-sm font-jost text-[10px]">
+              <p className="sm:text-sm font-jost text-[12px]">
                 {service.label}
               </p>
             </button>
@@ -241,9 +241,9 @@ export default function OurPortfolio() {
         </div>
         <a
           href="/portfolio"
-          className="flex gap-8 items-center justify-center md:block hidden"
+          className="hidden xl:flex gap-8 items-center justify-center"
         >
-          <p className="font-jost font-semibold text-lg leading-[120%] capitalize ">
+          <p className="font-jost font-semibold text-lg leading-[120%] capitalize text-nowrap">
             See Our <br /> More Projects
           </p>
           <Icons name="Arrow" width={62} height={28} />
@@ -306,7 +306,8 @@ export default function OurPortfolio() {
                 ))}
               </ul>
             </div>
-            <div className="flex gap-x-3 md:gap-x-10 items-center mt-10 xl:block hidden">
+            <div className="hidden xl:flex gap-x-3 md:gap-x-10 items-center mt-10">
+
               <DotIndicators
                 slides={slides}
                 currentIndex={subIndex}
@@ -331,8 +332,9 @@ export default function OurPortfolio() {
                 <Icons name="ArrowPortfolioRight" width={45} height={20} />
               </button>
             </div>
+            
           </div>
-
+            
           <div className="px-2 pt-2 order-1 xl:order-2 rounded-lg border-b-0 bg-[linear-gradient(180deg,#8752FF_0%,#513199_38.59%)] xl:mt-34 mt-4 rotate-[-5.03deg] shadow-[7px_-4px_108px_-43px_#8955FF] relative xl:-right-5 right-0 transition-all duration-500 ease-in-out">
             <div className="w-full xl:min-h-[580px] bg-black rounded-xl flex justify-between overflow-hidden h-auto">
               {currentSlide?.image ? (
@@ -353,6 +355,15 @@ export default function OurPortfolio() {
           </div>
         </div>
       </div>
+       <a
+        href="/portfolio/design"
+        className="gap-8 items-center justify-end mr-2 relative -top-10  flex xl:hidden mt-14"
+      >
+        <p className="font-jost font-semibold  text-sm leading-[120%] capitalize ">
+          See Our <br /> More Projects
+        </p>
+        <Icons name="Arrow" height={14} width={31}/>
+      </a>
     </div>
   );
 }

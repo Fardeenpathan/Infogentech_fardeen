@@ -55,7 +55,7 @@ const marketingProjects = [
     "title": "TechHive Expanding SaaS Market Presence",
     "slug": "TechHive-Expanding-SaaS-Market-Presence",
     "image": "/assist/portfolio/marketing/bluestarCaseStudy.png",
-    "subImage": "/assist/portfolio/marketing/techHive.png",
+    "subImage": "/assist/portfolio/marketing/TechHiveExpanding.png",
     "description": "TechHive is a SaaS company providing cloud solutions for small businesses. The campaign focused on visibility, lead generation, and content thought leadership.",
     "points": [
       "Whitepapers: Produced in-depth industry resources.",
@@ -68,7 +68,7 @@ const marketingProjects = [
     "title": "StyleAura Elevating Fashion E-Commerce",
     "slug": "StyleAura-Elevating-Fashion-Ecommerce",
     "image": "/assist/portfolio/marketing/SohoCaseStudy.png",
-    "subImage": "/assist/portfolio/marketing/styleAura.png",
+    "subImage": "/assist/portfolio/marketing/soho.png",
     "description": "StyleAura is an online fashion retailer targeting millennial shoppers. Its content strategy highlighted seasonal collections and influencer collaborations.",
     "points": [
       "Lookbooks: Created interactive seasonal fashion guides.",
@@ -81,7 +81,7 @@ const marketingProjects = [
     "title": "MediPlus Building Trust in Digital Healthcare",
     "slug": "MediPlus-Building-Trust-in-Digital-Healthcare",
     "image": "/assist/portfolio/marketing/SomoCasestudy.png",
-    "subImage": "/assist/portfolio/marketing/mediPlus.png",
+    "subImage": "/assist/portfolio/marketing/SomoEducation.png",
     "description": "MediPlus is a telemedicine platform that connects patients with doctors. The project focused on credibility, education, and patient engagement.",
     "points": [
       "Health Blogs: Easy-to-read guides on conditions and treatments.",
@@ -94,7 +94,7 @@ const marketingProjects = [
     "title": "EduSpark Driving Student Enrollments Online",
     "slug": "EduSpark-Driving-Student-Enrollments-Online",
     "image": "/assist/portfolio/marketing/SuiithagaCasestudy.png",
-    "subImage": "/assist/portfolio/marketing/eduSpark.png",
+    "subImage": "/assist/portfolio/marketing/Suii_thaga.png",
     "description": "EduSpark is an e-learning platform offering online courses and certifications. Content and SEO work helped attract learners worldwide.",
     "points": [
       "Course Landing Pages: Optimized for higher conversions.",

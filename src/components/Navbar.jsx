@@ -23,8 +23,8 @@ export function Navbar() {
   const linkClasses = (href) =>
     `transition-colors ${
       pathname === href
-        ? "text-[#8752FF] font-semibold"
-        : "text-white hover:text-[#8752FF]"
+        ? "text-primary font-semibold"
+        : "text-white hover:text-primary"
     }`;
   const dropdownVariants = {
     hidden: {

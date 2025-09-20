@@ -50,7 +50,7 @@ const BlogSlugPage = () => {
   return (
     <div className="container mx-auto mt-24 text-wrap px-10">
       <div className="flex justify-center items-center flex-col">
-        <p className="font-avalors text-[32px] leading-6 font-normal align-middle text-[#8752FF]">
+        <p className="font-avalors text-[32px] leading-6 font-normal align-middle text-primary">
           Published 20 jan 2025
         </p>
         <p className="font-avalors text-[32px] font-normal leading-[100%] tracking-[0.03em] mt-6">
@@ -75,7 +75,7 @@ const BlogSlugPage = () => {
         </h1>
         <div className="text-[#82828C] mt-12 border-2 container mx-auto px-10"></div>
       </div>
-      <div className="font-avalors text-[32px] leading-6 font-normal mt-12 text-[#8752FF] uppercase">
+      <div className="font-avalors text-[32px] leading-6 font-normal mt-12 text-primary uppercase">
         Introduction
       </div>
       <h1 className="mt-18 font-kumbh-sans text-[20px]  leading-[30px]">
@@ -121,7 +121,7 @@ const BlogSlugPage = () => {
         massa enim vitae duis mattis. Vel in ultricies vel fringilla.
       </h1>
       <div className="mt-10">
-        <h2 className="font-jost text-[30px] font-normal leading-[38px] text-[#8752FF]">
+        <h2 className="font-jost text-[30px] font-normal leading-[38px] text-primary">
           Conclusion
         </h2>
         <p className="mt-5 font-kumbh-sans text-[20px]  leading-[30px]">
@@ -132,7 +132,7 @@ const BlogSlugPage = () => {
         </p>
       </div>
       <section className="mt-10">
-        <h2 className="font-jost text-[30px] font-normal leading-[38px] text-[#8752FF]">
+        <h2 className="font-jost text-[30px] font-normal leading-[38px] text-primary">
           FAQs
         </h2>
         <div className="rounded-lg">

@@ -34,27 +34,36 @@ const blogData = [
 ];
 export default function LatestBlogs() {
   return (
-    <div className="mt-8 ">
+    <div className="mt-8">
       <MidHeader
         name="Latest Blogs"
         subheading="Explore Ideas, Trends, and Strategies Shaping Digital Success."
       />
       <a
         href="#"
-        className="flex gap-8 items-center justify-end mr-10 relative -top-10"
+        className="gap-8 items-center justify-end mr-10 relative -top-10 hidden xl:flex"
       >
         <p className="font-jost font-semibold text-lg leading-[120%] capitalize ">
           See Our <br /> More Blogs
         </p>
         <Icons name="Arrow" width={62} height={28} />
       </a>
-      <div className="relative flex flex-col items-center justify-center">
+      <div className="relative flex flex-col items-center justify-center mt-5">
         <div className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-12">
           {blogData.map((blog) => (
             <HomeBlogCardsd key={blog.id} blog={blog} />
           ))}
         </div>
       </div>
+      <a
+        href="/blogs"
+        className="gap-8 items-center justify-end mr-2 relative -top-10  flex xl:hidden mt-14"
+      >
+        <p className="font-jost font-semibold  text-sm leading-[120%] capitalize ">
+          See Our <br /> More Blogs
+        </p>
+        <Icons name="Arrow" height={14} width={31}/>
+      </a>
     </div>
   );
 }
