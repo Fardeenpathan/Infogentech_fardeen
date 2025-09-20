@@ -2,7 +2,6 @@
 import { useState, useEffect } from "react";
 import Icons from "@/components/ui/Icon";
 import Loader from "@/components/loader/Loader";
-import Slider from "@/components/slider/Slider";
 const categoryList = [
   { key: "general", label: "General & Services" },
   { key: "pricing", label: "Pricing & Timeline" },
@@ -72,6 +71,7 @@ const FAQs = () => {
 
   return (
     <div className="mt-35 subContainer mx-auto">
+      
       <div className="flex justify-between items-center">
         <div className="flex gap-10">
           <div className="flex justify-center items-center mb-40 flex-col">
@@ -164,7 +164,6 @@ const FAQs = () => {
           )}
         </aside>
       </section>
-      <Slider/>
     </div>
   );
 };
