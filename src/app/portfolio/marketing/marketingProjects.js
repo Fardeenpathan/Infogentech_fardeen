@@ -1,133 +1,319 @@
 const marketingProjects = [
   {
-    "id": 2,
-    "title": "AirLine Reservation Window",
-    "slug": "airLine-reservation-window",
-    "image": "/assist/portfolio/marketing/AirlineCaseStudy.png",
-    "subImage": "/assist/portfolio/marketing/airline.png",
-    "description": "EcoMart is an online marketplace promoting eco-friendly and sustainable products, helping conscious consumers shop responsibly while enjoying smooth e-commerce experiences.",
-    "points": [
+    id: 2,
+    title: "AirLine Reservation Window",
+    slug: "airLine-reservation-window",
+    image: "/assist/portfolio/marketing/AirlineCaseStudy.png",
+    subImage: "/assist/portfolio/marketing/airline.png",
+    description:
+      "EcoMart is an online marketplace promoting eco-friendly and sustainable products, helping conscious consumers shop responsibly while enjoying smooth e-commerce experiences.",
+    points: [
       "Content Strategy: Developed keyword clusters around sustainable living.",
       "Blog Campaigns: Created eco-lifestyle guides and product highlights.",
-      "Conversion Optimization: Enhanced product pages with persuasive copy."
+      "Conversion Optimization: Enhanced product pages with persuasive copy.",
     ],
     date: "January - Continuing (2025) ",
     duration: "9 months",
-    tools: ["Google Search Console" ,
-"Google Analytics ",
-"WordPress / CMS ",
-"SEMRush / Ahrefs ",
-"Canva" ],
+    tools: [
+      "Google Search Console",
+      "Google Analytics ",
+      "WordPress / CMS ",
+      "SEMRush / Ahrefs ",
+      "Canva",
+    ],
     client: "AirlineReservationWindow.com – Online Flight Booking Platform",
     location: "Global (Online Service)",
     modules: [
-   "   SEO (On-Page & Off-Page) ",
-"Content Marketing (Travel Guides, Blogs, Deals) ",
-"UX & Website Optimization ",
-"Customer Support (24/7 Chat & Phone) ",
-"Performance Tracking (Google Search Console) ",
-"Conversion Rate Optimization (Future Focus) ",
+      "   SEO (On-Page & Off-Page) ",
+      "Content Marketing (Travel Guides, Blogs, Deals) ",
+      "UX & Website Optimization ",
+      "Customer Support (24/7 Chat & Phone) ",
+      "Performance Tracking (Google Search Console) ",
+      "Conversion Rate Optimization (Future Focus) ",
     ],
     expertise: [
- "    Search Engine Optimization ",
-"Content Strategy & Marketing ",
-"User Experience Design ",
-"Brand Positioning & Trust Building ",
-"Customer Retention & Engagement ",
-"Conversion Optimization",
+      "    Search Engine Optimization ",
+      "Content Strategy & Marketing ",
+      "User Experience Design ",
+      "Brand Positioning & Trust Building ",
+      "Customer Retention & Engagement ",
+      "Conversion Optimization",
     ],
   },
   {
-    "id": 3,
-    "title": "FitFuel App Boosting Health & Nutrition Engagement",
-    "slug": "FitFuel-App-Boosting-Health-Nutrition-Engagement",
-    "image": "/assist/portfolio/marketing/ananyaCaseStudy.png",
-    "subImage": "/assist/portfolio/marketing/ananya.png",
-    "description": "FitFuel is a mobile app offering personalized meal plans and workout tracking. It drives user engagement through actionable health content and interactive features.",
-    "points": [
+    id: 3,
+    title: "@ananyakhurana_30 – Fashion Influencer ",
+    slug: "ananyakhurana30-Fashion-Influencer",
+    image: "/assist/portfolio/marketing/ananyaCaseStudy.png",
+    subImage: "/assist/portfolio/marketing/ananya.png",
+    description:
+      "FitFuel is a mobile app offering personalized meal plans and workout tracking. It drives user engagement through actionable health content and interactive features.",
+    points: [
       "SEO Articles: Researched and wrote fitness tips & nutrition advice.",
       "Community Content: Engaging social posts and challenges.",
-      "App Store Optimization: Optimized descriptions for downloads."
-    ]
+      "App Store Optimization: Optimized descriptions for downloads.",
+    ],
+    date: "January - Continuing (2025) ",
+    duration: "2 months",
+    tools: [
+      " Instagram Analytics ",
+      "Meta Business Suite ",
+      "Canva (Visual Design & Reels Assets) ",
+      "Notion (Content Calendar) ",
+      "Hashtag Research Tools ",
+    ],
+    client: "@ananyakhurana_30 – Fashion Influencer ",
+    location: "India (Instagram Platform)",
+    modules: [
+      "Profile Optimization",
+      "Content Strategy & Calendar (Fashion Tips, GRWMs, Trends) ",
+      "Audience Engagement (Polls, Q&As, Replies) ",
+      "Reels Strategy (Trending Sounds, Fashion Aesthetics) ",
+      "Brand Collaboration Positioning ",
+      "Hashtag Research & Implementation ",
+    ],
+    expertise: [
+      "Social Media Growth Strategy ",
+      "Content Planning & Execution ",
+      "Influencer Branding & Positioning ",
+      "Engagement Tactics ",
+      "Performance Tracking & Optimization ",
+      "Brand Partnership Readiness ",
+    ],
   },
   {
-    "id": 4,
-    "title": "TechHive Expanding SaaS Market Presence",
-    "slug": "TechHive-Expanding-SaaS-Market-Presence",
-    "image": "/assist/portfolio/marketing/bluestarCaseStudy.png",
-    "subImage": "/assist/portfolio/marketing/TechHiveExpanding.png",
-    "description": "TechHive is a SaaS company providing cloud solutions for small businesses. The campaign focused on visibility, lead generation, and content thought leadership.",
-    "points": [
+    id: 4,
+    title: "Bluestar Buildprop – Real Estate Brand ",
+    slug: "Bluestar-Buildprop-Real-Estate-Brand",
+    image: "/assist/portfolio/marketing/bluestarCaseStudy.png",
+    subImage: "/assist/portfolio/marketing/TechHiveExpanding.png",
+    description:
+      "TechHive is a SaaS company providing cloud solutions for small businesses. The campaign focused on visibility, lead generation, and content thought leadership.",
+    points: [
       "Whitepapers: Produced in-depth industry resources.",
       "Case Studies: Showcased client success stories.",
-      "LinkedIn Marketing: Published expert insights & updates."
-    ]
+      "LinkedIn Marketing: Published expert insights & updates.",
+    ],
+    date: "July – August 2025 ",
+    duration: "1 month",
+    tools: [
+      "    Instagram Analytics ",
+      "Meta Business Suite ",
+      "Canva (Content & Reels Design) ",
+      "Notion (Content Calendar) ",
+      "Hashtag Research Tools ",
+    ],
+    client: "Bluestar Buildprop – Real Estate Brand ",
+    location: "India (Instagram Platform) ",
+    modules: [
+      "Profile Optimization (Bio, Highlights, Location Tags) ",
+      "Content Strategy (Property Reels, Tips, Neighborhood Features, Success Stories) ",
+      "Engagement Strategy (Replies, DMs, Daily Interaction) ",
+      "Story Marketing (Property Updates, Site Visits) ",
+      "Hashtag Research & Collaborations ",
+      "Performance Tracking & Optimization ",
+    ],
+    expertise: [
+      "    Social Media Growth Strategy ",
+      "Content Branding & Visual Identity ",
+      "Real Estate Digital Marketing ",
+      "Community Engagement ",
+      "Influencer/Partner Collaborations ",
+      "Data-Driven Optimization ",
+    ],
   },
   {
-    "id": 5,
-    "title": "StyleAura Elevating Fashion E-Commerce",
-    "slug": "StyleAura-Elevating-Fashion-Ecommerce",
-    "image": "/assist/portfolio/marketing/SohoCaseStudy.png",
-    "subImage": "/assist/portfolio/marketing/soho.png",
-    "description": "StyleAura is an online fashion retailer targeting millennial shoppers. Its content strategy highlighted seasonal collections and influencer collaborations.",
-    "points": [
+    id: 5,
+    title:
+      "Soho Resort Corbett — Luxury Nature Resort in Jim Corbett, Uttarakhand ",
+    slug: "Soho-Resort-Corbett-Luxury-Nature-Resort-in-Jim-Corbett-Uttarakhand",
+    image: "/assist/portfolio/marketing/SohoCaseStudy.png",
+    subImage: "/assist/portfolio/marketing/soho.png",
+    description:
+      "StyleAura is an online fashion retailer targeting millennial shoppers. Its content strategy highlighted seasonal collections and influencer collaborations.",
+    points: [
       "Lookbooks: Created interactive seasonal fashion guides.",
       "Influencer Content: Managed blog and collab posts.",
-      "SEO Optimization: Trend-driven keyword strategies."
-    ]
+      "SEO Optimization: Trend-driven keyword strategies.",
+    ],
+    date: "November 2024 – June 2025 ",
+    duration: "8 Months ",
+    tools: [
+      "   Meta Ads Manager ",
+      "Google Ads (Search, Display, Performance Max) ",
+      "Google Analytics + Tag Manager ",
+      "Canva / Premiere Pro (Ad Creatives) ",
+      "Landing Page Builders (Webflow/WordPress)",
+    ],
+    client:
+      "Soho Resort Corbett — Luxury Nature Resort in Jim Corbett, Uttarakhand ",
+    location: "Global (Online Service)",
+    modules: [
+      "   Meta Ads (Facebook + Instagram) ",
+      "Google Ads (Search, Display, Performance Max) ",
+      "Landing Page Optimization ",
+      "Conversion Tracking Setup (Meta Pixel + Google) ",
+      "Creative Strategy (Videos, Carousels, Testimonials) ",
+      "Retargeting & Audience Segmentation",
+    ],
+    expertise: [
+      "    Performance Marketing (Meta & Google Ads) ",
+      "Direct Booking Growth Strategy ",
+      "Hospitality Digital Marketing ",
+      "High-Intent Keyword Targeting ",
+      "Ad Budget Scaling & ROI Optimization ",
+    ],
   },
   {
-    "id": 6,
-    "title": "MediPlus Building Trust in Digital Healthcare",
-    "slug": "MediPlus-Building-Trust-in-Digital-Healthcare",
-    "image": "/assist/portfolio/marketing/SomoCasestudy.png",
-    "subImage": "/assist/portfolio/marketing/SomoEducation.png",
-    "description": "MediPlus is a telemedicine platform that connects patients with doctors. The project focused on credibility, education, and patient engagement.",
-    "points": [
+    id: 6,
+    title:
+      "SeaC Overseas Education Consultants — Study Abroad Consultancy (US Programs) ",
+    slug: "SeaC-Overseas-Education-Consultants-Study-Abroad-Consultancy-US-Programs",
+    image: "/assist/portfolio/marketing/SomoCasestudy.png",
+    subImage: "/assist/portfolio/marketing/SomoEducation.png",
+    description:
+      "MediPlus is a telemedicine platform that connects patients with doctors. The project focused on credibility, education, and patient engagement.",
+    points: [
       "Health Blogs: Easy-to-read guides on conditions and treatments.",
       "SEO Pages: Focused on high-volume health queries.",
-      "Trust Signals: Developed authoritative medical resources."
-    ]
+      "Trust Signals: Developed authoritative medical resources.",
+    ],
+    date: "November 2024 – June 2025 ",
+    duration: "4 Months ",
+    tools: [
+      "   Meta Ads Manager ",
+      "Facebook Instant Forms ",
+      "Canva / Figma (Ad Creatives) ",
+      "Google Sheets (ROI Calculation & Lead Tracking)",
+    ],
+    client:
+      "SeaC Overseas Education Consultants — Study Abroad Consultancy (US Programs) ",
+    location: "India (Meta Ads Campaigns)",
+    modules: [
+      "  Lead Generation (Meta Ads Instant Forms) ",
+      "Fee Structure Marketing (Transparent ROI-driven creatives) ",
+      "B2B Outreach Campaigns (Immigration & Education Consultants) ",
+      "Retargeting (Engaged Audience Nurturing) ",
+      "Performance Tracking & ROI Analysis ",
+    ],
+    expertise: [
+      "    Performance Marketing (Meta Ads) ",
+      "Lead Generation Campaigns ",
+      "Education Industry Digital Marketing ",
+      "B2B & B2C Audience Segmentation ",
+      "Revenue Modeling & ROI Optimization",
+    ],
   },
   {
-    "id": 7,
-    "title": "EduSpark Driving Student Enrollments Online",
-    "slug": "EduSpark-Driving-Student-Enrollments-Online",
-    "image": "/assist/portfolio/marketing/SuiithagaCasestudy.png",
-    "subImage": "/assist/portfolio/marketing/Suii_thaga.png",
-    "description": "EduSpark is an e-learning platform offering online courses and certifications. Content and SEO work helped attract learners worldwide.",
-    "points": [
+    id: 7,
+    title: "Suii_Thaga — Fashion Brand on Instagram ",
+    slug: "Suii_Thaga-Fashion-Brand-on-Instagram",
+    image: "/assist/portfolio/marketing/SuiithagaCasestudy.png",
+    subImage: "/assist/portfolio/marketing/Suii_thaga.png",
+    description:
+      "EduSpark is an e-learning platform offering online courses and certifications. Content and SEO work helped attract learners worldwide.",
+    points: [
       "Course Landing Pages: Optimized for higher conversions.",
       "Knowledge Hub: Built extensive learning resources.",
-      "Video Content: Produced engaging YouTube lessons."
-    ]
+      "Video Content: Produced engaging YouTube lessons.",
+    ],
+    date: "April – May 2025",
+    duration: "1 Month",
+    tools: [
+      "   Instagram Analytics ",
+      "Meta Ads Manager ",
+      "Canva / Figma (Design Templates) ",
+    ],
+    client: "Suii_Thaga — Fashion Brand on Instagram ",
+    location: "United States (Instagram-first brand)",
+    modules: [
+      " Content Calendar Planning ",
+      "Reels & Story Optimization ",
+      "Community Engagement ",
+      "Instagram Ads Boosting ",
+      "Hashtag & Caption Strategy ",
+    ],
+    expertise: [
+      "   Instagram Growth Strategy ",
+      "Content Marketing ",
+      "Visual Identity Design ",
+      "Performance Tracking ",
+    ],
   },
   {
-    "id": 8,
-    "title": "UrbanNest Enhancing Real Estate Visibility",
-    "slug": "UrbanNest-Enhancing-Real-Estate-Visibility",
-    "image": "/assist/portfolio/marketing/zoneCasestudy.png",
-    "subImage": "/assist/portfolio/marketing/examStudy.png",
-    "description": "UrbanNest is a real estate platform showcasing premium apartments and housing projects. The campaign improved lead generation via organic channels.",
-    "points": [
+    id: 8,
+    title: "ExamStudyZone.com — Educational Platform ",
+    slug: "ExamStudyZone.com-Educational-Platform",
+    image: "/assist/portfolio/marketing/zoneCasestudy.png",
+    subImage: "/assist/portfolio/marketing/examStudy.png",
+    description:
+      "UrbanNest is a real estate platform showcasing premium apartments and housing projects. The campaign improved lead generation via organic channels.",
+    points: [
       "Neighborhood Guides: Content covering local living insights.",
       "SEO Listings: Optimized property pages for visibility.",
-      "Lead Magnets: Created downloadable buyer’s guides."
-    ]
+      "Lead Magnets: Created downloadable buyer’s guides.",
+    ],
+    date: "November 2024 – June 2025 ",
+    duration: "8 Months ",
+    tools: [
+      "   Google Search Console ",
+      "Bing Webmaster Tools ",
+      "SEMrush ",
+      "Ubersuggest ",
+    ],
+    client: "ExamStudyZone.com — Educational Platform",
+    location: "Global (Online/E-learning Platform) ",
+    modules: [
+      "    SEO Optimization ",
+      "Content Expansion ",
+      "Technical Improvements ",
+      "Monitoring & Analysis ",
+    ],
+    expertise: [
+      "   Search Engine Optimization (SEO) ",
+      "Content Strategy & Writing ",
+      "Technical SEO & Site Optimization ",
+      "Education Marketing ",
+      "Keyword Research & Analytics ",
+    ],
   },
   {
-    "id": 9,
-    "title": "FinEdge Empowering Smart Investment Decisions",
-    "slug": "FinEdge-Empowering-Smart-Investment-Decisions",
-    "image": "/assist/portfolio/marketing/ICliniXCaseStudy.png",
-    "subImage": "/assist/portfolio/marketing/finEdge.png",
-    "description": "FinEdge is a fintech startup helping users invest wisely. The focus was financial literacy, trust, and lead generation.",
-    "points": [
+    id: 9,
+    title: "iClinix — Specialized Eye Care Hospital ",
+    slug: "iClinix-Specialized-Eye-Care-Hospital",
+    image: "/assist/portfolio/marketing/ICliniXCaseStudy.png",
+    subImage: "/assist/portfolio/marketing/finEdge.png",
+    description:
+      "FinEdge is a fintech startup helping users invest wisely. The focus was financial literacy, trust, and lead generation.",
+    points: [
       "Financial Blogs: Created beginner-friendly investment articles.",
       "SEO Tools: Developed calculators & comparison pages.",
-      "Email Campaigns: Sent targeted newsletters for leads."
-    ]
-  }
-]
+      "Email Campaigns: Sent targeted newsletters for leads.",
+    ],
+    date: "May 2025",
+    duration: "1 Month ",
+    tools: [
+      "    Google Ads ",
+      "Google Search Console ",
+      "SEMrush ",
+      "Local SEO Listings",
+    ],
+    client: "iClinix — Specialized Eye Care Hospital",
+    location: "Delhi NCR, India ",
+    modules: [
+      " Google Ads Campaigns ",
+      "SEO Optimization ",
+      "Lead Generation ",
+      "Content Strategy",
+    ],
+    expertise: [
+      "  Search Engine Optimization (SEO) ",
+      "Google Ads & PPC Campaigns ",
+      "Local SEO & Patient Targeting ",
+      "Healthcare Marketing ",
+      "Content Optimization ",
+    ],
+  },
+];
 
 export default marketingProjects;

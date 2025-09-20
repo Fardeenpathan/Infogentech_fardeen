@@ -43,12 +43,50 @@ const developmentProjects = [
   },
   {
     id: 2,
+    title: "ShaadiKarwaDu – Wedding Planning & Coordination",
+    slug: "shaadiKarwadu-wedding-planning",
+    image: "/assist/portfolio/development/ShaadiKarwadu.png",
+    subImage: "/assist/portfolio/development/ShaadiKarwadu.png",
+    description:
+      "Madirakshi, an emerging digital platform, became our marketing partner to improve their app onboarding experience. We redefined the onboarding flow to retain and satisfy our customers while ensuring that they adopt the features. Figma and WordPress aided in creating a fluid, useful process and a higher level of engagement while bringing long engagement periods and customer success with it.",
+    points: [],
+    date: "May 2025 ",
+    duration: "8 weeks ",
+    tools: [
+      "     Figma ",
+      "Canva ",
+      "Trello / Asana ",
+      "Slack ",
+      "Google Workspace ",
+    ],
+    client: "ShaadiKarwaDu – Wedding Planning & Coordination",
+    location: "India (Nationwide Services)",
+    modules: [
+      " Venue Management ",
+      "Vendor Coordination ",
+      "Event Décor & Styling ",
+      "Logistics & Operations ",
+      "Guest Experience ",
+      "Photography & Media ",
+    ],
+    expertise: [
+      "     Event Planning & Coordination ",
+      "Luxury & Destination Weddings ",
+      "Brand & Experience Design ",
+      "Vendor Management ",
+      "Logistics Planning ",
+      "Content & Storytelling",
+    ],
+  },
+  {
+    id: 3,
     title: "Madirakshi app",
     slug: "madirakshi-app",
     image: "/assist/portfolio/development/MadirakshiStudycase.png",
     subImage: "/assist/portfolio/development/madrirakshi.png",
     description:
       "Madirakshi, an emerging digital platform, became our marketing partner to improve their app onboarding experience. We redefined the onboarding flow to retain and satisfy our customers while ensuring that they adopt the features. Figma and WordPress aided in creating a fluid, useful process and a higher level of engagement while bringing long engagement periods and customer success with it.",
+    points: [],
     date: "June 2025 ",
     duration: "4 months ",
     tools: [
@@ -79,7 +117,7 @@ const developmentProjects = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: "Avarta Jewellery",
     slug: "Avarta-jewellery",
     image: "/assist/portfolio/development/AvartaJewelleryCaseStudy.png",
@@ -120,11 +158,11 @@ const developmentProjects = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: "Soouqna’s E-Commerce Platform",
     slug: "soouqna-Commerce-Platform",
     image: "/assist/portfolio/development/SoouqnaCasestudy.png",
-    subImage: "/assist/portfolio/development/avartajewellery.png",
+    subImage: "/assist/portfolio/development/sooquna.png",
     description:
       "Soouqna, a growing e-commerce platform, partnered with Zebra to enhance logistics and delivery. API connectivity enabled seamless barcode scanning, better printer efficiency, and improved operational accuracy for faster, more reliable customer service.",
     points: [
@@ -135,12 +173,7 @@ const developmentProjects = [
 
     date: "March 2025",
     duration: "4 weeks ",
-    tools: [
-      "Zebra API ",
-      "Node.js",
-      "React",
-      "MongoDB",
-    ],
+    tools: ["Zebra API ", "Node.js", "React", "MongoDB"],
     client: "Soouqna – E-commerce Platform",
     location: "Iraq",
     modules: [
@@ -151,7 +184,7 @@ const developmentProjects = [
       "Performance Optimization ",
       "Deployment & Fixes",
     ],
-    expertise: [ 
+    expertise: [
       " API Integration",
       "E-commerce Development",
       "Performance Optimization",
