@@ -56,7 +56,6 @@ const HelpCenter = () => {
               Access detailed user guides, installation manuals, and setup
               instructions for all of our solutions.
             </h2>
-
             <p className="font-avalors font-normal text-[30px] leading-[100%] tracking-[0.03em] capitalize mb-6">
               Account & Billing Assistance
             </p>
@@ -78,7 +77,6 @@ const HelpCenter = () => {
               Critical problems can’t wait. Our team provides round-the-clock
               support to keep your systems running.
             </h2>
-
             <p className="font-avalors font-normal text-[30px] leading-[100%] tracking-[0.03em] capitalize mb-6">
               Contact Options
             </p>
@@ -86,12 +84,9 @@ const HelpCenter = () => {
               Whether by phone, email, or live chat, we’re here to provide
               personalized assistance whenever you need it.
             </h2>
-
             <p className="font-jost font-medium text-lg leading-6 align-middle mt-9">
            At Infogentech, we believe support should go beyond solving problems, it should empower you to get the most out of your technology. Our Help Center is designed to give you peace of mind, reliable resources, and expert assistance whenever you need it.
-
             </p>
-
             <footer className="text-end text-xs text-gray-500 mt-6">
               <p>
                 © {new Date().getFullYear()} Infogentech. All rights reserved.
