@@ -1,8 +1,10 @@
 
 import Link from "next/link";
 import Icons from "./ui/Icon";
+import { useState } from "react";
 
 export function MiniNavbar() {
+  const [isOpen , setIsOpen] = useState(false);
   return (
     <div className=" bg-transparent mt-3 h-15 mx-auto z-50 container px-2 w-full ">
       <div className="flex items-center border border-[#8E8E8E] rounded-md justify-between px-2">
@@ -14,7 +16,10 @@ export function MiniNavbar() {
             </p>
           </Link>
         </div>
-        <div>
+        <button 
+         onClick={() => setIsOpen(true)}
+         className="cursor-pointer"
+        >
           <svg
             width="29"
             height="21"
@@ -41,8 +46,33 @@ export function MiniNavbar() {
               strokeLinecap="round"
             />
           </svg>
-        </div>
+        </button>
       </div>
+        {isOpen && (
+               <aside
+        className={`fixed top-0 right-0 h-full w-72 sm:w-80 bg-[#111123] shadow-2xl transform transition-transform duration-300 ease-in-out
+          ${isOpen ? "translate-x-0 z-50" : "translate-x-full"}`}
+      >
+        <div className="flex justify-start px-4 py-4 border-b">
+          <button
+            onClick={() => setIsOpen(false)}
+            aria-label="Close menu"
+            className="p-2 text-white cursor-pointer"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <nav className="px-6 py-6 space-y-4 text-white">
+          <Link href="/" onClick={() => setIsOpen(false)} className="block hover:text-[#8E8E8E] text-lg">Home</Link>
+          <Link href="/products" onClick={() => setIsOpen(false)} className="block hover:text-[#8E8E8E] text-lg">Products</Link>
+          <Link href="/pricing" onClick={() => setIsOpen(false)} className="block hover:text-[#8E8E8E] text-lg">Pricing</Link>
+          <Link href="/contact" onClick={() => setIsOpen(false)} className="block hover:text-[#8E8E8E] text-lg">Contact</Link>
+        </nav>
+      </aside>
+        )}
+      
     </div>
   );
 }

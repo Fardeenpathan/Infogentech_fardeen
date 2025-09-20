@@ -2529,6 +2529,45 @@ const MobileLogo=()=>{
 </svg>
 
 }
+
+
+
+const hemBurger=()=>{
+    <svg
+            width="29"
+            height="21"
+            viewBox="0 0 29 21"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M11.6484 2H27.5682"
+              stroke="white"
+              strokeWidth="2.8"
+              strokeLinecap="round"
+            />
+            <path
+              d="M2 10.3174L27.5681 10.3174"
+              stroke="white"
+              strokeWidth="2.8"
+              strokeLinecap="round"
+            />
+            <path
+              d="M2 18.6343L17.8937 18.6343"
+              stroke="white"
+              strokeWidth="2.8"
+              strokeLinecap="round"
+            />
+          </svg>
+}
+
+const CrossButton=()=>{
+  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+}
+
+  
 const Icons = {
   GraphicDesign,
   UIUXDesign,
@@ -2598,7 +2637,9 @@ const Icons = {
   BlogBlurLeft, 
   Downarrow,
   SmallStar,
-  MobileLogo
+  MobileLogo,
+CrossButton,
+hemBurger
 };
 
 export default Icons;
