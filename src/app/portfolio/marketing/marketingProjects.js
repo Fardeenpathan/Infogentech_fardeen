@@ -1,4 +1,4 @@
-[
+const marketingProjects = [
   {
     "id": 2,
     "title": "AirLine Reservation Window",
@@ -10,7 +10,32 @@
       "Content Strategy: Developed keyword clusters around sustainable living.",
       "Blog Campaigns: Created eco-lifestyle guides and product highlights.",
       "Conversion Optimization: Enhanced product pages with persuasive copy."
-    ]
+    ],
+    date: "January - Continuing (2025) ",
+    duration: "9 months",
+    tools: ["Google Search Console" ,
+"Google Analytics ",
+"WordPress / CMS ",
+"SEMRush / Ahrefs ",
+"Canva" ],
+    client: "AirlineReservationWindow.com – Online Flight Booking Platform",
+    location: "Global (Online Service)",
+    modules: [
+   "   SEO (On-Page & Off-Page) ",
+"Content Marketing (Travel Guides, Blogs, Deals) ",
+"UX & Website Optimization ",
+"Customer Support (24/7 Chat & Phone) ",
+"Performance Tracking (Google Search Console) ",
+"Conversion Rate Optimization (Future Focus) ",
+    ],
+    expertise: [
+ "    Search Engine Optimization ",
+"Content Strategy & Marketing ",
+"User Experience Design ",
+"Brand Positioning & Trust Building ",
+"Customer Retention & Engagement ",
+"Conversion Optimization",
+    ],
   },
   {
     "id": 3,
@@ -105,3 +130,4 @@
   }
 ]
 
+export default marketingProjects;

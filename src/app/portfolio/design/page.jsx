@@ -1,11 +1,10 @@
-
 import PortfolioHeader from "@/components/PortfolioHeader";
 import PortfolioServices from "@/components/PortfolioServices";
 import SubscribeContact from "@/components/SubscribeContact";
 import Image from "next/image";
 import Icons from "@/components/ui/Icon";
 import Link from "next/link";
-import designProjects from "./designProjects.json";
+import designProjects from "./designProjects";
 
 const Design = () => {
   return (

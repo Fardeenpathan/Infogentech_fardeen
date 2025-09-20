@@ -6,7 +6,7 @@ import Image from "next/image";
 import Icons from "@/components/ui/Icon";
 import Link from "next/link";
 import { useState } from "react";
-import marketingProjects from "./marketingProjects.json";
+import marketingProjects from "./marketingProjects";
 
 const DigitalMarketing = () => {
   const [activeService, setActiveService] = useState("Digital Marketing");
