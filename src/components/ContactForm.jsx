@@ -7,18 +7,22 @@ import PurpleCheckbox from "./ui/Checkbox";
 import GradientButton from "./ui/GradientButton";
 import config from "@/config";
 import adminApiService from "@/lib/adminApi";
-const contactInfo = [
+const contactData = [
   {
-    icon: "Contact",
-    text: "+1 XXX XXX-XXXX",
+    country: "India",
+    info: [
+      { icon: "Contact", text: "+91 99101 30963" },
+      { icon: "Email", text: "info@infogentech.com" },
+      { icon: "Location", text: "Delhi, India" },
+    ],
   },
   {
-    icon: "Email",
-    text: "info@infogentech.com",
-  },
-  {
-    icon: "Location",
-    text: "New York, NY",
+    country: "USA",
+    info: [
+      { icon: "Contact", text: "+1 123 456 7890" },
+      { icon: "Email", text: "info@infogentech.com" },
+      { icon: "Location", text: "Texas, USA" },
+    ],
   },
 ];
 
@@ -80,22 +84,30 @@ const ContactForm = () => {
 
     try {
       // Use centralized API helper which builds the URL and headers
-      const result = await adminApiService.request(config.api.endpoints.contact, {
+      const result = await adminApiService.request(
+        config.api.endpoints.contact,
+        {
           method: "POST",
-        body: JSON.stringify(formData),
-      });
+          body: JSON.stringify(formData),
+        }
+      );
 
       // If request succeeds, adminApiService.request will return parsed JSON
-      setSubmitMessage(result.message || "Message sent successfully! We will get back to you soon.");
-        setFormData({
-          name: "",
-          email: "",
-          phoneNumber: "",
-          productQuestion: "",
-          message: "",
-        });
+      setSubmitMessage(
+        result.message ||
+          "Message sent successfully! We will get back to you soon."
+      );
+      setFormData({
+        name: "",
+        email: "",
+        phoneNumber: "",
+        productQuestion: "",
+        message: "",
+      });
     } catch (error) {
-      setSubmitMessage(error.message || "Error sending message. Please try again later.");
+      setSubmitMessage(
+        error.message || "Error sending message. Please try again later."
+      );
       console.error("Contact form error:", error);
     } finally {
       setIsSubmitting(false);
@@ -137,14 +149,24 @@ const ContactForm = () => {
                 Say something to start a live chat!
               </p>
 
-              <div className="mt-30 flex flex-col gap-12.5">
-                {contactInfo.map((item, index) => (
-                  <p key={index} className="flex gap-6.5">
-                    <Icons name={item.icon} /> <span>{item.text}</span>
-                  </p>
+              <div className="mt-20 flex flex-col gap-12.5">
+                {contactData.map((region, i) => (
+                  <div key={i}>
+                    <h3 className="text-xl font-semibold mb-4">
+                      {region.country}
+                    </h3>
+                    <div className="flex flex-col gap-6.5">
+                      {region.info.map((item, index) => (
+                        <p key={index} className="flex gap-6.5 items-center">
+                          <Icons name={item.icon} /> <span>{item.text}</span>
+                        </p>
+                      ))}
+                    </div>
+                  </div>
                 ))}
               </div>
-              <div className="flex gap-6 mt-46">
+
+              <div className="flex gap-6 mt-36">
                 {socialMedia.map((item, index) => (
                   <div
                     key={index}
@@ -273,9 +295,11 @@ const ContactForm = () => {
                   <PurpleCheckbox label="subscribe to receive the latest news and exclusive offers" />
                 </div>
                 <ReCAPTCHA
-  sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-  onChange={(value) => setFormData({ ...formData, captcha: value })}
-/>
+                  sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                  onChange={(value) =>
+                    setFormData({ ...formData, captcha: value })
+                  }
+                />
                 {submitMessage && (
                   <div
                     className={`text-sm ${
