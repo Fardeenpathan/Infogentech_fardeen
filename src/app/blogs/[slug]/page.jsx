@@ -1,167 +1,256 @@
 "use client";
 
-import Image from "next/image";
-import Icons from "@/components/ui/Icon";
-import { useState } from "react";
-import SubscribeContact from "@/components/SubscribeContact";
-const mockApiResponse = [
-  {
-    id: 1,
-    question: "What types of hosting plans do you offer?",
-    answer:
-      "We offer shared hosting, VPS hosting, dedicated server hosting, and cloud hosting plans.",
-  },
-  {
-    id: 2,
-    question: "What is the uptime guarantee for your hosting services?",
-    answer: "We guarantee an uptime of 99.9% for all our hosting services.",
-  },
-  {
-    id: 3,
-    question: "Do you provide 24/7 customer support?",
-    answer:
-      "Yes, our support team is available 24/7 via live chat, email, and phone.",
-  },
-  {
-    id: 4,
-    question: "Can I upgrade my hosting plan later?",
-    answer:
-      "Absolutely! You can upgrade or downgrade your hosting plan at any time with zero downtime.",
-  },
-  {
-    id: 5,
-    question: "Do you offer free website migration?",
-    answer:
-      "Yes, we provide free professional website migration for all new customers.",
-  },
-  {
-    id: 6,
-    question: "Is SSL included with your hosting plans?",
-    answer:
-      "Yes, we include a free SSL certificate with all of our hosting plans.",
-  },
-];
+import { useState, useEffect } from "react";
+import { useParams } from "next/navigation";
+import Link from "next/link";
+import { ArrowLeft, Calendar, User, Tag, Eye } from "lucide-react";
 
-const BlogSlugPage = () => {
-  const [openId, setOpenId] = useState(null);
-  const toggleFAQ = (id) => {
-    setOpenId((prevId) => (prevId === id ? null : id));
-  };
-  return (
-    <div className="container mx-auto mt-24 text-wrap px-10">
-      <div className="flex justify-center items-center flex-col">
-        <p className="font-avalors text-[32px] leading-[24px] font-normal align-middle text-[#8752FF]">
-          Published 20 jan 2025
-        </p>
-        <p className="font-avalors text-[32px] font-normal leading-[100%] tracking-[0.03em] mt-6">
-          Madhya Pradesh Partners with Submer for AI‑Ready Data Centres
-        </p>
-        <p className="font-jost font-medium text-lg leading-[24px] text-center align-middle mt-8">
-          What happens when a middle school friendship, a shared love for music,
-          and a global pandemic come together? In...
-        </p>
-        <Image
-          src="/assist/img/blogImg.png"
-          alt="Blog"
-          width={1400}
-          height={460}
-          className="mt-20 rounded-2xl h-[560px]"
-        />
-        <h1 className="mt-18 font-kumbh-sans text-[20px]  leading-[30px]">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          ullamcorper mattis lorem non. Ultrices praesent amet ipsum justo
-          massa. Eu dolor aliquet risus gravida nunc at feugiat consequat purus.
-          Non massa enim vitae duis mattis. Vel in ultricies vel fringilla.
-        </h1>
-        <div className="text-[#82828C] mt-12 border-2 container mx-auto px-10"></div>
-      </div>
-      <div className="font-avalors text-[32px] leading-[24px] font-normal mt-12 text-[#8752FF] uppercase">
-        Introduction
-      </div>
-      <h1 className="mt-18 font-kumbh-sans text-[20px]  leading-[30px]">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-        ullamcorper mattis lorem non. Ultrices praesent amet ipsum justo massa.
-        Eu dolor aliquet risus gravida nunc at feugiat consequat purus. Non
-        massa enim vitae duis mattis. Vel in ultricies vel fringilla.
-      </h1>
-      <h1 className="mt-18 font-kumbh-sans text-[20px]  leading-[30px]">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-        ullamcorper mattis lorem non. Ultrices praesent amet ipsum justo massa.
-        Eu dolor aliquet risus gravida nunc at feugiat consequat purus. Non
-        massa enim vitae duis mattis. Vel in ultricies vel fringilla.
-      </h1>
-      <div></div>
-      <Image
-        src="/assist/img/blogImg.png"
-        alt="Blog"
-        width={1200}
-        height={460}
-        className="mt-20 rounded-2xl h-[560px] w-full"
-      />
-      <p className="border-l-2 border-[#8752FF] font-kumbh-sans font-medium text-[24px] leading-[36px] mt-12 pl-5">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-        ullamcorper mattis lorem non. Ultrices praesent amet ipsum justo massa.
-        Eu dolor aliquet risus gravida nunc at feugiat consequat purus. Non
-        massa enim vitae duis mattis. Vel in ultricies vel fringilla. Lorem
-        ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper
-        mattis lorem non. Ultrices praesent amet ipsum justo massa. Eu dolor
-        aliquet risus gravida nunc at feugiat consequat purus. Non massa enim
-        vitae duis mattis. Vel in ultricies vel fringilla.
-      </p>
-      <h1 className="mt-18 font-kumbh-sans text-[20px]  leading-[30px]">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-        ullamcorper mattis lorem non. Ultrices praesent amet ipsum justo massa.
-        Eu dolor aliquet risus gravida nunc at feugiat consequat purus. Non
-        massa enim vitae duis mattis. Vel in ultricies vel fringilla.
-      </h1>
-      <h1 className="mt-5 font-kumbh-sans text-[20px]  leading-[30px]">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-        ullamcorper mattis lorem non. Ultrices praesent amet ipsum justo massa.
-        Eu dolor aliquet risus gravida nunc at feugiat consequat purus. Non
-        massa enim vitae duis mattis. Vel in ultricies vel fringilla.
-      </h1>
-      <div className="mt-10">
-        <h2 className="font-jost text-[30px] font-normal leading-[38px] text-[#8752FF]">
-          Conclusion
-        </h2>
-        <p className="mt-5 font-kumbh-sans text-[20px]  leading-[30px]">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          ullamcorper mattis lorem non. Ultrices praesent amet ipsum justo
-          massa. Eu dolor aliquet risus gravida nunc at feugiat consequat purus.
-          Non massa enim vitae duis mattis. Vel in ultricies vel fringilla.
-        </p>
-      </div>
-      <section className="mt-10">
-        <h2 className="font-jost text-[30px] font-normal leading-[38px] text-[#8752FF]">
-          FAQs
-        </h2>
-        <div className="rounded-lg">
-          {mockApiResponse.map((faq) => (
-            <div
-              key={faq.id}
-              className="border-b border-[#0A071B]/10 linearGradientFaq mb-2"
-            >
-              <button
-                className="question-btn flex w-full items-start gap-x-5 justify-between rounded-lg text-left text-lg font-bold focus:outline-none p-5"
-                onClick={() => toggleFAQ(faq.id)}
-              >
-                <div>{faq.question}</div>
-                <div className="cursor-pointer">
-                  <Icons name={openId === faq.id ? "Minus" : "Add"} />
-                </div>
-              </button>
-              {openId === faq.id && (
-                <div className="answer flex w-full items-start gap-x-5 justify-between rounded-lg text-left text-lg font-bold focus:outline-none p-5">
-                  {faq.answer}
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-      </section>
-      <SubscribeContact />
-    </div>
-  );
+// Simple date formatting function
+const formatDate = (dateString) => {
+  return new Date(dateString).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
 };
 
-export default BlogSlugPage;
+export default function BlogSlugPage() {
+  const params = useParams();
+  const [blog, setBlog] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchBlog = async () => {
+      try {
+        // Fetch blog by slug from public API (no auth needed)
+        const response = await fetch(`http://localhost:5000/api/blogs/slug/${params.slug}`);
+        
+        if (!response.ok) {
+          throw new Error('Blog not found');
+        }
+        
+        const data = await response.json();
+        setBlog(data.data);
+      } catch (error) {
+        console.error('Error fetching blog:', error);
+        setError(error.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    if (params.slug) {
+      fetchBlog();
+    }
+  }, [params.slug]);
+
+  // Convert blocks to rendered content
+  const renderBlocks = (blocks) => {
+    if (!blocks || !Array.isArray(blocks)) return null;
+    
+    const sortedBlocks = blocks.sort((a, b) => (a.order || 0) - (b.order || 0));
+    
+    return sortedBlocks.map((block, index) => {
+      switch (block.type) {
+        case 'paragraph':
+          return (
+            <p key={index} className="mb-4 text-gray-300 leading-relaxed">
+              {block.data.content || block.data.text}
+            </p>
+          );
+        case 'heading':
+          const level = block.data.level || 2;
+          const HeadingTag = `h${level}`;
+          const headingClasses = {
+            1: 'text-3xl font-bold mb-6 text-white',
+            2: 'text-2xl font-bold mb-4 text-white',
+            3: 'text-xl font-bold mb-3 text-white',
+            4: 'text-lg font-bold mb-2 text-white',
+            5: 'text-base font-bold mb-2 text-white',
+            6: 'text-sm font-bold mb-2 text-white'
+          };
+          return (
+            <HeadingTag key={index} className={headingClasses[level]}>
+              {block.data.content || block.data.text}
+            </HeadingTag>
+          );
+        case 'list':
+          const items = block.data.items || [];
+          if (block.data.style === 'ordered') {
+            return (
+              <ol key={index} className="mb-4 pl-6 list-decimal text-gray-300">
+                {items.map((item, itemIndex) => (
+                  <li key={itemIndex} className="mb-1">{item}</li>
+                ))}
+              </ol>
+            );
+          } else {
+            return (
+              <ul key={index} className="mb-4 pl-6 list-disc text-gray-300">
+                {items.map((item, itemIndex) => (
+                  <li key={itemIndex} className="mb-1">{item}</li>
+                ))}
+              </ul>
+            );
+          }
+        case 'quote':
+          return (
+            <blockquote key={index} className="mb-4 pl-4 border-l-4 border-purple-500 italic text-gray-300">
+              {block.data.content || block.data.text}
+            </blockquote>
+          );
+        case 'code':
+          return (
+            <pre key={index} className="mb-4 p-4 bg-gray-800 rounded-lg overflow-x-auto">
+              <code className="text-green-400 text-sm">
+                {block.data.content || block.data.text}
+              </code>
+            </pre>
+          );
+        case 'image':
+          return (
+            <div key={index} className="mb-6">
+              <img 
+                src={block.data.url} 
+                alt={block.data.alt || 'Blog image'} 
+                className="w-full h-auto rounded-lg"
+              />
+              {block.data.caption && (
+                <p className="text-sm text-gray-400 mt-2 text-center italic">
+                  {block.data.caption}
+                </p>
+              )}
+            </div>
+          );
+        default:
+          return null;
+      }
+    });
+  };
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gray-900 flex items-center justify-center">
+        <div className="text-white text-xl">Loading blog...</div>
+      </div>
+    );
+  }
+
+  if (error || !blog) {
+    return (
+      <div className="min-h-screen bg-gray-900 flex items-center justify-center">
+        <div className="text-center">
+          <div className="text-white text-xl mb-4">Blog not found</div>
+          <Link href="/blogs" className="text-purple-400 hover:text-purple-300">
+            ← Back to Blogs
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="min-h-screen bg-gray-900">
+      {/* Header */}
+      <div className="bg-gray-800 border-b border-gray-700">
+        <div className="max-w-4xl mx-auto px-6 py-4">
+          <Link 
+            href="/blogs" 
+            className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            Back to Blogs
+          </Link>
+        </div>
+      </div>
+
+      {/* Blog Content */}
+      <div className="max-w-4xl mx-auto px-6 py-8">
+        {/* Featured Image */}
+        {blog.featuredImage && blog.featuredImage.url && (
+          <div className="mb-8">
+            <img 
+              src={blog.featuredImage.url} 
+              alt={blog.featuredImage.alt || blog.title}
+              className="w-full h-64 md:h-96 object-cover rounded-lg"
+            />
+          </div>
+        )}
+
+        {/* Blog Header */}
+        <div className="mb-8">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            {blog.title}
+          </h1>
+          
+          {blog.excerpt && (
+            <p className="text-xl text-gray-400 mb-6">
+              {blog.excerpt}
+            </p>
+          )}
+
+          {/* Meta Information */}
+          <div className="flex flex-wrap items-center gap-6 text-sm text-gray-400">
+            <div className="flex items-center gap-2">
+              <Calendar className="w-4 h-4" />
+              {formatDate(blog.publishedAt || blog.createdAt)}
+            </div>
+            
+            {blog.author && (
+              <div className="flex items-center gap-2">
+                <User className="w-4 h-4" />
+                {blog.author.name || 'Admin'}
+              </div>
+            )}
+
+            <div className="flex items-center gap-2">
+              <Eye className="w-4 h-4" />
+              {blog.views || 0} views
+            </div>
+
+            {blog.readTime && (
+              <div>
+                {blog.readTime} min read
+              </div>
+            )}
+          </div>
+
+          {/* Tags */}
+          {blog.tags && blog.tags.length > 0 && (
+            <div className="flex items-center gap-2 mt-4">
+              <Tag className="w-4 h-4 text-gray-400" />
+              <div className="flex flex-wrap gap-2">
+                {blog.tags.map((tag, index) => (
+                  <span 
+                    key={index}
+                    className="px-2 py-1 bg-purple-600/20 text-purple-400 rounded-full text-xs"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* Blog Content */}
+        <div className="prose prose-invert max-w-none">
+          {renderBlocks(blog.blocks)}
+        </div>
+
+        {/* Category */}
+        {blog.category && (
+          <div className="mt-8 pt-6 border-t border-gray-700">
+            <div className="text-sm text-gray-400">
+              Published in: 
+              <span className="text-purple-400 ml-1">
+                {blog.category.name}
+              </span>
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
