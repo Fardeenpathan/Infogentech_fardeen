@@ -1,0 +1,34 @@
+import Image from "next/image";
+import ShinyButton from "@/components/ui/ShinyButton";
+import Icons from "@/components/ui/Icon";
+
+const ProjectImageSection = ({ project, expanded, setExpanded }) => {
+  return (
+    <div
+      className={`mx-auto rounded-2xl overflow-hidden bg-black transition-[max-height] duration-500 relative  ${
+        expanded ? "h-full" : "h-[1200px] md:[900px]"
+      }`}
+    >
+      <Image
+        src={project.image}
+        alt="Blog"
+        width={1400}
+        height={460}
+        style={{ objectFit: "cover", width: "100%", height: "auto" }}
+        sizes="(max-width: 768px) 100vw, 1400px"
+        className="rounded-2xl mx-auto p-2 overflow-hidden"
+      />
+      <div className="font-jost text-center absolute w-full bottom-0 py-14  glass-fallback bg-white/6"></div>
+      <div className="font-jost text-center absolute w-full bottom-0 py-6">
+        <ShinyButton className="!py-4 !px-5 !text-lg"
+          onClick={() => setExpanded((s) => !s)}
+        >
+          {expanded ? "Know less" : "Know more"}
+          <span className="pl-3"><Icons name="Arrow" /></span>
+        </ShinyButton>
+      </div>
+    </div>
+  );
+};
+
+export default ProjectImageSection;

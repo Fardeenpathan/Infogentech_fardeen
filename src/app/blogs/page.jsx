@@ -87,7 +87,7 @@ const Blogs = () => {
           <p className="font-avalors font-normal text-[75px] leading-none bg-[linear-gradient(91.32deg,_#6A27FF_-32.61%,_#FFFFFF_19.98%,_#6A27FF_112.29%)] bg-clip-text text-transparent">
             Insights & Innovation
           </p>
-          <p className="font-jost text-lg font-medium leading-[24px] text-center mt-6">
+          <p className="font-jost text-lg font-medium leading-6 text-center mt-6">
             Check out our latest ideas, tech trends, and success stories where
             smart planning meets real results and creative ideas make an impact.
           </p>
@@ -120,7 +120,7 @@ const Blogs = () => {
                 <span className="border border-white rounded-md px-4 py-1 text-sm font-jost">
                   Popular
                 </span>
-                <span className="text-sm text-[#8752FF] font-jost">
+                <span className="text-sm text-primary font-jost">
                   April 28, 2024
                 </span>
               </div>
@@ -133,7 +133,7 @@ const Blogs = () => {
                 In the ever-evolving world of design, where innovation meets
                 aesthetics, finding the perfect resources to fuel your creative
                 journey can be a rewarding yet daunting ...
-                <a href="#" className="text-[#8752FF] underline">
+                <a href="#" className="text-primary underline">
                   Continue reading
                 </a>
               </p>
@@ -141,7 +141,7 @@ const Blogs = () => {
           </div>
         </div>
         <div className="mt-36 px-10">
-          <p className="text-[#8752FF] font-avalors text-[32px] leading-[24px]">
+          <p className="text-primary font-avalors text-[32px] leading-6">
             Select Your Category
           </p>
           <div className="flex gap-16 text-[#C4C4C4] mt-13 font-kumbh-sans">
@@ -151,7 +151,7 @@ const Blogs = () => {
                 onClick={() => setActiveCategory(item)}
                 className={`relative pb-1 transition-all duration-300 cursor-pointer ${
                   activeCategory === item
-                    ? "text-[#8752FF] opacity-100 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#8752FF] after:rounded-full "
+                    ? "text-primary opacity-100 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#8752FF] after:rounded-full "
                     : "opacity-60 hover:opacity-100"
                 }`}
               >

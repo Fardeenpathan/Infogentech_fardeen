@@ -35,7 +35,7 @@ const FocusPart = () => {
       <div className="relative  bg-[#15152A] shadow-[0px_0px_40px_5px_rgba(106,39,255,0.35)] rounded-xl px-8 py-6 border-2 border-[#8752FF]">
         <div className="flex items-center gap-2 z-50">
           <Icons name="LogoFooter" />
-          <p className="font-avalors text-[24px] leading-[32px] tracking-[3px] font-bold">
+          <p className="font-avalors text-[24px] leading-8 tracking-[3px] font-bold">
             INFOGENTECH
           </p>
         </div>

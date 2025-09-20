@@ -23,8 +23,8 @@ export function Navbar() {
   const linkClasses = (href) =>
     `transition-colors ${
       pathname === href
-        ? "text-[#8752FF] font-semibold"
-        : "text-white hover:text-[#8752FF]"
+        ? "text-primary font-semibold"
+        : "text-white hover:text-primary"
     }`;
   const dropdownVariants = {
     hidden: {
@@ -58,18 +58,18 @@ export function Navbar() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -40, scale: 0.95 }}
           transition={{ duration: 0.2, ease: "easeInOut" }}
-          className="relative flex bg-transparent mt-6 h-15 mx-auto justify-between items-center z-50 font-jost font-medium text-lg leading-[24px] container px-10"
+          className="relative flex bg-transparent mt-6 h-15 mx-auto justify-between items-center z-50 font-jost font-medium text-lg leading-6 container px-10"
         >
           <div className="flex items-center border border-[#8E8E8E] rounded-md ">
-            <div className="flex items-center pl-3.75 py-2.25 space-x-1.5">
+            <div className="flex items-center pl-3.5 space-x-1.5">
               <Link href="/" className="flex items-center gap-1.5">
                 <Icons name="LogoFooter" />
-                <p className="font-avalors text-[24px] leading-[32px] tracking-[3px] font-bold">
+                <p className="font-avalors text-[24px] leading-8 tracking-[3px] font-bold text-xl">
                   INFOGENTECH
                 </p>
               </Link>
             </div>
-            <div className="flex flex-row space-x-12.5 py-4.5 px-12.5 text-lg font-Jost">
+            <div className="flex flex-row space-x-12.5 py-4.5  xl:px-12.5 lg:px-8 text-lg md:text-sm font-Jost">
               <div
                 className="relative group"
                 onMouseEnter={() => setIsServicesHovered(true)}
@@ -102,8 +102,8 @@ export function Navbar() {
               </Link>
             </div>
           </div>
-          <div className="flex items-center border border-[#8E8E8E] rounded-md pr-3.75">
-            <div className="md:flex items-center space-x-12.5 px-12.5 py-4.5 text-lg font-Jost">
+          <div className="flex items-center border border-[#8E8E8E] rounded-md pr-3.75 text-nowrap">
+            <div className="md:flex items-center space-x-12.5 xl:px-8.5 lg:px-6 py-4.5 text-lg md:text-sm font-Jost">
               <Link href="/blogs" className={linkClasses("/blogs")}>
                 Blogs
               </Link>
@@ -115,7 +115,7 @@ export function Navbar() {
               </Link>
             </div>
             <Link href="/contactUs">
-              <GradientButton>Free Consultation</GradientButton>
+              <GradientButton className="!text-sm" paddingX="px-3" paddingY="py-2">Free Consultation</GradientButton>
             </Link>
           </div>
         </motion.nav>
@@ -133,12 +133,12 @@ export function Navbar() {
             type: "spring",
             stiffness: 150,
           }}
-          className="fixed top-2 left-1/2 -translate-x-1/2 z-50 flex items-center justify-between border container rounded-xl bg-[#15152A] px-6 py-4 font-jost font-medium text-lg leading-[24px] mx-auto"
+          className="fixed top-2 left-1/2 -translate-x-1/2 z-50 flex items-center justify-between border container rounded-xl bg-[#15152A] px-6 py-4 font-jost font-medium text-lg leading-6 mx-auto"
         >
           <div className="flex items-center gap-10 justify-between w-full">
             <Link href="/" className="flex items-center gap-2">
               <Icons name="LogoFooter" />
-              <p className="font-avalors text-[24px] leading-[32px] tracking-[3px] font-bold">
+              <p className="font-avalors text-[24px] leading-8 tracking-[3px] font-bold">
                 INFOGENTECH
               </p>
             </Link>

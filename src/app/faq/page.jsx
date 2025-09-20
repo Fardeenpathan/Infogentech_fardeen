@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import Icons from "@/components/ui/Icon";
 import Loader from "@/components/loader/Loader";
-
+import Slider from "@/components/slider/Slider";
 const categoryList = [
   { key: "general", label: "General & Services" },
   { key: "pricing", label: "Pricing & Timeline" },
@@ -91,7 +91,7 @@ const FAQs = () => {
             <p className="font-avalors font-normal text-[75px] leading-none bg-[linear-gradient(91.32deg,_#6A27FF_-32.61%,_#FFFFFF_19.98%,_#6A27FF_112.29%)] bg-clip-text text-transparent">
               Your questions answered
             </p>
-            <p className="font-jost font-medium text-lg leading-[24px] align-middle mt-9">
+            <p className="font-jost font-medium text-lg leading-6 align-middle mt-9">
               Find answers to common questions about our services, project
               process, updates, and support at Infogentech.
             </p>
@@ -118,7 +118,7 @@ const FAQs = () => {
                   setActiveCategory(category.key);
                   setOpenId(null);
                 }}
-                className={`font-jost mb-10 text-[16px] leading-[24px] align-middle transition-opacity duration-300 cursor-pointer ${
+                className={`font-jost mb-10 text-[16px] leading-6 align-middle transition-opacity duration-300 cursor-pointer ${
                   activeCategory === category.key
                     ? "opacity-100 font-semibold"
                     : "opacity-50"
@@ -164,6 +164,7 @@ const FAQs = () => {
           )}
         </aside>
       </section>
+      <Slider/>
     </div>
   );
 };

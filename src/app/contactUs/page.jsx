@@ -28,7 +28,7 @@ const ContactUs = () => {
             <p className="text-[#6A27FF] font-avalors align-middle text-[75px] leading-[120%] tracking-[-0.75px]">
               just ask!
             </p>
-            <p className="font-jost font-medium text-lg leading-[24px] align-middle mt-9">
+            <p className="font-jost font-medium text-lg leading-6 align-middle mt-9">
               We’re here to help! Reach out with any real questions, and we’ll
               get back to you within 48 hours. For support or inquiries, feel
               free to contact us at.

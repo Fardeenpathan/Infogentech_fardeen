@@ -35,27 +35,18 @@ const strategicItems = [
 ];
 export default function StrategicProcess() {
   return (
-    <div className="mt-36 grid grid-cols-2">
+    <div className="mt-36 grid lg:grid-cols-2 grid-cols-1">
       <div>
         <TopicHeader
           name="A Strategic Process"
           subheading="Driving Your Digital Success"
         />
         <div className="relative">
-          <Icons name="Snakepath" />
-          {/* <Image
-            src="/assist/img/LogoOnsnake.png"
-            alt="valueImg"
-            width={100}
-            height={99}
-            className="absolute top-0 left-0"
-            objectFit="cover"
-          /> */}
-          {/* <Icons name="Flag" className="absolute -bottom-80 -right-40" /> */}
+          <Icons name="Snakepath" width="w-65 md:w-142" height="h-34 md:h-74"/>
         </div>
       </div>
          
-      <div className="grid grid-cols-2 ">
+      <div className="grid grid-cols-2">
         {strategicItems.map((item, index) => (
           <div
             key={index}
@@ -65,7 +56,7 @@ export default function StrategicProcess() {
             <div className="absolute left-6 flex items-center justify-center">
               <Icons name={item.icon} />
             </div>
-            <p className="font-jost  text-[20px] leading-[120%] tracking-[0.03em]">
+            <p className="font-jost  md:text-xl  text-sm leading-[120%] tracking-[0.03em]">
               {item.text}
             </p>
           </div>

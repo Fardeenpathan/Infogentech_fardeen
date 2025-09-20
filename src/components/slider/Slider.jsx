@@ -1,8 +1,8 @@
-import MidHeader from "./MidHeader";
+import MidHeader from "../MidHeader";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import DotIndicators from "./DotIndicators";
-import Icons from "./ui/Icon";
+import DotIndicators from "../DotIndicators";
+import Icons from "../ui/Icon";
 const reviews = [
   {
     id: 1,
@@ -52,6 +52,30 @@ const reviews = [
     img: "/assist/img/blogs.png",
     rating: 3,
   },
+  {
+    id: 7,
+    text: "Their SEO work took us from barely showing up in searches to ranking on the first page for important keywords. They clearly know the healthcare space inside and out.",
+    name: "— Ethan Roberts",
+    role: "Owner, Cascade Remodeling",
+    img: "/assist/img/blogs.png",
+    rating: 5,
+  },
+  {
+    id: 8,
+    text: "From a new logo to a refreshed social media strategy, they completely elevated our brand. Customer engagement is way up, and foot traffic to our store has been better than eve",
+    name: "Jessica Collins",
+    role: "Marketing Director, Nova Dental Group",
+    img: "/assist/img/blogs.png",
+    rating: 4,
+  },
+  {
+    id: 9,
+    text: "They brought our vision to life with modern design and a smart strategy that really connects with our clients. We constantly get compliments on our new website and branding",
+    name: "Marcus Lee",
+    role: " Co-Founder, Leaf & Brew",
+    img: "/assist/img/blogs.png",
+    rating: 3,
+  },
 ];
 export default function Slider() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -59,15 +83,18 @@ export default function Slider() {
   const [touchStart, setTouchStart] = useState(0);
   const [touchEnd, setTouchEnd] = useState(0);
 
+  // Auto-slide functionality
   useEffect(() => {
     if (!isHovered) {
       const interval = setInterval(() => {
         setCurrentIndex((prev) => (prev === reviews.length - 1 ? 0 : prev + 1));
-      }, 3000);
+      }, 4000); // Change slide every 4 seconds
 
       return () => clearInterval(interval);
     }
   }, [isHovered]);
+
+  // Keyboard navigation
   useEffect(() => {
     const handleKeyPress = (e) => {
       if (e.key === "ArrowLeft") {
@@ -85,6 +112,8 @@ export default function Slider() {
     setCurrentIndex((prev) => (prev === 0 ? reviews.length - 1 : prev - 1));
   const nextSlide = () =>
     setCurrentIndex((prev) => (prev === reviews.length - 1 ? 0 : prev + 1));
+
+  // Touch handlers
   const handleTouchStart = (e) => {
     setTouchStart(e.targetTouches[0].clientX);
   };
@@ -125,9 +154,9 @@ export default function Slider() {
         subheading="Don’t Take Our Word for It. Over 100+ People Trust Us"
       />
 
-      <div className="relative flex flex-col items-center justify-center py-8 md:py-16 text-white overflow-hidden">
+      <div className="relative flex flex-col items-center justify-center py-8 md:py-16 text-white">
         <div
-          className="flex items-center justify-center gap-2 md:gap-4 lg:gap-6 px-2 w-full longContainer"
+          className="flex items-center justify-center gap-2 md:gap-4 lg:gap-6 overflow-hidden px-2  w-full longContainer"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
           onTouchStart={handleTouchStart}
@@ -140,10 +169,10 @@ export default function Slider() {
               <div
                 key={`${review.id}-${currentIndex}-${index}`}
                 className={`
-                  md:px-8 md:pt-6 pt-2 md:pb-8 pb-3 px-3 rounded-xl border transition-all duration-500 
+                  px-8 pt-6 pb-8 rounded-xl border transition-all duration-500 max-w-[549px] min-h-[272px]  
                   ease-in-out 
                    md:min-h-[250px] lg:min-h-[272px] 
-                  flex flex-col justify-between transform cursor-pointer min-w-[251px] sm:min-w-[450px] md:minw-[500px] xl:max-w-[549px]
+                  flex flex-col justify-between transform cursor-pointer
                   hover:scale-105 group
                   ${
                     isCenter
@@ -160,7 +189,7 @@ export default function Slider() {
               >
                 <p
                   className={`
-                  mb-4 md:text-base text-[12px]  leading-relaxed font-jost
+                  mb-4 text-sm md:text-base leading-relaxed
                 `}
                 >
                   {review.text}
@@ -172,22 +201,20 @@ export default function Slider() {
                       alt="Review"
                       width={55}
                       height={55}
-                      className=" rounded-full sm:w-14 sm:h-14 object-cover w-6 h-6"
+                      className=" rounded-full w-14 h-14 object-cover"
                     />
 
                     <div>
-                      <h4 className="font-jost sm:text-lg text-[12px] text-[#C2C4C8] font-bold">
-                        {" "}
-                        {review.name}{" "}
+                      <h4 className="font-jost text-2xl text-[#C2C4C8]">
+                        {review.name}
                       </h4>
-                      <p className="md:text-sm text-[8px] text-[#C2C4C8] mt-1.5">
-                        {" "}
+                      <p className="text-sm text-[#C2C4C8] mt-1.5">
                         {review.role}
                       </p>
                     </div>
                   </div>
 
-                  <div className="mt-4 flex gap-1 bg-[#2F3E42] border-2 rounded-3xl border-[#372E4C] sm:px-2.5 px-1.5 sm:py-1.5 py-1">
+                  <div className="mt-4 flex gap-1 bg-[#2F3E42] border-2 rounded-3xl border-[#372E4C] px-2.5 py-1.5">
                     {[...Array(5)].map((_, i) => (
                       <span
                         key={i}
@@ -197,8 +224,7 @@ export default function Slider() {
                             : "text-gray-500"
                         }`}
                       >
-                        <Icons name="Star" className="hidden md:block" />
-                        <Icons name="SmallStar" className="block md:hidden" />
+                        <Icons name="Star" />
                       </span>
                     ))}
                   </div>
@@ -207,33 +233,14 @@ export default function Slider() {
             );
           })}
         </div>
-        <div className="flex  w-full items-center justify-between mt-5 xl:hidden">
-          <button
-            onClick={prevSlide}
-            className="font-jost font-semibold  leading-5  gap-2 border border-white rounded-sm flex justify-center items-center md:px-5 md:py-2 py-1 px-3 cursor-pointer"
-          >
-            <Icons name="ArrowPortfolioLeft" width={45} height={20} />
-          </button>
-          <DotIndicators
-            slides={reviews}
-            currentIndex={currentIndex}
-            setCurrentIndex={setCurrentIndex}
-          />
 
-          <button
-            onClick={nextSlide}
-            className="font-jost font-semibold  leading-5  gap-2  border border-white rounded-sm flex justify-center items-center md:px-5 md:py-2 py-1 px-3 cursor-pointer"
-          >
-            <Icons name="ArrowPortfolioRight" width={45} height={20} />
-          </button>
-        </div>
-        <div className="hidden xl:flex justify-between w-full mt-5.5">
+        <div className=" flex justify-between w-full mt-5.5">
           <button
             onClick={prevSlide}
-            className="font-jost font-semibold  leading-5 flex gap-2 items-center cursor-pointer"
+            className="font-jost font-semibold text-[20px] leading-[20px] flex gap-2 items-center cursor-pointer"
           >
             <Icons name="ArrowPortfolioLeft" /> Previous
-          </button>
+          </button>{" "}
           <DotIndicators
             slides={reviews}
             currentIndex={currentIndex}
@@ -241,7 +248,7 @@ export default function Slider() {
           />
           <button
             onClick={nextSlide}
-            className="font-jost font-semibold  leading-5 flex gap-2 items-center cursor-pointer "
+            className="font-jost font-semibold text-[20px] leading-[20px] flex gap-2 items-center cursor-pointer"
           >
             Next <Icons name="ArrowPortfolioRight" />
           </button>

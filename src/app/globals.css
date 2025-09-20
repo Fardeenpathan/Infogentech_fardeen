@@ -110,7 +110,7 @@
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.21 0.006 285.885);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.92 0.004 286.32);
+  --primary: #8752FF;
   --primary-foreground: oklch(0.21 0.006 285.885);
   --secondary: oklch(0.274 0.006 286.033);
   --secondary-foreground: oklch(0.985 0 0);
@@ -360,4 +360,11 @@
 @media (max-width: 640px) {
   .shiny-btn { padding: 0.45rem 0.9rem; font-size: 0.95rem; }
   .shiny-btn::before { inset: -8px; filter: blur(10px); }
+}
+.glass-fallback {
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(3px);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 8px 30px rgba(2,6,23,0.4);
 }

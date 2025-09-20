@@ -16,7 +16,7 @@ export default function Home() {
       <div className="overflow-hidden">
        <ServicesSection /> 
       </div>
-      <div className="container mx-auto px-10">
+      <div className="container mx-auto md:px-10 px-4 ">
         <OurValues />
         <ScheduleCall />
         <StrategicProcess />

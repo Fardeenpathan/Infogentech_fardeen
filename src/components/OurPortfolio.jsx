@@ -209,17 +209,17 @@ export default function OurPortfolio() {
   };
 
   return (
-    <div className=" mt-36">
+    <div className="mt-36">
       <TopicHeader
         name="Our Portfolio"
         subheading="Check Out Our Recently Completed Projects"
       />
-      <div className="flex justify-between mx-14 relative -top-11 ">
-        <div className="flex gap-6">
+      <div className="flex justify-between xl:mx-14 ml-14 xl:ml-20  relative xl:-top-11 -top-20 ">
+        <div className="grid md:grid-cols-4 grid-cols-2 gap-3 sm:gap-6 text-nowrap w-full xl:flex">
           {services.map((service) => (
             <button
               key={service.id}
-              className={`flex gap-2 items-center justify-center border-[1px] border-white  rounded-md px-7 py-2 cursor-pointer ${
+              className={`flex gap-2 items-center justify-center border-[1px] border-white  rounded-md sm:px-7 py-2 px-4 cursor-pointer ${
                 service.active ? "" : "opacity-30"
               }`}
               onClick={() =>
@@ -233,33 +233,62 @@ export default function OurPortfolio() {
               }
             >
               <Icons name={service.icon} />
-              <p className="text-sm font-jost ">{service.label}</p>
+              <p className="sm:text-sm font-jost text-[12px]">
+                {service.label}
+              </p>
             </button>
           ))}
         </div>
-        <a href="/portfolio" className="flex gap-8 items-center justify-center">
-          <p className="font-jost font-semibold text-lg leading-[120%] capitalize ">
+        <a
+          href="/portfolio"
+          className="hidden xl:flex gap-8 items-center justify-center"
+        >
+          <p className="font-jost font-semibold text-lg leading-[120%] capitalize text-nowrap">
             See Our <br /> More Projects
           </p>
           <Icons name="Arrow" width={62} height={28} />
         </a>
       </div>
-      <div className="px-4 pt-4 rounded-lg border-b-0 bg-[linear-gradient(180deg,#8752FF_0%,#513199_38.59%)] min-h-[682px] overflow-hidden">
-        <div className="w-full h-full bg-black rounded-lg p-6 grid grid-cols-2 gap-4 overflow-hidden relative">
-          
-          <div className="ml-6.5 transition-all duration-500 ease-in-out flex flex-col justify-between mb-6">
-            <div className="flex items-center gap-3">
-                <Icons name="DotCircle" />
-                <p className="font-jost font-medium text-sm leading-6 align-middle">
-                  Why Enjoy alone?
-                </p>
+      <div className="xl:px-4 px-2 pt-2 xl:pt-4 rounded-lg border-b-0 bg-[linear-gradient(180deg,#8752FF_0%,#513199_38.59%)] min-h-[682px] overflow-hidden">
+        <div className="w-full h-full bg-black rounded-lg xl:p-6 p-4 grid xl:grid-cols-2 grid-cols-1 gap-4 overflow-hidden relative">
+          <div className="xl:ml-6.5 ml-0 transition-all duration-500 ease-in-out flex flex-col justify-between mb-6 order-2 xl:order-1">
+             <div className="flex gap-x-3 md:gap-x-10 items-center justify-between mt-5 xl:hidden">
+                <button
+                  onClick={prevSlide}
+                  className={`border border-white rounded-sm flex justify-center items-center md:px-5 md:py-2 py-1 px-3 cursor-pointer ${
+                    subIndex === 0 ? "opacity-30" : ""
+                  }`}
+                >
+                  <Icons name="ArrowPortfolioLeft" width={45} height={20} />
+                </button>
+                <DotIndicators
+                  slides={slides}
+                  currentIndex={subIndex}
+                  setCurrentIndex={setSubIndex}
+                />
+
+                <button
+                  onClick={nextSlide}
+                  className={`border border-white rounded-sm flex justify-center items-center md:px-5 md:py-2 py-1 px-3 cursor-pointer ${
+                    subIndex === slides.length - 1 ? "opacity-30" : ""
+                  }`}
+                >
+                  <Icons name="ArrowPortfolioRight" width={45} height={20} />
+                </button>
               </div>
-              <p className="font-jost font-semibold md:text-5xl leading-[150%] capitalize  pr-20">
-                {currentSlide?.title}
+            <div className="flex items-center gap-3 xl:mt-0 mt-10">
+
+              <Icons name="DotCircle" />
+              <p className="font-jost font-medium text-sm leading-6 align-middle">
+                Why Enjoy alone?
               </p>
+            </div>
+            <p className="font-jost font-semibold md:text-5xl leading-[150%] capitalize mt-5 xl:mt-0 pr-20">
+              {currentSlide?.title}
+            </p>
             <div>
-              
-              <div className="float-right relative -top-20">
+             
+              <div className="float-right relative -top-20 hidden xl:block">
                 <Icons name="ArrowDirection" />
                 <div className="w-28 flex justify-end">
                   <Icons name="PaperPlane" />
@@ -277,7 +306,8 @@ export default function OurPortfolio() {
                 ))}
               </ul>
             </div>
-            <div className="flex gap-x-10 items-center mt-10">
+            <div className="hidden xl:flex gap-x-3 md:gap-x-10 items-center mt-10">
+
               <DotIndicators
                 slides={slides}
                 currentIndex={subIndex}
@@ -286,7 +316,7 @@ export default function OurPortfolio() {
 
               <button
                 onClick={prevSlide}
-                className={`border border-white rounded-sm flex justify-center items-center px-5 py-2 cursor-pointer ${
+                className={`border border-white rounded-sm flex justify-center items-center md:px-5 md:py-2 py-1 px-3 cursor-pointer ${
                   subIndex === 0 ? "opacity-30" : ""
                 }`}
               >
@@ -295,7 +325,7 @@ export default function OurPortfolio() {
 
               <button
                 onClick={nextSlide}
-                className={`border border-white rounded-sm flex justify-center items-center px-5 py-2 cursor-pointer ${
+                className={`border border-white rounded-sm flex justify-center items-center md:px-5 md:py-2 py-1 px-3 cursor-pointer ${
                   subIndex === slides.length - 1 ? "opacity-30" : ""
                 }`}
               >
@@ -304,8 +334,8 @@ export default function OurPortfolio() {
             </div>
           </div>
 
-          <div className="px-2 pt-2 rounded-lg border-b-0 bg-[linear-gradient(180deg,#8752FF_0%,#513199_38.59%)] mt-34 rotate-[-5.03deg] shadow-[7px_-4px_108px_-43px_#8955FF] relative -right-5 transition-all duration-500 ease-in-out">
-            <div className="w-full min-h-[580px] bg-black rounded-xl flex justify-between overflow-hidden h-full">
+          <div className="px-2 pt-2 order-1 xl:order-2 rounded-lg border-b-0 bg-[linear-gradient(180deg,#8752FF_0%,#513199_38.59%)] xl:mt-34 mt-4 rotate-[-5.03deg] shadow-[7px_-4px_108px_-43px_#8955FF] relative xl:-right-5 right-0 transition-all duration-500 ease-in-out">
+            <div className="w-full xl:min-h-[580px] bg-black rounded-xl flex justify-between overflow-hidden h-auto">
               {currentSlide?.image ? (
                 <Image
                   src={currentSlide?.image}
@@ -313,7 +343,7 @@ export default function OurPortfolio() {
                   width={800}
                   height={500}
                   objectFit="cover"
-                  className="object-cover rounded-xl"
+                  className="object-cover rounded-xl "
                 />
               ) : (
                 <div className="w-full h-full flex items-center justify-center">
