@@ -164,8 +164,8 @@ export function Footer() {
                   </li>
                   <li>
                     <Link
-                      href="#"
-                      className="text-gray-400 hover:text-white cursor-not-allowed"
+                      href="/helpCenter"
+                      className="text-gray-400 hover:text-white"
                     >
                       Help Center
                     </Link>
