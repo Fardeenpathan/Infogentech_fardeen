@@ -9,7 +9,9 @@ import {
   Users, 
   LogOut,
   Menu,
-  X
+  X,
+  Tag,
+  FileText
 } from 'lucide-react';
 import adminApiService from '@/lib/adminApi';
 
@@ -23,6 +25,16 @@ const menuItems = [
     title: 'Contacts',
     href: '/admin/contacts',
     icon: MessageSquare,
+  },
+  {
+    title: 'Categories',
+    href: '/admin/categories',
+    icon: Tag,
+  },
+  {
+    title: 'Blogs',
+    href: '/admin/blogs',
+    icon: FileText,
   },
   {
     title: 'Settings',
