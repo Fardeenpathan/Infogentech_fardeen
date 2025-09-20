@@ -12,12 +12,12 @@ export default function ClientLayoutControls({ children }) {
   return (
     <>
       {!isAdmin && (
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <Navbar />
         </div>
       )}
       {!isAdmin && (
-        <div className="block md:hidden">
+        <div className="block lg:hidden">
           <MiniNavbar />
         </div>
       )}

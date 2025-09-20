@@ -37,7 +37,7 @@ const services = [
 
 export default function OurValues() {
   return (
-    <div className="mt-30">
+    <div className="xl:mt-30 md:mt-20 mt-10">
         <TopicHeader
           name="Our Values"
           subheading="Core beliefs behind everything we build"

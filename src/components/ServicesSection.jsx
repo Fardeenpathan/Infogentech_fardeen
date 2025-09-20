@@ -37,7 +37,7 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <div className="mt-28 mx-auto pb-10 container sm:px-10 px-4">
+    <div className="mx-auto pb-10 container sm:px-10 px-4 xl:mt-30 md:mt-20 mt-10">
       <TopicHeader
         name="Our Services"
         subheading="Explore Our Digital Solutions"

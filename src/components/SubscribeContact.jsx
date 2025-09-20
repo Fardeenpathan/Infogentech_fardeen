@@ -22,12 +22,12 @@ export default function SubscribeContact() {
             />
             <Button
               text="Subscribe"
-              className="xl:!py-3 xl:!px-5 md:!px-4 md:!py-2 w-full md:w-fit !py-3"
+              className="xl:!py-3.5 xl:!px-5 md:!px-4 md:!py-2 w-full md:w-fit !py-3"
             />
           </div>
-          <p className="font-jost font-normal xl:text-lg md:text-sm leading-6 text-[#C4C4C4] mt-2 text-center">
+          <p className="font-jost font-normal xl:text-lg md:text-sm leading-6 text-[#C4C4C4] mt-2 xl:text-start text-center">
             We care about your data in our &nbsp;
-            <a href="#" className="underline">
+            <a href="/privacyPolicy" className="underline">
               privacy policy
             </a>
           </p>

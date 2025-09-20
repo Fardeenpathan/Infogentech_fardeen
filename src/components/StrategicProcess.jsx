@@ -35,7 +35,7 @@ const strategicItems = [
 ];
 export default function StrategicProcess() {
   return (
-    <div className="mt-36 grid lg:grid-cols-2 grid-cols-1">
+    <div className=" grid lg:grid-cols-2 grid-cols-1 xl:mt-30 md:mt-20 mt-10">
       <div>
         <TopicHeader
           name="A Strategic Process"

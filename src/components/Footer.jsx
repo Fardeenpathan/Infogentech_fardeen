@@ -23,7 +23,7 @@ export function Footer() {
             <Link href="/contactUs">
               <Button
                 text="Contact Us"
-                className="!py-3.5 !px-10 xl:!py-5.5 lg:!px-12.5 text-nowrap"
+                className="!py-4 !px-10 xl:!py-5.5 lg:!px-12.5 text-nowrap"
               />
             </Link>
           </div>
