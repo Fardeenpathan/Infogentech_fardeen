@@ -11,6 +11,23 @@
     "title": "Portfolio Logo",
     "slug": "portfolio-logo",
     "image": "/assist/portfolio/design/logo.png",
-    "subImage": "/assist/portfolio/design/birtishRajDesign02.png"
+    "subImage": "/assist/portfolio/design/logos.png"
+  },
+  {
+    "id": 3,
+    "title": "LaraClean service",
+    "slug": "laraClean-service",
+    "image": "/assist/portfolio/development/LaraCleanCasestudy.png",
+    "subImage": "/assist/portfolio/development/dryCleaning.webp",
+    "description": "This project highlights the design process of developing a clean, functional, and engaging website for LaraClean. It was designed to offer an easy booking experience to users and demonstrate the professionalism and trust of the brand. ",
+      "points": [
+        "Wireframes, Prototypes, and High-fidelity design were created to be understandable and easy to use.",
+        "Customization of WordPress using Elementor, styling of the theme, and integration of plugins.",
+        "The use of custom typography, colors, and visual hierarchy ensures the brand identity is consistent."
+      ]
   }
 ]
+
+
+
+
