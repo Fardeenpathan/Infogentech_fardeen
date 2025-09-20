@@ -1,11 +1,12 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import Image from "next/image";
 import Icons from "./ui/Icon";
 import PurpleCheckbox from "./ui/Checkbox";
 import GradientButton from "./ui/GradientButton";
 import config from "@/config";
+import adminApiService from "@/lib/adminApi";
 const contactInfo = [
   {
     icon: "Contact",
@@ -40,22 +41,27 @@ const socialMedia = [
   },
 ];
 const ContactForm = () => {
-  const [isVerified, setIsVerified] = useState(true);
+  const [isVerified, setIsVerified] = useState(false);
+  const recaptchaRef = useRef(null);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phoneNumber: "",
     productQuestion: "",
     message: "",
+    captcha: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState("");
 
-  const handleCaptcha = (value) => {
-    if (value) {
+  const handleCaptcha = (token) => {
+    if (token) {
       setIsVerified(true);
+      setFormData((prev) => ({ ...prev, captcha: token }));
     } else {
       setIsVerified(false);
+      setFormData((prev) => ({ ...prev, captcha: "" }));
     }
   };
 
@@ -69,7 +75,7 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!isVerified) {
+    if (!isVerified || !formData.captcha) {
       setSubmitMessage("Please complete the reCAPTCHA verification.");
       return;
     }
@@ -78,37 +84,31 @@ const ContactForm = () => {
     setSubmitMessage("");
 
     try {
-      const response = await fetch(
-        `${config.api.baseUrl}${config.api.endpoints.contact}`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        }
-      );
+      // Use centralized API helper which builds the URL and headers
+      const result = await adminApiService.request(config.api.endpoints.contact, {
+        method: "POST",
+        body: JSON.stringify(formData),
+      });
+      setSubmitMessage(result.message || "Contact form submitted successfully. We will get back to you soon.");
+      setFormData({
+        name: "",
+        email: "",
+        phoneNumber: "",
+        productQuestion: "",
+        message: "",
+        captcha: "",
+      });
 
-      const result = await response.json();
-
-      if (response.ok) {
-        setSubmitMessage(
-          "Message sent successfully! We will get back to you soon."
-        );
-        setFormData({
-          name: "",
-          email: "",
-          phoneNumber: "",
-          productQuestion: "",
-          message: "",
-        });
-      } else {
-        setSubmitMessage(
-          result.message || "Failed to send message. Please try again."
-        );
+   
+      if (recaptchaRef.current) {
+        recaptchaRef.current.reset();
       }
+      setIsVerified(false);
+
+      // clear success message after a short time (optional)
+      setTimeout(() => setSubmitMessage(""), 6000);
     } catch (error) {
-      setSubmitMessage("Error sending message. Please try again later.");
+      setSubmitMessage(error?.message || "Error sending message. Please try again later.");
       console.error("Contact form error:", error);
     } finally {
       setIsSubmitting(false);
@@ -286,7 +286,8 @@ const ContactForm = () => {
                   <PurpleCheckbox label="subscribe to receive the latest news and exclusive offers" />
                 </div>
                 <ReCAPTCHA
-                  sitekey={config.recaptcha.siteKey}
+                  ref={recaptchaRef}
+                  sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
                   onChange={handleCaptcha}
                 />
                 {submitMessage && (
