@@ -51,7 +51,7 @@ const DigitalMarketing = () => {
             </div>
           ))}
         </div>
-        <div className="text-[#82828C] border-2 container mx-auto px-10"></div>
+        <CustomLine/>
         <SubscribeContact />
       </div>
     </>

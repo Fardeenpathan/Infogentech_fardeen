@@ -3,10 +3,10 @@ import Icons from "@/components/ui/Icon";
 const PortfolioHeader = () => {
   return (
     <div className="flex justify-between">
-      <div className="absolute overflow-hidden">
+      <div className="absolute overflow-hidden xl:block hidden">
         <Icons name="BlurEffectLeft" />
       </div>
-       <div className="absolute overflow-hidden right-0">
+       <div className="absolute overflow-hidden right-0 ">
         <Icons name="BlurEffectRight" />
       </div>
       <Icons name="PortHome" />
