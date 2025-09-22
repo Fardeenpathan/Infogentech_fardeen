@@ -1,4 +1,4 @@
-"use client";
+
 import Icons from "@/components/ui/Icon";
 import Image from "next/image";
 import SubscribeContact from "@/components/SubscribeContact";

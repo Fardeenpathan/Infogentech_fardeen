@@ -2268,10 +2268,10 @@ const Minus = () => (
   </svg>
 );
 
-const gradientServices = () => (
+const gradientServices = ({width="826" , height="246"}) => (
   <svg
-    width="826"
-    height="246"
+    width={width}
+    height={height}
     viewBox="0 0 826 246"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"

@@ -6,7 +6,6 @@ import Image from "next/image";
 import Icons from "@/components/ui/Icon";
 import CustomLine from "@/components/CustomLine";
 import Link from "next/link";
-import { useState } from "react";
 import marketingProjects from "./marketingProjects";
 
 const DigitalMarketing = () => {
