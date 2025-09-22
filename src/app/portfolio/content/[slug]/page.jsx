@@ -41,10 +41,10 @@ const SlugPage = () => {
               setExpanded={setExpanded}
             />
             <div className="mx-5 mt-6 font-jost">
-              <p className=" font-normal text-[32px] leading-[28px]">
+              <p className=" font-normal text-[32px] leading-7">
                 {project.title}
               </p>
-              <p className="mt-4 text-xl leading-[28px] opacity-80 font-kumbh-sans">
+              <p className="mt-4 text-xl leading-7 opacity-80 font-kumbh-sans">
                 {project.description}
               </p>
               <ul className="list-disc list-inside mt-4 space-y-2 text-lg leading-6 opacity-70 font-kumbh-sans">
@@ -282,7 +282,9 @@ const SlugPage = () => {
             </a>
           </div>
         </div> */}
-        <SubscribeContact />
+       <div className="mt-20">
+                  <SubscribeContact />
+               </div>
       </div>
     </>
   );

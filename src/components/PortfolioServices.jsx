@@ -16,7 +16,7 @@ const PortfolioServices = ({ activeService }) => {
   ];
 
   return (
-    <div className=" gap-6 justify-self-center grid md:grid-cols-4 grid-cols-2 mt-5 px-4 text-nowrap">
+    <div className=" gap-6 justify-self-center grid md:grid-cols-4 grid-cols-2 md:mt-5 mt-0 md:px-4 px-2 text-nowrap">
       {services.map((service) => (
         <Link
           key={service.id}

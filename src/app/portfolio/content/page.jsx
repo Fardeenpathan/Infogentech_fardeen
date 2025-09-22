@@ -5,8 +5,8 @@ import SubscribeContact from "@/components/SubscribeContact";
 import PortfolioHeader from "@/components/PortfolioHeader";
 import PortfolioServices from "@/components/PortfolioServices";
 import Link from "next/link";
-import { useState } from "react";
 import contentProjects from "./contentProjects";
+import CustomLine from "@/components/CustomLine";
 
 const Content = () => {
   return (
@@ -34,7 +34,7 @@ const Content = () => {
                 </div>
                 <div className="px-2.5 pb-2.5 flex justify-between flex-col">
                   <div className="flex items-center justify-between mt-4">
-                    <p className="font-jost lg:text-[24px] md:text-xl text-sm font-normal leading-[28px] tracking-normal">
+                    <p className="font-jost lg:text-[24px] md:text-xl text-sm font-normal leading-7 tracking-normal">
                       {project.title}
                     </p>
                     <Link

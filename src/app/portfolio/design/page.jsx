@@ -32,7 +32,7 @@ const Design = () => {
                 />
                 <div className="px-2.5 pb-2.5 flex justify-between flex-col">
                   <div className="flex items-center justify-between mt-4">
-                    <p className="font-jost text-[24px] font-normal leading-[28px] tracking-normal">
+                    <p className="font-jost text-[24px] font-normal leading-7 tracking-normal">
                       {project.title}
                     </p>
                     <Link href={`/portfolio/design/${project.slug}`}>

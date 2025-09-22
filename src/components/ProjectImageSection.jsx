@@ -20,7 +20,7 @@ const ProjectImageSection = ({ project, expanded, setExpanded }) => {
       />
       <div className="font-jost text-center absolute w-full bottom-0 py-14  glass-fallback bg-white/6"></div>
       <div className="font-jost text-center absolute w-full bottom-0 py-6">
-        <ShinyButton className="!py-4 !px-5 !text-lg"
+        <ShinyButton className="lg:!py-4 !px-5 !text-lg !py-2"
           onClick={() => setExpanded((s) => !s)}
         >
           {expanded ? "Know less" : "Know more"}
