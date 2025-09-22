@@ -18,12 +18,12 @@ const PortfolioHeader = () => {
           <p className="font-avalors font-normal md:text-[75px] text-5xl text-nowrap leading-none bg-[linear-gradient(91.32deg,_#6A27FF_-32.61%,_#FFFFFF_19.98%,_#6A27FF_112.29%)] bg-clip-text text-transparent">
             Our <span className="text-[#6A27FF]">Projects</span>
           </p>
-          <p className="font-jost text-lg font-medium leading-6 tracking-normal text-center align-middle mt-6">
+          <p className="font-jost md:text-lg text-[16px] font-medium leading-6 tracking-normal text-center align-middle mt-6">
             At Infogentech, every project shows our focus on innovation,
             quality, and making a difference. Take a look at the solutions we've
             built and meet the team that turns ideas into reality.
           </p>
-          <div className="w-0.5 h-28 rounded-full mb-10 bg-gradient-to-b from-purple-400 via-purple-500 to-purple-800 mt-10"></div>
+          <div className="w-0.5 md:h-28 h-20 rounded-full md:mb-10 md-5 bg-gradient-to-b from-purple-400 via-purple-500 to-purple-800 mt-10"></div>
           <div className="relative w-12 h-12">
             <img
               src="/assist/video/pentagonVideo.gif"
