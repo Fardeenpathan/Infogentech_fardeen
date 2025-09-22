@@ -37,7 +37,7 @@ const designProjects = [
     title: "Portfolio Logo",
     slug: "portfolio-logo",
     image: "/assist/portfolio/design/logo.png",
-    subImage: "/assist/portfolio/design/birtishRajDesign02.png",
+    subImage: "/assist/portfolio/design/logos.png",
   },
 ];
 
