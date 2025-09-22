@@ -5,7 +5,7 @@ export function StatsSection() {
   return (
     <div className="mx-14 h-85 xl:px-23 px-0 md:mt-76 mt-40 bg-[url('/assist/img/stateBackGround.png')]  hover:bg-[url('/assist/img/statebackGroundHover.png')]  longContainer mx-auto">
       <div className="flex xl:flex-row flex-col items-center justify-between md:mb-10 mb-0  xl:py-12 container mx-auto py-5">
-        <div className="flex flex-row  sm:space-x-8 space-x-1.5">
+        <div className="flex flex-row  sm:space-x-8 space-x-1.5 mt-[25px]">
           <div className="flex flex:row border-1 border-[rgb(135,82,255)] sm:px-7 px-2 h-11 space-x-2 w-auto rounded-md items-center">
             <div className="text-primary font-Jost  2xl:text-xl text-[15px] md:text-lg vertical-trim  tracking-tight-3 flex justify-center items-center gap-2 text-nowrap">
               <Icons name="Globe" />
