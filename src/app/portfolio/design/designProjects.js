@@ -10,7 +10,7 @@ const designProjects = [
     date: "April 2025 ",
     duration: "6 weeks",
     tools: ["adobe", "animate cc", "premiere pro"],
-    client: "BookPremiumFare.com (by Infogentech)",
+    // client: "BookPremiumFare.com (by Infogentech)",
     location: "India (Remote Collaboration) ",
     modules: [
       "Research",
