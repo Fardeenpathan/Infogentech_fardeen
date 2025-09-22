@@ -14,11 +14,11 @@ export default function MidHeader({ name = "", subheading = "", paragraph="", cl
         <p className="font-avalors font-normal md:text-[32px] text-2xl leading-6 align-middle text-primary mt-4">
           {name}
         </p>
-        <p className="font-jost font-medium md:text-lg  text-sm leading-6 align-middle md:mt-3 mt-1 text-center">
+        <p className="font-jost font-medium md:text-lg  text-[16px] leading-6 align-middle md:mt-3 mt-1 text-center">
           {subheading}
         </p>
         {paragraph && (
-          <p className="font-jost font-medium text-lg leading-6 align-middle mt-6 text-[#79787B]">{paragraph}</p>
+          <p className="font-jost font-medium md:text-lg  text-[16px] leading-6 align-middle mt-6 text-[#79787B]">{paragraph}</p>
         )}
       </div>
     </div>

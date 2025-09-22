@@ -90,14 +90,14 @@ export function MiniNavbar() {
               Home
             </Link>
             <Link
-              href="/aboutUs"
+              href="/services/design"
               onClick={() => setIsOpen(false)}
               className="block hover:text-[#8E8E8E] text-lg px-2 linearGradientFaq "
             >
               Services
             </Link>
             <Link
-              href="/services/design"
+              href="/portfolio/design"
               onClick={() => setIsOpen(false)}
               className="block hover:text-[#8E8E8E] text-lg px-2 linearGradientFaq"
             >

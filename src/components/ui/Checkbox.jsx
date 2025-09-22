@@ -4,7 +4,7 @@ export default function PurpleCheckbox({ label }) {
   const [checked, setChecked] = useState(false);
 
   return (
-    <label className="flex items-center space-x-2 cursor-pointer">
+    <label className="flex items-center space-x-2 cursor-pointer ">
       <input
         type="checkbox"
         checked={checked}
@@ -13,7 +13,7 @@ export default function PurpleCheckbox({ label }) {
       />
       <span
         className={`
-          w-6 h-6 flex items-center justify-center 
+          w-6 h-6 flex items-center justify-center  shrink-0 
           border-2 rounded-sm 
           ${checked ? "border-purple-600" : "border-purple-600"} 
           bg-white
@@ -21,7 +21,7 @@ export default function PurpleCheckbox({ label }) {
       >
         {checked && (
           <svg
-            className="w-4 h-4 text-purple-600"
+            className="w-4 h-4 text-purple-600 "
             fill="none"
             stroke="currentColor"
             strokeWidth="4"
@@ -31,7 +31,7 @@ export default function PurpleCheckbox({ label }) {
           </svg>
         )}
       </span>
-      {label && <span className="opacity-40 font-jost tracking-wider text-lg">{label}</span>}
+      {label && <span className="opacity-40 font-jost tracking-wider md:text-lg text-[16px] ">{label}</span>}
     </label>
   );
 }

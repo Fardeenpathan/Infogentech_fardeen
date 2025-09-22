@@ -119,9 +119,9 @@ const ContactForm = () => {
     }
   };
   return (
-    <div className="mt-35 container mx-auto overflow-hidden">
+    <div className="xl:mt-35 mt-0 container mx-auto overflow-hidden px-2">
       <div className="flex justify-between gap-8">
-        <div className="flex gap-10">
+        <div className="xl:flex gap-10 hidden">
           <div className="flex justify-center items-center flex-col">
             <div className="relative w-12 h-12">
               <img
@@ -145,8 +145,8 @@ const ContactForm = () => {
               we’re happy to help!
             </p>
           </div>
-          <section className="p-2.5 bg-[#202037] rounded-2xl flex gap-5">
-            <div className="min-w-[491px] bg-[#000026] rounded-xl py-12 px-10 relative overflow-hidden">
+          <section className="p-2.5 bg-[#202037] rounded-2xl flex gap-5 flex-col lg:flex-row">
+            <div className="md:min-w-[491px] w-full bg-[#000026] rounded-xl py-12 px-10 relative overflow-hidden">
               <p className="font-jost font-medium text-2xl leading-6 align-middle">
                 Contact Information
               </p>
@@ -171,11 +171,11 @@ const ContactForm = () => {
                 ))}
               </div>
 
-              <div className="flex gap-6 mt-36">
+              <div className="flex gap-6 mt-36 ">
                 {socialMedia.map((item, index) => (
                   <div
                     key={index}
-                    className="w-[30px] h-[30px] bg-[#C4C4C4] rounded-full flex items-center justify-center"
+                    className="w-[30px] h-[30px] bg-[#C4C4C4] rounded-full flex items-center justify-center z-50"
                   >
                     <a
                       href={item.link}
@@ -194,10 +194,10 @@ const ContactForm = () => {
                   </div>
                 ))}
               </div>
-              <div className="w-[269px] h-[269px] bg-[#301F56] rounded-full absolute -bottom-25 -right-25 "></div>
-              <div className="w-[138px] h-[138px] bg-[#48484880] rounded-full absolute bottom-13 right-13"></div>
+              <div className="w-[269px] h-[269px] bg-[#301F56] rounded-full absolute md:-bottom-25 md:-right-25  -bottom-32 -right-32"></div>
+              <div className="w-[138px] h-[138px]  bg-[#48484880] rounded-full absolute md:bottom-13 md:right-13 bottom-7  right-7"></div>
             </div>
-            <div className="flex items-center justify-center px-6 w-full relative">
+            <div className="flex items-center justify-center px-6 w-full relative ">
               <form
                 className="w-full  text-white space-y-6"
                 onSubmit={handleSubmit}
@@ -318,7 +318,7 @@ const ContactForm = () => {
                 <button
                   type="submit"
                   disabled={!isVerified || isSubmitting}
-                  className="text-[#6A27FF] mt-7.5"
+                  className="text-[#6A27FF] mt-7.5 pb-4"
                 >
                   <GradientButton
                     bg="bg-[#202037]"
@@ -329,14 +329,14 @@ const ContactForm = () => {
                   </GradientButton>
                 </button>
 
-                <Image
+                {/* <Image
                   src="/assist/img/ContactPlane.png"
                   alt="valueImg"
                   width={203}
                   height={85}
                   objectFit="cover"
                   className="rotate-200 scale-y-[-1] absolute -bottom-2 left-1/3"
-                />
+                /> */}
               </form>
             </div>
           </section>
