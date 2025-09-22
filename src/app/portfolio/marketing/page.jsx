@@ -7,7 +7,7 @@ import Icons from "@/components/ui/Icon";
 import CustomLine from "@/components/CustomLine";
 import Link from "next/link";
 import { useState } from "react";
-import marketingProjects from "./marketingProjects.json";
+import marketingProjects from "./marketingProjects";
 
 const DigitalMarketing = () => {
   const [activeService, setActiveService] = useState("Digital Marketing");

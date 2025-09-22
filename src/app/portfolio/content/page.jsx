@@ -5,9 +5,8 @@ import SubscribeContact from "@/components/SubscribeContact";
 import PortfolioHeader from "@/components/PortfolioHeader";
 import PortfolioServices from "@/components/PortfolioServices";
 import Link from "next/link";
-import CustomLine from "@/components/CustomLine";
-
-import contentProjects from "./contentProjects.json";
+import { useState } from "react";
+import contentProjects from "./contentProjects";
 
 const Content = () => {
   return (
