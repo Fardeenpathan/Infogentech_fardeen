@@ -9,7 +9,7 @@ const reviews = [
     text: "Their SEO work took us from barely showing up in searches to ranking on the first page for important keywords. They clearly know the healthcare space inside and out.",
     name: "— Ethan Roberts",
     role: "Owner, Cascade Remodeling (Seattle, WA | Home Renovation)",
-    img: "/assist/img/ethan.avif",
+    img: "/assist/img/ethan.jpg",
     rating: 5,
   },
   {
@@ -17,7 +17,7 @@ const reviews = [
     text: "From a new logo to a refreshed social media strategy, they completely elevated our brand. Customer engagement is way up, and foot traffic to our store has been better than ever.",
     name: "Jessica Collins",
     role: "Marketing Director, Nova Dental Group (Dallas, TX | Healthcare)",
-    img: "/assist/img/jessica.avif",
+    img: "/assist/img/jessica.jpg",
     rating: 4,
   },
   {
@@ -25,7 +25,7 @@ const reviews = [
     text: "They brought our vision to life with modern design and a smart strategy that really connects with our clients. We constantly get compliments on our new website and branding.",
     name: "Marcus Lee",
     role: "Co-Founder, Leaf & Brew (San Francisco, CA | Specialty Tea & Coffee)",
-    img: "/assist/img/Marcus.avif",
+    img: "/assist/img/Marcus.jpg",
     rating: 3,
   },
   {
@@ -33,7 +33,7 @@ const reviews = [
     text: "They helped us run ads that finally brought in the right customers. Within weeks, we saw more calls and new projects coming through.",
     name: "Sarah Mitchell",
     role: "BrightPath Logistics (Chicago, IL | Logistics)",
-    img: "/assist/img/sarah.avif",
+    img: "/assist/img/sarah.jpg",
     rating: 5,
   },
   {
@@ -41,7 +41,7 @@ const reviews = [
     text: "Our new online store looks great and works smoothly. Sales have gone up, and our shoppers find it easier to buy from us now.",
     name: " Daniel Harris",
     role: "Trendy Threads (New York, NY | Fashion)",
-    img: "/assist/img/daniel.avif",
+    img: "/assist/img/daniel.jpg",
     rating: 4,
   },
   {
@@ -49,7 +49,7 @@ const reviews = [
     text: "Their SEO and content plan made a huge difference. We’re showing up in searches more often, and it’s bringing steady new clients.",
     name: "Olivia Turner",
     role: "Summit Legal Advisors (Denver, CO | Legal Services)",
-    img: "/assist/img/olivia.avif",
+    img: "/assist/img/olivia.jpg",
     rating: 3,
   },
 ];
