@@ -55,7 +55,7 @@ const Design = () => {
     {
       id: "02",
       title: "UI/UX Design",
-      image: "/assist/img/uiux-design.png", // 🖼️ added image
+      image: "/assist/services/design/ui.png",
       subServices: [
         {
           id: "01",
@@ -114,7 +114,7 @@ const Design = () => {
     {
       id: "04",
       title: "Logo Design",
-      image: "/assist/img/logo-design.png",
+      image: "/assist/services/design/logo.jpeg",
       subServices: [
         // empty by design
       ],

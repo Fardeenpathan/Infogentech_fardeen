@@ -54,7 +54,7 @@ const contentMap = {
         "Smart Search: Enabled location, QR & image-based product discovery.",
         "Faster Performance: Optimized backend for speed & stability.",
       ],
-      image: "/assist/img/homeportfolio/sooquna.png",
+      image: "/assist/img/homeportfolio/sooquna.jpeg",
     },
     {
       id: "dev-2",

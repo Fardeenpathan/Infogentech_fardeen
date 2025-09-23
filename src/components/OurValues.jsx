@@ -66,7 +66,7 @@ export default function OurValues() {
             className="w-[640px] md:h-72 h-40 relative transform xl:scale-x-[-1] overflow-hidden -z-40 xl:-right-62 xl:-top-6 scale-x-[-1] rotate-90 xl:rotate-0 md:top-60 top-45 -right-5"
           />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2  gap-6 max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 mt-56 xl:mt-0 gap-6 max-w-3xl mx-auto">
           {services.map((service) => (
             <div
               key={service.id}

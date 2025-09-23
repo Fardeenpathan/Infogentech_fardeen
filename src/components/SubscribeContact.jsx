@@ -1,7 +1,7 @@
 import Button from "./ui/Button";
 export default function SubscribeContact() {
   return (
-    <div className="subContainer mx-auto px-4 xl:px-10">
+    <div className="subContainer mx-auto px-2 xl:px-10">
       <div className="bg-[#141313] xl:p-14 lg:p-10 md:py-10 p-5 flex md:justify-between md:flex-row flex-col  items-center ">
         <div className="flex items-center flex-col text-center md:items-start pr-5">
           <p className="font-avalors font-normal xl:text-[30px] leading-8 md:text-[24px] text-xl">

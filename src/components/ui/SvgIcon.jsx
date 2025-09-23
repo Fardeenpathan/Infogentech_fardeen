@@ -1774,7 +1774,8 @@ const Pentagon = ({ width = "40", height = "46" }) => (
 const LinesAbout = ({ width = "482", height = "243" }) => (
   <svg
     width={width}
-    height={height}
+    height={height} 
+    className="md:w-120 md:h-60 w-96 h-60"
     viewBox="0 0 482 243"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
