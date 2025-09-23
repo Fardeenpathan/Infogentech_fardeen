@@ -7,6 +7,7 @@ import Icons from "@/components/ui/Icon";
 import Link from "next/link";
 import developmentProjects from "./developmentProjects";
 import CustomLine from "@/components/CustomLine";
+
 const DigitalMarketing = () => {
   return (
     <>

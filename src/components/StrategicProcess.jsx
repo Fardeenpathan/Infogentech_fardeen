@@ -1,5 +1,6 @@
 import Image from "next/image";
 import TopicHeader from "./TopicHeader";
+import Icons from "./ui/Icon";
 
 const strategicItems = [
   {
@@ -35,6 +36,9 @@ export default function StrategicProcess() {
           name="A Strategic Process"
           subheading="Driving Your Digital Success"
         />
+        <div className="relative">
+          <Icons name="Snakepath" width="w-65 md:w-142" height="h-34 md:h-74"/>
+        </div>
       </div>
          
       <div className="grid grid-cols-2">
