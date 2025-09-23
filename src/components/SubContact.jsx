@@ -29,8 +29,8 @@ export default function SubContact() {
               <Icons name="Globe" width={23} height={23} color="#8F8F9B" />
             </div>
             <p className="font-jost font-semibold text-lg tracking-[0.03em] items-center pr-2">
-              Proudly Headquartered in the INDIA, Digital solutions the Digital
-              World.
+              {/* Proudly Headquartered in the INDIA, Digital solutions the Digital */}
+              {/* World. */}
             </p>
             <div className="flex gap-2 font-jost font-semibold text-[20px] tracking-[0.03em] mt-5 items-center">
               <Icons name="Building" /> <span>Delhi, India</span>
@@ -60,8 +60,8 @@ export default function SubContact() {
               <Icons name="Globe" width={23} height={23} color="#8F8F9B" />
             </div>
             <p className="font-jost font-semibold text-lg tracking-[0.03em] items-center pr-2">
-              Proudly Headquartered in the USA, Digital solutions the Digital
-              World.
+              {/* Proudly Headquartered in the USA, Digital solutions the Digital
+              World. */}
             </p>
             <div className="flex gap-2 font-jost font-semibold text-[20px] tracking-[0.03em] mt-5 items-center">
               <Icons name="Building" /> <span>Texas, USA</span>
