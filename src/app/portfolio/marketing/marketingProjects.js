@@ -282,7 +282,7 @@ const marketingProjects = [
     title: "iClinix — Specialized Eye Care Hospital ",
     slug: "iClinix-Specialized-Eye-Care-Hospital",
     image: "/assist/portfolio/marketing/ICliniXCaseStudy.png",
-    subImage: "/assist/portfolio/marketing/finEdge.png",
+    subImage: "/assist/portfolio/marketing/IClini.png",
     description:
       "FinEdge is a fintech startup helping users invest wisely. The focus was financial literacy, trust, and lead generation.",
     points: [

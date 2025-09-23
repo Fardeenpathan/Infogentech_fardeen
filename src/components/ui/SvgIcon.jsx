@@ -1028,10 +1028,9 @@ const Star = ({ width = "18", height = "17", className }) => (
   </svg>
 );
 
-const LogoFooter = ({ width = "49", height = "51" }) => (
+const LogoFooter = () => (
   <svg
-    width={width}
-    height={height}
+    className="md:w-12.5 md:h-12.5 w-8 h-8"
     viewBox="0 0 49 51"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -1922,6 +1921,7 @@ const QualtiyAbout = () => (
   <svg
     width="46"
     height="46"
+     className="md:w-12.5 md:h-12.5 w-6 h-6"
     viewBox="0 0 46 46"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -1937,6 +1937,7 @@ const AgileAbout = () => (
   <svg
     width="55"
     height="46"
+     className="md:w-12.5 md:h-12.5 w-6 h-6"
     viewBox="0 0 55 46"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -1952,6 +1953,7 @@ const DigitalAbout = () => (
   <svg
     width="46"
     height="46"
+     className="md:w-12.5 md:h-12.5 w-6 h-6"
     viewBox="0 0 46 46"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -1983,6 +1985,7 @@ const GoalAbout = () => (
   <svg
     width="46"
     height="46"
+    className="md:w-12.5 md:h-12.5 w-6 h-6"
     viewBox="0 0 46 46"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
