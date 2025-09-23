@@ -37,7 +37,7 @@ const Design = () => {
                       {project.title}
                     </p>
                     <Link
-                      href={`/portfolio/content/${project.slug}`}
+                      href={`/portfolio/design/${project.slug}`}
                       className="hidden lg:block"
                     >
                       <Icons
@@ -48,7 +48,7 @@ const Design = () => {
                       />
                     </Link>
                     <Link
-                      href={`/portfolio/content/${project.slug}`}
+                      href={`/portfolio/design/${project.slug}`}
                       className="block lg:hidden"
                     >
                       <Icons

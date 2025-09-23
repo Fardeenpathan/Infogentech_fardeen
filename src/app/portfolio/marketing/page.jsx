@@ -38,7 +38,7 @@ const DigitalMarketing = () => {
                       {project.title}
                     </p>
                     <Link
-                      href={`/portfolio/content/${project.slug}`}
+                      href={`/portfolio/marketing/${project.slug}`}
                       className="hidden lg:block"
                     >
                       <Icons
@@ -49,7 +49,7 @@ const DigitalMarketing = () => {
                       />
                     </Link>
                     <Link
-                      href={`/portfolio/content/${project.slug}`}
+                      href={`/portfolio/marketing/${project.slug}`}
                       className="block lg:hidden"
                     >
                       <Icons
