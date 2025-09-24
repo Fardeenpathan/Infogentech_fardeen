@@ -7,15 +7,8 @@ import PurpleCheckbox from "./ui/Checkbox";
 import GradientButton from "./ui/GradientButton";
 import config from "@/config";
 import adminApiService from "@/lib/adminApi";
-const contactData = [
-  {
-    country: "India",
-    info: [
-      { icon: "Contact", text: "+91 99101 30963" },
-      { icon: "Email", text: "info@infogentech.com" },
-      { icon: "Location", text: "Delhi, India" },
-    ],
-  },
+const contactUsa = [
+ 
   {
     country: "USA",
     info: [
@@ -26,6 +19,16 @@ const contactData = [
   },
 ];
 
+const contactIndia =[
+   {
+    country: "India",
+    info: [
+      { icon: "Contact", text: "+91 99101 30963" },
+      { icon: "Email", text: "info@infogentech.com" },
+      { icon: "Location", text: "Delhi, India" },
+    ],
+  },
+]
 const socialMedia = [
   {
     name: "Facebook",
@@ -155,7 +158,7 @@ const ContactForm = ({country}) => {
               </p>
 
               <div className="mt-20 flex flex-col gap-12.5">
-                {contactData.map((region, i) => (
+                {contactUsa.map((region, i) => (
                   <div key={i}>
                     <h3 className="text-xl font-semibold mb-4">
                       {region.country}

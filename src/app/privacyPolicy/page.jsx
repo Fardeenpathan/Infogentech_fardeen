@@ -108,11 +108,11 @@ const PrivacyPolicy = () => {
               </section>
             ))}
 
-            <p className="mt-3 text-base sm:text-lg md:text-xl leading-relaxed font-jost pl-4">
+            {/* <p className="mt-3 text-base sm:text-lg md:text-xl leading-relaxed font-jost pl-4">
               Email Address : Info@infogentech.com <br /> Phone Number : +91
               991-013-0963 <br /> Company Name & Address : Infogentech , Model
               Town
-            </p>
+            </p> */}
 
             <footer className="text-end text-xs sm:text-sm md:text-base text-gray-500 mt-6">
               <p>

@@ -118,7 +118,7 @@ const Development = () => {
                 </div>
                 {openCategory === category.id && (
                   <Image
-                    src="/assist/img/DesignImg.png"
+                    src="/assist/services/development/webAp.jpeg"
                     alt="Design"
                     width={400}
                     height={377}
