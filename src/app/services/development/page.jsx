@@ -13,6 +13,7 @@ const Development = () => {
     {
       id: "01",
       title: "Web & App Development",
+      image: "/assist/services/development/webAp.jpeg",
       subServices: [
         { id: "01", title: "Website Development", desc: "Scalable websites built for performance." },
         { id: "02", title: "Custom Websites & Business Landing Pages", desc: "Tailored solutions for unique business needs." },
@@ -35,6 +36,7 @@ const Development = () => {
     {
       id: "02",
       title: "CMS Development",
+      image: "/assist/services/development/cms.png",
       subServices: [
         { id: "01", title: "WordPress (Custom Themes & Plugins)", desc: "Custom WordPress solutions." },
         { id: "02", title: "Shopify Store Development & Customization", desc: "Scalable Shopify stores." },
@@ -46,6 +48,7 @@ const Development = () => {
     {
       id: "03",
       title: "Custom Integrations",
+      image: "/assist/services/development/customIntegration.png",
       subServices: [
         { id: "01", title: "Database Design & API Integration", desc: "Seamless data connectivity." },
         { id: "02", title: "System Integration & Custom Software", desc: "Unified custom solutions." },
@@ -55,6 +58,7 @@ const Development = () => {
     {
       id: "04",
       title: "AI & Cloud Solutions",
+      image: "/assist/services/development/AICloud.png",
       subServices: [
         { id: "01", title: "Advanced AI Development", desc: "Smart AI solutions." },
         { id: "02", title: "Cloud Hosting Services", desc: "Secure cloud hosting." },
@@ -118,7 +122,7 @@ const Development = () => {
                 </div>
                 {openCategory === category.id && (
                   <Image
-                    src="/assist/services/development/webAp.jpeg"
+                    src={category.image}
                     alt="Design"
                     width={400}
                     height={377}

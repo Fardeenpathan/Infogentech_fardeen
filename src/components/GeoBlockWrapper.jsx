@@ -45,7 +45,7 @@ export default function GeoBlockWrapper({ children }) {
             }`
           );
           setIsAllowed(allowed);
-          // dispatch(setCountryCode(testCountry));
+          dispatch(setCountryCode(testCountry));
           setIsLoading(false);
           return;
         }
