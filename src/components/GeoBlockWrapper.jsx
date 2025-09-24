@@ -1,17 +1,17 @@
-'use client';
+"use client";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+import { useDispatch } from "react-redux";
+import { setCountryCode } from "../redux/countryCodeSlice";
+import Loader from "./loader/Loader";
 
-import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
-
-const ALLOWED_COUNTRIES = ['IN', 'CA', 'ZA'];
+const ALLOWED_COUNTRIES = ["IN", "CA", "ZA"];
 
 const BlockedPage = () => (
   <div className="min-h-screen bg-gradient-to-br from-red-900 via-red-800 to-red-900 flex items-center justify-center p-4">
     <div className="max-w-md w-full bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-8 text-center">
       <div className="text-6xl mb-6">🚫</div>
-      <h1 className="text-3xl font-bold text-white mb-4">
-        Access Restricted
-      </h1>
+      <h1 className="text-3xl font-bold text-white mb-4">Access Restricted</h1>
       <p className="text-red-100 mb-6 text-lg">
         This website is only available in:
       </p>
@@ -28,37 +28,46 @@ const BlockedPage = () => (
 );
 
 export default function GeoBlockWrapper({ children }) {
-  const [isAllowed, setIsAllowed] = useState(null); // null = checking, true = allowed, false = blocked
+  const [isAllowed, setIsAllowed] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const router = useRouter();
+  const dispatch = useDispatch();
 
   useEffect(() => {
     async function checkAccess() {
       try {
-        // In development, use test country
-        if (process.env.NODE_ENV === 'development') {
-          const testCountry = process.env.NEXT_PUBLIC_TEST_COUNTRY || 'IN';
+        if (process.env.NODE_ENV === "development") {
+          const testCountry = process.env.NEXT_PUBLIC_TEST_COUNTRY || "IN";
           const allowed = ALLOWED_COUNTRIES.includes(testCountry);
-          console.log(`🧪 Testing with country: ${testCountry} - ${allowed ? 'ALLOWED' : 'BLOCKED'}`);
+          console.log(
+            `🧪 Testing with country: ${testCountry} - ${
+              allowed ? "ALLOWED" : "BLOCKED"
+            }`
+          );
           setIsAllowed(allowed);
           setIsLoading(false);
           return;
         }
-
-        // Production: Get user's country
-        const response = await fetch('http://ip-api.com/json/?fields=status,country,countryCode');
+        const response = await fetch(
+          "http://ip-api.com/json/?fields=status,country,countryCode"
+        );
         const data = await response.json();
-        
-        if (data.status === 'success') {
+
+        if (data.status === "success") {
           const allowed = ALLOWED_COUNTRIES.includes(data.countryCode);
-          console.log(`User country: ${data.countryCode} (${data.country}) - ${allowed ? 'ALLOWED' : 'BLOCKED'}`);
+          console.log(
+            `User country: ${data.countryCode} (${data.country}) - ${
+              allowed ? "ALLOWED" : "BLOCKED"
+            }`
+          );
           setIsAllowed(allowed);
+          dispatch(setCountryCode(data.countryCode));
         } else {
-          console.log('Geolocation API failed, allowing access');
+          console.log("Geolocation API failed, allowing access");
           setIsAllowed(true);
         }
       } catch (error) {
-        console.error(' Error checking location:', error);
+        console.error(" Error checking location:", error);
         setIsAllowed(true);
       } finally {
         setIsLoading(false);
@@ -69,14 +78,7 @@ export default function GeoBlockWrapper({ children }) {
   }, []);
 
   if (isLoading) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-800 to-blue-900 flex items-center justify-center">
-        <div className="text-white text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto mb-4"></div>
-          <p className="text-lg">Checking access...</p>
-        </div>
-      </div>
-    );
+    return <Loader />;
   }
 
   if (!isAllowed) {

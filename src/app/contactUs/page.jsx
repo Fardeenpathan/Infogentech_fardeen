@@ -1,10 +1,15 @@
+"use client"
 import Image from "next/image";
 import Icons from "@/components/ui/Icon";
 import ContactForm from "@/components/ContactForm";
 import SubContact from "@/components/SubContact";
 import MoreContact from "@/components/MoreContact";
 import SubscribeContact from "@/components/SubscribeContact";
+import { useSelector } from 'react-redux';
+
 const ContactUs = () => {
+  const countryCode = useSelector((state) => state.countryCode.value);
+
   return (
     <div className="xl:mt-35 mt-10 subContainer mx-auto">
       <div className="flex flex-col-reverse xl:flex-row justify-between items-center">
@@ -72,9 +77,9 @@ const ContactUs = () => {
         </div>
       </div>
       <div className="flex flex-col gap-8">
-        <ContactForm />
-        <SubContact />
-        <MoreContact />
+        <ContactForm country={countryCode}/>
+        <SubContact country={countryCode}/>
+        <MoreContact country={countryCode}/>
         <SubscribeContact />
       </div>
     </div>

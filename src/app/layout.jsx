@@ -1,18 +1,22 @@
-
-import "./globals.css";        
+"use client"
+import { Provider } from "react-redux";
+import "./globals.css";
 import ClientLayoutControls from "@/components/ClientLayoutControls";
+import store from "@/redux/store";
 
-export const metadata = {
-  title: "Infogentech - Best Design, Development, Marketing",
-  description:
-    "We become your digital department bringing strategy, creativity, and technical expertise to accelerate your business growth.",
-};
+// export const metadata = {
+//   title: "Infogentech - Best Design, Development, Marketing",
+//   description:
+//     "We become your digital department bringing strategy, creativity, and technical expertise to accelerate your business growth.",
+// };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="dark">
       <body>
-        <ClientLayoutControls>{children}</ClientLayoutControls>
+        <Provider store={store}>
+          <ClientLayoutControls>{children}</ClientLayoutControls>
+        </Provider>
       </body>
     </html>
   );

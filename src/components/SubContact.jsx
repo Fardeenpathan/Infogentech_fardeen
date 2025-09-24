@@ -1,7 +1,7 @@
 import MidHeader from "./MidHeader";
 import Image from "next/image";
 import Icons from "./ui/Icon";
-export default function SubContact() {
+export default function SubContact({country}) {
   return (
     <>
       <MidHeader

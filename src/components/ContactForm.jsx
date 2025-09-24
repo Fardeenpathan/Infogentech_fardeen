@@ -44,7 +44,7 @@ const socialMedia = [
     link: "https://twitter.com/",
   },
 ];
-const ContactForm = () => {
+const ContactForm = ({country}) => {
   const [isVerified, setIsVerified] = useState(false);
   const recaptchaRef = useRef(null);
 
