@@ -1,8 +1,8 @@
 import Button from "./ui/Button";
 export default function SubscribeContact() {
   return (
-    <div className="subContainer mx-auto px-4 xl:px-10">
-      <div className="mt-35  bg-[#141313] xl:p-14 lg:p-10 md:py-10 p-5 flex md:justify-between md:flex-row flex-col  items-center ">
+    <div className="subContainer mx-auto px-2 xl:px-10">
+      <div className="bg-[#141313] xl:p-14 lg:p-10 md:py-10 p-5 flex md:justify-between md:flex-row flex-col  items-center ">
         <div className="flex items-center flex-col text-center md:items-start pr-5">
           <p className="font-avalors font-normal xl:text-[30px] leading-8 md:text-[24px] text-xl">
             Join 2,000+ subscribers
@@ -22,12 +22,12 @@ export default function SubscribeContact() {
             />
             <Button
               text="Subscribe"
-              className="xl:!py-3 xl:!px-5 md:!px-4 md:!py-2 w-full md:w-fit !py-3"
+              className="xl:!py-3.5 xl:!px-5 md:!px-4 md:!py-2 w-full md:w-fit !py-3"
             />
           </div>
-          <p className="font-jost font-normal xl:text-lg md:text-sm leading-6 text-[#C4C4C4] mt-2 text-center">
+          <p className="font-jost font-normal xl:text-lg md:text-sm leading-6 text-[#C4C4C4] mt-2 xl:text-start text-center">
             We care about your data in our &nbsp;
-            <a href="#" className="underline">
+            <a href="/privacyPolicy" className="underline">
               privacy policy
             </a>
           </p>

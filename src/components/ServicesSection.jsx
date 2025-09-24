@@ -1,5 +1,4 @@
-import { useRef } from "react";
-import { useInView } from "./useInView";
+
 import Image from "next/image";
 import TopicHeader from "./TopicHeader";
 import Icons from "./ui/Icon";
@@ -37,11 +36,8 @@ const services = [
 ];
 
 export default function ServicesSection() {
-  const ref = useRef(null);
-  const isInView = useInView(ref);
-
   return (
-    <div className="mt-28 mx-auto pb-10 container sm:px-10 px-4" ref={ref}>
+    <div className="mx-auto pb-10 container sm:px-10 px-4 xl:mt-30 mt-20">
       <TopicHeader
         name="Our Services"
         subheading="Explore Our Digital Solutions"
@@ -51,15 +47,9 @@ export default function ServicesSection() {
         {services.map((service, index) => (
           <div
             key={service.id}
-            className={`bg-[#15152A] rounded-md  p-5 shadow-[0px_0px_54px_24px_#1C1C38] flex flex-col justify-between hover:scale-105 transition-transform duration-500 cursor-pointer ${
-              isInView
-                ? index < 2
-                  ? "animate-in slide-in-from-left-40 fade-in-50"
-                  : index >= services.length - 2
-                  ? "animate-in slide-in-from-right-40 fade-in-50"
-                  : ""
-                : "opacity-0"
-            }`}
+            className={`bg-[#15152A] rounded-md  p-5 shadow-[0px_0px_54px_24px_#1C1C38] flex flex-col justify-between hover:scale-105 transition-transform duration-500 cursor-pointer
+              
+            `}
           >
             <div>
               <span className="font-jost font-normal text-[32px] leading-[100%] tracking-[3%] opacity-10">
@@ -89,7 +79,7 @@ export default function ServicesSection() {
             </div>
           </div>
         ))}
-        {isInView && (
+      
           <div className="overflow-hidden">
             <div className="absolute moving-text-container -z-30 -top-30">
               <div className="moving-text-content font-['Jost'] font-avalors font-normal text-[120px] tracking-[0.03em] uppercase bg-gradient-to-b from-[#C4C4C4] to-[#FFFFFF] bg-clip-text text-transparent opacity-15 moving-text-container">
@@ -110,7 +100,7 @@ export default function ServicesSection() {
               </div>
             </div>
           </div>
-        )}
+      
       </div>
     </div>
   );

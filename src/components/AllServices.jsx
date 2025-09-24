@@ -16,7 +16,7 @@ const AllServices = ({ activeService }) => {
   ];
 
   return (
-    <div className=" gap-6 justify-self-center grid md:grid-cols-4 grid-cols-2 mt-5">
+     <div className=" gap-3 xl:gap-6 justify-self-center grid md:grid-cols-4 grid-cols-2 md:mt-5 xl:mt-0 md:px-4 px-2 text-nowrap mt-4">
       {services.map((service) => (
         <Link
           key={service.id}

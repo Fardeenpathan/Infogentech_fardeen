@@ -23,7 +23,7 @@ export function Footer() {
             <Link href="/contactUs">
               <Button
                 text="Contact Us"
-                className="!py-3.5 !px-10 xl:!py-5.5 lg:!px-12.5 text-nowrap"
+                className="!py-4 !px-10 xl:!py-5.5 lg:!px-12.5 text-nowrap"
               />
             </Link>
           </div>
@@ -49,7 +49,7 @@ export function Footer() {
                 <br />
                 <p className="space-x-3">
                   <a href="mailto:info@infogentech.com">info@infogentech.com</a>
-                  <span>|</span> <span>9999999999</span>
+                  <span>|</span> <span>+91 991-013-0963</span>
                 </p>
               </div>
               <div className=" max-w-[300px] text-white border-1 mt-7.5"></div>
@@ -164,8 +164,8 @@ export function Footer() {
                   </li>
                   <li>
                     <Link
-                      href="#"
-                      className="text-gray-400 hover:text-white cursor-not-allowed"
+                      href="/helpCenter"
+                      className="text-gray-400 hover:text-white"
                     >
                       Help Center
                     </Link>

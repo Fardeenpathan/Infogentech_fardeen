@@ -3,7 +3,7 @@ import Icons from "./ui/Icon";
 
 export default function ScheduleCall() {
   return (
-<div className="bg-[linear-gradient(152.55deg,#7544E4_15.91%,#6B25C0_56.84%,#834EB6_72.43%,#8149B4_84.96%)] pt-5 rounded-2xl mt-36 text-nowrap">
+<div className="bg-[linear-gradient(152.55deg,#7544E4_15.91%,#6B25C0_56.84%,#834EB6_72.43%,#8149B4_84.96%)] pt-5 rounded-2xl text-nowrap xl:mt-30 md:mt-20 mt-10">
   <div className="flex justify-between 2xl:px-30 px-4 h-full">
     <div className="flex flex-col justify-center items-start sm:py-10 pb-4">
       <h2 className="text-white text-[15px] font-avalors uppercase sm:text-[22px] xl:text-[50px] leading-[150%] lg:text-[36px]">

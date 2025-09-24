@@ -54,7 +54,7 @@ const contentMap = {
         "Smart Search: Enabled location, QR & image-based product discovery.",
         "Faster Performance: Optimized backend for speed & stability.",
       ],
-      image: "/assist/img/homeportfolio/soouqna.png",
+      image: "/assist/img/homeportfolio/sooquna.jpeg",
     },
     {
       id: "dev-2",
@@ -209,7 +209,7 @@ export default function OurPortfolio() {
   };
 
   return (
-    <div className="mt-36">
+    <div className=" xl:mt-30 md:mt-20 mt-10">
       <TopicHeader
         name="Our Portfolio"
         subheading="Check Out Our Recently Completed Projects"
@@ -332,8 +332,9 @@ export default function OurPortfolio() {
                 <Icons name="ArrowPortfolioRight" width={45} height={20} />
               </button>
             </div>
+            
           </div>
-
+            
           <div className="px-2 pt-2 order-1 xl:order-2 rounded-lg border-b-0 bg-[linear-gradient(180deg,#8752FF_0%,#513199_38.59%)] xl:mt-34 mt-4 rotate-[-5.03deg] shadow-[7px_-4px_108px_-43px_#8955FF] relative xl:-right-5 right-0 transition-all duration-500 ease-in-out">
             <div className="w-full xl:min-h-[580px] bg-black rounded-xl flex justify-between overflow-hidden h-auto">
               {currentSlide?.image ? (
@@ -354,6 +355,15 @@ export default function OurPortfolio() {
           </div>
         </div>
       </div>
+       <a
+        href="/portfolio/design"
+        className="gap-8 items-center justify-end mr-2 relative -top-10  flex xl:hidden mt-14"
+      >
+        <p className="font-jost font-semibold  text-sm leading-[120%] capitalize ">
+          See Our <br /> More Projects
+        </p>
+        <Icons name="Arrow" height={14} width={31}/>
+      </a>
     </div>
   );
 }

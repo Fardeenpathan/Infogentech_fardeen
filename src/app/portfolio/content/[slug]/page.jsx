@@ -6,8 +6,9 @@ import PortfolioServices from "@/components/PortfolioServices";
 import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
 import Loader from "@/components/loader/Loader";
-import contentProjects from "../contentProjects.json";
+// import contentProjects from "../contentProjects.json";
 import ProjectImageSection from "@/components/ProjectImageSection";
+import contentProjects from "../contentProjects";
 const SlugPage = () => {
   const { slug } = useParams();
   const [project, setProject] = useState(null);
@@ -39,63 +40,96 @@ const SlugPage = () => {
               expanded={expanded}
               setExpanded={setExpanded}
             />
-            <div className="mx-5 mt-6 font-jost"></div>
-            <div className="mx-34 mt-10 font-jost">
-              <p className=" font-normal text-[32px] leading-[28px]">
+            <div className="mx-5 mt-6 font-jost">
+              <p className=" font-normal text-[32px] leading-7">
                 {project.title}
               </p>
+              <p className="mt-4 text-xl leading-7 opacity-80 font-kumbh-sans">
+                {project.description}
+              </p>
+              <ul className="list-disc list-inside mt-4 space-y-2 text-lg leading-6 opacity-70 font-kumbh-sans">
+                {project.points.map((point, index) => (
+                  <li key={index}>{point}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="mx-5 mt-10 font-jost">
+              
               <div className="grid grid-cols-3 mt-15 space-y-8">
                 <div className="flex flex-col gap-2 ">
                   <p className="font-jost font-medium text-lg leading-[20px] opacity-30">
                     Date
                   </p>
-                  <p>May 2025</p>
+                  <p>{project.date}</p>
                 </div>
                 <div className="flex flex-col gap-3">
                   <p className=" font-medium text-lg leading-[20px] opacity-30">
                     Duration
                   </p>
-                  <p>10 Days</p>
+                  <p>{project.duration}</p>
                 </div>
                 <div className="flex flex-col gap-3">
-                  <p className=" font-medium text-lg leading-[20px] opacity-30">
+                  <p className="font-medium text-lg leading-[20px] opacity-30">
                     Tools
                   </p>
-                  <span className="font-jost bg-[#8752FF80] py-1.5 px-3 w-fit radius">
-                    Figma
-                  </span>
+                  <div className="flex flex-wrap gap-2">
+                    {project.tools.map((tool, index) => (
+                      <span
+                        key={index}
+                        className="font-jost bg-[#8752FF80] py-1.5 px-3 w-fit radius"
+                      >
+                        {tool}
+                      </span>
+                    ))}
+                  </div>
                 </div>
+
                 <div className="flex flex-col gap-3">
                   <p className=" font-medium text-lg leading-[20px] opacity-30">
                     Client
                   </p>
-                  <p>Leroye d'Or</p>
+                  <p>{project.client}</p>
                 </div>
                 <div className="flex flex-col gap-3">
                   <p className=" font-medium text-lg leading-[20px] opacity-30">
                     Location
                   </p>
-                  <p>New, New York</p>
+                  <p>{project.location}</p>
                 </div>
               </div>
               <div className="grid grid-cols-3 mt-15 space-y-8">
-                <div className="flex flex-col gap-2 ">
+                <div className="flex flex-col gap-2">
                   <p className="font-jost font-medium text-lg leading-[20px] opacity-30">
                     Modules
                   </p>
-                  <span className="font-jost bg-[#8752FF80] py-1.5 px-3 w-fit radius">
-                    Figma
-                  </span>
+                  <div className="flex flex-wrap gap-2">
+                    {project.modules.map((mod, index) => (
+                      <span
+                        key={index}
+                        className="font-jost bg-[#8752FF80] py-1.5 px-3 w-fit radius"
+                      >
+                        {mod}
+                      </span>
+                    ))}
+                  </div>
                 </div>
 
                 <div className="flex flex-col gap-3">
-                  <p className=" font-medium text-lg leading-[20px] opacity-30">
-                    Duration
+                  <p className="font-medium text-lg leading-[20px] opacity-30">
+                    Expertise
                   </p>
-                  <span className="font-jost bg-[#8752FF80] py-1.5 px-3 w-fit radius">
-                    Figma
-                  </span>
+                  <div className="flex flex-wrap gap-2">
+                    {project.expertise.map((item, index) => (
+                      <span
+                        key={index}
+                        className="font-jost bg-[#8752FF80] py-1.5 px-3 w-fit radius"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
                 </div>
+
                 <div className="flex flex-col gap-3 items-end">
                   <a
                     href="contactUs"
@@ -119,7 +153,7 @@ const SlugPage = () => {
             </div>
           </div>
         </div>
-        <div className="bg-[#0E0F27]  p-10 rounded-3xl mt-5 shadow-[0px_0px_54px_24px_#1C1C38] px-10">
+        {/* <div className="bg-[#0E0F27]  p-10 rounded-3xl mt-5 shadow-[0px_0px_54px_24px_#1C1C38] px-10">
           <div className="space-y-6">
             <h2 className="text-2xl text-gray-300">
               We crafted a vibrant website for a greenhouse gardening brand,
@@ -247,8 +281,10 @@ const SlugPage = () => {
               </span>
             </a>
           </div>
-        </div>
-        <SubscribeContact />
+        </div> */}
+       <div className="mt-20">
+                  <SubscribeContact />
+               </div>
       </div>
     </>
   );

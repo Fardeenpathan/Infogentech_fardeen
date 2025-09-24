@@ -7,6 +7,7 @@ import Icons from "./ui/Icon";
 import { motion, useScroll, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import ScrollNav from "./ScrollNav";
 
 export function Navbar() {
   const { scrollY } = useScroll();
@@ -58,7 +59,7 @@ export function Navbar() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -40, scale: 0.95 }}
           transition={{ duration: 0.2, ease: "easeInOut" }}
-          className="relative flex bg-transparent mt-6 h-15 mx-auto justify-between items-center z-50 font-jost font-medium text-lg leading-6 container px-10"
+          className="relative flex bg-transparent mt-6 h-15 mx-auto justify-between items-center z-50 font-jost font-medium text-lg leading-6 container px-10 gap-4"
         >
           <div className="flex items-center border border-[#8E8E8E] rounded-md ">
             <div className="flex items-center pl-3.5 space-x-1.5">
@@ -69,7 +70,7 @@ export function Navbar() {
                 </p>
               </Link>
             </div>
-            <div className="flex flex-row space-x-12.5 py-4.5  xl:px-12.5 lg:px-8 text-lg md:text-sm font-Jost">
+            <div className="flex flex-row space-x-7.5 xl:space-x-12.5 py-4.5  xl:px-12.5 lg:px-8 text-lg md:text-sm font-Jost">
               <div
                 className="relative group"
                 onMouseEnter={() => setIsServicesHovered(true)}
@@ -133,58 +134,9 @@ export function Navbar() {
             type: "spring",
             stiffness: 150,
           }}
-          className="fixed top-2 left-1/2 -translate-x-1/2 z-50 flex items-center justify-between border container rounded-xl bg-[#15152A] px-6 py-4 font-jost font-medium text-lg leading-6 mx-auto"
+          className="container mx-auto px-6 fixed top-2 left-1/2 -translate-x-1/2 z-99"
         >
-          <div className="flex items-center gap-10 justify-between w-full">
-            <Link href="/" className="flex items-center gap-2">
-              <Icons name="LogoFooter" />
-              <p className="font-avalors text-[24px] leading-8 tracking-[3px] font-bold">
-                INFOGENTECH
-              </p>
-            </Link>
-            <div
-              className="relative group"
-              onMouseEnter={() => setIsServicesHovered(true)}
-              onMouseLeave={() => setIsServicesHovered(false)}
-            >
-              <button className=" flex items-center justify-center cursor-pointer">
-                Services
-                <Icons name="Downarrow" />
-              </button>
-              <AnimatePresence>
-                {isServicesHovered && (
-                  <motion.div
-                    key="services-dropdown"
-                    variants={dropdownVariants}
-                    initial="hidden"
-                    animate="visible"
-                    exit="hidden"
-                    className="absolute left-0 max-w-6xl rounded-lg shadow-lg z-50 transform"
-                  >
-                    <ServicesDropdown />
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-            <Link
-              href={`/portfolio/design`}
-              className={linkClasses("/portfolio/design")}
-            >
-              Portfolio
-            </Link>
-            <Link href="/blogs" className={linkClasses("/blogs")}>
-              Blogs
-            </Link>
-            <Link href="/contactUs" className={linkClasses("/contactUs")}>
-              Contact us
-            </Link>
-            <Link href="/aboutUs" className={linkClasses("/aboutUs")}>
-              About us
-            </Link>
-            <Link href="/contactUs">
-              <GradientButton>Free Consultation</GradientButton>
-            </Link>
-          </div>
+          <ScrollNav/>
         </motion.nav>
       )}
     </AnimatePresence>
