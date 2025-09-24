@@ -10,7 +10,7 @@ export async function middleware(request) {
       pathname.startsWith('/_next') || 
       pathname.includes('.') ||
       pathname === '/blocked') {
-    console.log(`⏭️ SKIPPING: ${pathname}`);
+    // console.log(`⏭️ SKIPPING: ${pathname}`);
     return NextResponse.next();
   }
 
