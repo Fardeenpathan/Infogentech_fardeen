@@ -1,7 +1,6 @@
 "use client";
 import { useState, useRef } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
-import Image from "next/image";
 import Icons from "./ui/Icon";
 import PurpleCheckbox from "./ui/Checkbox";
 import GradientButton from "./ui/GradientButton";
@@ -158,7 +157,7 @@ const ContactForm = ({country}) => {
               </p>
 
               <div className="mt-20 flex flex-col gap-12.5">
-                {contactUsa.map((region, i) => (
+                {(country === "IN" ? contactIndia : contactUsa).map((region, i) => (
                   <div key={i}>
                     <h3 className="text-xl font-semibold mb-4">
                       {region.country}

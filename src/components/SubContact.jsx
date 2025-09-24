@@ -9,8 +9,6 @@ export default function SubContact({country}) {
         subheading="With teams across the globe, we’re ready to connect and support you wherever you are."
         paragraph="We are currently based at"
       />
-
-      {/* India  */}
       <div className="flex justify-center items-center">
         <div className="relative w-[415px] h-[200px] ">
           <Image
@@ -38,7 +36,6 @@ export default function SubContact({country}) {
           </div>
         </div>
       </div>
-      {/* USA OFFICE */}
 
       <MidHeader
       />

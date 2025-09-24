@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import { setCountryCode } from "../redux/countryCodeSlice";
 import Loader from "./loader/Loader";
 
-const ALLOWED_COUNTRIES = ["IN", "CA", "ZA"];
+const ALLOWED_COUNTRIES = ["IN", "CA", "US"];
 
 const BlockedPage = () => (
   <div className="min-h-screen bg-gradient-to-br from-red-900 via-red-800 to-red-900 flex items-center justify-center p-4">
