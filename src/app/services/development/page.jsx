@@ -126,8 +126,6 @@ const Development = () => {
                   />
                 )}
               </div>
-
-              {/* Framer Motion animated panel */}
               <AnimatePresence initial={false}>
                 {openCategory === category.id && (
                   <motion.div
