@@ -90,7 +90,6 @@ const ContactForm = ({country}) => {
     setSubmitMessage("");
 
     try {
-      // Use centralized API helper which builds the URL and headers
       const result = await adminApiService.request(config.api.endpoints.contact, {
         method: "POST",
         body: JSON.stringify(formData),
@@ -110,8 +109,6 @@ const ContactForm = ({country}) => {
         recaptchaRef.current.reset();
       }
       setIsVerified(false);
-
-      // clear success message after a short time (optional)
       setTimeout(() => setSubmitMessage(""), 6000);
     } catch (error) {
       setSubmitMessage(error?.message || "Error sending message. Please try again later.");

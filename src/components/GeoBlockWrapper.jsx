@@ -45,6 +45,7 @@ export default function GeoBlockWrapper({ children }) {
             }`
           );
           setIsAllowed(allowed);
+          // dispatch(setCountryCode(testCountry));
           setIsLoading(false);
           return;
         }
@@ -62,6 +63,7 @@ export default function GeoBlockWrapper({ children }) {
           );
           setIsAllowed(allowed);
           dispatch(setCountryCode(data.countryCode));
+
         } else {
           console.log("Geolocation API failed, allowing access");
           setIsAllowed(true);
