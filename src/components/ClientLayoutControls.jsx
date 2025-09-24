@@ -45,12 +45,9 @@ export default function ClientLayoutControls({ children }) {
   return (
     <GeoBlockWrapper>
       <>
-        <div className="hidden lg:block">
+        <div className="hidden md:block">
           <Navbar />
         </div>
-      )}
-      {!isAdmin && (
-        <div className="block lg:hidden">
         <div className="block md:hidden">
           <MiniNavbar />
         </div>
