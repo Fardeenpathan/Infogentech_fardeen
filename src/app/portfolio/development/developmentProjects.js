@@ -161,7 +161,7 @@ const developmentProjects = [
     id: 5,
     title: "Soouqna’s E-Commerce Platform",
     slug: "soouqna-Commerce-Platform",
-    image: "/assist/portfolio/development/SoouqnaCasestudy.png",
+    image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1758796090/blog-app/categories/hlxlfw0cuqlvhhe0cutg.jpg",
     subImage: "/assist/portfolio/development/sooquna.png",
     description:
       "Soouqna, a growing e-commerce platform, partnered with Zebra to enhance logistics and delivery. API connectivity enabled seamless barcode scanning, better printer efficiency, and improved operational accuracy for faster, more reliable customer service.",

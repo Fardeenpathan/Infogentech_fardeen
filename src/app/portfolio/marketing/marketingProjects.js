@@ -3,7 +3,7 @@ const marketingProjects = [
     id: 2,
     title: "AirLine Reservation Window",
     slug: "airLine-reservation-window",
-    image: "/assist/portfolio/marketing/AirlineCaseStudy.png",
+    image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1758796018/blog-app/categories/ax4e554vqfopvqee4qrw.jpg",
     subImage: "/assist/portfolio/marketing/airline.png",
     description:
       "EcoMart is an online marketplace promoting eco-friendly and sustainable products, helping conscious consumers shop responsibly while enjoying smooth e-commerce experiences.",
@@ -127,7 +127,7 @@ const marketingProjects = [
     title:
       "Soho Resort Corbett — Luxury Nature Resort in Jim Corbett, Uttarakhand ",
     slug: "Soho-Resort-Corbett-Luxury-Nature-Resort-in-Jim-Corbett-Uttarakhand",
-    image: "/assist/portfolio/marketing/SohoCaseStudy.png",
+    image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1758791929/blog-app/categories/obtbx84xw8gmqn0ooom3.jpg",
     subImage: "/assist/portfolio/marketing/soho.png",
     description:
       "StyleAura is an online fashion retailer targeting millennial shoppers. Its content strategy highlighted seasonal collections and influencer collaborations.",
@@ -169,7 +169,7 @@ const marketingProjects = [
     title:
       "SeaC Overseas Education Consultants — Study Abroad Consultancy (US Programs) ",
     slug: "SeaC-Overseas-Education-Consultants-Study-Abroad-Consultancy-US-Programs",
-    image: "/assist/portfolio/marketing/SomoCasestudy.png",
+    image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1758791858/blog-app/categories/e8qyhrdupkjhhhuc7nv4.png",
     subImage: "/assist/portfolio/marketing/SomoEducation.png",
     description:
       "MediPlus is a telemedicine platform that connects patients with doctors. The project focused on credibility, education, and patient engagement.",
@@ -244,7 +244,7 @@ const marketingProjects = [
     id: 8,
     title: "ExamStudyZone.com — Educational Platform ",
     slug: "ExamStudyZone.com-Educational-Platform",
-    image: "/assist/portfolio/marketing/zoneCasestudy.png",
+    image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1758792090/blog-app/categories/q7wzuvnmax3cuifsjghd.jpg",
     subImage: "/assist/portfolio/marketing/examStudy.png",
     description:
       "UrbanNest is a real estate platform showcasing premium apartments and housing projects. The campaign improved lead generation via organic channels.",
@@ -281,7 +281,7 @@ const marketingProjects = [
     id: 9,
     title: "iClinix — Specialized Eye Care Hospital ",
     slug: "iClinix-Specialized-Eye-Care-Hospital",
-    image: "/assist/portfolio/marketing/ICliniXCaseStudy.png",
+    image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1758791774/blog-app/categories/ipmu4tyvldru9vssclbg.jpg",
     subImage: "/assist/portfolio/marketing/IClini.png",
     description:
       "FinEdge is a fintech startup helping users invest wisely. The focus was financial literacy, trust, and lead generation.",

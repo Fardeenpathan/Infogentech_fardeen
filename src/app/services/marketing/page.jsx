@@ -13,6 +13,7 @@ const Marketing = () => {
     {
       id: "01",
       title: "Marketing Strategy",
+      image: "/assist/services/marketing/marketing.png",
       subServices: [
         { id: "01", title: "ROI-Driven Campaign Strategies", desc: "Maximize marketing returns." },
         { id: "02", title: "B2B Content Strategies", desc: "Targeted business content." },
@@ -26,6 +27,7 @@ const Marketing = () => {
     {
       id: "02",
       title: "Performance Marketing",
+      image: "/assist/services/marketing/marketing.png",
       subServices: [
         { id: "01", title: "Pay-Per-Click Advertising (PPC)", desc: "Targeted paid ads." },
         { id: "02", title: "Google Ads Campaign Management", desc: "Optimized Google Ads." },
@@ -44,6 +46,7 @@ const Marketing = () => {
     {
       id: "03",
       title: "CRM & Automation",
+      image: "/assist/services/marketing/marketing.png",
       subServices: [
         { id: "01", title: "Email Marketing", desc: "Boost sales with targeted emails." },
         { id: "02", title: "Email Campaign Design", desc: "Design emails that convert." },
@@ -56,6 +59,7 @@ const Marketing = () => {
     {
       id: "04",
       title: "Audience Engagement Strategy",
+      image: "/assist/services/marketing/marketing.png",
       subServices: [
         { id: "01", title: "Social Media Marketing (SMO)", desc: "Grow your social presence." },
         { id: "02", title: "Instagram, Facebook & YouTube Marketing", desc: "Boost reach on top platforms." },
@@ -72,6 +76,7 @@ const Marketing = () => {
     {
       id: "05",
       title: "Search Engine Optimization (SEO)",
+      image: "/assist/services/marketing/marketing.png",
       subServices: [
         { id: "01", title: "Search Engine Optimization (SEO)", desc: "Improve search rankings." },
         { id: "02", title: "Technical SEO Audits", desc: "Fix site issues fast." },
@@ -85,6 +90,7 @@ const Marketing = () => {
     {
       id: "06",
       title: "Content Marketing",
+      image: "/assist/services/marketing/marketing.png",
       subServices: [
         { id: "01", title: "Blog Writing & SEO Copy", desc: "Write content that ranks." },
         { id: "02", title: "Social Content & Captions", desc: "Create engaging posts." },
@@ -96,6 +102,7 @@ const Marketing = () => {
     {
       id: "07",
       title: "Analytics & Reporting",
+      image: "/assist/services/marketing/marketing.png",
       subServices: [
         { id: "01", title: "Google Analytics Setup", desc: "Track website performance." },
         { id: "02", title: "Performance Monitoring & CRO", desc: "Boost conversions continuously." },
@@ -156,8 +163,8 @@ const Marketing = () => {
                 </div>
                 {openCategory === category.id && (
                   <Image
-                    src="/assist/img/DesignImg.png"
-                    alt="Blogs"
+                    src={category.image}
+                    alt="digital marketing"
                     width={400}
                     height={377}
                     className="rounded-2xl rotate-12 absolute -top-15 right-9 animate-slide-in-right overflow-hidden object-cover z-10"
