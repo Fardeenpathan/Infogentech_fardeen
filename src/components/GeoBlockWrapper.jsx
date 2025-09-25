@@ -6,9 +6,8 @@ import { useDispatch } from "react-redux";
 import { setCountryCode } from "../redux/countryCodeSlice";
 import Loader from "./loader/Loader";
 const ALLOWED_COUNTRIES = ['IN', 'CA', 'US'];
-;
+
 const BlockedPage = () => (
-  
   <div className="min-h-screen bg-gradient-to-br from-red-900 via-red-800 to-red-900 flex items-center justify-center p-4">
     <div className="max-w-md w-full bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-8 text-center">
       <div className="text-6xl mb-6">🚫</div>
@@ -17,7 +16,7 @@ const BlockedPage = () => (
       <div className="flex justify-center space-x-4 text-4xl mb-6">
         <span title="India">🇮🇳</span>
         <span title="Canada">🇨🇦</span>
-        <span title="South Africa">🇿🇦</span>
+        <span title="United States">US</span>
       </div>
       <p className="text-red-200 text-sm">We apologize for any inconvenience caused.</p>
     </div>
@@ -25,26 +24,48 @@ const BlockedPage = () => (
 );
 
 async function fetchCountryFromProviders() {
-  try {
-    const res = await fetch('https://ipapi.co/json/', { cache: 'no-store' });
-    if (res.ok) {
-      const d = await res.json();
-      if (d && d.country_code) return { code: d.country_code, name: d.country_name || d.country };
+  const providers = [
+    {
+      name: 'ipapi.co',
+      url: 'https://ipapi.co/json/',
+      parseResponse: (d) => d?.country_code ? { code: d.country_code, name: d.country_name || d.country } : null
+    },
+    {
+      name: 'ipwhois.app', 
+      url: 'https://ipwhois.app/json/',
+      parseResponse: (d) => d?.country_code ? { code: d.country_code, name: d.country } : null
+    },
+    {
+      name: 'ipgeolocation.io',
+      url: 'https://api.ipgeolocation.io/ipgeo?apiKey=free',
+      parseResponse: (d) => d?.country_code2 ? { code: d.country_code2, name: d.country_name } : null
     }
-  } catch (e) {
-    console.warn('ipapi.co failed:', e);
+  ];
+
+  for (const provider of providers) {
+    try {
+      console.log(`🔍 Trying ${provider.name}...`);
+      const res = await fetch(provider.url, { 
+        cache: 'no-store',
+        headers: {
+          'Accept': 'application/json',
+        }
+      });
+      
+      if (res.ok) {
+        const data = await res.json();
+        const result = provider.parseResponse(data);
+        if (result) {
+          console.log(`✅ ${provider.name} success:`, result);
+          return result;
+        }
+      }
+    } catch (e) {
+      console.warn(`❌ ${provider.name} failed:`, e.message);
+    }
   }
 
-  try {
-    const res2 = await fetch('https://ipwhois.app/json/', { cache: 'no-store' });
-    if (res2.ok) {
-      const d2 = await res2.json();
-      if (d2 && d2.country_code) return { code: d2.country_code, name: d2.country };
-    }
-  } catch (e) {
-    console.warn('ipwhois.app failed:', e);
-  }
-
+  console.error('🚫 All geo providers failed');
   return null;
 }
 
@@ -66,36 +87,61 @@ export default function GeoBlockWrapper({ children }) {
           return;
         }
 
-        // Dev/test override: keep for local testing
-        // You can enable explicit test mode with NEXT_PUBLIC_TEST_MODE=1
-        const testMode = process.env.NODE_ENV === 'development' || process.env.NEXT_PUBLIC_TEST_MODE === '1';
-        if (testMode) {
-          const testCountry = (process.env.NEXT_PUBLIC_TEST_COUNTRY || 'IN').toUpperCase();
+        // Local development testing - multiple ways to test
+        if (process.env.NODE_ENV === 'development') {
+          // Method 1: Use NEXT_PUBLIC_TEST_COUNTRY env variable
+          let testCountry = process.env.NEXT_PUBLIC_TEST_COUNTRY;
+          
+          // Method 2: Use URL parameter for quick testing (?testCountry=US)
+          if (typeof window !== 'undefined') {
+            const urlParams = new URLSearchParams(window.location.search);
+            const urlCountry = urlParams.get('testCountry');
+            if (urlCountry) {
+              testCountry = urlCountry;
+              console.log(`🔗 URL test parameter detected: ${urlCountry}`);
+            }
+          }
+          
+          // Default to India if no test country specified
+          testCountry = (testCountry || 'IN').toUpperCase();
           const allowed = ALLOWED_COUNTRIES.includes(testCountry);
+          
           if (!mounted) return;
-          console.log(`🧪 Geo test override active: ${testCountry} => ${allowed ? 'ALLOWED' : 'BLOCKED'}`);
+          console.log(`🧪 LOCAL TEST MODE: ${testCountry} => ${allowed ? 'ALLOWED' : 'BLOCKED'}`);
+          console.log(`💡 To test other countries: ?testCountry=US or set NEXT_PUBLIC_TEST_COUNTRY=US`);
+          
+          // Store country in Redux
           dispatch(setCountryCode(testCountry));
           setIsAllowed(allowed);
           setIsLoading(false);
           return;
         }
 
-        // Production detection via HTTPS providers
+        // Production: detect real geo location
+        console.log('🌍 Production mode: Detecting real geo location...');
         const geo = await fetchCountryFromProviders();
+        
         if (!mounted) return;
 
         if (geo && geo.code) {
           const code = String(geo.code).toUpperCase();
           const allowed = ALLOWED_COUNTRIES.includes(code);
-          console.log(`Geo detected ${code} (${geo.name}) allowed=${allowed}`);
+          
+          console.log(`🌍 Geo detected: ${code} (${geo.name}) => ${allowed ? 'ALLOWED' : 'BLOCKED'}`);
+          
+          // Store country in Redux for contact page
+          dispatch(setCountryCode(code));
           setIsAllowed(allowed);
         } else {
-          // fallback: allow if detection failed
-          console.warn('Geo detection failed — allowing by default.');
+          // Fallback: allow access but set unknown country
+          console.warn('⚠️ Geo detection failed — allowing by default with unknown country');
+          dispatch(setCountryCode('UNKNOWN'));
           setIsAllowed(true);
         }
       } catch (err) {
-        console.error('Error checking location:', err);
+        console.error('❌ Error in geo checking:', err);
+        // On error, allow access but mark as unknown
+        dispatch(setCountryCode('ERROR'));
         setIsAllowed(true);
       } finally {
         if (mounted) setIsLoading(false);
@@ -104,7 +150,7 @@ export default function GeoBlockWrapper({ children }) {
 
     checkAccess();
     return () => { mounted = false; };
-  }, [pathname]);
+  }, [pathname, dispatch]);
 
   if (isLoading) {
      return <Loader />;

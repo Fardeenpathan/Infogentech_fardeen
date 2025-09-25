@@ -15,7 +15,7 @@ export async function middleware(request) {
   // Development testing
   if (process.env.NODE_ENV === 'development') {
     const testCountry = process.env.TEST_COUNTRY || 'IN';
-    const allowedCountries = ['IN', 'CA', 'ZA'];
+    const allowedCountries = ['IN', 'CA', 'US'];
     const isAllowed = allowedCountries.includes(testCountry);
     
     if (!isAllowed) {
@@ -28,7 +28,7 @@ export async function middleware(request) {
   // Production: Use Vercel's geo headers (edge runtime)
   try {
     const country = request.geo?.country || request.headers.get('CF-IPCountry') || null;
-    const allowedCountries = ['IN', 'CA', 'ZA'];
+    const allowedCountries = ['IN', 'CA', 'US'];
     
     if (country && !allowedCountries.includes(country)) {
       console.log(`🚫 BLOCKING access to ${pathname} for country ${country}`);
