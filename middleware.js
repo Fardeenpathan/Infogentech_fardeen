@@ -3,32 +3,44 @@ import { NextResponse } from 'next/server';
 export async function middleware(request) {
   const { pathname } = request.nextUrl;
   
-  // console.log(`MIDDLEWARE CALLED for: ${pathname}`);
-  
+  // Skip middleware for admin, API routes, and static assets
   if (pathname.startsWith('/admin') || 
       pathname.startsWith('/api') ||
       pathname.startsWith('/_next') || 
       pathname.includes('.') ||
       pathname === '/blocked') {
-    // console.log(`⏭️ SKIPPING: ${pathname}`);
     return NextResponse.next();
   }
 
+  // Development testing
   if (process.env.NODE_ENV === 'development') {
     const testCountry = process.env.TEST_COUNTRY || 'IN';
     const allowedCountries = ['IN', 'CA', 'ZA'];
     const isAllowed = allowedCountries.includes(testCountry);
     
-    // console.log(` MIDDLEWARE: Testing with country ${testCountry} - ${isAllowed ? 'ALLOWED' : 'BLOCKED'}`);
-    
     if (!isAllowed) {
-      console.log(`BLOCKING access to ${pathname} for country ${testCountry}`);
+      console.log(`🚫 BLOCKING access to ${pathname} for test country ${testCountry}`);
       return NextResponse.redirect(new URL('/blocked', request.url));
     }
+    return NextResponse.next();
   }
 
-  // console.log(` ALLOWING access to ${pathname}`);
-  return NextResponse.next();
+  // Production: Use Vercel's geo headers (edge runtime)
+  try {
+    const country = request.geo?.country || request.headers.get('CF-IPCountry') || null;
+    const allowedCountries = ['IN', 'CA', 'ZA'];
+    
+    if (country && !allowedCountries.includes(country)) {
+      console.log(`🚫 BLOCKING access to ${pathname} for country ${country}`);
+      return NextResponse.redirect(new URL('/blocked', request.url));
+    }
+    
+    // If no geo data available, allow access (fallback)
+    return NextResponse.next();
+  } catch (error) {
+    console.error('Geo-check error in middleware:', error);
+    return NextResponse.next(); // Allow on error
+  }
 }
 
 export const config = {
