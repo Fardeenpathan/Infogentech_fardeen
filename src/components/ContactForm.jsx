@@ -1,21 +1,13 @@
 "use client";
 import { useState, useRef } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
-import Image from "next/image";
 import Icons from "./ui/Icon";
 import PurpleCheckbox from "./ui/Checkbox";
 import GradientButton from "./ui/GradientButton";
 import config from "@/config";
 import adminApiService from "@/lib/adminApi";
-const contactData = [
-  {
-    country: "India",
-    info: [
-      { icon: "Contact", text: "+91 99101 30963" },
-      { icon: "Email", text: "info@infogentech.com" },
-      { icon: "Location", text: "Delhi, India" },
-    ],
-  },
+const contactUsa = [
+ 
   {
     country: "USA",
     info: [
@@ -26,6 +18,16 @@ const contactData = [
   },
 ];
 
+const contactIndia =[
+   {
+    country: "India",
+    info: [
+      { icon: "Contact", text: "+91 99101 30963" },
+      { icon: "Email", text: "info@infogentech.com" },
+      { icon: "Location", text: "Delhi, India" },
+    ],
+  },
+]
 const socialMedia = [
   {
     name: "Facebook",
@@ -44,7 +46,7 @@ const socialMedia = [
     link: "https://twitter.com/",
   },
 ];
-const ContactForm = () => {
+const ContactForm = ({country}) => {
   const [isVerified, setIsVerified] = useState(false);
   const recaptchaRef = useRef(null);
 
@@ -88,7 +90,6 @@ const ContactForm = () => {
     setSubmitMessage("");
 
     try {
-      // Use centralized API helper which builds the URL and headers
       const result = await adminApiService.request(config.api.endpoints.contact, {
         method: "POST",
         body: JSON.stringify(formData),
@@ -108,8 +109,6 @@ const ContactForm = () => {
         recaptchaRef.current.reset();
       }
       setIsVerified(false);
-
-      // clear success message after a short time (optional)
       setTimeout(() => setSubmitMessage(""), 6000);
     } catch (error) {
       setSubmitMessage(error?.message || "Error sending message. Please try again later.");
@@ -155,7 +154,7 @@ const ContactForm = () => {
               </p>
 
               <div className="mt-20 flex flex-col gap-12.5">
-                {contactData.map((region, i) => (
+                {(country === "IN" ? contactIndia : contactUsa).map((region, i) => (
                   <div key={i}>
                     <h3 className="text-xl font-semibold mb-4">
                       {region.country}

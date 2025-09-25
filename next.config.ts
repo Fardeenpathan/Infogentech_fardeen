@@ -6,6 +6,17 @@ const nextConfig: NextConfig = {
 //     domains: ['localhost'],
 //     unoptimized: true
 //   } 
+images: {
+    domains: ['localhost', 'res.cloudinary.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+        port: '',
+        pathname: '/**',
+      },
+    ],
+}
 };
 
 export default nextConfig;
