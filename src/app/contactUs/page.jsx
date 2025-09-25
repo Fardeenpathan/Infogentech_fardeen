@@ -7,16 +7,14 @@ import SubContact from "@/components/SubContact";
 import MoreContact from "@/components/MoreContact";
 import SubscribeContact from "@/components/SubscribeContact";
 import { useSelector } from "react-redux";
-import { useRouter, usePathname } from "next/navigation";
+import { redirect } from "next/navigation";
 const ContactUs = () => {
-  const router = useRouter();
-  const pathname = usePathname();
   const countryCode = useSelector((state) => state.countryCode.value);
   useEffect(() => {
     if (countryCode === "US") {
-      router.push(`${pathname}/us`);
+      redirect("/us/contactUs");
     }
-  }, [countryCode, pathname, router]);
+  }, [countryCode]);
   return (
     countryCode == "IN" && (
       <div className="xl:mt-35 mt-10 subContainer mx-auto">
@@ -85,7 +83,7 @@ const ContactUs = () => {
           </div>
         </div>
         <div className="flex flex-col gap-8">
-          <ContactForm country={countryCode}/>
+          <ContactForm country={countryCode} />
           <SubContact country={countryCode} />
           <MoreContact />
           <SubscribeContact />

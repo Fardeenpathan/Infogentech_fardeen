@@ -2,10 +2,13 @@
 
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
-
-const ALLOWED_COUNTRIES = ['IN', 'CA', 'ZA'];
-
+import { useDispatch } from "react-redux";
+import { setCountryCode } from "../redux/countryCodeSlice";
+import Loader from "./loader/Loader";
+const ALLOWED_COUNTRIES = ['IN', 'CA', 'US'];
+;
 const BlockedPage = () => (
+  
   <div className="min-h-screen bg-gradient-to-br from-red-900 via-red-800 to-red-900 flex items-center justify-center p-4">
     <div className="max-w-md w-full bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-8 text-center">
       <div className="text-6xl mb-6">🚫</div>
@@ -49,7 +52,7 @@ export default function GeoBlockWrapper({ children }) {
   const [isAllowed, setIsAllowed] = useState(null); // null = checking
   const [isLoading, setIsLoading] = useState(true);
   const pathname = usePathname();
-
+  const dispatch = useDispatch()
   useEffect(() => {
     let mounted = true;
 
@@ -71,6 +74,7 @@ export default function GeoBlockWrapper({ children }) {
           const allowed = ALLOWED_COUNTRIES.includes(testCountry);
           if (!mounted) return;
           console.log(`🧪 Geo test override active: ${testCountry} => ${allowed ? 'ALLOWED' : 'BLOCKED'}`);
+          dispatch(setCountryCode(testCountry));
           setIsAllowed(allowed);
           setIsLoading(false);
           return;
@@ -103,14 +107,7 @@ export default function GeoBlockWrapper({ children }) {
   }, [pathname]);
 
   if (isLoading) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-800 to-blue-900 flex items-center justify-center">
-        <div className="text-white text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto mb-4"></div>
-          <p className="text-lg">Checking access...</p>
-        </div>
-      </div>
-    );
+     return <Loader />;
   }
 
   if (!isAllowed) return <BlockedPage />;

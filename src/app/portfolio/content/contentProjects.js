@@ -29,7 +29,7 @@ const contentProjects = [
     "id": 2,
     "title": "CertStudyMaterial - Online IT Certification Platform ",
     "slug": "CertStudyMaterial-Online-IT-Certification-Platform",
-    "image": "/assist/portfolio/content/certStudy.png",
+    "image": "https://res.cloudinary.com/dpmceu66e/image/upload/v1758791491/blog-app/categories/pvkolpeq7wop6m9lcbs9.jpg",
     "subImage": "/assist/portfolio/content/certStu.png",
     "description": "CertStudyMaterial.com is an online platform dedicated to helping IT professionals prepare for certifications across cloud, networking, cybersecurity, and programming domains. It offers updated study guides, practice exams, and expert resources that simplify learning and boost success rates.",
     "date": "February – August 2025 ",

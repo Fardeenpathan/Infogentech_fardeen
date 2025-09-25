@@ -3,7 +3,7 @@ const designProjects = [
     id: 1,
     title: "British Raj",
     slug: "british-raj",
-    image: "/assist/portfolio/design/britishRajcaseStudy.png",
+    image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1758790686/blog-app/categories/hwoeet3hpxdcfq0qual1.jpg",
     subImage: "/assist/portfolio/design/birtishRajDesign02.png",
     description:
       "BookPremiumFare.com is a travel booking platform offering premium and discounted airfares. It offers convenient booking, up-to-date airfare, and secure checkout, and draws organic traffic.",
