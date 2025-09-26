@@ -7,7 +7,7 @@ const ServicesHeader = () => {
           Our Services
         </p>
         <p className="font-avalors font-normal md:text-[75px] text-5xl text-center leading-none bg-[linear-gradient(91.32deg,_#6A27FF_-32.61%,_#FFFFFF_19.98%,_#6A27FF_112.29%)] bg-clip-text text-transparent">
-          What We <span className="text-[#6A27FF]">Provide</span>
+          What We <span className="text-primary">Provide</span>
         </p>
         <p className="font-jost md:text-lg text-[16px] font-medium leading-6 text-center mt-6">
           Shaping digital futures with customized digital solutions that deliver

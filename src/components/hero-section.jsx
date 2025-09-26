@@ -44,7 +44,7 @@ export function HeroSection() {
               </h1>
             </div>
             <div className="mt-3 md:mt-9 mb-10">
-              <p className="text-gray-300 text-lg font-Jost mb-8 font-medium align-middle">
+              <p className="text-gray-300 text-lg font-jost mb-8 font-medium align-middle">
                 We don’t just build solutions – we create possibilities. From
                 startups to enterprises, let us make tech work for you, not the
                 other way around.

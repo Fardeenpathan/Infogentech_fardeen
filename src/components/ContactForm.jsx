@@ -135,7 +135,7 @@ const ContactForm = ({country}) => {
         </div>
         <div className="w-full rounded-2xl">
           <div className="text-center mb-14">
-            <p className="font-avalors text-[#6A27FF] text-[32px] leading-6  align-middle">
+            <p className="font-avalors text-primary text-[32px] leading-6  align-middle">
               Get in Touch
             </p>
 
@@ -317,7 +317,7 @@ const ContactForm = ({country}) => {
                 <button
                   type="submit"
                   disabled={!isVerified || isSubmitting}
-                  className="text-[#6A27FF] mt-7.5 pb-4"
+                  className="text-primary mt-7.5 pb-4"
                 >
                   <GradientButton
                     bg="bg-[#202037]"
