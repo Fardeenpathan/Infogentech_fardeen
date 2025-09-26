@@ -8,7 +8,6 @@ const contentProjects = [
     "description": "BookPremiumFare.com is a travel booking platform offering premium and discounted airfares. It offers convenient booking, up-to-date airfare, and secure checkout, and draws organic traffic.",
     "date": "May 2025",
     "duration": "5 Months (Ongoing)",
-    
     tools: ["Next.js", "Google Search Console", "SEMrush"],
     client: "BookPremiumFare.com (by Infogentech)",
     location: "Global (Online Ticket Booking Platform) ",
