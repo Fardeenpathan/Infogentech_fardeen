@@ -7,13 +7,13 @@ export function StatsSection() {
       <div className="flex xl:flex-row flex-col items-center justify-between md:mb-10 mb-0  xl:py-12 container mx-auto py-5">
         <div className="flex flex-row  sm:space-x-8 space-x-1.5 mt-[25px]">
           <div className="flex flex:row border-1 border-[rgb(135,82,255)] sm:px-7 px-2 h-11 space-x-2 w-auto rounded-md items-center">
-            <div className="text-primary font-Jost  2xl:text-xl text-[15px] md:text-lg vertical-trim  tracking-tight-3 flex justify-center items-center gap-2 text-nowrap">
+            <div className="text-primary font-jost  2xl:text-xl text-[15px] md:text-lg vertical-trim  tracking-tight-3 flex justify-center items-center gap-2 text-nowrap">
               <Icons name="Globe" />
               Top US Agency 2025
             </div>
           </div>
           <div className="flex flex:row border-1 border-[#8752FF] sm:px-7 px-2 h-11 space-x-2 w-auto rounded-md items-center">
-            <div className="text-primary font-Jost  md:text-xl text-[15px] text-lg vertical-trim  tracking-tight-3 flex justify-center items-center gap-2 text-nowrap">
+            <div className="text-primary font-jost  md:text-xl text-[15px] text-lg vertical-trim  tracking-tight-3 flex justify-center items-center gap-2 text-nowrap">
               <Icons name="Crown" /> Awarded Digital Partner
             </div>
           </div>

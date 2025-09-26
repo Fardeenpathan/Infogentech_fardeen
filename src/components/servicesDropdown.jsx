@@ -159,10 +159,10 @@ export function ServicesDropdown() {
               </Link>
             ))}
           </div>
-          <div className="absolute font-['Jost'] right-1/6 font-medium text-[124px] leading-[120%] tracking-[0.03em] top-8 bg-gradient-to-b from-white to-[#15152A] bg-clip-text text-transparent opacity-10">
+          <div className="absolute font-jost right-1/6 font-medium text-[124px] leading-[120%] tracking-[0.03em] top-8 bg-gradient-to-b from-white to-[#15152A] bg-clip-text text-transparent opacity-10">
             Services
           </div>
-          <div className="grid grid-cols-2 font-Jost gap-[1px] w-[950px] xl:w-[800px] bg-[#535353] ">
+          <div className="grid grid-cols-2 font-jost gap-[1px] w-[950px] xl:w-[800px] bg-[#535353] ">
             {servicesMenu
               .find((item) => item.label === activeItem)
               ?.subcategories.map((subcategory, index) => (

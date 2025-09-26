@@ -91,7 +91,7 @@ export default function ScrollNav() {
         About us
       </Link>
       <Link href="/contactUs">
-        <GradientButton className="!text-sm" paddingX="px-6" paddingY="py-3">
+        <GradientButton className="!text-sm md:hidden lg:block" paddingX="px-6" paddingY="py-3">
           Free Consultation
         </GradientButton>
       </Link>

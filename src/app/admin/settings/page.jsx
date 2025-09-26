@@ -138,7 +138,7 @@ export default function AdminSettings() {
         {/* Profile Information */}
         <div className="bg-[#1A1A1A] border border-gray-700 rounded-lg p-6">
           <div className="flex items-center space-x-3 mb-6">
-            <User className="h-5 w-5 text-[#6A27FF]" />
+            <User className="h-5 w-5 text-primary" />
             <h3 className="text-lg font-semibold text-white">Profile Information</h3>
           </div>
           
@@ -190,7 +190,7 @@ export default function AdminSettings() {
         {/* Change Password */}
         <div className="bg-[#1A1A1A] border border-gray-700 rounded-lg p-6">
           <div className="flex items-center space-x-3 mb-6">
-            <Lock className="h-5 w-5 text-[#6A27FF]" />
+            <Lock className="h-5 w-5 text-primary" />
             <h3 className="text-lg font-semibold text-white">Change Password</h3>
           </div>
           

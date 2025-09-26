@@ -36,7 +36,7 @@ const ContactUs = () => {
               <p className="font-avalors font-normal md:text-[75px] text-4xl leading-none bg-[linear-gradient(91.32deg,_#6A27FF_-32.61%,_#FFFFFF_19.98%,_#6A27FF_112.29%)] bg-clip-text text-transparent">
                 NEED ASSISTANCE?
               </p>
-              <p className="text-[#6A27FF] font-avalors align-middle md:text-[75px] text-4xl leading-[120%] tracking-[-0.75px]">
+              <p className="text-primary font-avalors align-middle md:text-[75px] text-4xl leading-[120%] tracking-[-0.75px]">
                 just ask!
               </p>
               <p className="font-jost font-medium text-lg leading-6 align-middle mt-9">

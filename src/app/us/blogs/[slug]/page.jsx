@@ -4,8 +4,10 @@
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import Icons from "@/components/ui/Icon";
-import { useState } from "react";
+import { useState ,useEffect} from "react";
 import SubscribeContact from "@/components/SubscribeContact";
+import { useSelector } from 'react-redux';
+import { redirect} from "next/navigation";
 const mockApiResponse = [
   {
     id: 1,
@@ -45,6 +47,7 @@ const mockApiResponse = [
 ];
 
 const BlogSlugPage = () => {
+  const countryCode = useSelector((state) => state.countryCode.value);
   const params = useParams();
   const { slug } = params;
 
@@ -52,6 +55,12 @@ const BlogSlugPage = () => {
   const toggleFAQ = (id) => {
     setOpenId((prevId) => (prevId === id ? null : id));
   };
+
+useEffect(() => {
+    if (countryCode !== "US") {
+      redirect("/blogs");
+    }
+  }, [countryCode]);
   return (
     <div className="container mx-auto mt-24">
     <div className="container mx-auto mt-24 text-wrap">

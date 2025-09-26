@@ -3,7 +3,7 @@ const contentProjects = [
     "id": 1,
     "title": "BookPremiumFare Transforming Online Travel Booking",
     "slug": "bookPremiumFare-Transforming-Online-Travel-Booking",
-    "image": "/assist/portfolio/content/Bookcase.png",
+    "image": "https://res.cloudinary.com/dpmceu66e/image/upload/v1758865374/blog-app/categories/k8qippbzsdexhx80uwth.jpg",
     "subImage": "/assist/portfolio/content/bookPremiumFare.webp",
     "description": "BookPremiumFare.com is a travel booking platform offering premium and discounted airfares. It offers convenient booking, up-to-date airfare, and secure checkout, and draws organic traffic.",
     "date": "May 2025",
