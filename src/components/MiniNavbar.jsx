@@ -35,8 +35,8 @@ export function MiniNavbar() {
                   y2="3.07436"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#522BBF" />
-                  <stop offset="1" stop-color="#9169FF" />
+                  <stop stopColor="#522BBF" />
+                  <stop offset="1" stopColor="#9169FF" />
                 </linearGradient>
                 <linearGradient
                   id="paint1_linear_2834_9273"
@@ -46,8 +46,8 @@ export function MiniNavbar() {
                   y2="5.78025"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#522BBF" />
-                  <stop offset="1" stop-color="#9169FF" />
+                  <stop stopColor="#522BBF" />
+                  <stop offset="1" stopColor="#9169FF" />
                 </linearGradient>
               </defs>
             </svg>
@@ -119,8 +119,8 @@ export function MiniNavbar() {
                   y2="3.07436"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#522BBF" />
-                  <stop offset="1" stop-color="#9169FF" />
+                  <stop stopColor="#522BBF" />
+                  <stop offset="1" stopColor="#9169FF" />
                 </linearGradient>
                 <linearGradient
                   id="paint1_linear_2834_9273"
@@ -130,8 +130,8 @@ export function MiniNavbar() {
                   y2="5.78025"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#522BBF" />
-                  <stop offset="1" stop-color="#9169FF" />
+                  <stop stopColor="#522BBF" />
+                  <stop offset="1" stopColor="#9169FF" />
                 </linearGradient>
               </defs>
             </svg>
@@ -201,10 +201,10 @@ export function MiniNavbar() {
             <Link
               href="/contactUs"
               onClick={() => setIsOpen(false)}
-              className=" hover:text-[#8E8E8E] font-bold mt-2 text-[28px]  flex justify-center"
+              className=" hover:text-[#8E8E8E] font-bold mt-2 text-[28px]  flex justify-center "
             >
               <GradientButton
-                className="!text-sm mt-4"
+                className="!text-sm mt-4 "
                 paddingX="px-8"
                 paddingY="py-3"
               >
