@@ -44,7 +44,7 @@ const marketingProjects = [
     id: 3,
     title: "@ananyakhurana_30 – Fashion Influencer ",
     slug: "ananyakhurana30-Fashion-Influencer",
-    image: "/assist/portfolio/marketing/ananyaCaseStudy.png",
+    image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1758869279/blog-app/categories/lhde7umyzqnxnydsfinb.jpg",
     subImage: "/assist/portfolio/marketing/ananya.png",
     description:
       "FitFuel is a mobile app offering personalized meal plans and workout tracking. It drives user engagement through actionable health content and interactive features.",
@@ -85,7 +85,7 @@ const marketingProjects = [
     id: 4,
     title: "Bluestar Buildprop – Real Estate Brand ",
     slug: "Bluestar-Buildprop-Real-Estate-Brand",
-    image: "/assist/portfolio/marketing/bluestarCaseStudy.png",
+    image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1758869387/blog-app/categories/hfa4k7vqodzja5sgeuat.jpg",
     subImage: "/assist/portfolio/marketing/TechHiveExpanding.png",
     description:
       "TechHive is a SaaS company providing cloud solutions for small businesses. The campaign focused on visibility, lead generation, and content thought leadership.",
@@ -208,7 +208,7 @@ const marketingProjects = [
     id: 7,
     title: "Suii_Thaga — Fashion Brand on Instagram ",
     slug: "Suii_Thaga-Fashion-Brand-on-Instagram",
-    image: "/assist/portfolio/marketing/SuiithagaCasestudy.png",
+    image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1758869895/blog-app/categories/pefwucmj8d2hlpwjpjkb.jpg",
     subImage: "/assist/portfolio/marketing/Suii_thaga.png",
     description:
       "EduSpark is an e-learning platform offering online courses and certifications. Content and SEO work helped attract learners worldwide.",
