@@ -6,8 +6,6 @@ import { useParams } from "next/navigation";
 import Icons from "@/components/ui/Icon";
 import { useState , useEffect} from "react";
 import SubscribeContact from "@/components/SubscribeContact";
-import { useSelector } from "react-redux";
-import { redirect } from "next/navigation";
 const mockApiResponse = [
   {
     id: 1,
@@ -55,12 +53,6 @@ const BlogSlugPage = () => {
   const toggleFAQ = (id) => {
     setOpenId((prevId) => (prevId === id ? null : id));
   };
-    const countryCode = useSelector((state) => state.countryCode.value);
-  useEffect(() => {
-    if (countryCode === "US") {
-      redirect("/us/blogs");
-    }
-  }, [countryCode]);
   return (
     <div className="container mx-auto mt-24">
     <div className="container mx-auto mt-24 text-wrap">

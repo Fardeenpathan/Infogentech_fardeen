@@ -1,12 +1,10 @@
 "use client";
 import Button from "@/components/ui/Button";
 import Image from "next/image";
-import { useState,useEffect} from "react";
+import { useState} from "react";
 import HomeBlogCardsd from "@/components/HomeBlogCardsd";
 import SubscribeContact from "@/components/SubscribeContact";
 import Icons from "@/components/ui/Icon";
-import { useSelector } from "react-redux";
-import { redirect } from "next/navigation";
 const blogData = [
   {
     id: 1,
@@ -75,12 +73,6 @@ const category = [
 
 const Blogs = () => {
   const [activeCategory, setActiveCategory] = useState("All");
-    const countryCode = useSelector((state) => state.countryCode.value);
-  useEffect(() => {
-    if (countryCode === "US") {
-      redirect("/us/blogs");
-    }
-  }, [countryCode]);
   return (
     <div className="flex justify-between">
       <div className="absolute overflow-hidden -top-20">
