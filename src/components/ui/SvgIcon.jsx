@@ -2775,11 +2775,11 @@ const CMS = ({ width = "53", height = "53" }) => (
   </svg>
 );
 
-const CustomIntegrations = ({ width = "53", height = "53" }) => (
+const CustomIntegrations = ({ width = "59", height = "53" }) => (
   <svg
     width={width}
     height={height}
-    viewBox="0 0 53 53"
+    viewBox="0 0 59 53"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
@@ -2814,11 +2814,11 @@ const CustomIntegrations = ({ width = "53", height = "53" }) => (
   </svg>
 );
 
-const AiCloud = ({ width = "53", height = "53" }) => (
+const AiCloud = ({ width = "56", height = "56" }) => (
   <svg
     width={width}
     height={height}
-    viewBox="0 0 53 53"
+    viewBox="0 0 56 56"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
@@ -2919,11 +2919,11 @@ const VisualContent = ({ width = "53", height = "53" }) => (
   </svg>
 );
 
-const AutoMotion = ({ width = "53", height = "53" }) => (
+const AutoMotion = ({ width = "57", height = "55" }) => (
   <svg
     width={width}
     height={height}
-    viewBox="0 0 53 53"
+    viewBox="0 0 57 55"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
@@ -2942,11 +2942,11 @@ const AutoMotion = ({ width = "53", height = "53" }) => (
   </svg>
 );
 
-const BlogPosts = ({ width = "53", height = "53" }) => (
+const BlogPosts = ({ width = "58", height = "55" }) => (
   <svg
     width={width}
     height={height}
-    viewBox="0 0 53 53"
+    viewBox="0 0 58 55"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
@@ -3077,11 +3077,11 @@ const BlogPosts = ({ width = "53", height = "53" }) => (
   </svg>
 );
 
-const MarketingStrategy = ({ width = "53", height = "53" }) => (
+const MarketingStrategy = ({ width = "59", height = "53" }) => (
   <svg
     width={width}
     height={height}
-    viewBox="0 0 53 53"
+    viewBox="0 0 59 53"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
@@ -3092,11 +3092,11 @@ const MarketingStrategy = ({ width = "53", height = "53" }) => (
   </svg>
 );
 
-const SEO = ({ width = "53", height = "53" }) => (
+const SEO = ({ width = "69", height = "49" }) => (
   <svg
     width={width}
     height={height}
-    viewBox="0 0 53 53"
+    viewBox="0 0 69 49"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
@@ -3184,6 +3184,14 @@ const Branding = ({ width = "53", height = "53" }) => (
   </svg>
 );
 
+
+
+const Arrowdown = ({className})=>(
+  <svg className={className} width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 2L7 7L12 2" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+)
 const Icons = {
   GraphicDesign,
   UIUXDesign,
@@ -3267,6 +3275,8 @@ const Icons = {
   SmallStar,
   CrossButton,
   hemBurger,
+  Arrowdown
 };
 
 export default Icons;
+
