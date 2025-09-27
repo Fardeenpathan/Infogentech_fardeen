@@ -12,7 +12,10 @@ import store from "@/redux/store";
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="dark">
+<html lang="en" className="dark">
+      <head>
+        <link rel="icon" href="/mainLogo.svg" />
+      </head>
       <body>
         <Provider store={store}>
           <ClientLayoutControls>{children}</ClientLayoutControls>

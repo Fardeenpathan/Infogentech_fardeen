@@ -1,5 +1,5 @@
 import Icons from "./ui/Icon";
-export default function MoreContact({country}) {
+export default function MoreContact() {
   return (
     <div className="flex gap-7 flex-row justify-center items-center px-4">
       <div className="flex justify-center items-center flex-col">
