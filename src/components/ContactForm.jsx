@@ -18,16 +18,6 @@ const contactUsa = [
   },
 ];
 
-const contactIndia =[
-   {
-    country: "India",
-    info: [
-      { icon: "Contact", text: "+91 99101 30963" },
-      { icon: "Email", text: "info@infogentech.com" },
-      { icon: "Location", text: "Delhi, India" },
-    ],
-  },
-]
 const socialMedia = [
   {
     name: "Facebook",
@@ -46,7 +36,7 @@ const socialMedia = [
     link: "https://twitter.com/",
   },
 ];
-const ContactForm = ({country}) => {
+const ContactForm = () => {
   const [isVerified, setIsVerified] = useState(false);
   const recaptchaRef = useRef(null);
 
@@ -135,7 +125,7 @@ const ContactForm = ({country}) => {
         </div>
         <div className="w-full rounded-2xl">
           <div className="text-center mb-14">
-            <p className="font-avalors text-[#6A27FF] text-[32px] leading-6  align-middle">
+            <p className="font-avalors text-primary text-[32px] leading-6  align-middle">
               Get in Touch
             </p>
 
@@ -154,7 +144,7 @@ const ContactForm = ({country}) => {
               </p>
 
               <div className="mt-20 flex flex-col gap-12.5">
-                {(country === "IN" ? contactIndia : contactUsa).map((region, i) => (
+                {contactUsa.map((region, i) => (
                   <div key={i}>
                     <h3 className="text-xl font-semibold mb-4">
                       {region.country}
@@ -317,7 +307,7 @@ const ContactForm = ({country}) => {
                 <button
                   type="submit"
                   disabled={!isVerified || isSubmitting}
-                  className="text-[#6A27FF] mt-7.5 pb-4"
+                  className="text-primary mt-7.5 pb-4"
                 >
                   <GradientButton
                     bg="bg-[#202037]"

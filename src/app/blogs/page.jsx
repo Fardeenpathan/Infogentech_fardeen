@@ -5,7 +5,6 @@ import { useState, useEffect } from "react";
 import HomeBlogCardsd from "@/components/HomeBlogCardsd";
 import SubscribeContact from "@/components/SubscribeContact";
 import Icons from "@/components/ui/Icon";
-
 const blogData = [
   {
     id: 1,

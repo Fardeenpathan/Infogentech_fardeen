@@ -65,12 +65,12 @@ export function Navbar() {
             <div className="flex items-center pl-3.5 space-x-1.5">
               <Link href="/" className="flex items-center gap-1.5">
                 <Icons name="LogoFooter" />
-                <p className="font-avalors text-[24px] leading-8 tracking-[3px] font-bold text-xl">
+                <p className="font-avalors lg:text-[24px] leading-8 tracking-[3px] font-bold text-xl">
                   INFOGENTECH
                 </p>
               </Link>
             </div>
-            <div className="flex flex-row space-x-7.5 xl:space-x-12.5 py-4.5  xl:px-12.5 lg:px-8 text-lg md:text-sm font-Jost">
+            <div className="flex flex-row space-x-7.5 xl:space-x-12.5 py-4.5  xl:px-12.5 lg:px-8 text-lg md:text-sm font-jost px-2">
               <div
                 className="relative group"
                 onMouseEnter={() => setIsServicesHovered(true)}
@@ -104,7 +104,7 @@ export function Navbar() {
             </div>
           </div>
           <div className="flex items-center border border-[#8E8E8E] rounded-md pr-3.75 text-nowrap">
-            <div className="md:flex items-center space-x-12.5 xl:px-8.5 lg:px-6 py-4.5 text-lg md:text-sm font-Jost">
+            <div className="md:flex items-center space-x-12.5 xl:px-8.5 lg:px-6 py-4.5 text-lg md:text-sm font-jost px-2">
               <Link href="/blogs" className={linkClasses("/blogs")}>
                 Blogs
               </Link>
@@ -116,7 +116,7 @@ export function Navbar() {
               </Link>
             </div>
             <Link href="/contactUs">
-              <GradientButton className="!text-sm" paddingX="px-3" paddingY="py-2">Free Consultation</GradientButton>
+              <GradientButton className="!text-sm md:hidden lg:block" paddingX="px-3" paddingY="py-2">Free Consultation</GradientButton>
             </Link>
           </div>
         </motion.nav>
