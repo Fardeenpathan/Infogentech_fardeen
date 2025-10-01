@@ -1,7 +1,7 @@
 "use client";
 import Button from "@/components/ui/Button";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import HomeBlogCardsd from "@/components/HomeBlogCardsd";
 import SubscribeContact from "@/components/SubscribeContact";
 import Icons from "@/components/ui/Icon";
@@ -63,17 +63,96 @@ const blogData = [
   },
 ];
 const category = [
-  "All",
-  "Tech Trends",
-  "Case Studies",
-  "Development",
-  "UI/UX Design",
-  "Cybersecurity",
-  "Digital Strategy",
+  // "All",
+  // "Tech Trends",
+  // "Case Studies",
+  // "Development",
+  // "UI/UX Design",
+  // "Cybersecurity",
+  // "Digital Strategy",
 ];
 
 const Blogs = () => {
   const [activeCategory, setActiveCategory] = useState("All");
+  const [blogs, setBlogs] = useState(blogData);
+  const [categories, setCategories] = useState(category);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const response = await fetch('http://localhost:5000/api/categories');
+        if (response.ok) {
+          const data = await response.json();
+          console.log('Categories from API:', data);
+          const dynamicCategories = [
+            { name: "All", slug: "all" },
+            ...data.data.map(cat => ({ name: cat.name, slug: cat.slug }))
+          ];
+          setCategories(dynamicCategories);
+        }
+      } catch (error) {
+        console.error('Error fetching categories:', error);
+        const fallbackCategories = category.map(cat => ({ name: cat, slug: cat.toLowerCase().replace(/\s+/g, '-') }));
+        setCategories(fallbackCategories);
+      }
+    };
+
+    fetchCategories();
+  }, []);
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      setLoading(true);
+      try {
+        let url = 'http://localhost:5000/api/blogs';
+        
+        const selectedCategory = categories.find(cat => cat.name === activeCategory);
+        
+        // console.log('Selected category:', selectedCategory);
+        // console.log('Active category:', activeCategory);
+        
+        if (activeCategory !== "All" && selectedCategory && selectedCategory.slug !== "all") {
+          url = `http://localhost:5000/api/blogs/category/${selectedCategory.slug}`;
+        }
+        
+        //console.log('Fetching blogs from:', url);
+        
+        const response = await fetch(url);
+        if (response.ok) {
+          const data = await response.json();
+          // console.log('API Response:', data);
+          
+          if (data.success && data.data) {
+            // console.log('Setting blogs:', data.data);
+            setBlogs(data.data);
+          } else {
+            console.log('No data in API response, using fallback');
+            const filteredBlogs = activeCategory === "All" 
+              ? blogData 
+              : blogData.filter(blog => blog.category === activeCategory);
+            setBlogs(filteredBlogs);
+          }
+        } else {
+          console.log('API request failed, using fallback');
+          const filteredBlogs = activeCategory === "All" 
+            ? blogData 
+            : blogData.filter(blog => blog.category === activeCategory);
+          setBlogs(filteredBlogs);
+        }
+      } catch (error) {
+        console.error('Error fetching blogs:', error);
+        const filteredBlogs = activeCategory === "All" 
+          ? blogData 
+          : blogData.filter(blog => blog.category === activeCategory);
+        setBlogs(filteredBlogs);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchBlogs();
+  }, [activeCategory, categories]); 
   return (
     <div className="flex justify-between">
       <div className="absolute overflow-hidden -top-20">
@@ -145,26 +224,40 @@ const Blogs = () => {
             Select Your Category
           </p>
           <div className="flex gap-16 text-[#C4C4C4] mt-13 font-kumbh-sans">
-            {category.map((item, index) => (
+            {categories.map((item, index) => (
               <button
                 key={index}
-                onClick={() => setActiveCategory(item)}
+                onClick={() => setActiveCategory(item.name || item)}
                 className={`relative pb-1 transition-all duration-300 cursor-pointer ${
-                  activeCategory === item
+                  activeCategory === (item.name || item)
                     ? "text-primary opacity-100 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#8752FF] after:rounded-full "
                     : "opacity-60 hover:opacity-100"
                 }`}
               >
-                {item}
+                {item.name || item}
               </button>
             ))}
           </div>
-          <div className=" flex flex-col items-center justify-center mt-12 text-white">
-            <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-12">
-              {blogData.map((blog) => (
-                <HomeBlogCardsd key={blog.id} blog={blog} />
-              ))}
-            </div>
+          <div className="flex flex-col items-center justify-center mt-12 text-white">
+            {loading ? (
+              <div className="text-white text-xl py-8">Loading blogs...</div>
+            ) : blogs.length > 0 ? (
+              <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-12">
+                {blogs.map((blog) => (
+                  <HomeBlogCardsd key={blog.id || blog._id} blog={blog} />
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-12">
+                <div className="text-xl text-gray-400 mb-2">No blogs found</div>
+                <div className="text-sm text-gray-500">
+                  {activeCategory === "All" 
+                    ? "No blogs available at the moment" 
+                    : `No blogs found in "${activeCategory}" category`
+                  }
+                </div>
+              </div>
+            )}
           </div>
           <div className="text-[#82828C] mt-24 border-2 container mx-auto px-10"></div>
           <SubscribeContact />

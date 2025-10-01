@@ -31,16 +31,16 @@ const menuItems = [
     href: '/admin/categories',
     icon: Tag,
   },
-  {
-    title: 'Blogs',
-    href: '/admin/blogs',
-    icon: FileText,
-  },
-  {
-    title: 'Settings',
-    href: '/admin/settings',
-    icon: Settings,
-  },
+  // {
+  //   title: 'Blogs',
+  //   href: '/admin/blogs',
+  //   icon: FileText,
+  // },
+  // {
+  //   title: 'Settings',
+  //   href: '/admin/settings',
+  //   icon: Settings,
+  // },
 ];
 
 export default function AdminSidebar() {
@@ -55,7 +55,6 @@ export default function AdminSidebar() {
 
   return (
     <>
-      {/* Mobile menu button */}
       <button
         className="lg:hidden fixed top-4 left-4 z-50 p-2 bg-[#1A1A1A] text-white rounded-lg"
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -114,7 +113,6 @@ export default function AdminSidebar() {
         </div>
       </div>
 
-      {/* Mobile overlay */}
       {isMobileMenuOpen && (
         <div
           className="lg:hidden fixed inset-0 z-30 bg-black bg-opacity-50"

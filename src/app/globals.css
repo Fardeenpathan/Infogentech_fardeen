@@ -178,8 +178,19 @@
   font-style: normal;
 }
 
-/* Using Google Fonts as fallback for Kumbh Sans */
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;600;700&display=swap');
+@font-face {
+  font-family: "Kumbh Sans";
+  src: url("/fonts/KumbhSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Kumbh Sans";
+  src: url("/fonts/KumbhSans-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
 @font-face {
   font-family: "Inter";
   src: url("/fonts/Inter/Inter-Medium.woff2") format("woff2");
