@@ -91,11 +91,11 @@ export default function BlogSlugPage() {
         
         switch (block.type) {
           case 'paragraph':
-            html += `<p>${block.data?.content || ''}</p>`;
+            html += `<p class="mb-6">${block.data?.content || ''}</p>`;
             break;
           case 'heading':
             const level = block.data?.level || 2;
-            html += `<h${level} class="font-semibold">${block.data?.content || ''}</h${level}>`;
+            html += `<h${level} class="font-semibold text-5xl mb-8">${block.data?.content || ''}</h${level}>`;
             break;
           case 'list':
             if (block.data?.style === 'ordered') {
