@@ -18,16 +18,6 @@ const contactUsa = [
   },
 ];
 
-const contactIndia =[
-   {
-    country: "India",
-    info: [
-      { icon: "Contact", text: "+91 99101 30963" },
-      { icon: "Email", text: "info@infogentech.com" },
-      { icon: "Location", text: "Delhi, India" },
-    ],
-  },
-]
 const socialMedia = [
   {
     name: "Facebook",
@@ -46,7 +36,7 @@ const socialMedia = [
     link: "https://twitter.com/",
   },
 ];
-const ContactForm = ({country}) => {
+const ContactForm = () => {
   const [isVerified, setIsVerified] = useState(false);
   const recaptchaRef = useRef(null);
 
@@ -154,7 +144,7 @@ const ContactForm = ({country}) => {
               </p>
 
               <div className="mt-20 flex flex-col gap-12.5">
-                {(country === "IN" ? contactIndia : contactUsa).map((region, i) => (
+                {contactUsa.map((region, i) => (
                   <div key={i}>
                     <h3 className="text-xl font-semibold mb-4">
                       {region.country}

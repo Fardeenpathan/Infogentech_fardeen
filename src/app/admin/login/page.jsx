@@ -26,7 +26,7 @@ export default function AdminLogin() {
     setError('');
 
     try {
-      const response = await fetch('http://localhost:5000/api/auth/login', {
+      const response = await fetch('https://97fzff04-5000.inc1.devtunnels.ms/api/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -53,7 +53,6 @@ export default function AdminLogin() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#0A0A0A]">
       <div className="max-w-md w-full space-y-8 p-8">
-        {/* Logo */}
         <div className="text-center">
           <Image
             src="/logo.svg"
@@ -70,7 +69,6 @@ export default function AdminLogin() {
           </p>
         </div>
 
-        {/* Login Form */}
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
           <div className="space-y-4">
             <div>
@@ -122,7 +120,6 @@ export default function AdminLogin() {
           </div>
         </form>
 
-        {/* Demo Credentials */}
         <div className="text-center text-xs text-gray-500">
           <p>Demo credentials:</p>
           <p>Email: admin@yourcompany.com</p>
