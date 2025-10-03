@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import HomeBlogCardsd from "@/components/HomeBlogCardsd";
 import SubscribeContact from "@/components/SubscribeContact";
 import Icons from "@/components/ui/Icon";
+import Loader from "@/components/loader/Loader";
 const blogData = [
   {
     id: 1,
@@ -80,7 +81,7 @@ const Blogs = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/categories');
+        const response = await fetch('https://97fzff04-5000.inc1.devtunnels.ms/api/categories');
         if (response.ok) {
           const data = await response.json();
           console.log('Categories from API:', data);
@@ -104,7 +105,7 @@ const Blogs = () => {
     const fetchBlogs = async () => {
       setLoading(true);
       try {
-        let url = 'http://localhost:5000/api/blogs';
+        let url = 'https://97fzff04-5000.inc1.devtunnels.ms/api/blogs';
         
         const selectedCategory = categories.find(cat => cat.name === activeCategory);
         
@@ -112,7 +113,7 @@ const Blogs = () => {
         // console.log('Active category:', activeCategory);
         
         if (activeCategory !== "All" && selectedCategory && selectedCategory.slug !== "all") {
-          url = `http://localhost:5000/api/blogs/category/${selectedCategory.slug}`;
+          url = `https://97fzff04-5000.inc1.devtunnels.ms/api/blogs/category/${selectedCategory.slug}`;
         }
         
         //console.log('Fetching blogs from:', url);
@@ -237,11 +238,11 @@ const Blogs = () => {
               </button>
             ))}
           </div>
-          <div className="flex flex-col items-center justify-center mt-12 text-white">
+          <div className="mt-12">
             {loading ? (
-              <div className="text-white text-xl py-8">Loading blogs...</div>
+              <Loader/>
             ) : blogs.length > 0 ? (
-              <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-12">
+              <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 2xl:grid-cols-4 gap-12 xl:gap-8">
                 {blogs.map((blog) => (
                   <HomeBlogCardsd key={blog.id || blog._id} blog={blog} />
                 ))}
@@ -266,4 +267,4 @@ const Blogs = () => {
   );
 };
 
-export default Blogs;
+export default Blogs;   

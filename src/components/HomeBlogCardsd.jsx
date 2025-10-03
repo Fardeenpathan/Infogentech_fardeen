@@ -46,14 +46,14 @@ export default function HomeBlogCardsd({ blog }) {
           alt={blog.title || "Blog Image"}
           width={502}
           height={277}
-          className="w-full h-46 rounded-xl object-cover"
+          className="w-full h-64 rounded-xl object-cover"
         />
         <div className="px-2.5 pb-2.5 flex justify-between flex-col h-[180px] relative">
           <div>
-            <p className="font-jost font-medium text-xl leading-[120%] mt-3 text-white">
+            <p className="font-jost font-medium text-xl leading-[120%] mt-3 text-white line-clamp-2">
               {blog.title}
             </p>
-            <p className="font-kumbh-sans text-lg text-[#73737F] leading-[120%] mt-1">
+            <p className="font-kumbh-sans text-lg text-[#73737F] leading-[120%] mt-1 line-clamp-5">
               {getContent()}
             </p>
           </div>

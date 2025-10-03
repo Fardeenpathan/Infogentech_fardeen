@@ -26,7 +26,7 @@ export default function AdminLogin() {
     setError('');
 
     try {
-      const response = await fetch('http://localhost:5000/api/auth/login', {
+      const response = await fetch('https://97fzff04-5000.inc1.devtunnels.ms/api/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

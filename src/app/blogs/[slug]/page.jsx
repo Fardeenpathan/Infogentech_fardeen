@@ -8,15 +8,7 @@ import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, Calendar, User, Tag, Eye } from "lucide-react";
 import SubscribeContact from "@/components/SubscribeContact";
-
-const formatDate = (dateString) => {
-  if (!dateString) return "";
-  return new Date(dateString).toLocaleDateString("en-US", {
-    year: "numeric", 
-    month: "long",
-    day: "numeric"
-  });
-};
+import dayjs from "dayjs";
 
 export default function BlogSlugPage() {
   const { slug } = useParams();
@@ -26,7 +18,6 @@ export default function BlogSlugPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [openId, setOpenId] = useState(null);
-
   const faqData = [
     {
       id: 1,
@@ -51,8 +42,7 @@ export default function BlogSlugPage() {
       
       try {
         setLoading(true);
-        const response = await fetch(`http://localhost:5000/api/blogs/slug/${slug}`);
-        
+        const response = await fetch(`https://97fzff04-5000.inc1.devtunnels.ms/api/blogs/slug/${slug}`);
         if (!response.ok) {
           if (response.status === 404) {
             setError("Blog not found");
@@ -65,7 +55,6 @@ export default function BlogSlugPage() {
         const data = await response.json();
         
         if (data.success) {
-          // Convert blocks to HTML if exists
           let content = data.data.content || '';
           if (data.data.blocks && Array.isArray(data.data.blocks)) {
             content = convertBlocksToHtml(data.data.blocks);
@@ -77,13 +66,9 @@ export default function BlogSlugPage() {
             image: data.data.featuredImage?.url || '',
             category: data.data.category?.name || data.data.category
           };
-          
+          console.log(blogData.content, "prakash")
           setBlog(blogData);
-          
-          // Fetch related blogs based on category
-          if (data.data.category?.name) {
-            fetchRelatedBlogs(data.data.category.name, data.data._id);
-          }
+          console.log("Fetched blog data:", blogData);
         } else {
           setError(data.message || "Failed to fetch blog");
         }
@@ -110,7 +95,7 @@ export default function BlogSlugPage() {
             break;
           case 'heading':
             const level = block.data?.level || 2;
-            html += `<h${level}>${block.data?.content || ''}</h${level}>`;
+            html += `<h${level} class="font-semibold">${block.data?.content || ''}</h${level}>`;
             break;
           case 'list':
             if (block.data?.style === 'ordered') {
@@ -144,27 +129,6 @@ export default function BlogSlugPage() {
       });
       
       return html;
-    };
-
-    const fetchRelatedBlogs = async (categoryName, currentBlogId) => {
-      try {
-        const response = await fetch(`http://localhost:5000/api/blogs?category=${categoryName}&limit=3`);
-        if (response.ok) {
-          const data = await response.json();
-          if (data.success && data.data) {
-            // Filter out current blog
-            const filtered = data.data.filter(blog => blog._id !== currentBlogId);
-            const processedBlogs = filtered.slice(0, 3).map(blog => ({
-              ...blog,
-              image: blog.featuredImage?.url || '',
-              category: blog.category?.name || blog.category
-            }));
-            setRelatedBlogs(processedBlogs);
-          }
-        }
-      } catch (err) {
-        console.error("Error fetching related blogs:", err);
-      }
     };
 
     fetchBlog();
@@ -223,10 +187,6 @@ export default function BlogSlugPage() {
 
       <div className="flex justify-center items-center flex-col">
         <div className="flex items-center gap-4 text-sm text-gray-600 mb-4">
-          <span className="flex items-center gap-1">
-            <Calendar size={16} />
-            {formatDate(blog.createdAt)}
-          </span>
           {blog.category && (
             <span className="flex items-center gap-1">
               <Tag size={16} />
@@ -234,7 +194,10 @@ export default function BlogSlugPage() {
             </span>
           )}
         </div>
-
+         <h1 className="font-avalors text-[24px] font-normal leading-[100%] tracking-[0.03em] mt-6 text-center text-primary">
+          PUBLISHED {dayjs(blog.createdAt).format('DD MMM YYYY')}
+           
+        </h1>
         <h1 className="font-avalors text-[32px] font-normal leading-[100%] tracking-[0.03em] mt-6 text-center">
           {blog.title}
         </h1>
@@ -258,6 +221,7 @@ export default function BlogSlugPage() {
         <div 
           className="mt-18 font-kumbh-sans text-[20px] leading-[30px] max-w-4xl w-full prose prose-lg"
           dangerouslySetInnerHTML={{ __html: blog.content }}
+          
         />
 
         <div className="text-[#82828C] mt-12 border-2 container mx-auto px-10"></div>

@@ -31,16 +31,16 @@ const menuItems = [
     href: '/admin/categories',
     icon: Tag,
   },
-  // {
-  //   title: 'Blogs',
-  //   href: '/admin/blogs',
-  //   icon: FileText,
-  // },
-  // {
-  //   title: 'Settings',
-  //   href: '/admin/settings',
-  //   icon: Settings,
-  // },
+  {
+    title: 'Blogs',
+    href: '/admin/blogs',
+    icon: FileText,
+  },
+  {
+    title: 'Settings',
+    href: '/admin/settings',
+    icon: Settings,
+  },
 ];
 
 export default function AdminSidebar() {
@@ -100,7 +100,7 @@ export default function AdminSidebar() {
             })}
           </nav>
 
-          {/* Logout */}
+          {/* Logout */}``
           <div className="px-4 py-4 border-t border-gray-700">
             <button
               onClick={handleLogout}
