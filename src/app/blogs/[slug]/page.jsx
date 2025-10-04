@@ -91,23 +91,33 @@ export default function BlogSlugPage() {
         
         switch (block.type) {
           case 'paragraph':
-            html += `<p class="mb-6">${block.data?.content || ''}</p>`;
+            const content = block.data?.content || '';
+            if (content.trim().includes('<a ') && content.trim().startsWith('<a ') && content.trim().endsWith('</a>')) {
+              html += `<div class="mb-6">${content}</div>`;
+            } else {
+              html += `<p class="mb-6">${content}</p>`;
+            }
             break;
           case 'heading':
             const level = block.data?.level || 2;
             html += `<h${level} class="font-semibold text-5xl mb-8">${block.data?.content || ''}</h${level}>`;
             break;
           case 'list':
-            if (block.data?.style === 'ordered') {
-              html += '<ol>';
-              block.data.items?.forEach(item => {
-                html += `<li>${item}</li>`;
+            const listClass = 'my-4 pl-6 space-y-1';
+            const itemClass = 'mb-2';
+            const isOrdered = block.data?.style === 'ordered' || block.data?.style === 'ol';
+            if (isOrdered) {
+              html += `<ol class="${listClass} list-decimal">`;
+              (block.data.items || []).forEach(item => {
+                const itemContent = typeof item === 'string' ? item : (item?.content || item?.text || '');
+                html += `<li class="${itemClass}">${itemContent}</li>`;
               });
               html += '</ol>';
             } else {
-              html += '<ul>';
-              block.data.items?.forEach(item => {
-                html += `<li>${item}</li>`;
+              html += `<ul class="${listClass} list-disc">`;
+              (block.data.items || []).forEach(item => {
+                const itemContent = typeof item === 'string' ? item : (item?.content || item?.text || '');
+                html += `<li class="${itemClass}">${itemContent}</li>`;
               });
               html += '</ul>';
             }
@@ -219,10 +229,65 @@ export default function BlogSlugPage() {
         )}
 
         <div 
-          className="mt-18 font-kumbh-sans text-[20px] leading-[30px] max-w-4xl w-full prose prose-lg"
+          className="mt-18 font-kumbh-sans text-[20px] leading-[30px] max-w-4xl w-full blog-content"
           dangerouslySetInnerHTML={{ __html: blog.content }}
-          
         />
+        
+        {/* <style jsx>{`
+          .blog-content ul {
+            list-style-type: disc !important;
+            margin-left: 1.5rem !important;
+            margin-top: 1rem !important;
+            margin-bottom: 1rem !important;
+            padding-left: 0 !important;
+          }
+          
+          .blog-content ol {
+            list-style-type: decimal !important;
+            margin-left: 1.5rem !important;
+            margin-top: 1rem !important;
+            margin-bottom: 1rem !important;
+            padding-left: 0 !important;
+          }
+          
+          .blog-content li {
+            display: list-item !important;
+            margin-bottom: 0.5rem !important;
+            line-height: 1.6 !important;
+          }
+          
+          .blog-content li p {
+            margin: 0 !important;
+            display: inline !important;
+          }
+          
+          .blog-content a {
+            color: #60a5fa !important;
+            text-decoration: underline !important;
+          }
+          
+          .blog-content a:hover {
+            color: #93c5fd !important;
+          }
+          
+          .blog-content p {
+            margin-bottom: 1.5rem !important;
+          }
+          
+          .blog-content h1, .blog-content h2, .blog-content h3, .blog-content h4, .blog-content h5, .blog-content h6 {
+            margin-top: 2rem !important;
+            margin-bottom: 1rem !important;
+            font-weight: 600 !important;
+          }
+          
+          .blog-content blockquote {
+            border-left: 4px solid #60a5fa !important;
+            padding-left: 1rem !important;
+            margin: 1.5rem 0 !important;
+            font-style: italic !important;
+            color: #9ca3af !important;
+          }
+        `}</style> */}
 
         <div className="text-[#82828C] mt-12 border-2 container mx-auto px-10"></div>
       </div>

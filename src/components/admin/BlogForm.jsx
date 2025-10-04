@@ -271,28 +271,37 @@ export default function BlogFormPage({ mode = 'create' }) {
           settings: {}
         });
       } else if (tagName === 'p') {
+        const htmlContent = element.innerHTML || '';
         const textContent = element.textContent || '';
         if (textContent.trim()) {
           blocks.push({
             type: 'paragraph',
             data: {
-              content: textContent
+              content: htmlContent 
             },
             order: order++,
             settings: {}
           });
         }
       } else if (tagName === 'ul' || tagName === 'ol') {
-        const items = Array.from(element.children).map(li => li.textContent || '');
-        blocks.push({
-          type: 'list',
-          data: {
-            style: tagName === 'ul' ? 'unordered' : 'ordered',
-            items: items
-          },
-          order: order++,
-          settings: {}
-        });
+        const items = Array.from(element.children).map(li => {
+         
+          let itemContent = li.innerHTML || li.textContent || '';
+          itemContent = itemContent.replace(/<\/?p[^>]*>/g, '');
+          return itemContent.trim();
+        }).filter(item => item.length > 0); // Remove empty items
+        
+        if (items.length > 0) {
+          blocks.push({
+            type: 'list',
+            data: {
+              style: tagName === 'ul' ? 'unordered' : 'ordered',
+              items: items
+            },
+            order: order++,
+            settings: {}
+          });
+        }
       } else if (tagName === 'blockquote') {
         blocks.push({
           type: 'quote',
