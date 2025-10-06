@@ -145,14 +145,14 @@ const Marketing = () => {
       <ServicesHeader />
       <AllServices activeService="Digital Marketing" />
 
-      <div className="container mx-auto mt-24 px-10">
+      <div className="container mx-auto mt-24 xl:px-10 md:px-5 px-2">
         <div className="border-b-2 border-[#7e7d7d] mt-15 opacity-15"></div>
 
         <div>
           {categories.map((category) => (
             <div key={category.id}>
               <div
-                className={`relative font-jost font-normal text-[64px] leading-[100%] tracking-[0.03em] flex justify-between items-center py-5 cursor-pointer transition-opacity duration-300 ${
+                 className={`relative font-jost font-normal xl:text-[64px]  md:text-5xl text-3xl leading-[100%] tracking-[0.03em] flex justify-between items-center py-5 cursor-pointer transition-opacity duration-300 ${
                   openCategory === category.id ? "opacity-100" : "opacity-40"
                 }`}
                 onClick={() => toggleCategory(category.id)}
@@ -167,7 +167,7 @@ const Marketing = () => {
                     alt="digital marketing"
                     width={400}
                     height={377}
-                    className="rounded-2xl rotate-12 absolute -top-15 right-9 animate-slide-in-right overflow-hidden object-cover z-10"
+                      className="w-[400px] h-[377px] md:w-[300px] md:h-[280px] lg:w-[350px] lg:h-[207px] rounded-2xl rotate-12 absolute -top-10 right-6 animate-slide-in-right object-cover z-10 xl:flex hidden"
                   />
                 )}
               </div>
@@ -183,17 +183,17 @@ const Marketing = () => {
                     transition={{ duration: 0.35, ease: "easeInOut" }}
                     className="overflow-hidden"
                   >
-                    <div className="py-10 flex flex-col items-center gap-2 text-center">
-                      <p className="font-jost font-bold text-[32px] leading-6 text-primary">
+                    <div className="py-10 flex flex-col items-center gap-2 text-center px-4">
+                      <p className="font-jost font-bold md:text-3xl text-2xl leading-6 text-primary">
                         Our Value
                       </p>
-                      <p className="font-jost font-medium text-lg leading-6">
-                        How we work at Untitled guided by shared values that keep
-                        us connected as one team
+                      <p className="font-jost font-medium md:text-lg text-[16px] leading-6">
+                        How we work at Untitled guided by shared values that
+                        keep us connected as one team
                       </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10 overflow-visible px-10">
+                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-6 mb-10 overflow-visible md:px-10 px-4">
                       {category.subServices.length > 0 ? (
                         category.subServices.map((subService) => (
                           <motion.div
@@ -226,7 +226,7 @@ const Marketing = () => {
 
         <div className="mt-34 flex justify-center items-center flex-col relative">
           <div className="absolute -top-20">
-            <Icons name="gradientServices" />
+              <Icons name="gradientServices" width={300} height={100}/>
           </div>
 {/* 
           <div className="relative subContainer h-[640px] flex items-center justify-center">

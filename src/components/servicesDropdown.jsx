@@ -6,7 +6,7 @@ import Icons from "./ui/Icon";
 const servicesMenu = [
   {
     label: "Design",
-    href: "/portfolio/design",
+    href: "/services/design",
     description: "Crafting visually stunning and user-friendly designs.",
     subcategories: [
       {
@@ -38,7 +38,7 @@ const servicesMenu = [
   
   {
     label: "Development",
-    href: "/portfolio/development",
+    href: "/services/development",
     description: "Building robust and scalable web applications.",
     subcategories: [
       {
@@ -69,7 +69,7 @@ const servicesMenu = [
   },
   {
     label: "Content",
-    href: "/portfolio/content",
+    href: "/services/content",
     description: "Building robust and scalable web applications.",
     subcategories: [
       {
@@ -100,7 +100,7 @@ const servicesMenu = [
   },
   {
     label: "Digital Marketing",
-    href: "/portfolio/marketing",
+    href: "/services/marketing",
     description: "Building robust and scalable web applications.",
     subcategories: [
       {
@@ -139,7 +139,7 @@ export function ServicesDropdown() {
   };
 
   return (
-      <div className="relative group-hover:flex hidden shadow-lg  -left-26 z-50 cursor-pointer top-5 group">
+      <div className="relative group-hover:flex hidden shadow-lg  -left-26 z-50  top-5 group">
           <div className="bg-[linear-gradient(213deg,rgba(162,121,255,1)_0%,rgba(63,26,147,1)_89%)]  pl-1 pt-1 rounded-l-md h-[500px]">
             {servicesMenu.map((item, index) => (
               <Link key={index} href={item.href}>
@@ -159,7 +159,7 @@ export function ServicesDropdown() {
               </Link>
             ))}
           </div>
-          <div className="absolute font-jost right-1/6 font-medium xl:text-[124px] text-7xl leading-[120%] tracking-[0.03em] top-8 bg-gradient-to-b from-white to-[#15152A] bg-clip-text text-transparent opacity-10">
+          <div className="absolute font-jost pointer-events-none select-none right-1/6 font-medium xl:text-[124px] text-7xl leading-[120%] tracking-[0.03em] top-8 bg-gradient-to-b from-white to-[#15152A] bg-clip-text text-transparent opacity-10">
             Services
           </div>
           <div className="grid xl:grid-cols-2 font-jost gap-[1px] 2xl:w-[950px] w-72 xl:w-[700px] grid-cols-1 bg-[#535353] ">
