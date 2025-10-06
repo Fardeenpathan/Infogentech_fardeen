@@ -36,7 +36,7 @@ const designProjects = [
     id: 2,
     title: "Portfolio Logo",
     slug: "portfolio-logo",
-    image: "/assist/portfolio/design/logo.png",
+    image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1758868504/blog-app/categories/c2f9f6o4ihw4zgxalw0v.jpg",
     subImage: "/assist/portfolio/design/logos.png",
   },
 ];
