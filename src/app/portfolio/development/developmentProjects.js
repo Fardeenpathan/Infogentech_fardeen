@@ -6,7 +6,7 @@ const developmentProjects = [
     image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1758866786/blog-app/categories/hukwgvw3xqgqcau0nyr7.jpg",
     subImage: "/assist/portfolio/development/dryCleaning.webp",
     description:
-      "This project highlights the design process of developing a clean, functional, and engaging website for LaraClean. It was designed to offer an easy booking experience to users and demonstrate the professionalism and trust of the brand. ",
+      "Laraclean is a Delhi based company specializing in professional dry-cleaning services, with the focus to offer clean and neat cleaning services. The brand focuses on the integration of modern technology in cleaning and personal customer service. The mission is to simplify garment care for every customer by keeping clothes fresh and long lasting.",
     points: [
       "Wireframes, Prototypes, and High-fidelity design were created to be understandable and easy to use.",
       "Customization of WordPress using Elementor, styling of the theme, and integration of plugins.",
@@ -48,7 +48,7 @@ const developmentProjects = [
     image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1758872051/blog-app/categories/lkvacf2yfdjsq5nwxjob.jpg",
     subImage: "/assist/portfolio/development/ShaadiKarwadu.png",
     description:
-      "Madirakshi, an emerging digital platform, became our marketing partner to improve their app onboarding experience. We redefined the onboarding flow to retain and satisfy our customers while ensuring that they adopt the features. Figma and WordPress aided in creating a fluid, useful process and a higher level of engagement while bringing long engagement periods and customer success with it.",
+      "ShaadiKarwaDu is a total wedding solutions brand, which aims to make each event memorable and stress-free. It is a combination of creativity, tradition, modern elegance, personalized arrangements and planning. The mission of the brand is to make dream weddings come true and do it with perfect implementation and emotional moments.",
     points: [],
     date: "May 2025 ",
     duration: "8 weeks ",
@@ -123,7 +123,7 @@ const developmentProjects = [
     image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1758868867/blog-app/categories/rgm9p4wvvhejttch94gi.jpg",
     subImage: "/assist/portfolio/development/avartajewellery.png",
     description:
-      "Avarta Jewellery is a luxury brand that has a reputation for classic beauty and contemporary workmanship. They collaborated with us to design and develop a rich site. We provided the construction of category-based collections, blogs, customer resource, and e-commerce functionality, which would be smooth and user-friendly, so that the experience provided would be interesting to the jewellery lovers of today.",
+      "Avarta Jewellery celebrates the timeless beauty of ancient artistry while embracing the sophistication of modern design. Each piece is crafted carefully with precision, beauty and a classy look. Avarta transforms jewellery into more than just adornment, it becomes a symbol of beauty, identity and cherished memories.",
     points: [],
     date: "May – July 2025",
     duration: "6 weeks ",
@@ -164,7 +164,7 @@ const developmentProjects = [
     image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1758796090/blog-app/categories/hlxlfw0cuqlvhhe0cutg.jpg",
     subImage: "/assist/portfolio/development/sooquna.png",
     description:
-      "Soouqna, a growing e-commerce platform, partnered with Zebra to enhance logistics and delivery. API connectivity enabled seamless barcode scanning, better printer efficiency, and improved operational accuracy for faster, more reliable customer service.",
+      "Soouqna is a fast-selling e-commerce platform, which aims at improving its logistics, order handling and speed of delivery by contracting Zebra to integrate with the API. The integration facilitates barcode scanning, enhances the performance of the printer and increases the overall operating accuracy, making the shopping experience of customers smooth in all regions.",
     points: [
       "Secure Login: Added OTP & email/password authentication.",
       "Smart Search: Enabled location, QR & image-based product discovery.",

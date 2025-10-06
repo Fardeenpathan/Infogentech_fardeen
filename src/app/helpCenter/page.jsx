@@ -23,7 +23,7 @@ const HelpCenter = () => {
               We’re Here to Help, Anytime.
             </p>
             <p className="font-jost font-medium text-base sm:text-lg md:text-xl leading-relaxed mt-6">
-              Welcome to the Infogentech Help Center, your dedicated hub for IT support, product guidance, and customer service. We know technology is at the core of your business, and our goal is to ensure you always have the resources you need to stay productive and secure.
+              Welcome to the Infogentech Help Center, your dedicated hub for IT support, product guidance, and customer service. We know technology is the core of your business and we aim to ensure you always have the resources you need to maintain the integrity of your business.
             </p>
           </div>
         </div>
@@ -42,50 +42,38 @@ const HelpCenter = () => {
         <aside className="flex flex-col p-4">
           <article className="space-y-6">
             <p className="font-avalors font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-[100%] tracking-[0.03em] capitalize mb-4">
-              FAQs & Knowledge Base
+              FAQs & Knowledge Base -
             </p>
             <h2 className="font-kumbh-sans text-base sm:text-lg md:text-xl lg:text-2xl font-medium">
-              Browse quick answers, troubleshooting steps, and best practices to
-              resolve common IT issues.
+              Browse quick answers, troubleshooting steps and best practices to resolve common IT issues.
             </h2>
 
             <p className="font-avalors font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-[100%] tracking-[0.03em] capitalize mb-4">
-              Product Documentation
+              Billing Assistance – 
             </p>
             <h2 className="font-kumbh-sans text-base sm:text-lg md:text-xl lg:text-2xl font-medium">
-              Access detailed user guides, installation manuals, and setup
-              instructions for all of our solutions.
+              Easily manage your subscriptions, invoices and renewals.
             </h2>
 
             <p className="font-avalors font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-[100%] tracking-[0.03em] capitalize mb-4">
-              Account & Billing Assistance
+              Technical Support –
             </p>
             <h2 className="font-kumbh-sans text-base sm:text-lg md:text-xl lg:text-2xl font-medium">
-              Get help managing your account, subscriptions, invoices, and
-              renewals with ease.
+               From Website Issues to Software Issues, our IT experts are here to resolve issues efficiently.
             </h2>
 
             <p className="font-avalors font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-[100%] tracking-[0.03em] capitalize mb-4">
-              Technical Support
+              24/7 Assistance –
             </p>
             <h2 className="font-kumbh-sans text-base sm:text-lg md:text-xl lg:text-2xl font-medium">
-              From software errors to infrastructure challenges, our IT experts
-              are here to resolve issues efficiently.
+              Critical problems can’t wait. Our team provides round-the-clock support to keep your systems running.
             </h2>
 
             <p className="font-avalors font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-[100%] tracking-[0.03em] capitalize mb-4">
-              24/7 Assistance
+             Contact Options – 
             </p>
             <h2 className="font-kumbh-sans text-base sm:text-lg md:text-xl lg:text-2xl font-medium">
-              Critical problems can’t wait. Our team provides round-the-clock
-              support to keep your systems running.
-            </h2>
-            <p className="font-avalors font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-[100%] tracking-[0.03em] capitalize mb-4">
-              Contact Options
-            </p>
-            <h2 className="font-kumbh-sans text-base sm:text-lg md:text-xl lg:text-2xl font-medium">
-              Whether by phone, email, or live chat, we’re here to provide
-              personalized assistance whenever you need it.
+            Whether by phone or email, we are here to provide assistance whenever you need it.
             </h2>
 
             <p className="font-jost font-medium text-base sm:text-lg md:text-xl leading-relaxed mt-9">

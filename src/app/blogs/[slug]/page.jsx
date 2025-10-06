@@ -42,7 +42,7 @@ export default function BlogSlugPage() {
       
       try {
         setLoading(true);
-        const response = await fetch(`https://97fzff04-5000.inc1.devtunnels.ms/api/blogs/slug/${slug}`);
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blogs/slug/${slug}`);
         if (!response.ok) {
           if (response.status === 404) {
             setError("Blog not found");
