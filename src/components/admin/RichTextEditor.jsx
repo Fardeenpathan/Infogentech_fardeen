@@ -118,9 +118,19 @@ const RichTextEditor = ({ content, onChange, placeholder = "Start writing your b
   const handleLink = () => {
     if (linkUrl.trim()) {
       if (linkText.trim()) {
-        editor.chain().focus().insertContent(`<a href="${linkUrl.trim()}">${linkText.trim()}</a>`).run();
+        const { from, to } = editor.state.selection;
+        if (from !== to) {
+          editor.chain().focus().setLink({ href: linkUrl.trim() }).run();
+        } else {
+          editor.chain().focus().insertContent(`<a href="${linkUrl.trim()}">${linkText.trim()}</a> `).run();
+        }
       } else {
-        editor.chain().focus().setLink({ href: linkUrl.trim() }).run();
+        const { from, to } = editor.state.selection;
+        if (from !== to) {
+          editor.chain().focus().setLink({ href: linkUrl.trim() }).run();
+        } else {
+          editor.chain().focus().insertContent(`<a href="${linkUrl.trim()}">${linkUrl.trim()}</a> `).run();
+        }
       }
       setLinkUrl('');
       setLinkText('');
