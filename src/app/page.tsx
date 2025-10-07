@@ -1,5 +1,5 @@
 "use client";
-import { HeroSection } from "@/components/hero-section";
+import  IndHeroSection  from "@/components/IndHeroSection";
 import ServicesSection from "@/components/ServicesSection";
 import { StatsSection } from "@/components/StatsSection";
 import OurValues from "@/components/OurValues";
@@ -11,7 +11,7 @@ import LatestBlogs from "@/components/LatestBlogs";
 export default function Home() {
   return (
     <main className="w-full">  
-        <HeroSection />
+      <IndHeroSection />
       <StatsSection />
       <div className="overflow-hidden">
        <ServicesSection /> 

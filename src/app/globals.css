@@ -199,7 +199,9 @@
   font-style: normal;
 }
 
-
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
 
 .font-kumbh-sans {
   font-family: 'Kumbh Sans', sans-serif;
