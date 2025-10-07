@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
   const isUS = pathname.startsWith("/us");
 
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className={ isUS ? "dark" : "IndColorText"}>
       <head>
         <link rel="icon" href="/mainLogo.svg" />
       </head>

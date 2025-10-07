@@ -10,7 +10,10 @@ export default function IndHeroSection() {
         muted
         playsInline
       />
-      <IndHeroSectionContent />
+      <div className="pt-32 pb-20 ">
+       <IndHeroSectionContent /> 
+      </div>
+      
     </div>
   );
 }
