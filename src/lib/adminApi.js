@@ -253,6 +253,7 @@ class AdminApiService {
     
     // Add basic fields
     formData.append('title', blogData.title);
+    formData.append('slug', blogData.slug || '');
     formData.append('excerpt', blogData.excerpt);
     formData.append('category', blogData.category);
     formData.append('status', blogData.status || 'draft');
@@ -334,6 +335,7 @@ class AdminApiService {
     
     // Add basic fields
     formData.append('title', blogData.title);
+    formData.append('slug', blogData.slug || '');
     formData.append('excerpt', blogData.excerpt);
     formData.append('category', blogData.category);
     formData.append('status', blogData.status || 'draft');
