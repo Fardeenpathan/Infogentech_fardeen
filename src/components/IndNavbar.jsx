@@ -24,7 +24,7 @@ export default function Navbar() {
       <div className="flex items-center container justify-between mx-auto">
         <Link href="/" className="flex items-center gap-1.5 cursor-pointer">
           <Icons name="LogoFooter" />
-          <p className="font-avalors lg:text-[24px] leading-8 tracking-[3px] font-bold text-xl">
+          <p className="font-avalors lg:text-[24px] leading-8 tracking-[3px] font-bold text-xl text-white">
             INFOGENTECH
           </p>
         </Link>
@@ -49,7 +49,7 @@ export default function Navbar() {
 
         <a
           href="#"
-          className="px-11 py-3.5 bg-primary rounded-4xl cursor-pointer hover:opacity-90 transition"
+          className="px-11 py-3.5 bg-primary rounded-4xl cursor-pointer hover:opacity-90 transition text-white"
         >
           Let's talk
         </a>

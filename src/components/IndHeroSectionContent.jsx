@@ -4,7 +4,7 @@
 
 export default function IndHeroSectionContent() {
   return (
-    <div className="max-w-6xl leading-[160%] tracking-[3px] mx-auto">
+    <div className="max-w-6xl leading-[160%] tracking-[3px] mx-auto text-white">
       <div className="text-[80px] font-avalors"><span>CREATING</span><span className="bg-primary px-12 rounded-full ml-10 font-avalors">BRANDS</span></div>
       <div className="text-[80px] mt-20 flex justify-center items-center"><span className="font-avalors">AND DIGITAL</span><span className="text-lg ml-10">We build strong brand identities and deliver<br /> digital solutions that blend creativity and <br />technology to help businesses grow and engage.</span></div>
       <div className="mt-20 flex items-center text-[80px] font-avalors">
