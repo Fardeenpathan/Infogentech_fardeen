@@ -103,9 +103,16 @@
   --sidebar-border: oklch(0.92 0.004 286.32);
   --sidebar-ring: oklch(0.705 0.015 286.067);
 }
+.IndColorText{
+  --background: white;
+  --foreground:#4C4C4C;
+   --primary: #8752FF;
+   --text-color-head: #4C4C4C;
+   --text-color-secondary: #6F6F6F;
+}
 
 .dark {
-  --background: oklch(0.141 0.005 285.823);
+  --background: #15152a;
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.21 0.006 285.885);
   --card-foreground: oklch(0.985 0 0);
@@ -143,7 +150,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-[#15152a] text-foreground;
+    @apply bg-[var(--background)] text-foreground;
   }
 }
 
@@ -372,4 +379,13 @@
   backdrop-filter: blur(3px);
   border: 1px solid rgba(255,255,255,0.08);
   box-shadow: 0 8px 30px rgba(2,6,23,0.4);
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
 }
