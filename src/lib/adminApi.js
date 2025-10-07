@@ -253,6 +253,7 @@ class AdminApiService {
     
     // Add basic fields
     formData.append('title', blogData.title);
+    formData.append('slug', blogData.slug || '');
     formData.append('excerpt', blogData.excerpt);
     formData.append('category', blogData.category);
     formData.append('status', blogData.status || 'draft');
@@ -276,7 +277,15 @@ class AdminApiService {
         // Handle block data
         if (block.data) {
           Object.keys(block.data).forEach(key => {
-            formData.append(`blocks[${index}][data][${key}]`, block.data[key]);
+            const value = block.data[key];
+            if (key === 'items' && Array.isArray(value)) {
+              // Handle list items as separate array entries
+              value.forEach((item, itemIndex) => {
+                formData.append(`blocks[${index}][data][items][${itemIndex}]`, item);
+              });
+            } else {
+              formData.append(`blocks[${index}][data][${key}]`, value);
+            }
           });
         }
         
@@ -326,6 +335,7 @@ class AdminApiService {
     
     // Add basic fields
     formData.append('title', blogData.title);
+    formData.append('slug', blogData.slug || '');
     formData.append('excerpt', blogData.excerpt);
     formData.append('category', blogData.category);
     formData.append('status', blogData.status || 'draft');
@@ -349,7 +359,15 @@ class AdminApiService {
         // Handle block data
         if (block.data) {
           Object.keys(block.data).forEach(key => {
-            formData.append(`blocks[${index}][data][${key}]`, block.data[key]);
+            const value = block.data[key];
+            if (key === 'items' && Array.isArray(value)) {
+              // Handle list items as separate array entries
+              value.forEach((item, itemIndex) => {
+                formData.append(`blocks[${index}][data][items][${itemIndex}]`, item);
+              });
+            } else {
+              formData.append(`blocks[${index}][data][${key}]`, value);
+            }
           });
         }
         

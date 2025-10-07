@@ -8,65 +8,115 @@ import { useRef, useState } from "react";
 import SubServiceCard from "@/components/SubServiceCard";
 import { motion, AnimatePresence } from "framer-motion";
 
-const Development = () => {
+const Design = () => {
   const categories = [
     {
       id: "01",
-      title: "Web & App Development",
-      image: "/assist/services/development/webAp.jpeg",
+      title: "Graphic Design",
+      image: "/assist/services/design/graphic.jpeg",
       subServices: [
-        { id: "01", title: "Website Development", desc: "Scalable websites built for performance." },
-        { id: "02", title: "Custom Websites & Business Landing Pages", desc: "Tailored solutions for unique business needs." },
-        { id: "03", title: "E-commerce Platforms & Online Stores", desc: "Powerful online shopping experiences." },
-        { id: "04", title: "Personal Portfolios & Showcase Sites", desc: "Sleek designs to highlight your work." },
-        { id: "05", title: "Application Development", desc: "End-to-end custom software solutions." },
-        { id: "06", title: "Web-based Application Development", desc: "Secure and scalable web apps." },
-        { id: "07", title: "Mobile App Development (iOS & Android)", desc: "Engaging apps across platforms." },
-        { id: "08", title: "Progressive Web Applications (PWA)", desc: "Modern, app-like web experiences." },
-        { id: "09", title: "Cross-platform Mobile Solutions", desc: "Apps that work seamlessly across devices." },
-        { id: "10", title: "Portal & Dashboard Development", desc: "Smart dashboards for data-driven insights." },
-        { id: "11", title: "Enterprise App Development", desc: "Scalable apps tailored for enterprises." },
-        { id: "12", title: "Software Development & SaaS", desc: "Cloud-based software for modern businesses." },
-        { id: "13", title: "Custom Software Development", desc: "Bespoke solutions for unique challenges." },
-        { id: "14", title: "SaaS Platform Setup, Deployment & Support", desc: "End-to-end SaaS implementation." },
-        { id: "15", title: "Scalability & Performance Optimization", desc: "Faster, more efficient applications." },
-        { id: "16", title: "Application Maintenance", desc: "Reliable support and ongoing improvements." },
+        {
+          id: "01",
+          title: "Print and Digital Graphic Design",
+          desc: "Creating impactful visual content across media.",
+        },
+        {
+          id: "02",
+          title: "Presentation Design",
+          desc: "Crafting narrative-driven brand presentations.",
+        },
+        {
+          id: "03",
+          title: "Ad Creative Design",
+          desc: "Designing engaging ads that capture attention.",
+        },
+        {
+          id: "04",
+          title: "Illustrations & Iconography",
+          desc: "Custom visuals to enhance storytelling.",
+        },
+        {
+          id: "05",
+          title: "Print & Packaging Design",
+          desc: "Innovative packaging and print solutions.",
+        },
+        {
+          id: "06",
+          title: "Product Sheets & One Pagers",
+          desc: "Clear and concise product communication.",
+        },
+        {
+          id: "07",
+          title: "Corporate Reports",
+          desc: "Professional, data-driven report designs.",
+        },
       ],
     },
     {
       id: "02",
-      title: "CMS Development",
-      image: "/assist/services/development/cms.png",
+      title: "UI/UX Design",
+      image: "/assist/services/design/ui.png",
       subServices: [
-        { id: "01", title: "WordPress (Custom Themes & Plugins)", desc: "Custom WordPress solutions." },
-        { id: "02", title: "Shopify Store Development & Customization", desc: "Scalable Shopify stores." },
-        { id: "03", title: "Joomla & WooCommerce Solutions", desc: "Smart eCommerce solutions." },
-        { id: "04", title: "Custom CMS Development", desc: "Tailored CMS platforms." },
-        { id: "05", title: "LMS Development", desc: "Powerful online learning systems." },
+        {
+          id: "01",
+          title: "UI/UX Design & Wireframing",
+          desc: "Intuitive, user-focused digital experiences.",
+        },
+        {
+          id: "02",
+          title: "Mobile-first Responsive Design",
+          desc: "Seamless design across every device.",
+        },
+        {
+          id: "03",
+          title: "Visual Design Systems & Style Guides",
+          desc: "Consistent branding with clear design standards.",
+        },
+        {
+          id: "04",
+          title: "Website Design (Desktop, Mobile, eCommerce)",
+          desc: "Engaging, functional websites that convert.",
+        },
+        {
+          id: "05",
+          title: "Landing Page Design",
+          desc: "High-impact pages built to drive results.",
+        },
       ],
     },
     {
       id: "03",
-      title: "Custom Integrations",
-      image: "/assist/services/development/customIntegration.png",
+      title: "Branding",
+      image: "/assist/services/design/branding.png",
       subServices: [
-        { id: "01", title: "Database Design & API Integration", desc: "Seamless data connectivity." },
-        { id: "02", title: "System Integration & Custom Software", desc: "Unified custom solutions." },
-        { id: "03", title: "CRM Integration", desc: "Smarter customer management." },
+        {
+          id: "01",
+          title: "Corporate Identity Design",
+          desc: "Building strong, memorable brand identities.",
+        },
+        {
+          id: "02",
+          title: "Brand Guidelines",
+          desc: "Defining consistent rules for brand expression.",
+        },
+        {
+          id: "03",
+          title: "Brand Identity Messaging",
+          desc: "Clear communication of your brand’s voice.",
+        },
+        {
+          id: "04",
+          title: "Rebranding Services",
+          desc: "Transforming brands for modern relevance.",
+        },
       ],
     },
     {
       id: "04",
-      title: "AI & Cloud Solutions",
-      image: "/assist/services/development/AICloud.png",
+      title: "Logo Design",
+      image: "/assist/services/design/logo.jpeg",
       subServices: [
-        { id: "01", title: "Advanced AI Development", desc: "Smart AI solutions." },
-        { id: "02", title: "Cloud Hosting Services", desc: "Secure cloud hosting." },
-        { id: "03", title: "Advanced Solutions", desc: "Innovative tech services." },
-        { id: "04", title: "Node.js Development", desc: "Fast Node.js apps." },
-        { id: "05", title: "React Development", desc: "Dynamic React apps." },
-        { id: "06", title: "Laravel Development", desc: "Powerful Laravel sites." },
-        { id: "07", title: "No-Code Development", desc: "Build without coding." },
+        // empty by design
       ],
     },
   ];
@@ -102,16 +152,14 @@ const Development = () => {
   return (
     <>
       <ServicesHeader />
-      <AllServices activeService="Development" />
-
+      <AllServices activeService="Design" />
       <div className="container mx-auto mt-24 xl:px-10 md:px-5 px-2">
-        <div className="border-b-2 border-[#7e7d7d] mt-15 opacity-15"></div>
-
+          <div className="border-b-2 border-[#7e7d7d] mt-15 opacity-15"></div>
         <div>
           {categories.map((category) => (
             <div key={category.id}>
               <div
-              className={`relative font-jost font-normal xl:text-[64px]  md:text-5xl text-3xl leading-[100%] tracking-[0.03em] flex justify-between items-center py-5 cursor-pointer transition-opacity duration-300 ${
+                className={`relative font-jost font-normal xl:text-[64px]  md:text-5xl text-3xl leading-[100%] tracking-[0.03em] flex justify-between items-center py-5 cursor-pointer transition-opacity duration-300 ${
                   openCategory === category.id ? "opacity-100" : "opacity-40"
                 }`}
                 onClick={() => toggleCategory(category.id)}
@@ -123,7 +171,7 @@ const Development = () => {
                 {openCategory === category.id && (
                   <Image
                     src={category.image}
-                    alt="Design"
+                    alt={category.title}
                     width={400}
                     height={377}
                     className="w-[400px] h-[377px] md:w-[300px] md:h-[280px] lg:w-[350px] lg:h-[207px] rounded-2xl rotate-12 absolute -top-10 right-6 animate-slide-in-right object-cover z-10 xl:flex hidden"
@@ -140,7 +188,7 @@ const Development = () => {
                     transition={{ duration: 0.35, ease: "easeInOut" }}
                     className="overflow-hidden"
                   >
-                      <div className="py-10 flex flex-col items-center gap-2 text-center px-4">
+                    <div className="py-10 flex flex-col items-center gap-2 text-center px-4">
                       <p className="font-jost font-bold md:text-3xl text-2xl leading-6 text-primary">
                         Our Value
                       </p>
@@ -150,7 +198,7 @@ const Development = () => {
                       </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10 overflow-visible px-10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-6 mb-10 overflow-visible md:px-10 px-4">
                       {category.subServices.length > 0 ? (
                         category.subServices.map((subService) => (
                           <motion.div
@@ -182,8 +230,8 @@ const Development = () => {
         </div>
 
         <div className="mt-34 flex justify-center items-center flex-col relative">
-          <div className="absolute -top-20">
-             <Icons name="gradientServices" width={300} height={100}/>
+          <div className="absolute -top-20 ">
+            <Icons name="gradientServices" width={300} height={100}/>
           </div>
 
           {/* <div className="relative subContainer h-[640px] flex items-center justify-center">
@@ -207,7 +255,6 @@ const Development = () => {
               </button>
             )}
           </div> */}
-          {/* // */}
         </div>
 
         <SubscribeContact />
@@ -216,4 +263,4 @@ const Development = () => {
   );
 };
 
-export default Development;
+export default Design;

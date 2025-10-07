@@ -25,6 +25,7 @@ export default function BlogFormPage({ mode = 'create' }) {
   const [wordCount, setWordCount] = useState(0);
   const autoSaveRef = useRef(null);
   const isEditMode = mode === 'edit';
+  const [slugEdited, setSlugEdited] = useState(false);
   
   const [formData, setFormData] = useState({
     title: '',
@@ -66,7 +67,7 @@ export default function BlogFormPage({ mode = 'create' }) {
   }, [formData]);
 
   useEffect(() => {
-    const text = formData.content.replace(/<[^>]*>/g, '');
+    const text = (formData.content || '').replace(/<[^>]*>/g, '');
     const words = text.trim().split(/\s+/).filter(word => word.length > 0);
     setWordCount(words.length);
   }, [formData.content]);
@@ -121,6 +122,7 @@ export default function BlogFormPage({ mode = 'create' }) {
           keywords: []
         }
       });
+      setSlugEdited(false);
     } catch (error) {
       console.error('Error loading blog:', error);
       toast.error('Failed to load blog');
@@ -134,7 +136,7 @@ export default function BlogFormPage({ mode = 'create' }) {
     if (!blocks || !Array.isArray(blocks)) return '';
     
     let html = '';
-    const sortedBlocks = blocks.sort((a, b) => (a.order || 0) - (b.order || 0));
+    const sortedBlocks = [...blocks].sort((a, b) => (a.order || 0) - (b.order || 0));
     
     sortedBlocks.forEach(block => {
       if (!block || !block.type) return;
@@ -235,15 +237,19 @@ export default function BlogFormPage({ mode = 'create' }) {
   };
 
   const handleTitleChange = (title) => {
-    setFormData(prev => ({
-      ...prev,
-      title,
-      slug: !isEditMode && !prev.slug ? generateSlug(title) : prev.slug,
-      seo: {
-        ...prev.seo,
-        title: title || prev.seo.title
-      }
-    }));
+    setFormData(prev => {
+      const shouldAutoSlug = !isEditMode && !prev.slug && !slugEdited;
+      const newSlug = shouldAutoSlug ? generateSlug(title) : prev.slug;
+      return {
+        ...prev,
+        title,
+        slug: newSlug,
+        seo: {
+          ...prev.seo,
+          title: title || prev.seo.title
+        }
+      };
+    });
   };
 
   const convertHtmlToBlocks = (htmlContent) => {
@@ -271,28 +277,37 @@ export default function BlogFormPage({ mode = 'create' }) {
           settings: {}
         });
       } else if (tagName === 'p') {
+        const htmlContent = element.innerHTML || '';
         const textContent = element.textContent || '';
         if (textContent.trim()) {
           blocks.push({
             type: 'paragraph',
             data: {
-              content: textContent
+              content: htmlContent 
             },
             order: order++,
             settings: {}
           });
         }
       } else if (tagName === 'ul' || tagName === 'ol') {
-        const items = Array.from(element.children).map(li => li.textContent || '');
-        blocks.push({
-          type: 'list',
-          data: {
-            style: tagName === 'ul' ? 'unordered' : 'ordered',
-            items: items
-          },
-          order: order++,
-          settings: {}
-        });
+        const items = Array.from(element.children).map(li => {
+         
+          let itemContent = li.innerHTML || li.textContent || '';
+          itemContent = itemContent.replace(/<\/?p[^>]*>/g, '');
+          return itemContent.trim();
+        }).filter(item => item.length > 0); // Remove empty items
+        
+        if (items.length > 0) {
+          blocks.push({
+            type: 'list',
+            data: {
+              style: tagName === 'ul' ? 'unordered' : 'ordered',
+              items: items
+            },
+            order: order++,
+            settings: {}
+          });
+        }
       } else if (tagName === 'blockquote') {
         blocks.push({
           type: 'quote',
@@ -507,18 +522,21 @@ export default function BlogFormPage({ mode = 'create' }) {
                   >
                     <Copy className="h-3 w-3" />
                   </Button>
-                  {!isEditMode && (
-                    <input
-                      type="text"
-                      value={formData.slug}
-                      onChange={(e) => setFormData(prev => ({...prev, slug: e.target.value}))}
-                      placeholder="Custom slug (optional)"
-                      className="px-3 py-1 bg-gray-700/50 border border-gray-600 rounded text-sm text-white placeholder-gray-500 focus:ring-1 focus:ring-purple-500 focus:border-transparent min-w-0 flex-1 max-w-xs"
-                    />
-                  )}
+
+                  <input
+                    type="text"
+                    value={formData.slug}
+                    onChange={(e) => {
+                      setSlugEdited(true);
+                      setFormData(prev => ({...prev, slug: e.target.value}));
+                    }}
+                    placeholder="Custom slug (optional)"
+                    className="px-3 py-1 bg-gray-700/50 border border-gray-600 rounded text-sm text-white placeholder-gray-500 focus:ring-1 focus:ring-purple-500 focus:border-transparent min-w-0 flex-1 max-w-xs"
+                  />
+
                   {isEditMode && (
                     <span className="text-xs text-yellow-400 bg-yellow-400/10 px-2 py-1 rounded">
-                      Slug locked in edit mode
+                      Warning: changing the slug will change the post URL and may affect SEO/links.
                     </span>
                   )}
                 </div>

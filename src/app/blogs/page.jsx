@@ -86,7 +86,7 @@ const Blogs = () => {
           const data = await response.json();
           console.log('Categories from API:', data);
           const dynamicCategories = [
-            { name: "All", slug: "all" },
+            { name: "All", slug: "all" },       
             ...data.data.map(cat => ({ name: cat.name, slug: cat.slug }))
           ];
           setCategories(dynamicCategories);
