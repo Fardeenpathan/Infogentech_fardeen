@@ -1,183 +1,105 @@
 
-"use client";
+import BlogClient from "./BlogClient"; 
+import React from "react";
 
-import Image from "next/image";
-import { useParams } from "next/navigation";
-import Icons from "@/components/ui/Icon";
-import { useState ,useEffect} from "react";
-import SubscribeContact from "@/components/SubscribeContact";
-import { useSelector } from 'react-redux';
-import { redirect} from "next/navigation";
-const mockApiResponse = [
-  {
-    id: 1,
-    question: "What types of hosting plans do you offer?",
-    answer:
-      "We offer shared hosting, VPS hosting, dedicated server hosting, and cloud hosting plans.",
-  },
-  {
-    id: 2,
-    question: "What is the uptime guarantee for your hosting services?",
-    answer: "We guarantee an uptime of 99.9% for all our hosting services.",
-  },
-  {
-    id: 3,
-    question: "Do you provide 24/7 customer support?",
-    answer:
-      "Yes, our support team is available 24/7 via live chat, email, and phone.",
-  },
-  {
-    id: 4,
-    question: "Can I upgrade my hosting plan later?",
-    answer:
-      "Absolutely! You can upgrade or downgrade your hosting plan at any time with zero downtime.",
-  },
-  {
-    id: 5,
-    question: "Do you offer free website migration?",
-    answer:
-      "Yes, we provide free professional website migration for all new customers.",
-  },
-  {
-    id: 6,
-    question: "Is SSL included with your hosting plans?",
-    answer:
-      "Yes, we include a free SSL certificate with all of our hosting plans.",
-  },
-];
+const API_BASE = "https://97fzff04-5000.inc1.devtunnels.ms/api";
 
-const BlogSlugPage = () => {
-  const countryCode = useSelector((state) => state.countryCode.value);
-  const params = useParams();
-  const { slug } = params;
+async function fetchBlogBySlug(slug) {
+  const res = await fetch(`${API_BASE}/blogs/slug/${slug}`, { next: { revalidate: 60 } });
+  if (!res.ok) return null;
+  const data = await res.json();
+  return data.success ? data.data : null;
+}
 
-  const [openId, setOpenId] = useState(null);
-  const toggleFAQ = (id) => {
-    setOpenId((prevId) => (prevId === id ? null : id));
+function convertBlocksToHtml(blocks = []) {
+  let html = "";
+  const sortedBlocks = [...blocks].sort((a,b) => (a.order||0)-(b.order||0));
+  sortedBlocks.forEach(block => {
+    if (!block || !block.type) return;
+    switch (block.type) {
+      case "paragraph":
+        html += `<p class="mb-6">${block.data?.content || ""}</p>`;
+        break;
+      case "heading":
+        const level = block.data?.level || 2;
+        html += `<h${level} class="font-semibold text-5xl mb-8">${block.data?.content || ""}</h${level}>`;
+        break;
+      case "list":
+        const isOrdered = block.data?.style === "ordered" || block.data?.style === "ol";
+        if (isOrdered) {
+          html += "<ol class='my-4 pl-6 list-decimal'>";
+          (block.data.items || []).forEach(i => html += `<li class="mb-2">${(typeof i === "string") ? i : (i?.content||i?.text||"")}</li>`);
+          html += "</ol>";
+        } else {
+          html += "<ul class='my-4 pl-6 list-disc'>";
+          (block.data.items || []).forEach(i => html += `<li class="mb-2">${(typeof i === "string") ? i : (i?.content||i?.text||"")}</li>`);
+          html += "</ul>";
+        }
+        break;
+      case "image":
+        html += `<img src="${block.data?.url || ""}" alt="${block.data?.caption || ""}" style="max-width:100%;height:auto;" />`;
+        if (block.data?.caption) html += `<p style="text-align:center;font-style:italic;margin-top:8px;">${block.data.caption}</p>`;
+        break;
+      case "quote":
+        html += `<blockquote style="border-left:4px solid #ddd;padding-left:16px;margin:16px 0;font-style:italic;">${block.data?.text || ""}</blockquote>`;
+        break;
+      default:
+        if (block.data?.content) html += `<p>${block.data.content}</p>`;
+    }
+  });
+  return html;
+}
+
+export async function generateMetadata({ params }) {
+  const slug = params.slug;
+  const data = await fetchBlogBySlug(slug);
+  if (!data) {
+    return { title: "Blog | Infogentech", description: "Infogentech" };
+  }
+
+  const blog = data;
+  const url = `https://infogentech.com/blogs/${slug}`;
+  const image = blog.featuredImage?.url || "https://infogentech.com/default-og-image.png";
+
+  return {
+    title: blog.title,
+    description: blog.excerpt || "",
+    keywords: blog.keywords ? blog.keywords.split(",").map(k=>k.trim()) : [],
+    alternates: { canonical: url },
+    openGraph: {
+      title: blog.title,
+      description: blog.excerpt || "",
+      url,
+      images: image ? [image] : [],
+      type: "article",
+      publishedTime: blog.createdAt,
+    },
+    twitter: {
+      card: "infogentech",
+      title: blog.title,
+      description: blog.excerpt || "",
+      images: image ? [image] : []
+    },
+  };
+}
+
+export default async function Page({ params }) {
+  const slug = params.slug;
+  const data = await fetchBlogBySlug(slug);
+
+  if (!data) {
+    return (
+      <div className="container mx-auto mt-24 px-10">
+        <h1 className="text-2xl font-bold">Blog not found</h1>
+      </div>
+    );
+  }
+
+  const blog = {
+    ...data,
+    image: data.featuredImage?.url || "",
+    content: data.blocks && Array.isArray(data.blocks) ? convertBlocksToHtml(data.blocks) : (data.content || "")
   };
 
-useEffect(() => {
-    if (countryCode !== "US") {
-      redirect("/blogs");
-    }
-  }, [countryCode]);
-  return (
-    <div className="container mx-auto mt-24">
-    <div className="container mx-auto mt-24 text-wrap">
-      <div className="flex justify-center items-center flex-col">
-        <p className="font-avalors text-[32px] leading-[24px] font-normal align-middle text-[#8752FF]">
-          Published 20 jan 2025
-        </p>
-        <p className="font-avalors text-[32px] font-normal leading-[100%] tracking-[0.03em] mt-6">
-          Madhya Pradesh Partners with Submer for AI‑Ready Data Centres
-        </p>
-        <p className="font-jost font-medium text-[18px] leading-[24px] text-center align-middle mt-8">
-          What happens when a middle school friendship, a shared love for music,
-          and a global pandemic come together? In...
-        </p>
-        <Image
-          src="/assist/img/blogImg.png"
-          alt="Blog"
-          width={1400}
-          height={460}
-          className="mt-20 rounded-2xl h-[560px]"
-        />
-        <h1 className="mt-18 font-kumbh-sans text-[20px]  leading-[30px]">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          ullamcorper mattis lorem non. Ultrices praesent amet ipsum justo
-          massa. Eu dolor aliquet risus gravida nunc at feugiat consequat purus.
-          Non massa enim vitae duis mattis. Vel in ultricies vel fringilla.
-        </h1>
-        <div className="text-[#82828C] mt-12 border-2 container mx-auto"></div>
-      </div>
-      <div className="font-avalors text-[32px] leading-[24px] font-normal mt-12 text-[#8752FF] uppercase">
-        Introduction
-      </div>
-      <h1 className="mt-18 font-kumbh-sans text-[20px]  leading-[30px]">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-        ullamcorper mattis lorem non. Ultrices praesent amet ipsum justo massa.
-        Eu dolor aliquet risus gravida nunc at feugiat consequat purus. Non
-        massa enim vitae duis mattis. Vel in ultricies vel fringilla.
-      </h1>
-      <h1 className="mt-18 font-kumbh-sans text-[20px]  leading-[30px]">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-        ullamcorper mattis lorem non. Ultrices praesent amet ipsum justo massa.
-        Eu dolor aliquet risus gravida nunc at feugiat consequat purus. Non
-        massa enim vitae duis mattis. Vel in ultricies vel fringilla.
-      </h1>
-      <div></div>
-      <Image
-        src="/assist/img/blogImg.png"
-        alt="Blog"
-        width={1200}
-        height={460}
-        className="mt-20 rounded-2xl h-[560px] w-full"
-      />
-      <p className="border-l-2 border-[#8752FF] font-kumbh-sans font-medium text-[24px] leading-[36px] mt-12 pl-5">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-        ullamcorper mattis lorem non. Ultrices praesent amet ipsum justo massa.
-        Eu dolor aliquet risus gravida nunc at feugiat consequat purus. Non
-        massa enim vitae duis mattis. Vel in ultricies vel fringilla. Lorem
-        ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper
-        mattis lorem non. Ultrices praesent amet ipsum justo massa. Eu dolor
-        aliquet risus gravida nunc at feugiat consequat purus. Non massa enim
-        vitae duis mattis. Vel in ultricies vel fringilla.
-      </p>
-      <h1 className="mt-18 font-kumbh-sans text-[20px]  leading-[30px]">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-        ullamcorper mattis lorem non. Ultrices praesent amet ipsum justo massa.
-        Eu dolor aliquet risus gravida nunc at feugiat consequat purus. Non
-        massa enim vitae duis mattis. Vel in ultricies vel fringilla.
-      </h1>
-      <h1 className="mt-5 font-kumbh-sans text-[20px]  leading-[30px]">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-        ullamcorper mattis lorem non. Ultrices praesent amet ipsum justo massa.
-        Eu dolor aliquet risus gravida nunc at feugiat consequat purus. Non
-        massa enim vitae duis mattis. Vel in ultricies vel fringilla.
-      </h1>
-      <div className="mt-10">
-        <h2 className="font-jost text-[30px] font-normal leading-[38px] text-[#8752FF]">
-          Conclusion
-        </h2>
-        <p className="mt-5 font-kumbh-sans text-[20px]  leading-[30px]">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          ullamcorper mattis lorem non. Ultrices praesent amet ipsum justo
-          massa. Eu dolor aliquet risus gravida nunc at feugiat consequat purus.
-          Non massa enim vitae duis mattis. Vel in ultricies vel fringilla.
-        </p>
-      </div>
-      <section className="mt-10">
-        <h2 className="font-jost text-[30px] font-normal leading-[38px] text-[#8752FF]">
-          FAQs
-        </h2>
-        <div className="rounded-lg">
-          {mockApiResponse.map((faq) => (
-            <div
-              key={faq.id}
-              className="border-b border-[#0A071B]/10 linearGradientFaq mb-2"
-            >
-              <button
-                className="question-btn flex w-full items-start gap-x-5 justify-between rounded-lg text-left text-lg font-bold focus:outline-none p-5"
-                onClick={() => toggleFAQ(faq.id)}
-              >
-                <div>{faq.question}</div>
-                <div className="cursor-pointer">
-                  <Icons name={openId === faq.id ? "Minus" : "Add"} />
-                </div>
-              </button>
-              {openId === faq.id && (
-                <div className="answer flex w-full items-start gap-x-5 justify-between rounded-lg text-left text-lg font-bold focus:outline-none p-5">
-                  {faq.answer}
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-      </section>
-      <SubscribeContact />
-    </div>
-    </div>
-  );
-};
-
-export default  BlogSlugPage;
+  return <BlogClient blog={blog} slug={slug} />;
+}

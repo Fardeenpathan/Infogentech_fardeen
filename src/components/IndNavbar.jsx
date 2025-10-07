@@ -1,0 +1,53 @@
+
+import Link from "next/link";
+import Icons from "./ui/Icon";
+import { motion, } from "framer-motion";
+import { usePathname } from "next/navigation";
+
+export default function Navbar() {
+    const pathname = usePathname();
+    const linkClasses = (href) =>
+        `transition-colors ${pathname === href
+            ? "text-primary font-semibold"
+            : "text-white hover:text-primary"
+        }`;
+
+
+    return (
+        <motion.nav
+            initial={{ opacity: 0, y: -40 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -40, scale: 0.95 }}
+            transition={{ duration: 0.2, ease: "easeInOut" }}
+            className="font-Montserrat relative flex bg-transparent h-15 mx-auto justify-between items-center z-50 font-jost font-medium text-lg leading-6 gap-4 border-b border-[#8E8E8E]"
+        >
+            <div className="flex items-center  container py-4 justify-between mx-auto">
+                <Link href="/" className="flex items-center gap-1.5">
+                    <Icons name="LogoFooter" />
+                    <p className="font-avalors lg:text-[24px] leading-8 tracking-[3px] font-bold text-xl">
+                        INFOGENTECH
+                    </p>
+                </Link>
+                <Link href="/services" className={linkClasses("/services")}>
+                    Services
+                </Link>
+                <Link href="/portfolio" className={linkClasses("/portfolio")}>
+                    Portfolio
+                </Link>
+                <Link href="/blogs" className={linkClasses("/blogs")}>
+                    Blogs
+                </Link>
+                <Link href="/contactUs" className={linkClasses("/contactUs")}>
+                    Contact us
+                </Link>
+                <Link href="/aboutUs" className={linkClasses("/aboutUs")}>
+                    About us
+                </Link>
+                <a href="#
+                  " className="px-11 py-3.5 bg-primary">
+                    Let's talk
+                </a>
+            </div>
+        </motion.nav>
+    );
+}

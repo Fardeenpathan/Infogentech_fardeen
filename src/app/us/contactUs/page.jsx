@@ -1,21 +1,12 @@
 "use client"
-import { useEffect } from "react";
+
 import Image from "next/image";
 import Icons from "@/components/ui/Icon";
 import ContactForm from "@/components/ContactForm";
 import SubContact from "@/components/SubContact";
 import MoreContact from "@/components/MoreContact";
 import SubscribeContact from "@/components/SubscribeContact";
-import { useSelector } from 'react-redux';
-import { redirect} from "next/navigation";
 const ContactUs = () => { 
-   
-  const countryCode = useSelector((state) => state.countryCode.value);
-useEffect(() => {
-    if (countryCode !== "US") {
-      redirect("/contactUs");
-    }
-  }, [countryCode]);
   return (
     <div className="xl:mt-35 mt-10 subContainer mx-auto">
       <div className="flex flex-col-reverse xl:flex-row justify-between items-center">
@@ -83,10 +74,10 @@ useEffect(() => {
         </div>
       </div>
       <div className="flex flex-col gap-8">
-        <ContactForm country={countryCode}/>
-        <SubContact country={countryCode}/>
-        <MoreContact country={countryCode}/>
-        <SubscribeContact country={countryCode}/>
+        <ContactForm />
+        <SubContact />
+        <MoreContact />
+        <SubscribeContact />
       </div>
     </div>
   );
