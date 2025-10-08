@@ -41,11 +41,15 @@ export default function IndServices() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-24 mt-16">
                 {services.map((service, index) => (
-                    <div key={index} className="text-center">
-                        <div className="flex justify-center mb-4">
-                            <div className="bg-purple-100 rounded-full p-4">
+                    <div key={index} className="text-center max-w-3xs items-center">
+                        <div className="flex justify-center mb-4 ">
+                            <div className="bg-purple-50 rounded-full p-6">
+                            <div className="bg-purple-100 rounded-full p-6">
+                            <div className="bg-purple-200 rounded-full p-4">
                                 <Icons name={service.icon} />
                             </div>
+                        </div>
+                        </div>
                         </div>
                         <h3 className="text-lg font-semibold mb-2">{service.title}</h3>
                         <p className="font-montserrat font-medium text-lg tracking-tightest">{service.description}</p>
