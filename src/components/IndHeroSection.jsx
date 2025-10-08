@@ -13,7 +13,6 @@ export default function IndHeroSection() {
         playsInline
       />
 
-      {/* Hero content */}
       <div className="container mx-auto relative z-10 pt-32 pb-20">
         <IndHeroSectionContent />
       </div>

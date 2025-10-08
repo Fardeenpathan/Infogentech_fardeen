@@ -2,7 +2,7 @@ import Link from "next/link";
 import Icons from "./ui/Icon";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
-
+import IndButton from "./ui/IndButton";
 export default function Navbar() {
   const pathname = usePathname();
 
@@ -46,13 +46,13 @@ export default function Navbar() {
             About us
           </Link>
         </div>
-
-        <a
-          href="#"
-          className="px-11 py-3.5 bg-primary rounded-4xl cursor-pointer hover:opacity-90 transition text-white"
-        >
-          Let's talk
-        </a>
+        <a href="#contact"><IndButton
+             variant="primary"
+                  >
+                    Let's talk
+             </IndButton></a>
+          
+       
       </div>
 
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/10 to-black/5 -z-10 opacity-30"></div>

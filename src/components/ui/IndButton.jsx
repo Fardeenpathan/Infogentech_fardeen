@@ -11,11 +11,11 @@ const Button = ({
   onClick,
   ...props 
 }) => {
-  const baseClasses = 'font-medium rounded-lg cursor-pointer transition-colors duration-200 inline-flex items-center justify-center';
+  const baseClasses = 'px-11 py-3.5 bg-primary rounded-4xl cursor-pointer hover:opacity-90 transition text-white';
   
   const variants = {
-    primary: 'bg-[#9747FF] hover:bg-purple-700 text-white',
-    outline: 'border border-gray-600 text-gray-300 hover:text-white hover:bg-gray-700 bg-transparent',
+    primary: 'bg-primary hover:bg-purple-800 text-white',
+    outline: 'bg-gray-400 rounded-full border-8 border-gray-100',
     ghost: 'text-gray-300 hover:text-white hover:bg-gray-700',
     destructive: 'bg-red-600 hover:bg-red-700 text-white'
   };
