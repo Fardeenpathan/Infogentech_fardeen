@@ -6,6 +6,7 @@ import  IndConsutation  from "@/components/india/IndConsutation";
 import  IndHowWeWork  from "@/components/india/IndHowWeWork";
 import  IndWhyChooseUs  from "@/components/india/IndWhyChooseUs";
 import  IndTestomonial  from "@/components/india/IndTestomonial";
+import  IndFaqsHome  from "@/components/india/IndFaqsHome";
 export default function Home() {
   return (
     <main className="w-full">  
@@ -16,6 +17,7 @@ export default function Home() {
       <IndConsutation/>
       <IndWhyChooseUs/>
       <IndTestomonial/>
+      <IndFaqsHome/>
     </main>
   );
 }

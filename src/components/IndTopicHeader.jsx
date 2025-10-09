@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-export default function IndTopicHeader({ title, subtitle, description, className }) {
+export default function IndTopicHeader({ title, subtitle, description, className, subClass="max-w-2xl"}) {
     return (
         <div className={`flex justify-between gap-8 ${className}`}>
             <motion.div
@@ -12,7 +12,7 @@ export default function IndTopicHeader({ title, subtitle, description, className
                 viewport={{ once: true }}
             >
                 <motion.p
-                    className="font-avalors font-normal text-[32px] leading-6 align-middle text-primary"
+                    className="font-avalors font-normal text-[32px] leading-6 align-middle text-primary "
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
@@ -22,7 +22,7 @@ export default function IndTopicHeader({ title, subtitle, description, className
                 </motion.p>
 
                 <motion.p
-                    className="font-avalors font-normal text-[46px] leading-12 align-middle capitalize mt-4.5 max-w-2xl"
+                    className={`font-avalors font-normal text-[46px] leading-12 align-middle capitalize mt-4.5 ${subClass}`}
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6, delay: 0.4 }}
