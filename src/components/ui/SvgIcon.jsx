@@ -4269,8 +4269,14 @@ const IndHomeService2=({className})=>(
 </svg>
 
 )
+const Quote=()=>(
+  <svg width="39" height="29" viewBox="0 0 39 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18.8 28.1L31.4 0H38.8L31.7 28.1H18.8ZM0 28.1L12.8 0H20.1L12.9 28.1H0Z" fill="#232323"/>
+</svg>
+)
 
 const Icons = {
+  Quote,
   IndHomeService2,
   IndHomeService1,
   DevelopmentInd,
