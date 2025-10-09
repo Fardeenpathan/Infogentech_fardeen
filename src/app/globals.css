@@ -107,8 +107,8 @@
   --background: white;
   --foreground:#4C4C4C;
    --primary: #8752FF;
-   --text-color-head: #4C4C4C;
-   --text-color-secondary: #6F6F6F;
+   --color-gray-400: #4C4C4C;
+   --color-gray-200: #6F6F6F;
 }
 
 .dark {
