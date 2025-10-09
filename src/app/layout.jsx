@@ -20,9 +20,9 @@ export default function RootLayout({ children }) {
       <body>
         <Provider store={store}>
           {isUS ? (
-            <ClientLayoutControls>{children}</ClientLayoutControls>
-          ) : (
             <USClientLayoutControls>{children}</USClientLayoutControls>
+          ) : (
+            <ClientLayoutControls>{children}</ClientLayoutControls>
           )}
         </Provider>
       </body>

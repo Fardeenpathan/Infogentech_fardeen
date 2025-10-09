@@ -195,7 +195,6 @@ export default function AdminSettings() {
           </div>
           
           <form onSubmit={handleUpdatePassword} className="space-y-4">
-            {/* Current Password */}
             <div>
               <label className="block text-sm font-medium text-gray-400 mb-2">
                 Current Password
