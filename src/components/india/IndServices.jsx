@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
-import Icons from "./ui/Icon";
-import IndTopicHeader from "./IndTopicHeader";
+import Icons from "../ui/Icon";
+import IndTopicHeader from "../IndTopicHeader";
 
 const services = [
     {

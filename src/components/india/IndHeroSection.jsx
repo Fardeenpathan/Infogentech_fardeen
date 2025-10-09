@@ -1,5 +1,5 @@
 // IndHeroSection.tsx
-import IndHeroSectionContent from "@/components/IndHeroSectionContent";
+import IndHeroSectionContent from "@/components/india/IndHeroSectionContent";
 
 export default function IndHeroSection() {
   return (

@@ -1,7 +1,7 @@
 
 import Image from "next/image";
 import IndMidHeader from "./IndMidHeader";
-import Icons from "./ui/Icon";
+import Icons from "../ui/Icon";
 import { motion } from "framer-motion";
 
 export default function IndHowWeWork() {

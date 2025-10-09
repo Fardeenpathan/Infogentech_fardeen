@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import { Toaster } from 'react-hot-toast';
-import IndNavbar from "./IndNavbar";
+import IndNavbar from "@/components/india/IndNavbar";
 import { Footer } from "./Footer";
 import { MiniNavbar } from "./MiniNavbar";
 import GeoBlockWrapper from "./GeoBlockWrapper";

@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import IndTopicHeader from "./IndTopicHeader";
+import IndTopicHeader from "../IndTopicHeader";
 import Image from "next/image";
 
 export default function IndWhyChooseUs() {
