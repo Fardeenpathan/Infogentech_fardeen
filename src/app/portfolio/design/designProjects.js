@@ -6,7 +6,7 @@ const designProjects = [
     image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1758790686/blog-app/categories/hwoeet3hpxdcfq0qual1.jpg",
     subImage: "/assist/portfolio/design/birtishRajDesign02.png",
     description:
-      "BookPremiumFare.com is a travel booking platform offering premium and discounted airfares. It offers convenient booking, up-to-date airfare, and secure checkout, and draws organic traffic.",
+      "At Infogentech, we believe that a video is not just to attract attention but to convey a deeper meaning. This project tries to convert the hard-hitting history of the British Raj in India into a captivating story with graphics. The whole experience is enriched using motion graphics, creative design and effective storytelling to take an immersive subject and break it into simple and engaging sections for the viewer.",
     date: "April 2025 ",
     duration: "6 weeks",
     tools: ["adobe", "animate cc", "premiere pro"],
@@ -38,6 +38,36 @@ const designProjects = [
     slug: "portfolio-logo",
     image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1758868504/blog-app/categories/c2f9f6o4ihw4zgxalw0v.jpg",
     subImage: "/assist/portfolio/design/logos.png",
+    description:
+      "From startups to established agencies, we design across all styles. We offer minimalist, abstract, luxury and creative styles tailored to every client’s vision. With expertise in Adobe Illustrator, Photoshop, InDesign and Figma, we ensure professional quality and scalable designs ready for any platform.",
+    date: "2025 ",
+    duration: "June 2025 - Continuing",
+    tools: ["Adobe Illustrator", "Adobe Photoshop", "Adobe InDesign","Figma"],
+    client: "Multiple Industries",
+    location: "India",
+    modules: [
+      "Graphic Marks / Logos",
+      "Branding",
+      "Illustrations",
+      "Posters and Flyers",
+      "Editorial Design",
+      "Merchandise",
+    ],
+    expertise: [
+      "Logo Design",
+      " Brand Identity Design",
+      "Poster & Flyer Design",
+      "Editorial Design",
+      "Illustration",
+      "Merchandise Design",
+      "Typography",
+      "Visual Storytelling",
+    ],
+    points: [
+      "SEO Content: Keyword-optimized pages and meta tags.",
+      "Blog & Guides: Composed travel tips, offers, and destination pieces.",
+      "Content Updates: Updating content regularly to enhance relevance and search performance.",
+    ],
   },
 ];
 

@@ -81,7 +81,7 @@ const Blogs = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await fetch('https://97fzff04-5000.inc1.devtunnels.ms/api/categories');
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/categories`);
         if (response.ok) {
           const data = await response.json();
           console.log('Categories from API:', data);
@@ -105,7 +105,7 @@ const Blogs = () => {
     const fetchBlogs = async () => {
       setLoading(true);
       try {
-        let url = 'https://97fzff04-5000.inc1.devtunnels.ms/api/blogs';
+        let url = `${process.env.NEXT_PUBLIC_API_URL}/api/blogs`;
         
         const selectedCategory = categories.find(cat => cat.name === activeCategory);
         
@@ -113,7 +113,7 @@ const Blogs = () => {
         // console.log('Active category:', activeCategory);
         
         if (activeCategory !== "All" && selectedCategory && selectedCategory.slug !== "all") {
-          url = `https://97fzff04-5000.inc1.devtunnels.ms/api/blogs/category/${selectedCategory.slug}`;
+          url = `${process.env.NEXT_PUBLIC_API_URL}/api/blogs/category/${selectedCategory.slug}`;
         }
         
         //console.log('Fetching blogs from:', url);

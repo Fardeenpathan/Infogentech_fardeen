@@ -1,41 +1,10 @@
 "use client";
 import { useState, useRef } from "react";
-import ReCAPTCHA from "react-google-recaptcha";
 import Icons from "./ui/Icon";
-import PurpleCheckbox from "./ui/Checkbox";
-import GradientButton from "./ui/GradientButton";
 import config from "@/config";
 import adminApiService from "@/lib/adminApi";
-const contactUsa = [
- 
-  {
-    country: "USA",
-    info: [
-      { icon: "Contact", text: "+1 123 456 7890" },
-      { icon: "Email", text: "info@infogentech.com" },
-      { icon: "Location", text: "Texas, USA" },
-    ],
-  },
-];
 
-const socialMedia = [
-  {
-    name: "Facebook",
-    link: "https://www.facebook.com/",
-  },
-  {
-    name: "Instagram",
-    link: "https://www.instagram.com/",
-  },
-  {
-    name: "Youtube",
-    link: "https://www.youtube.com/",
-  },
-  {
-    name: "Twitter",
-    link: "https://twitter.com/",
-  },
-];
+
 const ContactForm = () => {
   const [isVerified, setIsVerified] = useState(false);
   const recaptchaRef = useRef(null);
@@ -50,16 +19,6 @@ const ContactForm = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState("");
-
-  const handleCaptcha = (token) => {
-    if (token) {
-      setIsVerified(true);
-      setFormData((prev) => ({ ...prev, captcha: token }));
-    } else {
-      setIsVerified(false);
-      setFormData((prev) => ({ ...prev, captcha: "" }));
-    }
-  };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -80,7 +39,9 @@ const ContactForm = () => {
     setSubmitMessage("");
 
     try {
-      const result = await adminApiService.request(config.api.endpoints.contact, {
+      const result = await adminApiService.request(
+        config.api.endpoints.contact,
+        {
         method: "POST",
         body: JSON.stringify(formData),
       });
@@ -108,227 +69,185 @@ const ContactForm = () => {
     }
   };
   return (
-    <div className="xl:mt-35 mt-0 container mx-auto overflow-hidden px-2">
-      <div className="flex justify-between gap-8">
-        <div className="xl:flex gap-10 hidden">
-          <div className="flex justify-center items-center flex-col">
-            <div className="relative w-12 h-12">
-              <img
-                src="/assist/video/pentagonVideo.gif"
-                alt="valueImg"
-                className=" w-full h-full object-cover"
-              />
-            </div>
-
-            <div className="w-0.5 h-[731px] rounded-full mt-4 bg-gradient-to-b from-purple-400 via-purple-500 to-purple-800"></div>
-          </div>
-        </div>
+    <div className="mt-0 container mx-auto overflow-hidden px-2">
+      <div>
         <div className="w-full rounded-2xl">
-          <div className="text-center mb-14">
-            <p className="font-avalors text-primary text-[32px] leading-6  align-middle">
+          <div className="bg-[#EDE5FF] text-center pt-24 pb-24">
+            <p className="font-avalors text-primary text-[40px] leading-tight">
               Get in Touch
             </p>
 
-            <p className="font-jost font-medium text-lg leading-6 align-middle mt-3">
-              Have a question or need help? Just send us a message or email
+            <p className="font-jost font-medium text-lg leading-7 mt-4 text-black max-w-2xl mx-auto">
+              Have a question or need help? Just send us a message or email —
               we’re happy to help!
             </p>
           </div>
-          <section className="p-2.5 bg-[#202037] rounded-2xl flex gap-5 flex-col lg:flex-row">
-            <div className="md:min-w-[491px] w-full bg-[#000026] rounded-xl py-12 px-10 relative overflow-hidden">
-              <p className="font-jost font-medium text-2xl leading-6 align-middle">
-                Contact Information
-              </p>
-              <p className="font-jost text-lg leading-6 align-middle text-[#C9C9C9] mt-5">
-                Say something to start a live chat!
+
+          <section className="flex flex-col lg:flex-row w-full max-w-6xl mx-auto shadow-xl p-[15px] bg-white rounded-[30px] overflow-hidden -mt-10 mb-[80px]">
+            <div className="flex flex-col lg:flex-row w-full">
+            {/* LEFT PANEL */}
+            <div className="bg-primary rounded-[30px] text-white p-10 relative lg:w-[500px]">
+              <h2 className="text-xl font-semibold">Contact Information</h2>
+              <p className="text-sm text-white/80 mt-3 leading-relaxed">
+                We’ll create high-quality linkable content and build at least 40
+                high-authority.
               </p>
 
-              <div className="mt-20 flex flex-col gap-12.5">
-                {contactUsa.map((region, i) => (
-                  <div key={i}>
-                    <h3 className="text-xl font-semibold mb-4">
-                      {region.country}
-                    </h3>
-                    <div className="flex flex-col gap-6.5">
-                      {region.info.map((item, index) => (
-                        <p key={index} className="flex gap-6.5 items-center">
-                          <Icons name={item.icon} /> <span>{item.text}</span>
-                        </p>
-                      ))}
-                    </div>
-                  </div>
-                ))}
+              <div className="mt-10 space-y-6 text-sm leading-6">
+                <div className="flex items-start gap-4">
+                  <Icons name="Phone" />
+                  <span>+91 991-013-0963</span>
+                </div>
+                <div className="flex items-start gap-4">
+                  <Icons name="Mail" />
+                  <span>info@infogentech.com</span>
+                </div>
+                <div className="flex items-start gap-4">
+                  <Icons name="ContactLocation" />
+                  <span>
+                    A-85, First Floor, GT Karnal Road Industrial Area, Near
+                    Vardhman Mall, New Delhi - 110033
+                  </span>
+                </div>
+                <div className="flex items-start gap-4">
+                  <Icons name="ContactLocation" />
+                  <span>Balcons DR Ste 100, Austin, TX 78731</span>
+                </div>
               </div>
 
-              <div className="flex gap-6 mt-36 ">
-                {socialMedia.map((item, index) => (
-                  <div
-                    key={index}
-                    className="w-[30px] h-[30px] bg-[#C4C4C4] rounded-full flex items-center justify-center z-50"
-                  >
-                    <a
-                      href={item.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-center"
-                    >
-                      <Icons
-                        name={item.name}
-                        color="#000000"
-                        {...(item.name === "Twitter"
-                          ? { width: "15", height: "14" }
-                          : {})}
-                      />
-                    </a>
-                  </div>
-                ))}
-              </div>
-              <div className="w-[269px] h-[269px] bg-[#301F56] rounded-full absolute md:-bottom-25 md:-right-25  -bottom-32 -right-32"></div>
-              <div className="w-[138px] h-[138px]  bg-[#48484880] rounded-full absolute md:bottom-13 md:right-13 bottom-7  right-7"></div>
+              {/* Decorative Circle */}
+              <div className="absolute bottom-6 right-6 w-32 h-32 rounded-full bg-white/20 blur-2xl"></div>
             </div>
-            <div className="flex items-center justify-center px-6 w-full relative ">
-              <form
-                className="w-full  text-white space-y-6"
-                onSubmit={handleSubmit}
-              >
+
+            {/* RIGHT PANEL */}
+            <div className="flex-1 bg-white p-10">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-[#E4E4E4] text-lg mb-2 font-jost font-light">
-                      Name
+                    <label className="block text-gray-700 text-sm mb-1">
+                      Your Name
                     </label>
                     <input
                       type="text"
                       name="name"
+                      placeholder="Enter your name"
                       value={formData.name}
                       onChange={handleInputChange}
-                      className="w-full  py-2  border-b-2 border-[#FFFFFF] bg-transparent  focus:outline-none focus:border-[#8752FF]"
-                      placeholder="Enter your name"
+                      className="w-full border-b border-gray-300 focus:border-purple-500 outline-none py-2 text-gray-800"
                       required
                     />
                   </div>
                   <div>
-                    <label className="block text-[#E4E4E4] text-lg mb-2 font-jost font-light">
-                      Email
+                    <label className="block text-gray-700 text-sm mb-1">
+                      Email Address
                     </label>
                     <input
                       type="email"
                       name="email"
+                      placeholder="Enter your email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      className="w-full  py-2  border-b-2 border-[#FFFFFF] bg-transparent  focus:outline-none focus:border-[#8752FF]"
-                      placeholder="Enter your email"
+                      className="w-full border-b border-gray-300 focus:border-purple-500 outline-none py-2 text-gray-800"
                       required
                     />
                   </div>
                 </div>
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-[#E4E4E4] text-lg mb-2 font-jost font-light">
-                      Phone Number
+                    <label className="block text-gray-700 text-sm mb-1">
+                      Phone Number (optional)
                     </label>
                     <input
                       type="tel"
                       name="phoneNumber"
+                      placeholder="+1 012 3456 789"
                       value={formData.phoneNumber}
                       onChange={handleInputChange}
-                      className="w-full  py-2  border-b-2 border-[#FFFFFF] bg-transparent  focus:outline-none focus:border-[#8752FF]"
-                      placeholder="+1 012 3456 789"
-                      required
+                      className="w-full border-b border-gray-300 focus:border-purple-500 outline-none py-2 text-gray-800"
                     />
                   </div>
-                  <div>
-                    <label className="block text-[#E4E4E4] text-lg mb-2 font-light">
-                      Product Question
-                    </label>
-                    <select
-                      name="productQuestion"
-                      value={formData.productQuestion}
-                      onChange={handleInputChange}
-                      className="w-full  py-2  border-b-2 border-[#FFFFFF] bg-transparent  focus:outline-none focus:border-[#8752FF]"
-                      required
-                    >
-                      <option value="" className="bg-[#1C1B2D]">
-                        Select
-                      </option>
-                      <option value="General Inquiry" className="bg-[#1C1B2D]">
-                        General Inquiry
-                      </option>
-                      <option
-                        value="Technical Support"
-                        className="bg-[#1C1B2D]"
-                      >
-                        Technical Support
-                      </option>
-                      <option value="Pricing" className="bg-[#1C1B2D]">
-                        Pricing
-                      </option>
-                      <option value="Partnership" className="bg-[#1C1B2D]">
-                        Partnership
-                      </option>
-                      <option value="Other" className="bg-[#1C1B2D]">
-                        Other
-                      </option>
-                    </select>
-                  </div>
                 </div>
+
                 <div>
-                  <label className="block text-[#E4E4E4] text-lg mb-2 font-jost font-light">
+                  <label className="block text-gray-700 text-sm mb-1">
                     Message
                   </label>
                   <textarea
                     name="message"
+                    placeholder="Write your message.."
                     value={formData.message}
                     onChange={handleInputChange}
-                    className="w-full  py-2  border-b-2 border-[#FFFFFF] bg-transparent  focus:outline-none focus:border-[#8752FF] resize-none"
-                    placeholder="Write your message.."
+                    className="w-full border-b border-gray-300 focus:border-purple-500 outline-none py-2 text-gray-800 resize-none"
                     rows="3"
                     required
                   ></textarea>
                 </div>
-                <div className="flex items-center space-x-2">
-                  <PurpleCheckbox label="subscribe to receive the latest news and exclusive offers" />
-                </div>
-                <ReCAPTCHA
+                {/*  <ReCAPTCHA
                   ref={recaptchaRef}
                   sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
                   onChange={handleCaptcha}
-                />
+                /> */}
+
                 {submitMessage && (
-                  <div
+                  <p
                     className={`text-sm ${
                       submitMessage.includes("successfully")
-                        ? "text-green-400"
-                        : "text-red-400"
+                        ? "text-green-500"
+                        : "text-red-500"
                     }`}
                   >
                     {submitMessage}
-                  </div>
+                  </p>
                 )}
+
                 <button
                   type="submit"
                   disabled={!isVerified || isSubmitting}
-                  className="text-primary mt-7.5 pb-4"
+                  className="mt-4 px-6 py-3 rounded-[30px] text-white font-medium
+          bg-[#8752FF] hover:opacity-90 transition "
                 >
-                  <GradientButton
-                    bg="bg-[#202037]"
-                    paddingX="px-12"
-                    paddingY="py-4.5"
-                  >
-                    {isSubmitting ? "Sending..." : "Send Message"}
-                  </GradientButton>
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </button>
-
-                {/* <Image
-                  src="/assist/img/ContactPlane.png"
-                  alt="valueImg"
-                  width={203}
-                  height={85}
-                  objectFit="cover"
-                  className="rotate-200 scale-y-[-1] absolute -bottom-2 left-1/3"
-                /> */}
               </form>
             </div>
+            </div>
           </section>
+
+          <section className="relative flex flex-col items-center justify-center text-center py-20 px-8 sm:px-16 md:px-24 lg:px-32 rounded-2xl overflow-hidden mt-[80px] bg-[#f5efff] -mt-10 w-full md:w-[85%] mx-auto">
+            {/* Decorative Wave Background */}
+            <div className="absolute inset-0 z-0">
+              <svg
+                width="1616"
+                height="239"
+                viewBox="0 0 1616 239"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-full h-auto"
+              >
+                <path
+                  d="M-48 41C-48 41 139.445 156.514 286.739 170.972C383.528 180.472 441.175 180.62 534.307 159.474C688.427 124.482 779.651 70.096 946.455 69.4938C1148.67 68.7638 1235.25 176.395 1436.71 188.968C1509.96 193.54 1625 188.968 1625 188.968"
+                  stroke="#ECE2FA"
+                  strokeWidth="95"
+                />
+              </svg>
+            </div>
+
+            {/* Content */}
+            <div className="relative z-10">
+              <p className="font-avalors text-primary text-[32px]-400 font-semibold tracking-widest mb-3">
+                LET’S GET STARTED
+              </p>
+              <h1 className="font-avalors text-[46px] md:text-3xl font-bold text-[#4C4C4C]-400 uppercase">
+                WORLD CLASS IT SOLUTIONS PARTNER OF CHOICE
+              </h1>
+            </div>
+          </section>
+
+          <br/>
+          <br/>
+<ContactStat />
+
         </div>
       </div>
     </div>
