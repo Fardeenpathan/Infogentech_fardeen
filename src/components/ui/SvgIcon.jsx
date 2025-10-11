@@ -4453,7 +4453,11 @@ const Icons = {
   SmallStar,
   CrossButton,
   hemBurger,
-  Arrowdown
+  Arrowdown,
+  WhoWeAre,
+  OurGoal,
+  OurServices,
+  IndArrow
 };
 
 export default Icons;
