@@ -94,7 +94,7 @@ const ContactForm = () => {
     }
   };
   return (
-    <div className="container mx-auto overflow-hidden px-2 font-montserrat relative -top-24">
+    <div className="container mx-auto overflow-hidden px-2 font-montserrat relative -top-24 font-medium">
       <div>
         <div className="w-full rounded-2xl">
           <section className="flex flex-col lg:flex-row w-full max-w-6xl mx-auto p-[15px] bg-white rounded-[30px] overflow-hidden">
