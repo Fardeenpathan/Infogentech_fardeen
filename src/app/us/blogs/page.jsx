@@ -6,6 +6,8 @@ import HomeBlogCardsd from "@/components/HomeBlogCardsd";
 import SubscribeContact from "@/components/SubscribeContact";
 import Icons from "@/components/ui/Icon";
 import Loader from "@/components/loader/Loader";
+import { useBlogsPagination } from "@/hooks/useBlogsPagination";
+import BlogPagination from "@/components/BlogPagination";
 const blogData = [
   {
     id: 1,
@@ -73,10 +75,22 @@ const category = [
 ];
 
 const Blogs = () => {
-  const [activeCategory, setActiveCategory] = useState("All");
-  const [blogs, setBlogs] = useState(blogData);
   const [categories, setCategories] = useState(category);
-  const [loading, setLoading] = useState(false);
+  
+  const {
+    activeCategory,
+    blogs,
+    loading,
+    searchTerm,
+    currentPage,
+    pagination,
+    totalBlogs,
+    setSearchTerm,
+    setCurrentPage,
+    fetchBlogs,
+    handleCategoryChange,
+    handleSearch
+  } = useBlogsPagination(categories, 12);
 
   useEffect(() => {
     const fetchCategories = async () => {
@@ -102,57 +116,10 @@ const Blogs = () => {
   }, []);
 
   useEffect(() => {
-    const fetchBlogs = async () => {
-      setLoading(true);
-      try {
-        let url = 'https://97fzff04-5000.inc1.devtunnels.ms/api/blogs';
-        
-        const selectedCategory = categories.find(cat => cat.name === activeCategory);
-        
-        // console.log('Selected category:', selectedCategory);
-        // console.log('Active category:', activeCategory);
-        
-        if (activeCategory !== "All" && selectedCategory && selectedCategory.slug !== "all") {
-          url = `https://97fzff04-5000.inc1.devtunnels.ms/api/blogs/category/${selectedCategory.slug}`;
-        }
-        
-        //console.log('Fetching blogs from:', url);
-        
-        const response = await fetch(url);
-        if (response.ok) {
-          const data = await response.json();
-          // console.log('API Response:', data);
-          
-          if (data.success && data.data) {
-            // console.log('Setting blogs:', data.data);
-            setBlogs(data.data);
-          } else {
-            console.log('No data in API response, using fallback');
-            const filteredBlogs = activeCategory === "All" 
-              ? blogData 
-              : blogData.filter(blog => blog.category === activeCategory);
-            setBlogs(filteredBlogs);
-          }
-        } else {
-          console.log('API request failed, using fallback');
-          const filteredBlogs = activeCategory === "All" 
-            ? blogData 
-            : blogData.filter(blog => blog.category === activeCategory);
-          setBlogs(filteredBlogs);
-        }
-      } catch (error) {
-        console.error('Error fetching blogs:', error);
-        const filteredBlogs = activeCategory === "All" 
-          ? blogData 
-          : blogData.filter(blog => blog.category === activeCategory);
-        setBlogs(filteredBlogs);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchBlogs();
-  }, [activeCategory, categories]); 
+    if (categories.length > 0) {
+      fetchBlogs(blogData);
+    }
+  }, [activeCategory, categories, currentPage, searchTerm, fetchBlogs]); 
   return (
     <div className="flex justify-between">
       <div className="absolute overflow-hidden -top-20">
@@ -174,9 +141,20 @@ const Blogs = () => {
             <input
               type="text"
               placeholder="Search article"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              onKeyPress={(e) => {
+                if (e.key === 'Enter') {
+                  handleSearch();
+                }
+              }}
               className="flex-1 h-full text-white placeholder-gray-600 bg-transparent focus:outline-none  pl-8 py-6 font-jost text-[20px] leading-[100%] tracking-[0.03em]"
             />
-            <Button text="Explore" className="!text-black" />
+            <Button 
+              text="Search" 
+              className="!text-black" 
+              onClick={handleSearch}
+            />
           </div>
           <div className="w-0.5 h-28 rounded-full mb-10 bg-gradient-to-b from-purple-400 via-purple-500 to-purple-800 mt-10"></div>
           <div className="relative w-12 h-12">
@@ -227,7 +205,7 @@ const Blogs = () => {
             {categories.map((item, index) => (
               <button
                 key={index}
-                onClick={() => setActiveCategory(item.name || item)}
+                onClick={() => handleCategoryChange(item.name || item)}
                 className={`relative pb-1 transition-all duration-300 cursor-pointer ${
                   activeCategory === (item.name || item)
                     ? "text-primary opacity-100 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#8752FF] after:rounded-full "
@@ -258,6 +236,14 @@ const Blogs = () => {
                 </div>
               </div>
             )}
+            
+            <BlogPagination 
+              currentPage={currentPage}
+              setCurrentPage={setCurrentPage}
+              pagination={pagination}
+              totalBlogs={totalBlogs}
+              limit={12}
+            />
           </div>
           <div className="text-[#82828C] mt-24 border-2 container mx-auto px-10"></div>
           <SubscribeContact />
