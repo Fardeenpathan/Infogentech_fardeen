@@ -4347,7 +4347,16 @@ const IndCurve=()=>(
       />
     </svg>
 )
+
+
+const IndStar =()=>(
+  <svg width="31" height="35" viewBox="0 0 31 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.9597 0.352226L11.2986 13.2346L0.704228 18.5274L12.0663 21.8676L16.959 34.0782L19.6201 21.1958L30.2145 15.903L18.8524 12.5629L13.9597 0.352226Z" fill="#8752FF"/>
+</svg>
+
+)
 const Icons = {
+  IndStar,
   IndCurve,
   Trust,
   BestQuality,

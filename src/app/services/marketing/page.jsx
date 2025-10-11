@@ -2,6 +2,7 @@
 import IndServicesHeader from "@/components/india/IndServicesHeader";
 import IndAllServices from "@/components/india/IndAllServices";
 import IndServiceDesc from "@/components/india/IndServiceDesc";
+import IndMoveableRibben from "@/components/india/IndMoveableRibben";
 import SubscribeContact from "@/components/SubscribeContact";
 import Image from "next/image";
 import Icons from "@/components/ui/Icon";
@@ -125,7 +126,21 @@ const Marketing = () => {
       <IndAllServices activeService="Digital Marketing" />
       <div className="container mx-auto mt-24 xl:px-10 md:px-5 px-2">
         <IndServiceDesc/>
+         <IndMoveableRibben/>
       </div>
+<div className="moving-text-container overflow-hidden bg-[#3F237F] text-white">
+  <div className="moving-text-content font-montserrat font-normal text-xl -tracking-[0.05em] custom-skew">
+    <div className="flex gap-96">
+      {Array.from({ length: 20 }, (_, i) => (
+        <p key={i} className="py-4 flex gap-28">
+          Design <Icons name="IndStar" /> Development <Icons name="IndStar" /> Branding <Icons name="IndStar" /> Product
+        </p>
+      ))}
+    </div>
+  </div>
+</div>
+
+
     </>
   );
 };
