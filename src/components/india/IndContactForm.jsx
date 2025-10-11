@@ -94,10 +94,10 @@ const ContactForm = () => {
     }
   };
   return (
-    <div className="container mx-auto overflow-hidden px-2 font-montserrat relative -top-24">
+    <div className="container mx-auto overflow-hidden px-2 font-montserrat relative -top-24 font-medium">
       <div>
         <div className="w-full rounded-2xl">
-          <section className="flex flex-col lg:flex-row w-full max-w-6xl mx-auto p-[15px] bg-white rounded-[30px] overflow-hidden">
+          <section className="flex flex-col lg:flex-row w-full max-w-7xl mx-auto p-[15px] bg-white rounded-[30px] overflow-hidden">
             <div className="flex flex-col lg:flex-row w-full ">
               <div className="bg-primary rounded-[30px] text-white pl-10 relative lg:w-[500px] flex justify-between flex-col pb-30 pr-30 pt-15 overflow-hidden">
                 <div>

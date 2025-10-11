@@ -17,11 +17,11 @@ const IndAllServices = ({ activeService }) => {
   ];
 
   return (
- <div className="relative  justify-self-center grid md:grid-cols-4 grid-cols-2 md:mt-5 xl:mt-0 text-nowrap mt-4 rounded-2xl shadow-2xl">
+ <div className="relative -top-24 justify-self-center grid md:grid-cols-4 grid-cols-2 md:mt-5 xl:mt-0 text-nowrap mt-4 rounded-2xl shadow-2xl z-10 subContainer">
   {services.map((service, index) => (
     <div key={service.id} className="relative">
       {index < services.length - 1 && (
-        <div className="hidden md:block absolute top-10 right-0 h-[60%] w-1 bg-[#B493FF] z-10"></div>
+        <div className="hidden md:block absolute top-10 right-0 h-[60%] w-1 bg-[#B493FF] z-40"></div>
       )}
 
       <Link
@@ -31,7 +31,7 @@ const IndAllServices = ({ activeService }) => {
           activeService === service.label ? " " : ""
         }`}
       >
-        <div className={`flex flex-col p-10 justify-center items-center ${activeService === service.label ? "bg-primary scale-140 rounded-2xl mr-1 !px-6" : ""}`}>
+        <div className={`flex flex-col py-10 justify-center items-center ${activeService === service.label ? "bg-primary scale-140 rounded-2xl mr-1 !px-2" : ""}`}>
           <Icons
             name={service.icon}
             width="42"
