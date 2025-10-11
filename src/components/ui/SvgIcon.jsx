@@ -3213,7 +3213,12 @@ const Arrowdown = ({ className }) => (
 
 )
      
+const BlogArrow =()=>(
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7 17L17 7M17 7H7M17 7V17" stroke="#181D27" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+</svg>
 
+)
 
 const DevelopmentInd = ({ width = "53", height = "53" ,className= "" }) => (
   <svg width="37" height="37" className={className} viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -5171,6 +5176,7 @@ const WhoWeAre=()=>(
 
 )
 const Icons = {
+  BlogArrow,
   IndStar,
   IndCurve,
   Trust,
