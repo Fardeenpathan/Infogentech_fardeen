@@ -6,7 +6,7 @@ const marketingProjects = [
     image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1758796018/blog-app/categories/ax4e554vqfopvqee4qrw.jpg",
     subImage: "/assist/portfolio/marketing/airline.png",
     description:
-      "EcoMart is an online marketplace promoting eco-friendly and sustainable products, helping conscious consumers shop responsibly while enjoying smooth e-commerce experiences.",
+      "Airline Reservation Window is a smart booking program that aims at streamlining the process of planning air travel. It has an easy-to-use interface that helps customers to search, compare and book flights easily. It is a convenient service that enables a smooth travel booking experience to both individuals and businesses.",
     points: [
       "Content Strategy: Developed keyword clusters around sustainable living.",
       "Blog Campaigns: Created eco-lifestyle guides and product highlights.",
@@ -47,7 +47,7 @@ const marketingProjects = [
     image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1758869279/blog-app/categories/lhde7umyzqnxnydsfinb.jpg",
     subImage: "/assist/portfolio/marketing/ananya.png",
     description:
-      "FitFuel is a mobile app offering personalized meal plans and workout tracking. It drives user engagement through actionable health content and interactive features.",
+      "@ananyakhurana_30 is the creative voice that is focused in the digital sphere and is enthusiastic about the field of lifestyle, fashion and modern storytelling. Being a fashion follower with a sharp eye and attraction towards interesting and captivating content, the profile encourages followers by providing interesting content, sincere work and relatable stories to create a lively community that values individuality, creativity and everyday experiences in style.",
     points: [
       "SEO Articles: Researched and wrote fitness tips & nutrition advice.",
       "Community Content: Engaging social posts and challenges.",
@@ -88,7 +88,7 @@ const marketingProjects = [
     image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1758869387/blog-app/categories/hfa4k7vqodzja5sgeuat.jpg",
     subImage: "/assist/portfolio/marketing/TechHiveExpanding.png",
     description:
-      "TechHive is a SaaS company providing cloud solutions for small businesses. The campaign focused on visibility, lead generation, and content thought leadership.",
+      "Bluestar Builprop is a progressive real estate and property development firm dedicated to developing modern, sustainable and value oriented spaces. Bluestar Builprop, with its emphasis on quality, innovation and customer trust, provides residential and commercial projects, redefining the standards of living, not to mention long-term growth and fulfilling its customers and communities.",
     points: [
       "Whitepapers: Produced in-depth industry resources.",
       "Case Studies: Showcased client success stories.",
@@ -130,7 +130,7 @@ const marketingProjects = [
     image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1758791929/blog-app/categories/obtbx84xw8gmqn0ooom3.jpg",
     subImage: "/assist/portfolio/marketing/soho.png",
     description:
-      "StyleAura is an online fashion retailer targeting millennial shoppers. Its content strategy highlighted seasonal collections and influencer collaborations.",
+      "Soho Corbett is a nature resort that is luxurious and located in the Jim Corbett National Park, Uttarakhand. It is known to be famous in terms of its tranquil location and Kumaon style of hospitality services to its visitors. Its exceptional combination of comfort, style and wilderness has made it a name to reckon with in the hotel business.",
     points: [
       "Lookbooks: Created interactive seasonal fashion guides.",
       "Influencer Content: Managed blog and collab posts.",
@@ -172,7 +172,7 @@ const marketingProjects = [
     image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1758791858/blog-app/categories/e8qyhrdupkjhhhuc7nv4.png",
     subImage: "/assist/portfolio/marketing/SomoEducation.png",
     description:
-      "MediPlus is a telemedicine platform that connects patients with doctors. The project focused on credibility, education, and patient engagement.",
+      "SeaC Overseas, a top education consultancy firm in the US, wanted to increase the number of student admissions and stay on top using online marketing. Using Meta campaigns that focus on students and B2B partners, they focused on open fee models, career development and job opportunities. The ad planning strategies produce quality leads, good partnerships and high revenue increase in their master programs.",
     points: [
       "Health Blogs: Easy-to-read guides on conditions and treatments.",
       "SEO Pages: Focused on high-volume health queries.",
@@ -211,7 +211,7 @@ const marketingProjects = [
     image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1758869895/blog-app/categories/pefwucmj8d2hlpwjpjkb.jpg",
     subImage: "/assist/portfolio/marketing/Suii_thaga.png",
     description:
-      "EduSpark is an e-learning platform offering online courses and certifications. Content and SEO work helped attract learners worldwide.",
+      "Suii_Thaga is a trendy Instagram brand that sources modern fashions to the current style conscious youth in the US. As a way to present the latest trends in the form of artistic reels, the page intends to turn quality content into a stronger performance and audience engagement, taking advantage of a specific Instagram strategy to establish meaningful connections and achieve the desired growth.",
     points: [
       "Course Landing Pages: Optimized for higher conversions.",
       "Knowledge Hub: Built extensive learning resources.",
@@ -247,7 +247,7 @@ const marketingProjects = [
     image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1758792090/blog-app/categories/q7wzuvnmax3cuifsjghd.jpg",
     subImage: "/assist/portfolio/marketing/examStudy.png",
     description:
-      "UrbanNest is a real estate platform showcasing premium apartments and housing projects. The campaign improved lead generation via organic channels.",
+      "ExamStudyZone.com is a learning resource that provides study content for the examination of SAP-related courses, such as question banks, practice exams and PDFs. It also includes significant modules such as S/4HANA, MM, SD and ABAP, so students can have an easy and organized way of learning SAP outside of a classroom setting, providing clarity and proper preparation.",
     points: [
       "Neighborhood Guides: Content covering local living insights.",
       "SEO Listings: Optimized property pages for visibility.",
@@ -284,7 +284,7 @@ const marketingProjects = [
     image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1758791774/blog-app/categories/ipmu4tyvldru9vssclbg.jpg",
     subImage: "/assist/portfolio/marketing/IClini.png",
     description:
-      "FinEdge is a fintech startup helping users invest wisely. The focus was financial literacy, trust, and lead generation.",
+      "iClinix is an eye care hospital that is a specialized facility with an intention of increasing patient calls and internet presence within a competitive digital environment. A combination of focused Google Ads to get instant leads and SEO to grow the business long-term helped the hospital to achieve more patient bookings and support brand credibility and establish the ground for organic traffic sustainability.",
     points: [
       "Financial Blogs: Created beginner-friendly investment articles.",
       "SEO Tools: Developed calculators & comparison pages.",
