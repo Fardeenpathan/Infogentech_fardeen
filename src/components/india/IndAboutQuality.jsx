@@ -11,8 +11,7 @@ export default function IndAboutQuality() {
   return (
     <div className="grid grid-cols-2 gap-6">
       {items.map((item) => (
-        <>
-          <div className="flex gap-5 items-center">
+          <div className="flex gap-5 items-center" key={item.id}>
             <div className="relative">
               <div className="absolute inset-0 bg-primary rounded-xl opacity-20 -z-10"></div>
               <div className="p-4">
@@ -23,7 +22,6 @@ export default function IndAboutQuality() {
             {item.name}
           </p>
           </div>
-        </>
       ))}
     </div>
   );

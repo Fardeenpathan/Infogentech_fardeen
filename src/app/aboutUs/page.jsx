@@ -3,6 +3,7 @@ import IndAboutImage from "@/components/india/IndAboutImage";
 import IndAboutDesc from "@/components/india/IndAboutDesc";
 import IndHeroCTA from "@/components/india/IndHeroCTA";
 import IndAchievements from "@/components/india/IndAchievements";
+import IndInfoCards from "@/components/india/IndInfoCards";
 const AboutUs = () => {
   return (
     <>
@@ -14,6 +15,7 @@ const AboutUs = () => {
       <IndAboutImage />
       <IndAboutDesc />
       <IndAchievements />
+      <IndInfoCards/>
      <IndHeroCTA />
     </>
   );

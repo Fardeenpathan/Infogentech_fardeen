@@ -2,6 +2,7 @@
 import IndServicesHeader from "@/components/india/IndServicesHeader";
 import IndAllServices from "@/components/india/IndAllServices";
 import IndServiceDesc from "@/components/india/IndServiceDesc";
+import IndServiceCard from "@/components/india/IndServiceCard";
 import SubscribeContact from "@/components/SubscribeContact";
 import Image from "next/image";
 import Icons from "@/components/ui/Icon";
@@ -185,6 +186,7 @@ const Content = () => {
       <IndServicesHeader />
       <IndAllServices activeService="Content" />
         <div className="container mx-auto mt-24 xl:px-10 md:px-5 px-2">
+          <IndServiceCard/>
           <IndServiceDesc/>
       </div>
     </>
