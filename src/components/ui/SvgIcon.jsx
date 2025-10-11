@@ -3208,7 +3208,7 @@ const Branding = ({ width = "53", height = "53" }) => (
 
 const Arrowdown = ({ className }) => (
   <svg className={className} width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M2 2L7 7L12 2" stroke="white" stroke-width="2.2" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M2 2L7 7L12 2" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 
 )
@@ -4356,7 +4356,7 @@ const IndStar =()=>(
 )
 const IndArrow=()=>(
   <svg width="24" height="14" viewBox="0 0 24 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1 7H22.5M22.5 7L16.5 1M22.5 7L16.5 13" stroke="white" stroke-width="2" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M1 7H22.5M22.5 7L16.5 1M22.5 7L16.5 13" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
 </svg>
 
 )
