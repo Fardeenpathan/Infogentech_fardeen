@@ -1,6 +1,7 @@
 "use client";
-import ServicesHeader from "@/components/ServicesHeader";
-import AllServices from "@/components/AllServices";
+import IndServicesHeader from "@/components/india/IndServicesHeader";
+import IndAllServices from "@/components/india/IndAllServices";
+import IndServiceDesc from "@/components/india/IndServiceDesc";
 import SubscribeContact from "@/components/SubscribeContact";
 import Image from "next/image";
 import Icons from "@/components/ui/Icon";
@@ -118,142 +119,24 @@ const Marketing = () => {
     setOpenCategory((prev) => (prev === id ? null : id));
   };
 
-  const videoRef = useRef(null);
-  const [isPlaying, setIsPlaying] = useState(false);
-
-  const handlePlay = () => {
-    if (videoRef.current) {
-      videoRef.current.play();
-      setIsPlaying(true);
-    }
-  };
-
-  const handleVideoClick = () => {
-    if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause();
-        setIsPlaying(false);
-      } else {
-        videoRef.current.play();
-        setIsPlaying(true);
-      }
-    }
-  };
-
   return (
     <>
-      <ServicesHeader />
-      <AllServices activeService="Digital Marketing" />
-
+      <IndServicesHeader />
+      <IndAllServices activeService="Digital Marketing" />
       <div className="container mx-auto mt-24 xl:px-10 md:px-5 px-2">
-        <div className="border-b-2 border-[#7e7d7d] mt-15 opacity-15"></div>
-
-        <div>
-          {categories.map((category) => (
-            <div key={category.id}>
-              <div
-                 className={`relative font-jost font-normal xl:text-[64px]  md:text-5xl text-3xl leading-[100%] tracking-[0.03em] flex justify-between items-center py-5 cursor-pointer transition-opacity duration-300 ${
-                  openCategory === category.id ? "opacity-100" : "opacity-40"
-                }`}
-                onClick={() => toggleCategory(category.id)}
-              >
-                <div className="flex gap-10">
-                  <span>{category.id}</span>
-                  <span>{category.title}</span>
-                </div>
-                {openCategory === category.id && (
-                  <Image
-                    src={category.image}
-                    alt="digital marketing"
-                    width={400}
-                    height={377}
-                      className="w-[400px] h-[377px] md:w-[300px] md:h-[280px] lg:w-[350px] lg:h-[207px] rounded-2xl rotate-12 absolute -top-10 right-6 animate-slide-in-right object-cover z-10 xl:flex hidden"
-                  />
-                )}
-              </div>
-
-              {/* Framer Motion animated panel */}
-              <AnimatePresence initial={false}>
-                {openCategory === category.id && (
-                  <motion.div
-                    key={`panel-${category.id}`}
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.35, ease: "easeInOut" }}
-                    className="overflow-hidden"
-                  >
-                    <div className="py-10 flex flex-col items-center gap-2 text-center px-4">
-                      <p className="font-jost font-bold md:text-3xl text-2xl leading-6 text-primary">
-                        Our Value
-                      </p>
-                      <p className="font-jost font-medium md:text-lg text-[16px] leading-6">
-                        How we work at Untitled guided by shared values that
-                        keep us connected as one team
-                      </p>
-                    </div>
-
-                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-6 mb-10 overflow-visible md:px-10 px-4">
-                      {category.subServices.length > 0 ? (
-                        category.subServices.map((subService) => (
-                          <motion.div
-                            key={`${category.id}-${subService.id}`}
-                            layout
-                            initial={{ opacity: 0, y: 8 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: 8 }}
-                            transition={{ duration: 0.28 }}
-                          >
-                            <SubServiceCard subService={subService} />
-                          </motion.div>
-                        ))
-                      ) : (
-                        <div className="col-span-full text-center py-8 opacity-60">
-                          <p className="font-jost text-lg">
-                            No sub-services listed for this category.
-                          </p>
-                        </div>
-                      )}
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-
-              <div className="border-b-2 border-[#7e7d7d] opacity-15"></div>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-34 flex justify-center items-center flex-col relative">
-          <div className="absolute -top-20">
-              <Icons name="gradientServices" width={300} height={100}/>
-          </div>
-{/* 
-          <div className="relative subContainer h-[640px] flex items-center justify-center">
-            <video
-              ref={videoRef}
-              className="w-full h-full object-cover cursor-pointer rounded-3xl"
-              onClick={handleVideoClick}
-              loop
-              playsInline
-              muted
-            >
-              <source src="/assist/hero-bg.mp4" type="video/mp4" />
-            </video>
-            {!isPlaying && (
-              <button
-                onClick={handlePlay}
-                className="absolute z-10 flex items-center justify-center w-20 h-20 bg-white rounded-full shadow-lg"
-                aria-label="Play video"
-              >
-                <Icons name="Play" />
-              </button>
-            )}
-          </div> */}
-        </div>
-
-        <SubscribeContact />
+        <IndServiceDesc/>
       </div>
+<div className="moving-text-container overflow-hidden bg-[#3F237F] text-white">
+  <div className="moving-text-content font-montserrat font-normal text-xl -tracking-[0.05em] custom-skew">
+    <div className="flex gap-96">
+      {Array.from({ length: 20 }, (_, i) => (
+        <p key={i} className="py-4 flex gap-28">
+          Design <Icons name="IndStar" /> Development <Icons name="IndStar" /> Branding <Icons name="IndStar" /> Product
+        </p>
+      ))}
+    </div>
+  </div>
+</div>
     </>
   );
 };

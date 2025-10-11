@@ -2,8 +2,8 @@
 
 import { usePathname } from "next/navigation";
 import { Toaster } from 'react-hot-toast';
-import IndNavbar from "./IndNavbar";
-import { Footer } from "./Footer";
+import IndNavbar from "@/components/india/IndNavbar";
+import { IndFooter } from "@/components/india/IndFooter";
 import { MiniNavbar } from "./MiniNavbar";
 import GeoBlockWrapper from "./GeoBlockWrapper";
 
@@ -53,7 +53,7 @@ export default function ClientLayoutControls({ children }) {
         </div>
 
         <main>{children}</main>
-        <Footer />
+        <IndFooter />
         <Toaster
           position="top-right"
           toastOptions={{

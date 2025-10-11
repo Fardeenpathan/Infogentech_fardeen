@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Icons from "./ui/Icon";
+import Icons from "../ui/Icon";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import IndButton from "./ui/IndButton";
@@ -14,7 +14,7 @@ export default function Navbar() {
     }`;
 
   return (
-    <motion.nav
+    <div  className="absolute w-full mx-auto"><motion.nav
       initial={{ opacity: 0, y: -40 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -40, scale: 0.95 }}
@@ -49,7 +49,7 @@ export default function Navbar() {
         <a href="#contact"><IndButton
              variant="primary"
                   >
-                    Let's talk
+         Let's talk
              </IndButton></a>
           
        
@@ -57,5 +57,7 @@ export default function Navbar() {
 
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/10 to-black/5 -z-10 opacity-30"></div>
     </motion.nav>
+    </div>
+    
   );
 }

@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import IndTopicHeader from "./IndTopicHeader";
+import IndTopicHeader from "../IndTopicHeader";
 import IndButton from "./ui/IndButton";
 
 export default function IndAboutHome() {

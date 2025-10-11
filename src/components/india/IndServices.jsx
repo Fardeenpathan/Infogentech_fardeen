@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
-import Icons from "./ui/Icon";
-import IndTopicHeader from "./IndTopicHeader";
+import Icons from "../ui/Icon";
+import IndTopicHeader from "../IndTopicHeader";
 
 const services = [
     {
@@ -28,7 +28,7 @@ const services = [
 
 export default function IndServices() {
     return (
-        <div className="mt-96 container mx-auto px-10">
+        <div className="mt-20 container mx-auto px-10">
             <IndTopicHeader
                 title="Our Services"
                 subtitle="Delivering Solutions That Drive Results"

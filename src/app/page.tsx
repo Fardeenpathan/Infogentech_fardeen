@@ -1,10 +1,12 @@
 "use client";
-import  IndHeroSection  from "@/components/IndHeroSection";
-import  IndServices  from "@/components/IndServices";
-import  IndAboutHome  from "@/components/IndAboutHome";
-import  IndConsutation  from "@/components/IndConsutation";
-import  IndHowWeWork  from "@/components/IndHowWeWork";
-import  IndWhyChooseUs  from "@/components/IndWhyChooseUs";
+import  IndHeroSection  from "@/components/india/IndHeroSection";
+import  IndServices  from "@/components/india/IndServices";
+import  IndAboutHome  from "@/components/india/IndAboutHome";
+import  IndConsutation  from "@/components/india/IndConsutation";
+import  IndHowWeWork  from "@/components/india/IndHowWeWork";
+import  IndWhyChooseUs  from "@/components/india/IndWhyChooseUs";
+import  IndTestomonial  from "@/components/india/IndTestomonial";
+import  IndFaqsHome  from "@/components/india/IndFaqsHome";
 export default function Home() {
   return (
     <main className="w-full">  
@@ -14,6 +16,8 @@ export default function Home() {
       <IndHowWeWork/>
       <IndConsutation/>
       <IndWhyChooseUs/>
+      <IndTestomonial/>
+      <IndFaqsHome/>
     </main>
   );
 }
