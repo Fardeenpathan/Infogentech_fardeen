@@ -177,11 +177,9 @@ export default function Slider() {
 
                     <div>
                       <h4 className="font-jost sm:text-lg text-[12px] text-[#C2C4C8] font-bold">
-                        {" "}
-                        {review.name}{" "}
+                        {review.name}
                       </h4>
                       <p className="md:text-sm text-[8px] text-[#C2C4C8] mt-1.5">
-                        {" "}
                         {review.role}
                       </p>
                     </div>

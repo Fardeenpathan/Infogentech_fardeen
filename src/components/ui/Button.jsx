@@ -11,7 +11,7 @@ const Button = ({
   onClick,
   ...props 
 }) => {
-  const baseClasses = 'bg-[#9747FF] text-white  py-5 px-12.5 rounded-[10px] items-center cursor-pointer';
+  const baseClasses = 'font-medium rounded-lg cursor-pointer transition-colors duration-200 inline-flex items-center justify-center';
   
   const variants = {
     primary: 'bg-[#9747FF] hover:bg-purple-700 text-white',
@@ -45,4 +45,3 @@ const Button = ({
 };
 
 export default Button;
-export { Button };

@@ -4,12 +4,13 @@ import { useRouter, useParams } from 'next/navigation';
 import { 
   Save, ArrowLeft, Plus, Eye, Settings, Image as ImageIcon, 
   Tag, Layout, Calendar, User, Clock, Star, Globe, FileText,
-  Upload, X, Copy, RotateCcw, Maximize2, Minimize2, Edit3
+  Upload, X, Copy, RotateCcw, Maximize2, Minimize2, Edit3, HelpCircle
 } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import { toast } from 'react-hot-toast';
 import adminApiService from '@/lib/adminApi';
 import RichTextEditor from '@/components/admin/RichTextEditor';
+import BlogFAQManager from '@/components/admin/BlogFAQManager';
 import Link from 'next/link';
 
 export default function BlogFormPage({ mode = 'create' }) {
@@ -24,7 +25,9 @@ export default function BlogFormPage({ mode = 'create' }) {
   const [isAutoSaving, setIsAutoSaving] = useState(false);
   const [wordCount, setWordCount] = useState(0);
   const autoSaveRef = useRef(null);
+  const faqManagerRef = useRef(null);
   const isEditMode = mode === 'edit';
+  const [slugEdited, setSlugEdited] = useState(false);
   
   const [formData, setFormData] = useState({
     title: '',
@@ -46,6 +49,7 @@ export default function BlogFormPage({ mode = 'create' }) {
   });
   const [featuredImageFile, setFeaturedImageFile] = useState(null);
   const [tagInput, setTagInput] = useState('');
+  const [blogFaqs, setBlogFaqs] = useState([]);
 
   useEffect(() => {
     if (autoSaveRef.current) {
@@ -66,7 +70,7 @@ export default function BlogFormPage({ mode = 'create' }) {
   }, [formData]);
 
   useEffect(() => {
-    const text = formData.content.replace(/<[^>]*>/g, '');
+    const text = (formData.content || '').replace(/<[^>]*>/g, '');
     const words = text.trim().split(/\s+/).filter(word => word.length > 0);
     setWordCount(words.length);
   }, [formData.content]);
@@ -121,6 +125,13 @@ export default function BlogFormPage({ mode = 'create' }) {
           keywords: []
         }
       });
+      
+      // Set blog FAQs for edit mode
+      if (blog.faqs && Array.isArray(blog.faqs)) {
+        setBlogFaqs(blog.faqs);
+      }
+      
+      setSlugEdited(false);
     } catch (error) {
       console.error('Error loading blog:', error);
       toast.error('Failed to load blog');
@@ -134,7 +145,7 @@ export default function BlogFormPage({ mode = 'create' }) {
     if (!blocks || !Array.isArray(blocks)) return '';
     
     let html = '';
-    const sortedBlocks = blocks.sort((a, b) => (a.order || 0) - (b.order || 0));
+    const sortedBlocks = [...blocks].sort((a, b) => (a.order || 0) - (b.order || 0));
     
     sortedBlocks.forEach(block => {
       if (!block || !block.type) return;
@@ -235,15 +246,19 @@ export default function BlogFormPage({ mode = 'create' }) {
   };
 
   const handleTitleChange = (title) => {
-    setFormData(prev => ({
-      ...prev,
-      title,
-      slug: !isEditMode && !prev.slug ? generateSlug(title) : prev.slug,
-      seo: {
-        ...prev.seo,
-        title: title || prev.seo.title
-      }
-    }));
+    setFormData(prev => {
+      const shouldAutoSlug = !isEditMode && !prev.slug && !slugEdited;
+      const newSlug = shouldAutoSlug ? generateSlug(title) : prev.slug;
+      return {
+        ...prev,
+        title,
+        slug: newSlug,
+        seo: {
+          ...prev.seo,
+          title: title || prev.seo.title
+        }
+      };
+    });
   };
 
   const convertHtmlToBlocks = (htmlContent) => {
@@ -271,28 +286,37 @@ export default function BlogFormPage({ mode = 'create' }) {
           settings: {}
         });
       } else if (tagName === 'p') {
+        const htmlContent = element.innerHTML || '';
         const textContent = element.textContent || '';
         if (textContent.trim()) {
           blocks.push({
             type: 'paragraph',
             data: {
-              content: textContent
+              content: htmlContent 
             },
             order: order++,
             settings: {}
           });
         }
       } else if (tagName === 'ul' || tagName === 'ol') {
-        const items = Array.from(element.children).map(li => li.textContent || '');
-        blocks.push({
-          type: 'list',
-          data: {
-            style: tagName === 'ul' ? 'unordered' : 'ordered',
-            items: items
-          },
-          order: order++,
-          settings: {}
-        });
+        const items = Array.from(element.children).map(li => {
+         
+          let itemContent = li.innerHTML || li.textContent || '';
+          itemContent = itemContent.replace(/<\/?p[^>]*>/g, '');
+          return itemContent.trim();
+        }).filter(item => item.length > 0); // Remove empty items
+        
+        if (items.length > 0) {
+          blocks.push({
+            type: 'list',
+            data: {
+              style: tagName === 'ul' ? 'unordered' : 'ordered',
+              items: items
+            },
+            order: order++,
+            settings: {}
+          });
+        }
       } else if (tagName === 'blockquote') {
         blocks.push({
           type: 'quote',
@@ -374,9 +398,18 @@ export default function BlogFormPage({ mode = 'create' }) {
     try {
       const blocks = convertHtmlToBlocks(formData.content);
       
+      let faqs = [];
+      if (faqManagerRef.current && faqManagerRef.current.getFaqsForSave) {
+        faqs = faqManagerRef.current.getFaqsForSave();
+        console.log('FAQs being sent to API:', faqs);
+      } else {
+        console.log('FAQ manager ref not available or getFaqsForSave method missing');
+      }
+      
       const blogData = {
         ...formData,
         blocks: blocks, // Add blocks for backend
+        faqs: faqs, 
         status,
         publishedAt: status === 'published' ? new Date() : null
       };
@@ -407,6 +440,7 @@ export default function BlogFormPage({ mode = 'create' }) {
   const tabs = [
     { id: 'content', label: 'Content', icon: FileText },
     { id: 'settings', label: 'Settings', icon: Settings },
+    { id: 'faqs', label: 'FAQs', icon: HelpCircle },
     { id: 'seo', label: 'SEO', icon: Globe },
     { id: 'media', label: 'Media', icon: ImageIcon }
   ];
@@ -507,18 +541,21 @@ export default function BlogFormPage({ mode = 'create' }) {
                   >
                     <Copy className="h-3 w-3" />
                   </Button>
-                  {!isEditMode && (
-                    <input
-                      type="text"
-                      value={formData.slug}
-                      onChange={(e) => setFormData(prev => ({...prev, slug: e.target.value}))}
-                      placeholder="Custom slug (optional)"
-                      className="px-3 py-1 bg-gray-700/50 border border-gray-600 rounded text-sm text-white placeholder-gray-500 focus:ring-1 focus:ring-purple-500 focus:border-transparent min-w-0 flex-1 max-w-xs"
-                    />
-                  )}
+
+                  <input
+                    type="text"
+                    value={formData.slug}
+                    onChange={(e) => {
+                      setSlugEdited(true);
+                      setFormData(prev => ({...prev, slug: e.target.value}));
+                    }}
+                    placeholder="Custom slug (optional)"
+                    className="px-3 py-1 bg-gray-700/50 border border-gray-600 rounded text-sm text-white placeholder-gray-500 focus:ring-1 focus:ring-purple-500 focus:border-transparent min-w-0 flex-1 max-w-xs"
+                  />
+
                   {isEditMode && (
                     <span className="text-xs text-yellow-400 bg-yellow-400/10 px-2 py-1 rounded">
-                      Slug locked in edit mode
+                      Warning: changing the slug will change the post URL and may affect SEO/links.
                     </span>
                   )}
                 </div>
@@ -723,6 +760,17 @@ export default function BlogFormPage({ mode = 'create' }) {
                         placeholder="keyword1, keyword2, keyword3"
                       />
                     </div>
+                  </div>
+                )}
+
+                {activeTab === 'faqs' && (
+                  <div className="space-y-6">
+                    <BlogFAQManager 
+                      ref={faqManagerRef}
+                      blogId={isEditMode ? params?.id : null}
+                      isEditMode={isEditMode}
+                      initialFaqs={blogFaqs}
+                    />
                   </div>
                 )}
 

@@ -2,8 +2,7 @@ import { NextResponse } from 'next/server';
 
 export async function middleware(request) {
   const { pathname } = request.nextUrl;
-  
-  // Skip middleware for admin, API routes, and static assets
+
   if (pathname.startsWith('/admin') || 
       pathname.startsWith('/api') ||
       pathname.startsWith('/_next') || 
@@ -12,35 +11,63 @@ export async function middleware(request) {
     return NextResponse.next();
   }
 
-  // Development testing
+  let country = 'IN'; 
+
   if (process.env.NODE_ENV === 'development') {
-    const testCountry = process.env.TEST_COUNTRY || 'IN';
-    const allowedCountries = ['IN', 'CA', 'US'];
-    const isAllowed = allowedCountries.includes(testCountry);
-    
-    if (!isAllowed) {
-      console.log(`🚫 BLOCKING access to ${pathname} for test country ${testCountry}`);
+    country = process.env.TEST_COUNTRY || 'IN';
+  } else {
+    country = request.geo?.country || 
+              request.headers.get('CF-IPCountry') || 
+              request.headers.get('X-Forwarded-Country') ||
+              request.headers.get('CloudFront-Viewer-Country') ||
+              'IN';
+  }
+
+  // console.log(`🌍 Detected country: ${country}, pathname: ${pathname}`);
+
+  const isIndianUser = country === 'IN';
+  const isUSPath = pathname.startsWith('/us');
+
+  if (isIndianUser) {
+    if (isUSPath) {
+      // console.log(`🚫 BLOCKING Indian user from accessing US route: ${pathname}`);
       return NextResponse.redirect(new URL('/blocked', request.url));
     }
     return NextResponse.next();
   }
 
-  // Production: Use Vercel's geo headers (edge runtime)
-  try {
-    const country = request.geo?.country || request.headers.get('CF-IPCountry') || null;
-    const allowedCountries = ['IN', 'CA', 'US'];
-    
-    if (country && !allowedCountries.includes(country)) {
-      console.log(`🚫 BLOCKING access to ${pathname} for country ${country}`);
-      return NextResponse.redirect(new URL('/blocked', request.url));
+  if (!isIndianUser) {
+    if (!isUSPath) {
+      const usEquivalent = `/us${pathname}`;
+      
+      const commonRoutes = [
+        '/aboutUs',
+        '/blogs',
+        '/portfolio',
+        '/services',
+        '/faq',
+        '/helpCenter',
+        '/privacyPolicy',
+        '/terms',
+        '/contactUs'
+      ];
+      
+      const hasUSEquivalent = commonRoutes.some(route => 
+        pathname.startsWith(route)
+      );
+
+      if (pathname === '/' || hasUSEquivalent) {
+        // console.log(`� Redirecting foreign user from ${pathname} to ${usEquivalent}`);
+        return NextResponse.redirect(new URL(usEquivalent, request.url));
+      } else {
+        // console.log(`🚫 BLOCKING foreign user from India-only route: ${pathname}`);
+        return NextResponse.redirect(new URL('/us/blocked', request.url));
+      }
     }
-    
-    // If no geo data available, allow access (fallback)
     return NextResponse.next();
-  } catch (error) {
-    console.error('Geo-check error in middleware:', error);
-    return NextResponse.next(); // Allow on error
   }
+
+  return NextResponse.next();
 }
 
 export const config = {

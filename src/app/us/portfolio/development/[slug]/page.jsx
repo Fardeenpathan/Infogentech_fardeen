@@ -157,8 +157,8 @@ const SlugPage = () => {
           </div>
         </div>
         <div className="mt-20">
-                   <SubscribeContact />
-                </div>
+        <SubscribeContact />
+        </div>
       </div>
     </>
   );

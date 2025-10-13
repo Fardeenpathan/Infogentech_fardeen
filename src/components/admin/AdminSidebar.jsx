@@ -55,7 +55,6 @@ export default function AdminSidebar() {
 
   return (
     <>
-      {/* Mobile menu button */}
       <button
         className="lg:hidden fixed top-4 left-4 z-50 p-2 bg-[#1A1A1A] text-white rounded-lg"
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -101,7 +100,7 @@ export default function AdminSidebar() {
             })}
           </nav>
 
-          {/* Logout */}
+          {/* Logout */}``
           <div className="px-4 py-4 border-t border-gray-700">
             <button
               onClick={handleLogout}
@@ -114,7 +113,6 @@ export default function AdminSidebar() {
         </div>
       </div>
 
-      {/* Mobile overlay */}
       {isMobileMenuOpen && (
         <div
           className="lg:hidden fixed inset-0 z-30 bg-black bg-opacity-50"

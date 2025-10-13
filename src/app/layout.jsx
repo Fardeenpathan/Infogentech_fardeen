@@ -1,24 +1,30 @@
-"use client"
+"use client";
+
 import { Provider } from "react-redux";
 import "./globals.css";
 import ClientLayoutControls from "@/components/ClientLayoutControls";
+import USClientLayoutControls from "@/components/USClientLayoutControls"; // another layout for /us
 import store from "@/redux/store";
-
-// export const metadata = {
-//   title: "Infogentech - Best Design, Development, Marketing",
-//   description:
-//     "We become your digital department bringing strategy, creativity, and technical expertise to accelerate your business growth.",
-// };
+import { usePathname } from "next/navigation";
 
 export default function RootLayout({ children }) {
+  const pathname = usePathname();
+
+  const isUS = pathname.startsWith("/us");
+
   return (
-<html lang="en" className="dark">
+    <html lang="en" className={ isUS ? "dark" : "IndColorText"}>
       <head>
         <link rel="icon" href="/mainLogo.svg" />
       </head>
       <body>
         <Provider store={store}>
-          <ClientLayoutControls>{children}</ClientLayoutControls>
+          {isUS ? (
+            <ClientLayoutControls>{children}</ClientLayoutControls>
+          
+          ) : (
+              <USClientLayoutControls>{children}</USClientLayoutControls>
+          )}
         </Provider>
       </body>
     </html>

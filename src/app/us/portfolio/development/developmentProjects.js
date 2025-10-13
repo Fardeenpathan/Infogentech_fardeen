@@ -46,7 +46,7 @@ const developmentProjects = [
     title: "ShaadiKarwaDu – Wedding Planning & Coordination",
     slug: "shaadiKarwadu-wedding-planning",
     image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1758872051/blog-app/categories/lkvacf2yfdjsq5nwxjob.jpg",
-    subImage: "/assist/portfolio/development/ShaadiKarwadu.png",
+    subImage: "https://res.cloudinary.com/dpmceu66e/image/upload/v1758872051/blog-app/categories/lkvacf2yfdjsq5nwxjob.jpg",
     description:
       "Madirakshi, an emerging digital platform, became our marketing partner to improve their app onboarding experience. We redefined the onboarding flow to retain and satisfy our customers while ensuring that they adopt the features. Figma and WordPress aided in creating a fluid, useful process and a higher level of engagement while bringing long engagement periods and customer success with it.",
     points: [],

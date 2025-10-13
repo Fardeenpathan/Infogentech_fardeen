@@ -7,7 +7,6 @@ import GradientButton from "./ui/GradientButton";
 import config from "@/config";
 import adminApiService from "@/lib/adminApi";
 const contactUsa = [
- 
   {
     country: "USA",
     info: [
@@ -146,9 +145,6 @@ const ContactForm = () => {
               <div className="mt-20 flex flex-col gap-12.5">
                 {contactUsa.map((region, i) => (
                   <div key={i}>
-                    <h3 className="text-xl font-semibold mb-4">
-                      {region.country}
-                    </h3>
                     <div className="flex flex-col gap-6.5">
                       {region.info.map((item, index) => (
                         <p key={index} className="flex gap-6.5 items-center">
@@ -271,6 +267,7 @@ const ContactForm = () => {
                     </select>
                   </div>
                 </div>
+                
                 <div>
                   <label className="block text-[#E4E4E4] text-lg mb-2 font-jost font-light">
                     Message

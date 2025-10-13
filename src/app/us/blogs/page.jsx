@@ -1,12 +1,13 @@
 "use client";
 import Button from "@/components/ui/Button";
 import Image from "next/image";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import HomeBlogCardsd from "@/components/HomeBlogCardsd";
 import SubscribeContact from "@/components/SubscribeContact";
 import Icons from "@/components/ui/Icon";
-import { useSelector } from 'react-redux';
-import { redirect} from "next/navigation";
+import Loader from "@/components/loader/Loader";
+import { useBlogsPagination } from "@/hooks/useBlogsPagination";
+import BlogPagination from "@/components/BlogPagination";
 const blogData = [
   {
     id: 1,
@@ -64,23 +65,61 @@ const blogData = [
   },
 ];
 const category = [
-  "All",
-  "Tech Trends",
-  "Case Studies",
-  "Development",
-  "UI/UX Design",
-  "Cybersecurity",
-  "Digital Strategy",
+  // "All",
+  // "Tech Trends",
+  // "Case Studies",
+  // "Development",
+  // "UI/UX Design",
+  // "Cybersecurity",
+  // "Digital Strategy",
 ];
 
 const Blogs = () => {
-    const countryCode = useSelector((state) => state.countryCode.value);
-useEffect(() => {
-    if (countryCode !== "US") {
-      redirect("/blogs");
+  const [categories, setCategories] = useState(category);
+  
+  const {
+    activeCategory,
+    blogs,
+    loading,
+    searchTerm,
+    currentPage,
+    pagination,
+    totalBlogs,
+    setSearchTerm,
+    setCurrentPage,
+    fetchBlogs,
+    handleCategoryChange,
+    handleSearch
+  } = useBlogsPagination(categories, 12);
+
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const response = await fetch('https://97fzff04-5000.inc1.devtunnels.ms/api/categories');
+        if (response.ok) {
+          const data = await response.json();
+          console.log('Categories from API:', data);
+          const dynamicCategories = [
+            { name: "All", slug: "all" },       
+            ...data.data.map(cat => ({ name: cat.name, slug: cat.slug }))
+          ];
+          setCategories(dynamicCategories);
+        }
+      } catch (error) {
+        console.error('Error fetching categories:', error);
+        const fallbackCategories = category.map(cat => ({ name: cat, slug: cat.toLowerCase().replace(/\s+/g, '-') }));
+        setCategories(fallbackCategories);
+      }
+    };
+
+    fetchCategories();
+  }, []);
+
+  useEffect(() => {
+    if (categories.length > 0) {
+      fetchBlogs(blogData);
     }
-  }, [countryCode]);
-  const [activeCategory, setActiveCategory] = useState("All");
+  }, [activeCategory, categories, currentPage, searchTerm, fetchBlogs]); 
   return (
     <div className="flex justify-between">
       <div className="absolute overflow-hidden -top-20">
@@ -102,9 +141,20 @@ useEffect(() => {
             <input
               type="text"
               placeholder="Search article"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              onKeyPress={(e) => {
+                if (e.key === 'Enter') {
+                  handleSearch();
+                }
+              }}
               className="flex-1 h-full text-white placeholder-gray-600 bg-transparent focus:outline-none  pl-8 py-6 font-jost text-[20px] leading-[100%] tracking-[0.03em]"
             />
-            <Button text="Explore" className="!text-black" />
+            <Button 
+              text="Search" 
+              className="!text-black" 
+              onClick={handleSearch}
+            />
           </div>
           <div className="w-0.5 h-28 rounded-full mb-10 bg-gradient-to-b from-purple-400 via-purple-500 to-purple-800 mt-10"></div>
           <div className="relative w-12 h-12">
@@ -152,26 +202,48 @@ useEffect(() => {
             Select Your Category
           </p>
           <div className="flex gap-16 text-[#C4C4C4] mt-13 font-kumbh-sans">
-            {category.map((item, index) => (
+            {categories.map((item, index) => (
               <button
                 key={index}
-                onClick={() => setActiveCategory(item)}
+                onClick={() => handleCategoryChange(item.name || item)}
                 className={`relative pb-1 transition-all duration-300 cursor-pointer ${
-                  activeCategory === item
+                  activeCategory === (item.name || item)
                     ? "text-primary opacity-100 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#8752FF] after:rounded-full "
                     : "opacity-60 hover:opacity-100"
                 }`}
               >
-                {item}
+                {item.name || item}
               </button>
             ))}
           </div>
-          <div className=" flex flex-col items-center justify-center mt-12 text-white">
-            <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-12">
-              {blogData.map((blog) => (
-                <HomeBlogCardsd key={blog.id} blog={blog} />
-              ))}
-            </div>
+          <div className="mt-12">
+            {loading ? (
+              <Loader/>
+            ) : blogs.length > 0 ? (
+              <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 2xl:grid-cols-4 gap-12 xl:gap-8">
+                {blogs.map((blog) => (
+                  <HomeBlogCardsd key={blog.id || blog._id} blog={blog} />
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-12">
+                <div className="text-xl text-gray-400 mb-2">No blogs found</div>
+                <div className="text-sm text-gray-500">
+                  {activeCategory === "All" 
+                    ? "No blogs available at the moment" 
+                    : `No blogs found in "${activeCategory}" category`
+                  }
+                </div>
+              </div>
+            )}
+            
+            <BlogPagination 
+              currentPage={currentPage}
+              setCurrentPage={setCurrentPage}
+              pagination={pagination}
+              totalBlogs={totalBlogs}
+              limit={12}
+            />
           </div>
           <div className="text-[#82828C] mt-24 border-2 container mx-auto px-10"></div>
           <SubscribeContact />
@@ -181,4 +253,4 @@ useEffect(() => {
   );
 };
 
-export default Blogs;
+export default Blogs;   

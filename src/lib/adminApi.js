@@ -253,6 +253,7 @@ class AdminApiService {
     
     // Add basic fields
     formData.append('title', blogData.title);
+    formData.append('slug', blogData.slug || '');
     formData.append('excerpt', blogData.excerpt);
     formData.append('category', blogData.category);
     formData.append('status', blogData.status || 'draft');
@@ -276,7 +277,15 @@ class AdminApiService {
         // Handle block data
         if (block.data) {
           Object.keys(block.data).forEach(key => {
-            formData.append(`blocks[${index}][data][${key}]`, block.data[key]);
+            const value = block.data[key];
+            if (key === 'items' && Array.isArray(value)) {
+              // Handle list items as separate array entries
+              value.forEach((item, itemIndex) => {
+                formData.append(`blocks[${index}][data][items][${itemIndex}]`, item);
+              });
+            } else {
+              formData.append(`blocks[${index}][data][${key}]`, value);
+            }
           });
         }
         
@@ -298,6 +307,16 @@ class AdminApiService {
           formData.append(`seo[keywords][${index}]`, keyword);
         });
       }
+    }
+
+    if (blogData.faqs && Array.isArray(blogData.faqs)) {
+      blogData.faqs.forEach((faq, index) => {
+        formData.append(`faqs[${index}][question]`, faq.question);
+        formData.append(`faqs[${index}][answer]`, faq.answer);
+        formData.append(`faqs[${index}][category]`, faq.category || 'general');
+        formData.append(`faqs[${index}][order]`, faq.order || index);
+        formData.append(`faqs[${index}][isActive]`, faq.isActive !== false);
+      });
     }
 
     if (blogData.featuredImageFile) {
@@ -326,6 +345,7 @@ class AdminApiService {
     
     // Add basic fields
     formData.append('title', blogData.title);
+    formData.append('slug', blogData.slug || '');
     formData.append('excerpt', blogData.excerpt);
     formData.append('category', blogData.category);
     formData.append('status', blogData.status || 'draft');
@@ -349,7 +369,15 @@ class AdminApiService {
         // Handle block data
         if (block.data) {
           Object.keys(block.data).forEach(key => {
-            formData.append(`blocks[${index}][data][${key}]`, block.data[key]);
+            const value = block.data[key];
+            if (key === 'items' && Array.isArray(value)) {
+              // Handle list items as separate array entries
+              value.forEach((item, itemIndex) => {
+                formData.append(`blocks[${index}][data][items][${itemIndex}]`, item);
+              });
+            } else {
+              formData.append(`blocks[${index}][data][${key}]`, value);
+            }
           });
         }
         
@@ -371,6 +399,17 @@ class AdminApiService {
           formData.append(`seo[keywords][${index}]`, keyword);
         });
       }
+    }
+
+    // Add FAQs
+    if (blogData.faqs && Array.isArray(blogData.faqs)) {
+      blogData.faqs.forEach((faq, index) => {
+        formData.append(`faqs[${index}][question]`, faq.question);
+        formData.append(`faqs[${index}][answer]`, faq.answer);
+        formData.append(`faqs[${index}][category]`, faq.category || 'general');
+        formData.append(`faqs[${index}][order]`, faq.order || index);
+        formData.append(`faqs[${index}][isActive]`, faq.isActive !== false);
+      });
     }
 
     // Add featured image if it's a file
@@ -424,6 +463,64 @@ class AdminApiService {
 
     const result = await response.json();
     return result.data; // Return the data object which contains url, public_id, etc.
+  }
+
+  // FAQ API methods
+  async getFaqs(params = {}) {
+    const searchParams = new URLSearchParams();
+    Object.keys(params).forEach(key => {
+      if (params[key] !== undefined && params[key] !== '') {
+        searchParams.append(key, params[key]);
+      }
+    });
+    
+    const queryString = searchParams.toString();
+    const endpoint = `/api/faqs${queryString ? `?${queryString}` : ''}`;
+    return this.request(endpoint);
+  }
+
+  async getBlogFaqs(blogId) {
+    return this.request(`/api/blogs/${blogId}/faqs`);
+  }
+
+  async createFaq(faqData) {
+    return this.request('/api/faqs/admin', {
+      method: 'POST',
+      body: JSON.stringify(faqData),
+    });
+  }
+
+  async updateFaq(id, faqData) {
+    return this.request(`/api/faqs/admin/${id}`, {
+      method: 'PUT',
+      body: JSON.stringify(faqData),
+    });
+  }
+
+  async deleteFaq(id) {
+    return this.request(`/api/faqs/admin/${id}`, {
+      method: 'DELETE',
+    });
+  }
+
+  async createBlogFaq(blogId, faqData) {
+    return this.request(`/api/blogs/${blogId}/faqs`, {
+      method: 'POST',
+      body: JSON.stringify(faqData),
+    });
+  }
+
+  async updateBlogFaq(blogId, faqId, faqData) {
+    return this.request(`/api/blogs/${blogId}/faqs/${faqId}`, {
+      method: 'PUT',
+      body: JSON.stringify(faqData),
+    });
+  }
+
+  async deleteBlogFaq(blogId, faqId) {
+    return this.request(`/api/blogs/${blogId}/faqs/${faqId}`, {
+      method: 'DELETE',
+    });
   }
 }
 

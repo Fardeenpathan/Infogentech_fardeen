@@ -2,72 +2,89 @@
 import { useState, useEffect } from "react";
 import Icons from "@/components/ui/Icon";
 import Loader from "@/components/loader/Loader";
+import adminApiService from "@/lib/adminApi";
+
 const categoryList = [
   { key: "general", label: "General & Services" },
   { key: "pricing", label: "Pricing & Timeline" },
   { key: "support", label: "Support & Maintenance" },
+  { key: "technical", label: "Technical" },
+  { key: "process", label: "Process & Workflow" }
 ];
-
-const mockApiResponse = {
-  general: [
-    {
-      id: 1,
-      question: "What types of hosting plans do you offer?",
-      answer:
-        "We offer shared hosting, VPS hosting, dedicated server hosting, and cloud hosting plans.",
-    },
-    {
-      id: 2,
-      question: "What is the uptime guarantee for your hosting services?",
-      answer: "We guarantee an uptime of 99.9% for all our hosting services.",
-    },
-  ],
-  pricing: [
-    {
-      id: 3,
-      question: "How is the pricing structured?",
-      answer: "Pricing is based on project scope and complexity.",
-    },
-    {
-      id: 4,
-      question: "Do you offer any discounts?",
-      answer: "Yes, we offer seasonal and referral-based discounts.",
-    },
-  ],
-  support: [
-    {
-      id: 5,
-      question: "What support channels are available?",
-      answer: "You can reach us via email, live chat, and phone support.",
-    },
-    {
-      id: 6,
-      question: "Do you provide 24/7 support?",
-      answer: "Yes, we provide 24/7 customer support for all clients.",
-    },
-  ],
-};
 
 const FAQs = () => {
   const [activeCategory, setActiveCategory] = useState("general");
   const [faqsByCategory, setFaqsByCategory] = useState({});
   const [openId, setOpenId] = useState(null);
   const [loading, setLoading] = useState(false);
-  useEffect(() => {
-    const fetchFaqs = async () => {
-      setLoading(true);
-      await new Promise((resolve) => setTimeout(resolve, 500));
-      setFaqsByCategory(mockApiResponse);
-      setLoading(false);
-    };
+  const [error, setError] = useState(null);
 
+  useEffect(() => {
     fetchFaqs();
   }, []);
+
+  const fetchFaqs = async () => {
+    try {
+      setLoading(true);
+      setError(null);
+      
+      const response = await fetch('https://97fzff04-5000.inc1.devtunnels.ms/api/blogs');
+      
+      if (!response.ok) {
+        throw new Error('Failed to fetch blogs');
+      }
+      
+      const blogsData = await response.json();
+      const blogs = blogsData.success ? blogsData.data : [];
+      
+      // Extract all FAQs from all blogs
+      const allFaqs = [];
+      blogs.forEach(blog => {
+        if (blog.faqs && Array.isArray(blog.faqs)) {
+          blog.faqs.forEach(faq => {
+            // Only include active FAQs
+            if (faq.isActive !== false && faq.isActive !== 'false' && faq.isActive !== '0') {
+              allFaqs.push({
+                ...faq,
+                id: faq._id || faq.id || `${blog._id}_${faq.question.substring(0, 10)}`,
+                blogId: blog._id,
+                blogTitle: blog.title
+              });
+            }
+          });
+        }
+      });
+      
+      const faqs = allFaqs;
+      
+      const groupedFaqs = faqs.reduce((acc, faq) => {
+        if (faq.isActive) {
+          const category = faq.category || 'general';
+          if (!acc[category]) {
+            acc[category] = [];
+          }
+          acc[category].push(faq);
+        }
+        return acc;
+      }, {});
+      
+      Object.keys(groupedFaqs).forEach(category => {
+        groupedFaqs[category].sort((a, b) => (a.order || 0) - (b.order || 0));
+      });
+      
+      setFaqsByCategory(groupedFaqs);
+    } catch (error) {
+      console.error('Error fetching FAQs:', error);
+      setError('Failed to load FAQs. Please try again later.');
+      setFaqsByCategory({});
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const toggleFAQ = (id) => {
     setOpenId((prevId) => (prevId === id ? null : id));
   };
-  const currentFaqs = faqsByCategory[activeCategory] || [];
 
   return (
     <div className="mt-35 subContainer mx-auto">
@@ -135,10 +152,25 @@ const FAQs = () => {
           </p>
           {loading ? (
             <Loader />
+          ) : error ? (
+            <div className="text-center py-8">
+              <p className="text-red-400 mb-4">{error}</p>
+              <button 
+                onClick={fetchFaqs}
+                className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
+              >
+                Retry
+              </button>
+            </div>
           ) : (
             <section>
               <div className="rounded-lg">
-                {currentFaqs.map((faq) => (
+                {(faqsByCategory[activeCategory] || []).length === 0 ? (
+                  <div className="text-center py-8 text-gray-400">
+                    <p>No FAQs available for this category yet.</p>
+                  </div>
+                ) : (
+                  (faqsByCategory[activeCategory] || []).map((faq) => (
                   <div
                     key={faq.id}
                     className="border-b border-[#0A071B]/10 linearGradientFaq mb-2"
@@ -158,7 +190,8 @@ const FAQs = () => {
                       </div>
                     )}
                   </div>
-                ))}
+                  ))
+                )}
               </div>
             </section>
           )}

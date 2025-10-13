@@ -1,29 +1,25 @@
 "use client";
-import { HeroSection } from "@/components/hero-section";
-import ServicesSection from "@/components/ServicesSection";
-import { StatsSection } from "@/components/StatsSection";
-import OurValues from "@/components/OurValues";
-import ScheduleCall from "@/components/ScheduleCall";
-import StrategicProcess from "@/components/StrategicProcess";
-import OurPortfolio from "@/components/OurPortfolio";
-import Testimonials from "@/components/Testimonials";
-import LatestBlogs from "@/components/LatestBlogs";
+import  IndHeroSection  from "@/components/india/IndHeroSection";
+import  IndServices  from "@/components/india/IndServices";
+import  IndAboutHome  from "@/components/india/IndAboutHome";
+import  IndConsutation  from "@/components/india/IndConsutation";
+import  IndHowWeWork  from "@/components/india/IndHowWeWork";
+import  IndWhyChooseUs  from "@/components/india/IndWhyChooseUs";
+import  IndTestomonial  from "@/components/india/IndTestomonial";
+import  IndFaqsHome  from "@/components/india/IndFaqsHome";
+import  IndWhatMakesStandOut  from "@/components/india/IndWhatMakesStandOut";
 export default function Home() {
   return (
     <main className="w-full">  
-        <HeroSection />
-      <StatsSection />
-      <div className="overflow-hidden">
-       <ServicesSection /> 
-      </div>
-      <div className="container mx-auto md:px-10 px-4 ">
-        <OurValues />
-        <ScheduleCall />
-        <StrategicProcess />
-        <OurPortfolio />
-        <Testimonials />
-        <LatestBlogs />
-      </div>
+      <IndHeroSection />
+      <IndServices/>
+      <IndAboutHome/>
+      <IndWhatMakesStandOut/>    
+      <IndHowWeWork/>
+      <IndConsutation/>
+      <IndWhyChooseUs/>
+      <IndTestomonial/>
+      <IndFaqsHome/>
     </main>
   );
 }

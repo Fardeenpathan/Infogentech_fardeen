@@ -1,4 +1,6 @@
 // Configuration file for API endpoints and app settings
+
+
 const config = {
   // API Configuration
   api: {
@@ -51,5 +53,7 @@ const config = {
     siteKey: process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY  || 'your-recaptcha-site-key'
   }
 };
+
+
 
 export default config;
