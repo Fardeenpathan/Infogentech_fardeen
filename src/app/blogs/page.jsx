@@ -3,8 +3,7 @@ import IndButton from "@/components/india/ui/IndButton";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import IndBlogCard from "@/components/india/IndBlogCard";
-import SubscribeContact from "@/components/SubscribeContact";
-import Icons from "@/components/ui/Icon";
+import Link from "next/link";
 import Loader from "@/components/loader/Loader";
 import { useBlogsPagination } from "@/hooks/useBlogsPagination";
 import BlogPagination from "@/components/BlogPagination";
@@ -15,6 +14,7 @@ const Blogs = () => {
     activeCategory,
     blogs,
     loading,
+    recentBlog,
     searchTerm,
     currentPage,
     pagination,
@@ -32,7 +32,6 @@ const Blogs = () => {
         );
         if (response.ok) {
           const data = await response.json();
-          console.log("Categories from API:", data);
           const dynamicCategories = [
             { name: "All", slug: "all" },
             ...data.data.map((cat) => ({ name: cat.name, slug: cat.slug })),
@@ -74,29 +73,36 @@ const Blogs = () => {
           <div className="absolute top-0 left-0 w-full h-full bg-[#d4d2f5] opacity-95 -z-10" />
           <div className="relative z-10 container mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center justify-between">
             <div className="w-full rounded-xl overflow-hidden">
-              <Image
-                src="/assist/IndImg/homePage/service2.jpg"
-                alt="Article Thumbnail"
-                width={600}
-                height={400}
-                className="w-170 h-108 object-cover rounded-xl"
-              />
+              {recentBlog &&
+              recentBlog.featuredImage.url ? (
+                <Image
+                  src={recentBlog.featuredImage.url}
+                  alt="Article Thumbnail"
+                  width={600}
+                  height={400}
+                  className="w-170 h-108 object-cover rounded-xl"
+                />
+              ) : null
+              }
             </div>
-            <div className="w-full text-center md:text-left space-y-4">
-              <p className="text-[#252525] font-montserrat font-semibold text-2xl">
-                20 Aug 2025
-              </p>
-              <h2 className="text-gray-400 text-3xl md:text-[46px] font-bold leading-[1.2] font-avalors tracking-wider">
-                WHAT IS GENERATIVE ENGINE OPTIMIZATION (GEO) AND HOW IT WORKS?
-              </h2>
-              <p className="text-[#252525] font-montserrat font-semibold text-2xl">
-                What Is Generative Engine Optimization
-              </p>
-
-              <IndButton variant="outline" className="!border-[#d4d2f5]">
-                Read This Article
-              </IndButton>
-            </div>
+            {recentBlog && (
+              <div className="w-full text-center md:text-left space-y-4">
+                <p className="text-[#252525] font-montserrat font-semibold text-2xl">
+                  20 Aug 2025
+                </p>
+                <h2 className="text-gray-400 text-3xl md:text-[46px] font-bold leading-[1.2] font-avalors tracking-wider">
+                  {recentBlog.title}
+                </h2>
+                <p className="text-[#252525] font-montserrat font-semibold text-2xl">
+                  {recentBlog.excerpt}
+                </p>
+                <Link href={`/blogs/${recentBlog.slug}`}>
+                  <IndButton variant="outline" className="!border-[#d4d2f5]">
+                    Read This Article
+                  </IndButton>
+                </Link>
+              </div>
+            )}
           </div>
         </div>
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 mt-10 container mx-auto">

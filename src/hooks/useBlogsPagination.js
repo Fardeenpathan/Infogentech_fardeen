@@ -3,6 +3,7 @@ import { useState, useEffect, useCallback } from 'react';
 export const useBlogsPagination = (categories, limit = 12) => {
   const [activeCategory, setActiveCategory] = useState("All");
   const [blogs, setBlogs] = useState([]);
+   const [recentBlog, setRecentBlog] = useState(null);
   const [loading, setLoading] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
@@ -42,9 +43,10 @@ export const useBlogsPagination = (categories, limit = 12) => {
       const response = await fetch(url);
       if (response.ok) {
         const data = await response.json();
-        
+         
         if (data.success && data.data) {
           setBlogs(data.data);
+          setRecentBlog(data.data[0])
           setPagination(data.pagination || {});
           setTotalBlogs(data.total || 0);
         } else {
@@ -94,7 +96,7 @@ export const useBlogsPagination = (categories, limit = 12) => {
     currentPage,
     pagination,
     totalBlogs,
-    
+    recentBlog,
     setSearchTerm,
     setCurrentPage,
     

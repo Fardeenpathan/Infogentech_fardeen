@@ -1,19 +1,24 @@
-"use client";
-import { useState } from "react";
+"use client"
+import { useState , useEffect} from "react";
 
-export default function IndSideLinks() {
-  const links = [
-    "Exploring Generative AI in Content Creation",
-    "Steering Clear of Common AI Writing Pitfalls",
-    "Understanding ChatGPT Capabilities - Define Your Style",
-    "Understand Your Readers",
-    "Creating Quality AI-powered Blogs that Stand Out",
-    "Conclusion: Embracing AI in Blog Creation",
-    "Afterword: The AI Behind This Article",
-  ];
-
+export default function IndSideLinks({data}) {
   const [activeIndex, setActiveIndex] = useState(0);
-
+  const [heading, setHeadings] = useState([]);
+     useEffect(() => {
+       if (data?.content) {
+         const parser = new DOMParser();
+         const doc = parser.parseFromString(data.content, "text/html");
+         const headingElements = doc.querySelectorAll("h1, h2, h3, h4, h5, h6");
+   
+         const extracted = Array.from(headingElements).map((el) => ({
+           text: el.innerText,
+           id: el.id || el.innerText.toLowerCase().replace(/\s+/g, "-"), // auto id
+           tag: el.tagName.toLowerCase(),
+         }));
+   
+         setHeadings(extracted);
+       }
+     }, [data]);
   return (
     <aside className=" p-6 w-full md:w-[500px] gap-[10px] ">
       <h3 className="font-montserrat font-semibold text-[20px] text-[#252525] mb-5">
@@ -21,17 +26,17 @@ export default function IndSideLinks() {
       </h3>
 
       <ul className="flex flex-col gap-3">
-        {links.map((text, index) => (
+        {heading.map((text, index) => (
           <li key={index}>
             <button
               onClick={() => setActiveIndex(index)}
-              className={`font-montserrat text-left p-3 transition-all duration-200 text-[24px] leading-[100%] tracking-[0%] ${
+              className={`font-montserrat text-left p-3 transition-all duration-200 text-2xl  ${
                 activeIndex === index
                   ? "font-semibold text-[#3D22CF] border-l-[3px] border-[#3D22CF] pl-3"
-                  : "font-medium text-[#252525] hover:text-[#3D22CF] pl-[15px]"
+                  : "font-medium text-[#252525] hover:text-[#3D22CF] pl-3"
               }`}
             >
-              {text}
+              {text.text}
             </button>
           </li>
         ))}
