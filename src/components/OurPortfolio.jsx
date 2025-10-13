@@ -240,7 +240,7 @@ export default function OurPortfolio() {
           ))}
         </div>
         <a
-          href="/portfolio"
+          href="/us/portfolio"
           className="hidden xl:flex gap-8 items-center justify-center"
         >
           <p className="font-jost font-semibold text-lg leading-[120%] capitalize text-nowrap">
@@ -356,7 +356,7 @@ export default function OurPortfolio() {
         </div>
       </div>
        <a
-        href="/portfolio/design"
+        href="/us/portfolio/design"
         className="gap-8 items-center justify-end mr-2 relative -top-10  flex xl:hidden mt-14"
       >
         <p className="font-jost font-semibold  text-sm leading-[120%] capitalize ">

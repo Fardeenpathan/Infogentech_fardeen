@@ -6,7 +6,7 @@ import ContactForm from "@/components/ContactForm";
 import SubContact from "@/components/SubContact";
 import MoreContact from "@/components/MoreContact";
 import SubscribeContact from "@/components/SubscribeContact";
-const ContactUs = () => { 
+const contact = () => { 
   return (
     <div className="xl:mt-35 mt-10 subContainer mx-auto">
       <div className="flex flex-col-reverse xl:flex-row justify-between items-center">
@@ -83,4 +83,4 @@ const ContactUs = () => {
   );
 };
 
-export default ContactUs;
+export default contact;

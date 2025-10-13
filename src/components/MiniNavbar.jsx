@@ -239,21 +239,21 @@ export function MiniNavbar() {
               Blog
             </Link>
             <Link
-              href="/contactUs"
+              href="/contact"
               onClick={() => setIsOpen(false)}
               className="block hover:text-[#dfdcdc] font-bold text-[28px]  border-b-[1px]"
             >
               Contact us
             </Link>
             <Link
-              href="/aboutUs"
+              href="/about"
               onClick={() => setIsOpen(false)}
               className="block hover:text-[#dfdcdc] font-bold text-[28px] mb-2"
             >
               About us
             </Link>
             <Link
-              href="/contactUs"
+              href="/contact"
               onClick={() => setIsOpen(false)}
               className=" hover:text-[#dfdcdc] font-bold mt-2 text-[28px]  flex justify-center "
             >
