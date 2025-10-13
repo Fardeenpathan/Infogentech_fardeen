@@ -120,11 +120,11 @@ const Terms = () => {
               <h2 className="text-base sm:text-lg md:text-xl font-nontserrat">
                If you have questions about these Terms, please contact us:
               </h2>
-              {/* <p className="mt-3 text-base sm:text-lg md:text-xl font-nontserrat">
+              <p className="mt-3 text-base sm:text-lg md:text-xl font-nontserrat">
                 Email Address : Info@infogentech.com <br /> Phone Number :
                 +91 991-013-0963 <br /> Company Name & Address : Infogentech , model
                 Town
-              </p> */}
+              </p>
             </div>
           </article>
         </aside>

@@ -1,45 +1,20 @@
 
 const HelpCenter = () => {
   return (
-    <div className="mt-20 subContainer mx-auto p-3">
-      <div className="flex justify-between items-center">
-        <div className="flex gap-7">
-          <div className="flex justify-center items-center mb-40 flex-col">
-            <div className="relative w-12 h-12">
-              <img
-                src="/assist/video/pentagonVideo.gif"
-                alt="valueImg"
-                className=" w-full h-full object-cover"
-              />
-            </div>
-            <div className="w-0.5 h-28 rounded-full mt-4 bg-gradient-to-b from-purple-400 via-purple-500 to-purple-800 "></div>
-          </div>
-          <div className="flex flex-col ">
-            <p className="font-avalors font-normal text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-none bg-[linear-gradient(91.32deg,_#6A27FF_-32.61%,_#FFFFFF_19.98%,_#6A27FF_112.29%)] bg-clip-text text-transparent">
+    <div className=" subContainer mx-auto p-3">
+          <div className="flex flex-col mt-35">
+            <p className="font-avalors font-normal text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-none text-primary">
               Help Center
 
             </p>
-            <p className="font-avalors font-normal text-2xl sm:text-4xl md:text-5xl lg:text-6xl leading-none bg-[linear-gradient(91.32deg,_#6A27FF_-32.61%,_#FFFFFF_19.98%,_#6A27FF_112.29%)] bg-clip-text text-transparent mt-2">
+            <p className="font-avalors font-normal text-2xl sm:text-4xl md:text-5xl lg:text-6xl leading-none text-primary mt-2">
               We’re Here to Help, Anytime.
             </p>
             <p className="font-jost font-medium text-base sm:text-lg md:text-xl leading-relaxed mt-6">
               Welcome to the Infogentech Help Center, your dedicated hub for IT support, product guidance, and customer service. We know technology is the core of your business and we aim to ensure you always have the resources you need to maintain the integrity of your business.
             </p>
           </div>
-        </div>
-      </div>
-      <section className="flex gap-7 ">
-        <div className="flex  items-center mb-40 flex-col">
-          <div className="relative w-12 h-12">
-            <img
-              src="/assist/video/pentagonVideo.gif"
-              alt="valueImg"
-              className=" w-full h-full object-cover"
-            />
-          </div>
-          <div className="w-0.5 h-full rounded-full mt-4 bg-gradient-to-b from-purple-400 via-purple-500 to-purple-800"></div>
-        </div>
-        <aside className="flex flex-col p-4">
+ <aside className="flex flex-col p-4">
           <article className="space-y-6">
             <p className="font-avalors font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-[100%] tracking-[0.03em] capitalize mb-4">
               FAQs & Knowledge Base -
@@ -86,7 +61,6 @@ const HelpCenter = () => {
             </footer>
           </article>
         </aside>
-      </section>
     </div>
   );
 };
