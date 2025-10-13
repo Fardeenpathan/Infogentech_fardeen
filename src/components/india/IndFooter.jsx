@@ -15,10 +15,10 @@ export function IndFooter() {
           </p>
           <div className="w-full md:w-1/2 lg:w-1/3 flex justify-center md:justify-end space-x-5 font-jost mt-6">
             <Link
-              href="/portfolio"
+              href="/services/design"
               className="bg-white text-black  xl:py-5 lg:px-12.5  radius py-3.5 px-8 text-nowrap"
             >
-              View Portfolio
+              View Services
             </Link>
             <Link href="/contactUs">
               <Button
@@ -83,14 +83,14 @@ export function IndFooter() {
                       Home
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link
                       href="/portfolio"
                       className=" hover:text-gray-200"
                     >
                       Portfolio
                     </Link>
-                  </li>
+                  </li> */}
                   <li>
                     <Link
                       href="/blogs"
@@ -198,7 +198,7 @@ export function IndFooter() {
                   <li>
                     <Link
                       href="/faq"
-                      className=" hover:text-gray-200"
+                      className=" hover:text-gray-200 cursor-not-allowed"
                     >
                       FAQs
                     </Link>
@@ -206,7 +206,7 @@ export function IndFooter() {
                   <li className="block md:hidden">
                     <Link
                       href="/privacyPolicy"
-                      className=" hover:text-gray-200"
+                      className=" hover:text-gray-200 "
                     >
                       Privacy Policy
                     </Link>

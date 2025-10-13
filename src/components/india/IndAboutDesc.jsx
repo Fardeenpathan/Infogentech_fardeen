@@ -46,7 +46,7 @@ export default function IndAboutDesc() {
           description="We are located in US/India, one of the leading Web development and Digital Marketing companies for all your digital requirements. As we all know that your valuable audience is looking for you on various internet platforms. They need the same services but if you are not visible to them, they won't be able to get in touch with you. This is where our digital marketing company can help you."
         />
         <IndAboutQuality />
-        <a href="#contact">
+        <a href="/contactUs">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

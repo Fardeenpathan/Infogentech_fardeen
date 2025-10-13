@@ -1,10 +1,10 @@
 import Icons from "../ui/Icon";
 
 const items = [
-  { id: 1, name: "Best quality support", icon: "DesignInd" },
-  { id: 2, name: "Serve the best", icon: "DesignInd" },
-  { id: 3, name: "Money back guarantee", icon: "DesignInd" },
-  { id: 4, name: "Trusted Professionals", icon: "DesignInd" },
+  { id: 1, name: "Best quality support", icon: "Trust" },
+  { id: 2, name: "Serve the best", icon: "ServeBest" },
+  { id: 3, name: "Money back guarantee", icon: "Money" },
+  { id: 4, name: "Trusted Professionals", icon: "Trust" },
 ];
 
 export default function IndAboutQuality() {

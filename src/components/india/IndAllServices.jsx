@@ -36,7 +36,7 @@ const IndAllServices = ({ activeService }) => {
             name={service.icon}
             width="42"
             height="42"
-            className={activeService === service.label ? "text-white" : "text-primary"}
+            color={activeService === service.label ? "#ffffff" : "#8752FF"}
           />
           <p
             className={`font-montserrat text-2xl mb-2.5 mt-4 font-medium ${

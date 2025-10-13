@@ -62,7 +62,7 @@ export default function IndServices() {
                             <div className="bg-purple-50 rounded-full p-6">
                                 <div className="bg-purple-100 rounded-full p-6">
                                     <div className="bg-purple-200 rounded-full p-4">
-                                        <Icons name={service.icon} />
+                                        <Icons name={service.icon}/>
                                     </div>
                                 </div>
                             </div>

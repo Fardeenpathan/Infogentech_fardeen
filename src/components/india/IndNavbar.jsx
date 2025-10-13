@@ -23,7 +23,7 @@ export default function Navbar() {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -40, scale: 0.95 }}
       transition={{ duration: 0.2, ease: "easeInOut" }}
-      className="font-montserrat relative flex bg-transparent py-9 mx-auto justify-between items-center z-50 text-lg leading-6 gap-4 border-b border-[#8E8E8E]"
+      className={`font-montserrat relative flex bg-transparent py-9 mx-auto justify-between items-center z-50 text-lg leading-6 gap-4 ${pathname === '/' ? "border-b border-[#8E8E8E]" : ""}`}
     >
       <div className="flex items-center container justify-between mx-auto">
         <Link href="/" className="flex items-center gap-1.5 cursor-pointer">
@@ -59,10 +59,9 @@ export default function Navbar() {
           
        
       </div>
-
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/10 to-black/5 -z-10 opacity-30"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-[#312f2f59] -z-10" />
     </motion.nav>
     </div>
-    
+     
   );
 }
