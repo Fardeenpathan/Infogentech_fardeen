@@ -4,10 +4,12 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { ArrowLeft, Tag } from "lucide-react";
 import Link from "next/link";
+import IndSideLinks from "@/components/india/IndSideLinks";
+import IndSharePost from "@/components/india/IndSharePost";
+import IndBlogDetails from "@/components/india/IndBlogDetails";
 import dayjs from "dayjs";
-import SubscribeContact from "@/components/SubscribeContact";
 import Icons from "@/components/ui/Icon";
-
+import IndButton from "@/components/india/ui/IndButton";
 export default function BlogClient({ blog, slug }) {
   const [openId, setOpenId] = useState(null);
   const [faqData, setFaqData] = useState([]);
@@ -20,15 +22,9 @@ export default function BlogClient({ blog, slug }) {
   const fetchBlogFaqs = async () => {
     try {
       setLoadingFaqs(true);
-      
-      // console.log('Blog object:', blog);
-      // console.log('Blog FAQs:', blog.faqs);
-      
       let faqs = [];
-      
       if (blog.faqs && Array.isArray(blog.faqs)) {
         faqs = blog.faqs;
-        // console.log('FAQs from blog object:', faqs);
       } else {
         console.log('No FAQs found in blog object');
       }
@@ -43,8 +39,6 @@ export default function BlogClient({ blog, slug }) {
           const orderB = parseInt(b.order) || 0;
           return orderA - orderB;
         });
-
-      // console.log('Active FAQs:', activeFaqs);
       setFaqData(activeFaqs);
     } catch (error) {
       console.error('Error fetching blog FAQs:', error);
@@ -66,58 +60,70 @@ export default function BlogClient({ blog, slug }) {
   };
 
   return (
-    <div className="container mx-auto mt-24 text-wrap px-10">
-      <div className="mb-8">
-        <Link
-          href="/blogs"
-          className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
-        >
-          <ArrowLeft size={20} />
-          Back to Blogs
-        </Link>
-      </div>
-
-      <div className="flex justify-center items-center flex-col">
-        {blog.category?.name && (
-          <div className="flex items-center gap-1 text-sm text-gray-600 mb-4">
-            <Tag size={16} />
-            {blog.category.name}
+    <>
+      <div className="relative w-full h-200 flex items-center justify-start">
+        <Image
+          src="/assist/IndImg/blogBg.jpg"
+          alt="Blog"
+          width={1200}
+          height={660}
+          className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+        />
+        <div className="absolute top-0 left-0 w-full h-full bg-[#d4d1f4] opacity-95 -z-10" />
+          <Image
+          src="/assist/IndImg/blogdym.png"
+          alt="Blog"
+          width={1200}
+          height={660}
+          className="absolute top-50% -right-30 w-80 h-125 object-cover -z-10 -rotate-12 opacity-20"
+        />
+        <div className="relative z-10 container mx-auto flex flex-col md:flex-row items-center justify-between -top-14">
+          <div className="w-full text-center md:text-left space-y-4">
+          <div className="mb-20">
+          <Link
+            href="/blogs"
+            className="flex items-center gap-2 text-[#252525] hover:text-gray-400  font-montserrat"
+          >
+            <ArrowLeft size={20} />
+            Back to Blogs
+          </Link>
           </div>
-        )}
-
-        <h1 className="font-avalors text-[24px] font-normal leading-[100%] tracking-[0.03em] mt-6 text-center text-primary">
-          PUBLISHED {dayjs(blog.createdAt).format("DD MMM YYYY")}
-        </h1>
-
-        <h1 className="font-avalors text-[32px] font-normal leading-[100%] tracking-[0.03em] mt-6 text-center">
-          {blog.title}
-        </h1>
-
-        {blog.excerpt && (
-          <p className="font-jost font-medium text-lg leading-6 text-center align-middle mt-8 max-w-4xl">
-            {blog.excerpt}
-          </p>
-        )}
-
-        {blog.image && (
+            <p className="text-[#252525] font-montserrat font-semibold text-2xl">
+              20 Aug 2025
+            </p>
+            <h2 className="text-gray-400 text-3xl md:text-[46px] font-bold leading-[1.2] font-avalors tracking-wider mr-150">
+              WHAT IS GENERATIVE ENGINE OPTIMIZATION (GEO) AND HOW IT WORKS?
+            </h2>
+            <p className="text-[#252525] font-montserrat font-semibold text-2xl mt-15">
+              What Is Generative Engine Optimization
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="flex  justify-between container mx-auto gap-20 relative -top-24">
+        <div>
+             {blog.image && (
           <Image
             src={blog.image}
             alt={blog.title}
             width={1400}
             height={460}
-            className="mt-20 rounded-2xl h-[560px] object-cover"
+           className="w-full h-180 object-cover -z-10 rounded-3xl"
           />
         )}
-
-        <div
-          className="mt-18 font-kumbh-sans text-[20px] leading-[30px]  w-full"
+         <div
+          className="mt-18 font-montserrat text-[20px] leading-[30px]  w-full"
           dangerouslySetInnerHTML={{ __html: blog.content }}
         />
-
-        <div className="text-[#82828C] mt-12 border-2 container mx-auto px-10"></div>
+        <IndSharePost/>
+        </div>
+        <div className="min-w-112 flex flex-col gap-y-20">
+            <IndBlogDetails data={blog}/>
+           <IndSideLinks/>
+        </div>
+       
       </div>
-
-      {(loadingFaqs || faqData.length > 0) && (
+       {(loadingFaqs || faqData.length > 0) && (
         <section className="mt-10">
           <h2 className="font-jost text-[30px] font-normal leading-[38px] text-primary">
             FAQs
@@ -161,8 +167,6 @@ export default function BlogClient({ blog, slug }) {
           </div>
         </section>
       )}
-
-      <SubscribeContact />
-    </div>
+    </>
   );
 }

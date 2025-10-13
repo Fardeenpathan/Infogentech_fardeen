@@ -15,7 +15,7 @@ export default function IndSideLinks() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <aside className="bg-white p-6 rounded-[20px] shadow-sm border border-gray-100 w-full md:w-[500px] gap-[10px] ">
+    <aside className=" p-6 w-full md:w-[500px] gap-[10px] ">
       <h3 className="font-montserrat font-semibold text-[20px] text-[#252525] mb-5">
         In this article
       </h3>

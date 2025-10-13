@@ -179,7 +179,40 @@ const ContactForm = () => {
                       />
                     </div>
                   </div>
-
+                    <div>
+                    <label className="block text-gray-700 text-sm mb-1">
+                      Product Question
+                    </label>
+                    <select
+                      name="productQuestion"
+                      value={formData.productQuestion}
+                      onChange={handleInputChange}
+                      className="w-full  py-2  border-b border-gray-300 bg-transparent  focus:outline-none focus:border-[#8752FF]"
+                      required
+                    >
+                      <option value="" >
+                        Select
+                      </option>
+                      <option value="General Inquiry" >
+                        General Inquiry
+                      </option>
+                      <option
+                        value="Technical Support"
+                        
+                      >
+                        Technical Support
+                      </option>
+                      <option value="Pricing" >
+                        Pricing
+                      </option>
+                      <option value="Partnership" >
+                        Partnership
+                      </option>
+                      <option value="Other" >
+                        Other
+                      </option>
+                    </select>
+                  </div>
                   <div>
                     <label className="block text-gray-700 text-sm mb-1">
                       Message

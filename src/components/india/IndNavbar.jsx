@@ -6,12 +6,16 @@ import IndButton from "./ui/IndButton";
 export default function Navbar() {
   const pathname = usePathname();
 
-  const linkClasses = (href) =>
-    `transition-colors cursor-pointer ${
-      pathname.startsWith(href)
-        ? "text-primary font-semibold"
-        : "text-white hover:text-primary"
-    }`;
+ const linkClasses = (href) => {
+  const isActive =
+    href === "/"
+      ? pathname === "/"
+      : pathname.startsWith(href);
+
+  return `transition-colors cursor-pointer ${
+    isActive ? "text-primary font-semibold" : "text-white hover:text-primary"
+  }`;
+};
 
   return (
     <div  className="absolute w-full mx-auto"><motion.nav
@@ -36,7 +40,7 @@ export default function Navbar() {
             <Link href="/aboutUs" className={linkClasses("/aboutUs")}>
             About us
           </Link>
-          <Link href="/services/design" className={linkClasses("/Services")}>
+          <Link href="/services/design" className={linkClasses("/services/design")}>
             Services
           </Link>
           <Link href="/blogs" className={linkClasses("/blogs")}>
