@@ -42,7 +42,7 @@ export async function middleware(request) {
       
       const commonRoutes = [
         '/about',
-        '/blog',
+        '/blogs',
         '/portfolio',
         '/services',
         '/faq',

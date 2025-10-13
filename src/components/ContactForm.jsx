@@ -6,7 +6,7 @@ import PurpleCheckbox from "./ui/Checkbox";
 import GradientButton from "./ui/GradientButton";
 import config from "@/config";
 import adminApiService from "@/lib/adminApi";
-const contactUsa = [
+const contacta = [
   {
     country: "USA",
     info: [
@@ -143,7 +143,7 @@ const ContactForm = () => {
               </p>
 
               <div className="mt-20 flex flex-col gap-12.5">
-                {contactUsa.map((region, i) => (
+                {contacta.map((region, i) => (
                   <div key={i}>
                     <div className="flex flex-col gap-6.5">
                       {region.info.map((item, index) => (

@@ -10,7 +10,7 @@ const stats = [
   { value: "25", suffix: "+", label: "Professional Teams" },
   { value: "80", suffix: "%", label: "Active Client" },
 ];
-const AboutUs = () => {
+const about = () => {
   return (
     <>
       <div className=" h-85 md:mt-30  mt-4 md:bg-[url('/assist/img/aboutBg.png')] bg-[url('/assist/img/subAbout.png')] container mx-auto relative md:px-10 px-4 bg-no-repeat">
@@ -74,4 +74,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default about;
