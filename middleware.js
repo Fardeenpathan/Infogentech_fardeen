@@ -41,7 +41,7 @@ export async function middleware(request) {
       const usEquivalent = `/us${pathname}`;
       
       const commonRoutes = [
-        '/aboutUs',
+        '/about',
         '/blogs',
         '/portfolio',
         '/services',
@@ -49,7 +49,7 @@ export async function middleware(request) {
         '/helpCenter',
         '/privacyPolicy',
         '/terms',
-        '/contactUs'
+        '/contact'
       ];
       
       const hasUSEquivalent = commonRoutes.some(route => 

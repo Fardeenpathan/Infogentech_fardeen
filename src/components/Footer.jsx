@@ -15,12 +15,12 @@ export function Footer() {
           </p>
           <div className="w-full md:w-1/2 lg:w-1/3 flex justify-center md:justify-end space-x-5 font-jost mt-6">
             <Link
-              href="/portfolio"
+              href="/us/portfolio"
               className="bg-white text-black  xl:py-5 lg:px-12.5  radius py-3.5 px-8 text-nowrap"
             >
               View Portfolio
             </Link>
-            <Link href="/contactUs">
+            <Link href="/us/contact">
               <Button
                 text="Contact Us"
                 className="!py-4 !px-10 xl:!py-5.5 lg:!px-12.5 text-nowrap"
@@ -79,13 +79,13 @@ export function Footer() {
                 <h3 className="text-lg font-semibold mb-4 font-jost">Links</h3>
                 <ul className="space-y-3.5">
                   <li>
-                    <Link href="/" className="text-gray-400 hover:text-white">
+                    <Link href="/us" className="text-gray-400 hover:text-white">
                       Home
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="/portfolio"
+                      href="/us/portfolio"
                       className="text-gray-400 hover:text-white"
                     >
                       Portfolio
@@ -93,7 +93,7 @@ export function Footer() {
                   </li>
                   <li>
                     <Link
-                      href="/blogs"
+                      href="/us/blogs"
                       className="text-gray-400 hover:text-white"
                     >
                       Blog
@@ -101,7 +101,7 @@ export function Footer() {
                   </li>
                   <li>
                     <Link
-                      href="/contactUs"
+                      href="/us/contact"
                       className="text-gray-400 hover:text-white"
                     >
                       Contact us
@@ -109,7 +109,7 @@ export function Footer() {
                   </li>
                   <li>
                     <Link
-                      href="/aboutUs"
+                      href="/us/about"
                       className="text-gray-400 hover:text-white"
                     >
                       About us
@@ -125,7 +125,7 @@ export function Footer() {
                 <ul className="space-y-3.5">
                   <li>
                     <Link
-                      href="/services/design"
+                      href="/us/services/design"
                       className="text-gray-400 hover:text-white"
                     >
                       Web / App Design
@@ -133,7 +133,7 @@ export function Footer() {
                   </li>
                   <li>
                     <Link
-                      href="/services/development"
+                      href="/us/services/development"
                       className="text-gray-400 hover:text-white"
                     >
                       Development
@@ -141,7 +141,7 @@ export function Footer() {
                   </li>
                   <li>
                     <Link
-                      href="/services/design"
+                      href="/us/services/design"
                       className="text-gray-400 hover:text-white"
                     >
                       Branding
@@ -149,7 +149,7 @@ export function Footer() {
                   </li>
                   <li>
                     <Link
-                      href="/services/design"
+                      href="/us/services/design"
                       className="text-gray-400 hover:text-white"
                     >
                       Graphic Design
@@ -157,7 +157,7 @@ export function Footer() {
                   </li>
                   <li>
                     <Link
-                      href="/services/content"
+                      href="/us/services/content"
                       className="text-gray-400 hover:text-white "
                     >
                       Video & Photo
@@ -165,7 +165,7 @@ export function Footer() {
                   </li>
                   <li>
                     <Link
-                      href="/helpCenter"
+                      href="/us/helpCenter"
                       className="text-gray-400 hover:text-white"
                     >
                       Help Center
@@ -189,7 +189,7 @@ export function Footer() {
                   </li>
                   <li>
                     <Link
-                      href="/contactUs"
+                      href="/us/contact"
                       className="text-gray-400 hover:text-white"
                     >
                       Contact Support
@@ -197,7 +197,7 @@ export function Footer() {
                   </li>
                   <li>
                     <Link
-                      href="/faq"
+                      href="/us/faq"
                       className="text-gray-400 hover:text-white"
                     >
                       FAQs
@@ -205,7 +205,7 @@ export function Footer() {
                   </li>
                   <li className="block md:hidden">
                     <Link
-                      href="/privacyPolicy"
+                      href="/us/privacyPolicy"
                       className="text-gray-400 hover:text-white"
                     >
                       Privacy Policy
@@ -213,7 +213,7 @@ export function Footer() {
                   </li>
                   <li className="block md:hidden">
                     <Link
-                      href="/terms"
+                      href="/us/terms"
                       className="text-gray-400 hover:text-white"
                     >
                       Terms & Conditions
@@ -231,10 +231,10 @@ export function Footer() {
             &copy; {new Date().getFullYear()} Infogentech. All rights reserved.
           </p>
           <div className="space-x-4  md:block hidden">
-            <Link href="/privacyPolicy" className="hover:text-white ">
+            <Link href="/us/privacyPolicy" className="hover:text-white ">
               Privacy Policy
             </Link>
-            <Link href="/terms" className="hover:text-white">
+            <Link href="/us/terms" className="hover:text-white">
               Terms & Conditions
             </Link>
           </div>

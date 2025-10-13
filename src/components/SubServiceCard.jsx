@@ -55,7 +55,7 @@ const SubServiceCard = ({ subService }) => {
 
       <a
         className="flex justify-end absolute right-5 bottom-[10px]"
-        href="/contactUs"
+        href="/contact"
         aria-label={`Contact about ${subService.title}`}
       >
         <motion.span

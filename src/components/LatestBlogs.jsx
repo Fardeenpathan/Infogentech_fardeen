@@ -40,7 +40,7 @@ export default function LatestBlogs() {
         subheading="Explore Ideas, Trends, and Strategies Shaping Digital Success."
       />
       <a
-        href="#"
+        href="/us/blogs"
         className="gap-8 items-center justify-end mr-10 relative -top-10 hidden xl:flex"
       >
         <p className="font-jost font-semibold text-lg leading-[120%] capitalize ">
@@ -56,7 +56,7 @@ export default function LatestBlogs() {
         </div>
       </div>
       <a
-        href="/blogs"
+        href="/us/blogs"
         className="gap-8 items-center justify-end mr-2 relative -top-10  flex xl:hidden mt-14"
       >
         <p className="font-jost font-semibold  text-sm leading-[120%] capitalize ">

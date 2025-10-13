@@ -20,7 +20,7 @@ export function IndFooter() {
             >
               View Services
             </Link>
-            <Link href="/contactUs">
+            <Link href="/contact">
               <Button
                 text="Contact Us"
                 className="!py-4 !px-10 xl:!py-5.5 lg:!px-12.5 text-nowrap"
@@ -189,7 +189,7 @@ export function IndFooter() {
                   </li>
                   <li>
                     <Link
-                      href="/contactUs"
+                      href="/contact"
                       className=" hover:text-gray-200"
                     >
                       Contact Support

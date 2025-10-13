@@ -26,7 +26,7 @@ export default function MoreContact() {
               </p>
             </div>
           </a>
-          <a href="/aboutUs" className="p-[1px] rounded-lg bg-[linear-gradient(106.97deg,#492B8D_10.89%,#5F439D_100.67%)] inline-block">
+          <a href="/about" className="p-[1px] rounded-lg bg-[linear-gradient(106.97deg,#492B8D_10.89%,#5F439D_100.67%)] inline-block">
             <div className="rounded-lg bg-[#15152a] p-6 w-[313px] h-[173px]">
               <div className="bg-[#262626] px-5 py-2.5 flex gap-2 w-fit radius">
                 <Icons name="People" />
