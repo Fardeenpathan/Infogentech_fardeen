@@ -3,7 +3,6 @@ import { HeroSection } from "@/components/hero-section";
 import ServicesSection from "@/components/ServicesSection";
 import { StatsSection } from "@/components/StatsSection";
 import OurValues from "@/components/OurValues";
-import WhatMakesStandOut from "@/components/WhatMakesStandOut";
 import ScheduleCall from "@/components/ScheduleCall";
 import StrategicProcess from "@/components/StrategicProcess";
 import OurPortfolio from "@/components/OurPortfolio";
@@ -19,7 +18,6 @@ export default function Home() {
       </div>
       <div className="container mx-auto md:px-10 px-4 ">
         <OurValues />
-        {/* <WhatMakesStandOut /> */}
         <ScheduleCall />
         <StrategicProcess />
         <OurPortfolio />
