@@ -246,7 +246,7 @@ export function MiniNavbar() {
               Contact us
             </Link>
             <Link
-              href="/aboutUs"
+              href="/about"
               onClick={() => setIsOpen(false)}
               className="block hover:text-[#dfdcdc] font-bold text-[28px] mb-2"
             >

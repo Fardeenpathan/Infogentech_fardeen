@@ -96,8 +96,8 @@ export function Navbar() {
                 </AnimatePresence>
               </div>
               <Link
-                href="/portfolio/design"
-                className={linkClasses("/portfolio/design")}
+                href="/us/portfolio/design"
+                className={linkClasses("/us/portfolio/design")}
               >
                 Portfolio
               </Link>
@@ -105,17 +105,17 @@ export function Navbar() {
           </div>
           <div className="flex items-center border border-[#8E8E8E] rounded-md pr-3.75 text-nowrap">
             <div className="md:flex items-center space-x-12.5 xl:px-8.5 lg:px-6 py-4.5 text-lg md:text-sm font-jost px-2">
-              <Link href="/blog" className={linkClasses("/blog")}>
+              <Link href="/us/blogs" className={linkClasses("/us/blogs")}>
                 Blogs
               </Link>
-              <Link href="/contact" className={linkClasses("/contact")}>
+              <Link href="/us/contact" className={linkClasses("/us/contact")}>
                 Contact us
               </Link>
-              <Link href="/about" className={linkClasses("/about")}>
+              <Link href="/us/about" className={linkClasses("/us/about")}>
                 About us
               </Link>
             </div>
-            <Link href="/contact">
+            <Link href="/us/contact">
               <GradientButton className="!text-sm md:hidden lg:block" paddingX="px-3" paddingY="py-2">Free Consultation</GradientButton>
             </Link>
           </div>
