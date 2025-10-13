@@ -55,7 +55,9 @@ const IndTestomonial = () => {
       <IndMidHeader
         title="Client Testimonials"
         subtitle="What are they talking about?"
+        desc=""
       />
+      
       <motion.div
         className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 mt-12 justify-items-center"
         variants={containerVariants}

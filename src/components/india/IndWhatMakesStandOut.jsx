@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Icons from "../ui/Icon"; // assuming you use your custom Icons component
-import IndTopicHeader from "../IndTopicHeader";
+import IndMidHeader from "@/components/india/IndMidHeader";
 
 export default function WhatMakesStandOut() {
   const cards = [
@@ -28,17 +28,15 @@ export default function WhatMakesStandOut() {
   ];
 
   return (
-    <section className="w-full max-w-[1616px] mx-auto px-5 sm:px-8 md:px-10 lg:px-16 py-12 bg-transparent">
-      <div className="flex justify-between items-center">
-      <IndTopicHeader 
+    <section className="w-full container mx-auto px-5 sm:px-8 md:px-10 lg:px-16 py-12 bg-transparent">
+      <IndMidHeader
         title="What Makes"
         subtitle="Infogentech Stand Out in Digital Marketing"
-        description={`We are a worldwide agency that manages higher-level digital marketing for clients around the globe. Our highly qualified and experienced team gives quality output. Customer satisfaction and long-term success are what we aim to achieve for each client that we have. We assure effective growth across the globe and would provide services without fear. Our vast client and sector experience shines through in performance.
-          
-          Through the years, we have groomed brands as an IT solutions firm. Do not let your competitors overshadow your web presence. Our experts will study trends and optimise your brand visibility. Customized SEO techniques give us the power to measure real success. Let our IT experts work on expanding your business.`}
+        description="We are a worldwide agency that manages higher-level digital marketing for clients around the globe. Our highly qualified and experienced team gives quality output. Customer satisfaction and long-term success are what we aim to achieve for each client that we have. We assure effective growth across the globe and would provide services without fear. Our vast client and sector experience shines through in performance."
+
       />
-      </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-10">
         {cards.map((card, index) => (
           <div
             key={index}

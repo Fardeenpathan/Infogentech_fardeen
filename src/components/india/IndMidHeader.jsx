@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-export default function IndMidHeader({ title, subtitle, className }) {
+export default function IndMidHeader({ title, subtitle, className , description=""}) {
     return (
         <motion.div
             className={`flex justify-center items-center flex-col gap-4 ${className}`}
@@ -30,6 +30,15 @@ export default function IndMidHeader({ title, subtitle, className }) {
             >
                 {subtitle}
             </motion.p>
+         <motion.p
+                        className="font-montserrat font-medium text-lg leading-[150%] tracking-[-0.02em]  py-4"
+                        initial={{ opacity: 0, x: 50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6, delay: 0.6 }}
+                        viewport={{ once: true }}
+                    >
+                        {description}
+                    </motion.p>
         </motion.div>
     );
 }

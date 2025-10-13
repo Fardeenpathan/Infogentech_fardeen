@@ -14,12 +14,12 @@ export default function Home() {
       <IndHeroSection />
       <IndServices/>
       <IndAboutHome/>
+      <IndWhatMakesStandOut/>    
       <IndHowWeWork/>
       <IndConsutation/>
       <IndWhyChooseUs/>
       <IndTestomonial/>
       <IndFaqsHome/>
-      <IndWhatMakesStandOut/>     
     </main>
   );
 }
