@@ -4,12 +4,13 @@ import { useRouter, useParams } from 'next/navigation';
 import { 
   Save, ArrowLeft, Plus, Eye, Settings, Image as ImageIcon, 
   Tag, Layout, Calendar, User, Clock, Star, Globe, FileText,
-  Upload, X, Copy, RotateCcw, Maximize2, Minimize2, Edit3
+  Upload, X, Copy, RotateCcw, Maximize2, Minimize2, Edit3, HelpCircle
 } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import { toast } from 'react-hot-toast';
 import adminApiService from '@/lib/adminApi';
 import RichTextEditor from '@/components/admin/RichTextEditor';
+import BlogFAQManager from '@/components/admin/BlogFAQManager';
 import Link from 'next/link';
 
 export default function BlogFormPage({ mode = 'create' }) {
@@ -24,6 +25,7 @@ export default function BlogFormPage({ mode = 'create' }) {
   const [isAutoSaving, setIsAutoSaving] = useState(false);
   const [wordCount, setWordCount] = useState(0);
   const autoSaveRef = useRef(null);
+  const faqManagerRef = useRef(null);
   const isEditMode = mode === 'edit';
   const [slugEdited, setSlugEdited] = useState(false);
   
@@ -47,6 +49,7 @@ export default function BlogFormPage({ mode = 'create' }) {
   });
   const [featuredImageFile, setFeaturedImageFile] = useState(null);
   const [tagInput, setTagInput] = useState('');
+  const [blogFaqs, setBlogFaqs] = useState([]);
 
   useEffect(() => {
     if (autoSaveRef.current) {
@@ -122,6 +125,12 @@ export default function BlogFormPage({ mode = 'create' }) {
           keywords: []
         }
       });
+      
+      // Set blog FAQs for edit mode
+      if (blog.faqs && Array.isArray(blog.faqs)) {
+        setBlogFaqs(blog.faqs);
+      }
+      
       setSlugEdited(false);
     } catch (error) {
       console.error('Error loading blog:', error);
@@ -389,9 +398,18 @@ export default function BlogFormPage({ mode = 'create' }) {
     try {
       const blocks = convertHtmlToBlocks(formData.content);
       
+      let faqs = [];
+      if (faqManagerRef.current && faqManagerRef.current.getFaqsForSave) {
+        faqs = faqManagerRef.current.getFaqsForSave();
+        console.log('FAQs being sent to API:', faqs);
+      } else {
+        console.log('FAQ manager ref not available or getFaqsForSave method missing');
+      }
+      
       const blogData = {
         ...formData,
         blocks: blocks, // Add blocks for backend
+        faqs: faqs, 
         status,
         publishedAt: status === 'published' ? new Date() : null
       };
@@ -422,6 +440,7 @@ export default function BlogFormPage({ mode = 'create' }) {
   const tabs = [
     { id: 'content', label: 'Content', icon: FileText },
     { id: 'settings', label: 'Settings', icon: Settings },
+    { id: 'faqs', label: 'FAQs', icon: HelpCircle },
     { id: 'seo', label: 'SEO', icon: Globe },
     { id: 'media', label: 'Media', icon: ImageIcon }
   ];
@@ -741,6 +760,17 @@ export default function BlogFormPage({ mode = 'create' }) {
                         placeholder="keyword1, keyword2, keyword3"
                       />
                     </div>
+                  </div>
+                )}
+
+                {activeTab === 'faqs' && (
+                  <div className="space-y-6">
+                    <BlogFAQManager 
+                      ref={faqManagerRef}
+                      blogId={isEditMode ? params?.id : null}
+                      isEditMode={isEditMode}
+                      initialFaqs={blogFaqs}
+                    />
                   </div>
                 )}
 

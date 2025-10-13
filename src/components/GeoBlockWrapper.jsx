@@ -5,18 +5,32 @@ import { usePathname } from 'next/navigation';
 import { useDispatch } from "react-redux";
 import { setCountryCode } from "../redux/countryCodeSlice";
 import Loader from "./loader/Loader";
-const ALLOWED_COUNTRIES = ['IN', 'CA', 'US'];
+// India-only countries for main app
+const INDIA_ALLOWED_COUNTRIES = ['IN'];
+// Foreign countries for /us routes  
+const US_ALLOWED_COUNTRIES = ['US', 'CA', 'UK', 'DE', 'AU', 'FR', 'NZ', 'SG'];
 
-const BlockedPage = () => (
+const BlockedPage = ({ isUSRoute = false }) => (
   <div className="min-h-screen bg-gradient-to-br from-red-900 via-red-800 to-red-900 flex items-center justify-center p-4">
     <div className="max-w-md w-full bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-8 text-center">
       <div className="text-6xl mb-6">🚫</div>
       <h1 className="text-3xl font-bold text-white mb-4">Access Restricted</h1>
-      <p className="text-red-100 mb-6 text-lg">This website is only available in:</p>
+      <p className="text-red-100 mb-6 text-lg">
+        {isUSRoute 
+          ? "This section is only available for Indian users."
+          : "This website is not available in your region."
+        }
+      </p>
       <div className="flex justify-center space-x-4 text-4xl mb-6">
-        <span title="India">🇮🇳</span>
-        <span title="Canada">🇨🇦</span>
-        <span title="United States">US</span>
+        {isUSRoute ? (
+          <span title="India">🇮🇳</span>
+        ) : (
+          <>
+            <span title="United States">🇺🇸</span>
+            <span title="Canada">🇨🇦</span>
+            <span title="United Kingdom">🇬🇧</span>
+          </>
+        )}
       </div>
       <p className="text-red-200 text-sm">We apologize for any inconvenience caused.</p>
     </div>
@@ -87,28 +101,24 @@ export default function GeoBlockWrapper({ children }) {
           return;
         }
 
-        // Local development testing - multiple ways to test
         if (process.env.NODE_ENV === 'development') {
-          // Method 1: Use NEXT_PUBLIC_TEST_COUNTRY env variable
-          let testCountry = process.env.NEXT_PUBLIC_TEST_COUNTRY;
+          let testCountry = process.env.NEXT_PUBLIC_TEST_COUNTRY || 'IN';
+          testCountry = testCountry.toUpperCase();
           
-          // Method 2: Use URL parameter for quick testing (?testCountry=US)
-          if (typeof window !== 'undefined') {
-            const urlParams = new URLSearchParams(window.location.search);
-            const urlCountry = urlParams.get('testCountry');
-            if (urlCountry) {
-              testCountry = urlCountry;
-              console.log(`🔗 URL test parameter detected: ${urlCountry}`);
-            }
+          const isUSRoute = pathname && pathname.startsWith('/us');
+          
+          let allowed = false;
+          
+          if (isUSRoute) {
+            // On /us routes, only allow foreign countries
+            allowed = US_ALLOWED_COUNTRIES.includes(testCountry);
+          } else {
+            // On main routes, only allow Indian users
+            allowed = INDIA_ALLOWED_COUNTRIES.includes(testCountry);
           }
           
-          // Default to India if no test country specified
-          testCountry = (testCountry || 'IN').toUpperCase();
-          const allowed = ALLOWED_COUNTRIES.includes(testCountry);
-          
           if (!mounted) return;
-          console.log(`🧪 LOCAL TEST MODE: ${testCountry} => ${allowed ? 'ALLOWED' : 'BLOCKED'}`);
-          console.log(`💡 To test other countries: ?testCountry=US or set NEXT_PUBLIC_TEST_COUNTRY=US`);
+          console.log(`🧪 GeoBlock: ${testCountry} on ${isUSRoute ? '/us route' : 'main route'} => ${allowed ? 'ALLOWED' : 'BLOCKED'}`);
           
           // Store country in Redux
           dispatch(setCountryCode(testCountry));
@@ -125,18 +135,28 @@ export default function GeoBlockWrapper({ children }) {
 
         if (geo && geo.code) {
           const code = String(geo.code).toUpperCase();
-          const allowed = ALLOWED_COUNTRIES.includes(code);
+          const isUSRoute = pathname && pathname.startsWith('/us');
           
-          console.log(`🌍 Geo detected: ${code} (${geo.name}) => ${allowed ? 'ALLOWED' : 'BLOCKED'}`);
+          let allowed = false;
+          
+          if (isUSRoute) {
+            // On /us routes, only allow foreign countries
+            allowed = US_ALLOWED_COUNTRIES.includes(code);
+          } else {
+            // On main routes, only allow Indian users
+            allowed = INDIA_ALLOWED_COUNTRIES.includes(code);
+          }
+          
+          console.log(`🌍 Geo detected: ${code} (${geo.name}) on ${isUSRoute ? '/us route' : 'main route'} => ${allowed ? 'ALLOWED' : 'BLOCKED'}`);
           
           // Store country in Redux for contact page
           dispatch(setCountryCode(code));
           setIsAllowed(allowed);
         } else {
-          // Fallback: allow access but set unknown country
-          console.warn('⚠️ Geo detection failed — allowing by default with unknown country');
+          // Fallback: block access if geo detection fails
+          console.warn('⚠️ Geo detection failed — blocking access for security');
           dispatch(setCountryCode('UNKNOWN'));
-          setIsAllowed(true);
+          setIsAllowed(false);
         }
       } catch (err) {
         console.error('❌ Error in geo checking:', err);
@@ -156,7 +176,10 @@ export default function GeoBlockWrapper({ children }) {
      return <Loader />;
   }
 
-  if (!isAllowed) return <BlockedPage />;
+  if (!isAllowed) {
+    const isUSRoute = pathname && pathname.startsWith('/us');
+    return <BlockedPage isUSRoute={isUSRoute} />;
+  }
 
   return children;
 }

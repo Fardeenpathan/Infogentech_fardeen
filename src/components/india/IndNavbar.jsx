@@ -30,11 +30,14 @@ export default function Navbar() {
         </Link>
 
         <div className="space-x-20">
-          <Link href="/services" className={linkClasses("/services")}>
-            Services
+          <Link href="/" className={linkClasses("/")}>
+            Home
           </Link>
-          <Link href="/portfolio" className={linkClasses("/portfolio")}>
-            Portfolio
+            <Link href="/aboutUs" className={linkClasses("/aboutUs")}>
+            About us
+          </Link>
+          <Link href="/services/design" className={linkClasses("/Services")}>
+            Services
           </Link>
           <Link href="/blogs" className={linkClasses("/blogs")}>
             Blogs
@@ -42,9 +45,7 @@ export default function Navbar() {
           <Link href="/contactUs" className={linkClasses("/contactUs")}>
             Contact us
           </Link>
-          <Link href="/aboutUs" className={linkClasses("/aboutUs")}>
-            About us
-          </Link>
+        
         </div>
         <a href="#contact"><IndButton
              variant="primary"

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ArrowLeft, Tag } from "lucide-react";
 import Link from "next/link";
 import dayjs from "dayjs";
@@ -10,29 +10,59 @@ import Icons from "@/components/ui/Icon";
 
 export default function BlogClient({ blog, slug }) {
   const [openId, setOpenId] = useState(null);
+  const [faqData, setFaqData] = useState([]);
+  const [loadingFaqs, setLoadingFaqs] = useState(true);
 
-  const faqData = [
-    {
-      id: 1,
-      question: "What types of hosting plans do you offer?",
-      answer:
-        "We offer shared hosting, VPS hosting, dedicated server hosting, and cloud hosting plans.",
-    },
-    {
-      id: 2,
-      question: "What is the uptime guarantee for your hosting services?",
-      answer: "We guarantee an uptime of 99.9% for all our hosting services.",
-    },
-    {
-      id: 3,
-      question: "Do you provide 24/7 customer support?",
-      answer:
-        "Yes, our support team is available 24/7 via live chat, email, and phone.",
-    },
-  ];
+  useEffect(() => {
+    fetchBlogFaqs();
+  }, [blog._id]);
 
-  const toggleFAQ = (id) => {
-    setOpenId((prevId) => (prevId === id ? null : id));
+  const fetchBlogFaqs = async () => {
+    try {
+      setLoadingFaqs(true);
+      
+      // console.log('Blog object:', blog);
+      // console.log('Blog FAQs:', blog.faqs);
+      
+      let faqs = [];
+      
+      if (blog.faqs && Array.isArray(blog.faqs)) {
+        faqs = blog.faqs;
+        // console.log('FAQs from blog object:', faqs);
+      } else {
+        console.log('No FAQs found in blog object');
+      }
+
+      const activeFaqs = faqs
+        .filter(faq => {
+          const isActive = faq.isActive;
+          return isActive !== false && isActive !== 'false' && isActive !== '0';
+        })
+        .sort((a, b) => {
+          const orderA = parseInt(a.order) || 0;
+          const orderB = parseInt(b.order) || 0;
+          return orderA - orderB;
+        });
+
+      // console.log('Active FAQs:', activeFaqs);
+      setFaqData(activeFaqs);
+    } catch (error) {
+      console.error('Error fetching blog FAQs:', error);
+      if (blog.faqs && Array.isArray(blog.faqs)) {
+        const activeFaqs = blog.faqs
+          .filter(faq => faq.isActive !== false)
+          .sort((a, b) => (a.order || 0) - (b.order || 0));
+        setFaqData(activeFaqs);
+      } else {
+        setFaqData([]);
+      }
+    } finally {
+      setLoadingFaqs(false);
+    }
+  };
+
+  const toggleFAQ = (faqId) => {
+    setOpenId(openId === faqId ? null : faqId);
   };
 
   return (
@@ -87,34 +117,50 @@ export default function BlogClient({ blog, slug }) {
         <div className="text-[#82828C] mt-12 border-2 container mx-auto px-10"></div>
       </div>
 
-      <section className="mt-10">
-        <h2 className="font-jost text-[30px] font-normal leading-[38px] text-primary">
-          FAQs
-        </h2>
-        <div className="rounded-lg">
-          {faqData.map((faq) => (
-            <div
-              key={faq.id}
-              className="border-b border-[#0A071B]/10 linearGradientFaq mb-2"
-            >
-              <button
-                className="question-btn flex w-full items-start gap-x-5 justify-between rounded-lg text-left text-lg font-bold focus:outline-none p-5"
-                onClick={() => toggleFAQ(faq.id)}
-              >
-                <div>{faq.question}</div>
-                <div className="cursor-pointer">
-                  <Icons name={openId === faq.id ? "Minus" : "Add"} />
-                </div>
-              </button>
-              {openId === faq.id && (
-                <div className="answer flex w-full items-start gap-x-5 justify-between rounded-lg text-left text-lg font-bold focus:outline-none p-5">
-                  {faq.answer}
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-      </section>
+      {(loadingFaqs || faqData.length > 0) && (
+        <section className="mt-10">
+          <h2 className="font-jost text-[30px] font-normal leading-[38px] text-primary">
+            FAQs
+          </h2>
+          <div className="rounded-lg">
+            {loadingFaqs ? (
+              <div className="flex justify-center items-center py-8">
+                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+                <span className="ml-2 text-gray-600">Loading FAQs...</span>
+              </div>
+            ) : faqData.length > 0 ? (
+              faqData.map((faq, index) => {
+                const faqId = faq._id || faq.id || index;
+                return (
+                  <div
+                    key={faqId}
+                    className="border-b border-[#0A071B]/10 linearGradientFaq mb-2"
+                  >
+                    <button
+                      className="question-btn flex w-full items-start gap-x-5 justify-between rounded-lg text-left text-lg font-bold focus:outline-none p-5"
+                      onClick={() => toggleFAQ(faqId)}
+                    >
+                      <div>{faq.question}</div>
+                      <div className="cursor-pointer">
+                        <Icons name={openId === faqId ? "Minus" : "Add"} />
+                      </div>
+                    </button>
+                    {openId === faqId && (
+                      <div className="answer flex w-full items-start gap-x-5 justify-between rounded-lg text-left text-lg font-bold focus:outline-none p-5">
+                        {faq.answer}
+                      </div>
+                    )}
+                  </div>
+                );
+              })
+            ) : (
+              <div className="text-center py-8 text-gray-500">
+                No FAQs available for this blog.
+              </div>
+            )}
+          </div>
+        </section>
+      )}
 
       <SubscribeContact />
     </div>

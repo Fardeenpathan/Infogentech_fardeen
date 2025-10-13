@@ -2,148 +2,89 @@
 import { useState, useEffect } from "react";
 import Icons from "@/components/ui/Icon";
 import Loader from "@/components/loader/Loader";
+import adminApiService from "@/lib/adminApi";
+
 const categoryList = [
   { key: "general", label: "General & Services" },
   { key: "pricing", label: "Pricing & Timeline" },
   { key: "support", label: "Support & Maintenance" },
+  { key: "technical", label: "Technical" },
+  { key: "process", label: "Process & Workflow" }
 ];
-
-const mockApiResponse = {
-  general: [
-    {
-      id: 1,
-      question: "How long does it take to see results from digital marketing?",
-      answer:
-        "Outcomes rely on the approach. Paid advertisements are able to provide instant leads and organic growth whereas SEO normally requires 3-6 months. Consistency, quality content and optimization can help in the growth of a business in the long-term.",
-    },
-    {
-      id: 2,
-      question: "Can digital marketing help improve my brand’s reputation?",
-      answer: "Yes. Digital marketing improves your brand’s image by establishing and reaching out to your audience. Social proofs, testimonials and reviews also help in creating a sense of credibility, which makes your business look trustworthy on the internet.",
-    },
-
-     {
-      id: 3,
-      question: "Do small businesses need a digital marketing budget?",
-      answer:
-        "Definitely. With the help of the right strategy, a small budget can also lead to good results. Digital marketing ensures that the company is seen and makes sure that it attracts the right customers. Digital Marketing delivers desirable results and ensures that small businesses can remain competitive in their markets while also achieving sustainable growth.",
-    },
-
-     {
-      id: 4,
-      question: "What role does content play in digital marketing?",
-      answer:
-        "Content is the basis of Digital Marketing. It informs, engages and inspires audiences through blogs, videos, social media posts and other channels. Quality content not only boosts the SEO but also builds the customer’s trust and positions your company at the top of the leaderboard.",
-    },
-
-     {
-      id: 5,
-      question: "Can I manage digital marketing myself without an agency?",
-      answer:
-        "It is true that anyone can take on digital marketing, but partnering with an agency is absolutely necessary. At Infogentech, we bring our professional expertise, advanced tools and proven experience to the table to maximize the results. Working with an agency saves time, prevents expensive errors and guarantees more direct and quicker results for your business.",
-    },
-     {
-      id: 6,
-      question: "How do paid ads complement organic strategies?",
-      answer:
-        "The advertisements provide short term exposure and traffic, but the methods of organic promotion like SEO and content marketing  generate long-term value. When both are combined, it creates a balanced approach that reaches the maximum number of people, drives more conversions and ensures steady and sustainable growth.",
-    },
-  ],
-  pricing: [
-    {
-      id: 7,
-      question: "How is the pricing structured?",
-      answer: "Pricing varies depending on the scope and requirements of each project. The final cost is determined by the complexity of designs, number of pages, functions and integrations. We ensure complete transparency so you always know exactly what you’re paying for.",
-    },
-    {
-      id: 8,
-      question: "Do you offer any discounts?",
-      answer: "Yes, we do! Infogentech provides seasonal discounts and special offers. We also offer exclusive discounts to startups, NGOs and long-term customers. The discounts ensure that our professional services remain affordable while maintaining the high quality.",
-    },
-     {
-      id: 9,
-      question: "What is the usual project timeline?",
-      answer: "The schedule depends on the scope and requirements of each project. Most of the websites or campaigns are completed within an average of 2-6 weeks. For urgent requirements, we can expedite the process with special arrangements.",
-    },
-     {
-      id: 10,
-      question: "Are there any hidden charges?",
-      answer: "No, there are no hidden charges. We do not believe in disguised expenses. The pricing information for the included design, hosting and other features are disclosed at the time of payment. By doing so, you will be able to manage your budget without any extra expenses.",
-    },
-     {
-      id: 11,
-      question: "Can I pay in installments?",
-      answer: "Yes, offer flexible installments plans. You can make a percentage as a down payment, with the remaining balance spread across project milestones. This approach is flexible and designed to give you peace of mind.",
-    },
-    {
-      id: 12,
-      question: "What happens if my project takes longer than expected?",
-      answer: "Our goal is to meet all deadlines. However, if delays occur due to new features and changes, we will keep you informed and adjust the timeline. We maintain complete transparency throughout the process.",
-    },
-
-    {
-      id: 13,
-      question: "Do you offer free consultations before pricing?",
-      answer: "Absolutely! During the initial phase, we offer a free consultation to get to know what you need and want to achieve. This will assist us in designing a custom proposal that reflects proper pricing and schedules that fit your business.",
-    },
-    {
-      id: 14,
-      question: "Can I upgrade my package later?",
-      answer: "Yes, we offer flexibility in upgrading to a different package according to your needs. You can also begin with a basic package and upgrade to include more features, additional pages or enhanced marketing services as your business expands and becomes larger.",
-    },
-  ],
-  support: [
-    {
-      id: 15,
-      question: "What support channels are available?",
-      answer: "Our support channels are available to make sure that you receive help in the most convenient manner. Our email and telephone systems enable you to contact us. Priority channels are provided in case of urgent problems to receive help and continue your day without any problems.",
-    },
-    {
-      id: 16,
-      question: "Do you provide 24/7 support?",
-      answer: "We do not offer 24/7 support, but we work as an extension of your team by providing one-on-one assistance during business hours along with flexible assistance options. All enquiries are responded to within 1-2 business days to keep your operations running smoothly.",
-    },
-
-    {
-      id: 17,
-      question: "What does your maintenance service include?",
-      answer: "We don’t just handle maintenance updates but also perform security check-ups, create backups, fix bugs and improve performance. We also ensure that your website/system remains fast, secure and up to date, allowing you to concentrate on expanding your business instead of minor technical problems.",
-    },
-
-    {
-      id: 18,
-      question: "How quickly do you respond to issues?",
-      answer: "Response time depends on the nature of the problem. Critical issues are handled right away, while general inquiries are usually resolved within 24 hours. We give priority to urgent requests to reduce business impact and ensure you’re kept informed every step of the way.",
-    },
-
-    {
-      id: 19,
-      question: "Do you offer customized support plans?",
-      answer: "Yes, we offer tailored support plans designed to meet your specific requirements. Service options range from basic monthly check-ups to advanced technical maintenance and comprehensive monitoring, all structured to align with your business needs and budget.",
-    },
-  ],
-};
 
 const FAQs = () => {
   const [activeCategory, setActiveCategory] = useState("general");
   const [faqsByCategory, setFaqsByCategory] = useState({});
   const [openId, setOpenId] = useState(null);
   const [loading, setLoading] = useState(false);
-  useEffect(() => {
-    const fetchFaqs = async () => {
-      setLoading(true);
-      await new Promise((resolve) => setTimeout(resolve, 500));
-      setFaqsByCategory(mockApiResponse);
-      setLoading(false);
-    };
+  const [error, setError] = useState(null);
 
+  useEffect(() => {
     fetchFaqs();
   }, []);
+
+  const fetchFaqs = async () => {
+    try {
+      setLoading(true);
+      setError(null);
+      
+      const response = await fetch('https://97fzff04-5000.inc1.devtunnels.ms/api/blogs');
+      
+      if (!response.ok) {
+        throw new Error('Failed to fetch blogs');
+      }
+      
+      const blogsData = await response.json();
+      const blogs = blogsData.success ? blogsData.data : [];
+      
+      // Extract all FAQs from all blogs
+      const allFaqs = [];
+      blogs.forEach(blog => {
+        if (blog.faqs && Array.isArray(blog.faqs)) {
+          blog.faqs.forEach(faq => {
+            // Only include active FAQs
+            if (faq.isActive !== false && faq.isActive !== 'false' && faq.isActive !== '0') {
+              allFaqs.push({
+                ...faq,
+                id: faq._id || faq.id || `${blog._id}_${faq.question.substring(0, 10)}`,
+                blogId: blog._id,
+                blogTitle: blog.title
+              });
+            }
+          });
+        }
+      });
+      
+      const faqs = allFaqs;
+      
+      const groupedFaqs = faqs.reduce((acc, faq) => {
+        if (faq.isActive) {
+          const category = faq.category || 'general';
+          if (!acc[category]) {
+            acc[category] = [];
+          }
+          acc[category].push(faq);
+        }
+        return acc;
+      }, {});
+      
+      Object.keys(groupedFaqs).forEach(category => {
+        groupedFaqs[category].sort((a, b) => (a.order || 0) - (b.order || 0));
+      });
+      
+      setFaqsByCategory(groupedFaqs);
+    } catch (error) {
+      console.error('Error fetching FAQs:', error);
+      setError('Failed to load FAQs. Please try again later.');
+      setFaqsByCategory({});
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const toggleFAQ = (id) => {
     setOpenId((prevId) => (prevId === id ? null : id));
   };
-  const currentFaqs = faqsByCategory[activeCategory] || [];
 
   return (
     <div className="mt-35 subContainer mx-auto">
@@ -211,10 +152,25 @@ const FAQs = () => {
           </p>
           {loading ? (
             <Loader />
+          ) : error ? (
+            <div className="text-center py-8">
+              <p className="text-red-400 mb-4">{error}</p>
+              <button 
+                onClick={fetchFaqs}
+                className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
+              >
+                Retry
+              </button>
+            </div>
           ) : (
             <section>
               <div className="rounded-lg">
-                {currentFaqs.map((faq) => (
+                {(faqsByCategory[activeCategory] || []).length === 0 ? (
+                  <div className="text-center py-8 text-gray-400">
+                    <p>No FAQs available for this category yet.</p>
+                  </div>
+                ) : (
+                  (faqsByCategory[activeCategory] || []).map((faq) => (
                   <div
                     key={faq.id}
                     className="border-b border-[#0A071B]/10 linearGradientFaq mb-2"
@@ -234,7 +190,8 @@ const FAQs = () => {
                       </div>
                     )}
                   </div>
-                ))}
+                  ))
+                )}
               </div>
             </section>
           )}
