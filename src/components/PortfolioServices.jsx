@@ -20,7 +20,7 @@ const PortfolioServices = ({ activeService }) => {
       {services.map((service) => (
         <Link
           key={service.id}
-          href={`/portfolio/${service.slug}`}
+          href={`/us/portfolio/${service.slug}`}
           scroll={false}
           className={`flex gap-2 items-center justify-center border-[1px] border-white  rounded-md px-7 py-2 cursor-pointer transition-opacity duration-300 ${
             activeService === service.label ? "" : "opacity-30"

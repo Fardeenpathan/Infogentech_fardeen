@@ -1,3 +1,44 @@
+
+export const metadata = {
+  title: "Terms and Conditions - Infogentech",
+  description:
+    "Your Agreement Matters to Us — Terms and Conditions for Infogentech. By accessing or using our Site, you agree to these Terms.",
+  keywords: ["Terms and Conditions", "Infogentech", "legal", "privacy", "website terms"],
+  authors: [{ name: "InfoGenTech" }],
+  creator: "InfoGenTech",
+  publisher: "InfoGenTech",
+  metadataBase: new URL("https://infogentech.com"),
+  alternates: { canonical: "/terms-and-conditions" },
+  openGraph: {
+    title: "Terms and Conditions - Infogentech",
+    description:
+      "Your Agreement Matters to Us — Terms and Conditions for Infogentech.",
+    url: "https://infogentech.com/terms-and-conditions",
+    siteName: "infogentech",
+    images: [
+      {
+        url: "https://infogentech.com/assets/images/logo-light.webp",
+        width: 1200,
+        height: 630,
+        alt: "infogentech",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@infogentech",
+    title: "Terms and Conditions - Infogentech",
+    description:
+      "Your Agreement Matters to Us — Terms and Conditions for Infogentech.",
+    images: ["https://infogentech.com/assets/images/logo-light.webp"],
+  },
+  // robots: {
+  //   index: true,
+  //   follow: true,
+  // },
+};
+
 const Terms = () => {
   return (
     <div className=" subContainer mx-auto p-3">

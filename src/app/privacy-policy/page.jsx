@@ -1,3 +1,44 @@
+export const metadata = {
+  title: "Privacy Policy - Infogentech",
+  description:
+    "Here is our company's privacy policy. Read carefully. If you have any doubt, feel free to contact us.",
+  keywords: ["Privacy Policy", "Infogentech", "personal data", "cookies"],
+  authors: [{ name: "InfoGenTech" }],
+  creator: "InfoGenTech",
+  publisher: "InfoGenTech",
+  metadataBase: new URL("https://infogentech.com"),
+  alternates: { canonical: "/privacy-policy" },
+  openGraph: {
+    title: "Privacy Policy - Infogentech",
+    description:
+      "Here is our company's privacy policy. Read carefully. If you have any doubt, feel free to contact us.",
+    url: "https://infogentech.com/privacy-policy",
+    siteName: "infogentech",
+    images: [
+      {
+        url: "https://infogentech.com/assets/images/logo-light.webp",
+        width: 1200,
+        height: 630,
+        alt: "infogentech",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@infogentech",
+    title: "Privacy Policy - Infogentech",
+    description:
+      "Here is our company's privacy policy. Read carefully. If you have any doubt, feel free to contact us.",
+    images: ["https://infogentech.com/assets/images/logo-light.webp"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+
 const PrivacyPolicy = () => {
   return (
     <div className="subContainer mx-auto p-3">
