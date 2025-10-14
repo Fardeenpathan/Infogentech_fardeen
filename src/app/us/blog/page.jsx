@@ -8,75 +8,9 @@ import Icons from "@/components/ui/Icon";
 import Loader from "@/components/loader/Loader";
 import { useBlogsPagination } from "@/hooks/useBlogsPagination";
 import BlogPagination from "@/components/BlogPagination";
-const blogData = [
-  {
-    id: 1,
-    title: "Madhya Pradesh Partners with Submer for AI‑Ready Data Centres",
-    content:
-      "What happens when a middle school friendship, a shared love for music, and a global pandemic come together? In...",
-    date: "19 Jul, 2025",
-    img: "/assist/img/blogs.png",
-    slug: "madhya-pradesh-partners-with-submer-for-ai-ready-data-centres",
-  },
-  {
-    id: 2,
-    title: "Centre of Excellence for Emerging Tech at DAVV, Indore.",
-    content:
-      "DAVV University me AI aur emerging tech ka Centre of Excellence banega, jisme students aur teachers dono ko upskill kiya jayega.",
-    date: "19 Jul, 2025",
-    img: "/assist/img/blogs.png",
-    slug: "centre-of-excellence-for-emerging-tech-at-davv-indore",
-  },
-  {
-    id: 3,
-    title: "AI Summit in Vizag This Month",
-    content:
-      "Vizag me 25–26 July ko Fusion AI Summit hoga, jahan startups, experts aur govt milke AI future pe baat karenge.",
-    date: "19 Jul, 2025",
-    img: "/assist/img/blogs.png",
-    slug: "ai-summit-in-vizag-this-month",
-  },
-  {
-    id: 4,
-    title: "Madhya Pradesh Partners with Submer for AI‑Ready Data Centres",
-    content:
-      "What happens when a middle school friendship, a shared love for music, and a global pandemic come together? In...",
-    date: "19 Jul, 2025",
-    img: "/assist/img/blogs.png",
-    slug: "madhya-pradesh-partners-with-submer-for-ai-ready-data-centres-2",
-  },
-  {
-    id: 5,
-    title: "Centre of Excellence for Emerging Tech at DAVV, Indore.",
-    content:
-      "DAVV University me AI aur emerging tech ka Centre of Excellence banega, jisme students aur teachers dono ko upskill kiya jayega.",
-    date: "19 Jul, 2025",
-    img: "/assist/img/blogs.png",
-    slug: "centre-of-excellence-for-emerging-tech-at-davv-indore-2",
-  },
-  {
-    id: 6,
-    title: "AI Summit in Vizag This Month",
-    content:
-      "Vizag me 25–26 July ko Fusion AI Summit hoga, jahan startups, experts aur govt milke AI future pe baat karenge.",
-    date: "19 Jul, 2025",
-    img: "/assist/img/blogs.png",
-    slug: "ai-summit-in-vizag-this-month-2",
-  },
-];
-const category = [
-  // "All",
-  // "Tech Trends",
-  // "Case Studies",
-  // "Development",
-  // "UI/UX Design",
-  // "Cybersecurity",
-  // "Digital Strategy",
-];
 
 const Blogs = () => {
-  const [categories, setCategories] = useState(category);
-  
+   const [categories, setCategories] = useState([{ name: "All", slug: "all" }]);
   const {
     activeCategory,
     blogs,
@@ -92,22 +26,26 @@ const Blogs = () => {
     handleSearch
   } = useBlogsPagination(categories, 12);
 
-  useEffect(() => {
+   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await fetch('https://97fzff04-5000.inc1.devtunnels.ms/api/categories');
+        const response = await fetch(
+          `${process.env.NEXT_PUBLIC_API_URL}/api/categories`
+        );
         if (response.ok) {
           const data = await response.json();
-          console.log('Categories from API:', data);
           const dynamicCategories = [
-            { name: "All", slug: "all" },       
-            ...data.data.map(cat => ({ name: cat.name, slug: cat.slug }))
+            { name: "All", slug: "all" },
+            ...data.data.map((cat) => ({ name: cat.name, slug: cat.slug })),
           ];
           setCategories(dynamicCategories);
         }
       } catch (error) {
-        console.error('Error fetching categories:', error);
-        const fallbackCategories = category.map(cat => ({ name: cat, slug: cat.toLowerCase().replace(/\s+/g, '-') }));
+        console.error("Error fetching categories:", error);
+        const fallbackCategories = category.map((cat) => ({
+          name: cat,
+          slug: cat.toLowerCase().replace(/\s+/g, "-"),
+        }));
         setCategories(fallbackCategories);
       }
     };
