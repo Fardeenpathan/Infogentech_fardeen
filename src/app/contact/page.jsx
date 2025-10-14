@@ -1,6 +1,7 @@
 
 import IndContactForm from "@/components/india/IndContactForm";
 import IndContactSub from "@/components/india/IndContactSub";
+import Head from "next/head";
 const ContactUs = () => {
   return (
     <>
