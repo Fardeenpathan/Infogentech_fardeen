@@ -5,7 +5,7 @@ import React from "react";
 const API_BASE = "https://97fzff04-5000.inc1.devtunnels.ms/api";
 
 async function fetchBlogBySlug(slug) {
-  const res = await fetch(`${API_BASE}/blogs/slug/${slug}`, { next: { revalidate: 60 } });
+  const res = await fetch(`${API_BASE}/blog/slug/${slug}`, { next: { revalidate: 60 } });
   if (!res.ok) return null;
   const data = await res.json();
   return data.success ? data.data : null;
@@ -58,7 +58,7 @@ export async function generateMetadata({ params }) {
   }
 
   const blog = data;
-  const url = `https://infogentech.com/blogs/${slug}`;
+  const url = `https://infogentech.com/blog/${slug}`;
   const image = blog.featuredImage?.url || "https://infogentech.com/default-og-image.png";
 
   return {

@@ -35,7 +35,7 @@ const ContactUs = () => {
 
 <meta property="og:url" content="https://infogentech.com/contact"/>
 <link rel="canonical" href="https://infogentech.com/contact" />
-<link rel="alternate" href="https://infogentech.com/contact" hreflang="en-us"/>
+<link rel="alternate" href="https://infogentech.com/contact" hrefLang="en-us"/>
 
 <meta name="geo.region" content="US" />
 

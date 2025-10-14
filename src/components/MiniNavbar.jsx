@@ -232,7 +232,7 @@ export function MiniNavbar() {
               Portfolio
             </Link>
             <Link
-              href="/blogs"
+              href="/blog"
               onClick={() => setIsOpen(false)}
               className="block hover:text-[#dfdcdc] font-bold text-[28px]  border-b-[1px]"
             >

@@ -30,7 +30,7 @@ export default function BlogClient({ blog }) {
           <div className="w-full text-center md:text-left space-y-4">
             <div className="mb-20">
               <Link
-                href="/blogs"
+                href="/blog"
                 className="flex items-center gap-2 text-[#252525] hover:text-gray-400  font-montserrat"
               >
                 <ArrowLeft size={20} />

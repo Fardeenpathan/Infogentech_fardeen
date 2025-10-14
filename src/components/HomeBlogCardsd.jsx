@@ -62,7 +62,7 @@ export default function HomeBlogCardsd({ blog }) {
           <p className="text-[#73737F] font-jost font-medium text-sm leading-[120%]">
             {formatDate(blog.publishedAt || blog.createdAt || blog.date)}
           </p>
-          <Link href={`/blogs/${blog.slug}`}>
+          <Link href={`/blog/${blog.slug}`}>
             <Icons name="Arrow" height={14} width={31} color="#8752FF" />
           </Link>
         </div>

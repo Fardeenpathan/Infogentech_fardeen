@@ -93,7 +93,7 @@ export function IndFooter() {
                   </li> */}
                   <li>
                     <Link
-                      href="/blogs"
+                      href="/blog"
                       className=" hover:text-gray-200"
                     >
                       Blog
@@ -165,7 +165,7 @@ export function IndFooter() {
                   </li>
                   <li>
                     <Link
-                      href="/helpCenter"
+                      href="/help-center"
                       className=" hover:text-gray-200"
                     >
                       Help Center
@@ -205,7 +205,7 @@ export function IndFooter() {
                   </li>
                   <li className="block md:hidden">
                     <Link
-                      href="/privacyPolicy"
+                      href="/privacy-policy"
                       className=" hover:text-gray-200 "
                     >
                       Privacy Policy
@@ -213,7 +213,7 @@ export function IndFooter() {
                   </li>
                   <li className="block md:hidden">
                     <Link
-                      href="/terms"
+                      href="/terms-and-conditions"
                       className=" hover:text-gray-200"
                     >
                       Terms & Conditions

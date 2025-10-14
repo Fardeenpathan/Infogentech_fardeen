@@ -56,7 +56,7 @@ export default function LatestBlogs() {
         </div>
       </div>
       <a
-        href="/blogs"
+        href="/blog"
         className="gap-8 items-center justify-end mr-2 relative -top-10  flex xl:hidden mt-14"
       >
         <p className="font-jost font-semibold  text-sm leading-[120%] capitalize ">

@@ -81,13 +81,13 @@ export default function ScrollNav() {
       >
         Portfolio
       </Link>
-      <Link href="/blogs" className={linkClasses("/blogs")}>
+      <Link href="/blog" className={linkClasses("/blog")}>
         Blogs
       </Link>
       <Link href="/contact" className={linkClasses("/contact")}>
         Contact us
       </Link>
-      <Link href="/aboutUs" className={linkClasses("/aboutUs")}>
+      <Link href="/about" className={linkClasses("/about")}>
         About us
       </Link>
       <Link href="/contact">

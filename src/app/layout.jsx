@@ -69,7 +69,7 @@ export default function RootLayout({ children }) {
         <link
           rel="alternate"
           href="https://infogentech.com/"
-          hreflang="en-us"
+          hrefLang="en-us"
         />
         <meta
           name="google-site-verification"

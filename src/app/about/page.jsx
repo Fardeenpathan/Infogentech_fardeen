@@ -38,7 +38,7 @@ const AboutUs = () => {
 
 <meta property="og:url" content="https://infogentech.com/about"/>
 <link rel="canonical" href="https://infogentech.com/about" />
-<link rel="alternate" href="https://infogentech.com/about" hreflang="en-us"/>
+<link rel="alternate" href="https://infogentech.com/about" hrefLang="en-us"/>
 
 <meta name="geo.region" content="US" />
 

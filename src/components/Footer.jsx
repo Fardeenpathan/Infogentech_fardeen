@@ -93,7 +93,7 @@ export function Footer() {
                   </li>
                   <li>
                     <Link
-                      href="/blogs"
+                      href="/blog"
                       className="text-gray-400 hover:text-white"
                     >
                       Blog
@@ -109,7 +109,7 @@ export function Footer() {
                   </li>
                   <li>
                     <Link
-                      href="/aboutUs"
+                      href="/about"
                       className="text-gray-400 hover:text-white"
                     >
                       About us
@@ -165,7 +165,7 @@ export function Footer() {
                   </li>
                   <li>
                     <Link
-                      href="/helpCenter"
+                      href="/help-center"
                       className="text-gray-400 hover:text-white"
                     >
                       Help Center
