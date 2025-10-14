@@ -11,7 +11,7 @@ export default function IndTopicHeader({ title, subtitle, description, className
                 transition={{ duration: 0.6, ease: "easeOut" }}
                 viewport={{ once: true }}
             >
-                <motion.p
+                <motion.h3
                     className="font-avalors font-normal text-[32px] leading-6 align-middle text-primary "
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -19,9 +19,9 @@ export default function IndTopicHeader({ title, subtitle, description, className
                     viewport={{ once: true }}
                 >
                     {title}
-                </motion.p>
+                </motion.h3>
 
-                <motion.p
+                <motion.h2
                     className={`font-avalors font-normal text-[46px] leading-12 align-middle capitalize mt-4.5 ${subClass}`}
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -29,7 +29,7 @@ export default function IndTopicHeader({ title, subtitle, description, className
                     viewport={{ once: true }}
                 >
                     {subtitle}
-                </motion.p>
+                </motion.h2>
             </motion.div>
             <motion.p
                 className="font-montserrat font-medium text-lg leading-[150%] tracking-[-0.02em] max-w-2xl py-4"

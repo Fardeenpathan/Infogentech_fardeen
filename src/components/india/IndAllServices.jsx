@@ -11,7 +11,7 @@ const IndAllServices = ({ activeService }) => {
       icon: "MarketingInd",
       label: "Digital Marketing",
       text: "Driving Growth Online",
-      slug: "marketing",
+      slug: "digital-marketing",
     },
     { id: 4, icon: "ContentInd", label: "Content", text: "Driving Growth Online", slug: "content" },
   ];
@@ -38,13 +38,13 @@ const IndAllServices = ({ activeService }) => {
             height="42"
             color={activeService === service.label ? "#ffffff" : "#8752FF"}
           />
-          <p
+          <h4
             className={`font-montserrat text-2xl mb-2.5 mt-4 font-medium ${
               activeService === service.label ? "text-white" : "text-primary"
             }`}
           >
             {service.label}
-          </p>
+          </h4>
           <p
             className={`font-montserrat text-lg font-medium ${
               activeService === service.label ? "text-white" : "text-gray-200"

@@ -42,9 +42,9 @@ export default function InfoCards() {
               : "order-2 md:order-2 md:pl-8"
           }`}
               >
-                <h3 className="font-avalors text-gray-400 text-3xl sm:text-4xl md:text-[46px] font-normal leading-snug tracking-normal mb-3 capitalize">
+                <h2 className="font-avalors text-gray-400 text-3xl sm:text-4xl md:text-[46px] font-normal leading-snug tracking-normal mb-3 capitalize">
                   {c.title}
-                </h3>
+                </h2>
                 <p className="text-gray-200  text-lg leading-relaxed">
                   {c.text}
                 </p>

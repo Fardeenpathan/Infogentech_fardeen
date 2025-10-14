@@ -9,12 +9,12 @@ export default function IndContactSub() {
         <Icons name="IndCurve" />
       </div>
     <div className="relative z-10">
-          <p className="font-avalors text-primary text-[32px] font-semibold tracking-widest mb-3">
+          <h3 className="font-avalors text-primary text-[32px] font-semibold tracking-widest mb-3">
             LET’S GET STARTED
-          </p>
-          <h1 className="font-avalors text-[46px] font-bold text-gray-400 uppercase">
+          </h3>
+          <h2 className="font-avalors text-[46px] font-bold text-gray-400 uppercase">
             WORLD CLASS IT SOLUTIONS PARTNER OF CHOICE
-          </h1>
+          </h2>
         </div>
     </section>
   );

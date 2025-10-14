@@ -7,6 +7,7 @@ import Link from "next/link";
 import Loader from "@/components/loader/Loader";
 import { useBlogsPagination } from "@/hooks/useBlogsPagination";
 import BlogPagination from "@/components/BlogPagination";
+import dayjs from "dayjs";
 const Blogs = () => {
   const [categories, setCategories] = useState([{ name: "All", slug: "all" }]);
   const {
@@ -87,14 +88,14 @@ const Blogs = () => {
             {recentBlog && (
               <div className="w-full text-center md:text-left space-y-4">
                 <p className="text-[#252525] font-montserrat font-semibold text-2xl">
-                  20 Aug 2025
+                 {dayjs(recentBlog.formatDate).format("DD MMM YYYY")}
                 </p>
-                <h2 className="text-gray-400 text-3xl md:text-[46px] font-bold leading-[1.2] font-avalors tracking-wider">
+                <h1 className="text-gray-400 text-3xl md:text-[46px] font-bold leading-[1.2] font-avalors tracking-wider">
                   {recentBlog.title}
-                </h2>
-                <p className="text-[#252525] font-montserrat font-semibold text-2xl">
+                </h1>
+                <h3 className="text-[#252525] font-montserrat font-semibold text-2xl">
                   {recentBlog.excerpt}
-                </p>
+                </h3>
                 <Link href={`/blogs/${recentBlog.slug}`}>
                   <IndButton variant="outline" className="!border-[#d4d2f5]">
                     Read This Article
@@ -105,10 +106,10 @@ const Blogs = () => {
           </div>
         </div>
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 mt-10 container mx-auto">
-          <p className="text-[#252525] font-montserrat font-semibold text-xl md:text-2xl max-w-2xl">
+          <h4 className="text-[#252525] font-montserrat font-semibold text-xl md:text-2xl max-w-2xl">
             Stay updated with the latest tech insights, client success stories,
             and opportunities from our community and IT industry network.
-          </p>
+          </h4>
           <div className="flex flex-col sm:flex-row gap-4 items-center">
             <select
               value={activeCategory}

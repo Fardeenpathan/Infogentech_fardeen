@@ -20,12 +20,12 @@ export default function IndHeroSectionContent() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
       >
-        <span className="font-avalors">AND DIGITAL</span>
-        <span className="text-lg ml-10">
+        <h1 className="font-avalors">AND DIGITAL</h1>
+        <p className="text-lg ml-10">
           We build strong brand identities and deliver<br /> 
           digital solutions that blend creativity and <br />
           technology to help businesses grow and engage.
-        </span>
+        </p>
       </motion.div>
 
       <motion.div

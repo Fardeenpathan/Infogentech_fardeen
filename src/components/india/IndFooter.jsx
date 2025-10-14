@@ -34,9 +34,9 @@ export function IndFooter() {
             <div>
               <a className="flex items-center mb-4 gap-1.5" href="/">
                 <Icons name="LogoFooter" />
-                <p className="font-avalors text-[24px] leading-8 tracking-[3px] font-bold">
+                <h3 className="font-avalors text-[24px] leading-8 tracking-[3px] font-bold">
                   INFOGENTECH
-                </p>
+                </h3>
               </a>
               <p className=" text-xl mb-4 font-jost font-medium">
                 Infogentech delivers smart digital solutions that move with the

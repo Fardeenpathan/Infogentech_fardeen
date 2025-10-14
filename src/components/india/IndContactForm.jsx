@@ -104,10 +104,10 @@ const ContactForm = () => {
                   <h2 className=" font-medium text-2xl leading-6 align-middle">
                     Contact Information
                   </h2>
-                  <p className=" text-lg leading-6 align-middle mt-5">
+                  <h4 className=" text-lg leading-6 align-middle mt-5">
                     We’ll create high-quality linkable content and build at
                     least 40 high-authority.
-                  </p>
+                  </h4>
                 </div>
 
                 <div>
