@@ -21,7 +21,7 @@ export default function IndSharePost() {
         window.open(`https://twitter.com/intent/tweet?url=${url}`, "_blank");
         break;
       case "facebook":
-        window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, "_blank");
+        window.open(`https://www.facebook.com/sharer/sharer.ph?u=${url}`, "_blank");
         break;
       case "linkedin":
         window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, "_blank");

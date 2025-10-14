@@ -18,7 +18,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "https://infogentech.com/assets/images/logo-light.webp",
+        url: "https://infogentech.com/public/CompanyName.svg",
         alt: "Infogentech",
       },
     ],
@@ -29,7 +29,7 @@ export const metadata = {
     description:
       "Top digital marketing and web solutions provider globally. We offer expert services to enhance your online presence, drive traffic, and grow your business.",
     site: "@infogentech",
-    images: ["https://infogentech.com/assets/images/logo-light.webp"],
+    images: ["https://infogentech.com/public/CompanyName.svg"],
   },
   robots: "index, follow, all",
   authors: [{ name: "InfoGenTech" }],

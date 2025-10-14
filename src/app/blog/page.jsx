@@ -9,11 +9,11 @@ export const metadata = {
     title: "Blogs - Digital Marketing, App/Web Designing & Development",
     description:
       "Explore our blogs on digital marketing, app/web design, and development. Get insights, tips, and trends to enhance your online presence and boost your business.",
-    url: "https://infogentech.com/blog.php",
+    url: "https://infogentech.com/blog",
     siteName: "infogentech",
     images: [
       {
-        url: "https://infogentech.com/assets/images/logo-light.webp",
+        url: "https://infogentech.com/public/CompanyName.svg",
       },
     ],
     type: "website",
@@ -26,7 +26,7 @@ export const metadata = {
     site: "@infogentech",
     images: [
       {
-        url: "https://infogentech.com/assets/images/logo-light.webp",
+        url: "https://infogentech.com/public/CompanyName.svg",
       },
     ],
   },
@@ -36,9 +36,9 @@ export const metadata = {
   distribution: "global",
   "geo.region": "US",
   alternates: {
-    canonical: "https://infogentech.com/blog.php",
+    canonical: "https://infogentech.com/blog",
     languages: {
-      "en-US": "https://infogentech.com/blog.php",
+      "en-US": "https://infogentech.com/blog",
     },
   },
 };

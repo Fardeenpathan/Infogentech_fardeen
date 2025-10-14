@@ -13,12 +13,12 @@ export const metadata = {
     title: "About Us | Infogentech Softwares LLP",
     description:
       "Infogentech Softwares LLP is a leading digital marketing company in India. Our team of experts delivers top-notch services to meet client business requirements.",
-    url: "https://infogentech.com/about.php",
+    url: "https://infogentech.com/about",
     siteName: "infogentech",
     type: "website",
     images: [
       {
-        url: "https://infogentech.com/assets/images/logo-light.webp",
+        url: "https://infogentech.com/public/CompanyName.svg",
         alt: "Infogentech",
       },
     ],
@@ -29,7 +29,7 @@ export const metadata = {
     description:
       "Infogentech Softwares LLP is a leading digital marketing company in India. Our team of experts delivers top-notch services to meet client business requirements.",
     site: "@infogentech",
-    images: ["https://infogentech.com/assets/images/logo-light.webp"],
+    images: ["https://infogentech.com/public/CompanyName.svg"],
   },
   robots: "index, follow, all",
   authors: [{ name: "InfoGenTech" }],
