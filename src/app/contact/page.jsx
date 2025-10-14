@@ -25,7 +25,7 @@ const ContactUs = () => {
 <meta name="twitter:image" content="https://infogentech.com/public/CompanyName.svg" />
 
 <meta property="og:site_name" content="infogentech"/>
-<meta http-equiv="x-ua-compatible" content="ie=edge"/>
+<meta httpEquiv="x-ua-compatible" content="ie=edge"/>
 <meta property="og:type" content="Website"/>
 
 <meta name="robots" content="index, follow"/>

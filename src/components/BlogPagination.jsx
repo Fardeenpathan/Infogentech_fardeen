@@ -15,7 +15,7 @@ const BlogPagination = ({
         <button
           onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
           disabled={!pagination.prev || currentPage === 1}
-          className="px-4 py-2 border border-gray-600 rounded-lg text-white hover:bg-purple-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          className="px-4 py-2 border border-gray-600 rounded-lg text-black hover:bg-purple-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors cursor-pointer"
         >
           Previous
         </button>
@@ -32,10 +32,10 @@ const BlogPagination = ({
               <button
                 key={pageNum}
                 onClick={() => setCurrentPage(pageNum)}
-                className={`w-10 h-10 rounded-lg transition-colors ${
+                className={`w-10 h-10 rounded-lg transition-colors cursor-pointer ${
                   currentPage === pageNum 
                     ? 'bg-purple-600 text-white' 
-                    : 'border border-gray-600 text-white hover:bg-purple-600/20'
+                    : 'border border-gray-600 text-black hover:bg-purple-600/20'
                 }`}
               >
                 {pageNum}
@@ -47,13 +47,13 @@ const BlogPagination = ({
         <button
           onClick={() => setCurrentPage(prev => prev + 1)}
           disabled={!pagination.next || currentPage >= totalPages}
-          className="px-4 py-2 border border-gray-600 rounded-lg text-white hover:bg-purple-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          className="px-4 py-2 border border-gray-600 rounded-lg cursor-pointer text-black hover:bg-purple-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
         >
           Next
         </button>
       </div>
       
-      <div className="text-center mt-8 text-gray-400">
+      <div className="text-center mt-8 text-gray-400 font-montserrat">
         Showing {((currentPage - 1) * limit) + 1}-{Math.min(currentPage * limit, totalBlogs)} of {totalBlogs} blogs
       </div>
     </>
