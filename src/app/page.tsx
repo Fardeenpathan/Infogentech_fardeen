@@ -8,18 +8,43 @@ import  IndWhyChooseUs  from "@/components/india/IndWhyChooseUs";
 import  IndTestomonial  from "@/components/india/IndTestomonial";
 import  IndFaqsHome  from "@/components/india/IndFaqsHome";
 import  IndWhatMakesStandOut  from "@/components/india/IndWhatMakesStandOut";
+import Head from 'next/head';
+
 export default function Home() {
   return (
-    <main className="w-full">  
-      <IndHeroSection />
-      <IndServices/>
-      <IndAboutHome/>
-      <IndWhatMakesStandOut/>    
-      <IndHowWeWork/>
-      <IndConsutation/>
-      <IndWhyChooseUs/>
-      <IndTestomonial/>
-      <IndFaqsHome/>
-    </main>
+    <>
+      <Head>
+        <title>Innovation Success with Software, Technology & Digital Marketing</title>
+        <meta name="description" content="Discover how innovation in software, technology, and digital marketing drives business growth. Explore strategies for success in today’s digital-first world." />
+        <meta name="keywords" content="digital marketing company, digital marketing company in Delhi NCR, ..." />
+        <meta property="og:title" content="Innovation Success with Software, Technology & Digital Marketing" />
+        <meta property="og:description" content="Discover how innovation..." />
+        <meta property="og:image" content="https://infogentech.com/public/CompanyName.svg" />
+        <meta property="og:type" content="article" />
+        <meta property="og:site_name" content="infogentech" />
+        <meta property="og:url" content="https://infogentech.com/blogs/innovation-success" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Innovation Success with Software, Technology & Digital Marketing" />
+        <meta name="twitter:description" content="Discover how innovation..." />
+        <meta name="twitter:site" content="@infogentech" />
+        <meta name="twitter:image" content="https://infogentech.com/public/CompanyName.svg" />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="InfoGenTech" />
+        <meta name="publisher" content="InfoGenTech" />
+        <meta name="distribution" content="global" />
+        <link rel="canonical" href="https://infogentech.com/blogs/innovation-success" />
+      </Head>
+      <main className="w-full">  
+        <IndHeroSection />
+        <IndServices/>
+        <IndAboutHome/>
+        <IndWhatMakesStandOut/>    
+        <IndHowWeWork/>
+        <IndConsutation/>
+        <IndWhyChooseUs/>
+        <IndTestomonial/>
+        <IndFaqsHome/>
+      </main>
+    </>
   );
 }

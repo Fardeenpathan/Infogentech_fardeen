@@ -1,5 +1,4 @@
-// components/IndServiceCard.jsx
-"use client";
+
 import React from "react";
 import Icons from "../ui/Icon";
 
