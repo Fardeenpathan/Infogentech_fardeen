@@ -4,7 +4,6 @@ import IndAboutDesc from "@/components/india/IndAboutDesc";
 import IndHeroCTA from "@/components/india/IndHeroCTA";
 import IndAchievements from "@/components/india/IndAchievements";
 import IndInfoCards from "@/components/india/IndInfoCards";
-<<<<<<< HEAD
 export const metadata = {
   title: "About Us | Infogentech Softwares LLP",
   description:
@@ -49,9 +48,6 @@ export const metadata = {
 };
 
 const AboutUs = () => {
-=======
-const about = () => {
->>>>>>> 70ca1e9170f59f6edc2b096e1c7b9614fe4f0840
   return (
     <>
       <div className="w-full bg-[#E6DBFF] h-158 justify-center items-center flex">
@@ -68,4 +64,4 @@ const about = () => {
   );
 };
 
-export default about;
+export default AboutUs;
