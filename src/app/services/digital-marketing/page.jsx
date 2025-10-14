@@ -3,7 +3,49 @@ import IndServicesHeader from "@/components/india/IndServicesHeader";
 import IndAllServices from "@/components/india/IndAllServices";
 import IndServiceDesc from "@/components/india/IndServiceDesc";
 import Icons from "@/components/ui/Icon";
-
+export const metadata = {
+  title: "Digital Marketing Services and Web Solution Company",
+  description:
+    "Top digital marketing and web solutions provider globally. We offer expert services to enhance your online presence, drive traffic, and grow your business.",
+  keywords:
+    "Online Marketing Services, Online Internet Marketing, Marketing Solution, IT Solutions Services",
+  openGraph: {
+    title: "Digital Marketing Services and Web Solution Company",
+    description:
+      "Top digital marketing and web solutions provider globally. We offer expert services to enhance your online presence, drive traffic, and grow your business.",
+    url: "https://infogentech.com/services",
+    siteName: "infogentech",
+    type: "website",
+    images: [
+      {
+        url: "https://infogentech.com/assets/images/logo-light.webp",
+        alt: "Infogentech",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: "Digital Marketing Services and Web Solution Company",
+    description:
+      "Top digital marketing and web solutions provider globally. We offer expert services to enhance your online presence, drive traffic, and grow your business.",
+    site: "@infogentech",
+    images: ["https://infogentech.com/assets/images/logo-light.webp"],
+  },
+  robots: "index, follow, all",
+  authors: [{ name: "InfoGenTech" }],
+  publisher: "InfoGenTech",
+  alternates: {
+    canonical: "https://infogentech.com/services",
+    languages: {
+      "en-US": "https://infogentech.com/services",
+    },
+  },
+  other: {
+    "geo.region": "US",
+    "http-equiv": "x-ua-compatible",
+    distribution: "global",
+  },
+};
 const Marketing = () => {
   const categories = [
     {

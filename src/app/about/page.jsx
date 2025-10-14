@@ -35,9 +35,9 @@ export const metadata = {
   authors: [{ name: "InfoGenTech" }],
   publisher: "InfoGenTech",
   alternates: {
-    canonical: "https://infogentech.com/about.php",
+    canonical: "https://infogentech.com/about",
     languages: {
-      "en-US": "https://infogentech.com/about.php",
+      "en-US": "https://infogentech.com/about",
     },
   },
   other: {
