@@ -3,7 +3,7 @@
 import { Provider } from "react-redux";
 import "./globals.css";
 import ClientLayoutControls from "@/components/ClientLayoutControls";
-import USClientLayoutControls from "@/components/USClientLayoutControls"; // another layout for /us
+import USClientLayoutControls from "@/components/USClientLayoutControls";
 import store from "@/redux/store";
 import { usePathname } from "next/navigation";
 export default function RootLayout({ children }) {

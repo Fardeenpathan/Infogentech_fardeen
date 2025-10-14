@@ -17,7 +17,7 @@ export const metadata = {
     siteName: "infogentech",
     images: [
       {
-        url: "https://infogentech.com/assets/images/logo-light.webp",
+        url: "https://infogentech.com//public/CompanyName.svg",
         width: 1200,
         height: 630,
         alt: "infogentech",
@@ -31,7 +31,7 @@ export const metadata = {
     title: "Terms and Conditions - Infogentech",
     description:
       "Your Agreement Matters to Us — Terms and Conditions for Infogentech.",
-    images: ["https://infogentech.com/assets/images/logo-light.webp"],
+    images: ["https://infogentech.com//public/CompanyName.svg"],
   },
   // robots: {
   //   index: true,

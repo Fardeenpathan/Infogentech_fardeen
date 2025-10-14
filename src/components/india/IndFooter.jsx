@@ -231,10 +231,10 @@ export function IndFooter() {
             &copy; {new Date().getFullYear()} Infogentech. All rights reserved.
           </p>
           <div className="space-x-4  md:block hidden">
-            <Link href="/privacyPolicy" className="hover:text-gray-200 ">
+            <Link href="/privacy-policy" className="hover:text-gray-200 ">
               Privacy Policy
             </Link>
-            <Link href="/terms" className="hover:text-gray-200">
+            <Link href="/terms-and-conditions" className="hover:text-gray-200">
               Terms & Conditions
             </Link>
           </div>
