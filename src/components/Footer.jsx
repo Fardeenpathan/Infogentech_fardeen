@@ -20,7 +20,7 @@ export function Footer() {
             >
               View Portfolio
             </Link>
-            <Link href="/contactUs">
+            <Link href="/contact">
               <Button
                 text="Contact Us"
                 className="!py-4 !px-10 xl:!py-5.5 lg:!px-12.5 text-nowrap"
@@ -101,7 +101,7 @@ export function Footer() {
                   </li>
                   <li>
                     <Link
-                      href="/contactUs"
+                      href="/contact"
                       className="text-gray-400 hover:text-white"
                     >
                       Contact us
@@ -189,7 +189,7 @@ export function Footer() {
                   </li>
                   <li>
                     <Link
-                      href="/contactUs"
+                      href="/contact"
                       className="text-gray-400 hover:text-white"
                     >
                       Contact Support

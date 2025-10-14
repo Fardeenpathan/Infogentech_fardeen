@@ -108,14 +108,14 @@ export function Navbar() {
               <Link href="/blogs" className={linkClasses("/blogs")}>
                 Blogs
               </Link>
-              <Link href="/contactUs" className={linkClasses("/contactUs")}>
+              <Link href="/contact" className={linkClasses("/contact")}>
                 Contact us
               </Link>
               <Link href="/aboutUs" className={linkClasses("/aboutUs")}>
                 About us
               </Link>
             </div>
-            <Link href="/contactUs">
+            <Link href="/contact">
               <GradientButton className="!text-sm md:hidden lg:block" paddingX="px-3" paddingY="py-2">Free Consultation</GradientButton>
             </Link>
           </div>

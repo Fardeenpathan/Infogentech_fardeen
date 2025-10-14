@@ -239,7 +239,7 @@ export function MiniNavbar() {
               Blog
             </Link>
             <Link
-              href="/contactUs"
+              href="/contact"
               onClick={() => setIsOpen(false)}
               className="block hover:text-[#dfdcdc] font-bold text-[28px]  border-b-[1px]"
             >
@@ -253,7 +253,7 @@ export function MiniNavbar() {
               About us
             </Link>
             <Link
-              href="/contactUs"
+              href="/contact"
               onClick={() => setIsOpen(false)}
               className=" hover:text-[#dfdcdc] font-bold mt-2 text-[28px]  flex justify-center "
             >

@@ -84,13 +84,13 @@ export default function ScrollNav() {
       <Link href="/blogs" className={linkClasses("/blogs")}>
         Blogs
       </Link>
-      <Link href="/contactUs" className={linkClasses("/contactUs")}>
+      <Link href="/contact" className={linkClasses("/contact")}>
         Contact us
       </Link>
       <Link href="/aboutUs" className={linkClasses("/aboutUs")}>
         About us
       </Link>
-      <Link href="/contactUs">
+      <Link href="/contact">
         <GradientButton className="!text-sm md:hidden lg:block" paddingX="px-6" paddingY="py-3">
           Free Consultation
         </GradientButton>
