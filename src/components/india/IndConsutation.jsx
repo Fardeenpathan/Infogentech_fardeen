@@ -61,7 +61,7 @@ export default function IndConsutation() {
           and let's start building your growth story together!
         </motion.p> 
 
-        <a href="#contact ">
+        <a href="/contact ">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

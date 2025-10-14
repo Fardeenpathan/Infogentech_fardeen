@@ -101,7 +101,7 @@ export function IndFooter() {
                   </li>
                   <li>
                     <Link
-                      href="/contactUs"
+                      href="/contact"
                       className=" hover:text-gray-200"
                     >
                       Contact us
@@ -109,7 +109,7 @@ export function IndFooter() {
                   </li>
                   <li>
                     <Link
-                      href="/aboutUs"
+                      href="/about"
                       className=" hover:text-gray-200"
                     >
                       About us

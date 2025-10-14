@@ -16,7 +16,7 @@ export default function IndHeroCTA() {
           Better IT Solutions & Services at <br /> your Fingertips
         </h1>
 
-        <a href="/contactUs">
+        <a href="/contact">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

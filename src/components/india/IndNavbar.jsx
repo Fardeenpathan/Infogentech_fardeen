@@ -37,7 +37,7 @@ export default function Navbar() {
           <Link href="/" className={linkClasses("/")}>
             Home
           </Link>
-            <Link href="/aboutUs" className={linkClasses("/aboutUs")}>
+            <Link href="/about" className={linkClasses("/about")}>
             About us
           </Link>
           <Link href="/services/design" className={linkClasses("/services/design")}>
@@ -46,12 +46,12 @@ export default function Navbar() {
           <Link href="/blogs" className={linkClasses("/blogs")}>
             Blogs
           </Link>
-          <Link href="/contactUs" className={linkClasses("/contactUs")}>
+          <Link href="/contact" className={linkClasses("/contact")}>
             Contact us
           </Link>
         
         </div>
-        <a href="#contact"><IndButton
+        <a href="/contact"><IndButton
              variant="primary"
                   >
          Let's talk
