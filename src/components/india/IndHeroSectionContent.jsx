@@ -38,7 +38,7 @@ export default function IndHeroSectionContent() {
           Solutions
         </span>
 
-        <span className="absolute sm:w-40  sm:h-40 w-30 h-30 flex items-center justify-center ml-8 xl:right-20 sm:-top-18 -top-12 right-0">
+        <span className="absolute sm:w-40  sm:h-40 w-30 h-30 flex items-center justify-center ml-8 xl:right-20 2xl:-top-18 -top-12 right-0">
           <div className="sm:w-16 w-12 sm:h-16 h-12 bg-primary rounded-full flex items-center justify-center z-10">
             <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 7l-10 10M7 7h10v10" />

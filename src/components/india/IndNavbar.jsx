@@ -25,7 +25,7 @@ export default function Navbar() {
       transition={{ duration: 0.2, ease: "easeInOut" }}
       className={`font-montserrat relative flex bg-transparent py-9 mx-auto justify-between items-center z-50 text-lg leading-6 gap-4 ${pathname === '/' ? "border-b border-[#8E8E8E]" : ""}`}
     >
-      <div className="flex items-center container justify-between mx-auto">
+      <div className="flex items-center container justify-between mx-auto px-4">
         <Link href="/" className="flex items-center gap-1.5 cursor-pointer">
           <Icons name="LogoFooter" />
           <p className="font-avalors lg:text-[24px] leading-8 tracking-[3px] font-bold text-xl text-white">
