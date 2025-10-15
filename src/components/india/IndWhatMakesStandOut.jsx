@@ -48,10 +48,10 @@ export default function WhatMakesStandOut() {
                 className="w-full h-full object-contain rounded-[20px]"
               />
             </div>
-            <h4 className="font-montserrat font-semibold text-[24px] text-[#252525] mb-3 text-center sm:text-left leading-[150%] tracking-[-0.02em]">
+            <h4 className="font-montserrat font-semibold xl:text-[24px] text-lg text-[#252525] mb-3 text-center sm:text-left leading-[150%] tracking-[-0.02em]">
               {card.title}
             </h4>
-            <p className="font-montserrat font-medium text-[18px] leading-[150%] tracking-[-0.02em] text-[#252525]/80 text-center sm:text-left">
+            <p className="font-montserrat font-medium xl:text-[18px] text-[14px] leading-[150%] tracking-[-0.02em] text-[#252525]/80 text-center sm:text-left">
               {card.text}
             </p>
           </div>

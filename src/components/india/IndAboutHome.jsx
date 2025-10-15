@@ -6,10 +6,10 @@ import IndButton from "./ui/IndButton";
 
 export default function IndAboutHome() {
   return (
-    <div className="mt-20 container mx-auto px-10 flex justify-between py-10">
+    <div className="xl:mt-20 mt-10 container mx-auto xl:px-10 px-4 flex justify-between py-10 flex-col xl:flex-row gap-60">
       {/* LEFT: Images + Video */}
       <motion.div
-        className="flex justify-between gap-20 relative"
+        className="flex justify-between xl:gap-20 gap-2 relative"
         initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -26,7 +26,7 @@ export default function IndAboutHome() {
             alt="service"
             width={227}
             height={400}
-            className="object-cover rounded-2xl h-96"
+            className="object-cover rounded-2xl xl:h-96 h-64"
           />
         </motion.div>
 
@@ -41,12 +41,12 @@ export default function IndAboutHome() {
             alt="service"
             width={312}
             height={267}
-            className="object-cover rounded-2xl h-64"
+            className="object-cover rounded-2xl xl:h-64 h-44"
           />
         </motion.div>
 
         <motion.video
-          className="absolute top-60 left-50 w-84 h-82 object-cover rounded-2xl"
+          className="absolute xl:top-60 top-50 xl:left-50 left-25 sm:left-30 xl:w-84 xl:h-82 h-64 w-64 object-cover rounded-2xl"
           src="https://res.cloudinary.com/dpmceu66e/video/upload/v1759913086/blog-app/categories/categories/1759913081122-compressed-video.mp4"
           autoPlay
           loop
@@ -58,8 +58,6 @@ export default function IndAboutHome() {
           viewport={{ once: true }}
         />
       </motion.div>
-
-      {/* RIGHT: Text + Button */}
       <motion.div
         initial={{ opacity: 0, x: 100 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -80,7 +78,7 @@ export default function IndAboutHome() {
             transition={{ duration: 0.6, delay: 0.9 }}
             viewport={{ once: true }}
           >
-            <IndButton variant="outline" className="mt-16">
+            <IndButton variant="outline" className="xl:mt-16 mt-4">
               Know more
             </IndButton>
           </motion.div>

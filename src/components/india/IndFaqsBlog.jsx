@@ -54,7 +54,7 @@ const IndFaqsBlog = ({ blog }) => {
   };
 
   return (
-    <div className="mt-20 w-full">
+    <div className="xl:mt-20 mt-10 w-full">
       {/* Header */}
       <IndTopicHeader
         title="Faqs"

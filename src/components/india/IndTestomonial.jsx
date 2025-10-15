@@ -51,7 +51,7 @@ const cardVariants = {
 
 const IndTestomonial = () => {
   return (
-    <div className="mt-20 max-w-7xl mx-auto pb-20 font-montserrat">
+    <div className="xl:mt-20 mt-10 max-w-7xl mx-auto xl:pb-20 pb-0 font-montserrat">
       <IndMidHeader
         title="Client Testimonials"
         subtitle="What are they talking about?"
@@ -59,7 +59,7 @@ const IndTestomonial = () => {
       />
       
       <motion.div
-        className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 mt-12 justify-items-center"
+        className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 xl:gap-6 gap-3 mt-12 justify-items-center px-4"
         variants={containerVariants}
         initial="hidden"
         whileInView="show"
@@ -82,7 +82,7 @@ const IndTestomonial = () => {
                     alt="Review"
                     width={55}
                     height={55}
-                    className="rounded-full sm:w-14 sm:h-14 object-cover w-6 h-6"
+                    className="rounded-full w-24 h-24 object-cover shrink-0"
                   />
                   <div>
                     <h4 className="text-2xl text-gray-400 font-semibold">
