@@ -32,10 +32,10 @@ export default function IndSharePost({className=""}) {
   };
 
   return (
-    <section className="relative container flex flex-col items-center justify-between text-center py-10  rounded-2xl overflow-hidden mx-auto">
+    <section className="relative container flex flex-col items-center justify-between text-center py-10  rounded-2xl overflow-hidden mx-auto px-4">
       <div className="flex w-full items-center justify-between">
-        <p className={`font-montserrat font-semibold text-[#535862]-700 text-[20px]`}>Share this post</p>
-        <div className="flex items-center gap-3">
+        <p className={`font-montserrat font-semibold text-[#535862]-700 lg:text-xl text-sm`}>Share this post</p>
+        <div className="flex items-center lg:gap-3 gap-1">
           <button
             onClick={() => handleShare("copy")}
             className={`flex items-center justify-center gap-2 px-[14px] py-[10px] w-[150px] h-[40px] bg-[#693EC9] text-white text-sm font-medium rounded-lg border border-[#D5D7DA] shadow-[0px_1px_2px_rgba(10,13,18,0.05),inset_0px_0px_0px_1px_rgba(10,13,18,0.18),inset_0px_-2px_0px_rgba(10,13,18,0.05)] hover:bg-[#5b31b4] transition-all duration-200`}

@@ -54,7 +54,7 @@ const IndFaqsBlog = ({ blog }) => {
   };
 
   return (
-    <div className="xl:mt-20 mt-10 w-full">
+    <div className="xl:mt-20 mt-10 w-full px-4">
       {/* Header */}
       <IndTopicHeader
         title="Faqs"
@@ -62,8 +62,7 @@ const IndFaqsBlog = ({ blog }) => {
         subClass="w-full"
       />
 
-      {/* FAQ List */}
-      <div className="mt-8 py-10 w-full">
+      <div className="mt-8  w-full">
         <motion.div
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}

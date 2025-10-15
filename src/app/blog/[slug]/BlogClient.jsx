@@ -10,7 +10,7 @@ import dayjs from "dayjs";
 export default function BlogClient({ blog }) {
   return (
     <>
-      <div className="relative w-full h-200 flex items-center justify-start">
+      <div className="relative w-full lg:h-200 h-150 flex items-center justify-start px-4">
         <Image
           src="/assist/IndImg/blogBg.jpg"
           alt="Blog"
@@ -26,8 +26,8 @@ export default function BlogClient({ blog }) {
           height={660}
           className="absolute top-50% -right-30 w-80 h-125 object-cover -z-10 -rotate-12 opacity-20"
         />
-        <div className="relative z-10 container mx-auto flex flex-col md:flex-row items-center justify-between -top-14">
-          <div className="w-full text-center md:text-left space-y-4">
+        <div className="relative z-10 container mx-auto flex flex-col md:flex-row lg:items-center items-start justify-between -top-14">
+          <div className="w-full lg:items-center items-start md:text-left space-y-4">
             <div className="mb-20">
               <Link
                 href="/blog"
@@ -40,16 +40,16 @@ export default function BlogClient({ blog }) {
             <p className="text-[#252525] font-montserrat font-semibold text-2xl">
               {dayjs(blog.createdAt).format("DD MMMM YYYY")}
             </p>
-            <h2 className="text-gray-400 text-3xl md:text-[46px] font-bold leading-[1.2] font-avalors tracking-wider mr-150">
+            <h2 className="text-gray-400 text-3xl md:text-[46px] font-bold leading-[1.2] font-avalors tracking-wider lg:mr-150">
               {blog.title}
             </h2>
-            <p className="text-[#252525] font-montserrat font-semibold text-2xl mt-15">
+            <p className="text-[#252525] font-montserrat font-semibold text-2xl lg:mt-15 mt-4">
             {blog.excerpt}
             </p>
           </div>
         </div>
       </div>
-      <div className="flex justify-between container mx-auto gap-20 relative -top-24">
+      <div className="flex justify-between container mx-auto gap-10 relative lg:-top-24 -top-36 px-4">
         <div>
           {blog.image && (
             <Image
@@ -57,17 +57,17 @@ export default function BlogClient({ blog }) {
               alt={blog.title}
               width={1400}
               height={460}
-              className="w-full h-180 object-cover -z-10 rounded-3xl"
+              className="w-full lg:h-180 h-84 object-cover -z-10 rounded-3xl px-4"
             />
           )}
           <div
-            className="mt-18 font-montserrat text-[20px] leading-[30px]  w-full"
+            className="mt-18 font-montserrat text-[20px] leading-[30px]  w-full px-4"
             dangerouslySetInnerHTML={{ __html: blog.content }}
           />
           <IndSharePost />
           <IndFaqsBlog blog={blog} />
         </div>
-        <div className="min-w-112 flex flex-col gap-y-20 lg:block hidden">
+        <div className="min-w-112 flex flex-col gap-y-20 lg:block hidden ">
           <IndBlogDetails data={blog} />
           <IndSideLinks data={blog}/>
         </div>
