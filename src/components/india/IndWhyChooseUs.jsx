@@ -13,7 +13,7 @@ export default function IndWhyChooseUs() {
   ];
 
   return (
-    <div className="xl:mt-20 mt-10 container mx-auto xl:px-10 px-2">
+    <div className="xl:mt-20 mt-10 container mx-auto xl:px-10 px-2 overflow-hidden">
       <IndTopicHeader
         title="We Do More For Your Business"
         subtitle="Why Choose Us!"

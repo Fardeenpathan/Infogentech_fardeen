@@ -50,11 +50,11 @@ import IndContactSub from "@/components/india/IndContactSub";
 export default function ContactPage() {
   return (
     <>
-      <div className="w-full bg-[#E6DBFF] h-158 justify-center items-center flex flex-col">
-        <h1 className="font-avalors font-normal text-[80px] leading-[1.6] tracking-[3px] align-middle text-primary">
+      <div className="w-full bg-[#E6DBFF] lg:h-158 h-100 justify-center items-center flex flex-col">
+        <h1 className="font-avalors font-normal md:text-[80px] text-[46px] leading-[1.6] tracking-[3px] align-middle text-primary">
           Get in touch
         </h1>
-        <p className="font-montserrat text-lg max-w-4xl mx-auto text-center text-[#252525] font-medium">
+        <p className="font-montserrat lg:text-lg text-sm max-w-4xl mx-auto text-center text-[#252525] font-medium">
           We’ll create high-quality linkable content and build at least 40
           high-authority links to each asset, paving the way for you to grow
           your rankings, improve brand.

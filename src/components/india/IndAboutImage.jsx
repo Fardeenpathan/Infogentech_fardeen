@@ -5,7 +5,7 @@ import Image from "next/image";
 const IndAboutImage =()=>{
     return (
          <motion.div
-        className="flex gap-5 relative -top-55 container mx-auto items-center justify-center"
+        className="flex lg:gap-5 gap-2 relative lg:-top-55 container mx-auto items-center justify-center px-4 -top-20"
         initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -22,7 +22,7 @@ const IndAboutImage =()=>{
             alt="service"
             width={315}
             height={382}
-            className="object-cover rounded-2xl h-96"
+            className="object-cover rounded-2xl lg:h-96 h-45"
           />
         </motion.div>
 
@@ -37,7 +37,7 @@ const IndAboutImage =()=>{
             alt="service"
             width={361}
             height={267}
-            className="object-cover rounded-2xl h-64"
+            className="object-cover rounded-2xl lg:h-64 -32"
           />
         </motion.div>
           <motion.div
@@ -51,7 +51,7 @@ const IndAboutImage =()=>{
             alt="service"
             width={315}
             height={400}
-            className="object-cover rounded-2xl h-96"
+            className="object-cover rounded-2xl lg:h-96 h-45"
           />
         </motion.div>
 
@@ -66,7 +66,7 @@ const IndAboutImage =()=>{
             alt="service"
             width={361}
             height={267}
-            className="object-cover rounded-2xl h-64"
+            className="object-cover rounded-2xl h-64 lg:block hidden"
           />
         </motion.div>
       </motion.div>

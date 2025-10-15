@@ -67,7 +67,7 @@ export default function BlogClient({ blog }) {
           <IndSharePost />
           <IndFaqsBlog blog={blog} />
         </div>
-        <div className="min-w-112 flex flex-col gap-y-20">
+        <div className="min-w-112 flex flex-col gap-y-20 lg:block hidden">
           <IndBlogDetails data={blog} />
           <IndSideLinks data={blog}/>
         </div>

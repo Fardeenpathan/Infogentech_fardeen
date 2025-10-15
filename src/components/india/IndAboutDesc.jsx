@@ -7,7 +7,7 @@ import IndButton from "./ui/IndButton";
 
 export default function IndAboutDesc() {
   return (
-    <div className="container mx-auto px-10 flex justify-between py-10">
+    <div className="container mx-auto px-10 flex justify-between py-10 flex-col lg:flex-row gap-4 lg:gap-50">
       <motion.div
         className="flex justify-between gap-10 relative"
         initial={{ opacity: 0, x: -100 }}
@@ -27,7 +27,7 @@ export default function IndAboutDesc() {
             alt="service"
             width={724}
             height={400}
-            className="object-cover rounded-2xl h-165"
+            className="object-cover rounded-2xl xl:h-165 lg:h-120 h-100 w-80 md:w-full lg:w-[600px]"
           />
         </motion.div>
       </motion.div>

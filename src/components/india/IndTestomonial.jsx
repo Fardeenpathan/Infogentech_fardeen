@@ -82,7 +82,7 @@ const IndTestomonial = () => {
                     alt="Review"
                     width={55}
                     height={55}
-                    className="rounded-full w-24 h-24 object-cover shrink-0"
+                    className="rounded-full w-24 h-24 md:w-14 md:h-14 object-cover shrink-0"
                   />
                   <div>
                     <h4 className="text-2xl text-gray-400 font-semibold">

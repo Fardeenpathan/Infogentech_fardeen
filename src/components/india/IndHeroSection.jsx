@@ -1,4 +1,4 @@
-// IndHeroSection.tsx
+
 import IndHeroSectionContent from "@/components/india/IndHeroSectionContent";
 
 export default function IndHeroSection() {

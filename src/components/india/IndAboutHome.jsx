@@ -6,10 +6,9 @@ import IndButton from "./ui/IndButton";
 
 export default function IndAboutHome() {
   return (
-    <div className="xl:mt-20 mt-10 container mx-auto xl:px-10 px-4 flex justify-between py-10 flex-col xl:flex-row gap-60">
-      {/* LEFT: Images + Video */}
+    <div className="xl:mt-20 mt-10 container mx-auto xl:px-10 px-4 flex justify-between py-10 flex-col xl:flex-row gap-60 xl:gap-10">
       <motion.div
-        className="flex justify-between xl:gap-20 gap-2 relative"
+        className="flex justify-between 2xl:gap-20 xl:gap-10 gap-2 relative"
         initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -46,7 +45,7 @@ export default function IndAboutHome() {
         </motion.div>
 
         <motion.video
-          className="absolute xl:top-60 top-50 xl:left-50 left-25 sm:left-30 xl:w-84 xl:h-82 h-64 w-64 object-cover rounded-2xl"
+          className="absolute xl:top-60 top-50 2xl:left-50 xl:left-40 left-25 sm:left-30 xl:w-84 xl:h-82 h-64 w-64 object-cover rounded-2xl"
           src="https://res.cloudinary.com/dpmceu66e/video/upload/v1759913086/blog-app/categories/categories/1759913081122-compressed-video.mp4"
           autoPlay
           loop

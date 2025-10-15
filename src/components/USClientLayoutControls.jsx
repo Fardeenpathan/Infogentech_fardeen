@@ -45,10 +45,10 @@ export default function ClientLayoutControls({ children }) {
   return (
     <GeoBlockWrapper>
       <>
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <IndNavbar />
         </div>
-        <div className="block md:hidden">
+        <div className="block lg:hidden">
           <IndMiniNavbar />
         </div>
 

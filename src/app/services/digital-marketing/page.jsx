@@ -147,8 +147,8 @@ const Marketing = () => {
     <>
       <IndServicesHeader />
       <IndAllServices activeService="Digital Marketing" />
-      <div className="container mx-auto mt-24 xl:px-10 md:px-5 px-2">
-         <div className="pb-20">
+    <div className="container mx-auto lg:mt-24 xl:px-10 md:px-5 px-2">
+        <div className="lg:pb-20 pb-4">
           <IndServiceDesc/>
         </div>
         <IndServiceCard categories={categories} />

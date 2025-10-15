@@ -49,18 +49,18 @@ export const metadata = {
 
 const AboutUs = () => {
   return (
-    <>
-      <div className="w-full bg-[#E6DBFF] h-158 justify-center items-center flex">
-        <h1 className="font-avalors font-normal text-[80px] leading-[1.6] tracking-[3px] align-middle text-primary">
+    <div>
+      <div className="w-full bg-[#E6DBFF] lg:h-158 h-140  justify-center items-center flex">
+        <h1 className="font-avalors font-normal md:text-[80px] text-[46px] leading-[1.6] tracking-[3px] align-middle text-primary">
           ABOUT US
         </h1>
       </div>
-      <IndAboutImage />
+        <IndAboutImage />
       <IndAboutDesc />
       <IndAchievements />
       <IndInfoCards/>
      <IndHeroCTA />
-    </>
+    </div>
   );
 };
 

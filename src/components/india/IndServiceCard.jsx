@@ -13,7 +13,7 @@ export default function IndServiceCard({ categories }) {
           className="relative w-full bg-[#F4EFFF] rounded-4xl px-6 py-8 sm:px-10 sm:py-10 lg:px-12 lg:py-12 flex flex-col md:flex-row md:items-start md:justify-between gap-8 md:gap-10"
         >
           <div className="flex flex-col gap-8">
-            <div className="flex flex-row items-center flex-wrap gap-20">
+            <div className="flex flex-row items-center gap-2 lg:gap-20">
               <span className="font-avalors text-gray-400 text-[28px] sm:text-[36px] lg:text-[46px] font-normal leading-[120%]">
                 {category.id}.
               </span>
@@ -21,7 +21,7 @@ export default function IndServiceCard({ categories }) {
                 {category.title}
               </h3>
             </div>
-            <div className="flex flex-wrap justify-start p-8 gap-3 sm:gap-4 md:gap-5 px-32">
+            <div className="flex flex-wrap justify-start lg:p-8 gap-3 sm:gap-4 md:gap-5">
               {category.subServices.length > 0 ? (
                 category.subServices.map((service) => (
                   <span

@@ -99,12 +99,12 @@ const ContactForm = () => {
         <div className="w-full rounded-2xl">
           <section className="flex flex-col lg:flex-row w-full max-w-7xl mx-auto p-[15px] bg-white rounded-[30px] overflow-hidden">
             <div className="flex flex-col lg:flex-row w-full ">
-              <div className="bg-primary rounded-[30px] text-white pl-10 relative lg:w-[500px] flex justify-between flex-col pb-30 pr-30 pt-15 overflow-hidden">
+              <div className="bg-primary rounded-[30px] text-white lg:pl-10 pl-4 relative lg:w-[500px] flex justify-between flex-col pb-30 pr-5 lg:pr-30 pt-15 overflow-hidden">
                 <div>
-                  <h2 className=" font-medium text-2xl leading-6 align-middle">
+                  <h2 className=" font-medium lg:text-2xl text-xl leading-6 align-middle">
                     Contact Information
                   </h2>
-                  <h4 className=" text-lg leading-6 align-middle mt-5">
+                  <h4 className=" lg:text-lg text-sm leading-6 align-middle mt-5">
                     We’ll create high-quality linkable content and build at
                     least 40 high-authority.
                   </h4>
@@ -113,10 +113,7 @@ const ContactForm = () => {
                 <div>
                   {contactInd.map((region, i) => (
                     <div key={i}>
-                      <h3 className="text-xl font-semibold mb-4">
-                        {region.country}
-                      </h3>
-                      <div className="flex flex-col gap-10.5">
+                      <div className="flex flex-col gap-10.5 lg:text-xl text-sm mt-4">
                         {region.info.map((item, index) => (
                           <p key={index} className="flex gap-6.5 items-center">
                             <Icons name={item.icon} /> <span>{item.text}</span>
