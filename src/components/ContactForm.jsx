@@ -19,21 +19,21 @@ const contacta = [
 
 const socialMedia = [
   {
-    name: "Facebook",
-    link: "https://www.facebook.com/",
+    name: "LinkedIn",
+    link: "https://www.linkedin.com/company/infogentech/",
   },
   {
     name: "Instagram",
-    link: "https://www.instagram.com/",
+    link: "https://www.instagram.com/1nfogentech?igsh=dXJrNjVzYndyZ2Rq",
   },
-  {
-    name: "Youtube",
-    link: "https://www.youtube.com/",
-  },
-  {
-    name: "Twitter",
-    link: "https://twitter.com/",
-  },
+  // {
+  //   name: "Youtube",
+  //   link: "https://www.youtube.com/",
+  // },
+  // {
+  //   name: "Twitter",
+  //   link: "https://twitter.com/",
+  // },
 ];
 const ContactForm = () => {
   const [isVerified, setIsVerified] = useState(false);

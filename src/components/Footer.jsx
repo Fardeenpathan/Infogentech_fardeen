@@ -62,13 +62,13 @@ export function Footer() {
                   height={54}
                   objectFit="cover"
                 />
-                <Link href="#">
+                {/* <Link href="#">
                   <Icons name="Facebook" />
                 </Link>
                 <Link href="#">
                   <Icons name="Twitter" />
-                </Link>
-                <Link href="#">
+                </Link> */}
+                <Link href="https://www.linkedin.com/company/infogentech/">
                   <Icons name="LinkedIn" />
                 </Link>
               </div>
