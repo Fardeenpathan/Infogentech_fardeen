@@ -4,8 +4,8 @@ import Link from "next/link";
 import GradientButton from "./ui/GradientButton";
 import { ServicesDropdown } from "./servicesDropdown";
 import Icons from "./ui/Icon";
-import { motion, useScroll, AnimatePresence } from "framer-motion";
-import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
 import { usePathname } from "next/navigation";
 
 export default function ScrollNav() {
@@ -44,7 +44,7 @@ export default function ScrollNav() {
   return (
        <div className="flex h-15 mx-auto justify-between z-50 font-jost font-medium text-lg leading-6 py-8 px-2 items-center border border-[#8E8E8E] rounded-md bg-[#15152a]">
       <div className="flex items-center pl-3.5 space-x-1.5">
-        <Link href="/" className="flex items-center gap-1.5">
+        <Link href="/us" className="flex items-center gap-1.5">
           <Icons name="LogoFooter" />
           <p className="font-avalors text-[24px] leading-8 tracking-[3px] font-bold text-xl">
             INFOGENTECH
@@ -81,16 +81,16 @@ export default function ScrollNav() {
       >
         Portfolio
       </Link>
-      <Link href="/blog" className={linkClasses("/blog")}>
+      <Link href="/us/blog" className={linkClasses("/us/blog")}>
         Blogs
       </Link>
-      <Link href="/contact" className={linkClasses("/contact")}>
+      <Link href="/us/contact" className={linkClasses("/us/contact")}>
         Contact us
       </Link>
-      <Link href="/about" className={linkClasses("/about")}>
+      <Link href="/us/about" className={linkClasses("/us/about")}>
         About us
       </Link>
-      <Link href="/contact">
+      <Link href="/us/contact">
         <GradientButton className="!text-sm md:hidden lg:block" paddingX="px-6" paddingY="py-3">
           Free Consultation
         </GradientButton>

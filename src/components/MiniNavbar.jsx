@@ -205,7 +205,7 @@ export function MiniNavbar() {
                   </li>
                   <li>
                     <Link
-                      href="/services/marketing"
+                      href="/services/digital-marketing"
                       onClick={() => setIsOpen(false)}
                       className="block hover:text-[#dfdcdc] text-[22px] mb-2 font-jost border-b-[1px]"
                     >

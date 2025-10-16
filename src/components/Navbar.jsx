@@ -63,7 +63,7 @@ export function Navbar() {
         >
           <div className="flex items-center border border-[#8E8E8E] rounded-md ">
             <div className="flex items-center pl-3.5 space-x-1.5">
-              <Link href="/" className="flex items-center gap-1.5">
+              <Link href="/us" className="flex items-center gap-1.5">
                 <Icons name="LogoFooter" />
                 <p className="font-avalors lg:text-[24px] leading-8 tracking-[3px] font-bold text-xl">
                   INFOGENTECH
@@ -105,7 +105,7 @@ export function Navbar() {
           </div>
           <div className="flex items-center border border-[#8E8E8E] rounded-md pr-3.75 text-nowrap">
             <div className="md:flex items-center space-x-12.5 xl:px-8.5 lg:px-6 py-4.5 text-lg md:text-sm font-jost px-2">
-              <Link href="/us/blogs" className={linkClasses("/us/blogs")}>
+              <Link href="/us/blog" className={linkClasses("/us/blog")}>
                 Blogs
               </Link>
               <Link href="/us/contact" className={linkClasses("/us/contact")}>

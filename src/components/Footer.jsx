@@ -15,7 +15,7 @@ export function Footer() {
           </p>
           <div className="w-full md:w-1/2 lg:w-1/3 flex justify-center md:justify-end space-x-5 font-jost mt-6">
             <Link
-              href="/us/portfolio"
+              href="/us/portfolio/design"
               className="bg-white text-black  xl:py-5 lg:px-12.5  radius py-3.5 px-8 text-nowrap"
             >
               View Portfolio
@@ -85,7 +85,7 @@ export function Footer() {
                   </li>
                   <li>
                     <Link
-                      href="/us/portfolio"
+                      href="/us/portfolio/design"
                       className="text-gray-400 hover:text-white"
                     >
                       Portfolio
@@ -93,7 +93,7 @@ export function Footer() {
                   </li>
                   <li>
                     <Link
-                      href="/us/blogs"
+                      href="/us/blog"
                       className="text-gray-400 hover:text-white"
                     >
                       Blog
@@ -165,7 +165,7 @@ export function Footer() {
                   </li>
                   <li>
                     <Link
-                      href="/us/helpCenter"
+                      href="/us/help-center"
                       className="text-gray-400 hover:text-white"
                     >
                       Help Center
@@ -205,7 +205,7 @@ export function Footer() {
                   </li>
                   <li className="block md:hidden">
                     <Link
-                      href="/us/privacyPolicy"
+                      href="/us/privacy-policy"
                       className="text-gray-400 hover:text-white"
                     >
                       Privacy Policy
@@ -213,7 +213,7 @@ export function Footer() {
                   </li>
                   <li className="block md:hidden">
                     <Link
-                      href="/us/terms"
+                      href="/us/terms-and-conditions"
                       className="text-gray-400 hover:text-white"
                     >
                       Terms & Conditions
@@ -231,10 +231,10 @@ export function Footer() {
             &copy; {new Date().getFullYear()} Infogentech. All rights reserved.
           </p>
           <div className="space-x-4  md:block hidden">
-            <Link href="/us/privacyPolicy" className="hover:text-white ">
+            <Link href="/us/privacy-policy" className="hover:text-white ">
               Privacy Policy
             </Link>
-            <Link href="/us/terms" className="hover:text-white">
+            <Link href="/us/terms-and-conditions" className="hover:text-white">
               Terms & Conditions
             </Link>
           </div>

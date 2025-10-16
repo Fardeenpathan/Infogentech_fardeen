@@ -42,11 +42,6 @@ const Blogs = () => {
         }
       } catch (error) {
         console.error("Error fetching categories:", error);
-        const fallbackCategories = category.map((cat) => ({
-          name: cat,
-          slug: cat.toLowerCase().replace(/\s+/g, "-"),
-        }));
-        setCategories(fallbackCategories);
       }
     };
 
@@ -55,7 +50,7 @@ const Blogs = () => {
 
   useEffect(() => {
     if (categories.length > 0) {
-      fetchBlogs(blogData);
+      fetchBlogs();
     }
   }, [activeCategory, categories, currentPage, searchTerm, fetchBlogs]); 
   return (

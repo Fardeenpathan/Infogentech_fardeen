@@ -100,29 +100,29 @@ const servicesMenu = [
   },
   {
     label: "Digital Marketing",
-    href: "/us/services/marketing",
+    href: "/us/services/digital-marketing",
     description: "Building robust and scalable web applications.",
     subcategories: [
       {
-        href: "/us/services/marketing",
+        href: "/us/services/digital-marketing",
         label: "Marketing Strategy",
         icon: "MarketingStrategy",
         description: "Developing responsive and high-performance websites.",
       },
       {
-        href: "/us/services/marketing",
+        href: "/us/services/digital-marketing",
         label: "Performance Marketing",
         icon: "PerformanceMarketing",
         description: "Creating mobile applications for iOS and Android.",
       },
       {
-        href: "/us/services/marketing",
+        href: "/us/services/digital-marketing",
         label: "Search Engine Optimization (SEO)",
         icon: "SEO",
         description: "Creating mobile applications for iOS and Android.",
       },
       {
-        href: "/us/services/marketing",
+        href: "/us/services/digital-marketing",
         label: "Content Marketing",
         icon: "ContentMarketing",
         description: "Creating mobile applications for iOS and Android.",

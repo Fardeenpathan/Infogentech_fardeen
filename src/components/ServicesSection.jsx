@@ -31,7 +31,7 @@ const services = [
     title: "Marketing",
     desc: "Precision Ads, Advanced SEO, Data-Based Conversion Strategies, And Scalable Long-Term Strategies To Grow.",
     imageIcon: "/assist/img/serviceMarket.png",
-    link: "/services/marketing",
+    link: "/services/digital-marketing",
   },
 ];
 
