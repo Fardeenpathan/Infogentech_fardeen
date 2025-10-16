@@ -87,7 +87,7 @@ const Blogs = () => {
             />
             <Button 
               text="Search" 
-              className="!text-black" 
+              className="!text-black !py-6 !px-6" 
               onClick={handleSearch}
             />
           </div>
