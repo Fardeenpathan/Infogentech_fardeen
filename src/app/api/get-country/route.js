@@ -5,13 +5,12 @@ export async function GET(request) {
     let country = 'IN'; // Default to India
 
     if (process.env.NODE_ENV === 'development') {
-      // In development, use TEST_COUNTRY from environment
-      country = process.env.TEST_COUNTRY || process.env.NEXT_PUBLIC_TEST_COUNTRY || 'IN';
+      country = process.env.TEST_COUNTRY || process.env.NEXT_PUBLIC_TEST_COUNTRY || 'US';
     } else {
       country = request.headers.get('CF-IPCountry') ||
                 request.headers.get('X-Forwarded-Country') ||
                 request.headers.get('CloudFront-Viewer-Country') ||
-                'IN';
+                'US';
     }
 
     // console.log(`API: Detected country code: ${country}`);

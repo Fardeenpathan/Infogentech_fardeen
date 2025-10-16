@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { usePathname } from 'next/navigation';
+import { usePathname , useRouter} from 'next/navigation';
 import { useDispatch } from "react-redux";
 import { setCountryCode } from "../redux/countryCodeSlice";
 import Loader from "./loader/Loader";
@@ -88,6 +88,7 @@ export default function GeoBlockWrapper({ children }) {
   const [isLoading, setIsLoading] = useState(true);
   const pathname = usePathname();
   const dispatch = useDispatch()
+  const router = useRouter();
   useEffect(() => {
     let mounted = true;
 
@@ -107,22 +108,29 @@ export default function GeoBlockWrapper({ children }) {
           
           const isUSRoute = pathname && pathname.startsWith('/us');
           
-          let allowed = false;
+          if (!mounted) return;
+          console.log(`🧪 DEV GeoRedirect: ${testCountry} on ${isUSRoute ? '/us route' : 'main route'}`);
           
-          if (isUSRoute) {
-            // On /us routes, only allow foreign countries
-            allowed = US_ALLOWED_COUNTRIES.includes(testCountry);
-          } else {
-            // On main routes, only allow Indian users
-            allowed = INDIA_ALLOWED_COUNTRIES.includes(testCountry);
+          // AUTO REDIRECT LOGIC - NO BLOCKING!
+          if (testCountry === 'IN' && isUSRoute) {
+            // Indian user on /us route → redirect to main route
+            const mainRoute = pathname.replace('/us', '') || '/';
+            console.log(`🔄 Indian user auto-redirect: ${pathname} → ${mainRoute}`);
+            window.location.href = mainRoute;
+            return;
           }
           
-          if (!mounted) return;
-          console.log(`🧪 GeoBlock: ${testCountry} on ${isUSRoute ? '/us route' : 'main route'} => ${allowed ? 'ALLOWED' : 'BLOCKED'}`);
+          if (US_ALLOWED_COUNTRIES.includes(testCountry) && !isUSRoute) {
+            // Foreign user on main route → redirect to /us route
+            const usRoute = `/us${pathname}`;
+            console.log(`🔄 Foreign user auto-redirect: ${pathname} → ${usRoute}`);
+            window.location.href = usRoute;
+            return;
+          }
           
-          // Store country in Redux
+          // Store country in Redux - always allow, no blocking
           dispatch(setCountryCode(testCountry));
-          setIsAllowed(allowed);
+          setIsAllowed(true);
           setIsLoading(false);
           return;
         }
@@ -147,21 +155,40 @@ export default function GeoBlockWrapper({ children }) {
             allowed = INDIA_ALLOWED_COUNTRIES.includes(code);
           }
           
-          console.log(`🌍 Geo detected: ${code} (${geo.name}) on ${isUSRoute ? '/us route' : 'main route'} => ${allowed ? 'ALLOWED' : 'BLOCKED'}`);
+          console.log(`🌍 PROD GeoRedirect: ${code} (${geo.name}) on ${isUSRoute ? '/us route' : 'main route'}`);
           
-          // Store country in Redux for contact page
+          // AUTO REDIRECT LOGIC - NO BLOCKING IN PRODUCTION TOO!
+          if (code === 'IN' && isUSRoute) {
+            // Indian user on /us route → redirect to main route
+            const mainRoute = pathname.replace('/us', '') || '/';
+            console.log(`🔄 Indian user auto-redirect: ${pathname} → ${mainRoute}`);
+            dispatch(setCountryCode(code));
+            window.location.href = mainRoute;
+            return;
+          }
+          
+          if (US_ALLOWED_COUNTRIES.includes(code) && !isUSRoute) {
+            // Foreign user on main route → redirect to /us route
+            const usRoute = `/us${pathname}`;
+            console.log(`🔄 Foreign user auto-redirect: ${pathname} → ${usRoute}`);
+            dispatch(setCountryCode(code));
+            window.location.href = usRoute;
+            return;
+          }
+          
+          // Store country in Redux - always allow, no blocking
           dispatch(setCountryCode(code));
-          setIsAllowed(allowed);
+          setIsAllowed(true);
         } else {
-          // Fallback: block access if geo detection fails
-          console.warn('⚠️ Geo detection failed — blocking access for security');
-          dispatch(setCountryCode('UNKNOWN'));
-          setIsAllowed(false);
+          // Fallback: default to India if geo detection fails
+          console.warn('⚠️ Geo detection failed — defaulting to India');
+          dispatch(setCountryCode('IN'));
+          setIsAllowed(true);
         }
       } catch (err) {
         console.error('❌ Error in geo checking:', err);
-        // On error, allow access but mark as unknown
-        dispatch(setCountryCode('ERROR'));
+        // On error, allow access and default to India
+        dispatch(setCountryCode('IN'));
         setIsAllowed(true);
       } finally {
         if (mounted) setIsLoading(false);
@@ -172,14 +199,12 @@ export default function GeoBlockWrapper({ children }) {
     return () => { mounted = false; };
   }, [pathname, dispatch]);
 
-  if (isLoading) {
+  if (isLoading)  {
      return <Loader />;
   }
 
-  if (!isAllowed) {
-    const isUSRoute = pathname && pathname.startsWith('/us');
-    return <BlockedPage isUSRoute={isUSRoute} />;
-  }
+  // No blocking - just redirects handled in useEffect
+  // Always return children, redirects happen automatically
 
   return children;
 }
