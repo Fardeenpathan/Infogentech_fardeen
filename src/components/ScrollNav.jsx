@@ -46,7 +46,7 @@ export default function ScrollNav() {
       <div className="flex items-center pl-3.5 space-x-1.5">
         <Link href="/us" className="flex items-center gap-1.5">
           <Icons name="LogoFooter" />
-          <p className="font-avalors text-[24px] leading-8 tracking-[3px] font-bold text-xl">
+          <p className="font-avalors text-2xl leading-8 tracking-[3px] font-bold text-xl">
             INFOGENTECH
           </p>
         </Link>

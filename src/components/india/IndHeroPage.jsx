@@ -11,7 +11,7 @@ import  IndWhatMakesStandOut  from "@/components/india/IndWhatMakesStandOut";
 export default function Home() {
   return (
     <>
-      <main className="w-full">  
+      <main className="w-full overflow-hidden">  
         <IndHeroSection />
         <IndServices/>
         <IndAboutHome/>

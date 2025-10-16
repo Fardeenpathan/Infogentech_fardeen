@@ -34,7 +34,7 @@ export function IndFooter() {
             <div>
               <a className="flex items-center mb-4 gap-1.5" href="/">
                 <Icons name="LogoFooter" />
-                <h3 className="font-avalors text-[24px] leading-8 tracking-[3px] font-bold">
+                <h3 className="font-avalors text-2xl leading-8 tracking-[3px] font-bold">
                   INFOGENTECH
                 </h3>
               </a>

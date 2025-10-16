@@ -28,7 +28,7 @@ export default function SubContact() {
                   </p>
                   <Icons name="Globe" width={23} height={23} color="#8F8F9B" />
                 </div>
-                <div className="flex gap-2 font-jost font-semibold text-[20px] tracking-[0.03em] mt-5 items-center">
+                <div className="flex gap-2 font-jost font-semibold text-xl tracking-[0.03em] mt-5 items-center">
                   <Icons name="Building" /> <span>Texas, USA</span>
                 </div>
               </div>

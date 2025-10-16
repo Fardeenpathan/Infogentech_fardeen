@@ -22,7 +22,7 @@ export default function IndHowWeWork() {
             viewport={{ once: true }}
             className="max-w-86"
           >
-            <h3 className="text-sm sm:text-base xl:text-[24px] font-semibold text-gray-400 leading-[1.5] tracking-[-0.02em]">
+            <h3 className="text-sm sm:text-base xl:text-2xl font-semibold text-gray-400 leading-[1.5] tracking-[-0.02em]">
               1. Understand Your Goals
             </h3>
             <p className="font-montserrat font-medium text-sm sm:text-base tracking-tight text-gray-200">
@@ -38,7 +38,7 @@ export default function IndHowWeWork() {
             viewport={{ once: true }}
             className=" max-w-86 ml-10  md:ml-30"
           >
-            <h3 className="text-sm sm:text-base xl:text-[24px] font-semibold text-gray-400 leading-[1.5] tracking-[-0.02em]">
+            <h3 className="text-sm sm:text-base xl:text-2xl font-semibold text-gray-400 leading-[1.5] tracking-[-0.02em]">
               2. Research & Plan
             </h3>
             <p className="font-montserrat font-medium text-sm sm:text-base tracking-tight text-gray-200">
@@ -54,7 +54,7 @@ export default function IndHowWeWork() {
             viewport={{ once: true }}
             className=" max-w-86 my-4 md:ml-60"
           >
-            <h3 className="text-sm sm:text-base xl:text-[24px] font-semibold text-gray-400 leading-[1.5] tracking-[-0.02em]">
+            <h3 className="text-sm sm:text-base xl:text-2xl font-semibold text-gray-400 leading-[1.5] tracking-[-0.02em]">
               3. Launch Campaigns
             </h3>
             <p className="font-montserrat font-medium text-sm sm:text-base tracking-tight text-gray-200">
@@ -71,7 +71,7 @@ export default function IndHowWeWork() {
             className="ml-10 max-w-86 md:ml-90"
           >
             <div className="p-4 bg-purple-50 rounded-2xl">
-              <h3 className="text-sm sm:text-base xl:text-[24px] font-semibold text-primary leading-[1.5] tracking-[-0.02em]">
+              <h3 className="text-sm sm:text-base xl:text-2xl font-semibold text-primary leading-[1.5] tracking-[-0.02em]">
                 Analyze & Optimize
               </h3>
               <p className="font-montserrat font-medium text-sm sm:text-base tracking-tight text-primary">
@@ -91,7 +91,7 @@ export default function IndHowWeWork() {
         >
           <Icons name="IndHomeService2" className="shrink-0" />
           <div className="p-4">
-            <h3 className="text-sm sm:text-base xl:text-[24px] font-semibold text-gray-400 leading-[1.5] tracking-[-0.02em]">
+            <h3 className="text-sm sm:text-base xl:text-2xl font-semibold text-gray-400 leading-[1.5] tracking-[-0.02em]">
               Our Commitment to Excellence
             </h3>
             <p className="font-montserrat font-medium text-sm sm:text-base  text-gray-200 tracking-[-0.02em] mt-2">
@@ -249,7 +249,7 @@ export default function IndHowWeWork() {
             viewport={{ once: true }}
             className="absolute max-w-80 left-44 border-l-2 border-b-2 border-dashed border-[#B493FF] p-4 z-50 bg-white"
           >
-            <h3 className="text-[24px] font-semibold text-gray-400 leading-[1.5] tracking-[-0.02em]">
+            <h3 className="text-2xl font-semibold text-gray-400 leading-[1.5] tracking-[-0.02em]">
               1. Understand Your Goals
             </h3>
             <p className="font-montserrat font-medium text-lg tracking-tightest text-gray-200">
@@ -265,7 +265,7 @@ export default function IndHowWeWork() {
             viewport={{ once: true }}
             className="absolute max-w-80 left-123.5 border-l-2 border-b-2 border-dashed border-[#B493FF] p-4 top-60 z-40 bg-white"
           >
-            <h3 className="text-[24px] font-semibold text-gray-400 leading-[1.5] tracking-[-0.02em]">
+            <h3 className="text-2xl font-semibold text-gray-400 leading-[1.5] tracking-[-0.02em]">
               2. Research & Plan
             </h3>
             <p className="font-montserrat font-medium text-lg tracking-tightest text-gray-200">
@@ -281,7 +281,7 @@ export default function IndHowWeWork() {
             viewport={{ once: true }}
             className="absolute max-w-80 left-203 border-l-2 border-b-2 border-dashed border-[#B493FF] p-4 top-80 z-30 bg-white"
           >
-            <h3 className="text-[24px] font-semibold text-gray-400 leading-[1.5] tracking-[-0.02em]">
+            <h3 className="text-2xl font-semibold text-gray-400 leading-[1.5] tracking-[-0.02em]">
               3. Launch Campaigns
             </h3>
             <p className="font-montserrat font-medium text-lg tracking-tightest text-gray-200">
@@ -298,7 +298,7 @@ export default function IndHowWeWork() {
             className="absolute max-w-80 left-282.5 border-l-2 border-b-2 border-dashed border-[#B493FF] p-4 top-90"
           >
             <div className="p-4 bg-purple-50 rounded-2xl">
-              <h3 className="text-[24px] font-semibold text-primary leading-[1.5] tracking-[-0.02em] ">
+              <h3 className="text-2xl font-semibold text-primary leading-[1.5] tracking-[-0.02em] ">
                 Analyze & Optimize
               </h3>
               <p className="font-montserrat font-medium text-lg tracking-tightest text-primary">
@@ -318,7 +318,7 @@ export default function IndHowWeWork() {
         >
           <Icons name="IndHomeService2" className="shrink-0" />
           <div className="p-4 top-90">
-            <h3 className="text-[24px] font-semibold text-gray-400 leading-[1.5] tracking-[-0.02em]">
+            <h3 className="text-2xl font-semibold text-gray-400 leading-[1.5] tracking-[-0.02em]">
               Our Commitment to Excellence
             </h3>
             <p className="font-montserrat font-medium text-lg tracking-tightest text-gray-200 tracking-[-0.02em] ">

@@ -38,14 +38,17 @@ export default function IndHeroSectionContent() {
           Solutions
         </span>
 
-        <span className="absolute sm:w-40  sm:h-40 w-30 h-30 flex items-center justify-center ml-8 xl:right-20 2xl:-top-18 -top-12 right-0">
-          <div className="sm:w-16 w-12 sm:h-16 h-12 bg-primary rounded-full flex items-center justify-center z-10">
+        <span className="absolute sm:w-40  sm:h-40 w-30 h-30 flex items-center justify-center ml-8 xl:right-20 2xl:-top-10 -top-12 right-0">
+
+          <a href="/contact" className="sm:w-16 w-12 sm:h-16 h-12 bg-primary rounded-full flex items-center justify-center z-10">
             <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 7l-10 10M7 7h10v10" />
             </svg>
-          </div>
+          </a>
           <div className="absolute w-full h-full flex items-center justify-center">
+           
             <svg viewBox="0 0 200 200" className="w-full h-full animate-spin-slow">
+               
               <defs>
                 <path
                   id="circlePath"
@@ -53,14 +56,15 @@ export default function IndHeroSectionContent() {
                   fill="none"
                 />
               </defs>
+              
               <text className="fill-white">
                 <textPath
                   href="#circlePath"
                   startOffset="50%"
                   textAnchor="middle"
-                  className="text-lg font-jost tracking-wider"
+                  className="text-lg font-jost tracking-[0.2rem]"
                 >
-                  LEADING DIGITAL COMPANY SINCE 2022 * LEADING DIGITAL COMPANY SINCE 2022 *
+                  LEADING DIGITAL COMPANY SINCE 2022 * 
                 </textPath>
               </text>
             </svg>
