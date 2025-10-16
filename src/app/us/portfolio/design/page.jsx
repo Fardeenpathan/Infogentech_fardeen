@@ -21,7 +21,7 @@ const Design = () => {
           </div>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 container mx-auto relative -top-48">
-          {designProjects?.map((project) => (
+          {designProjects?.map((project,index) => (
               <motion.div
     key={project.id}
     className="p-2.5 rounded-xl"
