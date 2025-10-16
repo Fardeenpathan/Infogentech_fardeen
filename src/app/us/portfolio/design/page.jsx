@@ -1,3 +1,4 @@
+"use client"
 import PortfolioHeader from "@/components/PortfolioHeader";
 import PortfolioServices from "@/components/PortfolioServices";
 import SubscribeContact from "@/components/SubscribeContact";
@@ -6,6 +7,7 @@ import Icons from "@/components/ui/Icon";
 import CustomLine from "@/components/CustomLine";
 import Link from "next/link";
 import designProjects from "./designProjects";
+import { motion } from "framer-motion";
 
 const Design = () => {
   return (
@@ -20,7 +22,14 @@ const Design = () => {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 container mx-auto relative -top-48">
           {designProjects?.map((project) => (
-            <div key={project.id} className="p-2.5 rounded-xl">
+              <motion.div
+    key={project.id}
+    className="p-2.5 rounded-xl"
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6, delay: index * 0.1 }}
+    viewport={{ once: true }}
+  >
               <div className="w-full max-w-[774px]">
                 <div className="w-full max-w-[774px] h-70 md:h-110 lg:h-120">
                   <Image
@@ -61,7 +70,7 @@ const Design = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
         <CustomLine/>

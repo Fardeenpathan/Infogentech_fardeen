@@ -1,4 +1,4 @@
-
+"use client";
 import Icons from "@/components/ui/Icon";
 import Image from "next/image";
 import SubscribeContact from "@/components/SubscribeContact";
@@ -7,6 +7,7 @@ import PortfolioServices from "@/components/PortfolioServices";
 import Link from "next/link";
 import contentProjects from "./contentProjects";
 import CustomLine from "@/components/CustomLine";
+import { motion } from "framer-motion";
 
 const Content = () => {
   return (
@@ -21,7 +22,14 @@ const Content = () => {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 container mx-auto relative -top-48">
           {contentProjects?.map((project) => (
-            <div key={project.id} className="p-2.5 rounded-xl">
+            <motion.div
+              key={project.id}
+              className="p-2.5 rounded-xl"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+            >
               <div className="w-full max-w-[774px]">
                 <div className="w-full max-w-[774px] h-70 md:h-110 lg:h-120">
                   <Image
@@ -62,10 +70,10 @@ const Content = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
-        <CustomLine/>
+        <CustomLine />
 
         <SubscribeContact />
       </div>
