@@ -1,15 +1,56 @@
+export const metadata = {
+  title: "Privacy Policy - Infogentech",
+  description:
+    "Here is our company's privacy policy. Read carefully. If you have any doubt, feel free to contact us.",
+  keywords: ["Privacy Policy", "Infogentech", "personal data", "cookies"],
+  authors: [{ name: "InfoGenTech" }],
+  creator: "InfoGenTech",
+  publisher: "InfoGenTech",
+  metadataBase: new URL("https://infogentech.com"),
+  alternates: { canonical: "/privacy-policy" },
+  openGraph: {
+    title: "Privacy Policy - Infogentech",
+    description:
+      "Here is our company's privacy policy. Read carefully. If you have any doubt, feel free to contact us.",
+    url: "https://infogentech.com/privacy-policy",
+    siteName: "infogentech",
+    images: [
+      {
+        url: "https://infogentech.com//public/CompanyName.svg",
+        width: 1200,
+        height: 630,
+        alt: "infogentech",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@infogentech",
+    title: "Privacy Policy - Infogentech",
+    description:
+      "Here is our company's privacy policy. Read carefully. If you have any doubt, feel free to contact us.",
+    images: ["https://infogentech.com//public/CompanyName.svg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+
 const PrivacyPolicy = () => {
   return (
     <div className="subContainer mx-auto p-3">
       <div className="flex justify-between items-center">
         <div className="flex gap-7">
           <div className="flex flex-col mt-35">
-            <p className="font-avalors font-normal text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-none text-primary">
+            <h1 className="font-avalors font-normal text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-none text-primary">
               Privacy Policy
-            </p>
-            <p className="font-avalors font-normal text-2xl sm:text-4xl md:text-5xl lg:text-6xl leading-none text-primary">
+            </h1>
+            <h2 className="font-avalors font-normal text-2xl sm:text-4xl md:text-5xl lg:text-6xl leading-none text-primary">
               Your Privacy Matters to Us
-            </p>
+            </h2>
             <p className="font-montserrat font-medium text-base sm:text-lg md:text-xl leading-relaxed mt-6">
               Your personal information is safe with us, and we handle it with
               the utmost care and responsibility. This Privacy Policy explains
@@ -22,9 +63,9 @@ const PrivacyPolicy = () => {
       </div>
    <aside className="flex flex-col p-4">
           <article className="space-y-6">
-            <p className="font-avalors font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-[100%] tracking-[0.03em] capitalize mb-4">
+            <h3 className="font-avalors font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-[100%] tracking-[0.03em] capitalize mb-4">
               Information We Collect
-            </p>
+            </h3>
             <h2 className="font-kumbh-sans text-base sm:text-lg md:text-xl lg:text-2xl font-medium">
               When you use our Website, we may collect the following types of
               information:
@@ -46,9 +87,9 @@ const PrivacyPolicy = () => {
                 experience and improve our services.
               </li>
             </ul>
-            <p className="font-avalors font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-[100%] tracking-[0.03em] capitalize mb-4">
+            <h3 className="font-avalors font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-[100%] tracking-[0.03em] capitalize mb-4">
               How We Use Your Information
-            </p>
+            </h3>
             <h2 className="font-kumbh-sans text-base sm:text-lg md:text-xl lg:text-2xl font-medium">
               We use the information we collect to
             </h2>
@@ -71,11 +112,9 @@ const PrivacyPolicy = () => {
               "Contact Us",
             ].map((title, idx) => (
               <section key={idx}>
-                <p className="font-avalors font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-[100%] tracking-[0.03em] capitalize mb-4">
+                <h3 className="font-avalors font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-[100%] tracking-[0.03em] capitalize mb-4">
                   {title}
-                </p>
-                <h2 className="mt-3 text-base sm:text-lg md:text-xl leading-relaxed font-montserrat pl-4">
-                </h2>
+                </h3>
               </section>
             ))}
 

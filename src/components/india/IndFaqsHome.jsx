@@ -37,12 +37,12 @@ const IndFaqsHome = () => {
   };
 
   return (
-    <div className="mt-20 container mx-auto px-10">
+    <div className="mt-20 container mx-auto xl:px-10 px-4">
       <IndTopicHeader title="Faqs" subtitle="Everything You Need to Know" subClass="w-full"/>
 
-      <div className="mt-8 container mx-auto flex justify-between py-10">
+      <div className="xl:mt-8 container mx-auto flex justify-between mt-0 xl:py-10 py-0">
         <motion.div
-          className="flex justify-between gap-30"
+          className="flex justify-between xl:gap-30 flex-col xl:flex-row gap-10"
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -61,7 +61,7 @@ const IndFaqsHome = () => {
               alt="service"
               width={762}
               height={400}
-              className="object-cover rounded-2xl h-130"
+              className="object-cover rounded-2xl xl:h-130 h-64"
             />
           </motion.div>
 
@@ -84,8 +84,8 @@ const IndFaqsHome = () => {
                     className="flex w-full items-start gap-x-5 justify-between rounded-lg text-left text-lg font-bold focus:outline-none px-5"
                     onClick={() => toggleFAQ(faq.id)}
                   >
-                    <div className="text-[#252525] flex items-center gap-4 text-lg">
-                      <span className="text-4xl font-normal opacity-40">
+                    <div className="text-[#252525] flex items-center gap-4  xl:text-2xl text-[14px]">
+                      <span className=" font-normal opacity-40">
                         {faq.id}
                       </span>
                       {faq.question}
@@ -110,7 +110,7 @@ const IndFaqsHome = () => {
                         transition={{ duration: 0.3, ease: "easeInOut" }}
                         className="overflow-hidden"
                       >
-                        <div className="pl-19 pr-5 pt-3 text-left text-lg leading-[1.4]">
+                        <div className="xl:pl-19 pl-10 xl:pr-5  pr-2 pt-3 text-left xl:text-lg text-[12px] leading-[1.4]">
                           {faq.answer}
                         </div>
                       </motion.div>

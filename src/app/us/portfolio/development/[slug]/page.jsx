@@ -135,7 +135,7 @@ const SlugPage = () => {
 
                 <div className="flex flex-col gap-3 items-end">
                   <a
-                    href="contactUs"
+                    href="contact"
                     className="inline-block p-[2px] rounded-xl 
              [background:linear-gradient(270deg,rgba(0,0,0,0)_4.64%,rgba(0,0,0,0.63)_82.81%)]"
                   >

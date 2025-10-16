@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import { Toaster } from 'react-hot-toast';
 import IndNavbar from "@/components/india/IndNavbar";
 import { IndFooter } from "@/components/india/IndFooter";
-import { MiniNavbar } from "./MiniNavbar";
+import { IndMiniNavbar } from "@/components/india/IndMiniNavbar";
 import GeoBlockWrapper from "./GeoBlockWrapper";
 
 export default function ClientLayoutControls({ children }) {
@@ -45,11 +45,11 @@ export default function ClientLayoutControls({ children }) {
   return (
     <GeoBlockWrapper>
       <>
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <IndNavbar />
         </div>
-        <div className="block md:hidden">
-          <MiniNavbar />
+        <div className="block lg:hidden">
+          <IndMiniNavbar />
         </div>
 
         <main>{children}</main>

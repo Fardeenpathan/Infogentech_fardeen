@@ -24,14 +24,14 @@ const cards = [
 
 export default function InfoCards() {
   return (
-    <section className="w-full bg-transparent py-12 px-4 sm:px-6 md:px-10 lg:px-20">
-      <div className="flex flex-col items-center gap-10 container mx-auto">
+    <section className="container px-4 mx-auto py-10">
+      <div className="flex flex-col items-center gap-10 container mx-auto px-14">
         {cards.map((c, i) => (
           <div
             key={i}
             className="rounded-[50px] p-[2px] bg-gradient-to-b from-blue-300/30 to-purple-300/30"
           >
-            <div className="relative bg-white/70 backdrop-blur-md flex flex-col md:flex-row items-center justify-center overflow-hidden transition-transform duration-300 hover:scale-[1.01] rounded-[49px] p-6">
+            <div className="relative bg-white/70 backdrop-blur-md flex flex-col md:flex-row items-center justify-center overflow-hidden transition-transform duration-300 hover:scale-[1.01] rounded-[49px]">
               <div className="absolute top-0 left-4 sm:left-6 md:left-20 w-[200px] sm:w-[250px] md:w-[300px] h-1 rounded-md bg-gradient-to-r from-primary to-violet-500" />
 
               <div
@@ -42,9 +42,9 @@ export default function InfoCards() {
               : "order-2 md:order-2 md:pl-8"
           }`}
               >
-                <h3 className="font-avalors text-gray-400 text-3xl sm:text-4xl md:text-[46px] font-normal leading-snug tracking-normal mb-3 capitalize">
+                <h2 className="font-avalors text-gray-400 text-3xl sm:text-4xl md:text-[46px] font-normal leading-snug tracking-normal mb-3 capitalize">
                   {c.title}
-                </h3>
+                </h2>
                 <p className="text-gray-200  text-lg leading-relaxed">
                   {c.text}
                 </p>
@@ -54,7 +54,7 @@ export default function InfoCards() {
                 className={`w-full md:w-1/2 flex items-center justify-center p-4
              ${c.imageRight ? "order-1 md:order-2" : "order-1 md:order-1"}`}
               >
-                 <Icons name={c.icon} />
+                 <Icons name={c.icon} width="350" height="350"/>
               </div>
 
               <div
@@ -70,5 +70,6 @@ export default function InfoCards() {
         ))}
       </div>
     </section>
+   
   );
 }

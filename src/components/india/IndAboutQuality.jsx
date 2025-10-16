@@ -9,7 +9,7 @@ const items = [
 
 export default function IndAboutQuality() {
   return (
-    <div className="grid grid-cols-2 gap-6">
+    <div className="grid md:grid-cols-2 lg:gap-6 grid-cols-1 gap-2">
       {items.map((item) => (
           <div className="flex gap-5 items-center" key={item.id}>
             <div className="relative">
@@ -18,7 +18,7 @@ export default function IndAboutQuality() {
                 <Icons name={item.icon} />
               </div>
             </div>
-            <p className="font-montserrat font-bold text-2xl text-[#252525]">
+            <p className="font-montserrat font-bold lg:text-2xl text-lg text-[#252525]">
             {item.name}
           </p>
           </div>

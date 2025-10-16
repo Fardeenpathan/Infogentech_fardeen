@@ -28,7 +28,7 @@ const services = [
 
 export default function IndServices() {
     return (
-        <div className="mt-20 container mx-auto px-10">
+        <div className="mt-10 xl:mt-20 container mx-auto px-4">
             <IndTopicHeader
                 title="Our Services"
                 subtitle="Delivering Solutions That Drive Results"
@@ -36,7 +36,7 @@ export default function IndServices() {
             />
 
             <motion.div
-                className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-24 mt-16"
+                className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:gap-24  gap-14 xl:mt-16 mt-4"
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true }}
@@ -52,13 +52,13 @@ export default function IndServices() {
                 {services.map((service, index) => (
                     <motion.div
                         key={index}
-                        className="text-center max-w-3xs items-center"
+                        className="text-center xl:max-w-3xs items-center"
                         variants={{
                             hidden: { opacity: 0, scale: 0.8, y: 50 },
                             show: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
                         }}
                     >
-                        <div className="flex justify-center mb-4">
+                        <div className="flex justify-center mb-4 ">
                             <div className="bg-purple-50 rounded-full p-6">
                                 <div className="bg-purple-100 rounded-full p-6">
                                     <div className="bg-purple-200 rounded-full p-4">

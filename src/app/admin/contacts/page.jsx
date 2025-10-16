@@ -46,7 +46,7 @@ export default function ContactsList() {
   const searchParams = useSearchParams();
   
   // Debounce search term to avoid too many API calls
-  const debouncedSearchTerm = useDebounce(searchTerm, config.app.debounce.searchDelay);
+  const debouncedSearchTerm = useDebounce(searchTerm,300);
 
   useEffect(() => {
     // Initialize filters from URL params
@@ -274,7 +274,7 @@ export default function ContactsList() {
         </div>
       </div>
 
-      <div className="flex items-center justify-between text-sm text-gray-400">
+      <div className="flex items-center justify-between text-sm text-gray-400 font-jost">
         <span>
           Showing {((filters.page - 1) * ITEMS_PER_PAGE) + 1} to {Math.min(filters.page * ITEMS_PER_PAGE, pagination.total)} of {pagination.total} contacts
         </span>

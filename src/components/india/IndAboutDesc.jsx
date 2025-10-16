@@ -7,7 +7,7 @@ import IndButton from "./ui/IndButton";
 
 export default function IndAboutDesc() {
   return (
-    <div className="container mx-auto px-10 flex justify-between py-10">
+    <div className="container mx-auto px-10 flex justify-between py-10 flex-col lg:flex-row gap-4 lg:gap-50">
       <motion.div
         className="flex justify-between gap-10 relative"
         initial={{ opacity: 0, x: -100 }}
@@ -27,7 +27,7 @@ export default function IndAboutDesc() {
             alt="service"
             width={724}
             height={400}
-            className="object-cover rounded-2xl h-165"
+            className="object-cover rounded-2xl xl:h-165 lg:h-120 h-100 w-80 md:w-full lg:w-[600px]"
           />
         </motion.div>
       </motion.div>
@@ -46,7 +46,7 @@ export default function IndAboutDesc() {
           description="We are located in US/India, one of the leading Web development and Digital Marketing companies for all your digital requirements. As we all know that your valuable audience is looking for you on various internet platforms. They need the same services but if you are not visible to them, they won't be able to get in touch with you. This is where our digital marketing company can help you."
         />
         <IndAboutQuality />
-        <a href="/contactUs">
+        <a href="/contact">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

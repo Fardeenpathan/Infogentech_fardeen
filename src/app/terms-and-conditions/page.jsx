@@ -1,13 +1,54 @@
+
+export const metadata = {
+  title: "Terms and Conditions - Infogentech",
+  description:
+    "Your Agreement Matters to Us — Terms and Conditions for Infogentech. By accessing or using our Site, you agree to these Terms.",
+  keywords: ["Terms and Conditions", "Infogentech", "legal", "privacy", "website terms"],
+  authors: [{ name: "InfoGenTech" }],
+  creator: "InfoGenTech",
+  publisher: "InfoGenTech",
+  metadataBase: new URL("https://infogentech.com"),
+  alternates: { canonical: "/terms-and-conditions" },
+  openGraph: {
+    title: "Terms and Conditions - Infogentech",
+    description:
+      "Your Agreement Matters to Us — Terms and Conditions for Infogentech.",
+    url: "https://infogentech.com/terms-and-conditions",
+    siteName: "infogentech",
+    images: [
+      {
+        url: "https://infogentech.com//public/CompanyName.svg",
+        width: 1200,
+        height: 630,
+        alt: "infogentech",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@infogentech",
+    title: "Terms and Conditions - Infogentech",
+    description:
+      "Your Agreement Matters to Us — Terms and Conditions for Infogentech.",
+    images: ["https://infogentech.com//public/CompanyName.svg"],
+  },
+  // robots: {
+  //   index: true,
+  //   follow: true,
+  // },
+};
+
 const Terms = () => {
   return (
     <div className=" subContainer mx-auto p-3">
     <div className="flex flex-col mt-35">
-            <p className="font-avalors font-normal text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-primary">
+            <h1 className="font-avalors font-normal text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-primary">
               Terms and Conditions
-            </p>
-            <p className="font-avalors font-normal text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-primary mt-2">
+            </h1>
+            <h2 className="font-avalors font-normal text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-primary mt-2">
               Your Agreement Matters to Us
-            </p>
+            </h2>
             <p className="font-nontserrat font-medium text-base sm:text-lg md:text-xl leading-relaxed mt-6">
               Welcome to Infogentech. These Terms and Conditions govern your access to and use of our website, located at [the “Site”]. 
               By accessing or using our Site, you agree to comply with and be bound by these Terms. 
@@ -17,9 +58,9 @@ const Terms = () => {
               <aside className="flex flex-col p-4">
           <article className="space-y-8">
             <div>
-            <p className="font-avalors font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl capitalize mb-4">
+            <h4 className="font-avalors font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl capitalize mb-4">
               Use of the Site
-            </p>
+            </h4>
             <ul className="list-disc list-inside text-base sm:text-lg md:text-xl space-y-2 font-nontserrat">
               <li>
                 You must be at least 18 years old or have parental/guardian
@@ -36,9 +77,9 @@ const Terms = () => {
             </ul>
             </div>
             <div>
-              <p className="font-avalors font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl capitalize mb-4">
+              <h4 className="font-avalors font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl capitalize mb-4">
               User Accounts (If Applicable)
-            </p>
+            </h4>
             <ul className="list-disc list-inside text-base sm:text-lg md:text-xl space-y-2 font-nontserrat">
               <li>
                If you create an account, you are responsible for maintaining the confidentiality of your login credentials.
@@ -53,17 +94,17 @@ const Terms = () => {
             </div>
 
             <div>
-              <p className="font-avalors font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl capitalize mb-4">
+              <h4 className="font-avalors font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl capitalize mb-4">
                Third-Party Links
-              </p>
-              <h2 className="text-base sm:text-lg md:text-xl font-nontserrat">
+              </h4>
+              <p className="text-base sm:text-lg md:text-xl font-nontserrat">
                 Our Site may contain links to third-party websites. We are not responsible for the content, policies, or practices of any third-party sites. Accessing them is at your own risk.
-              </h2>
+              </p>
             </div>
             <div>
-              <p className="font-avalors font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl capitalize mb-4">
+              <h4 className="font-avalors font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl capitalize mb-4">
                Disclaimer of Warranties
-              </p>
+              </h4>
               <ul className="list-disc list-inside text-base sm:text-lg md:text-xl space-y-2 font-nontserrat">
               <li>
              The Site is provided on an “as-is” and “as-available” basis.
@@ -77,9 +118,9 @@ const Terms = () => {
             </ul>
             </div>
             <div>
-              <p className="font-avalors font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl capitalize mb-4">
+              <h4 className="font-avalors font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl capitalize mb-4">
                Limitation of Liability
-              </p>
+              </h4>
               <ul className="list-disc list-inside text-base sm:text-lg md:text-xl space-y-2 font-nontserrat">
               <li>
             To the maximum extent permitted by law, [Your Website Name] and its affiliates shall not be liable for any damages, losses, or claims arising from your use of the Site
@@ -90,36 +131,36 @@ const Terms = () => {
             </ul>
             </div>
             <div>
-              <p className="font-avalors font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl capitalize mb-4">
+              <h4 className="font-avalors font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl capitalize mb-4">
                  Indemnification
-              </p>
-              <h2 className="text-base sm:text-lg md:text-xl font-nontserrat">
+              </h4>
+              <p className="text-base sm:text-lg md:text-xl font-nontserrat">
               You agree to indemnify and hold harmless Infogentech, its officers, employees, and affiliates from any claims, liabilities, or damages arising from your use of the Site or violation of these Terms.
-              </h2>
+              </p>
             </div>
             <div>
-              <p className="font-avalors font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl capitalize mb-4">
+              <h4 className="font-avalors font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl capitalize mb-4">
                 Changes to These Terms
-              </p>
-              <h2 className="text-base sm:text-lg md:text-xl font-nontserrat">
+              </h4>
+              <p className="text-base sm:text-lg md:text-xl font-nontserrat">
                 We may update or revise these Terms at any time without prior notice. Continued use of the Site means you accept the revised Terms.
-              </h2>
+              </p>
             </div>
             <div>
-              <p className="font-avalors font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl capitalize mb-4">
+              <h4 className="font-avalors font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl capitalize mb-4">
                Governing Law
-              </p>
-              <h2 className="text-base sm:text-lg md:text-xl font-nontserrat">
+              </h4>
+              <p className="text-base sm:text-lg md:text-xl font-nontserrat">
                 These Terms are governed by the laws of India, without regard to its conflict of law principles.
-              </h2>
+              </p>
             </div>
             <div>
-              <p className="font-avalors font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl capitalize mb-4">
+              <h3 className="font-avalors font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl capitalize mb-4">
                 Contact Us
-              </p>
-              <h2 className="text-base sm:text-lg md:text-xl font-nontserrat">
+              </h3>
+              <p className="text-base sm:text-lg md:text-xl font-nontserrat">
                If you have questions about these Terms, please contact us:
-              </h2>
+              </p>
               <p className="mt-3 text-base sm:text-lg md:text-xl font-nontserrat">
                 Email Address : Info@infogentech.com <br /> Phone Number :
                 +91 991-013-0963 <br /> Company Name & Address : Infogentech , model

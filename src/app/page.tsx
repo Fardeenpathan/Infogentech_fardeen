@@ -1,25 +1,38 @@
-"use client";
-import  IndHeroSection  from "@/components/india/IndHeroSection";
-import  IndServices  from "@/components/india/IndServices";
-import  IndAboutHome  from "@/components/india/IndAboutHome";
-import  IndConsutation  from "@/components/india/IndConsutation";
-import  IndHowWeWork  from "@/components/india/IndHowWeWork";
-import  IndWhyChooseUs  from "@/components/india/IndWhyChooseUs";
-import  IndTestomonial  from "@/components/india/IndTestomonial";
-import  IndFaqsHome  from "@/components/india/IndFaqsHome";
-import  IndWhatMakesStandOut  from "@/components/india/IndWhatMakesStandOut";
+import IndHeroPage from "@/components/india/IndHeroPage";
+export const metadata = {
+  title: "Innovation Success with Software, Technology & Digital Marketing",
+  description:
+    "Discover how innovation in software, technology, and digital marketing drives business growth. Explore strategies for success in today’s digital-first world.",
+  keywords:
+    "digital marketing company, digital marketing company in Delhi NCR, digital marketing services, online marketing services, web development services, IT services, SEO services in Delhi, SEO services, digital marketing agency near me, social media marketing",
+  openGraph: {
+    title: "Innovation Success with Software, Technology & Digital Marketing",
+    description:
+      "Discover how innovation in software, technology, and digital marketing drives business growth. Explore strategies for success in today’s digital-first world.",
+    url: "https://infogentech.com/",
+    siteName: "infogentech",
+    images: [
+      {
+        url: "https://infogentech.com/public/CompanyName.svg",
+        width: 1200,
+        height: 630,
+        alt: "Infogentech",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    site: "@infogentech",
+    title: "Innovation Success with Software, Technology & Digital Marketing",
+    description:
+      "Discover how innovation in software, technology, and digital marketing drives business growth. Explore strategies for success in today’s digital-first world.",
+    images: ["https://infogentech.com/public/CompanyName.svg"],
+  },
+  alternates: {
+    canonical: "https://infogentech.com/",
+  },
+};
 export default function Home() {
-  return (
-    <main className="w-full">  
-      <IndHeroSection />
-      <IndServices/>
-      <IndAboutHome/>
-      <IndWhatMakesStandOut/>    
-      <IndHowWeWork/>
-      <IndConsutation/>
-      <IndWhyChooseUs/>
-      <IndTestomonial/>
-      <IndFaqsHome/>
-    </main>
-  );
+  return <IndHeroPage />;
 }

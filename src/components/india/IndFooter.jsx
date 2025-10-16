@@ -20,7 +20,7 @@ export function IndFooter() {
             >
               View Services
             </Link>
-            <Link href="/contactUs">
+            <Link href="/contact">
               <Button
                 text="Contact Us"
                 className="!py-4 !px-10 xl:!py-5.5 lg:!px-12.5 text-nowrap"
@@ -34,9 +34,9 @@ export function IndFooter() {
             <div>
               <a className="flex items-center mb-4 gap-1.5" href="/">
                 <Icons name="LogoFooter" />
-                <p className="font-avalors text-[24px] leading-8 tracking-[3px] font-bold">
+                <h3 className="font-avalors text-[24px] leading-8 tracking-[3px] font-bold">
                   INFOGENTECH
-                </p>
+                </h3>
               </a>
               <p className=" text-xl mb-4 font-jost font-medium">
                 Infogentech delivers smart digital solutions that move with the
@@ -62,13 +62,8 @@ export function IndFooter() {
                   height={54}
                   objectFit="cover"
                 />
-                <Link href="#">
-                  <Icons name="Facebook" />
-                </Link>
-                <Link href="#">
-                  <Icons name="Twitter" />
-                </Link>
-                <Link href="#">
+             
+                <Link href="https://www.linkedin.com/company/infogentech/">
                   <Icons name="LinkedIn" />
                 </Link>
               </div>
@@ -93,7 +88,7 @@ export function IndFooter() {
                   </li> */}
                   <li>
                     <Link
-                      href="/blogs"
+                      href="/blog"
                       className=" hover:text-gray-200"
                     >
                       Blog
@@ -101,7 +96,7 @@ export function IndFooter() {
                   </li>
                   <li>
                     <Link
-                      href="/contactUs"
+                      href="/contact"
                       className=" hover:text-gray-200"
                     >
                       Contact us
@@ -109,7 +104,7 @@ export function IndFooter() {
                   </li>
                   <li>
                     <Link
-                      href="/aboutUs"
+                      href="/about"
                       className=" hover:text-gray-200"
                     >
                       About us
@@ -165,7 +160,7 @@ export function IndFooter() {
                   </li>
                   <li>
                     <Link
-                      href="/helpCenter"
+                      href="/help-center"
                       className=" hover:text-gray-200"
                     >
                       Help Center
@@ -189,7 +184,7 @@ export function IndFooter() {
                   </li>
                   <li>
                     <Link
-                      href="/contactUs"
+                      href="/contact"
                       className=" hover:text-gray-200"
                     >
                       Contact Support
@@ -205,7 +200,7 @@ export function IndFooter() {
                   </li>
                   <li className="block md:hidden">
                     <Link
-                      href="/privacyPolicy"
+                      href="/privacy-policy"
                       className=" hover:text-gray-200 "
                     >
                       Privacy Policy
@@ -213,7 +208,7 @@ export function IndFooter() {
                   </li>
                   <li className="block md:hidden">
                     <Link
-                      href="/terms"
+                      href="/terms-and-conditions"
                       className=" hover:text-gray-200"
                     >
                       Terms & Conditions
@@ -231,10 +226,10 @@ export function IndFooter() {
             &copy; {new Date().getFullYear()} Infogentech. All rights reserved.
           </p>
           <div className="space-x-4  md:block hidden">
-            <Link href="/privacyPolicy" className="hover:text-gray-200 ">
+            <Link href="/privacy-policy" className="hover:text-gray-200 ">
               Privacy Policy
             </Link>
-            <Link href="/terms" className="hover:text-gray-200">
+            <Link href="/terms-and-conditions" className="hover:text-gray-200">
               Terms & Conditions
             </Link>
           </div>

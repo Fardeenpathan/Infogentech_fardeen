@@ -6,29 +6,29 @@ import Icons from "./ui/Icon";
 const servicesMenu = [
   {
     label: "Design",
-    href: "/services/design",
+    href: "/us/services/design",
     description: "Crafting visually stunning and user-friendly designs.",
     subcategories: [
       {
-        href: "/services/design",
+        href: "/us/services/design",
         label: "Graphic Design",
         icon: "GraphicDesign",
         description: "Designing impactful graphics for various media.",
       },
       {
-        href: "/services/design",
+        href: "/us/services/design",
         label: "UI/UX Design",
         icon: "UIUXDesign",
         description: "Creating intuitive and engaging user experiences.",
       },
       {
-         href: "/services/design",
+         href: "/us/services/design",
         label: "Branding",
         icon: "Branding",
         description: "Creating intuitive and engaging user experiences.",
       },
       {
-         href: "/services/design",
+         href: "/us/services/design",
         label: "Logo Design",
         icon: "Logo",
         description: "Creating intuitive and engaging user experiences.",
@@ -38,29 +38,29 @@ const servicesMenu = [
   
   {
     label: "Development",
-    href: "/services/development",
+    href: "/us/services/development",
     description: "Building robust and scalable web applications.",
     subcategories: [
       {
-        href: "/services/development",
+        href: "/us/services/development",
         label: "Web & App Development",
         icon: "WebApp",
         description: "Developing responsive and high-performance websites.",
       },
       {
-        href: "/services/development",
+        href: "/us/services/development",
         label: "CMS Development",
         icon: "CMS",
         description: "Creating mobile applications for iOS and Android.",
       },
       {
-        href: "/services/development",
+        href: "/us/services/development",
         label: "Custom Integrations",
         icon: "CustomIntegrations",
         description: "Creating mobile applications for iOS and Android.",
       },
       {
-        href: "/services/development",
+        href: "/us/services/development",
         label: "AI & Cloud Solutions",
         icon: "AiCloud",
         description: "Creating mobile applications for iOS and Android.",
@@ -69,29 +69,29 @@ const servicesMenu = [
   },
   {
     label: "Content",
-    href: "/services/content",
+    href: "/us/services/content",
     description: "Building robust and scalable web applications.",
     subcategories: [
       {
-        href: "/services/content",
+        href: "/us/services/content",
         label: "Photo & Video Production",
         icon: "PhotoVideo",
         description: "Developing responsive and high-performance websites.",
       },
       {
-        href: "/services/content",
+        href: "/us/services/content",
         label: "Visual Content Design",
         icon: "VisualContent",
         description: "Creating mobile applications for iOS and Android.",
       },
       {
-        href: "/services/content",
+        href: "/us/services/content",
         label: "Auto & Motion Graphics",
         icon: "AutoMotion",
         description: "Creating mobile applications for iOS and Android.",
       },
       {
-        href: "/services/content",
+        href: "/us/services/content",
         label: "Blog Posts & Articles",
         icon: "BlogPosts",
         description: "Creating mobile applications for iOS and Android.",
@@ -100,29 +100,29 @@ const servicesMenu = [
   },
   {
     label: "Digital Marketing",
-    href: "/services/marketing",
+    href: "/us/services/digital-marketing",
     description: "Building robust and scalable web applications.",
     subcategories: [
       {
-        href: "/services/marketing",
+        href: "/us/services/digital-marketing",
         label: "Marketing Strategy",
         icon: "MarketingStrategy",
         description: "Developing responsive and high-performance websites.",
       },
       {
-        href: "/services/marketing",
+        href: "/us/services/digital-marketing",
         label: "Performance Marketing",
         icon: "PerformanceMarketing",
         description: "Creating mobile applications for iOS and Android.",
       },
       {
-        href: "/services/marketing",
+        href: "/us/services/digital-marketing",
         label: "Search Engine Optimization (SEO)",
         icon: "SEO",
         description: "Creating mobile applications for iOS and Android.",
       },
       {
-        href: "/services/marketing",
+        href: "/us/services/digital-marketing",
         label: "Content Marketing",
         icon: "ContentMarketing",
         description: "Creating mobile applications for iOS and Android.",

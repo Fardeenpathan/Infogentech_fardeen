@@ -1,5 +1,4 @@
-// components/IndServiceCard.jsx
-"use client";
+
 import React from "react";
 import Icons from "../ui/Icon";
 
@@ -14,7 +13,7 @@ export default function IndServiceCard({ categories }) {
           className="relative w-full bg-[#F4EFFF] rounded-4xl px-6 py-8 sm:px-10 sm:py-10 lg:px-12 lg:py-12 flex flex-col md:flex-row md:items-start md:justify-between gap-8 md:gap-10"
         >
           <div className="flex flex-col gap-8">
-            <div className="flex flex-row items-center flex-wrap gap-20">
+            <div className="flex flex-row items-center gap-2 lg:gap-20">
               <span className="font-avalors text-gray-400 text-[28px] sm:text-[36px] lg:text-[46px] font-normal leading-[120%]">
                 {category.id}.
               </span>
@@ -22,7 +21,7 @@ export default function IndServiceCard({ categories }) {
                 {category.title}
               </h3>
             </div>
-            <div className="flex flex-wrap justify-start p-8 gap-3 sm:gap-4 md:gap-5 px-32">
+            <div className="flex flex-wrap justify-start lg:p-8 gap-3 sm:gap-4 md:gap-5">
               {category.subServices.length > 0 ? (
                 category.subServices.map((service) => (
                   <span
@@ -38,7 +37,7 @@ export default function IndServiceCard({ categories }) {
             </div>
           </div>
 
-          <a href="/contactUs" className="flex justify-center md:justify-end items-end w-full md:w-[25%]">
+          <a href="/contact" className="flex justify-center md:justify-end items-end w-full md:w-[25%]">
             <div className="relative w-[200px] sm:w-[220px] lg:w-[259px] h-[60px] sm:h-[64px] bg-white rounded-[40px] flex items-center justify-start cursor-pointer group hover:shadow-md transition-all">
               <div className="absolute left-[6px] top-[6px] w-[70%] sm:w-[187px] h-[48px] sm:h-[50px] bg-primary rounded-[30px] flex items-center justify-center group-hover:bg-[#7b3eff] transition">
                 <span className="text-white font-semibold font-montserrat text-[16px] leading-[24px]">

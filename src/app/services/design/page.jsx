@@ -1,4 +1,4 @@
-"use client";
+
 import IndServicesHeader from "@/components/india/IndServicesHeader";
 import IndAllServices from "@/components/india/IndAllServices";
 import IndServiceCard from "@/components/india/IndServiceCard";
@@ -50,8 +50,8 @@ const Design = () => {
     <>
       <IndServicesHeader />
       <IndAllServices activeService="Design" />
-      <div className="container mx-auto mt-24 xl:px-10 md:px-5 px-2">
-        <div className=" pb-20">
+      <div className="container mx-auto lg:mt-24 xl:px-10 md:px-5 px-2">
+        <div className="lg:pb-20 pb-4">
           <IndServiceDesc/>
         </div>
         <IndServiceCard categories={categories} />

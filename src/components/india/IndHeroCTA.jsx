@@ -6,17 +6,18 @@ import IndButton from "./ui/IndButton";
 
 export default function IndHeroCTA() {
   return (
-    <section className="relative container flex h-96 flex-col items-center justify-center text-center py-20 px-8 sm:px-16 md:px-24 lg:px-32 rounded-2xl overflow-hidden bg-[#f5efff] md:w-[85%] mx-auto">
+    <div className="container px-4 mx-auto">
+        <section className="relative flex lg:h-96 h-64 flex-col items-center justify-center text-center  rounded-2xl overflow-hidden bg-[#f5efff] md:w-[85%] mx-auto">
 
       <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 z-0 flex justify-center">
         <Icons name="IndCurve" />
       </div>
       <div className="relative z-10">
-        <h1 className="font-avalors font-normal text-[46px] leading-[120%] text-center align-middle text-primary mb-4">
+        <h1 className="font-avalors font-normal lg:text-[46px] text-3xl leading-[120%] text-center align-middle text-primary mb-4">
           Better IT Solutions & Services at <br /> your Fingertips
         </h1>
 
-        <a href="/contactUs">
+        <a href="/contact">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -30,5 +31,7 @@ export default function IndHeroCTA() {
         </a>
       </div>
     </section>
+    </div>
+  
   );
 }

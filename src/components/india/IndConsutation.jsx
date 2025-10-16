@@ -5,7 +5,8 @@ import IndButton from "./ui/IndButton";
 
 export default function IndConsutation() {
   return (
-    <div className="relative flex flex-col justify-center items-center text-center container mx-auto rounded-2xl overflow-hidden mt-20">
+    <div className="px-2">
+      <div className="relative flex flex-col justify-center items-center text-center container mx-auto rounded-2xl overflow-hidden mt-20">
       <div className="absolute inset-0 bg-primary z-0"></div>
       <video
         className="absolute inset-0 w-full h-full object-cover z-5"
@@ -25,7 +26,7 @@ export default function IndConsutation() {
           viewport={{ once: true }}
         >
           <motion.p
-            className="font-montserrat font-normal text-2xl leading-[1.5] -tracking-[0.02em]"
+            className="font-montserrat font-normal xl:text-2xl text-[12px] xl:leading-[1.5] -tracking-[0.02em]"
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -35,7 +36,7 @@ export default function IndConsutation() {
           </motion.p>
 
           <motion.p
-            className="font-avalors font-normal text-[46px] leading-12 capitalize mt-4.5"
+            className="font-avalors font-normal xl:text-[46px] text-[14px] xl:leading-12 capitalize mt-4.5"
             initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -46,7 +47,7 @@ export default function IndConsutation() {
         </motion.div>
 
         <motion.p
-          className="font-montserrat font-medium text-lg leading-[1.5] tracking-[-0.02em] py-4 mb-10"
+          className="font-montserrat font-medium xl:text-lg text-[12px] leading-[1.5] tracking-[-0.02em] py-4 xl:mb-10 mt-4"
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
@@ -61,19 +62,21 @@ export default function IndConsutation() {
           and let's start building your growth story together!
         </motion.p> 
 
-        <a href="#contact ">
+        <a href="/contact ">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.9 }}
             viewport={{ once: true }}
           >
-            <IndButton variant="outline" className="!bg-white !text-primary !text-[24px] !px-14 !py-3 !border-primary/20">
+            <IndButton variant="outline" className="!bg-white !text-primary xl:!text-[24px] !text-lg xl:!px-14 !px-8 xl:!py-3 !py-1 !border-primary/20">
                Let's talk
             </IndButton>
           </motion.div>
         </a>
       </div>
     </div>
+    </div>
+    
   );
 }

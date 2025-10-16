@@ -133,7 +133,7 @@ const SlugPage = () => {
                 {/* Make this span full width on small screens */}
                 <div className="flex flex-col gap-3 items-center md:items-end col-span-2 lg:col-span-1 w-fit">
                   <a
-                    href="contactUs"
+                    href="contact"
                     className="inline-block p-[2px] rounded-xl 
         [background:linear-gradient(270deg,rgba(0,0,0,0)_4.64%,rgba(0,0,0,0.63)_82.81%)] w-full md:w-auto"
                   >

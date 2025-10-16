@@ -25,11 +25,11 @@ export default function HomeBlogCardsd({ blog }) {
         </div>
         <div className=" pb-2.5 flex justify-between flex-col h-[180px] relative">
           <div>
-            <p className="text-[#252525] font-montserrat font-semibold text-xl line-clamp-2 flex justify-between">
-              {blog.title}  <Link href={`/blogs/${blog.slug}`}>
+            <h4 className="text-[#252525] font-montserrat font-semibold text-xl line-clamp-2 flex justify-between">
+              {blog.title}  <Link href={`/blog/${blog.slug}`}>
                 <Icons name="BlogArrow" />
               </Link>
-            </p>
+            </h4>
             <p className="font-montserrat font-medium text-lg leading-[32px] tracking-normal mt-1 line-clamp-5">
               {blog.excerpt}
             </p>
