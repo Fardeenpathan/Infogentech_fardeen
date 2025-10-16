@@ -24,7 +24,7 @@ export default function IndSharePost() {
         window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, "_blank");
         break;
       case "linkedin":
-        window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, "_blank");
+        window.open(`https://www.linkedin.com/company/infogentech/`, "_blank");
         break;
       default:
         break;
