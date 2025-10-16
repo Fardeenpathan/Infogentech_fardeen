@@ -18,10 +18,7 @@ const contacta = [
 ];
 
 const socialMedia = [
-  {
-    name: "LinkedIn",
-    link: "https://www.linkedin.com/company/infogentech/",
-  },
+
   {
     name: "Instagram",
     link: "https://www.instagram.com/1nfogentech?igsh=dXJrNjVzYndyZ2Rq",

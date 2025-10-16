@@ -62,13 +62,8 @@ export function IndFooter() {
                   height={54}
                   objectFit="cover"
                 />
-                <Link href="#">
-                  <Icons name="Facebook" />
-                </Link>
-                <Link href="#">
-                  <Icons name="Twitter" />
-                </Link>
-                <Link href="#">
+             
+                <Link href="https://www.linkedin.com/company/infogentech/">
                   <Icons name="LinkedIn" />
                 </Link>
               </div>
