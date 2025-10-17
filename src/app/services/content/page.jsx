@@ -5,10 +5,12 @@ import IndServiceDesc from "@/components/india/IndServiceDesc";
 import IndServiceCard from "@/components/india/IndServiceCard";
 
 const Content = () => {
-  const categories = [
+const categories = [
   {
     id: "01",
     title: "Photo & Video Production",
+    description: "High-quality video and photography solutions to bring your brand story to life visually.",
+    image: "/images/services/photo-video.jpg", // Replace with actual path
     subServices: [
       { id: "01", title: "Video Production & Motion Design" },
       { id: "02", title: "Video Production" },
@@ -26,6 +28,8 @@ const Content = () => {
   {
     id: "02",
     title: "Visual Content Design",
+    description: "Strategic visuals and storytelling to engage audiences across platforms with impactful design.",
+    image: "/images/services/visual-content.jpg",
     subServices: [
       { id: "01", title: "Infographic Design" },
       { id: "02", title: "Visual & Written Content" },
@@ -36,6 +40,8 @@ const Content = () => {
   {
     id: "03",
     title: "Audio & Motion Graphics",
+    description: "Dynamic audio and motion design to elevate digital experiences and captivate your audience.",
+    image: "/images/services/audio-motion.jpg",
     subServices: [
       { id: "01", title: "Sound & Music Design" },
       { id: "02", title: "Video Production & Motion Design" },
@@ -46,6 +52,8 @@ const Content = () => {
   {
     id: "04",
     title: "Blog Posts & Articles",
+    description: "SEO-optimized blog writing and professional content tailored for traffic and engagement.",
+    image: "/images/services/blog-articles.jpg",
     subServices: [
       { id: "01", title: "Blog Writing & SEO Articles" },
       { id: "02", title: "Case Studies & Whitepapers" },
@@ -54,6 +62,7 @@ const Content = () => {
     ],
   },
 ];
+
 
 
 

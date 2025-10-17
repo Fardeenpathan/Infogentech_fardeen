@@ -37,7 +37,7 @@ const IndFaqsHome = () => {
   };
 
   return (
-    <div className="mt-20 container mx-auto xl:px-10 px-4">
+    <div className="mt-20 container mx-auto px-4">
       <IndTopicHeader title="Faqs" subtitle="Everything You Need to Know" subClass="w-full"/>
 
       <div className="xl:mt-8 container mx-auto flex justify-between mt-0 xl:py-10 py-0">
