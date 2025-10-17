@@ -17,7 +17,7 @@ const IndAllServices = ({ activeService }) => {
   ];
 
   return (
- <div className="relative -top-24 justify-self-center grid md:grid-cols-4 grid-cols-2 md:mt-5 xl:mt-0 text-nowrap mt-4 rounded-2xl shadow-2xl z-10 subContainer px-4">
+ <div className="relative -top-24 justify-self-center grid md:grid-cols-4 grid-cols-2 md:mt-5 xl:mt-0 text-nowrap mt-4 rounded-2xl shadow-2xl z-10 subContainer px-4 bg-white">
   {services.map((service, index) => (
     <div key={service.id} className="relative">
       {index < services.length - 1 && (
