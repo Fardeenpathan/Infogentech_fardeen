@@ -3,7 +3,7 @@ import Icons from "@/components/ui/Icon";
 
 export default function IndContactSub() {
   return (
-    <section className="relative container flex lg:h-96 h-64 flex-col items-center justify-center text-center py-20 px-8 sm:px-16 md:px-24 lg:px-32 rounded-2xl overflow-hidden bg-[#f5efff] md:w-[85%] mx-auto">
+    <section className="relative container flex lg:h-96 h-64 flex-col items-center justify-center text-center py-20 px-8 sm:px-16 md:px-24 lg:px-32 lg;rounded-2xl overflow-hidden bg-[#f5efff] md:w-[85%] mx-auto ">
 
       <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 z-0 flex justify-center">
         <Icons name="IndCurve" />

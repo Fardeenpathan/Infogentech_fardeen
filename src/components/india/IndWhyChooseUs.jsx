@@ -13,14 +13,14 @@ export default function IndWhyChooseUs() {
   ];
 
   return (
-    <div className="xl:mt-20 mt-10 container mx-auto xl:px-10 px-2 overflow-hidden">
+    <div className="xl:mt-20 mt-10 container mx-auto xl:px-10 px-2 ">
       <IndTopicHeader
         title="We Do More For Your Business"
         subtitle="Why Choose Us!"
         description="We deliver digital and creative solutions that drive real results. From websites and social media to complete branding, we tailor every project to match your unique goals and help your business grow."
       />
 
-      <div className="xl:mt-20 mt-0 container mx-auto flex justify-between flex-col xl:flex-row xl:py-10 py-0">
+      <div className="container mx-auto flex justify-between flex-col xl:flex-row xl:py-10 py-0">
         <motion.div
           className="flex justify-between xl:gap-30 gap-10 items-center flex-col xl:flex-row"
           initial={{ opacity: 0, x: -100 }}

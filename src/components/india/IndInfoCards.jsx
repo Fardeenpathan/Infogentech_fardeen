@@ -25,7 +25,7 @@ const cards = [
 export default function InfoCards() {
   return (
     <section className="container px-4 mx-auto py-10">
-      <div className="flex flex-col items-center gap-10 container mx-auto px-14">
+      <div className="flex flex-col items-center gap-10">
         {cards.map((c, i) => (
           <div
             key={i}

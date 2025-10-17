@@ -5,12 +5,12 @@ import Button from "../ui/Button";
 
 export function IndFooter() {
   return (
-    <footer className="bg-[#1E1629] mx-auto mt-36 relative overflow-hidden md:px-10 px-4 text-white">
+    <footer className="bg-[#1E1629] mx-auto relative overflow-hidden md:px-10 px-4 text-white">
       <div className="container mx-auto pt-11">
         <div className="flex md:justify-between items-center md:flex-row flex-col justify-center">
           <div className="w-[162px] h-[162px] -top-[26px] -left-3.5 rounded-[81px] absolute bg-primary blur-[100px]" />
           <div className="w-[148px] h-[87px] top-[533px] right-0 rounded-[74px/43.5px] absolute bg-primary blur-[100px]" />
-          <p className="font-jost font-medium xl:text-[45px] xl:leading-14 leading-6 md:leading-9 text-lg md:text-3xl">
+          <p className="font-avalors font-medium xl:text-[45px] xl:leading-14 leading-6 md:leading-9 text-lg md:text-3xl">
             Start Earlier, Grow Faster <br /> Without Hidden Costs.
           </p>
           <div className="w-full md:w-1/2 lg:w-1/3 flex justify-center md:justify-end space-x-5 font-jost mt-6">
@@ -38,7 +38,7 @@ export function IndFooter() {
                   INFOGENTECH
                 </h3>
               </a>
-              <p className=" text-xl mb-4 font-jost font-medium">
+              <p className=" text-xl mb-4 font-montserrat ">
                 Infogentech delivers smart digital solutions that move with the
                 times, crafted for every generation, inspired by change. We
                 focus on achieving real, measurable results, keeping up with the

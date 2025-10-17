@@ -250,7 +250,7 @@ export function IndMiniNavbar() {
               onClick={() => setIsOpen(false)}
               className=" hover:text-purple-900 font-bold mt-6 text-[28px]  flex justify-center "
             >
-              <IndButton variant="primary">Let's talk</IndButton>
+              <IndButton variant="primary">Let's Talk</IndButton>
             </Link>
           </nav>
         </aside>

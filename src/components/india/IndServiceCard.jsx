@@ -6,7 +6,7 @@ export default function IndServiceCard({ categories }) {
   if (!categories) return null;
 
   return (
-   <div className="space-y-12 ">
+   <div className="space-y-12 pb-10">
       {categories.map((category) => (
         <div
           key={category.id}

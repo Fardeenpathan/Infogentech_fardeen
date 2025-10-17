@@ -14,7 +14,7 @@ const DigitalMarketing = () => {
     <>
       <PortfolioHeader />
       <PortfolioServices activeService="Digital Marketing" />
-     <div>
+      <div>
         <div className="container mx-auto mt-10 -z-20">
           <div className="mx-auto w-fit">
             <Icons name="CurveGradient" />
@@ -22,14 +22,14 @@ const DigitalMarketing = () => {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 container mx-auto relative -top-48">
           {marketingProjects?.map((project,index) => (
-              <motion.div
-    key={project.id}
-    className="p-2.5 rounded-xl"
-    initial={{ opacity: 0, y: 30 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.6, delay: index * 0.1 }}
-    viewport={{ once: true }}
-  >
+            <motion.div
+              key={project.id}
+              className="p-2.5 rounded-xl"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+            >
               <div className="w-full max-w-[774px]">
                 <div className="w-full max-w-[774px] h-70 md:h-110 lg:h-120">
                   <Image
@@ -73,7 +73,7 @@ const DigitalMarketing = () => {
             </motion.div>
           ))}
         </div>
-        <CustomLine/>
+        <CustomLine />
 
         <SubscribeContact />
       </div>

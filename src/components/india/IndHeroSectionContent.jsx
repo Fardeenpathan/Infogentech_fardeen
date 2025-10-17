@@ -3,19 +3,19 @@ import { motion } from "framer-motion";
 
 export default function IndHeroSectionContent() {
   return (
-    <div className="max-w-6xl xl:leading-[160%] leading-[110%] tracking-[3px] mx-auto text-white px-4">
+    <div className="max-w-6xl 2xl:leading-[160%] xl:leading-[120%] leading-[110%] tracking-[3px] mx-auto text-white px-4">
       
       <motion.div
-        className="xl:text-[80px] text-3xl font-avalors "
+        className="2xl:text-[80px] lg:text-5xl  text-3xl font-avalors"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
         <span>CREATING</span>
-        <span className="bg-primary xl:px-12 rounded-full xl:ml-10 ml-4 font-avalors px-4 py-4">BRANDS</span>
+        <span className="bg-primary xl:px-12 rounded-full xl:ml-10 ml-4 font-avalors px-4 py-2">BRANDS</span>
       </motion.div>
       <motion.div
-        className="xl:text-[80px] text-3xl xl:mt-20 mt-4 flex xl:justify-center xl:items-center flex-col xl:flex-row justify-start"
+        className="2xl:text-[80px] lg:text-5xl text-3xl 2xl:mt-10 mt-4 flex xl:justify-center xl:items-center flex-col xl:flex-row justify-start"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
@@ -29,12 +29,12 @@ export default function IndHeroSectionContent() {
       </motion.div>
 
       <motion.div
-        className="mt-20 relative items-center xl:text-[80px] text-3xl font-avalors"
+        className="mt-10 relative items-center 2xl:text-[80px] lg:text-5xl text-3xl font-avalors"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.4 }}
       >
-        <span className="bg-primary xl:px-12 px-4 py-4 rounded-full xl:ml-60 font-avalors ml-0">
+        <span className="bg-primary xl:px-12 px-4 py-4 md:py-2 rounded-full xl:ml-60 font-avalors ml-0">
           Solutions
         </span>
 
@@ -62,7 +62,7 @@ export default function IndHeroSectionContent() {
                   href="#circlePath"
                   startOffset="50%"
                   textAnchor="middle"
-                  className="text-lg font-jost tracking-[0.2rem]"
+                  className="text-lg font-montserrat tracking-[0.15rem]"
                 >
                   LEADING DIGITAL COMPANY SINCE 2022 * 
                 </textPath>

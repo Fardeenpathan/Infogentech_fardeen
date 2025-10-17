@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function IndHowWeWork() {
   return (
-    <div className="xl:mt-20 mt-10 container mx-auto px-4 sm:px-6 xl:px-10 pb-20">
+    <div className="xl:mt-20 mt-10 container mx-auto px-4 sm:px-6 xl:px-10 pb-20 ">
       <div className="lg:hidden">
         <IndMidHeader
           title="How We Work"
@@ -109,7 +109,7 @@ export default function IndHowWeWork() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.2, ease: "easeOut", delay: 0.4 }}
           viewport={{ once: true }}
-          className="hidden xl:block mt-10"
+          className="hidden xl:block mt-20"
         >
           <Image
             src="/assist/IndImg/homePage/service.svg"
@@ -223,6 +223,7 @@ export default function IndHowWeWork() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.2, ease: "easeOut", delay: 0.4 }}
             viewport={{ once: true }}
+            className="mt-20"
           >
             <Image
               src="/assist/IndImg/homePage/service.svg"
@@ -336,6 +337,7 @@ export default function IndHowWeWork() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.2, ease: "easeOut", delay: 0.4 }}
           viewport={{ once: true }}
+          className="mt-20"
         >
           <Image
             src="/assist/IndImg/homePage/service.svg"

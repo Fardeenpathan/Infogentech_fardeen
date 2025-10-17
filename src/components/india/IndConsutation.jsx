@@ -18,7 +18,7 @@ export default function IndConsutation() {
       />
       <div className="absolute inset-0 bg-primary/50 z-10"></div>
 
-      <div className="relative z-20 p-10 md:p-15 text-white">
+      <div className="relative z-20 p-10  text-white">
         <motion.div
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -36,7 +36,7 @@ export default function IndConsutation() {
           </motion.p>
 
           <motion.p
-            className="font-avalors font-normal xl:text-[46px] text-[14px] xl:leading-12 capitalize mt-4.5"
+            className="font-avalors font-normal xl:text-[40px] text-sm xl:leading-12 capitalize mt-4.5"
             initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -47,7 +47,7 @@ export default function IndConsutation() {
         </motion.div>
 
         <motion.p
-          className="font-montserrat font-medium xl:text-lg text-[12px] leading-[1.5] tracking-[-0.02em] py-4 xl:mb-10 mt-4"
+          className="font-montserrat font-medium xl:text-base text-[12px] leading-[1.5] tracking-[-0.02em] py-4 xl:mb-10 mt-4"
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
@@ -70,7 +70,7 @@ export default function IndConsutation() {
             viewport={{ once: true }}
           >
             <IndButton variant="outline" className="!bg-white !text-primary xl:!text-2xl !text-lg xl:!px-14 !px-8 xl:!py-3 !py-1 !border-primary/20">
-               Let's talk
+               Let's Talk
             </IndButton>
           </motion.div>
         </a>

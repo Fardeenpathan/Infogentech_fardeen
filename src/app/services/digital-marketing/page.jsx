@@ -144,7 +144,7 @@ const Marketing = () => {
   ];
 
   return (
-    <>
+    <section className="pb-10">
       <IndServicesHeader />
       <IndAllServices activeService="Digital Marketing" />
     <div className="container mx-auto lg:mt-24 xl:px-10 md:px-5 px-2">
@@ -164,7 +164,7 @@ const Marketing = () => {
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 

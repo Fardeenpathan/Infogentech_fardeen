@@ -54,7 +54,7 @@ export default function Navbar() {
         <a href="/contact"><IndButton
              variant="primary"
                   >
-         Let's talk
+         Let's Talk
              </IndButton></a>
           
        
