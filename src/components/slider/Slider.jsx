@@ -236,7 +236,7 @@ export default function Slider() {
         <div className=" flex justify-between w-full mt-5.5">
           <button
             onClick={prevSlide}
-            className="font-jost font-semibold text-[20px] leading-[20px] flex gap-2 items-center cursor-pointer"
+            className="font-jost font-semibold text-xl leading-[20px] flex gap-2 items-center cursor-pointer"
           >
             <Icons name="ArrowPortfolioLeft" /> Previous
           </button>{" "}
@@ -247,7 +247,7 @@ export default function Slider() {
           />
           <button
             onClick={nextSlide}
-            className="font-jost font-semibold text-[20px] leading-[20px] flex gap-2 items-center cursor-pointer"
+            className="font-jost font-semibold text-xl leading-[20px] flex gap-2 items-center cursor-pointer"
           >
             Next <Icons name="ArrowPortfolioRight" />
           </button>

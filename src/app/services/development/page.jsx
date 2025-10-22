@@ -6,10 +6,12 @@ import IndServiceCard from "@/components/india/IndServiceCard";
 
 
 const Development = () => {
- const categories = [
+const categories = [
   {
     id: "01",
     title: "Web & App Development",
+    description: "Build high-performing, scalable websites and mobile applications tailored to your business goals.",
+    image: "/images/services/web-app-development.jpg",
     subServices: [
       { id: "01", title: "Website Development" },
       { id: "02", title: "Custom Websites & Business Landing Pages" },
@@ -32,6 +34,8 @@ const Development = () => {
   {
     id: "02",
     title: "CMS Development",
+    description: "Flexible and user-friendly content management systems like WordPress, Shopify, and more.",
+    image: "/images/services/cms-development.jpg",
     subServices: [
       { id: "01", title: "WordPress (Custom Themes & Plugins)" },
       { id: "02", title: "Shopify Store Development & Customization" },
@@ -43,6 +47,8 @@ const Development = () => {
   {
     id: "03",
     title: "Custom Integrations",
+    description: "Seamless integration of APIs, databases, and third-party platforms to enhance functionality.",
+    image: "/images/services/custom-integrations.jpg",
     subServices: [
       { id: "01", title: "Database Design & API Integration" },
       { id: "02", title: "System Integration & Custom Software" },
@@ -52,6 +58,8 @@ const Development = () => {
   {
     id: "04",
     title: "AI & Cloud Solutions",
+    description: "Next-gen solutions using artificial intelligence, cloud hosting, and modern frameworks.",
+    image: "/images/services/ai-cloud.jpg",
     subServices: [
       { id: "01", title: "Advanced AI Development" },
       { id: "02", title: "Cloud Hosting Services" },
@@ -64,11 +72,11 @@ const Development = () => {
   },
 ];
 
+
   return (
     <>
       <IndServicesHeader />
       <IndAllServices activeService="Development" />
-
       <div className="container mx-auto lg:mt-24 xl:px-10 md:px-5 px-2">
         <div className="lg:pb-20 pb-4">
           <IndServiceDesc/>

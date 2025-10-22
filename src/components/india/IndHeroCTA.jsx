@@ -6,8 +6,8 @@ import IndButton from "./ui/IndButton";
 
 export default function IndHeroCTA() {
   return (
-    <div className="container px-4 mx-auto">
-        <section className="relative flex lg:h-96 h-64 flex-col items-center justify-center text-center  rounded-2xl overflow-hidden bg-[#f5efff] md:w-[85%] mx-auto">
+    <div className="container mx-auto pb-10">
+        <section className="relative flex lg:h-96 h-64 flex-col items-center justify-center text-center  rounded-2xl overflow-hidden bg-[#f5efff]">
 
       <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 z-0 flex justify-center">
         <Icons name="IndCurve" />
@@ -24,8 +24,8 @@ export default function IndHeroCTA() {
             transition={{ duration: 0.6, delay: 0.9 }}
             viewport={{ once: true }}
           >
-            <IndButton variant="outline" className="font-semibold !leading-6 !text-lg ">
-              Let's talk
+            <IndButton variant="outline" className="font-semibold !leading-6 !text-lg font-montserrat">
+              Let's Talk
             </IndButton>
           </motion.div>
         </a>

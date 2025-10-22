@@ -197,7 +197,7 @@ const SlugPage = () => {
               <p className="font-jost mt-4 ">Bold, 48px</p>
               <p className="text-[32px] font-bold">Heading 3</p>
               <p className="font-jost mt-4 ">Bold, 32px</p>
-              <p className="text-[24px] font-bold">Heading 4</p>
+              <p className="text-2xl font-bold">Heading 4</p>
               <p className="font-jost mt-4 ">Bold, 24px</p>
               <p className="font-jost mt-4 underline">Paragraph</p>
               <p className="text-lg font-jost mt-4">Paragraph 1</p>

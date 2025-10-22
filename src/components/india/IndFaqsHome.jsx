@@ -37,7 +37,7 @@ const IndFaqsHome = () => {
   };
 
   return (
-    <div className="mt-20 container mx-auto xl:px-10 px-4">
+    <div className="mt-20 container mx-auto px-4">
       <IndTopicHeader title="Faqs" subtitle="Everything You Need to Know" subClass="w-full"/>
 
       <div className="xl:mt-8 container mx-auto flex justify-between mt-0 xl:py-10 py-0">
@@ -57,7 +57,7 @@ const IndFaqsHome = () => {
             className="shrink-0"
           >
             <Image
-              src="https://res.cloudinary.com/dpmceu66e/image/upload/v1760006744/blog-app/blogs/blogs/1760006730364-3aa636fa059706af10c54c0a099e2a1f199c3acd.jpg"
+              src="/assist/IndImg/homePage/faq.png"
               alt="service"
               width={762}
               height={400}

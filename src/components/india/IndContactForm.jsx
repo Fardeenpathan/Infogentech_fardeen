@@ -128,7 +128,7 @@ const ContactForm = () => {
               </div>
 
               {/* RIGHT PANEL */}
-              <div className="flex-1 bg-white p-10">
+              <div className="flex-1 bg-white py-10 px-0 lg:px-10">
                 <form onSubmit={handleSubmit} className="space-y-10">
                   <div className="grid grid-cols-1 gap-6">
                     <div>

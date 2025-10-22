@@ -18,7 +18,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "https://infogentech.com/public/CompanyName.svg",
+        url: "https://res.cloudinary.com/dpmceu66e/image/upload/v1758791491/blog-app/categories/pvkolpeq7wop6m9lcbs9.jpg",
         alt: "Infogentech",
       },
     ],
@@ -29,7 +29,7 @@ export const metadata = {
     description:
       "Infogentech Softwares LLP is a leading digital marketing company in India. Our team of experts delivers top-notch services to meet client business requirements.",
     site: "@infogentech",
-    images: ["https://infogentech.com/public/CompanyName.svg"],
+    images: ["https://res.cloudinary.com/dpmceu66e/image/upload/v1758791491/blog-app/categories/pvkolpeq7wop6m9lcbs9.jpg"],
   },
   robots: "index, follow, all",
   authors: [{ name: "InfoGenTech" }],

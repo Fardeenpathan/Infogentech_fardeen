@@ -1,51 +1,46 @@
-"use client";
-import { useState, useRef } from "react";
-import ReCAPTCHA from "react-google-recaptcha";
-import Icons from "./ui/Icon";
-import PurpleCheckbox from "./ui/Checkbox";
-import GradientButton from "./ui/GradientButton";
-import config from "@/config";
-import adminApiService from "@/lib/adminApi";
+'use client';
+
+import { useState, useRef } from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
+import Icons from './ui/Icon';
+import PurpleCheckbox from './ui/Checkbox';
+import GradientButton from './ui/GradientButton';
+import config from '@/config';
+import adminApiService from '@/lib/adminApi';
+import { motion } from 'framer-motion';
 const contacta = [
   {
-    country: "USA",
+    country: 'USA',
     info: [
-      { icon: "Contact", text: "+1 123 456 7890" },
-      { icon: "Email", text: "info@infogentech.com" },
-      { icon: "Location", text: "Texas, USA" },
+      { icon: 'Contact', text: '+1 123 456 7890' },
+      { icon: 'Email', text: 'info@infogentech.com' },
+      { icon: 'Location', text: 'Texas, USA' },
     ],
   },
 ];
 
 const socialMedia = [
-
   {
-    name: "Instagram",
-    link: "https://www.instagram.com/1nfogentech?igsh=dXJrNjVzYndyZ2Rq",
+    name: 'Instagram',
+    link: 'https://www.instagram.com/1nfogentech?igsh=dXJrNjVzYndyZ2Rq',
   },
-  // {
-  //   name: "Youtube",
-  //   link: "https://www.youtube.com/",
-  // },
-  // {
-  //   name: "Twitter",
-  //   link: "https://twitter.com/",
-  // },
+  // More social media entries can be added
 ];
+
 const ContactForm = () => {
   const [isVerified, setIsVerified] = useState(false);
   const recaptchaRef = useRef(null);
 
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phoneNumber: "",
-    productQuestion: "",
-    message: "",
-    captcha: "",
+    name: '',
+    email: '',
+    phoneNumber: '',
+    productQuestion: '',
+    message: '',
+    captcha: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitMessage, setSubmitMessage] = useState("");
+  const [submitMessage, setSubmitMessage] = useState('');
 
   const handleCaptcha = (token) => {
     if (token) {
@@ -53,7 +48,7 @@ const ContactForm = () => {
       setFormData((prev) => ({ ...prev, captcha: token }));
     } else {
       setIsVerified(false);
-      setFormData((prev) => ({ ...prev, captcha: "" }));
+      setFormData((prev) => ({ ...prev, captcha: '' }));
     }
   };
 
@@ -68,60 +63,85 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!isVerified || !formData.captcha) {
-      setSubmitMessage("Please complete the reCAPTCHA verification.");
+      setSubmitMessage('Please complete the reCAPTCHA verification.');
       return;
     }
 
     setIsSubmitting(true);
-    setSubmitMessage("");
+    setSubmitMessage('');
 
     try {
-      const result = await adminApiService.request(config.api.endpoints.contact, {
-        method: "POST",
-        body: JSON.stringify(formData),
-      });
-      setSubmitMessage(result.message || "Contact form submitted successfully. We will get back to you soon.");
+      const result = await adminApiService.request(
+        config.api.endpoints.contact,
+        {
+          method: 'POST',
+          body: JSON.stringify(formData),
+        }
+      );
+      setSubmitMessage(
+        result.message ||
+          'Contact form submitted successfully. We will get back to you soon.'
+      );
       setFormData({
-        name: "",
-        email: "",
-        phoneNumber: "",
-        productQuestion: "",
-        message: "",
-        captcha: "",
+        name: '',
+        email: '',
+        phoneNumber: '',
+        productQuestion: '',
+        message: '',
+        captcha: '',
       });
 
-   
       if (recaptchaRef.current) {
         recaptchaRef.current.reset();
       }
       setIsVerified(false);
-      setTimeout(() => setSubmitMessage(""), 6000);
+      setTimeout(() => setSubmitMessage(''), 6000);
     } catch (error) {
-      setSubmitMessage(error?.message || "Error sending message. Please try again later.");
-      console.error("Contact form error:", error);
+      setSubmitMessage(
+        error?.message || 'Error sending message. Please try again later.'
+      );
+      console.error('Contact form error:', error);
     } finally {
       setIsSubmitting(false);
     }
   };
+const containerVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { staggerChildren: 0.3, ease: 'easeOut' },
+  },
+};
+
+const panelVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+};
   return (
-    <div className="xl:mt-35 mt-0 container mx-auto overflow-hidden px-2">
+   <motion.div
+    className="xl:mt-35 mt-0 container mx-auto overflow-hidden px-2"
+    variants={containerVariants}
+    initial="hidden"
+    animate="visible"
+  >
       <div className="flex justify-between gap-8">
-        <div className="xl:flex gap-10 hidden">
+        <motion.div className="xl:flex gap-10 hidden" variants={panelVariants}>
           <div className="flex justify-center items-center flex-col">
             <div className="relative w-12 h-12">
               <img
                 src="/assist/video/pentagonVideo.gif"
                 alt="valueImg"
-                className=" w-full h-full object-cover"
+                className="w-full h-full object-cover"
               />
             </div>
 
             <div className="w-0.5 h-[731px] rounded-full mt-4 bg-gradient-to-b from-purple-400 via-purple-500 to-purple-800"></div>
           </div>
-        </div>
+        </motion.div>
         <div className="w-full rounded-2xl">
           <div className="text-center mb-14">
-            <p className="font-avalors text-primary text-[32px] leading-6  align-middle">
+            <p className="font-avalors text-primary text-[32px] leading-6 align-middle">
               Get in Touch
             </p>
 
@@ -131,7 +151,10 @@ const ContactForm = () => {
             </p>
           </div>
           <section className="p-2.5 bg-[#202037] rounded-2xl flex gap-5 flex-col lg:flex-row">
-            <div className="md:min-w-[491px] w-full bg-[#000026] rounded-xl py-12 px-10 relative overflow-hidden">
+               <motion.div
+            className="md:min-w-[491px] w-full bg-[#000026] rounded-xl py-12 px-10 relative overflow-hidden"
+            variants={panelVariants}
+          >
               <p className="font-jost font-medium text-2xl leading-6 align-middle">
                 Contact Information
               </p>
@@ -168,20 +191,23 @@ const ContactForm = () => {
                       <Icons
                         name={item.name}
                         color="#000000"
-                        {...(item.name === "Twitter"
-                          ? { width: "15", height: "14" }
+                        {...(item.name === 'Twitter'
+                          ? { width: '15', height: '14' }
                           : {})}
                       />
                     </a>
                   </div>
                 ))}
               </div>
-              <div className="w-[269px] h-[269px] bg-[#301F56] rounded-full absolute md:-bottom-25 md:-right-25  -bottom-32 -right-32"></div>
-              <div className="w-[138px] h-[138px]  bg-[#48484880] rounded-full absolute md:bottom-13 md:right-13 bottom-7  right-7"></div>
-            </div>
-            <div className="flex items-center justify-center px-6 w-full relative ">
+              <div className="w-[269px] h-[269px] bg-[#301F56] rounded-full absolute md:-bottom-25 md:-right-25 -bottom-32 -right-32"></div>
+              <div className="w-[138px] h-[138px] bg-[#48484880] rounded-full absolute md:bottom-13 md:right-13 bottom-7 right-7"></div>
+            </motion.div>
+               <motion.div
+            className="flex items-center justify-center px-6 w-full relative"
+            variants={panelVariants}
+          >
               <form
-                className="w-full  text-white space-y-6"
+                className="w-full text-white space-y-6"
                 onSubmit={handleSubmit}
               >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -194,7 +220,7 @@ const ContactForm = () => {
                       name="name"
                       value={formData.name}
                       onChange={handleInputChange}
-                      className="w-full  py-2  border-b-2 border-[#FFFFFF] bg-transparent  focus:outline-none focus:border-[#8752FF]"
+                      className="w-full py-2 border-b-2 border-[#FFFFFF] bg-transparent focus:outline-none focus:border-[#8752FF]"
                       placeholder="Enter your name"
                       required
                     />
@@ -208,7 +234,7 @@ const ContactForm = () => {
                       name="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      className="w-full  py-2  border-b-2 border-[#FFFFFF] bg-transparent  focus:outline-none focus:border-[#8752FF]"
+                      className="w-full py-2 border-b-2 border-[#FFFFFF] bg-transparent focus:outline-none focus:border-[#8752FF]"
                       placeholder="Enter your email"
                       required
                     />
@@ -224,7 +250,7 @@ const ContactForm = () => {
                       name="phoneNumber"
                       value={formData.phoneNumber}
                       onChange={handleInputChange}
-                      className="w-full  py-2  border-b-2 border-[#FFFFFF] bg-transparent  focus:outline-none focus:border-[#8752FF]"
+                      className="w-full py-2 border-b-2 border-[#FFFFFF] bg-transparent focus:outline-none focus:border-[#8752FF]"
                       placeholder="+1 012 3456 789"
                       required
                     />
@@ -237,7 +263,7 @@ const ContactForm = () => {
                       name="productQuestion"
                       value={formData.productQuestion}
                       onChange={handleInputChange}
-                      className="w-full  py-2  border-b-2 border-[#FFFFFF] bg-transparent  focus:outline-none focus:border-[#8752FF]"
+                      className="w-full py-2 border-b-2 border-[#FFFFFF] bg-transparent focus:outline-none focus:border-[#8752FF]"
                       required
                     >
                       <option value="" className="bg-[#1C1B2D]">
@@ -264,7 +290,7 @@ const ContactForm = () => {
                     </select>
                   </div>
                 </div>
-                
+
                 <div>
                   <label className="block text-[#E4E4E4] text-lg mb-2 font-jost font-light">
                     Message
@@ -273,9 +299,9 @@ const ContactForm = () => {
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
-                    className="w-full  py-2  border-b-2 border-[#FFFFFF] bg-transparent  focus:outline-none focus:border-[#8752FF] resize-none"
+                    className="w-full py-2 border-b-2 border-[#FFFFFF] bg-transparent focus:outline-none focus:border-[#8752FF] resize-none"
                     placeholder="Write your message.."
-                    rows="3"
+                    rows={3}
                     required
                   ></textarea>
                 </div>
@@ -290,9 +316,9 @@ const ContactForm = () => {
                 {submitMessage && (
                   <div
                     className={`text-sm ${
-                      submitMessage.includes("successfully")
-                        ? "text-green-400"
-                        : "text-red-400"
+                      submitMessage.includes('successfully')
+                        ? 'text-green-400'
+                        : 'text-red-400'
                     }`}
                   >
                     {submitMessage}
@@ -308,24 +334,15 @@ const ContactForm = () => {
                     paddingX="px-12"
                     paddingY="py-4.5"
                   >
-                    {isSubmitting ? "Sending..." : "Send Message"}
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
                   </GradientButton>
                 </button>
-
-                {/* <Image
-                  src="/assist/img/ContactPlane.png"
-                  alt="valueImg"
-                  width={203}
-                  height={85}
-                  objectFit="cover"
-                  className="rotate-200 scale-y-[-1] absolute -bottom-2 left-1/3"
-                /> */}
               </form>
-            </div>
+            </motion.div>
           </section>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

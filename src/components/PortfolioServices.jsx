@@ -1,4 +1,5 @@
-"use client";
+
+import { motion } from "framer-motion";
 import Icons from "@/components/ui/Icon";
 import Link from "next/link";
 
@@ -16,22 +17,45 @@ const PortfolioServices = ({ activeService }) => {
   ];
 
   return (
-    <div className=" gap-6 justify-self-center grid md:grid-cols-4 grid-cols-2 md:mt-5 mt-0 md:px-4 px-2 text-nowrap">
-      {services.map((service) => (
-        <Link
-          key={service.id}
-          href={`/us/portfolio/${service.slug}`}
-          scroll={false}
-          className={`flex gap-2 items-center justify-center border-[1px] border-white  rounded-md px-7 py-2 cursor-pointer transition-opacity duration-300 ${
-            activeService === service.label ? "" : "opacity-30"
-          }`}
-        >
-          <Icons name={service.icon} />
-          <p className="text-sm font-jost">{service.label}</p>
-        </Link>
-      ))}
+    <div className="gap-6 justify-self-center grid md:grid-cols-4 grid-cols-2 md:mt-5 mt-0 md:px-4 px-2 text-nowrap relative">
+      {services.map((service) => {
+        const isActive = activeService === service.label;
+
+        return (
+          <motion.div
+            key={service.id}
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+          >
+            <Link
+              href={`/us/portfolio/${service.slug}`}
+              scroll={false}
+              className={`relative flex gap-2 items-center justify-center border-[1px] border-white rounded-md px-7 py-2 cursor-pointer transition-opacity duration-300 ${
+                isActive ? "" : "opacity-30"
+              }`}
+            >
+              {isActive && (
+                <motion.div
+                  layoutId="active-bg"
+                  className="absolute inset-0 rounded-md bg-white/10 z-0"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                />
+              )}
+              <div className="relative z-10 flex items-center gap-2">
+                <Icons name={service.icon} />
+                <p className="text-sm font-jost">{service.label}</p>
+              </div>
+            </Link>
+          </motion.div>
+        );
+      })}
     </div>
   );
 };
 
 export default PortfolioServices;
+
