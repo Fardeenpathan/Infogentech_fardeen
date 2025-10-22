@@ -5,13 +5,13 @@ import IndAllServices from "@/components/india/IndAllServices";
 import IndServiceDesc from "@/components/india/IndServiceDesc";
 import Icons from "@/components/ui/Icon";
 export const metadata = {
-  title: "Digital Marketing Services and Web Solution Company",
+  title: "Digital Marketing Services and Web Solution Company | Infogentech Softwares LLP",
   description:
     "Top digital marketing and web solutions provider globally. We offer expert services to enhance your online presence, drive traffic, and grow your business.",
   keywords:
     "Online Marketing Services, Online Internet Marketing, Marketing Solution, IT Solutions Services",
   openGraph: {
-    title: "Digital Marketing Services and Web Solution Company",
+    title: "Digital Marketing Services and Web Solution Company ",
     description:
       "Top digital marketing and web solutions provider globally. We offer expert services to enhance your online presence, drive traffic, and grow your business.",
     url: "https://infogentech.com/services",
@@ -19,18 +19,18 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "https://infogentech.com/public/CompanyName.svg",
+        url: "/public/logoGroup.png",
         alt: "Infogentech",
       },
     ],
   },
   twitter: {
     card: "summary",
-    title: "Digital Marketing Services and Web Solution Company",
+    title: "Digital Marketing Services and Web Solution Company ",
     description:
       "Top digital marketing and web solutions provider globally. We offer expert services to enhance your online presence, drive traffic, and grow your business.",
     site: "@infogentech",
-    images: ["https://infogentech.com/public/CompanyName.svg"],
+    images: ["/public/logoGroup.png"],
   },
   robots: "index, follow, all",
   authors: [{ name: "InfoGenTech" }],

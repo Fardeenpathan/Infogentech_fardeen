@@ -15,7 +15,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "/assist/IndImg/homePage/faq.png",
+        url: "/public/logoGroup.png",
         alt: "Infogentech Office",
         width: 1200,
         height: 630,
@@ -28,7 +28,7 @@ export const metadata = {
     description:
       "Infogentech Softwares LLP is a leading digital marketing company in India. Our team of experts delivers top-notch services to meet client business requirements.",
     images: [
-      "/assist/IndImg/homePage/faq.png",
+      "/public/logoGroup.png",
     ],
   },
   robots: "index, follow, all",
