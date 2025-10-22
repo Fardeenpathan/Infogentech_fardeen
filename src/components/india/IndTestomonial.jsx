@@ -10,28 +10,28 @@ const reviews = [
     text: "Their SEO work took us from barely showing up in searches to ranking on the first page for important keywords. They clearly know the healthcare space inside and out.",
     name: "Ethan Roberts",
     role: "Entrepreneur",
-    img: "/assist/img/ethan.jpg",
+    img: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761126328/blog-app/blogs/blogs/1761126326558-writing-dairy-note-coffee-shop-concept-as-memory-life-woman-coffee-shop-smiling-woman-making-notes-notepad.jpg",
   },
   {
     id: 2,
     text: "From a new logo to a refreshed social media strategy, they completely elevated our brand. Customer engagement is way up, and foot traffic to our store has been better than ever.",
     name: "Jessica Collins",
     role: "Manager",
-    img: "/assist/img/jessica.jpg",
+    img: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761126387/blog-app/blogs/blogs/1761126384911-indian-woman-posing-cute-stylish-outfit-camera-smiling.jpg",
   },
   {
     id: 3,
     text: "They brought our vision to life with modern design and a smart strategy that really connects with our clients. We constantly get compliments on our new website and branding.",
     name: "Marcus Lee",
     role: "Founder StartTech",
-    img: "/assist/img/Marcus.jpg",
+    img: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761126289/blog-app/blogs/blogs/1761126287051-successful-businessman.jpg",
   },
   {
     id: 4,
     text: "They helped us run ads that finally brought in the right customers. Within weeks, we saw more calls and new projects coming through.",
     name: "Sarah Mitchell",
     role: "Entrepreneur",
-    img: "/assist/img/sarah.jpg",
+    img: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761126237/blog-app/blogs/blogs/1761126235663-content-confident-young-man-leaning-railing-modern-office.jpg",
   },
 ];
 

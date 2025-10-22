@@ -50,7 +50,7 @@ export function IndFooter() {
                 <p className="space-x-3">
                   <a href="mailto:info@infogentech.com">info@infogentech.com</a>
                   <span>|</span>
-                   {/* <span>+91 991-013-0963</span> */}
+                   <span>+91 991-013-0963</span>
                 </p>
               </div>
               <div className=" max-w-[300px] text-white opacity-10 border-1 mt-7.5"></div>

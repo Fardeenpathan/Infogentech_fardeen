@@ -35,7 +35,7 @@ export const metadata = {
 
 const Terms = () => {
   return (
-    <div className="mt-20 subContainer mx-auto p-3">
+    <div className="lg:mt-20 mt-10 subContainer mx-auto p-3">
       <div className="flex justify-between items-center">
         <div className="flex gap-7">
           <div className="flex justify-center items-center mb-40 flex-col">
@@ -80,7 +80,7 @@ const Terms = () => {
             <p className="font-avalors font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl capitalize mb-4">
               Use of the Site
             </p>
-            <ul className="list-disc list-inside text-base sm:text-lg md:text-xl space-y-2 text-jost">
+            <ul className="list-disc list-inside text-base sm:text-lg md:text-xl space-y-2 font-mo">
               <li>
                 You must be at least 18 years old or have parental/guardian
                 consent to use this Site.

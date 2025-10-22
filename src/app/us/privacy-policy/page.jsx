@@ -1,6 +1,6 @@
 const PrivacyPolicy = () => {
   return (
-    <div className="mt-20 subContainer mx-auto p-3">
+    <div className="xl:mt-20 mt-10 subContainer mx-auto p-3">
       <div className="flex justify-between items-center">
         <div className="flex gap-7">
           <div className="flex justify-center items-center mb-40 flex-col">

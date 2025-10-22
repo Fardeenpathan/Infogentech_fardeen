@@ -8,7 +8,7 @@ export function IndMiniNavbar() {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   return (
     <div className=" absolute bg-transparent mt-3 h-15 mx-auto z-50 container px-2 w-full text-white font-montserrat">
-      <div className="flex items-center border border-white rounded-md justify-between px-2 py-3">
+      <div className=" relative flex items-center border border-white rounded-md justify-between px-2 py-3 overflow-hidden">
         <div className="flex items-center  space-x-1.5">
           <Link href="/" className="flex items-center gap-1.5">
             <svg
@@ -85,11 +85,12 @@ export function IndMiniNavbar() {
             />
           </svg>
         </button>
+        <div className="absolute top-0 left-0 w-full h-full bg-[#312f2f59] -z-10" />
       </div>
 
       {isOpen && (
         <aside
-          className={`fixed top-0 left-0 w-full sm:w-full bg-purple-400 shadow-2xl transform transition-transform duration-300 ease-in-out z-50 pt-2.5 px-5 pb-8
+          className={`fixed top-0 left-0 w-full sm:w-full bg-[#140f0ff8] shadow-2xl transform transition-transform duration-300 ease-in-out z-50 pt-2.5 px-5 pb-8
             ${isOpen ? "translate-y-0" : "-translate-y-full"}`}
         >
           <div className="flex justify-between px-5 py-2 border-[1px] radius">
@@ -165,12 +166,12 @@ export function IndMiniNavbar() {
           <nav className="pt-10 space-y-4 ">
             <div
               onClick={() => setIsServicesOpen((prev) => !prev)}
-              className="hover:text-purple-900 font-bold text-[28px] border-b-[1px] flex items-center gap-2 cursor-pointer"
+              className="hover:text-primary font-bold text-[28px] border-b-[1px] flex items-center gap-2 cursor-pointer"
             >
               Services
               <Icons
                 name="Arrowdown"
-                className={`transition-transform duration-300 hover:text-purple-900 ${
+                className={`transition-transform duration-300 hover:text-primary ${
                   isServicesOpen ? "rotate-180" : ""
                 }`}
               />
@@ -189,7 +190,7 @@ export function IndMiniNavbar() {
                     <Link
                       href="/services/design"
                       onClick={() => setIsOpen(false)}
-                      className="block hover:text-purple-900 text-[22px] mb-2 font-jost border-b-[1px]"
+                      className="block hover:text-primary text-[22px] mb-2 font-jost border-b-[1px]"
                     >
                       Design
                     </Link>
@@ -198,7 +199,7 @@ export function IndMiniNavbar() {
                     <Link
                       href="/services/development"
                       onClick={() => setIsOpen(false)}
-                      className="block hover:text-purple-900 text-[22px] mb-2 font-jost border-b-[1px]"
+                      className="block hover:text-primary text-[22px] mb-2 font-jost border-b-[1px]"
                     >
                       Development
                     </Link>
@@ -207,7 +208,7 @@ export function IndMiniNavbar() {
                     <Link
                       href="/services/digital-marketing"
                       onClick={() => setIsOpen(false)}
-                      className="block hover:text-purple-900 text-[22px] mb-2 font-jost border-b-[1px]"
+                      className="block hover:text-primary text-[22px] mb-2 font-jost border-b-[1px]"
                     >
                       Marketing
                     </Link>
@@ -216,7 +217,7 @@ export function IndMiniNavbar() {
                     <Link
                       href="/services/content"
                       onClick={() => setIsOpen(false)}
-                      className="block hover:text-purple-900 text-[22px] mb-2 font-jost border-b-[1px]"
+                      className="block hover:text-primary text-[22px] mb-2 font-jost border-b-[1px]"
                     >
                       Content
                     </Link>
@@ -227,34 +228,35 @@ export function IndMiniNavbar() {
             <Link
               href="/blog"
               onClick={() => setIsOpen(false)}
-              className="block hover:text-purple-900 font-bold text-[28px]  border-b-[1px]"
+              className="block hover:text-primary font-bold text-[28px]  border-b-[1px]"
             >
               Blog
             </Link>
             <Link
               href="/contact"
               onClick={() => setIsOpen(false)}
-              className="block hover:text-purple-900 font-bold text-[28px]  border-b-[1px]"
+              className="block hover:text-primary font-bold text-[28px]  border-b-[1px]"
             >
               Contact us
             </Link>
             <Link
               href="/about"
               onClick={() => setIsOpen(false)}
-              className="block hover:text-purple-900 font-bold text-[28px] mb-2"
+              className="block hover:text-primary font-bold text-[28px] mb-2"
             >
               About us
             </Link>
             <Link
               href="/contact"
               onClick={() => setIsOpen(false)}
-              className=" hover:text-purple-900 font-bold mt-6 text-[28px]  flex justify-center "
+              className=" hover:text-primary font-bold mt-6 text-[28px]  flex justify-center "
             >
               <IndButton variant="primary">Let's Talk</IndButton>
             </Link>
           </nav>
         </aside>
       )}
+      
     </div>
   );
 }

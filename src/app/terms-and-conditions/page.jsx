@@ -46,15 +46,15 @@ export const metadata = {
 
 const Terms = () => {
   return (
-    <div className=" subContainer mx-auto p-3">
-    <div className="flex flex-col mt-35">
+    <div className="subContainer mx-auto p-3">
+    <div className="flex flex-col xl:mt-35 mt-25">
             <h1 className="font-avalors font-normal text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-primary">
               Terms and Conditions
             </h1>
             <h2 className="font-avalors font-normal text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-primary mt-2">
               Your Agreement Matters to Us
             </h2>
-            <p className="font-nontserrat font-medium text-base sm:text-lg md:text-xl leading-relaxed mt-6">
+            <p className="font-montserrat font-medium text-base sm:text-lg md:text-xl leading-relaxed mt-6">
               Welcome to Infogentech. These Terms and Conditions govern your access to and use of our website, located at [the “Site”]. 
               By accessing or using our Site, you agree to comply with and be bound by these Terms. 
               If you do not agree, you should not use this site.
@@ -66,7 +66,7 @@ const Terms = () => {
             <h4 className="font-avalors font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl capitalize mb-4">
               Use of the Site
             </h4>
-            <ul className="list-disc list-inside text-base sm:text-lg md:text-xl space-y-2 font-nontserrat">
+            <ul className="list-disc list-inside text-base sm:text-lg md:text-xl space-y-2 font-montserrat">
               <li>
                 You must be at least 18 years old or have parental/guardian
                 consent to use this Site.
@@ -85,7 +85,7 @@ const Terms = () => {
               <h4 className="font-avalors font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl capitalize mb-4">
               User Accounts ( If Applicable )
             </h4>
-            <ul className="list-disc list-inside text-base sm:text-lg md:text-xl space-y-2 font-nontserrat">
+            <ul className="list-disc list-inside text-base sm:text-lg md:text-xl space-y-2 font-montserrat">
               <li>
                If you create an account, you are responsible for maintaining the confidentiality of your login credentials.
               </li>
@@ -102,7 +102,7 @@ const Terms = () => {
               <h4 className="font-avalors font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl capitalize mb-4">
                Third-Party Links
               </h4>
-              <p className="text-base sm:text-lg md:text-xl font-nontserrat">
+              <p className="text-base sm:text-lg md:text-xl font-montserrat">
                 Our Site may contain links to third-party websites. We are not responsible for the content, policies, or practices of any third-party sites. Accessing them is at your own risk.
               </p>
             </div>
@@ -110,7 +110,7 @@ const Terms = () => {
               <h4 className="font-avalors font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl capitalize mb-4">
                Disclaimer of Warranties
               </h4>
-              <ul className="list-disc list-inside text-base sm:text-lg md:text-xl space-y-2 font-nontserrat">
+              <ul className="list-disc list-inside text-base sm:text-lg md:text-xl space-y-2 font-montserrat">
               <li>
              The Site is provided on an “as-is” and “as-available” basis.
               </li>
@@ -126,7 +126,7 @@ const Terms = () => {
               <h4 className="font-avalors font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl capitalize mb-4">
                Limitation of Liability
               </h4>
-              <ul className="list-disc list-inside text-base sm:text-lg md:text-xl space-y-2 font-nontserrat">
+              <ul className="list-disc list-inside text-base sm:text-lg md:text-xl space-y-2 font-montserrat">
               <li>
             To the maximum extent permitted by law, [Your Website Name] and its affiliates shall not be liable for any damages, losses, or claims arising from your use of the Site
               </li>
@@ -139,7 +139,7 @@ const Terms = () => {
               <h4 className="font-avalors font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl capitalize mb-4">
                  Indemnification
               </h4>
-              <p className="text-base sm:text-lg md:text-xl font-nontserrat">
+              <p className="text-base sm:text-lg md:text-xl font-montserrat">
               You agree to indemnify and hold harmless Infogentech, its officers, employees, and affiliates from any claims, liabilities, or damages arising from your use of the Site or violation of these Terms.
               </p>
             </div>
@@ -147,7 +147,7 @@ const Terms = () => {
               <h4 className="font-avalors font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl capitalize mb-4">
                 Changes to These Terms
               </h4>
-              <p className="text-base sm:text-lg md:text-xl font-nontserrat">
+              <p className="text-base sm:text-lg md:text-xl font-montserrat">
                 We may update or revise these Terms at any time without prior notice. Continued use of the Site means you accept the revised Terms.
               </p>
             </div>
@@ -155,7 +155,7 @@ const Terms = () => {
               <h4 className="font-avalors font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl capitalize mb-4">
                Governing Law
               </h4>
-              <p className="text-base sm:text-lg md:text-xl font-nontserrat">
+              <p className="text-base sm:text-lg md:text-xl font-montserrat">
                 These Terms are governed by the laws of India, without regard to its conflict of law principles.
               </p>
             </div>
@@ -163,10 +163,10 @@ const Terms = () => {
               <h3 className="font-avalors font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl capitalize mb-4">
                 Contact Us
               </h3>
-              <p className="text-base sm:text-lg md:text-xl font-nontserrat">
+              <p className="text-base sm:text-lg md:text-xl font-montserrat">
                If you have questions about these Terms, please contact us:
               </p>
-              <p className="mt-3 text-base sm:text-lg md:text-xl font-nontserrat">
+              <p className="mt-3 text-base sm:text-lg md:text-xl font-montserrat">
                 Email Address : Info@infogentech.com <br /> Phone Number :
                 +91 991-013-0963 <br /> Company Name & Address : Infogentech , model
                 Town

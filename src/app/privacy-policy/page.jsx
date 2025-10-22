@@ -49,7 +49,7 @@ const PrivacyPolicy = () => {
     <div className="subContainer mx-auto p-3">
       <div className="flex justify-between items-center">
         <div className="flex gap-7">
-          <div className="flex flex-col mt-35">
+          <div className="flex flex-col xl:mt-35 mt-25">
             <h1 className="font-avalors font-normal text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-none text-primary">
               Privacy Policy
             </h1>
