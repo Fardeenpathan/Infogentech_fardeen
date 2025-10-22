@@ -37,7 +37,7 @@ const SlugPage = () => {
               setExpanded={setExpanded}
             />
 
-            <div className="mx-5 mt-6 font-jost">
+            <div className="mx-5 mt-6 font-montserrat">
               <p className="font-normal text-[32px] leading-7 font-jost">
                 {project.title}
               </p>
@@ -52,29 +52,29 @@ const SlugPage = () => {
               </ul>
             </div>
 
-            <div className="mx-5 mt-10 font-jost">
+            <div className="mx-5 mt-10 font-montserrat">
               <div className="grid grid-cols-3 mt-15 space-y-8">
                 <div className="flex flex-col gap-2 ">
-                  <p className="font-jost font-medium text-lg leading-[20px] opacity-30">
+                  <p className="font-jost font-medium text-lg leading-[20px]">
                     Date
                   </p>
                   <p>{project.date}</p>
                 </div>
                 <div className="flex flex-col gap-3">
-                  <p className=" font-medium text-lg leading-[20px] opacity-30">
+                  <p className=" font-medium text-lg leading-[20px]">
                     Duration
                   </p>
                   <p>{project.duration}</p>
                 </div>
                 <div className="flex flex-col gap-3">
-                  <p className="font-medium text-lg leading-[20px] opacity-30">
+                  <p className="font-medium text-lg leading-[20px]">
                     Tools
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {(project.tools || []).map((tool, index) => (
                       <span
                         key={index}
-                        className="font-jost bg-[#8752FF80] py-1.5 px-3 w-fit radius"
+                        className="font-jost bg-primary text-white py-1.5 px-3 w-fit radius"
                       >
                         {tool}
                       </span>
@@ -83,13 +83,13 @@ const SlugPage = () => {
                 </div>
 
                 <div className="flex flex-col gap-3">
-                  <p className=" font-medium text-lg leading-[20px] opacity-30">
+                  <p className=" font-medium text-lg leading-[20px]">
                     Client
                   </p>
                   <p>{project.client}</p>
                 </div>
                 <div className="flex flex-col gap-3">
-                  <p className=" font-medium text-lg leading-[20px] opacity-30">
+                  <p className=" font-medium text-lg leading-[20px]">
                     Location
                   </p>
                   <p>{project.location}</p>
@@ -97,14 +97,14 @@ const SlugPage = () => {
               </div>
               <div className="grid grid-cols-3 mt-15 space-y-8">
                 <div className="flex flex-col gap-2">
-                  <p className="font-jost font-medium text-lg leading-[20px] opacity-30">
+                  <p className="font-jost font-medium text-lg leading-[20px]">
                     Modules
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {(project.modules || []).map((mod, index) => (
                       <span
                         key={index}
-                        className="font-jost bg-[#8752FF80] py-1.5 px-3 w-fit radius"
+                        className="font-jost bg-primary text-white py-1.5 px-3 w-fit radius"
                       >
                         {mod}
                       </span>
@@ -113,14 +113,14 @@ const SlugPage = () => {
                 </div>
 
                 <div className="flex flex-col gap-3">
-                  <p className="font-medium text-lg leading-[20px] opacity-30">
+                  <p className="font-medium text-lg leading-[20px]">
                     Expertise
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {(project.expertise || []).map((item, index) => (
                       <span
                         key={index}
-                        className="font-jost bg-[#8752FF80] py-1.5 px-3 w-fit radius"
+                        className="font-jost bg-primary text-white py-1.5 px-3 w-fit radius"
                       >
                         {item}
                       </span>
