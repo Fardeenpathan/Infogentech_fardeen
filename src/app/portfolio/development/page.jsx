@@ -12,7 +12,7 @@ const DigitalMarketing = () => {
       <IndProtfolioAll activeService="development" />
         <div className="grid grid-cols-1 lg:grid-cols-2 container mx-auto">
           {developmentProjects?.map((project, index) => (
-            <PortfolioProjectCard key={project.id} project={project} index={index} />
+            <PortfolioProjectCard key={project.id} project={project} index={index} route="development"/>
           ))}
         </div>
         <IndCustomLine />

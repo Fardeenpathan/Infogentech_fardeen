@@ -1,8 +1,7 @@
 "use client";
 import Icons from "@/components/ui/Icon";
-import SubscribeContact from "@/components/SubscribeContact";
-import PortfolioHeader from "@/components/PortfolioHeader";
-import PortfolioServices from "@/components/PortfolioServices";
+import IndServicesHeader from "@/components/india/IndServicesHeader";
+import IndProtfolioAll from "@/components/india/IndProtfolioAll";
 import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
 import Loader from "@/components/loader/Loader";
@@ -27,21 +26,18 @@ const SlugPage = () => {
 
   return (
     <>
-      <PortfolioHeader />
+      <IndServicesHeader />
+      <IndProtfolioAll activeService="content" />
       <div className="container mx-auto px-10">
-        <div className=" mt-10  -z-20 border-2 rounded-3xl pt-10">
-          <PortfolioServices activeService="Content" />
-          <div className="mx-auto w-fit mt-10">
-            <Icons name="CurveGradient" />
-          </div>
-          <div className="relative -top-48 px-10 ">
+        <div className=" mt-10 -z-20 border-2 rounded-3xl pt-10">
+          <div className="md:px-10 px-2">
            <ProjectImageSection
               project={project}
               expanded={expanded}
               setExpanded={setExpanded}
             />
-            <div className="mx-5 mt-6 font-jost">
-              <p className=" font-normal text-[32px] leading-7">
+            <div className="mx-5 mt-6 font-montserrat">
+              <p className=" font-normal text-[32px] leading-7 ">
                 {project.title}
               </p>
               <p className="mt-4 text-xl leading-7 opacity-80 font-kumbh-sans">
@@ -55,28 +51,28 @@ const SlugPage = () => {
             </div>
             <div className="mx-5 mt-10 font-jost">
               
-              <div className="grid grid-cols-3 mt-15 space-y-8">
+              <div className="grid grid-cols-3 mt-15 space-y-8 font-montserrat">
                 <div className="flex flex-col gap-2 ">
-                  <p className="font-jost font-medium text-lg leading-[20px] opacity-30">
+                  <p className="font-jost font-medium text-lg leading-[20px]">
                     Date
                   </p>
                   <p>{project.date}</p>
                 </div>
                 <div className="flex flex-col gap-3">
-                  <p className=" font-medium text-lg leading-[20px] opacity-30">
+                  <p className=" font-medium text-lg leading-[20px] ">
                     Duration
                   </p>
                   <p>{project.duration}</p>
                 </div>
                 <div className="flex flex-col gap-3">
-                  <p className="font-medium text-lg leading-[20px] opacity-30">
+                  <p className="font-medium text-lg leading-[20px]">
                     Tools
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {project.tools.map((tool, index) => (
                       <span
                         key={index}
-                        className="font-jost bg-[#8752FF80] py-1.5 px-3 w-fit radius"
+                        className="font-jost bg-primary text-white py-1.5 px-3 w-fit radius"
                       >
                         {tool}
                       </span>
@@ -85,13 +81,13 @@ const SlugPage = () => {
                 </div>
 
                 <div className="flex flex-col gap-3">
-                  <p className=" font-medium text-lg leading-[20px] opacity-30">
+                  <p className=" font-medium text-lg leading-[20px]">
                     Client
                   </p>
                   <p>{project.client}</p>
                 </div>
                 <div className="flex flex-col gap-3">
-                  <p className=" font-medium text-lg leading-[20px] opacity-30">
+                  <p className=" font-medium text-lg leading-[20px]">
                     Location
                   </p>
                   <p>{project.location}</p>
@@ -99,14 +95,14 @@ const SlugPage = () => {
               </div>
               <div className="grid grid-cols-3 mt-15 space-y-8">
                 <div className="flex flex-col gap-2">
-                  <p className="font-jost font-medium text-lg leading-[20px] opacity-30">
+                  <p className="font-jost font-medium text-lg leading-[20px]">
                     Modules
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {project.modules.map((mod, index) => (
                       <span
                         key={index}
-                        className="font-jost bg-[#8752FF80] py-1.5 px-3 w-fit radius"
+                        className="font-jost bg-primary text-white py-1.5 px-3 w-fit radius"
                       >
                         {mod}
                       </span>
@@ -115,14 +111,14 @@ const SlugPage = () => {
                 </div>
 
                 <div className="flex flex-col gap-3">
-                  <p className="font-medium text-lg leading-[20px] opacity-30">
+                  <p className="font-medium text-lg leading-[20px]">
                     Expertise
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {project.expertise.map((item, index) => (
                       <span
                         key={index}
-                        className="font-jost bg-[#8752FF80] py-1.5 px-3 w-fit radius"
+                        className="font-jost bg-primary text-white py-1.5 px-3 w-fit radius"
                       >
                         {item}
                       </span>
@@ -283,7 +279,6 @@ const SlugPage = () => {
           </div>
         </div> */}
        <div className="mt-20">
-                  <SubscribeContact />
                </div>
       </div>
     </>

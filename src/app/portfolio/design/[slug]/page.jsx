@@ -1,8 +1,7 @@
 "use client";
 import Icons from "@/components/ui/Icon";
-import SubscribeContact from "@/components/SubscribeContact";
-import PortfolioHeader from "@/components/PortfolioHeader";
-import PortfolioServices from "@/components/PortfolioServices";
+import IndServicesHeader from "@/components/india/IndServicesHeader";
+import IndProtfolioAll from "@/components/india/IndProtfolioAll";
 import { useState, useEffect } from "react";
 import ProjectImageSection from "@/components/ProjectImageSection";
 import { useParams } from "next/navigation";
@@ -27,14 +26,11 @@ const SlugPage = () => {
 
   return (
     <>
-      <PortfolioHeader />
+      <IndServicesHeader />
+      <IndProtfolioAll activeService="design" />
       <div className="container mx-auto md:px-10 px-4">
         <div className="mt-10 -z-20 border-2 rounded-3xl pt-10">
-          <PortfolioServices activeService="Design" />
-          <div className="mx-auto w-fit md:mt-10 -mt-10">
-            <Icons name="CurveGradient" />
-          </div>
-          <div className="relative -top-48   md:px-10 px-2">
+          <div className="md:px-10 px-2">
             <ProjectImageSection
               project={project}
               expanded={expanded}
@@ -155,7 +151,6 @@ const SlugPage = () => {
           </div>
         </div>
         <div className="mt-20">
-          <SubscribeContact />
         </div>
       </div>
     </>

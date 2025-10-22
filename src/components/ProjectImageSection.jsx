@@ -11,7 +11,7 @@ const ProjectImageSection = ({ project, expanded, setExpanded }) => {
     >
       <Image
         src={project.image}
-        alt="Blog"
+        alt={project.title}
         width={1400}
         height={460}
         style={{ objectFit: "cover", width: "100%", height: "auto" }}

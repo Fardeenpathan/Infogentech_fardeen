@@ -4,7 +4,7 @@ import Link from "next/link";
 import Icons from "@/components/ui/Icon";
 import { motion } from "framer-motion";
 
-const PortfolioProjectCard = ({ project, index }) => {
+const PortfolioProjectCard = ({ project, index , route }) => {
   return (
     <motion.div
       key={project.id}
@@ -30,7 +30,7 @@ const PortfolioProjectCard = ({ project, index }) => {
               {project.title}
             </p>
             <Link
-              href={`/portfolio/development/${project.slug}`}
+              href={`/portfolio/${route}/${project.slug}`}
               className="hidden lg:block"
             >
               <Icons
@@ -41,7 +41,7 @@ const PortfolioProjectCard = ({ project, index }) => {
               />
             </Link>
             <Link
-              href={`/portfolio/development/${project.slug}`}
+              href={`/portfolio/${route}/${project.slug}`}
               className="block lg:hidden"
             >
               <Icons
