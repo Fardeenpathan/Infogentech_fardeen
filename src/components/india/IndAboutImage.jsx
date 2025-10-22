@@ -47,7 +47,7 @@ const IndAboutImage =()=>{
           viewport={{ once: true }}
         >
           <Image
-            src="/assist/IndImg/homePage/service1.jpg"
+            src="/assist/IndImg/service.png"
             alt="service"
             width={315}
             height={400}
@@ -62,7 +62,7 @@ const IndAboutImage =()=>{
           viewport={{ once: true }}
         >
           <Image
-            src="/assist/IndImg/homePage/service2.jpg"
+            src="/assist/IndImg/service1.png"
             alt="service"
             width={361}
             height={267}

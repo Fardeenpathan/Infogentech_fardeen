@@ -23,7 +23,7 @@ export default function IndAboutDesc() {
           className="md:shrink-0"
         >
           <Image
-            src="https://res.cloudinary.com/dpmceu66e/image/upload/v1760006744/blog-app/blogs/blogs/1760006730364-3aa636fa059706af10c54c0a099e2a1f199c3acd.jpg"
+            src="https://res.cloudinary.com/dpmceu66e/image/upload/v1761123173/blog-app/blogs/blogs/1761123161164-frame_2147224284.png"
             alt="service"
             width={724}
             height={400}
