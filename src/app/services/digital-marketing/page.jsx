@@ -19,7 +19,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "/public/logoGroup.png",
+        url: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
         alt: "Infogentech",
       },
     ],
@@ -30,7 +30,7 @@ export const metadata = {
     description:
       "Top digital marketing and web solutions provider globally. We offer expert services to enhance your online presence, drive traffic, and grow your business.",
     site: "@infogentech",
-    images: ["/public/logoGroup.png"],
+    images: ["https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png"],
   },
   robots: "index, follow, all",
   authors: [{ name: "InfoGenTech" }],
@@ -42,7 +42,7 @@ export const metadata = {
     },
   },
   other: {
-    "geo.region": "US",
+    "geo.region": "IN",
     "http-equiv": "x-ua-compatible",
     distribution: "global",
   },

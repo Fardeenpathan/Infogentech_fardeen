@@ -17,7 +17,7 @@ export const metadata = {
     siteName: "infogentech",
     images: [
       {
-        url: "https://infogentech.com//public/logoGroup.png",
+        url: "https://infogentech.com/https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
         width: 1200,
         height: 630,
         alt: "infogentech",
@@ -31,7 +31,7 @@ export const metadata = {
     title: "Terms and Conditions - Infogentech",
     description:
       "Your Agreement Matters to Us — Terms and Conditions for Infogentech.",
-    images: ["https://infogentech.com//public/logoGroup.png"],
+    images: ["https://infogentech.com/https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png"],
   },
   // robots: {
   //   index: true,

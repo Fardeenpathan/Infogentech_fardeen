@@ -13,7 +13,7 @@ export const metadata = {
     siteName: "infogentech",
     images: [
       {
-        url: "/public/logoGroup.png",
+        url: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
       },
     ],
     type: "website",
@@ -26,7 +26,7 @@ export const metadata = {
     site: "@infogentech",
     images: [
       {
-        url: "/public/logoGroup.png",
+        url: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
       },
     ],
   },

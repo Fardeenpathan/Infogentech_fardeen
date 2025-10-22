@@ -22,7 +22,7 @@ export const metadata = {
     siteName: "Infogentech",
     images: [
       {
-        url: "/public/logoGroup.png",
+        url: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
         width: 1200,
         height: 630,
         alt: "Infogentech Logo",
@@ -36,7 +36,7 @@ export const metadata = {
     description:
       "Infogentech Softwares LLP — contact us at info@infogentech.com or 991-013-0963.",
     site: "@infogentech",
-    images: ["/public/logoGroup.png"],
+    images: ["https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png"],
   },
   robots: {
     index: true,
