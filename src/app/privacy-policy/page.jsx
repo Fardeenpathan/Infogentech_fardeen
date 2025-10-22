@@ -16,7 +16,7 @@ export const metadata = {
     siteName: "infogentech",
     images: [
       {
-        url: "/public/logoGroup.png",
+        url: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
         width: 1200,
         height: 630,
         alt: "infogentech",
@@ -30,7 +30,7 @@ export const metadata = {
     title: "Privacy Policy - Infogentech",
     description:
       "Here is our company's privacy policy. Read carefully. If you have any doubt, feel free to contact us.",
-    images: ["/public/logoGroup.png"],
+    images: ["https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png"],
   },
   robots: {
     index: true,
