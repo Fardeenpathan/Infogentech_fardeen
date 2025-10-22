@@ -58,7 +58,7 @@ const AboutUs = () => {
     <div>
       <div className="w-full bg-[#E6DBFF] lg:h-158 h-140 justify-center items-center flex">
         <h1 className="font-avalors font-normal md:text-[80px] text-[46px] leading-[1.6] tracking-[3px] align-middle text-primary">
-          ABOUT US
+          ABOUT US 
         </h1>
       </div>
       <IndAboutImage />
