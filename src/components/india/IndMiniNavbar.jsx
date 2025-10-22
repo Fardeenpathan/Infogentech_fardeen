@@ -232,6 +232,13 @@ export function IndMiniNavbar() {
             >
               Blog
             </Link>
+             <Link
+              href="/portfolio/design"
+              onClick={() => setIsOpen(false)}
+              className="block hover:text-primary font-bold text-[28px]  border-b-[1px]"
+            >
+              Portfolio
+            </Link>
             <Link
               href="/contact"
               onClick={() => setIsOpen(false)}

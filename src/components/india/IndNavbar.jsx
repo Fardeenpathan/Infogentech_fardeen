@@ -40,6 +40,9 @@ export default function Navbar() {
             <Link href="/about" className={linkClasses("/about")}>
             About us
           </Link>
+          <Link href="/portfolio/design" className={linkClasses("/portfolio/design")}>
+            Portfolio
+          </Link>
           <Link href="/services/design" className={linkClasses("/services/design")}>
             Services
           </Link>

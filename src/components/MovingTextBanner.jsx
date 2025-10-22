@@ -1,0 +1,22 @@
+"use client"
+import Icons from "@/components/ui/Icon";
+
+const MovingTextBanner = () => {
+  return (
+    <div className="moving-text-container overflow-hidden bg-[#3F237F] text-white my-30">
+        <div className="moving-text-content font-montserrat font-normal text-xl -tracking-[0.05em] custom-skew">
+          <div className="flex gap-96">
+            {Array.from({ length: 20 }, (_, i) => (
+              <p key={i} className="py-4 flex gap-28">
+                Design <Icons name="IndStar" /> Development
+                <Icons name="IndStar" /> Branding <Icons name="IndStar" />
+                Product
+              </p>
+            ))}
+          </div>
+        </div>
+      </div>
+  );
+};
+
+export default MovingTextBanner;

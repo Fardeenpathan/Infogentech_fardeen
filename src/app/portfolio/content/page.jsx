@@ -4,7 +4,7 @@ import IndProtfolioAll from "@/components/india/IndProtfolioAll";
 import contentProjects from "./contentProjects";
 import IndCustomLine from "@/components/india/IndCustomLine";
 import PortfolioProjectCard from "@/components/PortfolioProjectCard";
-
+import MovingTextBanner from "@/components/MovingTextBanner";
 const Content = () => {
   return (
     <>
@@ -16,6 +16,7 @@ const Content = () => {
           ))}
         </div>
         <IndCustomLine />
+        <MovingTextBanner />
     </>
   );
 };

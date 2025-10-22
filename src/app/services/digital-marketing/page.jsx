@@ -3,7 +3,7 @@ import IndServiceCard from "@/components/india/IndServiceCard";
 import IndServicesHeader from "@/components/india/IndServicesHeader";
 import IndAllServices from "@/components/india/IndAllServices";
 import IndServiceDesc from "@/components/india/IndServiceDesc";
-import Icons from "@/components/ui/Icon";
+import MovingTextBanner from "@/components/MovingTextBanner";
 export const metadata = {
   title: "Digital Marketing Services and Web Solution Company | Infogentech Softwares LLP",
   description:
@@ -166,7 +166,7 @@ const Marketing = () => {
   ];
 
   return (
-    <section className="pb-10">
+    <>
       <IndServicesHeader />
       <IndAllServices activeService="Digital Marketing" />
       <div className="container mx-auto lg:mt-24 xl:px-10 md:px-5 px-2">
@@ -175,20 +175,8 @@ const Marketing = () => {
         </div>
         <IndServiceCard categories={categories} />
       </div>
-      <div className="moving-text-container overflow-hidden bg-[#3F237F] text-white mt-40">
-        <div className="moving-text-content font-montserrat font-normal text-xl -tracking-[0.05em] custom-skew">
-          <div className="flex gap-96">
-            {Array.from({ length: 20 }, (_, i) => (
-              <p key={i} className="py-4 flex gap-28">
-                Design <Icons name="IndStar" /> Development
-                <Icons name="IndStar" /> Branding <Icons name="IndStar" />
-                Product
-              </p>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
+      <MovingTextBanner />
+    </>
   );
 };
 
