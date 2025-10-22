@@ -7,31 +7,33 @@ import IndMidHeader from "./IndMidHeader";
 const reviews = [
   {
     id: 1,
-    text: "Their SEO work took us from barely showing up in searches to ranking on the first page for important keywords. They clearly know the healthcare space inside and out.",
-    name: "Ethan Roberts",
+    text: "I hired Infogentech for SEO services, and they really improved my website’s ranking. My traffic has increased, and I’m seeing real results.",
+    name: "Vipin Roy",
     role: "Entrepreneur",
-    img: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761126328/blog-app/blogs/blogs/1761126326558-writing-dairy-note-coffee-shop-concept-as-memory-life-woman-coffee-shop-smiling-woman-making-notes-notepad.jpg",
+    img: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761126237/blog-app/blogs/blogs/1761126235663-content-confident-young-man-leaning-railing-modern-office.jpg",
+    
   },
   {
     id: 2,
-    text: "From a new logo to a refreshed social media strategy, they completely elevated our brand. Customer engagement is way up, and foot traffic to our store has been better than ever.",
-    name: "Jessica Collins",
+    text: "I highly recommend Infogentech for PPC services. They optimized my campaigns perfectly, and my sales inquiries have increased.",
+    name: "Gautam Singh",
     role: "Manager",
-    img: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761126387/blog-app/blogs/blogs/1761126384911-indian-woman-posing-cute-stylish-outfit-camera-smiling.jpg",
+    img: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761126289/blog-app/blogs/blogs/1761126287051-successful-businessman.jpg",
+   
   },
   {
     id: 3,
-    text: "They brought our vision to life with modern design and a smart strategy that really connects with our clients. We constantly get compliments on our new website and branding.",
-    name: "Marcus Lee",
+    text: "Infogenetch built my Shopify eCommerce store with amazing design, smooth functionality, and quick delivery. Great communication and excellent post-launch support.",
+    name: "Neha Gupta",
     role: "Founder StartTech",
-    img: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761126289/blog-app/blogs/blogs/1761126287051-successful-businessman.jpg",
+     img: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761126387/blog-app/blogs/blogs/1761126384911-indian-woman-posing-cute-stylish-outfit-camera-smiling.jpg",
   },
   {
     id: 4,
-    text: "They helped us run ads that finally brought in the right customers. Within weeks, we saw more calls and new projects coming through.",
-    name: "Sarah Mitchell",
+    text: "Their digital marketing services are excellent. Infogentech helped my brand reach the right audience and grow online. ",
+    name: "Kriti Sharma",
     role: "Entrepreneur",
-    img: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761126237/blog-app/blogs/blogs/1761126235663-content-confident-young-man-leaning-railing-modern-office.jpg",
+    img: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761126328/blog-app/blogs/blogs/1761126326558-writing-dairy-note-coffee-shop-concept-as-memory-life-woman-coffee-shop-smiling-woman-making-notes-notepad.jpg",
   },
 ];
 

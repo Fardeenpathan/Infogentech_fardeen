@@ -70,8 +70,7 @@ const FAQs = () => {
   const currentFaqs = faqsByCategory[activeCategory] || [];
 
   return (
-    <div className="mt-35 subContainer mx-auto">
-      
+    <div className="mt-35 subContainer mx-auto px-4">
       <div className="flex justify-between items-center">
         <div className="flex gap-10">
           <div className="flex justify-center items-center mb-40 flex-col">
@@ -85,20 +84,20 @@ const FAQs = () => {
             <div className="w-0.5 h-28 rounded-full mt-4 bg-gradient-to-b from-purple-400 via-purple-500 to-purple-800 "></div>
           </div>
           <div className="flex flex-col ">
-            <p className="font-avalors font-normal text-[75px] leading-none bg-[linear-gradient(91.32deg,_#6A27FF_-32.61%,_#FFFFFF_19.98%,_#6A27FF_112.29%)] bg-clip-text text-transparent">
+            <p className="font-avalors font-normal text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-none bg-[linear-gradient(91.32deg,_#6A27FF_-32.61%,_#FFFFFF_19.98%,_#6A27FF_112.29%)] bg-clip-text text-transparent">
               FAQS
             </p>
-            <p className="font-avalors font-normal text-[75px] leading-none bg-[linear-gradient(91.32deg,_#6A27FF_-32.61%,_#FFFFFF_19.98%,_#6A27FF_112.29%)] bg-clip-text text-transparent">
+            <p className="font-avalors font-normal text-2xl sm:text-4xl md:text-5xl lg:text-6xl leading-none bg-[linear-gradient(91.32deg,_#6A27FF_-32.61%,_#FFFFFF_19.98%,_#6A27FF_112.29%)] bg-clip-text text-transparent">
               Your questions answered
             </p>
-            <p className="font-jost font-medium text-lg leading-6 align-middle mt-9">
+            <p className="font-jost  font-medium text-base sm:text-lg md:text-xl leading-relaxed mt-6">
               Find answers to common questions about our services, project
               process, updates, and support at Infogentech.
             </p>
           </div>
         </div>
       </div>
-      <section className="flex gap-20 container mx-auto">
+      <section className="flex sm:gap-20 gap-4 container mx-auto">
         <div className="flex gap-10">
           <div className="flex justify-center items-center mb-40 flex-col">
             <div className="relative w-12 h-12">
@@ -118,7 +117,7 @@ const FAQs = () => {
                   setActiveCategory(category.key);
                   setOpenId(null);
                 }}
-                className={`font-jost mb-10 text-[16px] leading-6 align-middle transition-opacity duration-300 cursor-pointer ${
+                className={`font-jost sm:mb-10 mb-4 text-[16px] leading-6 align-middle transition-opacity duration-300 cursor-pointer ${
                   activeCategory === category.key
                     ? "opacity-100 font-semibold"
                     : "opacity-50"
@@ -130,7 +129,7 @@ const FAQs = () => {
           </div>
         </div>
         <aside className="w-full">
-          <p className="font-avalors font-normal text-[30px] leading-[100%] tracking-[0.03em] capitalize mb-6">
+          <p className="font-avalors font-normal sm:text-3xl text-2xl  tracking-[0.03em]  mb-6">
             {categoryList.find((c) => c.key === activeCategory)?.label}
           </p>
           {loading ? (

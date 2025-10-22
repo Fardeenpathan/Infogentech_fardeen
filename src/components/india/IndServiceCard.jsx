@@ -68,7 +68,7 @@ export default function IndServiceCard({ categories }) {
                       </p>
                     )}
                     <Image
-                      src="/assist/IndImg/blogBg.jpg"
+                      src="/assist/IndImg/blog.png"
                       alt="Blog"
                       width={100}
                       height={660}
