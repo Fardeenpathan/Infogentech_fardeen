@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Privacy Policy - Infogentech",
+  title: "Privacy Policy | Infogentech Softwares LLP",
   description:
     "Here is our company's privacy policy. Read carefully. If you have any doubt, feel free to contact us.",
   keywords: ["Privacy Policy", "Infogentech", "personal data", "cookies"],
@@ -16,7 +16,7 @@ export const metadata = {
     siteName: "infogentech",
     images: [
       {
-        url: "https://infogentech.com//public/CompanyName.svg",
+        url: "/public/logoGroup.png",
         width: 1200,
         height: 630,
         alt: "infogentech",
@@ -30,7 +30,7 @@ export const metadata = {
     title: "Privacy Policy - Infogentech",
     description:
       "Here is our company's privacy policy. Read carefully. If you have any doubt, feel free to contact us.",
-    images: ["https://infogentech.com//public/CompanyName.svg"],
+    images: ["/public/logoGroup.png"],
   },
   robots: {
     index: true,

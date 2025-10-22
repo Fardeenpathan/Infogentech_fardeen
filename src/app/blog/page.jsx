@@ -1,7 +1,7 @@
 import BlogClient from './BlogClient';
 
 export const metadata = {
-  title: "Blogs - Digital Marketing, App/Web Designing & Development",
+  title: "Blogs | Infogentech Softwares LLP ",
   description:
     "Explore our blogs on digital marketing, app/web design, and development. Get insights, tips, and trends to enhance your online presence and boost your business.",
   keywords: "",
@@ -13,7 +13,7 @@ export const metadata = {
     siteName: "infogentech",
     images: [
       {
-        url: "https://infogentech.com/public/CompanyName.svg",
+        url: "/public/logoGroup.png",
       },
     ],
     type: "website",
@@ -26,7 +26,7 @@ export const metadata = {
     site: "@infogentech",
     images: [
       {
-        url: "https://infogentech.com/public/CompanyName.svg",
+        url: "/public/logoGroup.png",
       },
     ],
   },
