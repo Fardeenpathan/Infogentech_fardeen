@@ -57,7 +57,7 @@ const IndFaqsHome = () => {
             className="shrink-0"
           >
             <Image
-              src="https://res.cloudinary.com/dpmceu66e/image/upload/v1760006744/blog-app/blogs/blogs/1760006730364-3aa636fa059706af10c54c0a099e2a1f199c3acd.jpg"
+              src="/assist/IndImg/homePage/faq.png"
               alt="service"
               width={762}
               height={400}

@@ -62,7 +62,7 @@ const Terms = () => {
             </div>
             <div>
               <p className="font-avalors font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl capitalize mb-4">
-              User Accounts (If Applicable)
+              User Accounts ( If Applicable )
             </p>
             <ul className="list-disc list-inside text-base sm:text-lg md:text-xl space-y-2 text-jost">
               <li>
