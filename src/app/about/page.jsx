@@ -23,7 +23,7 @@ export const metadata = {
     images: [
       {
         url: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
-        width: 200,
+          width: 200,
         height: 60,
         alt: "Infogentech Logo",
       },
