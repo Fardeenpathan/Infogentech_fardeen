@@ -38,9 +38,19 @@ export const metadata = {
     site: "@infogentech",
     images: ["https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png"],
   },
-  robots: {
-    index: true,
-    follow: true,
+  robots: "index, follow, all",
+  authors: [{ name: "InfoGenTech" }],
+  publisher: "InfoGenTech",
+  alternates: {
+    canonical: "https://infogentech.com/contact",
+    languages: {
+      "en-US": "https://infogentech.com/contact",
+    },
+  },
+  other: {
+    "geo.region": "IN",
+    "http-equiv": "x-ua-compatible",
+    distribution: "global",
   },
 };
 

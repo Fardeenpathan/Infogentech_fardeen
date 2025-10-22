@@ -6,6 +6,13 @@ export const metadata = {
   description:
     "Infogentech Softwares LLP is a leading digital marketing company in India. Our team of experts delivers top-notch services to meet client business requirements.",
   keywords: "Leading IT Services",
+    metadataBase: new URL("https://infogentech.com"),
+  alternates: {
+    canonical: "/about",
+    languages: {
+      "en-US": "/about",
+    },
+  },
   openGraph: {
     title: "About Us | Infogentech Softwares LLP",
     description:
@@ -16,9 +23,9 @@ export const metadata = {
     images: [
       {
         url: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
-        alt: "Infogentech Office",
-        width: 1200,
-        height: 630,
+        width: 200,
+        height: 60,
+        alt: "Infogentech Logo",
       },
     ],
   },
