@@ -1,5 +1,16 @@
 import config from '@/config';
 
+const appendFaqsToFormData = (formData, faqs) => {
+  if (!faqs || !Array.isArray(faqs)) return;
+  
+  faqs.forEach((faq, index) => {
+    formData.append(`faqs[${index}][question]`, faq.question?.trim() || '');
+    formData.append(`faqs[${index}][answer]`, faq.answer?.trim() || '');
+    formData.append(`faqs[${index}][order]`, faq.order !== undefined ? faq.order : index);
+    formData.append(`faqs[${index}][isActive]`, faq.isActive !== false);
+  });
+};
+
 class AdminApiService {
   constructor() {
     this.token = null;
@@ -309,15 +320,7 @@ class AdminApiService {
       }
     }
 
-    if (blogData.faqs && Array.isArray(blogData.faqs)) {
-      blogData.faqs.forEach((faq, index) => {
-        formData.append(`faqs[${index}][question]`, faq.question);
-        formData.append(`faqs[${index}][answer]`, faq.answer);
-        formData.append(`faqs[${index}][category]`, faq.category || 'general');
-        formData.append(`faqs[${index}][order]`, faq.order || index);
-        formData.append(`faqs[${index}][isActive]`, faq.isActive !== false);
-      });
-    }
+    appendFaqsToFormData(formData, blogData.faqs);
 
     if (blogData.featuredImageFile) {
       formData.append('featuredImage', blogData.featuredImageFile);
@@ -401,16 +404,7 @@ class AdminApiService {
       }
     }
 
-    // Add FAQs
-    if (blogData.faqs && Array.isArray(blogData.faqs)) {
-      blogData.faqs.forEach((faq, index) => {
-        formData.append(`faqs[${index}][question]`, faq.question);
-        formData.append(`faqs[${index}][answer]`, faq.answer);
-        formData.append(`faqs[${index}][category]`, faq.category || 'general');
-        formData.append(`faqs[${index}][order]`, faq.order || index);
-        formData.append(`faqs[${index}][isActive]`, faq.isActive !== false);
-      });
-    }
+    appendFaqsToFormData(formData, blogData.faqs);
 
     // Add featured image if it's a file
     if (blogData.featuredImageFile) {
@@ -481,26 +475,6 @@ class AdminApiService {
 
   async getBlogFaqs(blogId) {
     return this.request(`/api/blogs/${blogId}/faqs`);
-  }
-
-  async createFaq(faqData) {
-    return this.request('/api/faqs/admin', {
-      method: 'POST',
-      body: JSON.stringify(faqData),
-    });
-  }
-
-  async updateFaq(id, faqData) {
-    return this.request(`/api/faqs/admin/${id}`, {
-      method: 'PUT',
-      body: JSON.stringify(faqData),
-    });
-  }
-
-  async deleteFaq(id) {
-    return this.request(`/api/faqs/admin/${id}`, {
-      method: 'DELETE',
-    });
   }
 
   async createBlogFaq(blogId, faqData) {
