@@ -125,7 +125,7 @@ const Blogs = () => {
             </select>
           </div>
         </div>
-        <div className="container mx-auto">
+        <div className="container mx-auto pb-10">
           <div className="flex justify-center items-center flex-col"></div>
           <div className="lg:mt-20 mt-10 mx-4">
             <p className="text-[#252525] font-montserrat font-semibold text-xl border-l-4 border-[#7544E4] p-4">

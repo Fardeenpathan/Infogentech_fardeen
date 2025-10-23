@@ -23,7 +23,7 @@ export const useBlogsPagination = (categories, limit = 12) => {
   const fetchBlogs = useCallback(async (fallbackData = []) => {
     setLoading(true);
     try {
-      let url = 'https://97fzff04-5000.inc1.devtunnels.ms/api/blogs';
+      let url = `${process.env.NEXT_PUBLIC_API_URL}/api/blogs`;
       const params = new URLSearchParams();
       
       params.append('page', currentPage.toString());
