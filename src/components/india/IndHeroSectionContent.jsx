@@ -11,8 +11,8 @@ export default function IndHeroSectionContent() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <span>CREATING</span>
-        <span className="bg-primary xl:px-12 rounded-full xl:ml-10 ml-4 font-avalors px-4 py-2">BRANDS</span>
+        <span>We Build</span>
+        <span className="bg-primary xl:px-12 rounded-full xl:ml-10 ml-4 font-avalors px-4 py-2">What</span>
       </motion.div>
       <motion.div
         className="2xl:text-[80px] lg:text-5xl text-3xl 2xl:mt-10 mt-4 flex xl:justify-center xl:items-center flex-col xl:flex-row justify-start"
@@ -20,11 +20,11 @@ export default function IndHeroSectionContent() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
       >
-        <h1 className="font-avalors">AND DIGITAL</h1>
-        <p className="text-lg ml-10">
-          We build strong brand identities and deliver<br /> 
-          digital solutions that blend creativity and <br />
-          technology to help businesses grow and engage.
+        <h1 className="font-avalors">Grows Your</h1>
+        <p className="text-lg ml-1">
+          From custom software and web apps to performance<br /> 
+          driven digital marketing, we blend technology <br />
+          and strategy to deliver measurable growth.
         </p>
       </motion.div>
 
@@ -35,7 +35,7 @@ export default function IndHeroSectionContent() {
         transition={{ duration: 0.8, delay: 0.4 }}
       >
         <span className="bg-primary xl:px-12 px-4 py-4 md:py-2 rounded-full xl:ml-60 font-avalors ml-0">
-          Solutions
+           Business
         </span>
 
         <span className="absolute sm:w-40  sm:h-40 w-30 h-30 flex items-center justify-center ml-8 xl:right-20 2xl:-top-10 -top-12 right-0">
@@ -62,9 +62,9 @@ export default function IndHeroSectionContent() {
                   href="#circlePath"
                   startOffset="50%"
                   textAnchor="middle"
-                  className="text-lg font-montserrat tracking-[0.15rem]"
+                  className="text-lg font-montserrat tracking-[0.3rem]"
                 >
-                  LEADING DIGITAL COMPANY SINCE 2022 * 
+                   Book a Free Strategy Call Today! * 
                 </textPath>
               </text>
             </svg>

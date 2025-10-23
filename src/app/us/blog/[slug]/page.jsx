@@ -1,11 +1,8 @@
 
 import BlogClient from "./BlogClient"; 
-import React from "react";
-
-const API_BASE = "https://97fzff04-5000.inc1.devtunnels.ms/api";
 
 async function fetchBlogBySlug(slug) {
-  const res = await fetch(`${API_BASE}/blog/slug/${slug}`, { next: { revalidate: 60 } });
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/blog/slug/${slug}`, { next: { revalidate: 60 } });
   if (!res.ok) return null;
   const data = await res.json();
   return data.success ? data.data : null;

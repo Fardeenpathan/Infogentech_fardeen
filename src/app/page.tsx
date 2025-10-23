@@ -14,9 +14,9 @@ export const metadata = {
     images: [
       {
         url: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
-        width: 1200,
-        height: 630,
-        alt: "Infogentech",
+        width: 200,
+        height: 60,
+        alt: "Infogentech Logo",
       },
     ],
     type: "website",
@@ -32,6 +32,11 @@ export const metadata = {
   alternates: {
     canonical: "https://infogentech.com/",
   },
+    other: {
+    "geo.region": "IN",
+    "http-equiv": "x-ua-compatible",
+    distribution: "global",
+  }, 
 };
 export default function Home() {
   return <IndHeroPage />;

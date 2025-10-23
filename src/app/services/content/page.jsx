@@ -3,7 +3,7 @@ import IndServicesHeader from "@/components/india/IndServicesHeader";
 import IndAllServices from "@/components/india/IndAllServices";
 import IndServiceDesc from "@/components/india/IndServiceDesc";
 import IndServiceCard from "@/components/india/IndServiceCard";
-
+import MovingTextBanner from "@/components/MovingTextBanner";
 const Content = () => {
 const categories = [
   {
@@ -78,6 +78,7 @@ const categories = [
         </div>
         <IndServiceCard categories={categories} />
       </div>
+      <MovingTextBanner />
     </>
   );
 };

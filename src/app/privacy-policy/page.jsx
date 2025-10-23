@@ -9,7 +9,7 @@ export const metadata = {
   metadataBase: new URL("https://infogentech.com"),
   alternates: { canonical: "/privacy-policy" },
   openGraph: {
-    title: "Privacy Policy - Infogentech",
+    title: "Privacy Policy | Infogentech",
     description:
       "Here is our company's privacy policy. Read carefully. If you have any doubt, feel free to contact us.",
     url: "https://infogentech.com/privacy-policy",
@@ -17,9 +17,9 @@ export const metadata = {
     images: [
       {
         url: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
-        width: 1200,
-        height: 630,
-        alt: "infogentech",
+      width: 200,
+        height: 60,
+        alt: "Infogentech Logo",
       },
     ],
     type: "website",
@@ -27,7 +27,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@infogentech",
-    title: "Privacy Policy - Infogentech",
+    title: "Privacy Policy | Infogentech",
     description:
       "Here is our company's privacy policy. Read carefully. If you have any doubt, feel free to contact us.",
     images: ["https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png"],
@@ -35,6 +35,11 @@ export const metadata = {
   robots: {
     index: true,
     follow: true,
+  },
+    other: {
+    "geo.region": "IN",
+    "http-equiv": "x-ua-compatible",
+    distribution: "global",
   },
 };
 
@@ -44,7 +49,7 @@ const PrivacyPolicy = () => {
     <div className="subContainer mx-auto p-3">
       <div className="flex justify-between items-center">
         <div className="flex gap-7">
-          <div className="flex flex-col mt-35">
+          <div className="flex flex-col xl:mt-35 mt-25">
             <h1 className="font-avalors font-normal text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-none text-primary">
               Privacy Policy
             </h1>
