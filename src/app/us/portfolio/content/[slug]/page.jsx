@@ -142,7 +142,7 @@ const SlugPage = () => {
                   rounded-[10px] 
                   bg-[#7544E4] 
                   text-white 
-                  shadow-[0px_0px_8px_0px_#FFFFFF_inset]"
+                  custom-shadow"
                     >
                       View in Figma Design &nbsp;
                       <Icons name="Arrow" />
@@ -274,7 +274,7 @@ const SlugPage = () => {
                   rounded-[10px] 
                   bg-[#7544E4] 
                   text-white 
-                  shadow-[0px_0px_8px_0px_#FFFFFF_inset]"
+                  custom-shadow"
               >
                 Get Start &nbsp;
                 <Icons name="Arrow" />

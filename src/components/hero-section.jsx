@@ -60,7 +60,7 @@ export function HeroSection() {
                   rounded-[10px] 
                   bg-[#7544E4] 
                   text-white 
-                  shadow-[0px_0px_8px_0px_#FFFFFF_inset]"
+                  custom-shadow"
                 >
                   Get Started &nbsp;
                   <Icons name="Arrow" />
