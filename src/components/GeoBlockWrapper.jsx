@@ -111,9 +111,7 @@ export default function GeoBlockWrapper({ children }) {
           if (!mounted) return;
           console.log(`🧪 DEV GeoRedirect: ${testCountry} on ${isUSRoute ? '/us route' : 'main route'}`);
           
-          // AUTO REDIRECT LOGIC - NO BLOCKING!
           if (testCountry === 'IN' && isUSRoute) {
-            // Indian user on /us route → redirect to main route
             const mainRoute = pathname.replace('/us', '') || '/';
             console.log(`🔄 Indian user auto-redirect: ${pathname} → ${mainRoute}`);
             window.location.href = mainRoute;
@@ -121,7 +119,6 @@ export default function GeoBlockWrapper({ children }) {
           }
           
           if (US_ALLOWED_COUNTRIES.includes(testCountry) && !isUSRoute) {
-            // Foreign user on main route → redirect to /us route
             const usRoute = `/us${pathname}`;
             console.log(`🔄 Foreign user auto-redirect: ${pathname} → ${usRoute}`);
             window.location.href = usRoute;
@@ -135,8 +132,7 @@ export default function GeoBlockWrapper({ children }) {
           return;
         }
 
-        // Production: detect real geo location
-        console.log('🌍 Production mode: Detecting real geo location...');
+        // console.log('🌍 Production mode: Detecting real geo location...');
         const geo = await fetchCountryFromProviders();
         
         if (!mounted) return;
@@ -148,20 +144,16 @@ export default function GeoBlockWrapper({ children }) {
           let allowed = false;
           
           if (isUSRoute) {
-            // On /us routes, only allow foreign countries
             allowed = US_ALLOWED_COUNTRIES.includes(code);
           } else {
-            // On main routes, only allow Indian users
             allowed = INDIA_ALLOWED_COUNTRIES.includes(code);
           }
           
           console.log(`🌍 PROD GeoRedirect: ${code} (${geo.name}) on ${isUSRoute ? '/us route' : 'main route'}`);
           
-          // AUTO REDIRECT LOGIC - NO BLOCKING IN PRODUCTION TOO!
           if (code === 'IN' && isUSRoute) {
-            // Indian user on /us route → redirect to main route
             const mainRoute = pathname.replace('/us', '') || '/';
-            console.log(`🔄 Indian user auto-redirect: ${pathname} → ${mainRoute}`);
+            // console.log(`🔄 Indian user auto-redirect: ${pathname} → ${mainRoute}`);
             dispatch(setCountryCode(code));
             window.location.href = mainRoute;
             return;
