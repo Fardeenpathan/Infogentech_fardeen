@@ -1,13 +1,12 @@
 
+import Link from "next/link";
 import BlogClient from "./BlogClient"; 
-import React from "react";
-
-const API_BASE = "https://97fzff04-5000.inc1.devtunnels.ms/api";
 
 async function fetchBlogBySlug(slug) {
-  const res = await fetch(`${API_BASE}/blogs/slug/${slug}`, { next: { revalidate: 60 } });
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blogs/slug/${slug}`, { next: { revalidate: 60 } });
   if (!res.ok) return null;
   const data = await res.json();
+  console.log(data,"asdasdasd")
   return data.success ? data.data : null;
 }
 
@@ -58,7 +57,7 @@ export async function generateMetadata({ params }) {
   }
 
   const blog = data;
-  const url = `https://infogentech.com/blogs/${slug}`;
+  const url = `https://infogentech.com/blog/${slug}`;
   const image = blog.featuredImage?.url || "https://infogentech.com/default-og-image.png";
 
   return {
@@ -85,13 +84,18 @@ export async function generateMetadata({ params }) {
 
 export default async function Page({ params }) {
   const slug = params.slug;
+  console.log(slug,"dasdasda")
   const data = await fetchBlogBySlug(slug);
 
   if (!data) {
     return (
-      <div className="container mx-auto mt-24 px-10">
-        <h1 className="text-2xl font-bold">Blog not found</h1>
-      </div>
+      <div className="flex flex-col items-center justify-center min-h-screen  text-gray-800">
+      <h1 className="text-6xl font-bold text-gray-400">Blog Not Found</h1>
+      <p className="text-lg mt-2 text-white">The page you are looking for does not exist.</p>
+      <Link href="/blog" className="mt-6 px-6 py-3  text-white rounded-lg shadow  transition duration-300 bg-primary">
+        Back to blog
+      </Link>
+    </div>
     );
   }
 

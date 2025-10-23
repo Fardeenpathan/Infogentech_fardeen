@@ -7,7 +7,7 @@ import IndButton from "./ui/IndButton";
 
 export default function IndAboutDesc() {
   return (
-    <div className="container mx-auto px-10 flex justify-between py-10 flex-col lg:flex-row gap-4 lg:gap-50">
+    <div className="container mx-auto flex justify-between py-10 flex-col lg:flex-row gap-4 lg:gap-50 px-4">
       <motion.div
         className="flex justify-between gap-10 relative"
         initial={{ opacity: 0, x: -100 }}
@@ -20,19 +20,17 @@ export default function IndAboutDesc() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="shrink-0"
+          className="md:shrink-0"
         >
           <Image
-            src="https://res.cloudinary.com/dpmceu66e/image/upload/v1760006744/blog-app/blogs/blogs/1760006730364-3aa636fa059706af10c54c0a099e2a1f199c3acd.jpg"
+            src="https://res.cloudinary.com/dpmceu66e/image/upload/v1761123173/blog-app/blogs/blogs/1761123161164-frame_2147224284.png"
             alt="service"
             width={724}
             height={400}
-            className="object-cover rounded-2xl xl:h-165 lg:h-120 h-100 w-80 md:w-full lg:w-[600px]"
+            className="object-cover rounded-2xl xl:h-165 lg:h-120 h-100 w-full  lg:w-[600px] "
           />
         </motion.div>
       </motion.div>
-
-      {/* Right Content Section */}
       <motion.div
         initial={{ opacity: 0, x: 100 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -53,8 +51,8 @@ export default function IndAboutDesc() {
             transition={{ duration: 0.6, delay: 0.9 }}
             viewport={{ once: true }}
           >
-            <IndButton variant="outline" className="mt-16">
-              Let's talk
+            <IndButton variant="outline" className="mt-16  font-semibold !leading-6 tracking-wider ">
+              Let's Talk
             </IndButton>
           </motion.div>
         </a>

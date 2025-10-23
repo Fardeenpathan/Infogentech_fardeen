@@ -3,5 +3,5 @@
 import { redirect } from "next/navigation";
 
 export default function Portfolio() {
-  redirect("/portfolio/design");
+  redirect("/us/portfolio/design");
 }

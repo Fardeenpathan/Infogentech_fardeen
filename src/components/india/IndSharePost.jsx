@@ -41,7 +41,7 @@ export default function IndSharePost({className=""}) {
             className={`flex items-center justify-center gap-2 px-[14px] py-[10px] w-[150px] h-[40px] bg-[#693EC9] text-white text-sm font-medium rounded-lg border border-[#D5D7DA] shadow-[0px_1px_2px_rgba(10,13,18,0.05),inset_0px_0px_0px_1px_rgba(10,13,18,0.18),inset_0px_-2px_0px_rgba(10,13,18,0.05)] hover:bg-[#5b31b4] transition-all duration-200`}
           >
             <Icons name="Link" className="w-4 h-4" />
-            <span className="font-montserrat text-[20px]-500 cursor-pointer">Copy link</span>
+            <span className="font-montserrat text-xl-500 cursor-pointer">Copy link</span>
           </button>
           {shareItems.slice(1).map((item) => (
             <button

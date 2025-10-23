@@ -1,6 +1,41 @@
+export const metadata = {
+  title: "Terms and Conditions | Infogentech Softwares LLP",
+  description:
+    "Discover how innovation in software, technology, and digital marketing drives business growth. Explore strategies for success in today’s digital-first world.",
+  keywords:
+    "digital marketing company, digital marketing company in Delhi NCR, digital marketing services, online marketing services, web development services, IT services, SEO services in Delhi, SEO services, digital marketing agency near me, social media marketing",
+  openGraph: {
+    title: "Innovation Success with Software, Technology & Digital Marketing",
+    description:
+      "Discover how innovation in software, technology, and digital marketing drives business growth. Explore strategies for success in today’s digital-first world.",
+    url: "https://infogentech.com/",
+    siteName: "infogentech",
+    images: [
+      {
+        url: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
+        width: 200,
+        height: 60,
+        alt: "Infogentech",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    site: "@infogentech",
+    title: "Innovation Success with Software, Technology & Digital Marketing",
+    description:
+      "Discover how innovation in software, technology, and digital marketing drives business growth. Explore strategies for success in today’s digital-first world.",
+    images: ["https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png"],
+  },
+  alternates: {
+    canonical: "https://infogentech.com/",
+  },
+};
+
 const Terms = () => {
   return (
-    <div className="mt-20 subContainer mx-auto p-3">
+    <div className="lg:mt-20 mt-10 subContainer mx-auto p-3">
       <div className="flex justify-between items-center">
         <div className="flex gap-7">
           <div className="flex justify-center items-center mb-40 flex-col">
@@ -45,7 +80,7 @@ const Terms = () => {
             <p className="font-avalors font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl capitalize mb-4">
               Use of the Site
             </p>
-            <ul className="list-disc list-inside text-base sm:text-lg md:text-xl space-y-2 text-jost">
+            <ul className="list-disc list-inside text-base sm:text-lg md:text-xl space-y-2 font-mo">
               <li>
                 You must be at least 18 years old or have parental/guardian
                 consent to use this Site.
@@ -62,7 +97,7 @@ const Terms = () => {
             </div>
             <div>
               <p className="font-avalors font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl capitalize mb-4">
-              User Accounts (If Applicable)
+              User Accounts ( If Applicable )
             </p>
             <ul className="list-disc list-inside text-base sm:text-lg md:text-xl space-y-2 text-jost">
               <li>

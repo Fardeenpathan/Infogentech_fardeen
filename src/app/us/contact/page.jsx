@@ -1,17 +1,25 @@
 "use client"
-
 import Image from "next/image";
 import Icons from "@/components/ui/Icon";
 import ContactForm from "@/components/ContactForm";
 import SubContact from "@/components/SubContact";
 import MoreContact from "@/components/MoreContact";
 import SubscribeContact from "@/components/SubscribeContact";
+import { motion } from 'framer-motion';
 const contact = () => { 
   return (
     <div className="xl:mt-35 mt-10 subContainer mx-auto">
-      <div className="flex flex-col-reverse xl:flex-row justify-between items-center">
+ <div className="flex flex-col-reverse xl:flex-row justify-between items-center">
+        {/* Left Side Content */}
         <div className="flex gap-10 flex-col xl:flex-row">
-          <div className="flex justify-center items-center xl:mb-40 mb-0 flex-col">
+          {/* Pentagon with line */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="flex justify-center items-center xl:mb-40 mb-0 flex-col"
+          >
             <div className="relative w-12 h-12">
               <img
                 src="/assist/video/pentagonVideo.gif"
@@ -19,32 +27,71 @@ const contact = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-
             <div className="w-0.5 h-28 rounded-full mt-4 bg-gradient-to-b from-purple-400 via-purple-500 to-purple-800"></div>
-          </div>
+          </motion.div>
 
-          <div className="flex flex-col max-w-3xl justify-center items-center px-4 text-center xl:text-left">
-            <p className="font-avalors font-normal md:text-[75px] text-4xl leading-none bg-[linear-gradient(91.32deg,_#6A27FF_-32.61%,_#FFFFFF_19.98%,_#6A27FF_112.29%)] bg-clip-text text-transparent">
+          {/* Text & Button */}
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true }}
+            className="flex flex-col max-w-3xl justify-center items-center px-4 text-center xl:text-left"
+          >
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="font-avalors font-normal md:text-[75px] text-4xl leading-none bg-[linear-gradient(91.32deg,_#6A27FF_-32.61%,_#FFFFFF_19.98%,_#6A27FF_112.29%)] bg-clip-text text-transparent"
+            >
               NEED ASSISTANCE?
-            </p>
-            <p className="text-primary font-avalors align-middle md:text-[75px] text-4xl leading-[120%] tracking-[-0.75px]">
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="text-primary font-avalors align-middle md:text-[75px] text-4xl leading-[120%] tracking-[-0.75px]"
+            >
               just ask!
-            </p>
-            <p className="font-jost font-medium text-lg leading-6 align-middle mt-9">
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="font-jost font-medium text-lg leading-6 align-middle mt-9"
+            >
               We’re here to help! Reach out with any real questions, and we’ll
               get back to you within 48 hours. For support or inquiries, feel
               free to contact us at.
-            </p>
-            <a href="mailto:Info@infogentech.com">
-              <button className="border border-white rounded flex justify-center items-center px-8 py-3 cursor-pointer max-w-[274px] mt-8 space-x-2.5">
+            </motion.p>
+
+            <motion.a
+              href="mailto:Info@infogentech.com"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              viewport={{ once: true }}
+              className="mt-8"
+            >
+              <button className="border border-white rounded flex justify-center items-center px-8 py-3 cursor-pointer max-w-[274px] space-x-2.5">
                 <p className="font-jost">Info@infogentech.com</p>
                 <Icons name="Slide" />
               </button>
-            </a>
-          </div>
+            </motion.a>
+          </motion.div>
         </div>
 
-        <div className="relative flex items-center justify-center mb-8">
+        {/* Video + Polygon Image */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          viewport={{ once: true }}
+          className="relative flex items-center justify-center mb-8"
+        >
           <img
             src="/assist/video/play.gif"
             alt="valueImg"
@@ -58,9 +105,17 @@ const contact = () => {
             objectFit="cover"
             className="absolute md:w-92 md:h-92 w-60 h-60"
           />
-        </div>
+        </motion.div>
       </div>
-      <div className="flex gap-7 flex-row justify-center items-center py-4">
+
+      {/* Bottom Pentagon and Lines */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        viewport={{ once: true }}
+        className="flex gap-7 flex-row justify-center items-center py-4"
+      >
         <div className="flex justify-center items-center flex-col">
           <div className="w-0.5 h-20 rounded-full md:mb-10 mb-5 bg-gradient-to-b from-purple-400 via-purple-500 to-purple-800"></div>
           <div className="relative w-12 h-12">
@@ -72,7 +127,7 @@ const contact = () => {
           </div>
           <div className="w-0.5 h-20 rounded-full md:mt-10 mt-5 bg-gradient-to-b from-purple-400 via-purple-500 to-purple-800"></div>
         </div>
-      </div>
+      </motion.div>
       <div className="flex flex-col gap-8">
         <ContactForm />
         <SubContact />

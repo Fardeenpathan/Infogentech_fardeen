@@ -22,9 +22,9 @@ export const metadata = {
     siteName: "Infogentech",
     images: [
       {
-        url: "https://infogentech.com//public/CompanyName.svg",
-        width: 1200,
-        height: 630,
+        url: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
+        width: 200,
+        height: 60,
         alt: "Infogentech Logo",
       },
     ],
@@ -36,11 +36,21 @@ export const metadata = {
     description:
       "Infogentech Softwares LLP — contact us at info@infogentech.com or 991-013-0963.",
     site: "@infogentech",
-    images: ["https://infogentech.com//public/CompanyName.svg"],
+    images: ["https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png"],
   },
-  robots: {
-    index: true,
-    follow: true,
+  robots: "index, follow, all",
+  authors: [{ name: "InfoGenTech" }],
+  publisher: "InfoGenTech",
+  alternates: {
+    canonical: "https://infogentech.com/contact",
+    languages: {
+      "en-US": "https://infogentech.com/contact",
+    },
+  },
+  other: {
+    "geo.region": "IN",
+    "http-equiv": "x-ua-compatible",
+    distribution: "global",
   },
 };
 
@@ -49,7 +59,7 @@ import IndContactSub from "@/components/india/IndContactSub";
 
 export default function ContactPage() {
   return (
-    <>
+    <section className="pb-10">
       <div className="w-full bg-[#E6DBFF] lg:h-158 h-100 justify-center items-center flex flex-col">
         <h1 className="font-avalors font-normal md:text-[80px] text-[46px] leading-[1.6] tracking-[3px] align-middle text-primary">
           Get in touch
@@ -63,29 +73,6 @@ export default function ContactPage() {
 
       <IndContactForm />
       <IndContactSub />
-    </>
+    </section>
   );
 }
-
-// import IndContactForm from "@/components/india/IndContactForm";
-// import IndContactSub from "@/components/india/IndContactSub";
-// const contact = () => {
-//   return (
-//     <>
-//       <div className="w-full bg-[#E6DBFF] h-158 justify-center items-center flex flex-col">
-//         <p className="font-avalors font-normal text-[80px] leading-[1.6] tracking-[3px] align-middle text-primary">
-//           Get in touch
-//         </p>
-//         <p className="font-montserrat text-lg  max-w-4xl mx-auto text-center text-[#252525] font-medium">
-//           We’ll create high-quality linkable content and build at least 40
-//           high-authority links to each asset, paving the way for you to grow
-//           your rankings, improve brand.
-//         </p>
-//       </div>
-//       <IndContactForm />
-//       <IndContactSub/>
-//     </>
-//   );
-// };
-
-// export default contact;

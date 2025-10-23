@@ -28,7 +28,7 @@ export default function WhatMakesStandOut() {
   ];
 
   return (
-    <section className="w-full container mx-auto px-5 sm:px-8 md:px-10 lg:px-16 py-12 bg-transparent">
+    <section className="w-full container mx-auto px-5 sm:px-8 md:px-10 lg:px-16 py-12 bg-transparent lg:mt-20">
       <IndMidHeader
         title="What Makes"
         subtitle="Infogentech Stand Out in Digital Marketing"
@@ -36,7 +36,7 @@ export default function WhatMakesStandOut() {
 
       />
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-10 ">
         {cards.map((card, index) => (
           <div
             key={index}
@@ -48,7 +48,7 @@ export default function WhatMakesStandOut() {
                 className="w-full h-full object-contain rounded-[20px]"
               />
             </div>
-            <h4 className="font-montserrat font-semibold xl:text-[24px] text-lg text-[#252525] mb-3 text-center sm:text-left leading-[150%] tracking-[-0.02em]">
+            <h4 className="font-montserrat font-semibold xl:text-2xl text-lg text-[#252525] mb-3 text-center sm:text-left leading-[150%] tracking-[-0.02em]">
               {card.title}
             </h4>
             <p className="font-montserrat font-medium xl:text-[18px] text-[14px] leading-[150%] tracking-[-0.02em] text-[#252525]/80 text-center sm:text-left">

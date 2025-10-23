@@ -55,7 +55,7 @@ export default function BlogClient({ blog, slug }) {
           </div>
         )}
 
-        <h1 className="font-avalors text-[24px] font-normal leading-[100%] tracking-[0.03em] mt-6 text-center text-primary">
+        <h1 className="font-avalors text-2xl font-normal leading-[100%] tracking-[0.03em] mt-6 text-center text-primary">
           PUBLISHED {dayjs(blog.createdAt).format("DD MMM YYYY")}
         </h1>
 
@@ -80,7 +80,7 @@ export default function BlogClient({ blog, slug }) {
         )}
 
         <div
-          className="mt-18 font-kumbh-sans text-[20px] leading-[30px]  w-full"
+          className="mt-18 font-kumbh-sans text-xl leading-[30px]  w-full"
           dangerouslySetInnerHTML={{ __html: blog.content }}
         />
 

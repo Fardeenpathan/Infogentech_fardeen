@@ -21,7 +21,7 @@ export default function IndSideLinks({data}) {
      }, [data]);
   return (
     <aside className=" p-6 w-full md:w-[500px] gap-[10px] ">
-      <h3 className="font-montserrat font-semibold text-[20px] text-[#252525] mb-5">
+      <h3 className="font-montserrat font-semibold text-xl text-[#252525] mb-5">
         In this article
       </h3>
 

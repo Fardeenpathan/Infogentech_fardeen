@@ -61,7 +61,7 @@ export default function BlogClient({ blog }) {
             />
           )}
           <div
-            className="mt-18 font-montserrat text-[20px] leading-[30px]  w-full px-4"
+            className="mt-18 font-montserrat text-xl leading-[30px]  w-full px-4"
             dangerouslySetInnerHTML={{ __html: blog.content }}
           />
           <IndSharePost />

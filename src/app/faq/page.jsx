@@ -71,23 +71,22 @@ const FAQs = () => {
   const currentFaqs = faqsByCategory[activeCategory] || [];
 
   return (
-    <div className="subContainer mx-auto">
-          <div className="flex flex-col ">
-            <p className="font-avalors font-normal text-[75px] text-primary mt-35">
-              FAQS
-            </p>
-            <p className="font-avalors font-normal text-[75px] text-primary">
-              Your questions answered
-            </p>
-            <p className="font-jost font-medium text-lg leading-6 align-middle mt-9">
-              Find answers to common questions about our services, project
-              process, updates, and support at Infogentech.
-            </p>
-          </div>
-      <section className="flex gap-20 container mx-auto mt-35">
-        <div className="flex gap-10">
-        
-          <div className="flex flex-col text-nowrap">
+    <div className="subContainer mx-auto px-4">
+      <div className="flex flex-col ">
+        <p className="font-avalors font-normal text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-primary mt-35">
+          FAQS
+        </p>
+        <p className="font-avalors font-normal text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-primary">
+          Your questions answered
+        </p>
+        <p className="font-montserrat font-medium text-base sm:text-lg md:text-xl leading-relaxed mt-6">
+          Find answers to common questions about our services, project process,
+          updates, and support at Infogentech.
+        </p>
+      </div>
+      <section className="flex sm:gap-20 gap-4 container mx-auto xl:mt-20 mt-10 flex-col sm:flex-row ">
+        <div className="flex sm:ap-10 gap-2">
+          <div className="flex flex-col text-nowrap font-montserrat">
             {categoryList.map((category) => (
               <button
                 key={category.key}
@@ -95,7 +94,7 @@ const FAQs = () => {
                   setActiveCategory(category.key);
                   setOpenId(null);
                 }}
-                className={`font-jost mb-10 text-[16px] leading-6 align-middle transition-opacity duration-300 cursor-pointer ${
+                className={`font-jost sm:mb-10 mb-4 text-[16px] leading-6 align-middle transition-opacity duration-300 cursor-pointer ${
                   activeCategory === category.key
                     ? "opacity-100 font-semibold"
                     : "opacity-50"
@@ -107,13 +106,13 @@ const FAQs = () => {
           </div>
         </div>
         <aside className="w-full">
-          <p className="font-avalors font-normal text-[30px] leading-[100%] tracking-[0.03em] capitalize mb-6">
+          <p className="font-avalors font-normal sm:text-3xl text-2xl  leading-[100%] tracking-[0.03em] mb-6">
             {categoryList.find((c) => c.key === activeCategory)?.label}
           </p>
           {loading ? (
             <Loader />
           ) : (
-    <section className="font-montserrat w-full">
+            <section className="font-montserrat w-full">
               {currentFaqs.map((faq, index) => (
                 <div
                   key={faq.id}
@@ -126,7 +125,7 @@ const FAQs = () => {
                     className="flex w-full items-start gap-x-5 justify-between rounded-lg text-left text-lg font-bold focus:outline-none px-5"
                     onClick={() => toggleFAQ(faq.id)}
                   >
-                    <div className="text-[#252525] flex items-center gap-4 text-lg">
+                    <div className="text-[#252525] flex items-center gap-4  xl:text-2xl text-[14px]">
                       <span className="text-4xl font-normal opacity-40">
                         0{index + 1}
                       </span>
@@ -152,7 +151,7 @@ const FAQs = () => {
                         transition={{ duration: 0.3, ease: "easeInOut" }}
                         className="overflow-hidden"
                       >
-                        <div className="pl-19 pr-15 pt-3 text-left text-lg leading-[1.4]">
+                        <div className="xl:pl-19 pl-10 xl:pr-5  pr-2 pt-3 text-left xl:text-lg text-[12px] leading-[1.4]">
                           {faq.answer}
                         </div>
                       </motion.div>

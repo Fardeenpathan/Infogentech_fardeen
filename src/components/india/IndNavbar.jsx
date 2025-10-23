@@ -28,7 +28,7 @@ export default function Navbar() {
       <div className="flex items-center container justify-between mx-auto px-4">
         <Link href="/" className="flex items-center gap-1.5 cursor-pointer">
           <Icons name="LogoFooter" />
-          <p className="font-avalors lg:text-[24px] leading-8 tracking-[3px] font-bold text-xl text-white">
+          <p className="font-avalors lg:text-2xl leading-8 tracking-[3px] font-bold text-xl text-white">
             INFOGENTECH
           </p>
         </Link>
@@ -39,6 +39,9 @@ export default function Navbar() {
           </Link>
             <Link href="/about" className={linkClasses("/about")}>
             About us
+          </Link>
+          <Link href="/portfolio/design" className={linkClasses("/portfolio/design")}>
+            Portfolio
           </Link>
           <Link href="/services/design" className={linkClasses("/services/design")}>
             Services
@@ -54,7 +57,7 @@ export default function Navbar() {
         <a href="/contact"><IndButton
              variant="primary"
                   >
-         Let's talk
+         Let's Talk
              </IndButton></a>
           
        

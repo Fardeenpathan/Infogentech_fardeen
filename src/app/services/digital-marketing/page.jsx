@@ -1,16 +1,17 @@
+
 import IndServiceCard from "@/components/india/IndServiceCard";
 import IndServicesHeader from "@/components/india/IndServicesHeader";
 import IndAllServices from "@/components/india/IndAllServices";
 import IndServiceDesc from "@/components/india/IndServiceDesc";
-import Icons from "@/components/ui/Icon";
+import MovingTextBanner from "@/components/MovingTextBanner";
 export const metadata = {
-  title: "Digital Marketing Services and Web Solution Company",
+  title: "Digital Marketing Services and Web Solution Company | Infogentech Softwares LLP",
   description:
     "Top digital marketing and web solutions provider globally. We offer expert services to enhance your online presence, drive traffic, and grow your business.",
   keywords:
     "Online Marketing Services, Online Internet Marketing, Marketing Solution, IT Solutions Services",
   openGraph: {
-    title: "Digital Marketing Services and Web Solution Company",
+    title: "Digital Marketing Services and Web Solution Company ",
     description:
       "Top digital marketing and web solutions provider globally. We offer expert services to enhance your online presence, drive traffic, and grow your business.",
     url: "https://infogentech.com/services",
@@ -18,18 +19,18 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "https://infogentech.com/public/CompanyName.svg",
+        url: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
         alt: "Infogentech",
       },
     ],
   },
   twitter: {
     card: "summary",
-    title: "Digital Marketing Services and Web Solution Company",
+    title: "Digital Marketing Services and Web Solution Company ",
     description:
       "Top digital marketing and web solutions provider globally. We offer expert services to enhance your online presence, drive traffic, and grow your business.",
     site: "@infogentech",
-    images: ["https://infogentech.com/public/CompanyName.svg"],
+    images: ["https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png"],
   },
   robots: "index, follow, all",
   authors: [{ name: "InfoGenTech" }],
@@ -41,7 +42,7 @@ export const metadata = {
     },
   },
   other: {
-    "geo.region": "US",
+    "geo.region": "IN",
     "http-equiv": "x-ua-compatible",
     distribution: "global",
   },
@@ -51,6 +52,9 @@ const Marketing = () => {
     {
       id: "01",
       title: "Marketing Strategy",
+      description:
+        "Create comprehensive strategies focused on long-term brand growth, audience engagement, and ROI.",
+      image: "/images/services/marketing-strategy.jpg",
       subServices: [
         { id: "01", title: "ROI-Driven Campaign Strategies" },
         { id: "02", title: "B2B Content Strategies" },
@@ -64,6 +68,9 @@ const Marketing = () => {
     {
       id: "02",
       title: "Performance Marketing",
+      description:
+        "Targeted, measurable campaigns to drive traffic, sales, and conversion through various ad platforms.",
+      image: "/images/services/performance-marketing.jpg",
       subServices: [
         { id: "01", title: "Pay-Per-Click Advertising (PPC)" },
         { id: "02", title: "Google Ads Campaign Management" },
@@ -82,6 +89,9 @@ const Marketing = () => {
     {
       id: "03",
       title: "CRM & Automation",
+      description:
+        "Automate marketing flows and nurture customer relationships through personalized messaging.",
+      image: "/images/services/crm-automation.jpg",
       subServices: [
         { id: "01", title: "Email Marketing" },
         { id: "02", title: "Email Campaign Design" },
@@ -94,6 +104,9 @@ const Marketing = () => {
     {
       id: "04",
       title: "Audience Engagement Strategy",
+      description:
+        "Grow and retain loyal audiences through social campaigns, influencer outreach, and strategic content.",
+      image: "/images/services/audience-engagement.jpg",
       subServices: [
         { id: "01", title: "Social Media Marketing (SMO)" },
         { id: "02", title: "Instagram, Facebook & YouTube Marketing" },
@@ -110,6 +123,9 @@ const Marketing = () => {
     {
       id: "05",
       title: "Search Engine Optimization (SEO)",
+      description:
+        "Optimize your website for better visibility, organic traffic, and search engine rankings.",
+      image: "/images/services/seo.jpg",
       subServices: [
         { id: "01", title: "Search Engine Optimization (SEO)" },
         { id: "02", title: "Technical SEO Audits" },
@@ -123,6 +139,9 @@ const Marketing = () => {
     {
       id: "06",
       title: "Content Marketing",
+      description:
+        "Create valuable and consistent content to attract, engage, and convert your target audience.",
+      image: "/images/services/content-marketing.jpg",
       subServices: [
         { id: "01", title: "Blog Writing & SEO Copy" },
         { id: "02", title: "Social Content & Captions" },
@@ -134,6 +153,9 @@ const Marketing = () => {
     {
       id: "07",
       title: "Analytics & Reporting",
+      description:
+        "Track campaign performance with custom dashboards and actionable insights to guide decision-making.",
+      image: "/images/services/analytics-reporting.jpg",
       subServices: [
         { id: "01", title: "Google Analytics Setup" },
         { id: "02", title: "Performance Monitoring & CRO" },
@@ -147,23 +169,13 @@ const Marketing = () => {
     <>
       <IndServicesHeader />
       <IndAllServices activeService="Digital Marketing" />
-    <div className="container mx-auto lg:mt-24 xl:px-10 md:px-5 px-2">
+      <div className="container mx-auto lg:mt-24 xl:px-10 md:px-5 px-2">
         <div className="lg:pb-20 pb-4">
-          <IndServiceDesc/>
+          <IndServiceDesc />
         </div>
         <IndServiceCard categories={categories} />
       </div>
-        <div className="moving-text-container overflow-hidden bg-[#3F237F] text-white mt-40">
-        <div className="moving-text-content font-montserrat font-normal text-xl -tracking-[0.05em] custom-skew">
-          <div className="flex gap-96">
-            {Array.from({ length: 20 }, (_, i) => (
-              <p key={i} className="py-4 flex gap-28">
-                Design <Icons name="IndStar" /> Development <Icons name="IndStar" /> Branding <Icons name="IndStar" /> Product
-              </p>
-            ))}
-          </div>
-        </div>
-      </div>
+      <MovingTextBanner />
     </>
   );
 };

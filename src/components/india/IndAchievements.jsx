@@ -62,7 +62,7 @@ const IndAchievements = () => {
           return (
             <div
               key={index}
-              className="flex flex-col items-center text-center"
+              className="flex flex-col justify-start"
             >
               <div className="flex items-end font-avalors leading-[1.6] tracking-[3px] text-[36px] sm:text-[48px] md:text-[56px] lg:text-[64px]">
                 <span className="text-primary">{count}</span>
@@ -70,7 +70,7 @@ const IndAchievements = () => {
                   {achievement.suffix}
                 </span>
               </div>
-              <p className="font-montserrat font-semibold text-lg sm:text-[18px] md:text-[20px] leading-[110%] text-[#252525]  capitalize mt-2 whitespace-nowrap">
+              <p className="font-montserrat font-semibold text-lg sm:text-[18px] md:text-xl leading-[110%] text-[#252525]  capitalize mt-2 whitespace-nowrap">
                 {achievement.label}
               </p>
             </div>

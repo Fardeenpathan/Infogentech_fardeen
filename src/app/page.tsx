@@ -1,6 +1,6 @@
 import IndHeroPage from "@/components/india/IndHeroPage";
 export const metadata = {
-  title: "Innovation Success with Software, Technology & Digital Marketing",
+  title: "Innovation Success with Software, Technology & Digital Marketing | Infogentech Softwares LLP",
   description:
     "Discover how innovation in software, technology, and digital marketing drives business growth. Explore strategies for success in today’s digital-first world.",
   keywords:
@@ -13,10 +13,10 @@ export const metadata = {
     siteName: "infogentech",
     images: [
       {
-        url: "https://infogentech.com/public/CompanyName.svg",
-        width: 1200,
-        height: 630,
-        alt: "Infogentech",
+        url: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
+        width: 200,
+        height: 60,
+        alt: "Infogentech Logo",
       },
     ],
     type: "website",
@@ -27,11 +27,16 @@ export const metadata = {
     title: "Innovation Success with Software, Technology & Digital Marketing",
     description:
       "Discover how innovation in software, technology, and digital marketing drives business growth. Explore strategies for success in today’s digital-first world.",
-    images: ["https://infogentech.com/public/CompanyName.svg"],
+    images: ["https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png"],
   },
   alternates: {
     canonical: "https://infogentech.com/",
   },
+    other: {
+    "geo.region": "IN",
+    "http-equiv": "x-ua-compatible",
+    distribution: "global",
+  }, 
 };
 export default function Home() {
   return <IndHeroPage />;
