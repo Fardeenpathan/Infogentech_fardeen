@@ -84,7 +84,6 @@ export async function generateMetadata({ params }) {
 
 export default async function Page({ params }) {
   const slug = params.slug;
-  console.log(slug,"dasdasda")
   const data = await fetchBlogBySlug(slug);
 
   if (!data) {
