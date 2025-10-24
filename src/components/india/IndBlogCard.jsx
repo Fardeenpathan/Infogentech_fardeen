@@ -30,7 +30,7 @@ export default function HomeBlogCardsd({ blog }) {
                 <Icons name="BlogArrow" />
               </Link>
             </h4>
-            <p className="font-montserrat font-medium text-lg leading-[32px] tracking-normal mt-1 line-clamp-5">
+            <p className="font-montserrat font-medium text-lg leading-[32px] tracking-normal mt-1 line-clamp-4">
               {blog.excerpt}
             </p>
           </div>

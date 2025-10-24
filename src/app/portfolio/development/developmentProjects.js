@@ -120,7 +120,7 @@ const developmentProjects = [
     id: 4,
     title: "Avarta Jewellery",
     slug: "Avarta-jewellery",
-    image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1758868867/blog-app/categories/rgm9p4wvvhejttch94gi.jpg",
+    image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761287094/lpb53tidbisvfzjal0ew.png",
     subImage: "/assist/portfolio/development/avartajewellery.png",
     description:
       "Avarta Jewellery is a luxury brand that has a reputation for classic beauty and contemporary workmanship. They collaborated with us to design and develop a rich site. We provided the construction of category-based collections, blogs, customer resource, and e-commerce functionality, which would be smooth and user-friendly, so that the experience provided would be interesting to the jewellery lovers of today.",

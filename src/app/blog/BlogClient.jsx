@@ -62,7 +62,7 @@ const Blogs = () => {
   } else {
     return (
       <div>
-        <div className="relative w-full lg:h-200 h-150 flex items-center justify-start">
+        <div className="relative w-full py-32 flex items-center justify-start">
           <Image
             src="/assist/IndImg/blogBg.jpg"
             alt="Blog"

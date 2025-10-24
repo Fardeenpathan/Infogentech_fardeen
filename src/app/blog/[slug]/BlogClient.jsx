@@ -10,7 +10,7 @@ import dayjs from "dayjs";
 export default function BlogClient({ blog }) {
   return (
     <>
-      <div className="relative w-full lg:h-200 h-150 flex items-center justify-start px-4">
+      <div className="relative w-full py-38 flex items-center justify-start px-4">
         <Image
           src="/assist/IndImg/blogBg.jpg"
           alt="Blog"
@@ -26,9 +26,9 @@ export default function BlogClient({ blog }) {
           height={660}
           className="absolute top-50% -right-30 w-80 h-125 object-cover -z-10 -rotate-12 opacity-20"
         />
-        <div className="relative z-10 container mx-auto flex flex-col md:flex-row lg:items-center items-start justify-between -top-14">
+        <div className="relative z-10 container mx-auto flex flex-col md:flex-row lg:items-center items-start justify-between">
           <div className="w-full lg:items-center items-start md:text-left space-y-4">
-            <div className="mb-20">
+            <div className="lg:mb-20 mb-10">
               <Link
                 href="/blog"
                 className="flex items-center gap-2 text-[#252525] hover:text-gray-400  font-montserrat"
@@ -40,16 +40,16 @@ export default function BlogClient({ blog }) {
             <p className="text-[#252525] font-montserrat font-semibold text-2xl">
               {dayjs(blog.createdAt).format("DD MMMM YYYY")}
             </p>
-            <h2 className="text-gray-400 text-3xl md:text-[46px] font-bold leading-[1.2] font-avalors tracking-wider lg:mr-150">
+            <h1 className="text-gray-400 text-3xl  md:text-[46px] font-bold leading-[1.2] font-avalors tracking-wider lg:mr-150">
               {blog.title}
-            </h2>
+            </h1>
             <p className="text-[#252525] font-montserrat font-semibold text-2xl lg:mt-15 mt-4">
             {blog.excerpt}
             </p>
           </div>
         </div>
       </div>
-      <div className="flex justify-between container mx-auto gap-10 relative lg:-top-24 -top-36 px-4">
+      <div className="flex justify-between container mx-auto md:gap-10 gap-4 relative lg:-top-24 -top-36 px-4">
         <div>
           {blog.image && (
             <Image
@@ -61,7 +61,7 @@ export default function BlogClient({ blog }) {
             />
           )}
           <div
-            className="mt-18 font-montserrat text-xl leading-[30px]  w-full px-4"
+            className="md:mt-18 mt-4 font-montserrat text-xl leading-[30px]  w-full px-4"
             dangerouslySetInnerHTML={{ __html: blog.content }}
           />
           <IndSharePost />

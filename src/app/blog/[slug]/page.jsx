@@ -17,11 +17,11 @@ function convertBlocksToHtml(blocks = []) {
     if (!block || !block.type) return;
     switch (block.type) {
       case "paragraph":
-        html += `<p class="mb-6">${block.data?.content || ""}</p>`;
+        html += `<p class="lg:mb-6 mb-3">${block.data?.content || ""}</p>`;
         break;
       case "heading":
         const level = block.data?.level || 2;
-        html += `<h${level} class="font-semibold text-5xl mb-8">${block.data?.content || ""}</h${level}>`;
+        html += `<h${level} class="font-semibold md:text-5xl text-2xl mb-8">${block.data?.content || ""}</h${level}>`;
         break;
       case "list":
         const isOrdered = block.data?.style === "ordered" || block.data?.style === "ol";
@@ -61,9 +61,9 @@ export async function generateMetadata({ params }) {
   const image = blog.featuredImage?.url || "https://infogentech.com/default-og-image.png";
 
   return {
-    title: blog.title,
-    description: blog.excerpt || "",
-    keywords: blog.keywords ? blog.keywords.split(",").map(k=>k.trim()) : [],
+    title: blog.seo.title,
+    description: blog.seo.description || "",
+    keywords: blog.seo.keywords || [],
     alternates: { canonical: url },
     openGraph: {
       title: blog.title,

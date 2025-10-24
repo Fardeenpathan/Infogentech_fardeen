@@ -4,36 +4,78 @@ import Button from '@/components/ui/Button';
 import { toast } from 'react-hot-toast';
 import adminApiService from '@/lib/adminApi';
 
+const DEFAULT_FAQ = {
+  question: '',
+  answer: '',
+  order: 0,
+  isActive: true
+};
+
+// FAQ validation utility
+const validateFaq = (faq) => {
+  if (!faq.question?.trim()) {
+    return 'Please fill in the question';
+  }
+  
+  if (!faq.answer?.trim()) {
+    return 'Please fill in the answer';
+  }
+  
+  return null; // No errors
+};
+
+// Format FAQ for API submission
+const formatFaqForApi = (faq, index = 0) => {
+  return {
+    question: faq.question?.trim() || '',
+    answer: faq.answer?.trim() || '',
+    order: faq.order !== undefined ? faq.order : index,
+    isActive: faq.isActive !== false
+  };
+};
+
+// Sort FAQs by order
+const sortFaqsByOrder = (faqs) => {
+  if (!Array.isArray(faqs)) return [];
+  return [...faqs].sort((a, b) => (a.order || 0) - (b.order || 0));
+};
+
+// Format FAQs for display
+const formatFaqsForDisplay = (faqs) => {
+  if (!Array.isArray(faqs)) return [];
+  
+  return faqs.map((faq, index) => ({
+    ...faq,
+    id: faq._id || faq.id || `faq-${index}`,
+    order: faq.order !== undefined ? faq.order : index
+  }));
+};
+
+// Append FAQ data to FormData (simplified without categories)
+const appendFaqsToFormData = (formData, faqs) => {
+  if (!faqs || !Array.isArray(faqs)) return;
+  
+  faqs.forEach((faq, index) => {
+    const formattedFaq = formatFaqForApi(faq, index);
+    formData.append(`faqs[${index}][question]`, formattedFaq.question);
+    formData.append(`faqs[${index}][answer]`, formattedFaq.answer);
+    formData.append(`faqs[${index}][order]`, formattedFaq.order);
+    formData.append(`faqs[${index}][isActive]`, formattedFaq.isActive);
+  });
+};
+
 const BlogFAQManager = React.forwardRef(({ blogId, isEditMode = false, initialFaqs = [] }, ref) => {
   const [faqs, setFaqs] = useState([]);
   const [loading, setLoading] = useState(false);
   const [editingFaq, setEditingFaq] = useState(null);
   const [showForm, setShowForm] = useState(false);
-  const [newFaq, setNewFaq] = useState({
-    question: '',
-    answer: '',
-    category: 'general',
-    order: 0,
-    isActive: true
-  });
-
-  const categories = [
-    { value: 'general', label: 'General & Services' },
-    { value: 'pricing', label: 'Pricing & Timeline' },
-    { value: 'support', label: 'Support & Maintenance' },
-    { value: 'technical', label: 'Technical' },
-    { value: 'process', label: 'Process & Workflow' }
-  ];
+  const [newFaq, setNewFaq] = useState({ ...DEFAULT_FAQ });
 
   useEffect(() => {
     if (isEditMode && initialFaqs && initialFaqs.length > 0) {
       // Use initial FAQs passed from parent (already loaded blog data)
-      const formattedFaqs = initialFaqs.map((faq, index) => ({
-        ...faq,
-        id: faq._id || faq.id || `faq-${index}`,
-        order: faq.order || index
-      }));
-      setFaqs(formattedFaqs);
+      const formattedFaqs = formatFaqsForDisplay(initialFaqs);
+      setFaqs(sortFaqsByOrder(formattedFaqs));
     } else if (isEditMode && blogId) {
       // Fallback to API call if initial FAQs not provided
       loadFaqs();
@@ -45,8 +87,9 @@ const BlogFAQManager = React.forwardRef(({ blogId, isEditMode = false, initialFa
       setLoading(true);
       const response = await adminApiService.getBlogFaqs(blogId);
       const faqsData = response?.data || response || [];
-      // Ensure we always have an array
-      setFaqs(Array.isArray(faqsData) ? faqsData : []);
+      // Ensure we always have an array and format with utilities
+      const formattedFaqs = Array.isArray(faqsData) ? formatFaqsForDisplay(faqsData) : [];
+      setFaqs(sortFaqsByOrder(formattedFaqs));
     } catch (error) {
       console.error('Error loading FAQs:', error);
       toast.error('Failed to load FAQs');
@@ -57,8 +100,9 @@ const BlogFAQManager = React.forwardRef(({ blogId, isEditMode = false, initialFa
   };
 
   const handleAddFaq = async () => {
-    if (!newFaq.question.trim() || !newFaq.answer.trim()) {
-      toast.error('Please fill in both question and answer');
+    const validationError = validateFaq(newFaq);
+    if (validationError) {
+      toast.error(validationError);
       return;
     }
 
@@ -88,13 +132,7 @@ const BlogFAQManager = React.forwardRef(({ blogId, isEditMode = false, initialFa
         });
       }
 
-      setNewFaq({
-        question: '',
-        answer: '',
-        category: 'general',
-        order: 0,
-        isActive: true
-      });
+      setNewFaq({ ...DEFAULT_FAQ });
       setShowForm(false);
     } catch (error) {
       console.error('Error adding FAQ:', error);
@@ -170,7 +208,6 @@ const BlogFAQManager = React.forwardRef(({ blogId, isEditMode = false, initialFa
     return faqs.map(faq => ({
       question: faq.question,
       answer: faq.answer,
-      category: faq.category,
       order: faq.order,
       isActive: faq.isActive
     }));
@@ -185,7 +222,6 @@ const BlogFAQManager = React.forwardRef(({ blogId, isEditMode = false, initialFa
     const [editData, setEditData] = useState({
       question: faq.question,
       answer: faq.answer,
-      category: faq.category,
       isActive: faq.isActive
     });
 
@@ -209,21 +245,6 @@ const BlogFAQManager = React.forwardRef(({ blogId, isEditMode = false, initialFa
                 />
               </div>
               
-              <div>
-                <label className="block text-sm font-medium text-gray-300 mb-1">
-                  Category
-                </label>
-                <select
-                  value={editData.category}
-                  onChange={(e) => setEditData({...editData, category: e.target.value})}
-                  className="px-3 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-purple-500"
-                >
-                  {categories.map(cat => (
-                    <option key={cat.value} value={cat.value}>{cat.label}</option>
-                  ))}
-                </select>
-              </div>
-
               <div>
                 <label className="block text-sm font-medium text-gray-300 mb-1">
                   Answer
@@ -273,9 +294,6 @@ const BlogFAQManager = React.forwardRef(({ blogId, isEditMode = false, initialFa
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-2">
                     <h4 className="text-lg font-medium text-white">{faq.question}</h4>
-                    <span className="px-2 py-1 bg-purple-600 text-white text-xs rounded-full">
-                      {categories.find(cat => cat.value === faq.category)?.label || faq.category}
-                    </span>
                     {faq.isLocal && (
                       <span className="px-2 py-1 bg-orange-600 text-white text-xs rounded-full">
                         Not Saved
@@ -399,21 +417,6 @@ const BlogFAQManager = React.forwardRef(({ blogId, isEditMode = false, initialFa
             
             <div>
               <label className="block text-sm font-medium text-gray-300 mb-1">
-                Category
-              </label>
-              <select
-                value={newFaq.category}
-                onChange={(e) => setNewFaq({...newFaq, category: e.target.value})}
-                className="px-3 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-purple-500"
-              >
-                {categories.map(cat => (
-                  <option key={cat.value} value={cat.value}>{cat.label}</option>
-                ))}
-              </select>
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-300 mb-1">
                 Answer *
               </label>
               <textarea
@@ -446,7 +449,10 @@ const BlogFAQManager = React.forwardRef(({ blogId, isEditMode = false, initialFa
                 Add FAQ
               </Button>
               <Button
-                onClick={() => setShowForm(false)}
+                onClick={() => {
+                  setShowForm(false);
+                  setNewFaq({ ...DEFAULT_FAQ });
+                }}
                 className="bg-gray-600 hover:bg-gray-700 text-white"
               >
                 Cancel

@@ -17,7 +17,7 @@ export function Navbar() {
 
   useEffect(() => {
     return scrollY.on("change", (y) => {
-      setScrolled(y > 10);
+      setScrolled(y > 100);
     });
   }, [scrollY]);
 
