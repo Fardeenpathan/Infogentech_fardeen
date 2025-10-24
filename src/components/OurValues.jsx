@@ -57,7 +57,7 @@ export default function OurValues() {
             />
           </div>
           <Image
-            src="/assist/overValue.gif"
+            src="https://res.cloudinary.com/dpmceu66e/image/upload/v1761296966/blog-app/blogs/blogs/1761296960707-gettyimages-1208502399-unscreen.gif"
             alt="valueImg"
             width={640}
             height={150}

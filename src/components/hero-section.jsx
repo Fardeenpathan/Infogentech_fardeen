@@ -5,7 +5,7 @@ export function HeroSection() {
     <div className="container mx-auto md:px-10 pl-4 pr-10">
       <video
         className="absolute top-0 left-0 w-full sm:h-240 h-184  object-cover bg-transparent -z-10 "
-        src="/assist/hero-bg.mp4"
+        src="https://res.cloudinary.com/dpmceu66e/video/upload/v1761296720/blog-app/blogs/blogs/1761296714456-homevideo.mp4"
         autoPlay
         loop
         muted
