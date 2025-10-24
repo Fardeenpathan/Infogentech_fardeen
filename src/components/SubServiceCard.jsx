@@ -49,7 +49,7 @@ const SubServiceCard = ({ subService }) => {
         {subService.title}
       </h2>
 
-      <p className="font-jost font-normal text-[16px] leading-[140%] tracking-[0.03em] capitalize mt-8 opacity-30 font-kumbh-sans">
+      <p className="font-jost font-normal text-base leading-[140%] tracking-[0.03em] capitalize mt-8 opacity-30 font-kumbh-sans">
         {subService.desc}
       </p>
 

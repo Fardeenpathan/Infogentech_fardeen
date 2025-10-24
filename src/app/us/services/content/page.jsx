@@ -225,7 +225,7 @@ const Content = () => {
                       <p className="font-jost font-bold md:text-3xl text-2xl leading-6 text-primary">
                         Our Value
                       </p>
-                      <p className="font-jost font-medium md:text-lg text-[16px] leading-6">
+                      <p className="font-jost font-medium md:text-lg text-base leading-6">
                         How we work at Untitled guided by shared values that
                         keep us connected as one team
                       </p>

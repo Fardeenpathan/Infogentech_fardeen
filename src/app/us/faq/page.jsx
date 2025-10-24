@@ -117,7 +117,7 @@ const FAQs = () => {
                   setActiveCategory(category.key);
                   setOpenId(null);
                 }}
-                className={`font-jost sm:mb-10 mb-4 text-[16px] leading-6 align-middle transition-opacity duration-300 cursor-pointer ${
+                className={`font-jost sm:mb-10 mb-4 text-base leading-6 align-middle transition-opacity duration-300 cursor-pointer ${
                   activeCategory === category.key
                     ? "opacity-100 font-semibold"
                     : "opacity-50"

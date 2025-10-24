@@ -43,7 +43,7 @@ export default function IndServiceCard({ categories }) {
                   category.subServices.map((service) => (
                     <span
                       key={service.id}
-                      className="font-montserrat font-bold text-[14px] sm:text-[16px] md:text-[18px] bg-white text-[#252525] px-4 py-2 sm:px-5 sm:py-2.5 rounded-full shadow-sm hover:shadow-md transition"
+                      className="font-montserrat font-bold text-sm sm:text-base md:text-lg bg-white text-[#252525] px-4 py-2 sm:px-5 sm:py-2.5 rounded-full shadow-sm hover:shadow-md transition"
                     >
                       {service.title}
                     </span>
@@ -82,7 +82,7 @@ export default function IndServiceCard({ categories }) {
             <div onClick={() => toggleCategory(category.id)} className="flex justify-center md:justify-end items-end w-full md:w-[25%]">
               <div className="relative w-[200px] sm:w-[220px] lg:w-[259px] h-[60px] sm:h-[64px] bg-white rounded-[40px] flex items-center justify-start cursor-pointer group hover:shadow-md transition-all">
                 <div className="absolute left-[6px] top-[6px] w-[70%] sm:w-[187px] h-[48px] sm:h-[50px] bg-primary rounded-[30px] flex items-center justify-center group-hover:bg-[#7b3eff] transition">
-                  <span className="text-white font-semibold font-montserrat text-[16px] leading-[24px]">
+                  <span className="text-white font-semibold font-montserrat text-base leading-[24px]">
                     Learn more
                   </span>
                 </div>
