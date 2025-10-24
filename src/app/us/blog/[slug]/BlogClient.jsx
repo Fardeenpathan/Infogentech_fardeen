@@ -7,33 +7,8 @@ import Link from "next/link";
 import dayjs from "dayjs";
 import SubscribeContact from "@/components/SubscribeContact";
 import Icons from "@/components/ui/Icon";
-
-export default function BlogClient({ blog, slug }) {
-  const [openId, setOpenId] = useState(null);
-
-  const faqData = [
-    {
-      id: 1,
-      question: "What types of hosting plans do you offer?",
-      answer:
-        "We offer shared hosting, VPS hosting, dedicated server hosting, and cloud hosting plans.",
-    },
-    {
-      id: 2,
-      question: "What is the uptime guarantee for your hosting services?",
-      answer: "We guarantee an uptime of 99.9% for all our hosting services.",
-    },
-    {
-      id: 3,
-      question: "Do you provide 24/7 customer support?",
-      answer:
-        "Yes, our support team is available 24/7 via live chat, email, and phone.",
-    },
-  ];
-
-  const toggleFAQ = (id) => {
-    setOpenId((prevId) => (prevId === id ? null : id));
-  };
+import FaqsBlog from "@/components/FaqsBlog";
+export default function BlogClient({ blog }) {
 
   return (
     <div className="container mx-auto mt-24 text-wrap px-10">
@@ -80,14 +55,14 @@ export default function BlogClient({ blog, slug }) {
         )}
 
         <div
-          className="mt-18 font-kumbh-sans text-xl leading-[30px]  w-full"
+          className="mt-18 font-kumbh-sans text-xl leading-[30px]  w-full text-white"
           dangerouslySetInnerHTML={{ __html: blog.content }}
         />
 
         <div className="text-[#82828C] mt-12 border-2 container mx-auto px-10"></div>
       </div>
-
-      <section className="mt-10">
+       <FaqsBlog blog={blog} />
+      {/* <section className="mt-10">
         <h2 className="font-jost text-[30px] font-normal leading-[38px] text-primary">
           FAQs
         </h2>
@@ -114,8 +89,8 @@ export default function BlogClient({ blog, slug }) {
             </div>
           ))}
         </div>
-      </section>
-
+      </section> */}
+       
       <SubscribeContact />
     </div>
   );

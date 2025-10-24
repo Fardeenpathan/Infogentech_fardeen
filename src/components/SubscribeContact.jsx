@@ -8,7 +8,7 @@ export default function SubscribeContact() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.2 }}
       viewport={{ once: true }}
-      className="subContainer mx-auto px-2 xl:px-10"
+      className="subContainer mx-auto px-2 xl:px-10 py-10"
     >
       <div className="bg-[#141313] xl:p-14 lg:p-10 md:py-10 p-5 flex md:justify-between md:flex-row flex-col items-center">
         <motion.div

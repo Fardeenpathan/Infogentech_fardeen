@@ -393,3 +393,6 @@
   transform: rotate(-2.24deg);
   transform-origin: center;
 }
+.custom-shadow {
+  box-shadow: inset 0 0 8px 0 #FFFFFF;
+}

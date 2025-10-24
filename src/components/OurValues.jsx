@@ -42,12 +42,11 @@ export default function OurValues() {
         name="Our Values"
         subheading="Core beliefs behind everything we build"
       />
-
       <div className="flex justify-between flex-col xl:flex-row">
         <div className=" flex justify-center items-center flex-col xl:flex-row">
           <div
             className="w-50 h-56 bg-transparent border border-white/10 rounded-2xl  flex justify-center items-center backdrop-blur-[51.97px]
-         shadow-[0px_0px_8px_0px_#FFFFFF_inset] absolute"
+         custom-shadow absolute"
           >
             <Image
               src="/assist/img/valueImg.png"
@@ -58,7 +57,7 @@ export default function OurValues() {
             />
           </div>
           <Image
-            src="/assist/overValue.gif"
+            src="https://res.cloudinary.com/dpmceu66e/image/upload/v1761296966/blog-app/blogs/blogs/1761296960707-gettyimages-1208502399-unscreen.gif"
             alt="valueImg"
             width={640}
             height={150}
@@ -83,7 +82,7 @@ export default function OurValues() {
                 <h2 className="font-jost font-medium text-2xl leading-[120%] tracking-[0.03em] mt-6">
                   {service.title}
                 </h2>
-                <p className="text-[#C4C4C4] text-xl mt-3 leading-[120%] flex text-center xl:text-lg">
+                <p className=" text-xl mt-3 leading-[120%] flex text-center xl:text-lg text-[#73737F]">
                   {service.desc}
                 </p>
               </div>
