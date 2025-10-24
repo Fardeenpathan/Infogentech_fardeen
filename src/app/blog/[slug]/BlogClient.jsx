@@ -10,7 +10,7 @@ import dayjs from "dayjs";
 export default function BlogClient({ blog }) {
   return (
     <>
-      <div className="relative w-full py-38 flex items-center justify-start px-4">
+      <div className="relative w-full py-38 flex items-center justify-start px-4 overflow-hidden">
         <Image
           src="/assist/IndImg/blogBg.jpg"
           alt="Blog"
