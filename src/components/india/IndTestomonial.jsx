@@ -53,7 +53,7 @@ const cardVariants = {
 
 const IndTestomonial = () => {
   return (
-    <div className="xl:mt-20 mt-10 max-w-7xl mx-auto xl:pb-20 pb-0 font-montserrat">
+    <section className="xl:mt-20 mt-10 max-w-7xl mx-auto xl:pb-20 pb-0 font-montserrat">
       <IndMidHeader
         title="Client Testimonials"
         subtitle="What are they talking about?"
@@ -109,7 +109,7 @@ const IndTestomonial = () => {
           </motion.div>
         ))}
       </motion.div>
-    </div>
+    </section>
   );
 };
 

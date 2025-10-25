@@ -5,7 +5,7 @@ import IndButton from "./ui/IndButton";
 
 export default function IndConsutation() {
   return (
-    <div className="px-2">
+    <section className="px-2">
       <div className="relative flex flex-col justify-center items-center text-center container mx-auto rounded-2xl overflow-hidden mt-20">
       <div className="absolute inset-0 bg-primary z-0"></div>
       <video
@@ -76,7 +76,7 @@ export default function IndConsutation() {
         </a>
       </div>
     </div>
-    </div>
+    </section>
     
   );
 }

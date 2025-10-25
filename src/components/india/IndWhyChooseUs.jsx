@@ -13,7 +13,7 @@ export default function IndWhyChooseUs() {
   ];
 
   return (
-    <div className="xl:mt-20 mt-10 container mx-auto xl:px-10 px-2 ">
+    <section className="xl:mt-20 mt-10 container mx-auto xl:px-10 px-2 ">
       <IndTopicHeader
         title="We Do More For Your Business"
         subtitle="Why Choose Us!"
@@ -84,6 +84,6 @@ export default function IndWhyChooseUs() {
           </motion.div>
         </motion.div>
       </div>
-    </div>
+    </section>
   );
 }
