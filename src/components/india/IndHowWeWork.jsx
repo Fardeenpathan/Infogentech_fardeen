@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function IndHowWeWork() {
   return (
-    <div className="xl:mt-20 mt-10 container mx-auto px-4 sm:px-6 xl:px-10 pb-20 ">
+    <section className="xl:mt-20 mt-10 container mx-auto px-4 sm:px-6 xl:px-10 pb-20 ">
       <div className="lg:hidden">
         <IndMidHeader
           title="How We Work"
@@ -348,6 +348,6 @@ export default function IndHowWeWork() {
           />
         </motion.div>
       </div>
-    </div>
+    </section>
   );
 }

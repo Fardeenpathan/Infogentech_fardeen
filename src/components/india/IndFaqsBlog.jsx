@@ -54,7 +54,7 @@ const IndFaqsBlog = ({ blog }) => {
   };
 
   return (
-    <div className="xl:mt-20 mt-10 w-full px-4">
+    <div className="xl:mt-20 mt-10 w-full px-2 text-base">
       {/* Header */}
       <IndTopicHeader
         title="Faqs"
@@ -90,7 +90,7 @@ const IndFaqsBlog = ({ blog }) => {
                     className="flex w-full items-start gap-x-5 justify-between rounded-lg text-left text-lg font-bold focus:outline-none px-5"
                     onClick={() => toggleFAQ(faq.id)}
                   >
-                    <div className="text-[#252525] flex items-center gap-4 text-lg">
+                    <div className="text-gray-600 flex items-center gap-4 text-lg">
                       <span className="text-4xl font-normal opacity-40">
                         0{index + 1}
                       </span>

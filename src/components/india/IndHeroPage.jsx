@@ -10,8 +10,7 @@ import  IndFaqsHome  from "@/components/india/IndFaqsHome";
 import  IndWhatMakesStandOut  from "@/components/india/IndWhatMakesStandOut";
 export default function Home() {
   return (
-    <>
-      <main className="w-full overflow-hidden">  
+      <section className="w-full overflow-hidden">  
         <IndHeroSection />
         <IndServices/>
         <IndAboutHome/>
@@ -21,7 +20,6 @@ export default function Home() {
         <IndWhyChooseUs/>
         <IndTestomonial/>
         <IndFaqsHome/>
-      </main>
-    </>
+      </section>
   );
 }

@@ -202,7 +202,7 @@ const SlugPage = () => {
               <p className="font-jost mt-4 underline">Paragraph</p>
               <p className="text-lg font-jost mt-4">Paragraph 1</p>
               <p className="font-jost mt-2">Regular, 18px</p>
-              <p className="text-[16px] font-jost mt-4">Paragraph 2</p>
+              <p className="text-base font-jost mt-4">Paragraph 2</p>
               <p className="font-jost mt-2">Regular, 16px</p>
             </div>
             <div>
@@ -254,7 +254,7 @@ const SlugPage = () => {
             </div>
           </div>
         </div>
-        <div className="mt-20 flex justify-between items-center font-jost font-medium text-[18px] leading-[150%]">
+        <div className="mt-20 flex justify-between items-center font-jost font-medium text-lg leading-[150%]">
           <p className="max-w-[700px]">
             Every detail of the site was crafted to reflect GreenLeaf Gardens’
             commitment to sustainability, growth, and the simple joy of

@@ -13,7 +13,7 @@ export default function IndWhyChooseUs() {
   ];
 
   return (
-    <div className="xl:mt-20 mt-10 container mx-auto xl:px-10 px-2 ">
+    <section className="xl:mt-20 mt-10 container mx-auto xl:px-10 px-2 ">
       <IndTopicHeader
         title="We Do More For Your Business"
         subtitle="Why Choose Us!"
@@ -67,7 +67,7 @@ export default function IndWhyChooseUs() {
               </motion.p>
             ))}
 
-            <p className="font-montserrat font-medium xl:text-lg text-[14px] leading-[1.5] tracking-[-0.02em] py-4">
+            <p className="font-montserrat font-medium xl:text-lg text-sm leading-[1.5] tracking-[-0.02em] py-4">
               We are one of the famous digital marketing firms that provides all the
               services of online marketing, SEO services, web development, and IT
               solutions. Our marketing works with education, healthcare, real estate, and
@@ -84,6 +84,6 @@ export default function IndWhyChooseUs() {
           </motion.div>
         </motion.div>
       </div>
-    </div>
+    </section>
   );
 }

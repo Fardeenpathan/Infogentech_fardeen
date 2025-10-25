@@ -94,7 +94,7 @@ const FAQs = () => {
                   setActiveCategory(category.key);
                   setOpenId(null);
                 }}
-                className={`font-jost sm:mb-10 mb-4 text-[16px] leading-6 align-middle transition-opacity duration-300 cursor-pointer ${
+                className={`font-jost sm:mb-10 mb-4 text-base leading-6 align-middle transition-opacity duration-300 cursor-pointer ${
                   activeCategory === category.key
                     ? "opacity-100 font-semibold"
                     : "opacity-50"
@@ -125,7 +125,7 @@ const FAQs = () => {
                     className="flex w-full items-start gap-x-5 justify-between rounded-lg text-left text-lg font-bold focus:outline-none px-5"
                     onClick={() => toggleFAQ(faq.id)}
                   >
-                    <div className="text-[#252525] flex items-center gap-4  xl:text-2xl text-[14px]">
+                    <div className="text-gray-600 flex items-center gap-4  xl:text-2xl text-sm">
                       <span className="text-4xl font-normal opacity-40">
                         0{index + 1}
                       </span>

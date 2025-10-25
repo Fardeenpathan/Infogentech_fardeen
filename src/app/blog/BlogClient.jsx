@@ -85,13 +85,13 @@ const Blogs = () => {
             </div>
             {recentBlog && (
               <div className="w-full text-left lg:space-y-4 mt-4 space-x-2">
-                <p className="text-[#252525] font-montserrat font-semibold lg:text-2xl text-lg ">
+                <p className="text-gray-600 font-montserrat font-semibold lg:text-2xl text-lg ">
                   {dayjs(recentBlog.formatDate).format("DD MMM YYYY")}
                 </p>
                 <h1 className="text-gray-400 text-2xl md:text-[46px] font-bold leading-[1.2] font-avalors tracking-wider">
                   {recentBlog.title}
                 </h1>
-                <h3 className="text-[#252525] font-montserrat font-semibold text-2xl">
+                <h3 className="text-gray-600 font-montserrat font-semibold text-2xl">
                   {recentBlog.excerpt}
                 </h3>
                 <Link href={`/blog/${recentBlog.slug}`}>
@@ -107,7 +107,7 @@ const Blogs = () => {
           </div>
         </div>
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 mt-10 container mx-auto px-4">
-          <h4 className="text-[#252525] font-montserrat font-semibold text-xl md:text-2xl max-w-2xl">
+          <h4 className="text-gray-600 font-montserrat font-semibold text-xl md:text-2xl max-w-2xl">
             Stay updated with the latest tech insights, client success stories,
             and opportunities from our community and IT industry network.
           </h4>
@@ -128,7 +128,7 @@ const Blogs = () => {
         <div className="container mx-auto pb-10">
           <div className="flex justify-center items-center flex-col"></div>
           <div className="lg:mt-20 mt-10 mx-4">
-            <p className="text-[#252525] font-montserrat font-semibold text-xl border-l-4 border-[#7544E4] p-4">
+            <p className="text-gray-600 font-montserrat font-semibold text-xl border-l-4 border-[#7544E4] p-4">
               Must Read Articles:
             </p>
             <div className="mt-12">

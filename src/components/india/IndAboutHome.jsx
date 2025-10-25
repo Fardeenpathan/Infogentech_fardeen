@@ -6,7 +6,7 @@ import IndButton from "./ui/IndButton";
 
 export default function IndAboutHome() {
   return (
-    <div className="xl:mt-20 mt-10 container mx-auto xl:px-10 px-4 flex justify-between py-10 flex-col xl:flex-row gap-60 xl:gap-10">
+    <section className="xl:mt-20 mt-10 container mx-auto xl:px-10 px-4 flex justify-between py-10 flex-col xl:flex-row gap-60 xl:gap-10">
       <motion.div
         className="flex justify-between 2xl:gap-20 xl:gap-10 gap-2 relative"
         initial={{ opacity: 0, x: -100 }}
@@ -83,6 +83,6 @@ export default function IndAboutHome() {
           </motion.div>
         </a>
       </motion.div>
-    </div>
+    </section>
   );
 }

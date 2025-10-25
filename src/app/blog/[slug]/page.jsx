@@ -15,36 +15,47 @@ function convertBlocksToHtml(blocks = []) {
   const sortedBlocks = [...blocks].sort((a,b) => (a.order||0)-(b.order||0));
   sortedBlocks.forEach(block => {
     if (!block || !block.type) return;
-    switch (block.type) {
-      case "paragraph":
-        html += `<p class="lg:mb-6 mb-3">${block.data?.content || ""}</p>`;
-        break;
-      case "heading":
-        const level = block.data?.level || 2;
-        html += `<h${level} class="font-semibold md:text-5xl text-2xl mb-8">${block.data?.content || ""}</h${level}>`;
-        break;
-      case "list":
-        const isOrdered = block.data?.style === "ordered" || block.data?.style === "ol";
-        if (isOrdered) {
-          html += "<ol class='my-4 pl-6 list-decimal'>";
-          (block.data.items || []).forEach(i => html += `<li class="mb-2">${(typeof i === "string") ? i : (i?.content||i?.text||"")}</li>`);
-          html += "</ol>";
-        } else {
-          html += "<ul class='my-4 pl-6 list-disc'>";
-          (block.data.items || []).forEach(i => html += `<li class="mb-2">${(typeof i === "string") ? i : (i?.content||i?.text||"")}</li>`);
-          html += "</ul>";
-        }
-        break;
-      case "image":
-        html += `<img src="${block.data?.url || ""}" alt="${block.data?.caption || ""}" style="max-width:100%;height:auto;" />`;
-        if (block.data?.caption) html += `<p style="text-align:center;font-style:italic;margin-top:8px;">${block.data.caption}</p>`;
-        break;
-      case "quote":
-        html += `<blockquote style="border-left:4px solid #ddd;padding-left:16px;margin:16px 0;font-style:italic;">${block.data?.text || ""}</blockquote>`;
-        break;
-      default:
-        if (block.data?.content) html += `<p>${block.data.content}</p>`;
+switch (block.type) {
+  case "paragraph":
+    html += `<p class="lg:mb-6 mb-3 text-sm md:text-xl">${block.data?.content || ""}</p>`;
+    break;
+
+  case "heading":
+    const level = block.data?.level || 2;
+    html += `<h${level} class="font-semibold md:text-${6 - level + 1}xl text-${4 - level + 1}xl mb-4">${block.data?.content || ""}</h${level}>`;
+    break;
+
+  case "list":
+    const isOrdered = block.data?.style === "ordered" || block.data?.style === "ol";
+    if (isOrdered) {
+      html += "<ol class='my-4 pl-6 list-decimal'>";
+      (block.data.items || []).forEach(i =>
+        html += `<li class="mb-2">${typeof i === "string" ? i : (i?.content || i?.text || "")}</li>`
+      );
+      html += "</ol>";
+    } else {
+      html += "<ul class='my-4 pl-6 list-disc'>";
+      (block.data.items || []).forEach(i =>
+        html += `<li class="mb-2">${typeof i === "string" ? i : (i?.content || i?.text || "")}</li>`
+      );
+      html += "</ul>";
     }
+    break;
+  case "image":
+    html += `<img src="${block.data?.url || ""}" alt="${block.data?.caption || ""}" style="max-width:100%;height:auto;" />`;
+    if (block.data?.caption)
+      html += `<p style="text-align:center;font-style:italic;margin-top:8px;">${block.data.caption}</p>`;
+    break;
+
+  case "quote":
+    html += `<blockquote style="border-left:4px solid #ddd;padding-left:16px;margin:16px 0;font-style:italic;">${block.data?.text || ""}</blockquote>`;
+    break;
+
+  default:
+    if (block.data?.content)
+      html += `<p>${block.data.content}</p>`;
+}
+
   });
   return html;
 }
@@ -84,7 +95,6 @@ export async function generateMetadata({ params }) {
 
 export default async function Page({ params }) {
   const slug = params.slug;
-  console.log(slug,"dasdasda")
   const data = await fetchBlogBySlug(slug);
 
   if (!data) {

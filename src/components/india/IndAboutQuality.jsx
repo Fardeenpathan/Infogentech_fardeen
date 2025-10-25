@@ -18,7 +18,7 @@ export default function IndAboutQuality() {
                 <Icons name={item.icon} />
               </div>
             </div>
-            <p className="font-montserrat font-bold lg:text-2xl text-lg text-[#252525]">
+            <p className="font-montserrat font-bold lg:text-2xl text-lg text-gray-600">
             {item.name}
           </p>
           </div>
