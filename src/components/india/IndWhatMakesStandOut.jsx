@@ -42,16 +42,16 @@ export default function WhatMakesStandOut() {
             key={index}
             className="bg-[#F4EFFF] rounded-[20px] p-6 sm:p-8 flex flex-col items-start justify-start shadow-sm hover:shadow-md transition-all duration-300"
           >
-            <div className="relative w-full max-w-[528px] h-auto aspect-[528/280] rounded-[20px] opacity-100 flex items-center justify-center mx-auto">
+            <div className="relative w-full max-w-[528px] h-auto aspect-[528/280] rounded-xl opacity-100 flex items-center justify-center mx-auto">
               <Icons
                 name={card.icon}
                 className="w-full h-full object-contain rounded-[20px]"
               />
             </div>
-            <h4 className="font-montserrat font-semibold xl:text-2xl text-lg text-[#252525] mb-3 text-center sm:text-left leading-[150%] tracking-[-0.02em]">
+            <h4 className="font-montserrat font-semibold xl:text-2xl text-lg text-gray-600 mb-3 text-center sm:text-left leading-[150%] tracking-[-0.02em]">
               {card.title}
             </h4>
-            <p className="font-montserrat font-medium xl:text-lg text-sm leading-[150%] tracking-[-0.02em] text-[#252525]/80 text-center sm:text-left">
+            <p className="font-montserrat font-medium xl:text-lg text-sm leading-[150%] tracking-[-0.02em] text-gray-600/80 text-center sm:text-left">
               {card.text}
             </p>
           </div>

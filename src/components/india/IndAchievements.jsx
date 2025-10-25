@@ -70,7 +70,7 @@ const IndAchievements = () => {
                   {achievement.suffix}
                 </span>
               </div>
-              <p className="font-montserrat font-semibold text-lg sm:text-lg md:text-xl leading-[110%] text-[#252525]  capitalize mt-2 whitespace-nowrap">
+              <p className="font-montserrat font-semibold text-lg sm:text-lg md:text-xl leading-[110%] text-gray-600  capitalize mt-2 whitespace-nowrap">
                 {achievement.label}
               </p>
             </div>

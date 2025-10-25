@@ -125,7 +125,7 @@ const FAQs = () => {
                     className="flex w-full items-start gap-x-5 justify-between rounded-lg text-left text-lg font-bold focus:outline-none px-5"
                     onClick={() => toggleFAQ(faq.id)}
                   >
-                    <div className="text-[#252525] flex items-center gap-4  xl:text-2xl text-sm">
+                    <div className="text-gray-600 flex items-center gap-4  xl:text-2xl text-sm">
                       <span className="text-4xl font-normal opacity-40">
                         0{index + 1}
                       </span>

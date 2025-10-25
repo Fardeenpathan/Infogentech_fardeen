@@ -43,7 +43,7 @@ export default function IndServiceCard({ categories }) {
                   category.subServices.map((service) => (
                     <span
                       key={service.id}
-                      className="font-montserrat font-bold text-sm sm:text-base md:text-lg bg-white text-[#252525] px-4 py-2 sm:px-5 sm:py-2.5 rounded-full shadow-sm hover:shadow-md transition"
+                      className="font-montserrat font-bold text-sm sm:text-base md:text-lg bg-white text-gray-600 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full shadow-sm hover:shadow-md transition"
                     >
                       {service.title}
                     </span>

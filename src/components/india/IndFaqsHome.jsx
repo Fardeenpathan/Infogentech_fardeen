@@ -126,7 +126,7 @@ const IndFaqsHome = () => {
                     className="flex w-full items-start gap-x-5 justify-between rounded-lg text-left text-lg font-bold focus:outline-none px-5"
                     onClick={() => toggleFAQ(faq.id)}
                   >
-                    <div className="text-[#252525] flex items-center gap-4  md:text-2xl text-sm">
+                    <div className="text-gray-600 flex items-center gap-4  md:text-2xl text-sm">
                       <span className=" font-normal opacity-40">
                         {faq.id}
                       </span>
