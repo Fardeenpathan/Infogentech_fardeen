@@ -196,7 +196,7 @@ export default function BlogsPage() {
                     <Edit className="h-4 w-4" />
                   </button>
                 </Link>
-                <Link href={`/blogs/${blog.slug}`} target="_blank">
+                <Link href={`/blog/${blog.slug}`} target="_blank">
                   <button className="p-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors">
                     <Eye className="h-4 w-4" />
                   </button>
