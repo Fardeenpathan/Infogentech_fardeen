@@ -6,7 +6,7 @@ async function fetchBlogBySlug(slug) {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blogs/slug/${slug}`, { next: { revalidate: 60 } });
   if (!res.ok) return null;
   const data = await res.json();
-  console.log(data,"asdasdasd")
+  // console.log(data,"asdasdasd")
   return data.success ? data.data : null;
 }
 
