@@ -12,7 +12,7 @@ export default function StatsItem({value, suffix, label ,color ="text-primary"})
              {suffix}
             </div>
           </div>
-          <div className="inline-block font-jost text-[#FFFFFF] xl:text-2xl text-[16px]  leading-6  h-6 mt-3">
+          <div className="inline-block font-jost text-[#FFFFFF] xl:text-2xl text-base  leading-6  h-6 mt-3">
            {label}
           </div>
 

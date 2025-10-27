@@ -10,7 +10,7 @@ import dayjs from "dayjs";
 export default function BlogClient({ blog }) {
   return (
     <>
-      <div className="relative w-full py-38 flex items-center justify-start px-4">
+      <div className="relative w-full py-38 flex items-center justify-start px-2 overflow-hidden">
         <Image
           src="/assist/IndImg/blogBg.jpg"
           alt="Blog"
@@ -31,19 +31,19 @@ export default function BlogClient({ blog }) {
             <div className="lg:mb-20 mb-10">
               <Link
                 href="/blog"
-                className="flex items-center gap-2 text-[#252525] hover:text-gray-400  font-montserrat"
+                className="flex items-center gap-2 text-gray-600 hover:text-gray-400  font-montserrat"
               >
                 <ArrowLeft size={20} />
                 Back to Blogs
               </Link>
             </div>
-            <p className="text-[#252525] font-montserrat font-semibold text-2xl">
+            <p className="text-gray-600 font-montserrat font-semibold text-2xl">
               {dayjs(blog.createdAt).format("DD MMMM YYYY")}
             </p>
             <h1 className="text-gray-400 text-3xl  md:text-[46px] font-bold leading-[1.2] font-avalors tracking-wider lg:mr-150">
               {blog.title}
             </h1>
-            <p className="text-[#252525] font-montserrat font-semibold text-2xl lg:mt-15 mt-4">
+            <p className="text-gray-600 font-montserrat font-semibold lg:text-2xl text-xl lg:mt-15 mt-4">
             {blog.excerpt}
             </p>
           </div>
@@ -57,17 +57,17 @@ export default function BlogClient({ blog }) {
               alt={blog.title}
               width={1400}
               height={460}
-              className="w-full lg:h-180 h-84 object-cover -z-10 rounded-3xl px-4"
+              className="w-full lg:h-180 h-84 object-cover -z-10 rounded-3xl"
             />
           )}
           <div
-            className="md:mt-18 mt-4 font-montserrat text-xl leading-[30px]  w-full px-4"
+            className="md:mt-18 mt-4 font-montserrat text-xl leading-[30px]  w-full px-2"
             dangerouslySetInnerHTML={{ __html: blog.content }}
           />
           <IndSharePost />
           <IndFaqsBlog blog={blog} />
         </div>
-        <div className="min-w-112 flex flex-col gap-y-20 lg:block hidden ">
+        <div className="min-w-112 flex flex-col gap-y-20 lg:block hidden">
           <IndBlogDetails data={blog} />
           <IndSideLinks data={blog}/>
         </div>

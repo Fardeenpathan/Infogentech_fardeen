@@ -31,7 +31,7 @@ export default function PurpleCheckbox({ label }) {
           </svg>
         )}
       </span>
-      {label && <span className="opacity-40 font-jost tracking-wider md:text-lg text-[16px] ">{label}</span>}
+      {label && <span className="opacity-40 font-jost tracking-wider md:text-lg text-base ">{label}</span>}
     </label>
   );
 }

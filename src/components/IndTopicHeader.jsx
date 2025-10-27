@@ -40,7 +40,7 @@ export default function IndTopicHeader({
         </motion.h2>
       </motion.div>
       <motion.p
-        className="font-montserrat font-medium xl:text-lg text-[14px] xl:leading-[150%] tracking-[-0.02em] max-w-2xl py-4"
+        className="font-montserrat font-medium xl:text-lg text-sm xl:leading-[150%] tracking-[-0.02em] max-w-2xl py-4"
         initial={{ opacity: 0, x: 50 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6, delay: 0.6 }}

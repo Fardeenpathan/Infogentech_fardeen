@@ -297,7 +297,7 @@ export default function OurPortfolio() {
               <p className="font-kumbh-sans font-medium text-lg leading-[150%] align-middle text-[#73737F] mr-10">
                 {currentSlide?.desc}
               </p>
-              <ul className="flex flex-col gap-2 text-[#73737F] leading-[150%] text-[16px] font-medium pt-4.5">
+              <ul className="flex flex-col gap-2 text-[#73737F] leading-[150%] text-base font-medium pt-4.5">
                 {currentSlide?.points.map((point, idx) => (
                   <li key={idx} className="flex gap-2.5 items-center">
                     <Icons name="LiIcon" />

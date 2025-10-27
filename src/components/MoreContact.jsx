@@ -14,7 +14,7 @@ export default function MoreContact() {
         <p className="font-avalors font-normal md:text-[32px]  text-2xl leading-6 align-middle text-primary mt-5">
           Looking for More Information?
         </p>
-        <p className="font-jost font-medium md:text-lg text-[16px] leading-6 align-middle mt-3">
+        <p className="font-jost font-medium md:text-lg text-base leading-6 align-middle mt-3">
           Check out our FAQs or About Us page for quick answers.
         </p>
         <div className="flex justify-center items-center md:gap-20 gap-4 mt-14 flex-col md:flex-row">

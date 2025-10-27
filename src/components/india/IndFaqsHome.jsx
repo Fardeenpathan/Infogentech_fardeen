@@ -79,7 +79,7 @@ const IndFaqsHome = () => {
   };
 
   return (
-    <div className="mt-20 container mx-auto px-4">
+    <section className="mt-20 container mx-auto px-4">
       <IndTopicHeader title="Faqs" subtitle="Everything You Need to Know" subClass="w-full"/>
 
       <div className="xl:mt-8 container mx-auto flex justify-between mt-0 xl:py-10 py-0">
@@ -126,7 +126,7 @@ const IndFaqsHome = () => {
                     className="flex w-full items-start gap-x-5 justify-between rounded-lg text-left text-lg font-bold focus:outline-none px-5"
                     onClick={() => toggleFAQ(faq.id)}
                   >
-                    <div className="text-[#252525] flex items-center gap-4  md:text-2xl text-[14px]">
+                    <div className="text-gray-600 flex items-center gap-4  md:text-2xl text-sm">
                       <span className=" font-normal opacity-40">
                         {faq.id}
                       </span>
@@ -164,7 +164,7 @@ const IndFaqsHome = () => {
           </motion.div>
         </motion.div>
       </div>
-    </div>
+    </section>
   );
 };
 export default IndFaqsHome;
