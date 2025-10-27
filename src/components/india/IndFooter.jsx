@@ -54,7 +54,7 @@ export function IndFooter() {
                 </p>
               </div>
               <div className=" max-w-[300px] text-white opacity-10 border-1 mt-7.5"></div>
-              <div className="flex gap-10 mt-3.5 items-center">
+              <div className="flex gap-5 sm:gap-10 mt-3.5 items-center justify-start">
                 <Image
                   src="/assist/img/dmca.png"
                   alt="valueImg"
@@ -65,6 +65,18 @@ export function IndFooter() {
              
                 <Link href="https://www.linkedin.com/company/infogentech/">
                   <Icons name="LinkedIn" />
+                </Link>
+                 <Link href="https://www.youtube.com/@infogentech">
+                  <Icons name="Youtubes" />
+                </Link>
+                 <Link href="https://www.threads.com/@infogentech_">
+                  <Icons name="Threads" />
+                </Link>
+                 <Link href="https://in.pinterest.com/infogentech/">
+                  <Icons name="Pinterest" />
+                </Link>
+                 <Link href="https://www.instagram.com/infogentech_/">
+                  <Icons name="Instagrams" />
                 </Link>
               </div>
             </div>
@@ -78,14 +90,14 @@ export function IndFooter() {
                       Home
                     </Link>
                   </li>
-                  {/* <li>
+                  <li>
                     <Link
                       href="/portfolio"
                       className=" hover:text-gray-200"
                     >
                       Portfolio
                     </Link>
-                  </li> */}
+                  </li>
                   <li>
                     <Link
                       href="/blog"

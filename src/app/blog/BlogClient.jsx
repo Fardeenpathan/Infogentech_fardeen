@@ -111,14 +111,14 @@ const Blogs = () => {
             Stay updated with the latest tech insights, client success stories,
             and opportunities from our community and IT industry network.
           </h4>
-          <div className="flex flex-col sm:flex-row gap-4 items-center min-w-full md:min-w-fit px-4">
+          <div className="flex flex-col sm:flex-row gap-4 items-center min-w-7 md:min-w-fit px-4">
             <select
               value={activeCategory}
               onChange={(e) => handleCategoryChange(e.target.value)}
-              className="w-full sm:w-fit border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-400 font-medium text-sm"
+              className="w-full sm:w-fit border cursor-pointer rounded-sm px-4 py-2 font-medium text-sm font-montserrat border-b border-gray-300 bg-transparent  focus:outline-none focus:border-[#8752FF]"
             >
               {categories.map((cat, idx) => (
-                <option key={idx} value={cat.name || cat}>
+                <option key={idx} value={cat.name || cat} className="border-b border-gray-300 bg-transparent">
                   {cat.name || cat}
                 </option>
               ))}
@@ -135,7 +135,7 @@ const Blogs = () => {
               {loading ? (
                 <Loader />
               ) : blogs.length > 0 ? (
-                <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 2xl:grid-cols-4 gap-12 xl:gap-8 px-4">
+                <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 2xl:grid-cols-4 gap-12 xl:gap-8 px-4 md:px-0">
                   {blogs.map((blog) => (
                     <IndBlogCard key={blog.id || blog._id} blog={blog} />
                   ))}
