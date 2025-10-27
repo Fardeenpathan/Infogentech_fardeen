@@ -62,14 +62,20 @@ export function Footer() {
                   height={54}
                   objectFit="cover"
                 />
-                {/* <Link href="#">
-                  <Icons name="Facebook" />
-                </Link>
-                <Link href="#">
-                  <Icons name="Twitter" />
-                </Link> */}
-                <Link href="https://www.linkedin.com/company/infogentech/">
+                 <Link href="https://www.linkedin.com/company/infogentech/">
                   <Icons name="LinkedIn" />
+                </Link>
+                 <Link href="https://www.youtube.com/@infogentech">
+                  <Icons name="Youtubes" />
+                </Link>
+                 <Link href="https://www.threads.com/@infogentech_">
+                  <Icons name="Threads" />
+                </Link>
+                 <Link href="https://in.pinterest.com/infogentech/">
+                  <Icons name="Pinterest" />
+                </Link>
+                 <Link href="https://www.instagram.com/infogentech_/">
+                  <Icons name="Instagrams" />
                 </Link>
               </div>
             </div>
