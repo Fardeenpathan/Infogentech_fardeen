@@ -20,10 +20,6 @@ import {
   Image as ImageIcon,
   Undo,
   Redo,
-  Strikethrough,
-  AlignLeft,
-  AlignCenter,
-  AlignRight
 } from 'lucide-react';
 import { useState } from 'react';
 import { toast } from 'react-hot-toast';

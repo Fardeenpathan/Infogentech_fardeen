@@ -19,7 +19,6 @@ export default function BlogsPage() {
   const fetchBlogs = async () => {
     try {
       const response = await adminApiService.getBlogs();
-      console.log('Blogs response:', response); // Debug log
       
       // Handle your backend response structure
       const blogs = response.data || response.blogs || [];
@@ -36,9 +35,6 @@ export default function BlogsPage() {
   const fetchCategories = async () => {
     try {
       const response = await adminApiService.getCategories();
-      console.log('Categories response:', response); // Debug log
-      
-      // Handle your backend response structure  
       const categories = response.data || response.categories || [];
       setCategories(categories);
     } catch (error) {
