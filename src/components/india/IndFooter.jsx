@@ -48,7 +48,7 @@ export function IndFooter() {
                 For Infogentech Queries:
                 <br />
                 <p className="space-x-3">
-                  <a href="mailto:info@infogentech.com">info@infogentech.com</a>
+                  <a href="mailto:contact@infogentech.com">contact@infogentech.com</a>
                   <span>|</span>
                    <span>+91 991-013-0963</span>
                 </p>
