@@ -6,7 +6,6 @@ async function fetchBlogBySlug(slug) {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blogs/slug/${slug}`, { next: { revalidate: 60 } });
   if (!res.ok) return null;
   const data = await res.json();
-  console.log(data,"asdasdasd")
   return data.success ? data.data : null;
 }
 
@@ -30,13 +29,13 @@ switch (block.type) {
     if (isOrdered) {
       html += "<ol class='my-4 pl-6 list-decimal'>";
       (block.data.items || []).forEach(i =>
-        html += `<li class="mb-2">${typeof i === "string" ? i : (i?.content || i?.text || "")}</li>`
+        html += `<li class="mb-2 text-sm md:text-xl">${typeof i === "string" ? i : (i?.content || i?.text || "")}</li>`
       );
       html += "</ol>";
     } else {
       html += "<ul class='my-4 pl-6 list-disc'>";
       (block.data.items || []).forEach(i =>
-        html += `<li class="mb-2">${typeof i === "string" ? i : (i?.content || i?.text || "")}</li>`
+        html += `<li class="mb-2 text-sm md:text-xl">${typeof i === "string" ? i : (i?.content || i?.text || "")}</li>`
       );
       html += "</ul>";
     }
@@ -48,7 +47,7 @@ switch (block.type) {
     break;
 
   case "quote":
-    html += `<blockquote style="border-left:4px solid #ddd;padding-left:16px;margin:16px 0;font-style:italic;">${block.data?.text || ""}</blockquote>`;
+    html += `<blockquote style="border-left:4px solid #ddd;padding-left:16px;margin:16px 0;font-style:italic;" class="text-sm md:text-xl">${block.data?.text || ""}</blockquote>`;
     break;
 
   default:

@@ -50,7 +50,6 @@ export const useBlogsPagination = (categories, limit = 12) => {
           setPagination(data.pagination || {});
           setTotalBlogs(data.total || 0);
         } else {
-          // console.log('No data in API response, using fallback');
           const filteredBlogs = activeCategory === "All" 
             ? fallbackData 
             : fallbackData.filter(blog => blog.category === activeCategory);
@@ -58,7 +57,6 @@ export const useBlogsPagination = (categories, limit = 12) => {
           setTotalBlogs(filteredBlogs.length);
         }
       } else {
-        // console.log('API request failed, using fallback');
         const filteredBlogs = activeCategory === "All" 
           ? fallbackData 
           : fallbackData.filter(blog => blog.category === activeCategory);

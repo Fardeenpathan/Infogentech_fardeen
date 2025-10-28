@@ -3,14 +3,12 @@
 export async function middleware(request) {
   const { pathname } = request.nextUrl;
 
-  console.log(`🚀 MIDDLEWARE CALLED: ${pathname}`);
 
   if (pathname.startsWith('/admin') || 
       pathname.startsWith('/api') ||
       pathname.startsWith('/_next') || 
       pathname.includes('.') ||
       pathname === '/blocked') {
-    console.log(`⏭️ SKIPPING middleware for: ${pathname}`);
     return NextResponse.next();
   }
 
@@ -19,7 +17,6 @@ export async function middleware(request) {
   if (process.env.NODE_ENV === 'development') {
     // For localhost testing, default to 'US' so it redirects to /us
     country = process.env.TEST_COUNTRY || 'US';
-    console.log(`🧪 DEV MODE: TEST_COUNTRY=${process.env.TEST_COUNTRY}, using: ${country}`);
   } else {
     country = request.geo?.country || 
               request.headers.get('CF-IPCountry') || 
@@ -28,14 +25,11 @@ export async function middleware(request) {
               'US'; // Default to US on production if no geo data
   }
 
-  console.log(`🌍 Detected country: ${country}, pathname: ${pathname}`);
-
   const isIndianUser = country === 'IN';
   const isUSPath = pathname.startsWith('/us');
 
   if (isIndianUser) {
     if (isUSPath) {
-      console.log(`🚫 BLOCKING Indian user from accessing US route: ${pathname}`);
       return NextResponse.redirect(new URL('/blocked', request.url));
     }
     return NextResponse.next();
@@ -63,10 +57,8 @@ export async function middleware(request) {
       );
 
       if (pathname === '/' || hasUSEquivalent) {
-        console.log(`🔄 Redirecting foreign user from ${pathname} to ${usEquivalent}`);
         return NextResponse.redirect(new URL(usEquivalent, request.url));
       } else {
-        console.log(`🚫 BLOCKING foreign user from India-only route: ${pathname}`);
         return NextResponse.redirect(new URL('/blocked', request.url));
       }
     }
