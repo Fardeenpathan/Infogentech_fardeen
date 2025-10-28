@@ -1,7 +1,7 @@
 export const metadata = {
   title: "Contact Us | Infogentech Softwares LLP",
   description:
-    "Infogentech Softwares LLP is located at A-85, GT Karnal Rd, Block L 1, Azadpur, Delhi, 110033. Contact us at info@infogentech.com or call us - 991-013-0963.",
+    "Infogentech Softwares LLP is located at A-85, GT Karnal Rd, Block L 1, Azadpur, Delhi, 110033. Contact us at contact@infogentech.com or call us - 991-013-0963.",
   keywords: [
     "Query For Marketing Services",
     "Infogentech contact",
@@ -34,7 +34,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Contact Us | Infogentech Softwares LLP",
     description:
-      "Infogentech Softwares LLP — contact us at info@infogentech.com or 991-013-0963.",
+      "Infogentech Softwares LLP — contact us at contact@infogentech.com or 991-013-0963.",
     site: "@infogentech",
     images: ["https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png"],
   },
