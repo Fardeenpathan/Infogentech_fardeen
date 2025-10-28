@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function IndHowWeWork() {
   return (
-    <section className="xl:mt-20 mt-10 container mx-auto px-4 sm:px-6 xl:px-10 pb-20 ">
+    <section className="xl:mt-20 mt-10 container mx-auto px-4 sm:px-6 xl:px-10 lg:pb-20 ">
       <div className="lg:hidden">
         <IndMidHeader
           title="How We Work"
@@ -38,7 +38,7 @@ export default function IndHowWeWork() {
             viewport={{ once: true }}
             className=" max-w-86 ml-10  md:ml-30"
           >
-            <h3 className="text-sm sm:text-base xl:text-2xl font-semibold text-gray-400 leading-[1.5] tracking-[-0.02em]">
+            <h3 className="text-sm sm:text-base xl:text-2xl font-semibold text-gray-400 leading-[1.5] tracking-[-0.02em] mt-4">
               2. Research & Plan
             </h3>
             <p className="font-montserrat font-medium text-sm sm:text-base tracking-tight text-gray-200">

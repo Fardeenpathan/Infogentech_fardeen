@@ -25,7 +25,6 @@ export default function CategoriesPage() {
   const fetchCategories = async () => {
     try {
       const response = await adminApiService.getCategories();
-      console.log('Categories response:', response); // Debug log
       setCategories(response.data || []);
     } catch (error) {
       console.error('Error fetching categories:', error);

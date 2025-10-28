@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useRouter, useParams } from 'next/navigation';
 import { 
   Save, ArrowLeft, Plus, Eye, Settings, Image as ImageIcon, 
-  Tag, Layout, Calendar, User, Clock, Star, Globe, FileText,
+  Tag, Layout, Clock, Star, Globe, FileText,
   Upload, X, Copy, RotateCcw, Maximize2, Minimize2, Edit3, HelpCircle
 } from 'lucide-react';
 import Button from '@/components/ui/Button';
@@ -87,7 +87,6 @@ export default function BlogFormPage({ mode = 'create' }) {
         const response = await adminApiService.getCategories();
         setCategories(response.data || []);
       } catch (error) {
-        console.error('Error fetching categories:', error);
         toast.error('Failed to fetch categories');
       }
     };
@@ -100,8 +99,6 @@ export default function BlogFormPage({ mode = 'create' }) {
       setLoadingBlog(true);
       const response = await adminApiService.getBlog(params.id);
       const blog = response.data || response;
-      
-      // Convert blocks to HTML content if blocks exist
       let content = blog.content || '';
       if (blog.blocks && Array.isArray(blog.blocks) && blog.blocks.length > 0) {
         content = convertBlocksToHtml(blog.blocks);
@@ -126,7 +123,6 @@ export default function BlogFormPage({ mode = 'create' }) {
         }
       });
       
-      // Set blog FAQs for edit mode
       if (blog.faqs && Array.isArray(blog.faqs)) {
         setBlogFaqs(blog.faqs);
       }
@@ -401,14 +397,13 @@ export default function BlogFormPage({ mode = 'create' }) {
       let faqs = [];
       if (faqManagerRef.current && faqManagerRef.current.getFaqsForSave) {
         faqs = faqManagerRef.current.getFaqsForSave();
-        console.log('FAQs being sent to API:', faqs);
       } else {
         console.log('FAQ manager ref not available or getFaqsForSave method missing');
       }
       
       const blogData = {
         ...formData,
-        blocks: blocks, // Add blocks for backend
+        blocks: blocks,
         faqs: faqs, 
         status,
         publishedAt: status === 'published' ? new Date() : null

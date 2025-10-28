@@ -13,8 +13,6 @@ export async function GET(request) {
                 'US';
     }
 
-    // console.log(`API: Detected country code: ${country}`);
-
     return NextResponse.json({
       success: true,
       country: country,

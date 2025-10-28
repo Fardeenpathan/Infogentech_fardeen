@@ -8,6 +8,7 @@ export const metadata = {
     "Discover how innovation in software, technology, and digital marketing drives business growth. Explore strategies for success in today’s digital-first world.",
   keywords:
     "digital marketing company, digital marketing company in Delhi NCR, digital marketing services, online marketing services, web development services, IT services, SEO services in Delhi, SEO services, digital marketing agency near me, social media marketing",
+    
   openGraph: {
     title:
       "Innovation Success with Software, Technology & Digital Marketing",
@@ -42,6 +43,7 @@ export const metadata = {
   other: {
     "geo.region": "IN",
     "http-equiv": "x-ua-compatible",
+    "google-site-verification": "GKXtUSJnxyTpAU8aFry0DST64cl9JHxL8eCn2rJlKso",
     distribution: "global",
   },
 };
