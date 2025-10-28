@@ -76,7 +76,7 @@ export default function IndServices() {
             <h3 className="text-2xl font-semibold mb-2 mt-10 text-gray-400 leading-[1.5] tracking-[-0.02em]">
               {service.title}
             </h3>
-            <p className="font-montserrat font-medium text-lg tracking-tightest text-gray-200">
+            <p className="font-montserrat font-medium md:text-lg text-sm tracking-tightest text-gray-200">
               {service.description}
             </p>
           </motion.div>
