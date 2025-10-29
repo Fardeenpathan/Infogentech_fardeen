@@ -144,7 +144,6 @@ export default function GeoBlockWrapper({ children }) {
           
           // AUTO REDIRECT LOGIC - NO BLOCKING IN PRODUCTION TOO!
           if (code === 'IN' && isUSRoute) {
-            // Indian user on /us route → redirect to main route
             const mainRoute = pathname.replace('/us', '') || '/';
             dispatch(setCountryCode(code));
             window.location.href = mainRoute;

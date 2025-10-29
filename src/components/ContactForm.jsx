@@ -13,7 +13,7 @@ const contacta = [
     country: 'USA',
     info: [
       { icon: 'Contact', text: '+1 123 456 7890' },
-      { icon: 'Email', text: 'info@infogentech.com' },
+      { icon: 'Email', text: 'contact@infogentech.com' },
       { icon: 'Location', text: 'Texas, USA' },
     ],
   },

@@ -69,7 +69,7 @@ const contact = () => {
             </motion.p>
 
             <motion.a
-              href="mailto:Info@infogentech.com"
+              href="mailto:contact@infogentech.com"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
@@ -77,7 +77,7 @@ const contact = () => {
               className="mt-8"
             >
               <button className="border border-white rounded flex justify-center items-center px-8 py-3 cursor-pointer max-w-[274px] space-x-2.5">
-                <p className="font-jost">Info@infogentech.com</p>
+                <p className="font-jost">contact@infogentech.com</p>
                 <Icons name="Slide" />
               </button>
             </motion.a>

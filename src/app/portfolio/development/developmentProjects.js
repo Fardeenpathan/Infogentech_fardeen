@@ -46,7 +46,7 @@ const developmentProjects = [
     title: "ShaadiKarwaDu – Wedding Planning & Coordination",
     slug: "shaadiKarwadu-wedding-planning",
     image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1758872051/blog-app/categories/lkvacf2yfdjsq5nwxjob.jpg",
-    subImage: "https://res.cloudinary.com/dpmceu66e/image/upload/v1758872051/blog-app/categories/lkvacf2yfdjsq5nwxjob.jpg",
+    subImage: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761551557/blog-app/blogs/blogs/1761551548973-shaddikarvado.jpg",
     description:
       "Madirakshi, an emerging digital platform, became our marketing partner to improve their app onboarding experience. We redefined the onboarding flow to retain and satisfy our customers while ensuring that they adopt the features. Figma and WordPress aided in creating a fluid, useful process and a higher level of engagement while bringing long engagement periods and customer success with it.",
     points: [],
@@ -120,7 +120,7 @@ const developmentProjects = [
     id: 4,
     title: "Avarta Jewellery",
     slug: "Avarta-jewellery",
-    image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1758868867/blog-app/categories/rgm9p4wvvhejttch94gi.jpg",
+    image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761287094/lpb53tidbisvfzjal0ew.png",
     subImage: "/assist/portfolio/development/avartajewellery.png",
     description:
       "Avarta Jewellery is a luxury brand that has a reputation for classic beauty and contemporary workmanship. They collaborated with us to design and develop a rich site. We provided the construction of category-based collections, blogs, customer resource, and e-commerce functionality, which would be smooth and user-friendly, so that the experience provided would be interesting to the jewellery lovers of today.",

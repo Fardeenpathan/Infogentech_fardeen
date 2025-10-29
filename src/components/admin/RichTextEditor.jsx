@@ -60,7 +60,16 @@ const RichTextEditor = ({ content, onChange, placeholder = "Start writing your b
     },
     editorProps: {
       attributes: {
-        class: 'prose prose-invert max-w-none min-h-[400px] p-4 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none prose-ul:list-disc prose-ol:list-decimal prose-li:list-item prose-ul:pl-6 prose-ol:pl-6',
+        class: 'prose max-w-none min-h-[400px] p-4 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none prose-ul:list-disc prose-ol:list-decimal prose-li:list-item prose-ul:pl-6 prose-ol:pl-6 text-white prose-headings:text-white prose-p:text-white prose-li:text-white prose-strong:text-white prose-em:text-white prose-code:text-white prose-blockquote:text-gray-300',
+      },
+      transformPastedHTML(html) {
+        // for removing  color and background-color styles from pasted content
+        return html
+          .replace(/style="[^"]*color:[^;"]*[^"]*"/gi, '')
+          .replace(/style="[^"]*background-color:[^;"]*[^"]*"/gi, '')
+          .replace(/color="[^"]*"/gi, '')
+          .replace(/bgcolor="[^"]*"/gi, '')
+          .replace(/style=""/gi, '');
       },
     },
   });

@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
     ]
   },
   images: {
-    domains: ['localhost', 'res.cloudinary.com'],
+    domains: ['localhost','res.cloudinary.com','infogentech.com',],
     remotePatterns: [
       {
         protocol: 'https',
