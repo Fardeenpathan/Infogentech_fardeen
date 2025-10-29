@@ -39,6 +39,7 @@ const FaqsBlog = ({ blog }) => {
         const activeFaqs = blog.faqs
           .filter((faq) => faq.isActive !== false)
           .sort((a, b) => (a.order || 0) - (b.order || 0));
+
         setFaqData(activeFaqs);
       } else {
         setFaqData([]);
@@ -53,56 +54,55 @@ const FaqsBlog = ({ blog }) => {
   };
 
   return (
-          <motion.div
-            initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: true }}
-            className="relative w-full py-10"
+    <motion.div
+      initial={{ opacity: 0, x: 100 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      viewport={{ once: true }}
+      className="relative w-full py-10"
+    >
+      <section className="mt-10">
+        <h2 className="font-jost text-[30px] font-normal leading-[38px] text-primary">
+          FAQs
+        </h2>
+        {faqDatas.map((faq) => (
+          <div
+            key={faq.id}
+            className="border-b border-[#0A071B]/10 linearGradientFaq mb-2"
           >
-             <section className="mt-10">
-              <h2 className="font-jost text-[30px] font-normal leading-[38px] text-primary">
-                FAQs
-              </h2>
-              {faqDatas.map((faq, index) => (
-                <div
-                  key={faq.id}
-                  className="border-b border-[#0A071B]/10 linearGradientFaq mb-2"
+            <button
+              className="question-btn flex w-full items-start gap-x-5 justify-between rounded-lg text-left text-lg font-bold focus:outline-none p-5"
+              onClick={() => toggleFAQ(faq.id)}
+            >
+              <div>{faq.question}</div>
+              <motion.div
+                animate={{ rotate: openId === faq.id ? 90 : 0 }}
+                transition={{ duration: 0.3 }}
+                className="cursor-pointer"
+              >
+                <Icons name={openId === faq.id ? "Minus" : "Add"} />
+              </motion.div>
+            </button>
+            <AnimatePresence initial={false}>
+              {openId === faq.id && (
+                <motion.div
+                  key="answer"
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  className="overflow-hidden"
                 >
-                  <button
-                    className="question-btn flex w-full items-start gap-x-5 justify-between rounded-lg text-left text-lg font-bold focus:outline-none p-5"
-                    onClick={() => toggleFAQ(faq.id)}
-                  >
-                    <div>{faq.question}</div>
-                    <motion.div
-                      animate={{ rotate: openId === faq.id ? 90 : 0 }}
-                      transition={{ duration: 0.3 }}
-                      className="cursor-pointer"
-                    >
-                      <Icons name={openId === faq.id ? "Minus" : "Add"} />
-                    </motion.div>
-                  </button>
-                  <AnimatePresence initial={false}>
-                    {openId === faq.id && (
-                      <motion.div
-                        key="answer"
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="overflow-hidden"
-                      >
-                        <div className="answer flex w-full items-start gap-x-5 justify-between rounded-lg text-left text-lg font-bold focus:outline-none p-5">
-                          {faq.answer}
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-              ))}
-            </section>
-          </motion.div>
-
+                  <div className="answer flex w-full items-start gap-x-5 justify-between rounded-lg text-left text-lg font-bold focus:outline-none p-5">
+                    {faq.answer}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+        ))}
+      </section>
+    </motion.div>
   );
 };
 
