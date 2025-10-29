@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function IndHeroSectionContent() {
   return (
-    <div className="max-w-6xl 2xl:leading-[160%] xl:leading-[120%] leading-[110%] tracking-[3px] mx-auto text-white px-4">
+    <div className="max-w-5xl 2xl:leading-[160%] xl:leading-[120%] leading-[110%] tracking-[3px] mx-auto text-white px-4">
       
       <motion.div
         className="2xl:text-[80px] lg:text-5xl  text-3xl font-avalors"
@@ -15,13 +15,13 @@ export default function IndHeroSectionContent() {
         <span className="bg-primary xl:px-12 rounded-full xl:ml-10 ml-4 font-avalors px-4 py-2">What</span>
       </motion.div>
       <motion.div
-        className="2xl:text-[80px] lg:text-5xl text-3xl 2xl:mt-10 mt-4 flex xl:justify-center xl:items-center flex-col xl:flex-row justify-start"
+        className="2xl:text-[80px] lg:text-5xl text-3xl 2xl:mt-10 mt-4 flex xl:justify-between xl:items-center flex-col xl:flex-row justify-start"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
       >
         <h1 className="font-avalors">Grows Your</h1>
-        <p className="text-lg ml-1">
+        <p className="text-lg ml-5 tracking-tight">
           From custom software and web apps to performance<br /> 
           driven digital marketing, we blend technology <br />
           and strategy to deliver measurable growth.
@@ -62,7 +62,7 @@ export default function IndHeroSectionContent() {
                   href="#circlePath"
                   startOffset="50%"
                   textAnchor="middle"
-                  className="text-lg font-montserrat tracking-[0.3rem]"
+                  className="text-lg font-montserrat tracking-[0.3rem] font-medium"
                 >
                    Book a Free Strategy Call Today! * 
                 </textPath>

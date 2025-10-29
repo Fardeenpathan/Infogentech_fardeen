@@ -57,7 +57,7 @@ export default function BlogClient({ blog }) {
               alt={blog.title}
               width={1400}
               height={460}
-              className="w-full lg:h-180 h-84 object-cover -z-10 rounded-3xl"
+              className="w-full lg:h-140 h-84 object-fill -z-10 rounded-3xl"
             />
           )}
           <div
