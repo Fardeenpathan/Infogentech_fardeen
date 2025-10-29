@@ -14,7 +14,7 @@ export default function BlogClient({ blog }) {
     <div className="container mx-auto mt-24 text-wrap px-10">
       <div className="mb-8">
         <Link
-          href="/blog"
+          href="/us/blog"
           className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
         >
           <ArrowLeft size={20} />
