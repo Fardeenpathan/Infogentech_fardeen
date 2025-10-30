@@ -11,7 +11,7 @@ const PortfolioServices = ({ activeService }) => {
       id: 3,
       icon: "DigitalMarketing",
       label: "Digital Marketing",
-      slug: "marketing",
+      slug: "digital-marketing",
     },
     { id: 4, icon: "Content", label: "Content", slug: "content" },
   ];
@@ -22,7 +22,7 @@ const PortfolioServices = ({ activeService }) => {
         const isActive = activeService === service.label;
 
         return (
-          <motion.div
+          <div
             key={service.id}
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -36,13 +36,9 @@ const PortfolioServices = ({ activeService }) => {
               }`}
             >
               {isActive && (
-                <motion.div
-                  layoutId="active-bg"
+                <div
                   className="absolute inset-0 rounded-md bg-white/10 z-0"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.3 }}
+                 
                 />
               )}
               <div className="relative z-10 flex items-center gap-2">
@@ -50,7 +46,7 @@ const PortfolioServices = ({ activeService }) => {
                 <p className="text-sm font-jost">{service.label}</p>
               </div>
             </Link>
-          </motion.div>
+          </div>
         );
       })}
     </div>
@@ -58,4 +54,3 @@ const PortfolioServices = ({ activeService }) => {
 };
 
 export default PortfolioServices;
-
