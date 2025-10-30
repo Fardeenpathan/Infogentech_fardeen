@@ -2,8 +2,10 @@ import IndHeroPage from "@/components/india/IndHeroPage";
 import React from "react";
 
 export const metadata = {
-  title:
-    "Innovation Success with Software, Technology & Digital Marketing | Infogentech Softwares LLP",
+title: "Infogentech | Home",
+ icons: {
+    icon: "/mainLogo.svg", 
+  },
   description:
     "Discover how innovation in software, technology, and digital marketing drives business growth. Explore strategies for success in today’s digital-first world.",
   keywords:
