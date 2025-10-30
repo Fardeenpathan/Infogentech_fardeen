@@ -29,7 +29,7 @@ const services = [
 
 export default function IndServices() {
   return (
-    <section className="mt-10 xl:mt-20 container mx-auto px-4">
+    <section className="mt-10 xl:mt-20 container mx-auto px-4 lg:px-10">
       <IndTopicHeader
         title="Our Services"
         subtitle="Delivering Solutions That Drive Results"
