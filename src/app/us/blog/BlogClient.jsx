@@ -57,13 +57,13 @@ const Blogs = () => {
   }, [activeCategory, categories, currentPage, searchTerm, fetchBlogs]); 
   return (
     <div className="flex justify-between">
-      <div className="absolute overflow-hidden -top-20">
+      {/* <div className="absolute overflow-hidden -top-20">
         <Icons name="BlogBlurLeft" />
       </div>
       <div className="absolute overflow-hidden right-0 -top-20">
         <Icons name="BlogBlurRight" />
-      </div>
-      <div className="container mx-auto mt-24">
+      </div> */}
+      <div className="container mx-auto mt-24 ">
         <div className="flex justify-center items-center flex-col ">
           <p className="font-avalors font-normal lg:text-[75px] text-3xl leading-none bg-[linear-gradient(91.32deg,_#6A27FF_-32.61%,_#FFFFFF_19.98%,_#6A27FF_112.29%)] bg-clip-text text-transparent">
             Insights & Innovation
@@ -106,7 +106,7 @@ const Blogs = () => {
       alt="Article Thumbnail"
       width={1200}
       height={660}
-      className="lg:h-108 h-52 object-cover rounded-xl w-full"
+      className="lg:h-108 h-52 object-fill rounded-xl w-full"
     />
   ) : null}
 
@@ -140,7 +140,7 @@ const Blogs = () => {
           <p className="text-primary font-avalors lg:text-[32px] text-2xl leading-6">
             Select Your Category
           </p>
-          <div className="flex gap-16 text-[#C4C4C4] mt-13 font-kumbh-sans overflow-hidden">
+          <div className="flex gap-16 text-[#C4C4C4] mt-13 font-kumbh-sans overflow-hidden text-nowrap overflow-x-auto">
             {categories.map((item, index) => (
               <button
                 key={index}

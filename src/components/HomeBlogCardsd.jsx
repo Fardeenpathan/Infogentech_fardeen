@@ -16,7 +16,7 @@ export default function HomeBlogCardsd({ blog }) {
           alt={blog.title || "Blog Image"}
           width={502}
           height={277}
-          className="w-full h-64 rounded-xl object-cover"
+          className="w-full h-64 rounded-xl object-fill"
         />
         ):null}
         <div className="px-2.5 pb-2.5 flex justify-between flex-col h-[180px] relative">

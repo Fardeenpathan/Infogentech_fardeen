@@ -20,7 +20,7 @@ export default function IndSideLinks({ data }) {
     }
   }, [data]);
   return (
-    <aside className="py-6 w-full md:w-[500px] gap-[10px] ">
+    <aside className="py-6 w-full gap-2.5 ">
       <h3 className="font-montserrat font-semibold text-xl text-gray-600 mb-5">
         In this article
       </h3>
