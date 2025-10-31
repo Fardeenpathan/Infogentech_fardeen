@@ -3,7 +3,7 @@ const developmentProjects = [
     id: 1,
     title: "LaraClean service",
     slug: "laraClean-service",
-    image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1758866786/blog-app/categories/hukwgvw3xqgqcau0nyr7.jpg",
+    image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761894913/blog-app/blogs/blogs/1761894907787-lara_clean_casestudy_2.jpg",
     subImage: "/assist/portfolio/development/dryCleaning.webp",
     description:
       "This project highlights the design process of developing a clean, functional, and engaging website for LaraClean. It was designed to offer an easy booking experience to users and demonstrate the professionalism and trust of the brand. ",
@@ -47,7 +47,7 @@ const developmentProjects = [
     id: 2,
     title: "ShaadiKarwaDu – Wedding Planning & Coordination",
     slug: "shaadiKarwadu-wedding-planning",
-    image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1758872051/blog-app/categories/lkvacf2yfdjsq5nwxjob.jpg",
+    image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761551557/blog-app/blogs/blogs/1761551548973-shaddikarvado.jpg",
     subImage: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761551557/blog-app/blogs/blogs/1761551548973-shaddikarvado.jpg",
     description:
       "Madirakshi, an emerging digital platform, became our marketing partner to improve their app onboarding experience. We redefined the onboarding flow to retain and satisfy our customers while ensuring that they adopt the features. Figma and WordPress aided in creating a fluid, useful process and a higher level of engagement while bringing long engagement periods and customer success with it.",
