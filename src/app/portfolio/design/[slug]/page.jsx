@@ -28,8 +28,8 @@ const SlugPage = () => {
     <>
       <IndServicesHeader />
       <IndProtfolioAll activeService="design" />
-      <div className="container mx-auto md:px-10 px-4">
-        <div className="mt-10 -z-20 border-2 rounded-3xl pt-10">
+      <div className="container mx-auto md:px-10 px-2">
+        <div className="md:mt-10 -z-20 border-2 rounded-3xl md:pt-10 pt-2">
           <div className="md:px-10 px-2">
             <ProjectImageSection
               project={project}
@@ -51,7 +51,7 @@ const SlugPage = () => {
             </div>
 
             <div className="md:mx-5 mt-10 font-montserrat mx-0">
-              <div className="grid md:grid-cols-3 grid-cols-2 mt-15 space-y-8">
+              <div className="grid md:grid-cols-3 grid-cols-2 mt-15 space-y-8 space-x-2">
                 <div className="flex flex-col gap-2 ">
                   <p className="font-jost font-medium text-lg leading-[20px]">
                     Date
@@ -65,9 +65,7 @@ const SlugPage = () => {
                   <p>{project.duration}</p>
                 </div>
                 <div className="flex flex-col gap-3">
-                  <p className="font-medium text-lg leading-[20px]">
-                    Tools
-                  </p>
+                  <p className="font-medium text-lg leading-[20px]">Tools</p>
                   <div className="flex flex-wrap gap-2">
                     {(project.tools || []).map((tool, index) => (
                       <span
@@ -81,9 +79,7 @@ const SlugPage = () => {
                 </div>
 
                 <div className="flex flex-col gap-3">
-                  <p className=" font-medium text-lg leading-[20px]">
-                    Client
-                  </p>
+                  <p className=" font-medium text-lg leading-[20px]">Client</p>
                   <p>{project.client}</p>
                 </div>
                 <div className="flex flex-col gap-3">
@@ -154,8 +150,7 @@ const SlugPage = () => {
             </div>
           </div>
         </div>
-        <div className="mt-20">
-        </div>
+        <div className="mt-20"></div>
       </div>
     </>
   );

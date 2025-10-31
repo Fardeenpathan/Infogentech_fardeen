@@ -1,17 +1,9 @@
-User-agent: GPTBot
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
+# *
 User-agent: *
-Disallow: /admin/
-Disallow: /login/
-Disallow: /cart/
-Disallow: /checkout/
-Disallow: /user/
-Disallow: /private/
 Allow: /
 
+# Host
+Host: https://infogentech.com
+
+# Sitemaps
 Sitemap: https://infogentech.com/sitemap.xml
-Sitemap: https://infogentech.com/sitemap-0.xml

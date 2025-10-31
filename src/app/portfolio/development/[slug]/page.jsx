@@ -3,7 +3,6 @@ import Icons from "@/components/ui/Icon";
 import IndServicesHeader from "@/components/india/IndServicesHeader";
 import IndProtfolioAll from "@/components/india/IndProtfolioAll";
 import { useState, useEffect } from "react";
-// import developmentProjects from "../developmentProjects";
 import { useParams } from "next/navigation";
 import Loader from "@/components/loader/Loader";
 import ProjectImageSection from "@/components/ProjectImageSection";
@@ -28,8 +27,8 @@ const SlugPage = () => {
     <>
        <IndServicesHeader />
       <IndProtfolioAll activeService="development" />
-      <div className="container mx-auto px-10">
-        <div className=" mt-10 -z-20 border-2 rounded-3xl pt-10">
+     <div className="container mx-auto md:px-10 px-2">
+        <div className="md:mt-10 -z-20 border-2 rounded-3xl md:pt-10 pt-2">
           <div className="md:px-10 px-2">
             <ProjectImageSection
               project={project}
@@ -53,7 +52,7 @@ const SlugPage = () => {
             </div>
 
             <div className="mx-5 mt-10 font-montserrat">
-              <div className="grid grid-cols-3 mt-15 space-y-8">
+               <div className="grid md:grid-cols-3 grid-cols-2 mt-15 space-y-8 space-x-2">
                 <div className="flex flex-col gap-2 ">
                   <p className="font-jost font-medium text-lg leading-[20px]">
                     Date
@@ -95,7 +94,7 @@ const SlugPage = () => {
                   <p>{project.location}</p>
                 </div>
               </div>
-              <div className="grid grid-cols-3 mt-15 space-y-8">
+              <div className="grid xl:grid-cols-3 grid-cols-2 mt-15 space-y-8 gap-3">
                 <div className="flex flex-col gap-2">
                   <p className="font-jost font-medium text-lg leading-[20px]">
                     Modules
@@ -128,29 +127,29 @@ const SlugPage = () => {
                   </div>
                 </div>
 
-                <div className="flex flex-col gap-3 items-end">
-                  {project.url && (
-                    <a
-                      href={project.url}
-                      target=""
-                      rel="noopener noreferrer"
-                      className="inline-block p-[2px] rounded-xl 
-             [background:linear-gradient(270deg,rgba(0,0,0,0)_4.64%,rgba(0,0,0,0.63)_82.81%)]"
-                    >
-                      <span
-                        className="flex gap-2 items-center 
-                  text-lg font-jost px-10 py-3 
-                  rounded-[10px] 
-                  bg-[#7544E4] 
-                  text-white 
-                  custom-shadow"
-                      >
-                        {project.buttonText || "View Project"} &nbsp;
-                        <Icons name="Arrow" />
-                      </span>
-                    </a>
-                  )}
-                </div>
+              <div className="flex flex-col gap-3 items-center md:items-end col-span-2 lg:col-span-1 w-fit">
+                           {project.url && (
+                             <a
+                               href={project.url}
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               className="inline-block p-[2px] rounded-xl 
+                 [background:linear-gradient(270deg,rgba(0,0,0,0)_4.64%,rgba(0,0,0,0.63)_82.81%)] w-full md:w-auto"
+                             >
+                               <span
+                                 className="flex gap-2 justify-center items-center 
+                   text-lg font-jost px-10 py-3 
+                   rounded-[10px] 
+                   bg-[#7544E4] 
+                   text-white 
+                   custom-shadow"
+                               >
+                                 {project.buttonText || "View Project"} &nbsp;
+                                 <Icons name="Arrow" />
+                               </span>
+                             </a>
+                           )}
+                         </div>
               </div>
             </div>
           </div>
