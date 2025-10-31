@@ -56,7 +56,7 @@ export async function generateMetadata({ params }) {
   }
 
   const blog = data;
-  const url = `https://infogentech.com/blog/${slug}`;
+  const url = `https://infogentech.com/us/blog/${slug}`;
   const image = blog.featuredImage?.url || "https://infogentech.com/default-og-image.png";
 
   return {
