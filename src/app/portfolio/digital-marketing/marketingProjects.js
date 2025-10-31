@@ -3,10 +3,12 @@ const marketingProjects = [
     id: 2,
     title: "AirLine Reservation Window",
     slug: "airLine-reservation-window",
-    image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1758796018/blog-app/categories/ax4e554vqfopvqee4qrw.jpg",
+    image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761826394/blog-app/blogs/blogs/1761826391167-airlinereservationwindow.com.jpg",
     subImage: "/assist/portfolio/marketing/airline.png",
     description:
       "EcoMart is an online marketplace promoting eco-friendly and sustainable products, helping conscious consumers shop responsibly while enjoying smooth e-commerce experiences.",
+    url: "https://vercel.com/infos-projects-e2fe1ec1",
+    buttonText: "Visit website",
     points: [
       "Content Strategy: Developed keyword clusters around sustainable living.",
       "Blog Campaigns: Created eco-lifestyle guides and product highlights.",
@@ -44,7 +46,7 @@ const marketingProjects = [
     id: 3,
     title: "@ananyakhurana_30 – Fashion Influencer ",
     slug: "ananyakhurana30-Fashion-Influencer",
-    image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1758869279/blog-app/categories/lhde7umyzqnxnydsfinb.jpg",
+    image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761828799/blog-app/blogs/blogs/1761828795431-ananya_khurana_digital_growth_2.jpg",
     subImage: "/assist/portfolio/marketing/ananya.png",
     description:
       "FitFuel is a mobile app offering personalized meal plans and workout tracking. It drives user engagement through actionable health content and interactive features.",
@@ -80,12 +82,14 @@ const marketingProjects = [
       "Performance Tracking & Optimization ",
       "Brand Partnership Readiness ",
     ],
+      url: "https://vercel.com/infos-projects-e2fe1ec1",
+    buttonText: "Visit Website",
   },
   {
     id: 4,
     title: "Bluestar Buildprop – Real Estate Brand ",
     slug: "Bluestar-Buildprop-Real-Estate-Brand",
-    image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1758869387/blog-app/categories/hfa4k7vqodzja5sgeuat.jpg",
+    image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761828932/blog-app/blogs/blogs/1761828929420-bluestar_buildrpod_digital_growth_1.jpg",
     subImage: "/assist/portfolio/marketing/TechHiveExpanding.png",
     description:
       "TechHive is a SaaS company providing cloud solutions for small businesses. The campaign focused on visibility, lead generation, and content thought leadership.",
@@ -121,13 +125,15 @@ const marketingProjects = [
       "Influencer/Partner Collaborations ",
       "Data-Driven Optimization ",
     ],
+      url: "https://vercel.com/infos-projects-e2fe1ec1",
+    buttonText: "Visit Website",
   },
   {
     id: 5,
     title:
       "Soho Resort Corbett — Luxury Nature Resort in Jim Corbett, Uttarakhand ",
     slug: "Soho-Resort-Corbett-Luxury-Nature-Resort-in-Jim-Corbett-Uttarakhand",
-    image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1758791929/blog-app/categories/obtbx84xw8gmqn0ooom3.jpg",
+    image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761826525/blog-app/blogs/blogs/1761826521641-case_study__soho_corbett_resort.jpg",
     subImage: "/assist/portfolio/marketing/soho.png",
     description:
       "StyleAura is an online fashion retailer targeting millennial shoppers. Its content strategy highlighted seasonal collections and influencer collaborations.",
@@ -163,13 +169,15 @@ const marketingProjects = [
       "High-Intent Keyword Targeting ",
       "Ad Budget Scaling & ROI Optimization ",
     ],
+      url: "https://vercel.com/infos-projects-e2fe1ec1",
+    buttonText: "Visit Website",
   },
   {
     id: 6,
     title:
       "SeaC Overseas Education Consultants — Study Abroad Consultancy (US Programs) ",
     slug: "SeaC-Overseas-Education-Consultants-Study-Abroad-Consultancy-US-Programs",
-    image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1758791858/blog-app/categories/e8qyhrdupkjhhhuc7nv4.png",
+    image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761827026/blog-app/blogs/blogs/1761827022192-somo_education_abroad_consultants_case_study.png",
     subImage: "/assist/portfolio/marketing/SomoEducation.png",
     description:
       "MediPlus is a telemedicine platform that connects patients with doctors. The project focused on credibility, education, and patient engagement.",
@@ -203,12 +211,14 @@ const marketingProjects = [
       "B2B & B2C Audience Segmentation ",
       "Revenue Modeling & ROI Optimization",
     ],
+      url: "https://vercel.com/infos-projects-e2fe1ec1",
+    buttonText: "Visit Website",
   },
   {
     id: 7,
     title: "Suii_Thaga — Fashion Brand on Instagram ",
     slug: "Suii_Thaga-Fashion-Brand-on-Instagram",
-    image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1758869895/blog-app/categories/pefwucmj8d2hlpwjpjkb.jpg",
+    image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761829200/blog-app/blogs/blogs/1761829196040-suii_thaga_digital_growth_1.jpg",
     subImage: "/assist/portfolio/marketing/Suii_thaga.png",
     description:
       "EduSpark is an e-learning platform offering online courses and certifications. Content and SEO work helped attract learners worldwide.",
@@ -239,12 +249,14 @@ const marketingProjects = [
       "Visual Identity Design ",
       "Performance Tracking ",
     ],
+      url: "https://vercel.com/infos-projects-e2fe1ec1",
+    buttonText: "Visit Website",
   },
   {
     id: 8,
     title: "ExamStudyZone.com — Educational Platform ",
     slug: "ExamStudyZone.com-Educational-Platform",
-    image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1758792090/blog-app/categories/q7wzuvnmax3cuifsjghd.jpg",
+    image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761826656/blog-app/blogs/blogs/1761826651962-exam_study_zone_case_study.jpg",
     subImage: "/assist/portfolio/marketing/examStudy.png",
     description:
       "UrbanNest is a real estate platform showcasing premium apartments and housing projects. The campaign improved lead generation via organic channels.",
@@ -276,12 +288,14 @@ const marketingProjects = [
       "Education Marketing ",
       "Keyword Research & Analytics ",
     ],
+      url: "https://vercel.com/infos-projects-e2fe1ec1",
+    buttonText: "Visit Website",
   },
   {
     id: 9,
     title: "iClinix — Specialized Eye Care Hospital ",
     slug: "iClinix-Specialized-Eye-Care-Hospital",
-    image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1758791774/blog-app/categories/ipmu4tyvldru9vssclbg.jpg",
+    image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761826882/blog-app/blogs/blogs/1761826877216-iclini_x_case_study.jpg",
     subImage: "/assist/portfolio/marketing/IClini.png",
     description:
       "FinEdge is a fintech startup helping users invest wisely. The focus was financial literacy, trust, and lead generation.",
@@ -313,6 +327,8 @@ const marketingProjects = [
       "Healthcare Marketing ",
       "Content Optimization ",
     ],
+      url: "https://vercel.com/infos-projects-e2fe1ec1",
+    buttonText: "Visit Website",
   },
 ];
 

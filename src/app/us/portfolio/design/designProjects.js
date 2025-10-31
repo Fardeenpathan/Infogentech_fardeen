@@ -3,7 +3,7 @@ const designProjects = [
     id: 1,
     title: "British Raj",
     slug: "british-raj",
-    image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1758790686/blog-app/categories/hwoeet3hpxdcfq0qual1.jpg",
+    image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761825962/blog-app/blogs/blogs/1761825957729-case_study_british_raj_1.jpg",
     subImage: "/assist/portfolio/design/birtishRajDesign02.png",
     description:
       "BookPremiumFare.com is a travel booking platform offering premium and discounted airfares. It offers convenient booking, up-to-date airfare, and secure checkout, and draws organic traffic.",
@@ -12,6 +12,8 @@ const designProjects = [
     tools: ["adobe", "animate cc", "premiere pro"],
     // client: "BookPremiumFare.com (by Infogentech)",
     location: "India (Remote Collaboration) ",
+    url: "https://vercel.com/infos-projects-e2fe1ec1",
+    buttonText: "Visit Website",
     modules: [
       "Research",
       "Scriptwriting",
@@ -36,8 +38,22 @@ const designProjects = [
     id: 2,
     title: "Portfolio Logo",
     slug: "portfolio-logo",
-    image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1758868504/blog-app/categories/c2f9f6o4ihw4zgxalw0v.jpg",
+    image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761829933/blog-app/blogs/blogs/1761829930032-logo_portfolio_1_1.jpg",
     subImage: "/assist/portfolio/design/logos.png",
+    date: "March 2025",
+    duration: "2 weeks",
+    tools: ["Adobe Illustrator", "Figma"],
+    location: "India (Remote)",
+     url: "https://vercel.com/infos-projects-e2fe1ec1",
+    buttonText: "Visit Website",
+    modules: ["Logo Design", "Brand Identity", "Vector Graphics"],
+    expertise: ["Brand Design", "Visual Identity", "Typography"],
+    points: [
+      "Created modern and minimalist logo designs",
+      "Developed brand identity guidelines",
+      "Delivered scalable vector formats"
+    ],
+    
   },
 ];
 
