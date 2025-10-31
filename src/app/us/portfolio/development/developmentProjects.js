@@ -7,6 +7,8 @@ const developmentProjects = [
     subImage: "/assist/portfolio/development/dryCleaning.webp",
     description:
       "This project highlights the design process of developing a clean, functional, and engaging website for LaraClean. It was designed to offer an easy booking experience to users and demonstrate the professionalism and trust of the brand. ",
+    url: "https://laraclean.com/",
+    buttonText: "Visit Website",
     points: [
       "Wireframes, Prototypes, and High-fidelity design were created to be understandable and easy to use.",
       "Customization of WordPress using Elementor, styling of the theme, and integration of plugins.",
@@ -77,6 +79,8 @@ const developmentProjects = [
       "Logistics Planning ",
       "Content & Storytelling",
     ],
+      url: "https://vercel.com/infos-projects-e2fe1ec1",
+    buttonText: "Visit Website",
   },
   // {
   //   id: 3,
@@ -156,12 +160,14 @@ const developmentProjects = [
       "Trust & Transparency Integration ",
       "Responsive Web Design",
     ],
+    url: "https://www.avartajewellery.com/",
+    buttonText: "Visit Website",
   },
   {
     id: 5,
     title: "Soouqna’s E-Commerce Platform",
     slug: "soouqna-Commerce-Platform",
-    image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1758796090/blog-app/categories/hlxlfw0cuqlvhhe0cutg.jpg",
+    image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761827846/blog-app/blogs/blogs/1761827842965-soouqna_casestudy.jpg",
     subImage: "/assist/portfolio/development/sooquna.png",
     description:
       "Soouqna, a growing e-commerce platform, partnered with Zebra to enhance logistics and delivery. API connectivity enabled seamless barcode scanning, better printer efficiency, and improved operational accuracy for faster, more reliable customer service.",
@@ -192,6 +198,8 @@ const developmentProjects = [
       "Search & Discovery (QR / Image)",
       "Logistics & Delivery Tech",
     ],
+      url: "https://vercel.com/infos-projects-e2fe1ec1",
+    buttonText: "Visit Website",
   },
 ];
 

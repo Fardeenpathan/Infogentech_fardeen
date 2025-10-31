@@ -134,23 +134,27 @@ const SlugPage = () => {
                 </div>
 
                 <div className="flex flex-col gap-3 items-end">
-                  <a
-                    href="contact"
-                    className="inline-block p-[2px] rounded-xl 
+                  {project.url && (
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block p-[2px] rounded-xl 
              [background:linear-gradient(270deg,rgba(0,0,0,0)_4.64%,rgba(0,0,0,0.63)_82.81%)]"
-                  >
-                    <span
-                      className="flex gap-2 items-center 
+                    >
+                      <span
+                        className="flex gap-2 items-center 
                   text-lg font-jost px-10 py-3 
                   rounded-[10px] 
                   bg-[#7544E4] 
                   text-white 
                   custom-shadow"
-                    >
-                      View in Figma Design &nbsp;
-                      <Icons name="Arrow" />
-                    </span>
-                  </a>
+                      >
+                        {project.buttonText || "View Project"} &nbsp;
+                        <Icons name="Arrow" />
+                      </span>
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
