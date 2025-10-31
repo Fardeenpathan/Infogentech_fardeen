@@ -3,8 +3,7 @@ import Icons from "@/components/ui/Icon";
 
 const MovingTextBanner = () => {
   return (
-    <div className="relative my-30">
-      <div className="absolute inset-0 bg-primary -z-10"></div>
+    <div className="relative my-30 bg-primary">
       <div className="moving-text-container overflow-hidden bg-[#3F237F] text-white relative z-10 custom-skew">
         <div className="moving-text-content font-montserrat font-normal text-xl -tracking-[0.05em]">
           <div className="flex gap-96">

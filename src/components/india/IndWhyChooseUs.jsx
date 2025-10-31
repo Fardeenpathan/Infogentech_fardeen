@@ -13,7 +13,7 @@ export default function IndWhyChooseUs() {
   ];
 
   return (
-    <section className="xl:mt-20 mt-10 container mx-auto xl:px-10 px-2 ">
+    <section className="lg:mt-15 2xl:mt-20 mt-10 container mx-auto lg:px-10 px-2 ">
       <IndTopicHeader
         title="We Do More For Your Business"
         subtitle="Why Choose Us!"
@@ -22,7 +22,7 @@ export default function IndWhyChooseUs() {
 
       <div className="container mx-auto flex justify-between flex-col xl:flex-row xl:py-10 py-0">
         <motion.div
-          className="flex justify-between xl:gap-30 gap-10 items-center flex-col xl:flex-row"
+          className="flex justify-between 2xl:gap-30 gap-10 items-center flex-col xl:flex-row"
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
