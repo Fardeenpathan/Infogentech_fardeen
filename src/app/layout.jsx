@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en" className={isUS ? "dark" : "IndColorText"}>
-      <head>
+       <head>
         <link rel="icon" href="/mainLogo.svg"/>
       </head>
       <body>

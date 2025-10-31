@@ -15,7 +15,7 @@ export default function HomeBlogCardsd({ blog }) {
             alt={blog.title || "Blog Image"}
             width={502}
             height={277}
-            className="w-full h-64 rounded-xl object-cover"
+            className="w-full h-64 rounded-xl object-fill"
           />
         ) : null}
         <div className="flex items-center justify-between text-primary py-5">

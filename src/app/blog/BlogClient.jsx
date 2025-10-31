@@ -79,7 +79,7 @@ const Blogs = () => {
                   alt="Article Thumbnail"
                   width={600}
                   height={400}
-                  className="lg:w-170 lg:h-108  h-52 object-cover rounded-xl"
+                  className="lg:w-170 lg:h-108  h-52 object-fill rounded-xl"
                 />
               ) : null}
             </div>

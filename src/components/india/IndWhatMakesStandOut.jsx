@@ -40,7 +40,7 @@ export default function WhatMakesStandOut() {
         {cards.map((card, index) => (
           <div
             key={index}
-            className="bg-[#F4EFFF] rounded-[20px] p-6 sm:p-8 flex flex-col items-start justify-start shadow-sm hover:shadow-md transition-all duration-300"
+            className="bg-[#F4EFFF] relative rounded-[20px] p-6 sm:p-8 flex flex-col items-start justify-start shadow-sm hover:shadow-md transition-all duration-300"
           >
             <div className="relative w-full max-w-[528px] h-auto aspect-[528/280] rounded-xl opacity-100 flex items-center justify-center mx-auto">
               <Icons
@@ -48,13 +48,16 @@ export default function WhatMakesStandOut() {
                 className="w-full h-full object-contain rounded-[20px]"
               />
             </div>
-            <h4 className="font-montserrat font-semibold xl:text-2xl text-lg text-gray-600 mb-3 text-center sm:text-left leading-[150%] tracking-[-0.02em]">
+            <h4 className="font-montserrat font-semibold xl:text-2xl text-lg text-gray-600 mb-3 text-center sm:text-left leading-[150%] tracking-[-0.02em] z-10">
               {card.title}
             </h4>
-            <p className="font-montserrat font-medium xl:text-lg text-sm leading-[150%] tracking-[-0.02em] text-gray-600/80 text-center sm:text-left">
+            <p className="font-montserrat font-medium xl:text-lg text-sm leading-[150%] tracking-[-0.02em] text-gray-600/80 text-center sm:text-left z-10">
               {card.text}
             </p>
+            <div className="absolute bottom-0 left-0 w-full h-2/3 bg-[linear-gradient(179.37deg,rgb(253_253_253/5%)_0.55%,#FCFBFF_46.27%)]"></div>
+
           </div>
+          
         ))}
       </div>
     </section>
