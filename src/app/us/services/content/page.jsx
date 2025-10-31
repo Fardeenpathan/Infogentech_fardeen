@@ -183,10 +183,8 @@ const Content = () => {
     <>
       <ServicesHeader />
       <AllServices activeService="Content" />
-
-    <div className="container mx-auto mt-24 xl:px-10 md:px-5 px-2">
+      <div className="container mx-auto mt-24 xl:px-10 md:px-5 px-2">
         <div className="border-b-2 border-[#7e7d7d] mt-15 opacity-15"></div>
-
         <div>
           {categories.map((category) => (
             <div key={category.id}>
@@ -255,7 +253,7 @@ const Content = () => {
 
         <div className="mt-34 flex justify-center items-center flex-col relative">
           <div className="absolute -top-20">
-             <Icons name="gradientServices" width={300} height={100}/>
+            <Icons name="gradientServices" width={300} height={100} />
           </div>
 
           {/* <div className="relative subContainer h-[640px] flex items-center justify-center">

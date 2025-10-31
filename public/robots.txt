@@ -14,3 +14,4 @@ Disallow: /private/
 Allow: /
 
 Sitemap: https://infogentech.com/sitemap.xml
+Sitemap: https://infogentech.com/sitemap-0.xml

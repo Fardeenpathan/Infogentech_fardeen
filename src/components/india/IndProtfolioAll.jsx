@@ -51,9 +51,7 @@ const IndAllServices = ({ activeService }) => {
               >
                 {isActive && (
                   <motion.div
-                    layoutId="active-service-bg"
                     className="absolute inset-0 bg-primary rounded-2xl z-0"
-                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
                   />
                 )}
                 <div className="relative z-10 flex flex-col items-center">

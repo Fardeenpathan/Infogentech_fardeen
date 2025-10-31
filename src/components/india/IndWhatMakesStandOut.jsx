@@ -28,7 +28,7 @@ export default function WhatMakesStandOut() {
   ];
 
   return (
-    <section className="w-full container mx-auto px-5 sm:px-8 md:px-10 lg:px-16 py-12 bg-transparent lg:mt-20">
+    <section className="w-full container mx-auto px-5 sm:px-8 md:px-10 py-12 bg-transparent lg:mt-20">
       <IndMidHeader
         title="What Makes"
         subtitle="Infogentech Stand Out in Digital Marketing"
