@@ -45,7 +45,7 @@ const IndAllServices = ({ activeService }) => {
               <div
                 className={`flex flex-col py-10 justify-center items-center relative ${
                   isActive
-                    ? "bg-primary lg:scale-160 scale-110 rounded-xl mr-1 !px-2.5"
+                    ? "bg-primary lg:scale-160 md:scale-110 scale-100 rounded-xl mr-1 !px-2.5"
                     : ""
                 }`}
               >
