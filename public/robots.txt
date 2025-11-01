@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://infogentech.com
-
-# Sitemaps
-Sitemap: https://infogentech.com/sitemap.xml
