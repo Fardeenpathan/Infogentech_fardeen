@@ -184,7 +184,7 @@ const ContactForm = () => {
                       name="productQuestion"
                       value={formData.productQuestion}
                       onChange={handleInputChange}
-                      className="w-full  py-2  border-b border-gray-300 bg-transparent  focus:outline-none focus:border-[#8752FF]"
+                      className="w-full  py-2  border-b border-gray-300 bg-transparent  focus:outline-none focus:border-primary"
                       required
                     >
                       <option value="" >

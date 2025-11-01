@@ -19,7 +19,7 @@ const contentMap = {
         "Customization of WordPress using Elementor, styling of the theme, and integration of plugins.",
         "The use of custom typography, colors, and visual hierarchy ensures the brand identity is consistent.",
       ],
-      image: "/assist/img/homePortfolio/laraClean.png",
+      image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761997370/blog-app/blogs/blogs/1761997363077-laraclean.jpg",
     },
     {
       id: "design-2",
@@ -35,7 +35,7 @@ const contentMap = {
         "Storyboarding & Design: Used maps, archival images, animated timelines, historical palettes & typography.",
         "Video Production: Motion graphics, character illustrations, cinematic transitions, narration & score.",
       ],
-      image: "/assist/img/homePortfolio/britishRaj.png",
+      image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761998088/blog-app/blogs/blogs/1761998068898-britishraj.jpg",
     },
   ],
 
@@ -54,7 +54,7 @@ const contentMap = {
         "Smart Search: Enabled location, QR & image-based product discovery.",
         "Faster Performance: Optimized backend for speed & stability.",
       ],
-      image: "/assist/img/homeportfolio/sooquna.jpeg",
+      image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761997813/blog-app/blogs/blogs/1761997806677-sooquna.jpg",
     },
     {
       id: "dev-2",
@@ -70,7 +70,7 @@ const contentMap = {
         "Modern UI: Designed clean, user-friendly screens with consistent style.",
         "Smooth Workflows: Built booking, orders, and vendor task flows for easy planning.",
       ],
-      image: "/assist/img/homeportfolio/shaadi.png",
+      image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761997731/blog-app/blogs/blogs/1761997723525-shaadi.jpg",
     },
   ],
 
@@ -89,7 +89,7 @@ const contentMap = {
         "Content Strategy: Guide, FAQ, and career tips posting plans.",
         "Growth: Optimized bio, playlists, and highlights to increase engagement and course inquiries",
       ],
-      image: "/assist/img/homeportfolio/theexamques.png",
+      image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761997588/blog-app/blogs/blogs/1761997582083-examstudy.png",
     },
     {
       id: "dm-2",
@@ -105,7 +105,7 @@ const contentMap = {
         "Growth & SEO: SEO, website optimization, and traffic and conversion campaigns.",
         "Customer Experience: Better satisfaction and loyalty towards 24/7 customer care and information-based optimization.",
       ],
-      image: "/assist/img/homeportfolio/airline.png",
+      image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761997664/blog-app/blogs/blogs/1761997657375-airline.jpg",
     },
     {
       id: "dm-3",
@@ -121,7 +121,7 @@ const contentMap = {
         "Optimization: Made profile brand-ready with CTAs.s",
         "Growth: Increased engagement and brand inquiries.",
       ],
-      image: "/assist/img/homeportfolio/ananya.png",
+      image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761998524/blog-app/blogs/blogs/1761998514987-ananya.png",
     },
     {
       id: "dm-4",
@@ -137,7 +137,7 @@ const contentMap = {
         "Technical: Improved speed, mobile usability, and navigation.",
         "Growth: Tracked performance, increased clicks, and engagement.",
       ],
-      image: "/assist/img/homeportfolio/examStudy.png",
+      image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761998303/blog-app/blogs/blogs/1761998296435-theexamques.jpg",
     },
   ],
 
@@ -156,7 +156,7 @@ const contentMap = {
         "Resource Creation: Development of study guides, practice documents, and articles with a focus on certification.",
         "Updating of Contents: Frequent updating of contents to keep up to date and relevant.",
       ],
-      image: "/assist/img/homeportfolio/certStudy.png",
+      image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761997622/blog-app/blogs/blogs/1761997616036-certstudy.jpg",
     },
     {
       id: "content-2",
@@ -172,7 +172,7 @@ const contentMap = {
         "Blog & Guides: Composed travel tips, offers, and destination pieces.",
         "Content Updates: Updating content regularly to enhance relevance and search performance.",
       ],
-      image: "/assist/img/homeportfolio/Bookpremiumfare.png",
+      image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761998424/blog-app/blogs/blogs/1761998417470-bookpremiumfare.jpg",
     },
   ],
 };
@@ -344,10 +344,10 @@ export default function OurPortfolio() {
                   width={800}
                   height={500}
                   objectFit="cover"
-                  className="object-cover rounded-xl "
+                  className="object-fit rounded-xl "
                 />
               ) : (
-                <div className="w-full h-full flex items-center justify-center">
+                <div className="w-full h-auto flex items-center justify-center">
                   No Image Available
                 </div>
               )}

@@ -58,7 +58,7 @@ const FocusPart = () => {
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="relative bg-[#15152A] shadow-[0px_0px_40px_5px_rgba(106,39,255,0.35)] rounded-xl md:px-8 md:py-6 py-3 px-3 border-2 border-[#8752FF]"
+        className="relative bg-[#15152A] shadow-[0px_0px_40px_5px_rgba(106,39,255,0.35)] rounded-xl md:px-8 md:py-6 py-3 px-3 border-2 border-primary"
       >
         <div className="flex items-center gap-2 z-50">
           <div className="lg:flex hidden">

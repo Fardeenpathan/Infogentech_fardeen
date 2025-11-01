@@ -37,7 +37,7 @@ export default function SubscribeContact() {
               type="text"
               id="email"
               className="xl:w-88 md:min-w-60 xl:h-12 md:h-10 w-full
-              radius border bg-white text-black placeholder:text-[#667085] xl:px-4 xl:py-3 px-2 py-3 outline-none focus:border-[#8752FF] md:text-left text-center justify-center"
+              radius border bg-white text-black placeholder:text-[#667085] xl:px-4 xl:py-3 px-2 py-3 outline-none focus:border-primary md:text-left text-center justify-center"
               placeholder="Enter your email "
             />
             <Button

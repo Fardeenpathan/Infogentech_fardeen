@@ -115,7 +115,7 @@ const Blogs = () => {
             <select
               value={activeCategory}
               onChange={(e) => handleCategoryChange(e.target.value)}
-              className="w-full sm:w-fit border cursor-pointer rounded-sm px-4 py-2 font-medium text-sm font-montserrat border-b border-gray-300 bg-transparent  focus:outline-none focus:border-[#8752FF]"
+              className="w-full sm:w-fit border cursor-pointer rounded-sm px-4 py-2 font-medium text-sm font-montserrat border-b border-gray-300 bg-transparent  focus:outline-none focus:border-primary"
             >
               {categories.map((cat, idx) => (
                 <option key={idx} value={cat.name || cat} className="border-b border-gray-300 bg-transparent">

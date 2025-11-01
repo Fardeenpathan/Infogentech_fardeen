@@ -8,8 +8,8 @@ export function Footer() {
     <footer className="bg-[#101021] mx-auto relative overflow-hidden md:px-10 px-4 ">
       <div className="container mx-auto pt-11">
         <div className="flex md:justify-between items-center md:flex-row flex-col justify-center">
-          <div className="w-[162px] h-[162px] -top-[26px] -left-3.5 rounded-[81px] absolute bg-[#8752ff] blur-[100px]" />
-          <div className="w-[148px] h-[87px] top-[533px] right-0 rounded-[74px/43.5px] absolute bg-[#8752ff] blur-[100px]" />
+          <div className="w-[162px] h-[162px] -top-[26px] -left-3.5 rounded-[81px] absolute bg-primary blur-[100px]" />
+          <div className="w-[148px] h-[87px] top-[533px] right-0 rounded-[74px/43.5px] absolute bg-primary blur-[100px]" />
           <p className="font-avalors font-medium xl:text-[45px] xl:leading-14 leading-6 md:leading-9 text-lg md:text-3xl">
             Start Earlier, Grow Faster <br /> Without Hidden Costs.
           </p>

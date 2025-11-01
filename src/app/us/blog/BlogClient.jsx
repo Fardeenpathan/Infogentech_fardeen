@@ -144,7 +144,7 @@ const Blogs = () => {
                 key={index}
                 onClick={() => handleCategoryChange(item.name || item)}
                 className={`relative pb-1 transition-all duration-300 cursor-pointer text-nowarp ${activeCategory === (item.name || item)
-                    ? "text-primary opacity-100 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#8752FF] after:rounded-full "
+                    ? "text-primary opacity-100 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-primary after:rounded-full "
                     : "opacity-60 hover:opacity-100"
                   }`}
               >
