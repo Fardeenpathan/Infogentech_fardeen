@@ -1,6 +1,5 @@
 export default {
   siteUrl: 'https://infogentech.com',
-  generateRobotsTxt: true,
   generateIndexSitemap: false,
   sitemapSize: 5000,
   changefreq: 'daily',

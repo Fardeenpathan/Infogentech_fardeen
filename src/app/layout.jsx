@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={isUS ? "dark" : "IndColorText"}>
        <head>
-        <link rel="icon" href="/mainLogo.svg"/>
+        <link rel="icon" type="image/x-icon" href="/favicon.ico"></link>
       </head>
       <body>
         <Provider store={store}>
