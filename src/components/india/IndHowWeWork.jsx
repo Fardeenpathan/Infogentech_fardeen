@@ -235,7 +235,7 @@ export default function IndHowWeWork() {
           </motion.div>
         </div>
       </div>
-          <div className="xl:block 2xl:hidden">
+          <div className="xl:block hidden 2xl:hidden">
         <IndMidHeader
           title="How We Work"
           subtitle="From Strategy to Success: Our Process"
