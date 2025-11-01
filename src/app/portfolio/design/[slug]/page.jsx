@@ -65,9 +65,7 @@ const SlugPage = () => {
                   <p>{project.duration}</p>
                 </div>
                 <div className="flex flex-col gap-3">
-                  <p className="font-medium text-lg leading-[20px]">
-                    Tools
-                  </p>
+                  <p className="font-medium text-lg leading-[20px]">Tools</p>
                   <div className="flex flex-wrap gap-2">
                     {(project.tools || []).map((tool, index) => (
                       <span
@@ -81,9 +79,7 @@ const SlugPage = () => {
                 </div>
 
                 <div className="flex flex-col gap-3">
-                  <p className=" font-medium text-lg leading-[20px]">
-                    Client
-                  </p>
+                  <p className=" font-medium text-lg leading-[20px]">Client</p>
                   <p>{project.client}</p>
                 </div>
                 <div className="flex flex-col gap-3">
@@ -127,35 +123,36 @@ const SlugPage = () => {
                 </div>
 
                 {/* Make this span full width on small screens */}
-                <div className="flex flex-col gap-3 items-center md:items-end col-span-2 lg:col-span-1 w-fit">
-                  {project.url && (
-                    <a
-                      href={project.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block p-[2px] rounded-xl 
+               {/* Show button only if both URL and button text are non-empty */}
+{project.url?.trim() && project.buttonText?.trim() && (
+  <div className="flex flex-col gap-3 items-center md:items-end col-span-2 lg:col-span-1 w-fit">
+    <a
+      href={project.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-block p-[2px] rounded-xl 
         [background:linear-gradient(270deg,rgba(0,0,0,0)_4.64%,rgba(0,0,0,0.63)_82.81%)] w-full md:w-auto"
-                    >
-                      <span
-                        className="flex gap-2 justify-center items-center 
+    >
+      <span
+        className="flex gap-2 justify-center items-center 
           text-lg font-jost px-10 py-3 
           rounded-[10px] 
           bg-[#7544E4] 
           text-white 
           custom-shadow"
-                      >
-                        {project.buttonText || "View Project"} &nbsp;
-                        <Icons name="Arrow" />
-                      </span>
-                    </a>
-                  )}
-                </div>
+      >
+        {project.buttonText}
+        <Icons name="Arrow" />
+      </span>
+    </a>
+  </div>
+)}
+
               </div>
             </div>
           </div>
         </div>
-        <div className="mt-20">
-        </div>
+        <div className="mt-20"></div>
       </div>
     </>
   );

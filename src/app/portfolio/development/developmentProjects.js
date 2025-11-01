@@ -79,8 +79,8 @@ const developmentProjects = [
       "Logistics Planning ",
       "Content & Storytelling",
     ],
-     url: "https://laraclean.com",
-    buttonText: "Visit Website",
+     url: " ",
+    buttonText: " ",
   },
   // {
   //   id: 3,

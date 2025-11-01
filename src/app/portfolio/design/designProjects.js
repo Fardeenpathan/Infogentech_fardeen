@@ -12,7 +12,7 @@ const designProjects = [
     tools: ["adobe", "animate cc", "premiere pro"],
     // client: "BookPremiumFare.com (by Infogentech)",
     location: "India (Remote Collaboration) ",
-    url: "https://vercel.com/infos-projects-e2fe1ec1",
+    url: "https://vercel.com/infos-projects-e2fe1ec1", // video from sandeep bhaii 
     buttonText: "View video",
     modules: [
       "Research",
@@ -44,15 +44,16 @@ const designProjects = [
     duration: "2 weeks",
     tools: ["Adobe Illustrator", "Figma"],
     location: "India (Remote)",
-    url: "https://figma.com/portfolio-logo-design",
-    buttonText: "View in Figma",
+    url: " ",
+    buttonText: " ",
     modules: ["Logo Design", "Brand Identity", "Vector Graphics"],
     expertise: ["Brand Design", "Visual Identity", "Typography"],
     points: [
       "Created modern and minimalist logo designs",
       "Developed brand identity guidelines",
       "Delivered scalable vector formats"
-    ]
+    ],
+    
   },
 ];
 
