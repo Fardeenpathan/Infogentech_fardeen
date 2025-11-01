@@ -23,6 +23,7 @@ export default function robots() {
       },
     ],
     sitemap: 'https://infogentech.com/sitemap.xml',
+    sitemap: 'https://infogentech.com/sitemap-0.xml',
     host: 'https://infogentech.com',
   };
 }
