@@ -130,15 +130,15 @@ const SlugPage = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-block p-[2px] rounded-xl 
-        [background:linear-gradient(270deg,rgba(0,0,0,0)_4.64%,rgba(0,0,0,0.63)_82.81%)] w-full md:w-auto"
+                       [background:linear-gradient(270deg,rgba(0,0,0,0)_4.64%,rgba(0,0,0,0.63)_82.81%)] w-full md:w-auto"
                     >
                       <span
                         className="flex gap-2 justify-center items-center 
-          text-lg font-jost px-10 py-3 
-          rounded-[10px] 
-          bg-[#7544E4] 
-          text-white 
-          custom-shadow"
+                        text-lg font-jost px-10 py-3 
+                        rounded-[10px] 
+                        bg-[#7544E4] 
+                        text-white 
+                        custom-shadow"
                       >
                         {project.buttonText || "View Project"} &nbsp;
                         <Icons name="Arrow" />
