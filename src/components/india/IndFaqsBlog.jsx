@@ -90,7 +90,7 @@ const IndFaqsBlog = ({ blog }) => {
                     className="flex w-full items-start gap-x-5 justify-between rounded-lg text-left text-lg font-bold focus:outline-none px-5"
                     onClick={() => toggleFAQ(faq.id)}
                   >
-                    <div className="text-gray-600 flex items-center gap-4 text-lg">
+                    <div className="text-gray-600 flex items-center gap-4 md:text-2xl text-sm">
                       <span className="text-4xl font-normal opacity-40">
                         0{index + 1}
                       </span>
@@ -116,7 +116,7 @@ const IndFaqsBlog = ({ blog }) => {
                         transition={{ duration: 0.3, ease: "easeInOut" }}
                         className="overflow-hidden"
                       >
-                        <div className="pl-19 pr-15 pt-3 text-left text-lg leading-[1.4]">
+                         <div className="xl:pl-19 pl-10 xl:pr-5 pr-2 pt-3 text-left md:text-lg text-[12px] leading-[1.4]">
                           {faq.answer}
                         </div>
                       </motion.div>

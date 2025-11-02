@@ -220,7 +220,7 @@ const panelVariants = {
                       name="name"
                       value={formData.name}
                       onChange={handleInputChange}
-                      className="w-full py-2 border-b-2 border-[#FFFFFF] bg-transparent focus:outline-none focus:border-[#8752FF]"
+                      className="w-full py-2 border-b-2 border-[#FFFFFF] bg-transparent focus:outline-none focus:border-primary"
                       placeholder="Enter your name"
                       required
                     />
@@ -234,7 +234,7 @@ const panelVariants = {
                       name="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      className="w-full py-2 border-b-2 border-[#FFFFFF] bg-transparent focus:outline-none focus:border-[#8752FF]"
+                      className="w-full py-2 border-b-2 border-[#FFFFFF] bg-transparent focus:outline-none focus:border-primary"
                       placeholder="Enter your email"
                       required
                     />
@@ -250,7 +250,7 @@ const panelVariants = {
                       name="phoneNumber"
                       value={formData.phoneNumber}
                       onChange={handleInputChange}
-                      className="w-full py-2 border-b-2 border-[#FFFFFF] bg-transparent focus:outline-none focus:border-[#8752FF]"
+                      className="w-full py-2 border-b-2 border-[#FFFFFF] bg-transparent focus:outline-none focus:border-primary"
                       placeholder="+1 012 3456 789"
                       required
                     />
@@ -263,7 +263,7 @@ const panelVariants = {
                       name="productQuestion"
                       value={formData.productQuestion}
                       onChange={handleInputChange}
-                      className="w-full py-2 border-b-2 border-[#FFFFFF] bg-transparent focus:outline-none focus:border-[#8752FF]"
+                      className="w-full py-2 border-b-2 border-[#FFFFFF] bg-transparent focus:outline-none focus:border-primary"
                       required
                     >
                       <option value="" className="bg-[#1C1B2D]">
@@ -299,7 +299,7 @@ const panelVariants = {
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
-                    className="w-full py-2 border-b-2 border-[#FFFFFF] bg-transparent focus:outline-none focus:border-[#8752FF] resize-none"
+                    className="w-full py-2 border-b-2 border-[#FFFFFF] bg-transparent focus:outline-none focus:border-primary resize-none"
                     placeholder="Write your message.."
                     rows={3}
                     required

@@ -12,15 +12,15 @@ export function StatsSection() {
               Top US Agency 2025
             </div>
           </div>
-          <div className="flex flex:row border-1 border-[#8752FF] sm:px-7 px-2 h-11 space-x-2 w-auto rounded-md items-center">
+          <div className="flex flex:row border-1 border-primary sm:px-7 px-2 h-11 space-x-2 w-auto rounded-md items-center">
             <div className="text-primary font-jost  md:text-xl text-[15px] text-lg vertical-trim  tracking-tight-3 flex justify-center items-center gap-2 text-nowrap">
               <Icons name="Crown" /> Awarded Digital Partner
             </div>
           </div>
         </div>
        <div className="hidden xl:flex flex-row items-center px-2 w-full">
-  <span className="h-[1px] min-w-[2.5rem] flex-1 bg-[#8752FF]"></span>
-  <span className="w-1 h-1 rounded-full bg-[#8752FF]"></span>
+  <span className="h-[1px] min-w-[2.5rem] flex-1 bg-primary"></span>
+  <span className="w-1 h-1 rounded-full bg-primary"></span>
 </div>
         <div className="xl:mt-0 mt-5 flex flex-col space-y-2 justify-center items-center ml:px-2 px-1">
           <div className="font-avalors font-normal lg:text-[32px]  xl:text-[26px] text-[22px] leading-6 align-middle text-primary text-center text-nowrap">
@@ -32,8 +32,8 @@ export function StatsSection() {
         </div>
         
       <div className="hidden xl:flex flex-row items-center px-2 w-full">
-        <span className="w-1 h-1 rounded-full bg-[#8752FF]"></span>
-  <span className="h-[1px] min-w-[2.5rem] flex-1 bg-[#8752FF]"></span>
+        <span className="w-1 h-1 rounded-full bg-primary"></span>
+  <span className="h-[1px] min-w-[2.5rem] flex-1 bg-primary"></span>
   
 </div>
 

@@ -22,8 +22,9 @@ export default function robots() {
         allow: '/',
       },
     ],
-    sitemap: 'https://infogentech.com/sitemap.xml',
-    sitemap: 'https://infogentech.com/sitemap-0.xml',
-    host: 'https://infogentech.com',
+     sitemap: [
+      'https://infogentech.com/sitemap.xml',
+      'https://infogentech.com/sitemap-0.xml',
+    ],
   };
 }

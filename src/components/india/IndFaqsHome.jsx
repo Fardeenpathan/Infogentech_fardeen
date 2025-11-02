@@ -79,7 +79,7 @@ const IndFaqsHome = () => {
   };
 
   return (
-    <section className="mt-20 container mx-auto px-4">
+    <section className="mt-20 container mx-auto px-4 mb-10">
       <IndTopicHeader title="Faqs" subtitle="Everything You Need to Know" subClass="w-full"/>
 
       <div className="xl:mt-8 container mx-auto flex justify-between mt-0 xl:py-10 py-0">
@@ -149,7 +149,7 @@ const IndFaqsHome = () => {
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                   className="overflow-hidden"
                 >
-                  <div className="xl:pl-19 pl-10 xl:pr-5 pr-2 pt-3 text-left xl:text-lg text-[12px] leading-[1.4]">
+                  <div className="xl:pl-19 pl-10 xl:pr-5 pr-2 pt-3 text-left md:text-lg text-[12px] leading-[1.4]">
                     {faq.answer}
                   </div>
                 </motion.div>
