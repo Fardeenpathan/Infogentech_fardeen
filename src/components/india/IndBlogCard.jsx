@@ -6,7 +6,7 @@ export default function HomeBlogCardsd({ blog }) {
   return (
     <div
       key={blog.id || blog._id}
-      className="relative rounded-xl h-[475px] "
+      className="relative rounded-xl h-[475px]"
     >
       <div className="flex flex-col justify-between h-full">
         {blog.featuredImage?.url ? (

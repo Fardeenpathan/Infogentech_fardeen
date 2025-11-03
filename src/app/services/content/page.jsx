@@ -10,7 +10,7 @@ const categories = [
     id: "01",
     title: "Photo & Video Production",
     description: "High-quality video and photography solutions to bring your brand story to life visually.",
-    image: "/images/services/photo-video.jpg", // Replace with actual path
+    image: "/images/services/photo-video.jpg",
     subServices: [
       { id: "01", title: "Video Production & Motion Design" },
       { id: "02", title: "Video Production" },

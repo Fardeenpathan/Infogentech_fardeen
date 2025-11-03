@@ -31,8 +31,8 @@ export default function InfoCards() {
             key={i}
             className="rounded-[50px] p-[2px] bg-gradient-to-b from-blue-300/30 to-purple-300/30"
           >
-            <div className="relative bg-white/70 backdrop-blur-md flex flex-col md:flex-row items-center justify-center overflow-hidden transition-transform duration-300 hover:scale-[1.01] rounded-[49px]">
-              <div className="absolute top-0 left-4 sm:left-6 md:left-20 w-[200px] sm:w-[250px] md:w-[300px] h-1 rounded-md bg-gradient-to-r from-primary to-violet-500" />
+            <div className="relative bg-white/70 backdrop-blur-md flex flex-col md:flex-row items-center justify-center overflow-hidden transition-transform duration-300 hover:scale-[1.01] rounded-[49px] lg:px-8 px-0">
+              <div className={`absolute top-0 left-6 sm:left-6 md:left-20 w-[200px] sm:w-[250px] md:w-[300px] h-1 rounded-md bg-gradient-to-r from-primary to-primary ${i==1 ? "md:left-50  lg:left-100 left-14 sm:left-10": i==2 ? "left-20 sm:left-20 md:left-100 lg:left-200" : ""}`} />
 
               <div
                 className={`w-full md:w-1/2 flex flex-col justify-center p-4 

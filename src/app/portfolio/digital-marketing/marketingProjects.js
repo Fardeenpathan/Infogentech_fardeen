@@ -7,8 +7,8 @@ const marketingProjects = [
     subImage: "/assist/portfolio/marketing/airline.png",
     description:
       "EcoMart is an online marketplace promoting eco-friendly and sustainable products, helping conscious consumers shop responsibly while enjoying smooth e-commerce experiences.",
-    url: "https://vercel.com/infos-projects-e2fe1ec1",
-    buttonText: "Visit website",
+    url: " ",
+    buttonText: " ",
     points: [
       "Content Strategy: Developed keyword clusters around sustainable living.",
       "Blog Campaigns: Created eco-lifestyle guides and product highlights.",
@@ -82,8 +82,8 @@ const marketingProjects = [
       "Performance Tracking & Optimization ",
       "Brand Partnership Readiness ",
     ],
-      url: "https://vercel.com/infos-projects-e2fe1ec1",
-    buttonText: "Visit Website",
+      url: " ",
+    buttonText: " ",
   },
   {
     id: 4,
@@ -125,8 +125,8 @@ const marketingProjects = [
       "Influencer/Partner Collaborations ",
       "Data-Driven Optimization ",
     ],
-      url: "https://vercel.com/infos-projects-e2fe1ec1",
-    buttonText: "Visit Website",
+      url: " ",
+    buttonText: " ",
   },
   {
     id: 5,
@@ -169,8 +169,8 @@ const marketingProjects = [
       "High-Intent Keyword Targeting ",
       "Ad Budget Scaling & ROI Optimization ",
     ],
-      url: "https://vercel.com/infos-projects-e2fe1ec1",
-    buttonText: "Visit Website",
+      url: " ",
+    buttonText: " ",
   },
   {
     id: 6,
@@ -211,8 +211,8 @@ const marketingProjects = [
       "B2B & B2C Audience Segmentation ",
       "Revenue Modeling & ROI Optimization",
     ],
-      url: "https://vercel.com/infos-projects-e2fe1ec1",
-    buttonText: "Visit Website",
+      url: " ",
+    buttonText: " ",
   },
   {
     id: 7,
@@ -249,8 +249,8 @@ const marketingProjects = [
       "Visual Identity Design ",
       "Performance Tracking ",
     ],
-      url: "https://vercel.com/infos-projects-e2fe1ec1",
-    buttonText: "Visit Website",
+      url: " ",
+    buttonText: " ",
   },
   {
     id: 8,
@@ -288,8 +288,8 @@ const marketingProjects = [
       "Education Marketing ",
       "Keyword Research & Analytics ",
     ],
-      url: "https://vercel.com/infos-projects-e2fe1ec1",
-    buttonText: "Visit Website",
+      url: " ",
+    buttonText: " ",
   },
   {
     id: 9,
@@ -327,8 +327,8 @@ const marketingProjects = [
       "Healthcare Marketing ",
       "Content Optimization ",
     ],
-      url: "https://vercel.com/infos-projects-e2fe1ec1",
-    buttonText: "Visit Website",
+      url: " ",
+    buttonText: " ",
   },
 ];
 

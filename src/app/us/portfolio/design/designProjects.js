@@ -12,7 +12,7 @@ const designProjects = [
     tools: ["adobe", "animate cc", "premiere pro"],
     // client: "BookPremiumFare.com (by Infogentech)",
     location: "India (Remote Collaboration) ",
-    url: "https://vercel.com/infos-projects-e2fe1ec1",
+    url: "https://res.cloudinary.com/dpmceu66e/video/upload/v1762150319/blog-app/blogs/blogs/1762150307305-britishrajvideo.mp4",
     buttonText: "Visit Website",
     modules: [
       "Research",
@@ -44,7 +44,7 @@ const designProjects = [
     duration: "2 weeks",
     tools: ["Adobe Illustrator", "Figma"],
     location: "India (Remote)",
-     url: "https://vercel.com/infos-projects-e2fe1ec1",
+     url: "",
     buttonText: "Visit Website",
     modules: ["Logo Design", "Brand Identity", "Vector Graphics"],
     expertise: ["Brand Design", "Visual Identity", "Typography"],

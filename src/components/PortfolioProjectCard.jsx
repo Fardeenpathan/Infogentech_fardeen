@@ -6,13 +6,14 @@ import { motion } from "framer-motion";
 
 const PortfolioProjectCard = ({ project, index , route }) => {
   return (
-    <motion.div
+    <motion.a
       key={project.id}
-      className="p-2.5 rounded-xl"
+      className="p-2.5 sm:pb-3 rounded-xl "
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
       viewport={{ once: true }}
+      href={`/portfolio/${route}/${project.slug}`}
     >
       <div className="w-full max-w-[774px]">
         <div className="w-full max-w-[774px] h-70 md:h-110 lg:h-120">
@@ -29,8 +30,7 @@ const PortfolioProjectCard = ({ project, index , route }) => {
             <p className="font-montserrat lg:text-2xl md:text-xl text-sm font-normal leading-7 tracking-normal">
               {project.title}
             </p>
-            <Link
-              href={`/portfolio/${route}/${project.slug}`}
+            <p
               className="hidden lg:block"
             >
               <Icons
@@ -39,8 +39,8 @@ const PortfolioProjectCard = ({ project, index , route }) => {
                 width={59}
                 color="#141313"
               />
-            </Link>
-            <Link
+            </p>
+            <p
               href={`/portfolio/${route}/${project.slug}`}
               className="block lg:hidden"
             >
@@ -50,11 +50,11 @@ const PortfolioProjectCard = ({ project, index , route }) => {
                 width={26}
                 color="#141313"
               />
-            </Link>
+            </p>
           </div>
         </div>
       </div>
-    </motion.div>
+    </motion.a>
   );
 };
 
