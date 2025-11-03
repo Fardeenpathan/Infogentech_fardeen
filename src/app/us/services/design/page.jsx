@@ -115,8 +115,11 @@ const Design = () => {
       id: "04",
       title: "Logo Design",
       image: "/assist/services/design/logo.jpeg",
-      subServices: [
-        // empty by design
+       subServices: [
+        { id: "01", title: "Minimalist logo" ,desc: "Sleek and simple designs for modern brands."},
+        { id: "02", title: "Animated logo", desc: "Bringing your brand to life with motion." },
+        { id: "03", title: "Custom Logo Design", desc: "Tailored designs that reflect your brand identity." },
+        { id: "04", title: "3D Logo", desc: "Adding depth and dimension to your brand." },
       ],
     },
   ];

@@ -127,7 +127,7 @@ const SlugPage = () => {
                   </div>
                 </div>
 
-             <div className="flex flex-col gap-3 items-center md:items-end col-span-2 lg:col-span-1 w-fit">
+             <div className="flex flex-col gap-3 items-center md:items-end col-span-2 lg:col-span-1 w-fit pb-2">
                           {project.url && (
                             <a
                               href={project.url}

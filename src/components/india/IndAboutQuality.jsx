@@ -4,7 +4,7 @@ const items = [
   { id: 1, name: "Best quality support", icon: "Trust" },
   { id: 2, name: "Serve the best", icon: "ServeBest" },
   { id: 3, name: "Money back guarantee", icon: "Money" },
-  { id: 4, name: "Trusted Professionals", icon: "Trust" },
+  { id: 4, name: "Trusted Professionals", icon: "TrustInd" },
 ];
 
 export default function IndAboutQuality() {

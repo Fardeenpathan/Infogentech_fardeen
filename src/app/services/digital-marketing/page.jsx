@@ -54,7 +54,7 @@ const Marketing = () => {
       title: "Marketing Strategy",
       description:
         "Create comprehensive strategies focused on long-term brand growth, audience engagement, and ROI.",
-      image: "/images/services/marketing-strategy.jpg",
+      image: "/assist/services/marketing/marketing.png",
       subServices: [
         { id: "01", title: "ROI-Driven Campaign Strategies" },
         { id: "02", title: "B2B Content Strategies" },
@@ -70,7 +70,7 @@ const Marketing = () => {
       title: "Performance Marketing",
       description:
         "Targeted, measurable campaigns to drive traffic, sales, and conversion through various ad platforms.",
-      image: "/images/services/performance-marketing.jpg",
+       image: "/assist/services/marketing/marketing.png",
       subServices: [
         { id: "01", title: "Pay-Per-Click Advertising (PPC)" },
         { id: "02", title: "Google Ads Campaign Management" },
@@ -91,7 +91,7 @@ const Marketing = () => {
       title: "CRM & Automation",
       description:
         "Automate marketing flows and nurture customer relationships through personalized messaging.",
-      image: "/images/services/crm-automation.jpg",
+     image: "/assist/services/marketing/marketing.png",
       subServices: [
         { id: "01", title: "Email Marketing" },
         { id: "02", title: "Email Campaign Design" },
@@ -106,7 +106,7 @@ const Marketing = () => {
       title: "Audience Engagement Strategy",
       description:
         "Grow and retain loyal audiences through social campaigns, influencer outreach, and strategic content.",
-      image: "/images/services/audience-engagement.jpg",
+      image: "/assist/services/marketing/marketing.png",
       subServices: [
         { id: "01", title: "Social Media Marketing (SMO)" },
         { id: "02", title: "Instagram, Facebook & YouTube Marketing" },
@@ -125,7 +125,7 @@ const Marketing = () => {
       title: "Search Engine Optimization (SEO)",
       description:
         "Optimize your website for better visibility, organic traffic, and search engine rankings.",
-      image: "/images/services/seo.jpg",
+      image: "/assist/services/marketing/marketing.png",
       subServices: [
         { id: "01", title: "Search Engine Optimization (SEO)" },
         { id: "02", title: "Technical SEO Audits" },
@@ -141,7 +141,7 @@ const Marketing = () => {
       title: "Content Marketing",
       description:
         "Create valuable and consistent content to attract, engage, and convert your target audience.",
-      image: "/images/services/content-marketing.jpg",
+      image: "/assist/services/marketing/marketing.png",
       subServices: [
         { id: "01", title: "Blog Writing & SEO Copy" },
         { id: "02", title: "Social Content & Captions" },
@@ -155,7 +155,7 @@ const Marketing = () => {
       title: "Analytics & Reporting",
       description:
         "Track campaign performance with custom dashboards and actionable insights to guide decision-making.",
-      image: "/images/services/analytics-reporting.jpg",
+     image: "/assist/services/marketing/marketing.png",
       subServices: [
         { id: "01", title: "Google Analytics Setup" },
         { id: "02", title: "Performance Monitoring & CRO" },

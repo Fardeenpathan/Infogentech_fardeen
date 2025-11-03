@@ -11,7 +11,7 @@ const Design = () => {
       title: "Graphic Design",
       description:
         "Creative visual content for print and digital platforms to elevate your brand presence.",
-      image: "/images/services/graphic-design.jpg",
+      image: "/assist/services/design/graphic.jpeg",
       subServices: [
         { id: "01", title: "Print and Digital Graphic Design" },
         { id: "02", title: "Presentation Design" },
@@ -27,7 +27,7 @@ const Design = () => {
       title: "UI/UX Design",
       description:
         "User-centered design strategies to create engaging and functional digital experiences.",
-      image: "/images/services/ui-ux.jpg",
+      image: "/assist/services/design/ui.png",
       subServices: [
         { id: "01", title: "UI/UX Design & Wireframing" },
         { id: "02", title: "Mobile-first Responsive Design" },
@@ -41,7 +41,7 @@ const Design = () => {
       title: "Branding",
       description:
         "Craft a powerful brand identity with strategic design and messaging.",
-      image: "/images/services/branding.jpg",
+    image: "/assist/services/design/branding.png",
       subServices: [
         { id: "01", title: "Corporate Identity Design" },
         { id: "02", title: "Brand Guidelines" },
@@ -54,7 +54,7 @@ const Design = () => {
       title: "Logo Design",
       description:
         "Custom logo designs that capture your brand’s personality and values.",
-      image: "/images/services/logo-design.jpg",
+       image: "/assist/services/design/logo.jpeg",
       subServices: [
         { id: "01", title: "Minimalist logo" },
         { id: "02", title: "Animated logo" },
