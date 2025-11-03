@@ -1,3 +1,63 @@
+export const metadata = {
+  title: "Graphic Design| UI/UX Design | Branding & Logo Design | Infogentech Softwares LLP",
+  description:
+    "Enhance your brand with expert Graphic Design, UI/UX Design, Branding, and Logo Design services that create impactful digital experiences.",
+  keywords: [
+    "Graphic Design",
+    "UI/UX Design",
+    "Branding",
+    "Landing Page Design",
+    "Corporate Identity Design",
+    "Logo Design",
+  ],
+  metadataBase: new URL("https://infogentech.com"),
+  alternates: {
+    canonical: "/services/design",
+    languages: {
+      "en-US": "/services/design",
+    },
+  },
+  openGraph: {
+    title: "Graphic Design, UI/UX Design, Branding & Logo Design | Infogentech Softwares LLP",
+    description:
+      "Enhance your brand with expert Graphic Design, UI/UX Design, Branding, and Logo Design services that create impactful digital experiences.",
+    url: "https://infogentech.com/services/design",
+    siteName: "Infogentech",
+    images: [
+      {
+        url: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
+        width: 200,
+        height: 60,
+        alt: "Infogentech Logo",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Graphic Design, UI/UX Design, Branding & Logo Design | Infogentech Softwares LLP",
+    description:
+      "Enhance your brand with expert Graphic Design, UI/UX Design, Branding, and Logo Design services that create impactful digital experiences.",
+    site: "@infogentech",
+    images: [
+      "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
+    ],
+  },
+  robots: "index, follow, all",
+  authors: [{ name: "InfoGenTech" }],
+  publisher: "InfoGenTech",
+  alternates: {
+    canonical: "https://infogentech.com/services/design",
+    languages: {
+      "en-US": "https://infogentech.com/services/design",
+    },
+  },
+  other: {
+    "geo.region": "IN",
+    "http-equiv": "x-ua-compatible",
+    distribution: "global",
+  },
+};
 
 import IndServicesHeader from "@/components/india/IndServicesHeader";
 import IndAllServices from "@/components/india/IndAllServices";

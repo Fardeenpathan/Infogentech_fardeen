@@ -1,44 +1,60 @@
-
-import IndServiceCard from "@/components/india/IndServiceCard";
-import IndServicesHeader from "@/components/india/IndServicesHeader";
-import IndAllServices from "@/components/india/IndAllServices";
-import IndServiceDesc from "@/components/india/IndServiceDesc";
-import MovingTextBanner from "@/components/MovingTextBanner";
 export const metadata = {
-  title: "Digital Marketing Services and Web Solution Company | Infogentech Softwares LLP",
+  title: "Marketing Strategy & Performance | SEO & CRM Solutions | Infogentech Softwares LLP",
   description:
-    "Top digital marketing and web solutions provider globally. We offer expert services to enhance your online presence, drive traffic, and grow your business.",
-  keywords:
-    "Online Marketing Services, Online Internet Marketing, Marketing Solution, IT Solutions Services",
+    "Boost your business with expert Marketing Strategy, Performance Marketing, CRM & Automation, SEO, Content Marketing, and Audience Engagement Strategy.",
+  keywords: [
+    "B2B Content Strategies",
+    "ROI-Driven Campaign Strategies",
+    "Google Ads Campaign Management",
+    "Pay-Per-Click Advertising (PPC)",
+    "Conversion Tracking & Optimization",
+    "Email Marketing Services",
+    "Social Media Marketing (SMO)",
+    "Local SEO for Businesses",
+    "Keyword Research & Competitor Analysis",
+    "Blog Writing & SEO Copy",
+    "Google Analytics Setup",
+  ],
+  metadataBase: new URL("https://infogentech.com"),
+  alternates: {
+    canonical: "/services/digital-marketing",
+    languages: {
+      "en-US": "/services/digital-marketing",
+    },
+  },
   openGraph: {
-    title: "Digital Marketing Services and Web Solution Company ",
+    title: "Marketing Strategy & Performance | SEO & CRM Solutions | Infogentech Softwares LLP",
     description:
-      "Top digital marketing and web solutions provider globally. We offer expert services to enhance your online presence, drive traffic, and grow your business.",
-    url: "https://infogentech.com/services",
-    siteName: "infogentech",
-    type: "website",
+      "Boost your business with expert Marketing Strategy, Performance Marketing, CRM & Automation, SEO, Content Marketing, and Audience Engagement Strategy.",
+    url: "https://infogentech.com/services/digital-marketing",
+    siteName: "Infogentech",
     images: [
       {
         url: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
-        alt: "Infogentech",
+        width: 200,
+        height: 60,
+        alt: "Infogentech Logo",
       },
     ],
+    type: "website",
   },
   twitter: {
-    card: "summary",
-    title: "Digital Marketing Services and Web Solution Company ",
+    card: "summary_large_image",
+    title: "Marketing Strategy & Performance | SEO & CRM Solutions | Infogentech Softwares LLP",
     description:
-      "Top digital marketing and web solutions provider globally. We offer expert services to enhance your online presence, drive traffic, and grow your business.",
+      "Boost your business with expert Marketing Strategy, Performance Marketing, CRM & Automation, SEO, Content Marketing, and Audience Engagement Strategy.",
     site: "@infogentech",
-    images: ["https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png"],
+    images: [
+      "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
+    ],
   },
   robots: "index, follow, all",
   authors: [{ name: "InfoGenTech" }],
   publisher: "InfoGenTech",
   alternates: {
-    canonical: "https://infogentech.com/services",
+    canonical: "https://infogentech.com/services/digital-marketing",
     languages: {
-      "en-US": "https://infogentech.com/services",
+      "en-US": "https://infogentech.com/services/digital-marketing",
     },
   },
   other: {
@@ -47,6 +63,13 @@ export const metadata = {
     distribution: "global",
   },
 };
+
+import IndServiceCard from "@/components/india/IndServiceCard";
+import IndServicesHeader from "@/components/india/IndServicesHeader";
+import IndAllServices from "@/components/india/IndAllServices";
+import IndServiceDesc from "@/components/india/IndServiceDesc";
+import MovingTextBanner from "@/components/MovingTextBanner";
+
 const Marketing = () => {
   const categories = [
     {
