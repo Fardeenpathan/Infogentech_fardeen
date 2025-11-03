@@ -11,7 +11,7 @@ const contentProjects = [
     tools: ["Next.js", "Google Search Console", "SEMrush"],
     client: "BookPremiumFare.com (by Infogentech)",
     location: "Global (Online Ticket Booking Platform) ",
-    url: "https://vercel.com/infos-projects-e2fe1ec1",
+    url: "",
     buttonText: "Visit Website",
     modules: [
       "Website Development",
@@ -39,7 +39,7 @@ const contentProjects = [
     tools: ["WordPress","Ahrefs", "Google Search Console", "SEMrush"],
     client: "CertStudyMaterial ",
     location: "Global (Online IT Certification Platform)",
-    url: "https://vercel.com/infos-projects-e2fe1ec1",
+    url: "",
     buttonText: "Visit Website",
     modules: [
       "SEO Optimization",

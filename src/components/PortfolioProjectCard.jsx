@@ -30,8 +30,7 @@ const PortfolioProjectCard = ({ project, index , route }) => {
             <p className="font-montserrat lg:text-2xl md:text-xl text-sm font-normal leading-7 tracking-normal">
               {project.title}
             </p>
-            <Link
-              href={`/portfolio/${route}/${project.slug}`}
+            <p
               className="hidden lg:block"
             >
               <Icons
@@ -40,8 +39,8 @@ const PortfolioProjectCard = ({ project, index , route }) => {
                 width={59}
                 color="#141313"
               />
-            </Link>
-            <Link
+            </p>
+            <p
               href={`/portfolio/${route}/${project.slug}`}
               className="block lg:hidden"
             >
@@ -51,7 +50,7 @@ const PortfolioProjectCard = ({ project, index , route }) => {
                 width={26}
                 color="#141313"
               />
-            </Link>
+            </p>
           </div>
         </div>
       </div>

@@ -47,7 +47,7 @@ const developmentProjects = [
     id: 2,
     title: "ShaadiKarwaDu – Wedding Planning & Coordination",
     slug: "shaadiKarwadu-wedding-planning",
-    image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761551557/blog-app/blogs/blogs/1761551548973-shaddikarvado.jpg",
+    image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761992949/blog-app/blogs/blogs/1761992942007-shaadi-karwadu-landing-page-(3)-min.jpg",
     subImage: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761551557/blog-app/blogs/blogs/1761551548973-shaddikarvado.jpg",
     description:
       "Madirakshi, an emerging digital platform, became our marketing partner to improve their app onboarding experience. We redefined the onboarding flow to retain and satisfy our customers while ensuring that they adopt the features. Figma and WordPress aided in creating a fluid, useful process and a higher level of engagement while bringing long engagement periods and customer success with it.",
@@ -79,7 +79,7 @@ const developmentProjects = [
       "Logistics Planning ",
       "Content & Storytelling",
     ],
-      url: "https://vercel.com/infos-projects-e2fe1ec1",
+      url: "",
     buttonText: "Visit Website",
   },
   // {
@@ -198,7 +198,7 @@ const developmentProjects = [
       "Search & Discovery (QR / Image)",
       "Logistics & Delivery Tech",
     ],
-      url: "https://vercel.com/infos-projects-e2fe1ec1",
+      url: "https://soouqna.com/",
     buttonText: "Visit Website",
   },
 ];

@@ -125,7 +125,7 @@ const marketingProjects = [
       "Influencer/Partner Collaborations ",
       "Data-Driven Optimization ",
     ],
-      url: "https://vercel.com/infos-projects-e2fe1ec1",
+      url: "",
     buttonText: "Visit Website",
   },
   {
@@ -169,7 +169,7 @@ const marketingProjects = [
       "High-Intent Keyword Targeting ",
       "Ad Budget Scaling & ROI Optimization ",
     ],
-      url: "https://vercel.com/infos-projects-e2fe1ec1",
+      url: "",
     buttonText: "Visit Website",
   },
   {
@@ -211,7 +211,7 @@ const marketingProjects = [
       "B2B & B2C Audience Segmentation ",
       "Revenue Modeling & ROI Optimization",
     ],
-      url: "https://vercel.com/infos-projects-e2fe1ec1",
+      url: "",
     buttonText: "Visit Website",
   },
   {
@@ -249,7 +249,7 @@ const marketingProjects = [
       "Visual Identity Design ",
       "Performance Tracking ",
     ],
-      url: "https://vercel.com/infos-projects-e2fe1ec1",
+      url: "",
     buttonText: "Visit Website",
   },
   {
@@ -288,7 +288,7 @@ const marketingProjects = [
       "Education Marketing ",
       "Keyword Research & Analytics ",
     ],
-      url: "https://vercel.com/infos-projects-e2fe1ec1",
+      url: "",
     buttonText: "Visit Website",
   },
   {
@@ -327,7 +327,7 @@ const marketingProjects = [
       "Healthcare Marketing ",
       "Content Optimization ",
     ],
-      url: "https://vercel.com/infos-projects-e2fe1ec1",
+      url: "",
     buttonText: "Visit Website",
   },
 ];

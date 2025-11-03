@@ -123,6 +123,7 @@ const SlugPage = () => {
                 </div>
 
                 {/* Make this span full width on small screens */}
+                {project.url?.trim() && project.buttonText?.trim() && (
                 <div className="flex flex-col gap-3 items-center md:items-end col-span-2 lg:col-span-1 w-fit pb-2">
                   {project.url && (
                     <a
@@ -146,6 +147,7 @@ const SlugPage = () => {
                     </a>
                   )}
                 </div>
+                )}
               </div>
             </div>
           </div>

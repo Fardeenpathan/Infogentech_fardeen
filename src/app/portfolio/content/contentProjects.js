@@ -11,7 +11,7 @@ const contentProjects = [
     tools: ["Next.js", "Google Search Console", "SEMrush"],
     client: "BookPremiumFare.com (by Infogentech)",
     location: "Global (Online Ticket Booking Platform) ",
-    url: "https://vercel.com/infos-projects-e2fe1ec1", // link missing
+    url: "", // link missing
     buttonText: "Visit Website",
     modules: [
       "Website Development",
@@ -45,7 +45,7 @@ const contentProjects = [
       "Technical SEO ",
       "Monitoring & Analysis "
     ],
-    url: "https://vercel.com/infos-projects-e2fe1ec1", // link missing
+    url: "", // link missing
     buttonText: "Visit Website",
     expertise: ["Content Writing & Optimization", "On-page & Off-page SEO","Technical SEO ", "Keyword Research", "Performance Tracking"],
     "points": [
