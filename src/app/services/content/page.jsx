@@ -1,3 +1,61 @@
+export const metadata = {
+  title: "Content Design Experts | Photo, Video & Audio Solutions | Infogentech Softwares LLP",
+  description:
+    "Create impact with expert Photo & Video Production, Visual Content Design, Audio & Motion Graphics, and engaging Blog Posts & Articles.",
+  keywords: [
+    "Photo & Video Production",
+    "Visual Content Design",
+    "Audio & Motion Graphics",
+    "Blog Posts & Articles",
+  ],
+  metadataBase: new URL("https://infogentech.com"),
+  alternates: {
+    canonical: "/services/content",
+    languages: {
+      "en-US": "/services/content",
+    },
+  },
+  openGraph: {
+    title: "Content Design Experts | Photo, Video & Audio Solutions | Infogentech Softwares LLP",
+    description:
+      "Create impact with expert Photo & Video Production, Visual Content Design, Audio & Motion Graphics, and engaging Blog Posts & Articles.",
+    url: "https://infogentech.com/services/content",
+    siteName: "Infogentech",
+    images: [
+      {
+        url: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
+        width: 200,
+        height: 60,
+        alt: "Infogentech Logo",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Content Design Experts | Photo, Video & Audio Solutions | Infogentech Softwares LLP",
+    description:
+      "Create impact with expert Photo & Video Production, Visual Content Design, Audio & Motion Graphics, and engaging Blog Posts & Articles.",
+    site: "@infogentech",
+    images: [
+      "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
+    ],
+  },
+  robots: "index, follow, all",
+  authors: [{ name: "InfoGenTech" }],
+  publisher: "InfoGenTech",
+  alternates: {
+    canonical: "https://infogentech.com/services/content",
+    languages: {
+      "en-US": "https://infogentech.com/services/content",
+    },
+  },
+  other: {
+    "geo.region": "IN",
+    "http-equiv": "x-ua-compatible",
+    distribution: "global",
+  },
+};
 
 import IndServicesHeader from "@/components/india/IndServicesHeader";
 import IndAllServices from "@/components/india/IndAllServices";
@@ -62,16 +120,10 @@ const categories = [
     ],
   },
 ];
-
-
-
-
-
   return (
     <>
       <IndServicesHeader />
         <IndAllServices activeService="Content" />
-      
        <div className="container mx-auto lg:mt-24 xl:px-10 md:px-5 px-2">
         <div className="lg:pb-20 pb-4">
           <IndServiceDesc/>
