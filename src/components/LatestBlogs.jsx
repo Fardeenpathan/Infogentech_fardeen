@@ -1,21 +1,40 @@
 
 "use client";
 import { useState, useEffect } from "react";
+import { useSelector } from 'react-redux';
+import { usePathname } from 'next/navigation';
 import MidHeader from "./MidHeader";
 import Icons from "./ui/Icon";
 import HomeBlogCardsd from "./HomeBlogCardsd";
+import { addCountryFilters, getRouteType } from '@/utils/countryUtils';
 
 export default function LatestBlogs() {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
+  
+  // Get country code from Redux store and pathname for country-specific filtering
+  const countryCode = useSelector((state) => state.countryCode.value);
+  const pathname = usePathname();
 
   useEffect(() => {
     const fetchRecentBlogs = async () => {
       try {
         setLoading(true);
-        const response = await fetch(
-          `${process.env.NEXT_PUBLIC_API_URL}/api/blogs?page=1&limit=3`
-        );
+        
+        let url = `${process.env.NEXT_PUBLIC_API_URL}/api/blogs`;
+        const params = new URLSearchParams();
+        params.append('page', '1');
+        params.append('limit', '3');
+        
+        // Add country and region filtering based on detected country and route type
+        if (countryCode && pathname) {
+          const routeType = getRouteType(pathname);
+          addCountryFilters(params, countryCode, routeType);
+        }
+        
+        url += '?' + params.toString();
+        
+        const response = await fetch(url);
         if (response.ok) {
           const data = await response.json();
           if (data.success && data.data) {
@@ -30,7 +49,7 @@ export default function LatestBlogs() {
     };
 
     fetchRecentBlogs();
-  }, []);
+  }, [countryCode, pathname]);
   return (
     <div className="py-8 lg:py-20 ">
       <MidHeader
