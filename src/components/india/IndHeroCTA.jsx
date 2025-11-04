@@ -7,7 +7,7 @@ import IndButton from "./ui/IndButton";
 export default function IndHeroCTA() {
   return (
     <div className="container mx-auto pb-10">
-        <section className="relative flex lg:h-96 h-64 flex-col items-center justify-center text-center  rounded-2xl overflow-hidden bg-[#f5efff]">
+        <section className="relative flex lg:h-96 h-64 flex-col items-center justify-center text-center  md:rounded-2xl overflow-hidden bg-[#f5efff]">
 
       <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 z-0 flex justify-center">
         <Icons name="IndCurve" />
