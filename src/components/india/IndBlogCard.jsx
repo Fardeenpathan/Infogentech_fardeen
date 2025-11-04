@@ -25,7 +25,7 @@ export default function HomeBlogCardsd({ blog }) {
         </div>
         <div className=" pb-2.5 flex justify-between flex-col h-[180px] relative">
           <div>
-            <h4 className="text-gray-600 font-montserrat font-semibold text-xl line-clamp-2 flex justify-between">
+            <h4 className="text-gray-600 font-montserrat font-semibold text-2xl line-clamp-2 flex justify-between">
               {blog.title}  <Link href={`/blog/${blog.slug}`}>
                 <Icons name="BlogArrow" />
               </Link>

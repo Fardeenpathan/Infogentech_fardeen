@@ -5,11 +5,16 @@ import Image from "next/image";
 
 export default function IndWhyChooseUs() {
   const pills = [
-    { text: "Powerful SAAS", style: "xl:-top-34 -top-6 left-8 rotate-12" },
-    { text: "Design", style: "xl:-top-14 right-8  -top-5 -rotate-12" },
-    { text: "Development", style: "xl:bottom-14 bottom-1 xl:-right-20 right-10 rotate-12" },
-    { text: "Growth", style: "xl:-bottom-24 bottom-8 right-58 -rotate-12" },
-    { text: "Marketing", style: "xl:-bottom-24 bottom-0 left-8 rotate-12" },
+    { text: "Powerful SAAS", style: "xl:-top-34 -top-6 left-8 rotate-12 md:block hidden" },
+    { text: "Design", style: "xl:-top-14 right-8  -top-5 -rotate-12 md:block hidden" },
+    { text: "Powerful SAAS", style: "-bottom-15 left-0 rotate-12 md:hidden block" },
+    { text: "Design", style: " right-8  -bottom-0 -rotate-12 md:hidden block" },
+     { text: "Development", style: " -bottom-15 right-28  rotate-12 md:hidden block" },
+    { text: "Growth", style: " -bottom-5 left-20 -rotate-12 md:hidden block" },
+    { text: "Marketing", style: " -bottom-5 right-25 rotate-12 md:hidden block" },
+    { text: "Development", style: "xl:bottom-14 bottom-1 xl:-right-20 right-10 rotate-12 md:block hidden" },
+    { text: "Growth", style: "xl:-bottom-24 bottom-8 right-58 -rotate-12 md:block hidden" },
+    { text: "Marketing", style: "xl:-bottom-24 bottom-0 left-8 rotate-12 md:block hidden" },
   ];
 
   return (

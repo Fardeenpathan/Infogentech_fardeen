@@ -3,6 +3,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import Icons from "@/components/ui/Icon";
 import IndMidHeader from "./IndMidHeader";
+import IndTopicHeader from "../IndTopicHeader";
 
 const reviews = [
   {
@@ -11,7 +12,6 @@ const reviews = [
     name: "Vipin Roy",
     role: "Entrepreneur",
     img: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761126237/blog-app/blogs/blogs/1761126235663-content-confident-young-man-leaning-railing-modern-office.jpg",
-    
   },
   {
     id: 2,
@@ -19,14 +19,13 @@ const reviews = [
     name: "Gautam Singh",
     role: "Manager",
     img: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761126289/blog-app/blogs/blogs/1761126287051-successful-businessman.jpg",
-   
   },
   {
     id: 3,
     text: "Infogenetch built my Shopify eCommerce store with amazing design, smooth functionality, and quick delivery. Great communication and excellent post-launch support.",
     name: "Neha Gupta",
     role: "Founder StartTech",
-     img: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761126387/blog-app/blogs/blogs/1761126384911-indian-woman-posing-cute-stylish-outfit-camera-smiling.jpg",
+    img: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761126387/blog-app/blogs/blogs/1761126384911-indian-woman-posing-cute-stylish-outfit-camera-smiling.jpg",
   },
   {
     id: 4,
@@ -48,18 +47,30 @@ const containerVariants = {
 
 const cardVariants = {
   hidden: { opacity: 0, y: 50, scale: 0.95 },
-  show: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.6, ease: "easeOut" } },
+  show: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
 };
 
 const IndTestomonial = () => {
   return (
-    <section className="xl:mt-20 mt-10 max-w-7xl mx-auto xl:pb-20 pb-0 font-montserrat">
-      <IndMidHeader
+    <section className="mt-20 max-w-7xl mx-auto xl:pb-20 pb-0 font-montserrat">
+      <div className="lg:block hidden">
+        <IndMidHeader
         title="Client Testimonials"
         subtitle="What are they talking about?"
         desc=""
       />
+      </div>
       
+      <IndTopicHeader
+        className="!flex-col gap-2 lg:gap-10 lg:hidden px-2"
+        title="Client Testimonials"
+        subtitle="What are they talking about?"
+      />
       <motion.div
         className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 xl:gap-6 gap-3 mt-12 justify-items-center px-4"
         variants={containerVariants}
@@ -74,7 +85,6 @@ const IndTestomonial = () => {
             className="w-full [perspective:1000px] group"
           >
             <div className="relative w-full h-104 transition-transform duration-700 ease-in-out [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-              
               <div className="absolute inset-0 bg-[#fffbfb] py-10 px-6 rounded-2xl border border-[#F5F5F5] [backface-visibility:hidden] shadow-md">
                 <Icons name="Quote" />
                 <p className="text-lg font-medium mt-6">{review.text}</p>
@@ -104,7 +114,6 @@ const IndTestomonial = () => {
                   className="object-cover rounded-2xl"
                 />
               </div>
-
             </div>
           </motion.div>
         ))}
