@@ -18,7 +18,7 @@ export default function IndWhyChooseUs() {
   ];
 
   return (
-    <section className="lg:mt-15 2xl:mt-20 mt-10 container mx-auto lg:px-10 px-2 ">
+    <section className="lg:mt-20 mt-10 container mx-auto lg:px-10 px-2 ">
       <IndTopicHeader
         title="We Do More For Your Business"
         subtitle="Why Choose Us!"
@@ -41,7 +41,7 @@ export default function IndWhyChooseUs() {
             className="shrink-0"
           >
             <Image
-              src="/assist/IndImg/homePage/service1.jpg"
+              src="https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png"
               alt="service"
               width={625}
               height={400}
@@ -57,7 +57,7 @@ export default function IndWhyChooseUs() {
           >
             {pills.map((pill, index) => (
               <motion.p
-                key={pill.text}
+                key={index}
                 className={`absolute ${pill.style} xl:px-8 xl:py-3 px-3 py-1 bg-primary rounded-4xl text-white opacity-30`}
                 initial={{ y: 0, scale: 0.9 }}
                 animate={{ y: [-5, 5, -5], scale: [0.9, 1, 0.9] }}

@@ -29,7 +29,7 @@ const reviews = [
   },
   {
     id: 4,
-    text: "Their digital marketing services are excellent. Infogentech helped my brand reach the right audience and grow online. ",
+    text: "Their digital marketing services are excellent. Infogentech helped my brand reach the right audience and grow online.",
     name: "Kriti Sharma",
     role: "Entrepreneur",
     img: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761126328/blog-app/blogs/blogs/1761126326558-writing-dairy-note-coffee-shop-concept-as-memory-life-woman-coffee-shop-smiling-woman-making-notes-notepad.jpg",
@@ -39,9 +39,7 @@ const reviews = [
 const containerVariants = {
   hidden: {},
   show: {
-    transition: {
-      staggerChildren: 0.2,
-    },
+    transition: { staggerChildren: 0.2 },
   },
 };
 
@@ -57,22 +55,73 @@ const cardVariants = {
 
 const IndTestomonial = () => {
   return (
-    <section className="mt-20 max-w-7xl mx-auto xl:pb-20 pb-0 font-montserrat">
+    <section className="mt-20 max-w-7xl mx-auto xl:pb-20 pb-0 font-montserrat px-2">
       <div className="lg:block hidden">
         <IndMidHeader
-        title="Client Testimonials"
-        subtitle="What are they talking about?"
-        desc=""
-      />
+          title="Client Testimonials"
+          subtitle="What are they talking about?"
+          desc=""
+        />
       </div>
-      
+
       <IndTopicHeader
-        className="!flex-col gap-2 lg:gap-10 lg:hidden px-2"
+        className="!flex-col gap-2 lg:gap-10 block lg:hidden"
         title="Client Testimonials"
         subtitle="What are they talking about?"
       />
       <motion.div
-        className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 xl:gap-6 gap-3 mt-12 justify-items-center px-4"
+        className="flex lg:hidden gap-4 overflow-x-scroll no-scrollbar scroll-smooth"
+        style={{
+          scrollbarWidth: "none",
+          msOverflowStyle: "none",
+        }}
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+      >
+        {reviews.map((review) => (
+          <motion.div
+            key={review.id}
+            variants={cardVariants}
+            className="min-w-[270px] py-1 sm:min-w-[300px] md:min-w-[350px] flex-shrink-0 [perspective:1000px] group"
+          >
+            <div className="relative w-full h-96 transition-transform duration-700 ease-in-out [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+              <div className="absolute inset-0 bg-[#fffbfb] py-6 px-4 rounded-2xl border border-[#F5F5F5] [backface-visibility:hidden] shadow-md">
+                <Icons name="Quote" />
+                <p className="text-base font-medium mt-3">{review.text}</p>
+                <div className="flex gap-3 absolute bottom-4 left-4">
+                  <Image
+                    src={review.img}
+                    alt={review.name}
+                    width={50}
+                    height={50}
+                    className="rounded-full w-12 h-12 object-cover shrink-0"
+                  />
+                  <div>
+                    <h4 className="text-base text-gray-400 font-semibold">
+                      {review.name}
+                    </h4>
+                    <p className="text-sm text-gray-200 font-medium">
+                      {review.role}
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute inset-0 rounded-2xl overflow-hidden [transform:rotateY(180deg)] [backface-visibility:hidden] shadow-lg">
+                <Image
+                  src={review.img}
+                  alt={review.name}
+                  fill
+                  className="object-cover rounded-2xl"
+                />
+              </div>
+            </div>
+          </motion.div>
+        ))}
+      </motion.div>
+      <motion.div
+        className="hidden lg:grid grid-cols-4 xl:gap-6 gap-3 mt-12 justify-items-center"
         variants={containerVariants}
         initial="hidden"
         whileInView="show"
@@ -91,10 +140,10 @@ const IndTestomonial = () => {
                 <div className="flex gap-6 absolute bottom-5 left-6">
                   <Image
                     src={review.img}
-                    alt="Review"
+                    alt={review.name}
                     width={55}
                     height={55}
-                    className="rounded-full w-24 h-24 md:w-14 md:h-14 object-cover shrink-0"
+                    className="rounded-full w-14 h-14 object-cover shrink-0"
                   />
                   <div>
                     <h4 className="text-2xl text-gray-400 font-semibold">

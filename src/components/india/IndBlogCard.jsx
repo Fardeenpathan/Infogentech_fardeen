@@ -6,7 +6,7 @@ export default function HomeBlogCardsd({ blog }) {
   return (
     <div
       key={blog.id || blog._id}
-      className="relative rounded-xl h-[475px]"
+      className="relative rounded-xl "
     >
       <div className="flex flex-col justify-between h-full">
         {blog.featuredImage?.url ? (
@@ -15,7 +15,7 @@ export default function HomeBlogCardsd({ blog }) {
             alt={blog.title || "Blog Image"}
             width={502}
             height={277}
-            className="w-full h-64 rounded-xl object-fill"
+            className="w-full h-70 rounded-xl object-fit"
           />
         ) : null}
         <div className="flex items-center justify-between text-primary py-5">

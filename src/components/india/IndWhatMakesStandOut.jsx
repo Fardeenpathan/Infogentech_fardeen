@@ -32,6 +32,7 @@ export default function WhatMakesStandOut() {
     <section className="w-full container mx-auto px-5 sm:px-8 md:px-10 lg:py-12 bg-transparent lg:mt-20">
       <div className="hidden lg:block">
         <IndMidHeader
+        className="text-center"
           title="What Makes"
           subtitle="Infogentech Stand Out in Digital Marketing"
           description="We are a worldwide agency that manages higher-level digital marketing for clients around the globe. Our highly qualified and experienced team gives quality output. Customer satisfaction and long-term success are what we aim to achieve for each client that we have. We assure effective growth across the globe and would provide services without fear. Our vast client and sector experience shines through in performance."
@@ -43,9 +44,13 @@ export default function WhatMakesStandOut() {
            subtitle="Infogentech Stand Out in Digital Marketing"
           description="We are a worldwide agency that manages higher-level digital marketing for clients around the globe. Our highly qualified and experienced team gives quality output. Customer satisfaction and long-term success are what we aim to achieve for each client that we have. We assure effective growth across the globe and would provide services without fear. Our vast client and sector experience shines through in performance."
         />
-      
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-10 ">
+          <p
+        className="font-montserrat font-medium xl:text-lg text-sm xl:leading-[150%] tracking-[-0.02em] lg:text-center text-start  py-4"
+      >
+        Through the years, we have groomed brands as an IT solutions firm. Do not let your competitors overshadow your web presence. Our experts will study trends and optimise your brand visibility. Customized SEO techniques give us the power to measure real success. Let our IT experts work on expanding your business.
+       </p>
+        
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-10">
         {cards.map((card, index) => (
           <div
             key={index}

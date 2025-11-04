@@ -97,7 +97,7 @@ const IndFaqsBlog = ({ blog }) => {
                       {faq.question}
                     </div>
                     <motion.div
-                      animate={{ rotate: openId === faq.id ? 90 : 0 }}
+                      animate={{ rotate: openId === faq.id ? 0 : 90 }}
                       transition={{ duration: 0.3 }}
                       className={`w-15 h-15 rounded-full flex items-center justify-center z-10 cursor-pointer shrink-0 ${
                         openId === faq.id ? "bg-white" : "bg-[#F6F6F6]"

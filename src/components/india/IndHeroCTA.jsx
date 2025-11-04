@@ -24,7 +24,7 @@ export default function IndHeroCTA() {
             transition={{ duration: 0.6, delay: 0.9 }}
             viewport={{ once: true }}
           >
-            <IndButton variant="outline" className="font-semibold !leading-6 !text-lg font-montserrat">
+            <IndButton variant="outline" className="font-semibold !leading-6 font-montserrat">
               Let's Talk
             </IndButton>
           </motion.div>

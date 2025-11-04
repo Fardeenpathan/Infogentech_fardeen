@@ -11,7 +11,7 @@ const Button = ({
   onClick,
   ...props 
 }) => {
-  const baseClasses = 'px-11 py-3.5 bg-primary rounded-4xl cursor-pointer hover:opacity-90 transition text-white font-montserrat font-medium leading-6 md:text-xl';
+  const baseClasses = 'px-11 py-3.5 bg-primary rounded-4xl cursor-pointer hover:opacity-90 transition text-white font-montserrat font-medium leading-6 !md:text-lg';
   
   const variants = {
     primary: 'bg-primary hover:bg-purple-800 text-white',
