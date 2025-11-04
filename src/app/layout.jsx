@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
        <head>
         <link rel="icon" type="image/x-icon" href="/favicon.ico"></link>
       </head>
-      <body>
+      <body suppressHydrationWarning={true}>
         <Provider store={store}>
           {isUS ? (
             <ClientLayoutControls>{children}</ClientLayoutControls>
