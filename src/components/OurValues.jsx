@@ -42,7 +42,7 @@ export default function OurValues() {
         name="Our Values"
         subheading="Core beliefs behind everything we build"
       />
-      <div className="flex justify-between flex-col xl:flex-row">
+      <div className="flex justify-between flex-col xl:flex-row relative lg:-top-15">
         <div className=" flex justify-center items-center flex-col xl:flex-row">
           <div
             className="w-50 h-56 bg-transparent border border-white/10 rounded-2xl  flex justify-center items-center backdrop-blur-[51.97px]
@@ -82,7 +82,7 @@ export default function OurValues() {
                 <h2 className="font-jost font-medium text-2xl leading-[120%] tracking-[0.03em] mt-6">
                   {service.title}
                 </h2>
-                <p className=" text-xl mt-3 leading-[120%] flex text-center xl:text-lg text-[#73737F]">
+                <p className=" text-lg mt-3 leading-[120%] flex text-center xl:text-lg text-[#73737F]">
                   {service.desc}
                 </p>
               </div>

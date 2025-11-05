@@ -13,17 +13,17 @@ export function IndFooter() {
           <p className="font-avalors font-medium xl:text-[45px] xl:leading-14 leading-6 md:leading-9 text-lg md:text-3xl">
             Start Earlier, Grow Faster <br /> Without Hidden Costs.
           </p>
-          <div className="w-full md:w-1/2 lg:w-1/3 flex justify-center md:justify-end space-x-5 font-jost mt-6">
+           <div className="w-full md:w-1/2 lg:w-1/3 flex justify-center md:justify-end space-x-5 font-jost mt-6">
             <Link
-              href="/services/design"
-              className="bg-white text-black  xl:py-5 lg:px-12.5  radius py-3.5 px-8 text-nowrap"
+              href="/us/portfolio/design"
+              className="bg-white text-black  xl:py-4.5 lg:px-10 font-medium  radius py-3.5 px-8 text-nowrap text-xl"
             >
-              View Services
+              View Portfolio
             </Link>
-            <Link href="/contact">
+            <Link href="/us/contact">
               <Button
                 text="Contact Us"
-                className="!py-4 !px-10 xl:!py-5.5 lg:!px-12.5 text-nowrap"
+                className="!py-4 !px-10 xl:!py-4.5 lg:!px-15 text-nowrap"
               />
             </Link>
           </div>
@@ -63,19 +63,19 @@ export function IndFooter() {
                   objectFit="cover"
                 />
              
-                <Link href="https://www.linkedin.com/company/infogentech/">
+                <Link href="https://www.linkedin.com/company/infogentech/"  target="_blank">
                   <Icons name="LinkedIn" />
                 </Link>
-                 <Link href="https://www.youtube.com/@infogentech">
+                 <Link href="https://www.youtube.com/@infogentech"  target="_blank">
                   <Icons name="Youtubes" />
                 </Link>
-                 <Link href="https://www.threads.com/@infogentech_">
+                 <Link href="https://www.threads.com/@infogentech_"  target="_blank">
                   <Icons name="Threads" />
                 </Link>
-                 <Link href="https://in.pinterest.com/infogentech/">
+                 <Link href="https://in.pinterest.com/infogentech/"  target="_blank">
                   <Icons name="Pinterest" />
                 </Link>
-                 <Link href="https://www.instagram.com/infogentech_/">
+                 <Link href="https://www.instagram.com/infogentech_/"  target="_blank">
                   <Icons name="Instagrams" />
                 </Link>
               </div>

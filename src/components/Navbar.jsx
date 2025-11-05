@@ -59,7 +59,7 @@ export function Navbar() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -40, scale: 0.95 }}
           transition={{ duration: 0.2, ease: "easeInOut" }}
-          className="relative flex bg-transparent mt-6 h-15 mx-auto justify-between items-center z-50 font-jost font-medium text-lg leading-6 container px-10 gap-4"
+          className="absolute w-full flex bg-transparent mt-6 h-15 mx-auto justify-between items-center z-50 font-jost font-medium text-lg leading-6 px-20 gap-4"
         >
           <div className="flex items-center border border-[#8E8E8E] rounded-md ">
             <div className="flex items-center pl-3.5 space-x-1.5">

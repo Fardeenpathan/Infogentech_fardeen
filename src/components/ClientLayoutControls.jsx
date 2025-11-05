@@ -44,7 +44,6 @@ export default function ClientLayoutControls({ children }) {
 
   return (
     <GeoBlockWrapper>
-      <>
         <div className="hidden md:block">
           <Navbar />
         </div>
@@ -52,7 +51,7 @@ export default function ClientLayoutControls({ children }) {
           <MiniNavbar />
         </div>
 
-        <main>{children}</main>
+        <main className="pb-20">{children}</main>
         <Footer />
         <Toaster
           position="top-right"
@@ -77,7 +76,6 @@ export default function ClientLayoutControls({ children }) {
             },
           }}
         />
-      </>
     </GeoBlockWrapper>
   );
 }

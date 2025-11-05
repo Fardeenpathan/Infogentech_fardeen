@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import TopicHeader from "./TopicHeader";
 import Icons from "./ui/Icon";
@@ -65,10 +64,14 @@ export default function ServicesSection() {
                   className="xl:w-25 xl:h-25"
                 />
               </p>
-              <h2 className="font-jost font-medium 2xl:text-[50px] lg:text-[40px]  text-[36px]  leading-[120%] tracking-[0.03em]">
+              <h2
+                className="font-jost font-medium 2xl:text-[50px] lg:text-[40px] text-[36px] leading-[120%] tracking-[0.03em]
+               bg-[linear-gradient(93.46deg,#C4C4C4_4.94%,#FFFFFF_98.78%)]
+               bg-clip-text text-transparent"
+              >
                 {service.title}
               </h2>
-              <p className="text-[#C4C4C4] text-sm mt-9 leading-relaxed">
+              <p className="text-[#C4C4C4] lg:text-lg text-sm mt-9 leading-relaxed font-kumbh-sans">
                 {service.desc}
               </p>
             </div>
@@ -79,28 +82,27 @@ export default function ServicesSection() {
             </div>
           </div>
         ))}
-      
-          <div className="overflow-hidden">
-            <div className="absolute moving-text-container -z-30 -top-30">
-              <div className="moving-text-content font-['Jost'] font-avalors font-normal text-[120px] tracking-[0.03em] uppercase bg-gradient-to-b from-[#C4C4C4] to-[#FFFFFF] bg-clip-text text-transparent opacity-15 moving-text-container">
-                <div className="flex gap-56">
-                  {Array.from({ length: 20 }, (_, i) => (
-                    <p key={i}>INFOGENTECH</p>
-                  ))}
-                </div>
-              </div>
-            </div>
-            <div className="absolute moving-text-container -z-30 -bottom-20 ">
-              <div className="moving-text-left font-['Jost'] font-avalors font-normal text-[120px] tracking-[0.03em] uppercase bg-gradient-to-b from-[#C4C4C4] to-[#FFFFFF] bg-clip-text text-transparent opacity-15 moving-text-container">
-                <div className="flex gap-56">
-                  {Array.from({ length: 20 }, (_, i) => (
-                    <p key={i}>INFOGENTECH</p>
-                  ))}
-                </div>
+
+        <div className="overflow-hidden">
+          <div className="absolute moving-text-container -z-30 -top-30">
+            <div className="moving-text-content font-['Jost'] font-avalors font-normal text-[120px] tracking-[0.03em] uppercase bg-gradient-to-b from-[#C4C4C4] to-[#FFFFFF] bg-clip-text text-transparent opacity-15 moving-text-container">
+              <div className="flex gap-56">
+                {Array.from({ length: 20 }, (_, i) => (
+                  <p key={i}>INFOGENTECH</p>
+                ))}
               </div>
             </div>
           </div>
-      
+          <div className="absolute moving-text-container -z-30 -bottom-20 ">
+            <div className="moving-text-left font-['Jost'] font-avalors font-normal text-[120px] tracking-[0.03em] uppercase bg-gradient-to-b from-[#C4C4C4] to-[#FFFFFF] bg-clip-text text-transparent opacity-15 moving-text-container">
+              <div className="flex gap-56">
+                {Array.from({ length: 20 }, (_, i) => (
+                  <p key={i}>INFOGENTECH</p>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
