@@ -38,7 +38,7 @@ export function IndFooter() {
                   INFOGENTECH
                 </h3>
               </a>
-              <p className=" text-xl mb-4 font-montserrat ">
+              <p className="lg:text-xl text-sm mb-4 font-montserrat ">
                 Infogentech delivers smart digital solutions that move with the
                 times, crafted for every generation, inspired by change. We
                 focus on achieving real, measurable results, keeping up with the

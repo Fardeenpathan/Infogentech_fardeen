@@ -64,7 +64,8 @@ export default function IndAboutHome() {
         viewport={{ once: true }}
       >
         <IndTopicHeader
-          className="!flex-col gap-10"
+          className="!flex-col gap-2 lg:gap-10 "
+          subClass="lg:max-w-3xl"
           title="About us"
           subtitle="Global IT Services for a Digitally Driven World"
           description="InfoGenTech is dedicated to delivering efficient IT solutions that drive business growth. Your audience is always looking for you on the web; are you found? Today's leaders blend innovative thinking with analysis to forge powerful online strategies. If your business is not optimized online, you will never be seen by prospective customers. With our worldwide online marketing solutions, you can rule the arena. Put your brand at the front with our time-tested strategies and best collaborations towards success."

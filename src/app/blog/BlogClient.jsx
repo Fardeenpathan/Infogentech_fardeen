@@ -71,7 +71,7 @@ const Blogs = () => {
             className="absolute top-0 left-0 w-full h-full object-cover -z-10"
           />
           <div className="absolute top-0 left-0 w-full h-full bg-[#d4d2f5] opacity-95 -z-10" />
-          <div className="relative z-10 container mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center justify-between gap-10">
+          <div className="relative z-10 container mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center justify-between gap-10 mt-15">
             <div className="w-full rounded-xl overflow-hidden">
               {recentBlog && recentBlog.featuredImage.url ? (
                 <Image
@@ -79,13 +79,13 @@ const Blogs = () => {
                   alt="Article Thumbnail"
                   width={600}
                   height={400}
-                  className="lg:w-170 lg:h-108  h-52 object-fill rounded-xl"
+                  className="w-full lg:h-108  h-52 object-fill rounded-xl"
                 />
               ) : null}
             </div>
             {recentBlog && (
               <div className="w-full text-left lg:space-y-4 mt-4 space-x-2">
-                <p className="text-gray-600 font-montserrat font-semibold lg:text-2xl text-lg ">
+                <p className="text-black font-montserrat font-semibold lg:text-2xl text-lg ">
                   {dayjs(recentBlog.formatDate).format("DD MMM YYYY")}
                 </p>
                 <h1 className="text-gray-400 text-2xl md:text-[46px] font-bold leading-[1.2] font-avalors tracking-wider">
@@ -111,11 +111,11 @@ const Blogs = () => {
             Stay updated with the latest tech insights, client success stories,
             and opportunities from our community and IT industry network.
           </h4>
-          <div className="flex flex-col sm:flex-row gap-4 items-center min-w-7 md:min-w-fit px-4">
+          <div className="flex flex-col sm:flex-row gap-4 items-center min-w-7 md:min-w-fit px-4 ">
             <select
               value={activeCategory}
               onChange={(e) => handleCategoryChange(e.target.value)}
-              className="w-full sm:w-fit border cursor-pointer rounded-sm px-4 py-2 font-medium text-sm font-montserrat border-b border-gray-300 bg-transparent  focus:outline-none focus:border-primary"
+              className="w-full sm:w-fit border cursor-pointer rounded-sm px-2 py-2 font-medium text-sm font-montserrat border-b border-gray-300 bg-transparent  focus:outline-none focus:border-primary "
             >
               {categories.map((cat, idx) => (
                 <option key={idx} value={cat.name || cat} className="border-b border-gray-300 bg-transparent">
@@ -135,7 +135,7 @@ const Blogs = () => {
               {loading ? (
                 <Loader />
               ) : blogs.length > 0 ? (
-                <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 space-y-10 2xl:grid-cols-4 gap-12 xl:gap-8 px-4 md:px-0">
+                <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 space-y-10 gap-12 xl:gap-8 px-4 md:px-0">
                   {blogs.map((blog) => (
                     <IndBlogCard key={blog.id || blog._id} blog={blog} />
                   ))}

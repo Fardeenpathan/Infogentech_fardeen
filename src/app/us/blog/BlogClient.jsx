@@ -156,7 +156,7 @@ const Blogs = () => {
             {loading ? (
               <Loader />
             ) : blogs.length > 0 ? (
-              <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 2xl:grid-cols-4 gap-12 xl:gap-8">
+              <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-12 xl:gap-8">
                 {blogs.map((blog) => (
                   <HomeBlogCardsd key={blog.id || blog._id} blog={blog} />
                 ))}

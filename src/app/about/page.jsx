@@ -1,6 +1,3 @@
-
-
-
 export const metadata = {
   title: "About Us | Infogentech Softwares LLP",
   description:
@@ -53,6 +50,9 @@ export const metadata = {
     distribution: "global",
   },
 };
+
+
+
 
 import IndAboutImage from "@/components/india/IndAboutImage";
 import IndAboutDesc from "@/components/india/IndAboutDesc";

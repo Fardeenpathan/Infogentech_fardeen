@@ -69,7 +69,7 @@ export default function IndConsutation() {
             transition={{ duration: 0.6, delay: 0.9 }}
             viewport={{ once: true }}
           >
-            <IndButton variant="outline" className="!bg-white !text-primary xl:!text-xl !text-lg xl:!px-14 !px-8 xl:!py-2.5 !py-1 !border-primary/20">
+            <IndButton variant="outline" className="!bg-white !text-primary !text-lg xl:!px-14 !px-8 xl:!py-2.5 !py-1 !border-primary/20 mt-2">
                Let's Talk
             </IndButton>
           </motion.div>
