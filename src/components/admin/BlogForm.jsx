@@ -41,6 +41,8 @@ export default function BlogFormPage({ mode = 'create' }) {
     priority: 'medium',
     isFeatured: false,
     language: 'en',
+    country: 'global',
+    region: 'global',
     seo: {
       title: '',
       description: '',
@@ -116,6 +118,8 @@ export default function BlogFormPage({ mode = 'create' }) {
         priority: blog.priority || 'medium',
         isFeatured: blog.isFeatured || false,
         language: blog.language || 'en',
+        country: blog.country || 'global',
+        region: blog.region || 'global',
         seo: blog.seo || {
           title: '',
           description: '',
@@ -642,6 +646,49 @@ export default function BlogFormPage({ mode = 'create' }) {
                         <option value="low">Low</option>
                         <option value="medium">Medium</option>
                         <option value="high">High</option>
+                      </select>
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-gray-300 mb-2">
+                        Target Country
+                      </label>
+                      <select
+                        value={formData.country}
+                        onChange={(e) => setFormData({...formData, country: e.target.value})}
+                        className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                      >
+                        <option value="global">Global</option>
+                        <option value="us">United States</option>
+                        <option value="in">India</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="ca">Canada</option>
+                        <option value="au">Australia</option>
+                        <option value="de">Germany</option>
+                        <option value="fr">France</option>
+                        <option value="es">Spain</option>
+                        <option value="it">Italy</option>
+                        <option value="jp">Japan</option>
+                        <option value="br">Brazil</option>
+                      </select>
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-gray-300 mb-2">
+                        Target Region
+                      </label>
+                      <select
+                        value={formData.region}
+                        onChange={(e) => setFormData({...formData, region: e.target.value})}
+                        className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                      >
+                        <option value="global">Global</option>
+                        <option value="north-america">North America</option>
+                        <option value="europe">Europe</option>
+                        <option value="asia">Asia</option>
+                        <option value="oceania">Oceania</option>
+                        <option value="south-america">South America</option>
+                        <option value="africa">Africa</option>
                       </select>
                     </div>
 

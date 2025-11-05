@@ -7,8 +7,8 @@ export function MiniNavbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   return (
-    <div className=" bg-transparent mt-3 h-15 mx-auto z-50 container px-2 w-full">
-      <div className="flex items-center border border-[#dfdcdc] rounded-md justify-between px-2 py-3">
+    <div className="absolute bg-transparent mt-3 h-15 mx-auto z-50 container px-2 w-full">
+      <div className="flex items-center border border-[#f0f0f060] rounded-md justify-between px-2 py-3 ">
         <div className="flex items-center  space-x-1.5">
           <Link href="/" className="flex items-center gap-1.5">
             <svg

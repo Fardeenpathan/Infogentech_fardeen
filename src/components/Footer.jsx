@@ -10,20 +10,20 @@ export function Footer() {
         <div className="flex md:justify-between items-center md:flex-row flex-col justify-center">
           <div className="w-[162px] h-[162px] -top-[26px] -left-3.5 rounded-[81px] absolute bg-primary blur-[100px]" />
           <div className="w-[148px] h-[87px] top-[533px] right-0 rounded-[74px/43.5px] absolute bg-primary blur-[100px]" />
-          <p className="font-avalors font-medium xl:text-[45px] xl:leading-14 leading-6 md:leading-9 text-lg md:text-3xl">
+          <p className="font-jost font-medium xl:text-[45px] xl:leading-14 leading-6 md:leading-9 text-lg md:text-3xl">
             Start Earlier, Grow Faster <br /> Without Hidden Costs.
           </p>
           <div className="w-full md:w-1/2 lg:w-1/3 flex justify-center md:justify-end space-x-5 font-jost mt-6">
             <Link
               href="/us/portfolio/design"
-              className="bg-white text-black  xl:py-5 lg:px-12.5  radius py-3.5 px-8 text-nowrap"
+              className="bg-white text-black  xl:py-4.5 lg:px-10 font-medium  radius py-3.5 px-8 text-nowrap text-xl"
             >
               View Portfolio
             </Link>
             <Link href="/us/contact">
               <Button
                 text="Contact Us"
-                className="!py-4 !px-10 xl:!py-5.5 lg:!px-12.5 text-nowrap"
+                className="!py-4 !px-10 xl:!py-4.5 lg:!px-15 text-nowrap"
               />
             </Link>
           </div>
@@ -48,7 +48,9 @@ export function Footer() {
                 For Infogentech Queries:
                 <br />
                 <p className="space-x-3">
-                  <a href="mailto:contact@infogentech.com">contact@infogentech.com</a>
+                  <a href="mailto:contact@infogentech.com">
+                    contact@infogentech.com
+                  </a>
                   <span>|</span>
                   {/* <span>+91 991-013-0963</span> */}
                 </p>
@@ -62,19 +64,19 @@ export function Footer() {
                   height={54}
                   objectFit="cover"
                 />
-                <Link href="https://www.linkedin.com/company/infogentech/">
+                <Link href="https://www.linkedin.com/company/infogentech/"  target="_blank">
                   <Icons name="LinkedIn" />
                 </Link>
-                <Link href="https://www.youtube.com/@infogentech">
+                <Link href="https://www.youtube.com/@infogentech"  target="_blank">
                   <Icons name="Youtubes" />
                 </Link>
-                <Link href="https://www.threads.com/@infogentech_">
+                <Link href="https://www.threads.com/@infogentech_"  target="_blank">
                   <Icons name="Threads" />
                 </Link>
-                <Link href="https://in.pinterest.com/infogentech/">
+                <Link href="https://in.pinterest.com/infogentech/"  target="_blank">
                   <Icons name="Pinterest" />
                 </Link>
-                <Link href="https://www.instagram.com/infogentech_/">
+                <Link href="https://www.instagram.com/infogentech_/" target="_blank">
                   <Icons name="Instagrams" />
                 </Link>
               </div>

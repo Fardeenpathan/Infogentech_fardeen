@@ -24,7 +24,7 @@ const Blogs = () => {
     setCurrentPage,
     fetchBlogs,
     handleCategoryChange,
-    handleSearch
+    handleSearch,
   } = useBlogsPagination(categories, 12);
 
   useEffect(() => {
@@ -40,7 +40,6 @@ const Blogs = () => {
             ...data.data.map((cat) => ({ name: cat.name, slug: cat.slug })),
           ];
           setCategories(dynamicCategories);
-          
         }
       } catch (error) {
         console.error("Error fetching categories:", error);
@@ -57,12 +56,12 @@ const Blogs = () => {
   }, [activeCategory, categories, currentPage, searchTerm, fetchBlogs]);
   return (
     <div className="flex justify-between relative overflow-hidden">
-      {/* <div className="absolute overflow-hidden -top-20">
+      <div className="absolute overflow-hidden -top-20">
         <Icons name="BlogBlurLeft" />
       </div>
       <div className="absolute overflow-hidden right-0 -top-20">
         <Icons name="BlogBlurRight" />
-      </div> */}
+      </div>
       <div className="container mx-auto mt-24 ">
         <div className="flex justify-center items-center flex-col ">
           <p className="font-avalors font-normal lg:text-[75px] text-3xl leading-none bg-[linear-gradient(91.32deg,_#6A27FF_-32.61%,_#FFFFFF_19.98%,_#6A27FF_112.29%)] bg-clip-text text-transparent">
@@ -72,7 +71,7 @@ const Blogs = () => {
             Check out our latest ideas, tech trends, and success stories where
             smart planning meets real results and creative ideas make an impact.
           </p>
-          <div className="flex max-w-2xl lg:h-[74px] h-11 items-center border border-gray-600 rounded-[10px] overflow-hidden bg-transparent p-1 mt-11">
+          <div className="flex lg:min-w-lg lg:h-[74px] h-12 items-center border border-gray-600 rounded-[10px] overflow-hidden bg-transparent p-0.5 mt-11">
             <input
               type="text"
               placeholder="Search article"
@@ -83,11 +82,11 @@ const Blogs = () => {
                   handleSearch();
                 }
               }}
-              className="flex-1 h-full text-white placeholder-gray-600 bg-transparent focus:outline-none  pl-2 lg:pl-8 lg:py-6 py-2 font-jost text-xl leading-[100%] tracking-[0.03em]"
+              className="flex-1 h-full  text-white placeholder-gray-600 bg-transparent focus:outline-none  pl-2  lg:pl-8 lg:py-6 py-2 font-jost text-xl leading-[100%] tracking-[0.03em]"
             />
             <Button
               text="Search"
-              className="!text-black !py-6 !px-6"
+              className="!text-black lg:py-5 lg:px-10"
               onClick={handleSearch}
             />
           </div>
@@ -99,7 +98,7 @@ const Blogs = () => {
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="relative mt-8 w-full max-w-[1200px] rounded-2xl shadow-lg px-4 mx-auto ">
+          <div className="relative mt-8 w-full max-w-[1200px] rounded-2xl shadow-lg px-4 mx-auto">
             {recentBlog && recentBlog.featuredImage.url ? (
               <Image
                 src={recentBlog.featuredImage.url}
@@ -111,7 +110,7 @@ const Blogs = () => {
             ) : null}
 
             {recentBlog && (
-              <div className="absolute lg:-bottom-16 -bottom-30 left-1/2 transform -translate-x-1/2 bg-[#15152A] p-6 text-white rounded-4xl max-w-5xl w-[calc(100%-2rem)]">
+              <div className="absolute lg:-bottom-16 -bottom-30 left-1/2 transform -translate-x-1/2 bg-[#15152A] p-6 text-white rounded-4xl max-w-5xl w-[calc(96%-2rem)] ">
                 <div className="flex items-center gap-4 mb-3">
                   <span className="border border-white rounded-md px-4 py-1 text-sm font-jost">
                     Popular
@@ -126,7 +125,10 @@ const Blogs = () => {
                 </h3>
                 <p className="text-gray-300 lg:text-base text-sm leading-relaxed font-kumbh-sans line-clamp-2">
                   {recentBlog.excerpt}
-                  <a href={`/us/blog/${recentBlog.slug}`} className="text-primary underline">
+                  <a
+                    href={`/us/blog/${recentBlog.slug}`}
+                    className="text-primary underline"
+                  >
                     Continue reading
                   </a>
                 </p>
@@ -138,20 +140,21 @@ const Blogs = () => {
           <p className="text-primary font-avalors lg:text-[32px] text-2xl leading-6">
             Select Your Category
           </p>
-          <div className="flex gap-16 text-[#C4C4C4] mt-13 font-kumbh-sans overflow-hidden text-nowrap overflow-x-auto">
-            {categories.map((item, index) => (
-              <button
-                key={index}
-                onClick={() => handleCategoryChange(item.name || item)}
-                className={`relative pb-1 transition-all duration-300 cursor-pointer text-nowarp ${activeCategory === (item.name || item)
-                    ? "text-primary opacity-100 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-primary after:rounded-full "
-                    : "opacity-60 hover:opacity-100"
-                  }`}
-              >
-                {item.name || item}
-              </button>
-            ))}
-          </div>
+         <div className="flex gap-16 text-[#C4C4C4] mt-13 font-kumbh-sans overflow-x-auto overflow-y-hidden text-nowrap no-scrollbar scroll-smooth">
+  {categories.map((item, index) => (
+    <button
+      key={index}
+      onClick={() => handleCategoryChange(item.name || item)}
+      className={`relative pb-1 transition-all duration-300 cursor-pointer text-nowrap ${
+        activeCategory === (item.name || item)
+          ? "text-primary opacity-100 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-primary after:rounded-full"
+          : "opacity-60 hover:opacity-100"
+      }`}
+    >
+      {item.name || item}
+    </button>
+  ))}
+</div>
           <div className="mt-12 ">
             {loading ? (
               <Loader />

@@ -14,14 +14,22 @@ export default function BlogsPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('');
   const [statusFilter, setStatusFilter] = useState('');
+  const [countryFilter, setCountryFilter] = useState('');
 
   // Fetch blogs
   const fetchBlogs = async () => {
     try {
-      const response = await adminApiService.getBlogs();
+      const params = {};
+      if (countryFilter && countryFilter !== '') {
+        params.country = countryFilter;
+      }
       
-      // Handle your backend response structure
+      // console.log('Fetching blogs with params:', params);
+      const response = await adminApiService.getBlogs(params);
+      // console.log('API Response:', response);
+      
       const blogs = response.data || response.blogs || [];
+      // console.log('Extracted blogs:', blogs);
       setBlogs(blogs);
     } catch (error) {
       console.error('Error fetching blogs:', error);
@@ -43,9 +51,14 @@ export default function BlogsPage() {
   };
 
   useEffect(() => {
-    fetchBlogs();
+    // fetchBlogs();
     fetchCategories();
   }, []);
+
+// when we have applied country filter from frontend 
+  useEffect(() => {
+    fetchBlogs();
+  }, [countryFilter]);
 
   // Filter blogs
   const filteredBlogs = blogs.filter(blog => {
@@ -117,7 +130,7 @@ export default function BlogsPage() {
       </div>
 
       {/* Search and Filters */}
-      <div className="mb-6 grid grid-cols-1 md:grid-cols-4 gap-4">
+      <div className="mb-6 grid grid-cols-1 md:grid-cols-5 gap-4">
         <div className="relative md:col-span-2">
           <Search className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
           <input
@@ -150,6 +163,26 @@ export default function BlogsPage() {
           <option value="">All Status</option>
           <option value="draft">Draft</option>
           <option value="published">Published</option>
+        </select>
+
+        <select
+          value={countryFilter}
+          onChange={(e) => setCountryFilter(e.target.value)}
+          className="px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+        >
+          <option value="">All Countries</option>
+          <option value="global">Global</option>
+          <option value="us">United States</option>
+          <option value="in">India</option>
+          <option value="uk">United Kingdom</option>
+          <option value="ca">Canada</option>
+          <option value="au">Australia</option>
+          <option value="de">Germany</option>
+          <option value="fr">France</option>
+          <option value="es">Spain</option>
+          <option value="it">Italy</option>
+          <option value="jp">Japan</option>
+          <option value="br">Brazil</option>
         </select>
       </div>
 
@@ -229,11 +262,11 @@ export default function BlogsPage() {
                   <Calendar className="h-3 w-3" />
                   <span>{formatDate(blog.createdAt)}</span>
                 </div>
-                <div className="flex items-center gap-2">
+                {/* <div className="flex items-center gap-2">
                   <span>{blog.views || 0} views</span>
                   <span>•</span>
                   <span>{blog.content?.length || 0} blocks</span>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

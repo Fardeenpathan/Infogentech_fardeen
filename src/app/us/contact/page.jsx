@@ -10,9 +10,7 @@ const contact = () => {
   return (
     <div className="xl:mt-35 mt-10 subContainer mx-auto">
  <div className="flex flex-col-reverse xl:flex-row justify-between items-center">
-        {/* Left Side Content */}
         <div className="flex gap-10 flex-col xl:flex-row">
-          {/* Pentagon with line */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -30,13 +28,13 @@ const contact = () => {
             <div className="w-0.5 h-28 rounded-full mt-4 bg-gradient-to-b from-purple-400 via-purple-500 to-purple-800"></div>
           </motion.div>
 
-          {/* Text & Button */}
+          
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
-            className="flex flex-col max-w-3xl justify-center items-center px-4 text-center xl:text-left"
+            className="flex flex-col max-w-3xl justify-center text-start px-4  xl:text-left"
           >
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -52,7 +50,7 @@ const contact = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
-              className="text-primary font-avalors align-middle md:text-[75px] text-4xl leading-[120%] tracking-[-0.75px]"
+              className="text-primary  font-avalors align-middle md:text-[75px] text-4xl leading-[120%] tracking-[-0.75px]"
             >
               just ask!
             </motion.p>
@@ -84,7 +82,6 @@ const contact = () => {
           </motion.div>
         </div>
 
-        {/* Video + Polygon Image */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}

@@ -21,9 +21,9 @@ const Button = ({
   };
   
   const sizes = {
-   sm: 'py-1.5 px-3 text-sm',
-   md: 'py-2 px-4 text-sm',       
-   lg: 'py-2.5 px-6 text-base'
+   sm: 'py-1.5 px-3 text-lg',
+   md: 'py-2 px-4 text-lg',       
+   lg: 'py-2.5 px-6 text-lg'
 
   };
   

@@ -1,30 +1,29 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import StatsItem from '@/components/stats-item';
-import SubscribeContact from '@/components/SubscribeContact';
-import FocusPart from '@/components/FocusPart';
-import Icons from '@/components/ui/Icon';
-import MissionAbout from '@/components/MissionAbout';
-import MidHeader from '@/components/MidHeader';
+import { motion } from "framer-motion";
+import StatsItem from "@/components/stats-item";
+import SubscribeContact from "@/components/SubscribeContact";
+import FocusPart from "@/components/FocusPart";
+import Icons from "@/components/ui/Icon";
+import MissionAbout from "@/components/MissionAbout";
+import MidHeader from "@/components/MidHeader";
 
 const stats = [
-  { value: '250', suffix: '+', label: 'Projects Delivered' },
-  { value: '7', suffix: '+', label: 'Years of Experience' },
-  { value: '25', suffix: '+', label: 'Professional Teams' },
-  { value: '80', suffix: '%', label: 'Active Client' },
+  { value: "250", suffix: "+", label: "Projects Delivered" },
+  { value: "7", suffix: "+", label: "Years of Experience" },
+  { value: "25", suffix: "+", label: "Professional Teams" },
+  { value: "80", suffix: "%", label: "Active Client" },
 ];
 
 const About = () => {
   return (
     <>
-      {/* Header Section with Title & Description */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.3 }}
         viewport={{ once: true }}
-        className="h-85 md:mt-30 mt-4 md:bg-[url('/assist/img/aboutBg.png')] bg-[url('/assist/img/subAbout.png')] container mx-auto relative md:px-10 px-4 bg-no-repeat"
+        className="h-85 mt-30  md:bg-[url('/assist/img/aboutBg.png')] bg-[url('/assist/img/subAbout.png')] container mx-auto relative md:px-10 px-4 bg-no-repeat"
       >
         <div className="flex xl:gap-10 gap-4 absolute top-2 px-4">
           <div className="flex items-center mb-40 flex-col shrink-0">
@@ -73,7 +72,7 @@ const About = () => {
               guarantee—because your success is what drives us every day.
             </motion.p>
 
-            <div className="xl:grid grid-cols-2 md:grid-cols-4 gap-4 font-jost md:divide-x divide-gray-200 justify-between mt-10 hidden">
+            <div className="xl:grid grid-cols-2 md:grid-cols-4 gap-4 font-jost justify-between mt-10 hidden">
               {stats.map((item, index) => (
                 <motion.div
                   key={index}
@@ -82,18 +81,27 @@ const About = () => {
                   transition={{ duration: 0.5, delay: 0.2 * index }}
                   viewport={{ once: true }}
                 >
-                  <StatsItem
-                    value={item.value}
-                    suffix={item.suffix}
-                    label={item.label}
-                  />
+                  <div className="flex flex-col space-y-3 justify-between text-nowrap">
+                    <div className="inline-block flex-row font-jost font-bold xl:text-6xl md:text-5xl sm:text-4xl text-3xl  tracking-[-0.03em] uppercase">
+                      <div className="inline-block bg-gradient-to-r from-[#C4C4C4] to-[#FFFFFF] bg-clip-text text-transparent ">
+                        {item.value}
+                      </div>
+                      <div className={`font-bold inline-block `}>
+                        {item.suffix}
+                      </div>
+                    </div>
+                    <div className="inline-block font-jost text-[#FFFFFF] xl:text-2xl text-base  leading-6  h-6 mt-3">
+                      {item.label}
+                    </div>
+                  </div>
                 </motion.div>
               ))}
             </div>
           </div>
         </div>
       </motion.div>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 font-jost md:divide-x divide-gray-200 justify-between mt-20 xl:mt-0 md:ml-10 md:mt-30 xl:hidden sm:mt-10">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 font-jost  justify-between mt-20 xl:mt-0 md:ml-10 md:mt-30 xl:hidden sm:mt-10 
+      px-6">
         {stats.map((item, index) => (
           <motion.div
             key={index}
@@ -102,11 +110,19 @@ const About = () => {
             transition={{ duration: 0.5, delay: 0.2 * index }}
             viewport={{ once: true }}
           >
-            <StatsItem
-              value={item.value}
-              suffix={item.suffix}
-              label={item.label}
-            />
+            <div className="flex flex-col space-y-3  text-nowrap">
+              <div className="inline-block flex-row font-jost font-bold xl:text-6xl md:text-5xl sm:text-4xl text-3xl  tracking-[-0.03em] uppercase">
+                <div className="inline-block bg-gradient-to-r from-[#C4C4C4] to-[#FFFFFF] bg-clip-text text-transparent ">
+                  {item.value}
+                </div>
+                <div className={`font-bold inline-block `}>
+                  {item.suffix}
+                </div>
+              </div>
+              <div className="inline-block font-jost text-[#FFFFFF] xl:text-xl text-base  leading-6 h-6 mt-3 font-normal">
+                {item.label}
+              </div>
+            </div>
           </motion.div>
         ))}
       </div>

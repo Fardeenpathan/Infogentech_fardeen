@@ -10,7 +10,7 @@ import Testimonials from "@/components/Testimonials";
 import LatestBlogs from "@/components/LatestBlogs";
 export default function Home() {
   return (
-    <main className="w-full">  
+    <main className="w-full">
        <HeroSection />
       <StatsSection />
       <div className="overflow-hidden">
