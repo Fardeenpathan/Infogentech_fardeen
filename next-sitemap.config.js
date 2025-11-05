@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   siteUrl: 'https://infogentech.com',
   generateIndexSitemap: false,
   sitemapSize: 5000,
