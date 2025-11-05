@@ -2,6 +2,7 @@
 import React from "react";
 import Icons from "../ui/Icon"; // assuming you use your custom Icons component
 import IndMidHeader from "@/components/india/IndMidHeader";
+import IndTopicHeader from "../IndTopicHeader";
 
 export default function WhatMakesStandOut() {
   const cards = [
@@ -28,15 +29,28 @@ export default function WhatMakesStandOut() {
   ];
 
   return (
-    <section className="w-full container mx-auto px-5 sm:px-8 md:px-10 py-12 bg-transparent lg:mt-20">
-      <IndMidHeader
-        title="What Makes"
-        subtitle="Infogentech Stand Out in Digital Marketing"
-        description="We are a worldwide agency that manages higher-level digital marketing for clients around the globe. Our highly qualified and experienced team gives quality output. Customer satisfaction and long-term success are what we aim to achieve for each client that we have. We assure effective growth across the globe and would provide services without fear. Our vast client and sector experience shines through in performance."
-
-      />
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-10 ">
+    <section className="w-full container mx-auto px-5 sm:px-8 md:px-10 lg:py-12 bg-transparent lg:mt-20">
+      <div className="hidden lg:block">
+        <IndMidHeader
+        className="text-center"
+          title="What Makes"
+          subtitle="Infogentech Stand Out in Digital Marketing"
+          description="We are a worldwide agency that manages higher-level digital marketing for clients around the globe. Our highly qualified and experienced team gives quality output. Customer satisfaction and long-term success are what we aim to achieve for each client that we have. We assure effective growth across the globe and would provide services without fear. Our vast client and sector experience shines through in performance."
+        />
+        </div>
+        <IndTopicHeader
+          className="!flex-col gap-2 lg:gap-10 lg:hidden"
+          title="What Makes"
+           subtitle="Infogentech Stand Out in Digital Marketing"
+          description="We are a worldwide agency that manages higher-level digital marketing for clients around the globe. Our highly qualified and experienced team gives quality output. Customer satisfaction and long-term success are what we aim to achieve for each client that we have. We assure effective growth across the globe and would provide services without fear. Our vast client and sector experience shines through in performance."
+        />
+          <p
+        className="font-montserrat font-medium xl:text-lg text-sm xl:leading-[150%] tracking-[-0.02em] lg:text-center text-start  py-4"
+      >
+        Through the years, we have groomed brands as an IT solutions firm. Do not let your competitors overshadow your web presence. Our experts will study trends and optimise your brand visibility. Customized SEO techniques give us the power to measure real success. Let our IT experts work on expanding your business.
+       </p>
+        
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-10">
         {cards.map((card, index) => (
           <div
             key={index}
@@ -48,16 +62,14 @@ export default function WhatMakesStandOut() {
                 className="w-full h-full object-contain rounded-[20px]"
               />
             </div>
-            <h4 className="font-montserrat font-semibold xl:text-2xl text-lg text-gray-600 mb-3 text-center sm:text-left leading-[150%] tracking-[-0.02em] z-10">
+            <h4 className="font-montserrat font-semibold xl:text-2xl text-lg text-gray-600 mb-3 text-start lg:text-center sm:text-left leading-[150%] tracking-[-0.02em] z-10">
               {card.title}
             </h4>
-            <p className="font-montserrat font-medium xl:text-lg text-sm leading-[150%] tracking-[-0.02em] text-gray-600/80 text-center sm:text-left z-10">
+            <p className="font-montserrat font-medium xl:text-lg text-sm leading-[150%] tracking-[-0.02em] text-gray-600/80 text-start lg:text-center sm:text-left z-10">
               {card.text}
             </p>
             <div className="absolute bottom-0 left-0 w-full h-2/3 bg-[linear-gradient(179.37deg,rgb(253_253_253/5%)_0.55%,#FCFBFF_46.27%)]"></div>
-
           </div>
-          
         ))}
       </div>
     </section>

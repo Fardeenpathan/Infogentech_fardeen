@@ -52,7 +52,7 @@ export default function ClientLayoutControls({ children }) {
           <IndMiniNavbar />
         </div>
 
-        <main className="pb-10">{children}</main>
+        <main className="pb-20">{children}</main>
         <IndFooter />
         <Toaster
           position="top-right"

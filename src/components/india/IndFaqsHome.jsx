@@ -125,11 +125,11 @@ const IndFaqsHome = () => {
               onClick={() => toggleFAQ(faq.id)}
             >
               <div className="text-gray-600 flex items-center gap-4 md:text-2xl text-sm">
-                <span className="font-normal opacity-40">{faq.id}</span>
+                <span className="font-normal opacity-40 text-3xl">{faq.id}</span>
                 {faq.question}
               </div>
               <motion.div
-                animate={{ rotate: openId === faq.id ? 90 : 0 }}
+                animate={{ rotate: openId === faq.id ? 0 : 90 }}
                 transition={{ duration: 0.3 }}
                 className={`w-15 h-15 rounded-full flex items-center justify-center z-10 cursor-pointer shrink-0 ${
                   openId === faq.id ? "bg-white" : "bg-[#F6F6F6]"
@@ -149,7 +149,7 @@ const IndFaqsHome = () => {
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                   className="overflow-hidden"
                 >
-                  <div className="xl:pl-19 pl-10 xl:pr-5 pr-2 pt-3 text-left md:text-lg text-[12px] leading-[1.4]">
+                  <div className="xl:pl-15 pl-10 xl:pr-5 pr-2 pt-3 text-left md:text-lg text-[12px] leading-[1.4]">
                     {faq.answer}
                   </div>
                 </motion.div>
