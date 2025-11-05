@@ -21,14 +21,33 @@ const BlogPagination = ({
         </button>
         
         <div className="flex gap-2">
-          {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
-            const pageNum = currentPage <= 3 ? i + 1 : 
-                           currentPage > totalPages - 2 ? totalPages - 4 + i :
-                           currentPage - 2 + i;
+          {(() => { 
+
+            // changing when there are more than 5 pages and shifting left slide when page increases
+            const pages = [];
+            const maxVisible = 5;
             
-            if (pageNum < 1 || pageNum > totalPages) return null;
+            if (totalPages <= maxVisible) {
+              for (let i = 1; i <= totalPages; i++) {
+                pages.push(i);
+              }
+            } else {
+              if (currentPage <= 3) {
+                for (let i = 1; i <= maxVisible; i++) {
+                  pages.push(i);
+                }
+              } else if (currentPage >= totalPages - 2) {
+                for (let i = totalPages - maxVisible + 1; i <= totalPages; i++) {
+                  pages.push(i);
+                }
+              } else {
+                for (let i = currentPage - 2; i <= currentPage + 2; i++) {
+                  pages.push(i);
+                }
+              }
+            }
             
-            return (
+            return pages.map(pageNum => (
               <button
                 key={pageNum}
                 onClick={() => setCurrentPage(pageNum)}
@@ -40,8 +59,8 @@ const BlogPagination = ({
               >
                 {pageNum}
               </button>
-            );
-          })}
+            ));
+          })()}
         </div>
         
         <button

@@ -1,4 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
+import { useSelector } from 'react-redux';
+import { usePathname } from 'next/navigation';
+import { addCountryFilters, getRouteType } from '@/utils/countryUtils';
 
 export const useBlogsPagination = (categories, limit = 12) => {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -9,6 +12,10 @@ export const useBlogsPagination = (categories, limit = 12) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [pagination, setPagination] = useState({});
   const [totalBlogs, setTotalBlogs] = useState(0);
+  
+  // Get country code from Redux store and pathname for country-specific filtering
+  const countryCode = useSelector((state) => state.countryCode.value);
+  const pathname = usePathname();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -36,6 +43,12 @@ export const useBlogsPagination = (categories, limit = 12) => {
       
       if (searchTerm.trim()) {
         params.append('search', searchTerm.trim());
+      }
+      
+      // Add country and region filtering based on detected country and route type
+      if (countryCode && pathname) {
+        const routeType = getRouteType(pathname);
+        addCountryFilters(params, countryCode, routeType);
       }
       
       url += '?' + params.toString();
@@ -73,7 +86,7 @@ export const useBlogsPagination = (categories, limit = 12) => {
     } finally {
       setLoading(false);
     }
-  }, [activeCategory, currentPage, searchTerm, categories, limit]);
+  }, [activeCategory, currentPage, searchTerm, categories, limit, countryCode, pathname]);
 
   //  category handle when changes 
   const handleCategoryChange = (categoryName) => {

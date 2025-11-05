@@ -271,6 +271,8 @@ class AdminApiService {
     formData.append('priority', blogData.priority || 'medium');
     formData.append('isFeatured', blogData.isFeatured || false);
     formData.append('language', blogData.language || 'en');
+    formData.append('country', blogData.country || 'global');
+    formData.append('region', blogData.region || 'global');
 
     // Add tags
     if (blogData.tags && Array.isArray(blogData.tags)) {
@@ -355,6 +357,8 @@ class AdminApiService {
     formData.append('priority', blogData.priority || 'medium');
     formData.append('isFeatured', blogData.isFeatured || false);
     formData.append('language', blogData.language || 'en');
+    formData.append('country', blogData.country || 'global');
+    formData.append('region', blogData.region || 'global');
 
     // Add tags
     if (blogData.tags && Array.isArray(blogData.tags)) {
