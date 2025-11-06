@@ -4,9 +4,9 @@ import React from "react";
 export const metadata = {
 title: "Infogentech | Home",
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/favicon.ico",
+    icon: "https://infogentech.com/favicon.ico",
+    shortcut: "https://infogentech.com/favicon.ico",
+    apple: "https://infogentech.com/favicon.ico",
   },
   description:
     "Discover how innovation in software, technology, and digital marketing drives business growth. Explore strategies for success in today’s digital-first world.",

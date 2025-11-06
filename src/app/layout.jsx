@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={isUS ? "dark" : "IndColorText"}>
        <head>
-        <link rel="icon" type="image/x-icon" href="/favicon.ico"></link>
+        <link rel="icon" type="image/x-icon" href="https://infogentech.com/favicon.ico"></link>
       </head>
       <body suppressHydrationWarning={true}>
         <Provider store={store}>
