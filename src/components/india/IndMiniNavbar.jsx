@@ -22,7 +22,7 @@ export function IndMiniNavbar() {
         </div>
         <button onClick={() => setIsOpen(true)} className="cursor-pointer">
           <svg
-            width="29"
+            width="29" 
             height="21"
             viewBox="0 0 29 21"
             fill="none"
