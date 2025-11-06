@@ -189,10 +189,9 @@ const Calls = ({ width = "26", height = "26" }) => (
   </svg>
 );
 
-const Snakepath = ({ width = "570", height = "293" }) => (
+const Snakepath = ({className}) => (
   <svg
-    width={width}
-    height={height}
+    className={className}
     viewBox="0 0 590 360"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"

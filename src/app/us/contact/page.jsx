@@ -98,7 +98,7 @@ const contact = () => {
             alt="valueImg"
             width={359}
             height={371}
-            objectFit="cover"
+            style={{ objectFit: 'cover' }}
             className="absolute md:w-92 md:h-92 w-60 h-60"
           />
         </motion.div>

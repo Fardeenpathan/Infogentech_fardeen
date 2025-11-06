@@ -11,10 +11,10 @@ import LatestBlogs from "@/components/LatestBlogs";
 export default function Home() {
   return (
     <main className="w-full">
-       <HeroSection />
+      <HeroSection />
       <StatsSection />
       <div className="overflow-hidden">
-       <ServicesSection /> 
+        <ServicesSection />
       </div>
       <div className="container mx-auto md:px-10 px-4 ">
         <OurValues />

@@ -35,7 +35,6 @@ export default function LatestBlogs() {
         const response = await axios.get(url);
         if (response.data.success && response.data.data) {
           setBlogs(response.data.data);
-          console.log("Fetched blogs:", response.data.data);
           }
       } catch (error) {
         console.error("Error fetching recent blogs:", error);

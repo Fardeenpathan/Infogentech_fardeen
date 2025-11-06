@@ -343,7 +343,7 @@ export default function OurPortfolio() {
                   alt="valueImg"
                   width={800}
                   height={500}
-                  objectFit="cover"
+                  style={{ objectFit: 'cover' }}
                   className="object-fit rounded-xl "
                 />
               ) : (
