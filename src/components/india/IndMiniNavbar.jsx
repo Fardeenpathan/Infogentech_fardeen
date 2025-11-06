@@ -2,14 +2,18 @@ import Link from "next/link";
 import Icons from "@/components/ui/Icon";
 import { useState } from "react";
 import IndButton from "./ui/IndButton";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 export function IndMiniNavbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const pathname = usePathname();
   return (
-    <div className=" absolute bg-transparent h-15 mx-auto z-50 container  w-full text-white font-montserrat">
-      <div className=" relative flex items-center border-b-2 border-[#8E8E8E]  justify-between px-4 py-3 overflow-hidden">
+    <div className=" absolute bg-transparent h-17 mx-auto z-50 container  w-full text-white font-montserrat">
+      <div className={` flex items-center  justify-between px-4 py-4 overflow-hidden ${
+          pathname === "/" ? "border-b-2 border-[#8E8E8E]" : ""
+        }`}>
         <div className="flex items-center  space-x-1.5">
           <Link href="/" className="flex items-center gap-1.5">
             <Image

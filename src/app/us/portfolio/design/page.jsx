@@ -23,13 +23,13 @@ const Design = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 container mx-auto relative -top-48">
           {designProjects?.map((project,index) => (
               <motion.div
-    key={project.id}
-    className="p-2.5 rounded-xl"
-    initial={{ opacity: 0, y: 30 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.6, delay: index * 0.1 }}
-    viewport={{ once: true }}
-  >
+              key={project.id}
+              className="p-2.5 rounded-xl"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+            >
               <div className="w-full max-w-[774px]">
                 <div className="w-full max-w-[774px] h-70 md:h-110 lg:h-120">
                   <Image

@@ -20,9 +20,9 @@ const PortfolioHeader = () => {
         viewport={{ once: true }}
       >
         <div className="flex justify-center items-center flex-col text-center">
-          <p className="font-avalors font-normal md:text-[75px] text-5xl leading-none bg-[linear-gradient(91.32deg,_#6A27FF_-32.61%,_#FFFFFF_19.98%,_#6A27FF_112.29%)] bg-clip-text text-transparent">
+          {/* <p className="font-avalors font-normal md:text-[75px] text-5xl leading-none bg-[linear-gradient(91.32deg,_#6A27FF_-32.61%,_#FFFFFF_19.98%,_#6A27FF_112.29%)] bg-clip-text text-transparent">
             Our Work
-          </p>
+          </p> */}
           <p className="font-avalors font-normal md:text-[75px] text-5xl text-nowrap leading-none bg-[linear-gradient(91.32deg,_#6A27FF_-32.61%,_#FFFFFF_19.98%,_#6A27FF_112.29%)] bg-clip-text text-transparent">
             Our <span className="text-primary">Projects</span>
           </p>
