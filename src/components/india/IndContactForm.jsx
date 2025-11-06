@@ -8,7 +8,7 @@ const contactInd = [
   {
     info: [
       { icon: "Contact", text: "+91 991-013-0963" },
-      { icon: "Email", text: "contact@infogentech.com" },
+      { icon: "Email", text: "info@infogentech.com" },
       {
         icon: "Location",
         text: "A-85, First Floor, GT Karnal Road Industrial Area, Near Vardhman Mall, New Delhi - 110033",
