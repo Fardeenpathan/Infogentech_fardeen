@@ -2,7 +2,7 @@ import "./Loader.css";
 
 const Loader = () => {
   return (
-    <div className="h-96 flex items-center justify-center min-h-6/12">
+    <div className="h-96 flex items-center justify-center min-h-screen">
       <div className="loadingspinner">
         <div id="square1"></div>
         <div id="square2"></div>
