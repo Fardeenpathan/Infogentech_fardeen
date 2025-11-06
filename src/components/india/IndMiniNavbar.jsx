@@ -8,8 +8,8 @@ export function IndMiniNavbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   return (
-    <div className=" absolute bg-transparent mt-3 h-15 mx-auto z-50 container px-2 w-full text-white font-montserrat">
-      <div className=" relative flex items-center border border-white rounded-md justify-between px-2 py-3 overflow-hidden">
+    <div className=" absolute bg-transparent h-15 mx-auto z-50 container  w-full text-white font-montserrat">
+      <div className=" relative flex items-center border-b-2 border-[#8E8E8E]  justify-between px-4 py-3 overflow-hidden">
         <div className="flex items-center  space-x-1.5">
           <Link href="/" className="flex items-center gap-1.5">
             <Image
