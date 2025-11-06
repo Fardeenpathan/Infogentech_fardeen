@@ -34,7 +34,7 @@ const SlugPage = () => {
           <div className="mx-auto w-fit md:mt-10 -mt-10">
             <Icons name="CurveGradient" />
           </div>
-          <div className="relative -top-48   md:px-10 px-2">
+          <div className="relative -top-48 md:px-10 px-2">
             <ProjectImageSection
               project={project}
               expanded={expanded}
@@ -54,29 +54,27 @@ const SlugPage = () => {
               </ul>
             </div>
 
-            <div className="md:mx-5 mt-10 font-jost mx-0">
-              <div className="grid md:grid-cols-3 grid-cols-2 mt-15 space-y-8">
+            <div className="md:mx-5 mt-10 font-montserrat mx-0">
+              <div className="grid md:grid-cols-3 grid-cols-1 mt-15 space-y-8 space-x-2">
                 <div className="flex flex-col gap-2 ">
-                  <p className="font-jost font-medium text-lg leading-[20px] opacity-30">
+                  <p className="font-jost font-medium text-lg leading-[20px]">
                     Date
                   </p>
                   <p>{project.date}</p>
                 </div>
                 <div className="flex flex-col gap-3">
-                  <p className=" font-medium text-lg leading-[20px] opacity-30">
+                  <p className=" font-medium text-lg leading-[20px]">
                     Duration
                   </p>
                   <p>{project.duration}</p>
                 </div>
                 <div className="flex flex-col gap-3">
-                  <p className="font-medium text-lg leading-[20px] opacity-30">
-                    Tools
-                  </p>
+                  <p className="font-medium text-lg leading-[20px]">Tools</p>
                   <div className="flex flex-wrap gap-2">
                     {(project.tools || []).map((tool, index) => (
                       <span
                         key={index}
-                        className="font-jost bg-[#8752FF80] py-1.5 px-3 w-fit radius"
+                        className="font-jost bg-primary text-white py-1.5 px-3 w-fit radius"
                       >
                         {tool}
                       </span>
@@ -85,13 +83,11 @@ const SlugPage = () => {
                 </div>
 
                 <div className="flex flex-col gap-3">
-                  <p className=" font-medium text-lg leading-[20px] opacity-30">
-                    Client
-                  </p>
+                  <p className=" font-medium text-lg leading-[20px]">Client</p>
                   <p>{project.client}</p>
                 </div>
                 <div className="flex flex-col gap-3">
-                  <p className=" font-medium text-lg leading-[20px] opacity-30">
+                  <p className=" font-medium text-lg leading-[20px]">
                     Location
                   </p>
                   <p>{project.location}</p>
@@ -99,14 +95,14 @@ const SlugPage = () => {
               </div>
               <div className="grid xl:grid-cols-3 grid-cols-2 mt-15 space-y-8 gap-3">
                 <div className="flex flex-col gap-2">
-                  <p className="font-jost font-medium text-lg leading-[20px] opacity-30">
+                  <p className="font-jost font-medium text-lg leading-[20px]">
                     Modules
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {(project.modules || []).map((mod, index) => (
                       <span
                         key={index}
-                        className="font-jost bg-[#8752FF80] py-1.5 px-3 w-fit radius"
+                        className="font-jost bg-primary text-white py-1.5 px-3 w-fit radius"
                       >
                         {mod}
                       </span>
@@ -115,14 +111,14 @@ const SlugPage = () => {
                 </div>
 
                 <div className="flex flex-col gap-3">
-                  <p className="font-medium text-lg leading-[20px] opacity-30">
+                  <p className="font-medium text-lg leading-[20px]">
                     Expertise
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {(project.expertise || []).map((item, index) => (
                       <span
                         key={index}
-                        className="font-jost bg-[#8752FF80] py-1.5 px-3 w-fit radius"
+                        className="font-jost bg-primary text-white py-1.5 px-3 w-fit radius"
                       >
                         {item}
                       </span>
@@ -131,47 +127,31 @@ const SlugPage = () => {
                 </div>
 
                 {/* Make this span full width on small screens */}
-                <div className="flex flex-col gap-3 items-center md:items-end col-span-2 lg:col-span-1 w-fit">
-                  {project.url ? (
+                {project.url?.trim() && project.buttonText?.trim() && (
+                <div className="flex flex-col gap-3 items-center md:items-end col-span-2 lg:col-span-1 w-fit pb-2">
+                  {project.url && (
                     <a
                       href={project.url}
-                      // target="_blank"
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="inline-block p-[2px] rounded-xl 
-        [background:linear-gradient(270deg,rgba(0,0,0,0)_4.64%,rgba(0,0,0,0.63)_82.81%)] w-full md:w-auto"
+                       [background:linear-gradient(270deg,rgba(0,0,0,0)_4.64%,rgba(0,0,0,0.63)_82.81%)] w-full md:w-auto"
                     >
                       <span
                         className="flex gap-2 justify-center items-center 
-          text-lg font-jost px-10 py-3 
-          rounded-[10px] 
-          bg-[#7544E4] 
-          text-white 
-          custom-shadow"
+                        text-lg font-jost px-10 py-3 
+                        rounded-[10px] 
+                        bg-[#7544E4] 
+                        text-white 
+                        custom-shadow"
                       >
                         {project.buttonText || "View Project"} &nbsp;
                         <Icons name="Arrow" />
                       </span>
                     </a>
-                  ) : (
-                    <a
-                      href="/us/contact"
-                      className="inline-block p-[2px] rounded-xl 
-        [background:linear-gradient(270deg,rgba(0,0,0,0)_4.64%,rgba(0,0,0,0.63)_82.81%)] w-full md:w-auto"
-                    >
-                      <span
-                        className="flex gap-2 justify-center items-center 
-          text-lg font-jost px-10 py-3 
-          rounded-[10px] 
-          bg-[#7544E4] 
-          text-white 
-          custom-shadow"
-                      >
-                        Contact Us &nbsp;
-                        <Icons name="Arrow" />
-                      </span>
-                    </a>
                   )}
                 </div>
+                )}
               </div>
             </div>
           </div>
