@@ -33,7 +33,7 @@ const arrowVariants = {
 const SubServiceCard = ({ subService }) => {
   return (
     <motion.div
-      className="shadow-[0px_0px_54px_24px_#1C1C38] p-5 rounded-2xl relative min-h-80"
+      className="md:shadow-[0px_0px_54px_24px_#1C1C38] shadow-[0px_0px_34px_4px_#1C1C38] p-5 rounded-2xl relative md:min-h-80 min-h-50"
       variants={containerVariants}
       initial="rest"
       whileHover="hover"
@@ -41,15 +41,15 @@ const SubServiceCard = ({ subService }) => {
       style={{ willChange: 'transform' }}
       layout
     >
-      <span className="font-jost font-normal text-[32px] leading-[100%] tracking-[3%] opacity-10">
+      <span className="font-jost font-normal md:text-[32px] text-base leading-[100%] tracking-[3%] opacity-10">
         {subService.id}
       </span>
 
-      <h2 className="font-jost font-medium text-[32px] leading-[120%] tracking-[0.03em] mt-8">
+      <h2 className="font-jost font-medium md:text-[32px] text-base leading-[120%] tracking-[0.03em] md:mt-8 mt-2.5">
         {subService.title}
       </h2>
 
-      <p className="font-jost font-normal text-base leading-[140%] tracking-[0.03em] capitalize mt-8 opacity-30 font-kumbh-sans">
+      <p className="font-jost font-normal md:text-base text-sm leading-[140%] tracking-[0.03em] capitalize md:mt-8 mt-2 opacity-30 font-kumbh-sans">
         {subService.desc}
       </p>
 
@@ -66,7 +66,8 @@ const SubServiceCard = ({ subService }) => {
           aria-hidden
           style={{ display: 'inline-block' }}
         >
-          <Icons name="ArrowPortfolioLeft" width={40} height={20} />
+          <Icons name="ArrowPortfolioLeft" />
+          <Icons name="SmallArrowPortfolioLeft" />
         </motion.span>
       </a>
     </motion.div>
