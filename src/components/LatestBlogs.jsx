@@ -1,17 +1,16 @@
-
 "use client";
 import { useState, useEffect } from "react";
-import { useSelector } from 'react-redux';
-import { usePathname } from 'next/navigation';
+import { useSelector } from "react-redux";
+import { usePathname } from "next/navigation";
 import MidHeader from "./MidHeader";
 import Icons from "./ui/Icon";
 import HomeBlogCardsd from "./HomeBlogCardsd";
-import { addCountryFilters, getRouteType } from '@/utils/countryUtils';
-
+import { addCountryFilters, getRouteType } from "@/utils/countryUtils";
+import axios from "axios";
 export default function LatestBlogs() {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
-  
+
   // Get country code from Redux store and pathname for country-specific filtering
   const countryCode = useSelector((state) => state.countryCode.value);
   const pathname = usePathname();
@@ -20,27 +19,24 @@ export default function LatestBlogs() {
     const fetchRecentBlogs = async () => {
       try {
         setLoading(true);
-        
-        let url = `${process.env.NEXT_PUBLIC_API_URL}/api/blogs`;
+
+        let url = `${process.env.NEXT_PUBLIC_API_URL}/api/blogs/`;
         const params = new URLSearchParams();
-        params.append('page', '1');
-        params.append('limit', '3');
-        
-        // Add country and region filtering based on detected country and route type
+        params.append("page", "1");
+        params.append("limit", "3");
+
         if (countryCode && pathname) {
           const routeType = getRouteType(pathname);
           addCountryFilters(params, countryCode, routeType);
         }
-        
-        url += '?' + params.toString();
-        
-        const response = await fetch(url);
-        if (response.ok) {
-          const data = await response.json();
-          if (data.success && data.data) {
-            setBlogs(data.data);
+
+        url += "?" + params.toString();
+
+        const response = await axios.get(url);
+        if (response.data.success && response.data.data) {
+          setBlogs(response.data.data);
+          console.log("Fetched blogs:", response.data.data);
           }
-        }
       } catch (error) {
         console.error("Error fetching recent blogs:", error);
       } finally {
@@ -91,7 +87,7 @@ export default function LatestBlogs() {
         <p className="font-jost font-semibold  text-sm leading-[120%] capitalize ">
           See Our <br /> More Blogs
         </p>
-        <Icons name="Arrow" height={14} width={31}/>
+        <Icons name="Arrow" height={14} width={31} />
       </a>
     </div>
   );

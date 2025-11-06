@@ -1,15 +1,15 @@
-"use client"
+"use client";
 import Image from "next/image";
 import Icons from "@/components/ui/Icon";
 import ContactForm from "@/components/ContactForm";
 import SubContact from "@/components/SubContact";
 import MoreContact from "@/components/MoreContact";
 import SubscribeContact from "@/components/SubscribeContact";
-import { motion } from 'framer-motion';
-const contact = () => { 
+import { motion } from "framer-motion";
+const contact = () => {
   return (
-    <div className="xl:mt-35 mt-10 subContainer mx-auto">
- <div className="flex flex-col-reverse xl:flex-row justify-between items-center">
+    <div className="mt-35 subContainer mx-auto">
+      <div className="flex flex-col-reverse xl:flex-row justify-between items-center">
         <div className="flex gap-10 flex-col xl:flex-row">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -28,13 +28,12 @@ const contact = () => {
             <div className="w-0.5 h-28 rounded-full mt-4 bg-gradient-to-b from-purple-400 via-purple-500 to-purple-800"></div>
           </motion.div>
 
-          
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
-            className="flex flex-col max-w-3xl justify-center text-start px-4  xl:text-left"
+            className="flex flex-col max-w-3xl justify-center items-center lg:text-start px-4  xl:text-left"
           >
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -59,7 +58,7 @@ const contact = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
-              className="font-jost font-medium text-lg leading-6 align-middle mt-9"
+              className="font-jost font-medium text-lg leading-6 align-middle mt-9 text-center lg:text-start"
             >
               We’re here to help! Reach out with any real questions, and we’ll
               get back to you within 48 hours. For support or inquiries, feel
