@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Icons from "../ui/Icon";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import IndButton from "./ui/IndButton";

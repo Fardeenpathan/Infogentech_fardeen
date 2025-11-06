@@ -10,7 +10,7 @@ const contentMap = {
       id: "design-1",
       title: (
         <>
-          LaraClean Dry <span className="text-[#A855F7]">Cleaning Website</span>
+          LaraClean Dry <span className="text-primary">Cleaning Website</span>
         </>
       ),
       desc: "This project highlights the design process of developing a clean, functional, and engaging website for LaraClean. It was designed to offer an easy booking experience to users and demonstrate the professionalism and trust of the brand. ",
@@ -26,7 +26,7 @@ const contentMap = {
       title: (
         <>
           British Raj to India
-          <span className="text-[#A855F7]"> A Historical Video Project</span>
+          <span className="text-primary"> A Historical Video Project</span>
         </>
       ),
       desc: "This project highlights how Infogentech transformed a complex historical subject into an engaging and visually compelling video using motion graphics, narration, and storytelling design.",
@@ -45,7 +45,7 @@ const contentMap = {
       title: (
         <>
           API Integration
-          <span className="text-[#A855F7]"> Performance Optimization</span>
+          <span className="text-primary"> Performance Optimization</span>
         </>
       ),
       desc: "Soouqna, a growing e-commerce platform, partnered with Zebra to enhance logistics and delivery. API connectivity enabled seamless barcode scanning, better printer efficiency, and improved operational accuracy for faster, more reliable customer service.",
@@ -61,7 +61,7 @@ const contentMap = {
       title: (
         <>
           Shaadikarwadu
-          <span className="text-[#A855F7]"> Wedding Planning App</span>
+          <span className="text-primary"> Wedding Planning App</span>
         </>
       ),
       desc: "Shaadikarwadu is a wedding planner application that makes the whole process one-stop as it puts the venues, vendors, outfits, and invitations on the same platform. It assists the users in saving time, stress, and control of all details effectively.",
@@ -80,7 +80,7 @@ const contentMap = {
       title: (
         <>
           The Exam Questions
-          <span className="text-[#A855F7]"> From Views to Learners</span>
+          <span className="text-primary"> From Views to Learners</span>
         </>
       ),
       desc: "The Exam Questions, a New York-based SAP certification platform, helps learners succeed with guides, FAQs, and career insights. We aimed at transforming their disjointed branding into a professional learning center that would attract engagement and course enrollment.",
@@ -96,7 +96,7 @@ const contentMap = {
       title: (
         <>
           AirlineReservationWindow.com
-          <span className="text-[#A855F7]"> online flight booking</span>
+          <span className="text-primary"> online flight booking</span>
         </>
       ),
       desc: "Intensive efforts are being made to make air travel more affordable, accessible, and convenient to leisure and business travelers. It has a dynamic interface, options of multiple airlines, low fares, and 24/7 customer care that helps users to book flights easily and securely in a saturated travel market",
@@ -112,7 +112,7 @@ const contentMap = {
       title: (
         <>
           @ananyakhurana_30
-          <span className="text-[#A855F7]"> Instagram profile</span>
+          <span className="text-primary"> Instagram profile</span>
         </>
       ),
       desc: "Ananya Khurana is an upcoming fashion leader and is recognized for clean edits, stylish outfits, styling guidelines, and tutorials. She combines creative minimalist fashion with relatability, which appeals to brand associations and a modern crowd.",
@@ -128,7 +128,7 @@ const contentMap = {
       title: (
         <>
           ExamStudyZone.com
-          <span className="text-[#A855F7]"> Educational Platform </span>
+          <span className="text-primary"> Educational Platform </span>
         </>
       ),
       desc: "ExamStudyZone.com is an educational platform offering SAP study materials, practice exams, and PDFs for modules like S/4HANA, MM, SD, and ABAP, helping students learn systematically outside regular classes..",
@@ -147,7 +147,7 @@ const contentMap = {
       title: (
         <>
           CertStudyMaterial Boosting IT Certification
-          <span className="text-[#A855F7]">Visibility</span>
+          <span className="text-primary">Visibility</span>
         </>
       ),
       desc: "CertStudyMaterial is an IT certification study resource that offers exam guides, practice tests, and PDFs of CompTIA, Cisco, Oracle, AWS, and Microsoft to its users so that they can study efficiently without training.",
@@ -163,7 +163,7 @@ const contentMap = {
       title: (
         <>
           BookPremiumFare.com Driving Travel
-          <span className="text-[#A855F7]"> Website Growth </span>
+          <span className="text-primary"> Website Growth </span>
         </>
       ),
       desc: "BookPremiumFare.com is a travel booking platform offering premium and discounted airfares. It offers convenient booking, up-to-date airfare, and secure checkout, and draws organic traffic.",
@@ -250,7 +250,7 @@ export default function OurPortfolio() {
         </a>
       </div>
       <div className="xl:px-4 px-2 pt-2 xl:pt-4 rounded-lg border-b-0 bg-[linear-gradient(180deg,#8752FF_0%,#513199_38.59%)] min-h-[682px] overflow-hidden">
-        <div className="w-full h-full bg-black rounded-lg xl:p-6 p-4 grid xl:grid-cols-2 grid-cols-1 gap-4 overflow-hidden relative">
+        <div className="w-full h-full bg-black rounded-lg xl:p-6 p-4  grid xl:grid-cols-2 grid-cols-1 gap-4 overflow-hidden relative">
           <div className="xl:ml-6.5 ml-0 transition-all duration-500 ease-in-out flex flex-col justify-between mb-6 order-2 xl:order-1">
              <div className="flex gap-x-3 md:gap-x-10 items-center justify-between mt-5 xl:hidden">
                 <button
@@ -335,7 +335,7 @@ export default function OurPortfolio() {
             
           </div>
             
-          <div className="px-2 pt-2 order-1 xl:order-2 rounded-lg border-b-0 bg-[linear-gradient(180deg,#8752FF_0%,#513199_38.59%)] xl:mt-34 mt-4 rotate-[-5.03deg] shadow-[7px_-4px_108px_-43px_#8955FF] relative xl:-right-5 right-0 transition-all duration-500 ease-in-out">
+          <div className="md:px-2 px-1 pt-1  md:pt-2 order-1 xl:order-2 rounded-lg border-b-0 bg-[linear-gradient(180deg,#8752FF_0%,#513199_38.59%)] xl:mt-34 mt-4 rotate-[-5.03deg] shadow-[7px_-4px_108px_-43px_#8955FF] relative xl:-right-5 right-0 transition-all duration-500 ease-in-out">
             <div className="w-full xl:min-h-[580px] bg-black rounded-xl flex justify-between overflow-hidden h-auto">
               {currentSlide?.image ? (
                 <Image
@@ -343,7 +343,7 @@ export default function OurPortfolio() {
                   alt="valueImg"
                   width={800}
                   height={500}
-                  objectFit="cover"
+                  style={{ objectFit: 'cover' }}
                   className="object-fit rounded-xl "
                 />
               ) : (

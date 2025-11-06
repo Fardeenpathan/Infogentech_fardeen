@@ -37,7 +37,7 @@ export default function StrategicProcess() {
           subheading="Driving Your Digital Success"
         />
         <div className="relative">
-          <Icons name="Snakepath" width="w-65 md:w-142" height="h-34 md:h-74"/>
+          <Icons name="Snakepath" width="w-65 md:w-142 lg:w-570" height="h-34 md:h-74 lg:390"/>
         </div>
       </div>
          

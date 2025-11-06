@@ -62,7 +62,7 @@ export function Footer() {
                   alt="valueImg"
                   width={108}
                   height={54}
-                  objectFit="cover"
+                  style={{ objectFit: 'cover' }}
                 />
                 <Link href="https://www.linkedin.com/company/infogentech/"  target="_blank">
                   <Icons name="LinkedIn" />

@@ -115,11 +115,27 @@ const Design = () => {
       id: "04",
       title: "Logo Design",
       image: "/assist/services/design/logo.jpeg",
-       subServices: [
-        { id: "01", title: "Minimalist logo" ,desc: "Sleek and simple designs for modern brands."},
-        { id: "02", title: "Animated logo", desc: "Bringing your brand to life with motion." },
-        { id: "03", title: "Custom Logo Design", desc: "Tailored designs that reflect your brand identity." },
-        { id: "04", title: "3D Logo", desc: "Adding depth and dimension to your brand." },
+      subServices: [
+        {
+          id: "01",
+          title: "Minimalist logo",
+          desc: "Sleek and simple designs for modern brands.",
+        },
+        {
+          id: "02",
+          title: "Animated logo",
+          desc: "Bringing your brand to life with motion.",
+        },
+        {
+          id: "03",
+          title: "Custom Logo Design",
+          desc: "Tailored designs that reflect your brand identity.",
+        },
+        {
+          id: "04",
+          title: "3D Logo",
+          desc: "Adding depth and dimension to your brand.",
+        },
       ],
     },
   ];
@@ -156,8 +172,8 @@ const Design = () => {
     <>
       <ServicesHeader />
       <AllServices activeService="Design" />
-      <div className="container mx-auto mt-24 xl:px-10 md:px-5 px-2">
-          <div className="border-b-2 border-[#7e7d7d] mt-15 opacity-15"></div>
+      <div className="container mx-auto mt-9 md:mt-24 xl:px-10 md:px-5 px-2">
+        <div className="border-b-2 border-[#7e7d7d] mt-9 md:mt-15 opacity-15"></div>
         <div>
           {categories.map((category) => (
             <div key={category.id}>
@@ -191,6 +207,19 @@ const Design = () => {
                     transition={{ duration: 0.35, ease: "easeInOut" }}
                     className="overflow-hidden"
                   >
+                    
+                    {openCategory === category.id && (
+                      <div className="mt-10 flex justify-center">
+                        <Image
+                        src={category.image}
+                        alt={category.title}
+                        width={400}
+                        height={377}
+                        className=" w-64 h-36  rounded-2xl rotate-12  object-cover z-10 "
+                      />
+                      </div>
+                      
+                    )}
                     <div className="py-10 flex flex-col items-center gap-2 text-center px-4">
                       <p className="font-jost font-bold md:text-3xl text-2xl leading-6 text-primary">
                         Our Value
@@ -201,7 +230,7 @@ const Design = () => {
                       </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-6 mb-10 overflow-visible md:px-10 px-4">
+                    <div className="grid grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 md:gap-6 gap-2 mb-10 overflow-visible md:px-10 px-4">
                       {category.subServices.length > 0 ? (
                         category.subServices.map((subService) => (
                           <motion.div
@@ -234,7 +263,7 @@ const Design = () => {
 
         <div className="mt-34 flex justify-center items-center flex-col relative">
           <div className="absolute -top-20 ">
-            <Icons name="gradientServices" width={300} height={100}/>
+            <Icons name="gradientServices" width={300} height={100} />
           </div>
 
           {/* <div className="relative subContainer h-[640px] flex items-center justify-center">

@@ -60,7 +60,7 @@ export default function ServicesSection() {
                   alt={service.title}
                   width={117}
                   height={110}
-                  objectFit="cover "
+                  style={{ objectFit: 'cover' }}
                   className="xl:w-25 xl:h-25"
                 />
               </p>

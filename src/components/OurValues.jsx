@@ -53,7 +53,7 @@ export default function OurValues() {
               alt="valueImg"
               width={100}
               height={99}
-              objectFit="cover"
+               style={{ objectFit: 'cover', zIndex: 10 }}
             />
           </div>
           <Image
@@ -61,7 +61,7 @@ export default function OurValues() {
             alt="valueImg"
             width={640}
             height={150}
-            objectFit="cover"
+            style={{ objectFit: 'cover'}}
             className="w-[640px] md:h-72 h-40 relative transform xl:scale-x-[-1] overflow-hidden -z-40 xl:-right-62 xl:-top-6 scale-x-[-1] rotate-90 xl:rotate-0 md:top-60 top-45 -right-5"
           />
         </div>
@@ -77,7 +77,7 @@ export default function OurValues() {
                   alt={service.title}
                   width={service.width}
                   height={service.height}
-                  objectFit="cover"
+                  style={{ objectFit: 'cover'}}
                 />
                 <h2 className="font-jost font-medium text-2xl leading-[120%] tracking-[0.03em] mt-6">
                   {service.title}

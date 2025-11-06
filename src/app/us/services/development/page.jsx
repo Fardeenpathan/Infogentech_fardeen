@@ -104,8 +104,8 @@ const Development = () => {
       <ServicesHeader />
       <AllServices activeService="Development" />
 
-      <div className="container mx-auto mt-24 xl:px-10 md:px-5 px-2">
-        <div className="border-b-2 border-[#7e7d7d] mt-15 opacity-15"></div>
+      <div className="container mx-auto mt-9 md:mt-24 xl:px-10 md:px-5 px-2">
+        <div className="border-b-2 border-[#7e7d7d] mt-9 md:mt-15 opacity-15"></div>
 
         <div>
           {categories.map((category) => (

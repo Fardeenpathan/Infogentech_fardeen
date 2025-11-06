@@ -1,12 +1,14 @@
+import axios from "axios";
+
 export async function GET() {
   const baseUrl = 'https://infogentech.com';
 
   let blogs = [];
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blogs`, {
+    const res = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/blogs`, {
       next: { revalidate: 3600 },
     });
-    const data = await res.json();
+    const data = res.data;
     blogs = Array.isArray(data.data) ? data.data : [];
   } catch (e) {
     blogs = [];

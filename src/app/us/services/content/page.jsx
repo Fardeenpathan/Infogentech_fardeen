@@ -183,8 +183,8 @@ const Content = () => {
     <>
       <ServicesHeader />
       <AllServices activeService="Content" />
-      <div className="container mx-auto mt-24 xl:px-10 md:px-5 px-2">
-        <div className="border-b-2 border-[#7e7d7d] mt-15 opacity-15"></div>
+      <div className="container mx-auto md:mt-24 mt-9 xl:px-10 md:px-5 px-2">
+        <div className="border-b-2 border-[#7e7d7d] md:mt-15 mt-9 opacity-15"></div>
         <div>
           {categories.map((category) => (
             <div key={category.id}>
@@ -201,7 +201,7 @@ const Content = () => {
 
                 {openCategory === category.id && (
                   <Image
-                    src="/assist/img/DesignImg.png"
+                    src="/assist/img/DesignImg.png"    
                     alt="Design"
                     width={400}
                     height={377}

@@ -16,7 +16,7 @@ export default function TopicHeader({
           />
         </div>
 
-        <div className="w-0.5 h-28 rounded-full mt-4 bg-gradient-to-b from-purple-400 via-purple-500 to-purple-800"></div>
+        <div className="w-0.5 md:h-28 h-18 rounded-full mt-4 bg-gradient-to-b from-purple-400 via-purple-500 to-purple-800"></div>
       </div>
       <div>
         <p className="font-avalors font-normal md:text-[32px] text-2xl leading-6 align-middle text-primary">
