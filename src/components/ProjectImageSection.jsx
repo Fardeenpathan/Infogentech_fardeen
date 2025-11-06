@@ -6,7 +6,7 @@ const ProjectImageSection = ({ project, expanded, setExpanded }) => {
   return (
     <div
       className={`mx-auto rounded-2xl overflow-hidden bg-black transition-[max-height] duration-500 relative  ${
-        expanded ? "h-full" : "h-[700px] md:[300px]"
+        expanded ? "h-full" : "lg:h-[700px]"
       }`}
     >
       <Image
@@ -18,7 +18,7 @@ const ProjectImageSection = ({ project, expanded, setExpanded }) => {
         sizes="(max-width: 768px) 100vw, 1400px"
         className="rounded-2xl mx-auto p-2 overflow-hidden"
       />
-      <div className="font-jost text-center absolute w-full bottom-0 py-14  glass-fallback bg-white/6"></div>
+      <div className="font-jost text-center absolute w-full bottom-0 lg:py-14 py-9   glass-fallback bg-white/6"></div>
       <div className="font-jost text-center absolute w-full bottom-0 py-4">
         <ShinyButton className="lg:!py-4 !px-5 !text-lg !py-2"
           onClick={() => setExpanded((s) => !s)}
