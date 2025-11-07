@@ -49,7 +49,7 @@ const Terms = () => {
             <div className="w-0.5 h-28 rounded-full mt-4 bg-gradient-to-b from-purple-400 via-purple-500 to-purple-800"></div>
           </div>
           <div className="flex flex-col">
-            <p className="font-avalors font-normal text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-none bg-[linear-gradient(91.32deg,_#6A27FF_-32.61%,_#FFFFFF_19.98%,_#6A27FF_112.29%)] bg-clip-text text-transparent">
+            <p className="font-avalors font-normal text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-none bg-[linear-gradient(91.32deg,_#6A27FF_-32.61%,_#FFFFFF_19.98%,_#6A27FF_112.29%)] bg-clip-text text-transparent">
               Terms and Conditions
             </p>
             <p className="font-avalors font-normal text-2xl sm:text-4xl md:text-5xl lg:text-6xl leading-none bg-[linear-gradient(91.32deg,_#6A27FF_-32.61%,_#FFFFFF_19.98%,_#6A27FF_112.29%)] bg-clip-text text-transparent mt-2">
@@ -74,7 +74,7 @@ const Terms = () => {
           </div>
           <div className="w-0.5 h-full rounded-full mt-4 bg-gradient-to-b from-purple-400 via-purple-500 to-purple-800"></div>
         </div>
-        <aside className="flex flex-col p-4">
+        <aside className="flex flex-col p-2">
           <article className="space-y-8">
             <div>
             <p className="font-avalors font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl capitalize mb-4">

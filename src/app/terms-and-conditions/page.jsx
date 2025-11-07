@@ -48,7 +48,7 @@ const Terms = () => {
   return (
     <div className="subContainer mx-auto p-3">
     <div className="flex flex-col xl:mt-35 mt-25">
-            <h1 className="font-avalors font-normal text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-primary">
+            <h1 className="font-avalors font-normal text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-primary">
               Terms and Conditions
             </h1>
             <h2 className="font-avalors font-normal text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-primary mt-2">
@@ -60,7 +60,7 @@ const Terms = () => {
               If you do not agree, you should not use this site.
             </p>
           </div>
-              <aside className="flex flex-col p-4">
+              <aside className="flex flex-col p-2">
           <article className="space-y-8">
             <div>
             <h4 className="font-avalors font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl capitalize mb-4">

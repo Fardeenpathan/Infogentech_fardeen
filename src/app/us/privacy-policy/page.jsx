@@ -13,8 +13,8 @@ const PrivacyPolicy = () => {
             </div>
             <div className="w-0.5 h-28 rounded-full mt-4 bg-gradient-to-b from-purple-400 via-purple-500 to-purple-800 "></div>
           </div>
-          <div className="flex flex-col ">
-            <p className="font-avalors font-normal text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-none bg-[linear-gradient(91.32deg,_#6A27FF_-32.61%,_#FFFFFF_19.98%,_#6A27FF_112.29%)] bg-clip-text text-transparent">
+          <div className="flex flex-col p-2">
+            <p className="font-avalors font-normal text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-none bg-[linear-gradient(91.32deg,_#6A27FF_-32.61%,_#FFFFFF_19.98%,_#6A27FF_112.29%)] bg-clip-text text-transparent">
               Privacy Policy
             </p>
             <p className="font-avalors font-normal text-2xl sm:text-4xl md:text-5xl lg:text-6xl leading-none bg-[linear-gradient(91.32deg,_#6A27FF_-32.61%,_#FFFFFF_19.98%,_#6A27FF_112.29%)] bg-clip-text text-transparent">
@@ -98,7 +98,7 @@ const PrivacyPolicy = () => {
               "Contact Us",
             ].map((title, idx) => (
               <section key={idx}>
-                <p className="font-avalors font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-[100%] tracking-[0.03em] capitalize mb-4">
+                <p className="font-avalors font-normal  sm:text-2xl md:text-3xl lg:text-4xl leading-[100%] tracking-[0.03em] capitalize mb-4">
                   {title}
                 </p>
                 <h2 className="mt-3 text-base sm:text-lg md:text-xl leading-relaxed font-jost pl-4">

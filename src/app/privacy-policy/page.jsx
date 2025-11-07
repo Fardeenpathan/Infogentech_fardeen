@@ -50,7 +50,7 @@ const PrivacyPolicy = () => {
       <div className="flex justify-between items-center">
         <div className="flex gap-7">
           <div className="flex flex-col xl:mt-35 mt-25">
-            <h1 className="font-avalors font-normal text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-none text-primary">
+            <h1 className="font-avalors font-normal text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-none text-primary">
               Privacy Policy
             </h1>
             <h2 className="font-avalors font-normal text-2xl sm:text-4xl md:text-5xl lg:text-6xl leading-none text-primary">
@@ -66,7 +66,7 @@ const PrivacyPolicy = () => {
           </div>
         </div>
       </div>
-   <aside className="flex flex-col p-4">
+   <aside className="flex flex-col p-2">
           <article className="space-y-6">
             <h3 className="font-avalors font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-[100%] tracking-[0.03em] capitalize mb-4">
               Information We Collect
@@ -117,7 +117,7 @@ const PrivacyPolicy = () => {
               "Contact Us",
             ].map((title, idx) => (
               <section key={idx}>
-                <h3 className="font-avalors font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-[100%] tracking-[0.03em] capitalize mb-4">
+                <h3 className="font-avalors font-normal  sm:text-2xl md:text-3xl lg:text-4xl leading-[100%] tracking-[0.03em] capitalize mb-4">
                   {title}
                 </h3>
               </section>

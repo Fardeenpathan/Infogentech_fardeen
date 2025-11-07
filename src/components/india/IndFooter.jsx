@@ -15,12 +15,12 @@ export function IndFooter() {
           </p>
            <div className="w-full md:w-1/2 lg:w-1/3 flex justify-center md:justify-end space-x-5 font-jost mt-6">
             <Link
-              href="/us/portfolio/design"
+              href="/portfolio/design"
               className="bg-white text-black  xl:py-4.5 lg:px-10 font-medium  radius py-3.5 px-8 text-nowrap text-xl"
             >
               View Portfolio
             </Link>
-            <Link href="/us/contact">
+            <Link href="/contact">
               <Button
                 text="Contact Us"
                 className="!py-4 !px-10 xl:!py-4.5 lg:!px-15 text-nowrap"
