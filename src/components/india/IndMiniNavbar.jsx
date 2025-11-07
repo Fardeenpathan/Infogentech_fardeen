@@ -10,7 +10,7 @@ export function IndMiniNavbar() {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const pathname = usePathname();
   return (
-    <div className=" absolute bg-transparent h-17 mx-auto z-50 container  w-full text-white font-montserrat">
+    <div className=" absolute bg-transparent  mx-auto z-50 container  w-full text-white font-montserrat">
       <div className={` flex items-center  justify-between px-4 py-4 overflow-hidden ${
           pathname === "/" ? "border-b-2 border-[#8E8E8E]" : ""
         }`}>
