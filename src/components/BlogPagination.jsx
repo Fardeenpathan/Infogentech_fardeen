@@ -25,7 +25,7 @@ const BlogPagination = ({
 
             // changing when there are more than 5 pages and shifting left slide when page increases
             const pages = [];
-            const maxVisible = 5;
+            const maxVisible = 3;
             
             if (totalPages <= maxVisible) {
               for (let i = 1; i <= totalPages; i++) {
