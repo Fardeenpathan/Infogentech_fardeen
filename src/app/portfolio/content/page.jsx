@@ -1,5 +1,5 @@
 
-import IndServicesHeader from "@/components/india/IndServicesHeader";
+import IndPortfolioHeader from "@/components/india/IndPortfolioHeader";
 import IndProtfolioAll from "@/components/india/IndProtfolioAll";
 import contentProjects from "./contentProjects";
 import IndCustomLine from "@/components/india/IndCustomLine";
@@ -8,7 +8,7 @@ import MovingTextBanner from "@/components/MovingTextBanner";
 const Content = () => {
   return (
     <>
-      <IndServicesHeader />
+      <IndPortfolioHeader />
       <IndProtfolioAll activeService="content" />
         <div className="grid grid-cols-1 lg:grid-cols-2 container mx-auto">
           {contentProjects?.map((project, index) => (

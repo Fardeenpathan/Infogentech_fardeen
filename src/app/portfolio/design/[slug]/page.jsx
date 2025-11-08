@@ -1,6 +1,6 @@
 "use client";
 import Icons from "@/components/ui/Icon";
-import IndServicesHeader from "@/components/india/IndServicesHeader";
+import IndPortfolioHeader from "@/components/india/IndPortfolioHeader";
 import IndProtfolioAll from "@/components/india/IndProtfolioAll";
 import { useState, useEffect } from "react";
 import ProjectImageSection from "@/components/ProjectImageSection";
@@ -26,7 +26,7 @@ const SlugPage = () => {
 
   return (
     <>
-      <IndServicesHeader />
+      <IndPortfolioHeader />
       <IndProtfolioAll activeService="design" />
       <div className="container mx-auto md:px-10 px-2">
         <div className="md:mt-10 -z-20 border-2 rounded-3xl md:pt-10 pt-2">

@@ -1,5 +1,5 @@
 
-import IndServicesHeader from "@/components/india/IndServicesHeader";
+import IndPortfolioHeader from "@/components/india/IndPortfolioHeader";
 import IndProtfolioAll from "@/components/india/IndProtfolioAll";
 import IndCustomLine from "@/components/india/IndCustomLine";
 import marketingProjects from "./marketingProjects";
@@ -9,7 +9,7 @@ import MovingTextBanner from "@/components/MovingTextBanner";
 const DigitalMarketing = () => {
   return (
     <>
-      <IndServicesHeader />
+      <IndPortfolioHeader />
       <IndProtfolioAll activeService="digital-marketing" />
         <div className="grid grid-cols-1 lg:grid-cols-2 container mx-auto">
             {marketingProjects?.map((project, index) => (

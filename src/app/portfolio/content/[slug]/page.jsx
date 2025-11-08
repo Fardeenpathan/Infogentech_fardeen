@@ -1,6 +1,6 @@
 "use client";
 import Icons from "@/components/ui/Icon";
-import IndServicesHeader from "@/components/india/IndServicesHeader";
+import IndPortfolioHeader from "@/components/india/IndPortfolioHeader";
 import IndProtfolioAll from "@/components/india/IndProtfolioAll";
 import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
@@ -26,7 +26,7 @@ const SlugPage = () => {
 
   return (
     <>
-      <IndServicesHeader />
+      <IndPortfolioHeader />
       <IndProtfolioAll activeService="content" />
      <div className="container mx-auto md:px-10 px-2">
         <div className="md:mt-10 -z-20 border-2 rounded-3xl md:pt-10 pt-2">
@@ -37,19 +37,19 @@ const SlugPage = () => {
               setExpanded={setExpanded}
             />
             <div className="mx-5 mt-6 font-montserrat">
-              <p className=" font-normal text-[32px] leading-7 ">
+              <p className=" font-normal md:text-3xl text-2xl leading-7">
                 {project.title}
               </p>
-              <p className="mt-4 text-xl leading-7 opacity-80 font-kumbh-sans">
+              <p className="mt-4 md:text-xl text-sm leading-7 opacity-80 font-kumbh-sans">
                 {project.description}
               </p>
-              <ul className="list-disc list-inside mt-4 space-y-2 text-lg leading-6 opacity-70 font-kumbh-sans">
+              <ul className="list-disc list-inside mt-4 space-y-2 md:text-xl text-sm leading-6 opacity-70 font-kumbh-sans">
                 {project.points.map((point, index) => (
                   <li key={index}>{point}</li>
                 ))}
               </ul>
             </div>
-            <div className="mx-5 mt-10 font-jost">
+            <div className="md:mx-5 mt-10 font-montserrat mx-0">
                <div className="grid md:grid-cols-3 grid-cols-2 mt-15 space-y-8 space-x-2">
                 <div className="flex flex-col gap-2 ">
                   <p className="font-jost font-medium text-lg leading-[20px]">
