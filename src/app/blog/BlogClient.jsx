@@ -62,7 +62,7 @@ const Blogs = () => {
   } else {
     return (
       <div>
-        <div className="relative w-full py-32 flex items-center justify-start">
+        <div className="relative w-full lg:py-32 py-10 flex items-center justify-start">
           <Image
             src="/assist/IndImg/blogBg.jpg"
             alt="Blog"
@@ -135,7 +135,7 @@ const Blogs = () => {
               {loading ? (
                 <Loader />
               ) : blogs.length > 0 ? (
-                <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 space-y-10 gap-12 xl:gap-8 px-4 md:px-0">
+                <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 space-y-10 gap-2 xl:gap-8 md:px-0">
                   {blogs.map((blog) => (
                     <IndBlogCard key={blog.id || blog._id} blog={blog} />
                   ))}

@@ -55,20 +55,12 @@ const cardVariants = {
 
 const IndTestomonial = () => {
   return (
-    <section className="mt-20 max-w-7xl mx-auto xl:pb-20 pb-0 font-montserrat px-2">
-      <div className="lg:block hidden">
+    <section className="mt-30 max-w-7xl mx-auto xl:pb-20 pb-0 font-montserrat px-2">
         <IndMidHeader
           title="Client Testimonials"
           subtitle="What are they talking about?"
           desc=""
         />
-      </div>
-
-      <IndTopicHeader
-        className="!flex-col gap-2 lg:gap-10 block lg:hidden"
-        title="Client Testimonials"
-        subtitle="What are they talking about?"
-      />
       <motion.div
         className="flex lg:hidden gap-4 overflow-x-scroll no-scrollbar scroll-smooth"
         style={{
