@@ -43,15 +43,14 @@ const SlugPage = () => {
               <p className="mt-4 md:text-xl text-sm leading-7 opacity-80 font-kumbh-sans">
                 {project.description}
               </p>
-              <ul className="list-disc list-inside mt-4 space-y-2 md:text-xl text-sm leading-6 opacity-70 font-kumbh-sans">
-                {(project.points || []).map((point, index) => (
+               <ul className="list-disc list-inside mt-4 space-y-2 md:text-xl text-sm leading-6 opacity-70 font-kumbh-sans">
+                {project.points.map((point, index) => (
                   <li key={index}>{point}</li>
                 ))}
               </ul>
             </div>
-
-            <div className="md:mx-5 mt-10 font-montserrat mx-0">
-              <div className="grid md:grid-cols-3 grid-cols-2 mt-15 space-y-8 space-x-2">
+           <div className="md:mx-5 mt-10 font-montserrat mx-0">
+               <div className="grid md:grid-cols-3 grid-cols-1 mt-15 space-y-8 space-x-2">
                 <div className="flex flex-col gap-2 ">
                   <p className="font-jost font-medium text-lg leading-[20px]">
                     Date
@@ -59,15 +58,17 @@ const SlugPage = () => {
                   <p>{project.date}</p>
                 </div>
                 <div className="flex flex-col gap-3">
-                  <p className=" font-medium text-lg leading-[20px]">
+                  <p className=" font-medium text-lg leading-[20px] ">
                     Duration
                   </p>
                   <p>{project.duration}</p>
                 </div>
                 <div className="flex flex-col gap-3">
-                  <p className="font-medium text-lg leading-[20px]">Tools</p>
+                  <p className="font-medium text-lg leading-[20px]">
+                    Tools
+                  </p>
                   <div className="flex flex-wrap gap-2">
-                    {(project.tools || []).map((tool, index) => (
+                    {project.tools.map((tool, index) => (
                       <span
                         key={index}
                         className="font-jost bg-primary text-white py-1.5 px-3 w-fit radius"
@@ -79,7 +80,9 @@ const SlugPage = () => {
                 </div>
 
                 <div className="flex flex-col gap-3">
-                  <p className=" font-medium text-lg leading-[20px]">Client</p>
+                  <p className=" font-medium text-lg leading-[20px]">
+                    Client
+                  </p>
                   <p>{project.client}</p>
                 </div>
                 <div className="flex flex-col gap-3">
@@ -95,7 +98,7 @@ const SlugPage = () => {
                     Modules
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    {(project.modules || []).map((mod, index) => (
+                    {project.modules.map((mod, index) => (
                       <span
                         key={index}
                         className="font-jost bg-primary text-white py-1.5 px-3 w-fit radius"
@@ -111,7 +114,7 @@ const SlugPage = () => {
                     Expertise
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    {(project.expertise || []).map((item, index) => (
+                    {project.expertise.map((item, index) => (
                       <span
                         key={index}
                         className="font-jost bg-primary text-white py-1.5 px-3 w-fit radius"
@@ -122,32 +125,29 @@ const SlugPage = () => {
                   </div>
                 </div>
 
-                {/* Make this span full width on small screens */}
-                {project.url?.trim() && project.buttonText?.trim() && (
                 <div className="flex flex-col gap-3 items-center md:items-end col-span-2 lg:col-span-1 w-fit pb-2">
-                  {project.url && (
-                    <a
-                      href={project.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block p-[2px] rounded-xl 
-                       [background:linear-gradient(270deg,rgba(0,0,0,0)_4.64%,rgba(0,0,0,0.63)_82.81%)] w-full md:w-auto"
-                    >
-                      <span
-                        className="flex gap-2 justify-center items-center 
-                        text-lg font-jost px-10 py-3 
-                        rounded-[10px] 
-                        bg-[#7544E4] 
-                        text-white 
-                        custom-shadow"
-                      >
-                        {project.buttonText || "View Project"} &nbsp;
-                        <Icons name="Arrow" />
-                      </span>
-                    </a>
-                  )}
-                </div>
-                )}
+                             {project.url && (
+                               <a
+                                 href={project.url}
+                                 target="_blank"
+                                 rel="noopener noreferrer"
+                                 className="inline-block p-[2px] rounded-xl 
+                   [background:linear-gradient(270deg,rgba(0,0,0,0)_4.64%,rgba(0,0,0,0.63)_82.81%)] w-full md:w-auto"
+                               >
+                                 <span
+                                   className="flex gap-2 justify-center items-center 
+                     text-lg font-jost px-10 py-3 
+                     rounded-[10px] 
+                     bg-[#7544E4] 
+                     text-white 
+                     custom-shadow"
+                                 >
+                                   {project.buttonText || "View Project"} &nbsp;
+                                   <Icons name="Arrow" />
+                                 </span>
+                               </a>
+                             )}
+                           </div>
               </div>
             </div>
           </div>
