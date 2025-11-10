@@ -1,6 +1,7 @@
 
 import Link from "next/link";
-import BlogClient from "./BlogClient"; 
+import BlogClient from "./BlogClient";
+import ShimmerEffect from "@/components/ui/ShimmerEffect"; // Import ShimmerEffect
 
 async function fetchBlogBySlug(slug) {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blogs/slug/${slug}`, { next: { revalidate: 60 } });
@@ -94,17 +95,32 @@ export async function generateMetadata({ params }) {
 
 export default async function Page({ params }) {
   const slug = params.slug;
-  const data = await fetchBlogBySlug(slug);
+  const dataPromise = fetchBlogBySlug(slug);
+
+  if (!dataPromise) {
+    return (
+      <div className="container mx-auto py-10 px-4">
+        <ShimmerEffect width="100%" height="400px" className="mb-8" />
+        <ShimmerEffect width="80%" height="30px" className="mb-4" />
+        <ShimmerEffect width="90%" height="20px" className="mb-2" />
+        <ShimmerEffect width="70%" height="20px" className="mb-2" />
+        <ShimmerEffect width="100%" height="20px" className="mb-2" />
+        <ShimmerEffect width="85%" height="20px" />
+      </div>
+    );
+  }
+
+  const data = await dataPromise;
 
   if (!data) {
     return (
-      <div className="flex flex-col items-center justify-center min-h-screen  text-gray-800">
-      <h1 className="text-6xl font-bold text-gray-400">Blog Not Found</h1>
-      <p className="text-lg mt-2 text-white">The page you are looking for does not exist.</p>
-      <Link href="/blog" className="mt-6 px-6 py-3  text-white rounded-lg shadow  transition duration-300 bg-primary">
-        Back to blog
-      </Link>
-    </div>
+      <div className="flex flex-col items-center justify-center min-h-screen text-gray-800">
+        <h1 className="text-6xl font-bold text-gray-400">Blog Not Found</h1>
+        <p className="text-lg mt-2 text-white">The page you are looking for does not exist.</p>
+        <Link href="/blog" className="mt-6 px-6 py-3 text-white rounded-lg shadow transition duration-300 bg-primary">
+          Back to blog
+        </Link>
+      </div>
     );
   }
 
