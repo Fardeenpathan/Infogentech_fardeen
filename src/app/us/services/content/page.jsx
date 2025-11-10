@@ -201,7 +201,7 @@ const Content = () => {
 
                 {openCategory === category.id && (
                   <Image
-                    src="/assist/img/DesignImg.png"    
+                    src="/assist/img/DesignImg.png"
                     alt="Design"
                     width={400}
                     height={377}
@@ -219,6 +219,17 @@ const Content = () => {
                     transition={{ duration: 0.35, ease: "easeInOut" }}
                     className="overflow-hidden"
                   >
+                    {openCategory === category.id && (
+                      <div className="mt-10 flex justify-center">
+                        <Image
+                          src={category.image}
+                          alt={category.title}
+                          width={400}
+                          height={377}
+                          className=" w-64 h-36  rounded-2xl rotate-12  object-cover z-10 lg:hidden "
+                        />
+                      </div>
+                    )}
                     <div className="py-10 flex flex-col items-center gap-2 text-center px-4">
                       <p className="font-jost font-bold md:text-3xl text-2xl leading-6 text-primary">
                         Our Value

@@ -1,7 +1,7 @@
 const ServicesHeader = () => {
   return (
-      <div className="container mx-auto mt-24 mb-10 px-4">
-      <div className="flex gap-7 flex-row justify-center items-center mt-43"></div>
+      <div className="container mx-auto md:mb-10 px-4">
+      <div className="flex gap-7 flex-row justify-center items-center mt-34"></div>
       <div className="flex justify-center items-center flex-col">
         <p className="font-avalors font-normal lg:text-[75px] md:5xl text-2xl  leading-none bg-[linear-gradient(91.32deg,_#6A27FF_-32.61%,_#FFFFFF_19.98%,_#6A27FF_112.29%)] bg-clip-text text-transparent">
           Our Services

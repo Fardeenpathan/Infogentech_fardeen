@@ -62,27 +62,36 @@ export default function OurValues() {
             width={640}
             height={150}
             style={{ objectFit: 'cover'}}
-            className="w-[640px] md:h-72 h-40 relative transform xl:scale-x-[-1] overflow-hidden -z-40 xl:-right-62 xl:-top-6 scale-x-[-1] rotate-90 xl:rotate-0 md:top-60 top-45 -right-5"
+            className="w-[640px] md:h-72 h-40 relative transform xl:scale-x-[-1] overflow-hidden -z-40 xl:-right-62 xl:-top-6 scale-x-[-1] rotate-90 xl:rotate-0 md:top-60 top-45 -right-5 opacity-80"
           />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 mt-56 xl:mt-0 gap-6 max-w-3xl mx-auto">
+        <div className="grid grid-cols-2 mt-56 xl:mt-0 md:gap-6 gap-2 max-w-3xl mx-auto">
           {services.map((service) => (
             <div
               key={service.id}
-              className="bg-[#15152A] rounded-md  p-5 shadow-[12px_12px_13px_2px_#1C1C38] flex justify-center items-center flex-col"
+              className="bg-[#15152A] rounded-md  md:p-5 p-1 py-2 shadow-[12px_12px_13px_2px_#1C1C38] flex justify-center items-center flex-col"
             >
               <div className="flex flex-col items-center font-kumbh-sans">
                 <Image
                   src={service.imageIcon}
                   alt={service.title}
+                  width={40}
+                  height={64}
+                  style={{ objectFit: 'cover'}}
+                  className="md:hidden"
+                />
+                 <Image
+                  src={service.imageIcon}
+                  alt={service.title}
                   width={service.width}
                   height={service.height}
                   style={{ objectFit: 'cover'}}
+                  className="md:block hidden"
                 />
-                <h2 className="font-jost font-medium text-2xl leading-[120%] tracking-[0.03em] mt-6">
+                <h2 className="font-jost font-medium md:text-2xl text-base leading-[120%] flex text-center tracking-[0.03em] mt-6">
                   {service.title}
                 </h2>
-                <p className=" text-lg mt-3 leading-[120%] flex text-center xl:text-lg text-[#73737F]">
+                <p className=" md:text-lg text-xs mt-3 leading-[120%] flex text-center xl:text-lg text-[#73737F]">
                   {service.desc}
                 </p>
               </div>

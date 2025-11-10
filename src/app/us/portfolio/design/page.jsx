@@ -46,7 +46,7 @@ const Design = () => {
                       {project.title}
                     </p>
                     <Link
-                      href={`/portfolio/design/${project.slug}`}
+                      href={`/us/portfolio/design/${project.slug}`}
                       className="hidden lg:block"
                     >
                       <Icons
@@ -57,7 +57,7 @@ const Design = () => {
                       />
                     </Link>
                     <Link
-                      href={`/portfolio/design/${project.slug}`}
+                      href={`/us/portfolio/design/${project.slug}`}
                       className="block lg:hidden"
                     >
                       <Icons

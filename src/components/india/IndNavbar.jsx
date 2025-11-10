@@ -27,8 +27,7 @@ export default function Navbar() {
   }, [lastScrollY]);
 
   const linkClasses = (href) => {
-    const isActive =
-      href === "/" ? pathname === "/" : pathname.startsWith(href);
+    const isActive = pathname.includes(href);
     return `transition-colors cursor-pointer ${
       isActive ? "text-primary font-semibold" : "text-white hover:text-primary"
     }`;
@@ -65,14 +64,11 @@ export default function Navbar() {
             </Link>
             <Link
               href="/portfolio/design"
-              className={linkClasses("/portfolio/design")}
+              className={linkClasses("/portfolio/")}
             >
               Portfolio
             </Link>
-            <Link
-              href="/services/design"
-              className={linkClasses("/services/design")}
-            >
+            <Link href="/services/design" className={linkClasses("/services/")}>
               Services
             </Link>
             <Link href="/blog" className={linkClasses("/blog")}>

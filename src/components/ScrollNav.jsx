@@ -14,7 +14,7 @@ export default function ScrollNav() {
 
   const linkClasses = (href) =>
     `transition-colors ${
-      pathname === href
+      pathname.includes(href)
         ? "text-primary font-semibold"
         : "text-white hover:text-primary"
     }`;
@@ -46,7 +46,7 @@ export default function ScrollNav() {
       <div className="flex items-center pl-3.5 space-x-1.5">
         <Link href="/us" className="flex items-center gap-1.5">
           <Icons name="LogoFooter" />
-          <p className="font-avalors text-2xl leading-8 tracking-[3px] font-bold text-xl">
+          <p className="font-avalors md:text-2xl leading-8 tracking-[3px] font-bold text-xl">
             INFOGENTECH
           </p>
         </Link>
@@ -76,8 +76,8 @@ export default function ScrollNav() {
         </AnimatePresence>
       </div>
       <Link
-        href="/portfolio/design"
-        className={linkClasses("/portfolio/design")}
+        href="/us/portfolio/design"
+        className={linkClasses("/us/portfolio/")}
       >
         Portfolio
       </Link>

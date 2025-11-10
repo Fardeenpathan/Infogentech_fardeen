@@ -1,5 +1,4 @@
 
-import Icons from "./ui/Icon";
 
 export default function TopicHeader({
   name = "Our Services",

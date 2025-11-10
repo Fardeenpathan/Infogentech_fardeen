@@ -999,6 +999,20 @@ const ArrowPortfolioLeft = ({ width = "45", height = "20" }) => (
     />
   </svg>
 );
+const ArrowPortfolioLefts = ({ width = "45", height = "20" }) => (
+  <svg
+    width={width}
+    height={height}
+    viewBox="0 0 45 20"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M1.05566 0.5V2.01562L18.333 19.293L20.7373 16.8887L7.79297 3.94434L44.5 3.94434V0.5L1.05566 0.5Z"
+      fill="white"
+    />
+  </svg>
+);
 
 const SmallArrowPortfolioLeft = ({ width = "20", height = "10" }) => (
   <svg
@@ -2086,6 +2100,7 @@ const PortHome = () => (
   <svg
     width="545"
     height="555"
+    className="md:block hidden"
     viewBox="0 0 545 555"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -2217,6 +2232,7 @@ const PortHomeRight = () => (
   <svg
     width="599"
     height="555"
+    className="md:block hidden"
     viewBox="0 0 599 555"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -6502,6 +6518,7 @@ const Icons = {
   ArrowDirection,
   PaperPlane,
   ArrowPortfolioLeft,
+  ArrowPortfolioLefts,
   SmallArrowPortfolioLeft,
   ArrowPortfolioRight,
   Star,

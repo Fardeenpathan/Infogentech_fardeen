@@ -146,27 +146,27 @@ const Design = () => {
     setOpenCategory((prev) => (prev === id ? null : id));
   };
 
-  const videoRef = useRef(null);
-  const [isPlaying, setIsPlaying] = useState(false);
+  // const videoRef = useRef(null);
+  // const [isPlaying, setIsPlaying] = useState(false);
 
-  const handlePlay = () => {
-    if (videoRef.current) {
-      videoRef.current.play();
-      setIsPlaying(true);
-    }
-  };
+  // const handlePlay = () => {
+  //   if (videoRef.current) {
+  //     videoRef.current.play();
+  //     setIsPlaying(true);
+  //   }
+  // };
 
-  const handleVideoClick = () => {
-    if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause();
-        setIsPlaying(false);
-      } else {
-        videoRef.current.play();
-        setIsPlaying(true);
-      }
-    }
-  };
+  // const handleVideoClick = () => {
+  //   if (videoRef.current) {
+  //     if (isPlaying) {
+  //       videoRef.current.pause();
+  //       setIsPlaying(false);
+  //     } else {
+  //       videoRef.current.play();
+  //       setIsPlaying(true);
+  //     }
+  //   }
+  // };
 
   return (
     <>
@@ -215,7 +215,7 @@ const Design = () => {
                         alt={category.title}
                         width={400}
                         height={377}
-                        className=" w-64 h-36  rounded-2xl rotate-12  object-cover z-10 "
+                        className=" w-64 h-36  rounded-2xl rotate-12  object-cover z-10 lg:hidden "
                       />
                       </div>
                       

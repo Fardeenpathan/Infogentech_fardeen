@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Icons from "../ui/Icon"; // assuming you use your custom Icons component
+import Icons from "../ui/Icon";
 import IndMidHeader from "@/components/india/IndMidHeader";
 import IndTopicHeader from "../IndTopicHeader";
 

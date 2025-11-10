@@ -62,7 +62,7 @@ const Blogs = () => {
       <div className="absolute overflow-hidden right-0 -top-20">
         <Icons name="BlogBlurRight" />
       </div>
-      <div className="container mx-auto mt-24 ">
+      <div className="container mx-auto mt-34 ">
         <div className="flex justify-center items-center flex-col ">
           <p className="font-avalors font-normal lg:text-[75px] text-3xl leading-none bg-[linear-gradient(91.32deg,_#6A27FF_-32.61%,_#FFFFFF_19.98%,_#6A27FF_112.29%)] bg-clip-text text-transparent">
             Insights & Innovation

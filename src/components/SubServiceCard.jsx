@@ -1,10 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Icons from "@/components/ui/Icon";
-
-// Container hover will both scale up slightly and perform a quick horizontal shake
 const shakeX = [-0, -8, 8, -6, 6, -3, 3, 0];
-const duration = 0.6; // seconds
+const duration = 0.6;
 
 const containerVariants = {
   rest: { scale: 1, x: 0 },

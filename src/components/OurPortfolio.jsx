@@ -259,7 +259,7 @@ export default function OurPortfolio() {
                     subIndex === 0 ? "opacity-30" : ""
                   }`}
                 >
-                  <Icons name="ArrowPortfolioLeft" width={45} height={20} />
+                  <Icons name="ArrowPortfolioLefts" width={45} height={20} />
                 </button>
                 <DotIndicators
                   slides={slides}
@@ -283,7 +283,7 @@ export default function OurPortfolio() {
                 Why Enjoy alone?
               </p>
             </div>
-            <p className="font-jost font-semibold md:text-5xl leading-[150%] capitalize mt-5 xl:mt-0 pr-20">
+            <p className="font-jost font-semibold md:text-5xl leading-[150%] capitalize mt-5 xl:mt-0 md:pr-20 pr-0">
               {currentSlide?.title}
             </p>
             <div>
@@ -294,10 +294,10 @@ export default function OurPortfolio() {
                   <Icons name="PaperPlane" />
                 </div>
               </div>
-              <p className="font-kumbh-sans font-medium text-lg leading-[150%] align-middle text-[#73737F] mr-10">
+              <p className="font-kumbh-sans font-medium md:text-lg text-xs leading-[150%] align-middle text-[#73737F] mr-10">
                 {currentSlide?.desc}
               </p>
-              <ul className="flex flex-col gap-2 text-[#73737F] leading-[150%] text-base font-medium pt-4.5">
+              <ul className="flex flex-col gap-2 text-[#73737F] leading-[150%] md:text-base text-xs font-medium pt-4.5">
                 {currentSlide?.points.map((point, idx) => (
                   <li key={idx} className="flex gap-2.5 items-center">
                     <Icons name="LiIcon" />
