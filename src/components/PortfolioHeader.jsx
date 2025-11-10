@@ -13,7 +13,7 @@ const PortfolioHeader = () => {
 
       <Icons name="PortHome" />
       <motion.div
-        className="flex gap-7 flex-row justify-center items-center md:mt-43 mt-20 xl:ml-8 ml-0 mt-34"
+        className="flex gap-7 flex-row justify-center items-center md:mt-43  xl:ml-8 ml-0 mt-34"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
