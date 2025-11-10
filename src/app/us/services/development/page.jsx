@@ -15,22 +15,86 @@ const Development = () => {
       title: "Web & App Development",
       image: "/assist/services/development/webAp.jpeg",
       subServices: [
-        { id: "01", title: "Website Development", desc: "Scalable websites built for performance." },
-        { id: "02", title: "Custom Websites & Business Landing Pages", desc: "Tailored solutions for unique business needs." },
-        { id: "03", title: "E-commerce Platforms & Online Stores", desc: "Powerful online shopping experiences." },
-        { id: "04", title: "Personal Portfolios & Showcase Sites", desc: "Sleek designs to highlight your work." },
-        { id: "05", title: "Application Development", desc: "End-to-end custom software solutions." },
-        { id: "06", title: "Web-based Application Development", desc: "Secure and scalable web apps." },
-        { id: "07", title: "Mobile App Development (iOS & Android)", desc: "Engaging apps across platforms." },
-        { id: "08", title: "Progressive Web Applications (PWA)", desc: "Modern, app-like web experiences." },
-        { id: "09", title: "Cross-platform Mobile Solutions", desc: "Apps that work seamlessly across devices." },
-        { id: "10", title: "Portal & Dashboard Development", desc: "Smart dashboards for data-driven insights." },
-        { id: "11", title: "Enterprise App Development", desc: "Scalable apps tailored for enterprises." },
-        { id: "12", title: "Software Development & SaaS", desc: "Cloud-based software for modern businesses." },
-        { id: "13", title: "Custom Software Development", desc: "Bespoke solutions for unique challenges." },
-        { id: "14", title: "SaaS Platform Setup, Deployment & Support", desc: "End-to-end SaaS implementation." },
-        { id: "15", title: "Scalability & Performance Optimization", desc: "Faster, more efficient applications." },
-        { id: "16", title: "Application Maintenance", desc: "Reliable support and ongoing improvements." },
+        {
+          id: "01",
+          title: "Website Development",
+          desc: "Scalable websites built for performance.",
+        },
+        {
+          id: "02",
+          title: "Custom Websites & Business Landing Pages",
+          desc: "Tailored solutions for unique business needs.",
+        },
+        {
+          id: "03",
+          title: "E-commerce Platforms & Online Stores",
+          desc: "Powerful online shopping experiences.",
+        },
+        {
+          id: "04",
+          title: "Personal Portfolios & Showcase Sites",
+          desc: "Sleek designs to highlight your work.",
+        },
+        {
+          id: "05",
+          title: "Application Development",
+          desc: "End-to-end custom software solutions.",
+        },
+        {
+          id: "06",
+          title: "Web-based Application Development",
+          desc: "Secure and scalable web apps.",
+        },
+        {
+          id: "07",
+          title: "Mobile App Development (iOS & Android)",
+          desc: "Engaging apps across platforms.",
+        },
+        {
+          id: "08",
+          title: "Progressive Web Applications (PWA)",
+          desc: "Modern, app-like web experiences.",
+        },
+        {
+          id: "09",
+          title: "Cross-platform Mobile Solutions",
+          desc: "Apps that work seamlessly across devices.",
+        },
+        {
+          id: "10",
+          title: "Portal & Dashboard Development",
+          desc: "Smart dashboards for data-driven insights.",
+        },
+        {
+          id: "11",
+          title: "Enterprise App Development",
+          desc: "Scalable apps tailored for enterprises.",
+        },
+        {
+          id: "12",
+          title: "Software Development & SaaS",
+          desc: "Cloud-based software for modern businesses.",
+        },
+        {
+          id: "13",
+          title: "Custom Software Development",
+          desc: "Bespoke solutions for unique challenges.",
+        },
+        {
+          id: "14",
+          title: "SaaS Platform Setup, Deployment & Support",
+          desc: "End-to-end SaaS implementation.",
+        },
+        {
+          id: "15",
+          title: "Scalability & Performance Optimization",
+          desc: "Faster, more efficient applications.",
+        },
+        {
+          id: "16",
+          title: "Application Maintenance",
+          desc: "Reliable support and ongoing improvements.",
+        },
       ],
     },
     {
@@ -38,11 +102,31 @@ const Development = () => {
       title: "CMS Development",
       image: "/assist/services/development/cms.png",
       subServices: [
-        { id: "01", title: "WordPress (Custom Themes & Plugins)", desc: "Custom WordPress solutions." },
-        { id: "02", title: "Shopify Store Development & Customization", desc: "Scalable Shopify stores." },
-        { id: "03", title: "Joomla & WooCommerce Solutions", desc: "Smart eCommerce solutions." },
-        { id: "04", title: "Custom CMS Development", desc: "Tailored CMS platforms." },
-        { id: "05", title: "LMS Development", desc: "Powerful online learning systems." },
+        {
+          id: "01",
+          title: "WordPress (Custom Themes & Plugins)",
+          desc: "Custom WordPress solutions.",
+        },
+        {
+          id: "02",
+          title: "Shopify Store Development & Customization",
+          desc: "Scalable Shopify stores.",
+        },
+        {
+          id: "03",
+          title: "Joomla & WooCommerce Solutions",
+          desc: "Smart eCommerce solutions.",
+        },
+        {
+          id: "04",
+          title: "Custom CMS Development",
+          desc: "Tailored CMS platforms.",
+        },
+        {
+          id: "05",
+          title: "LMS Development",
+          desc: "Powerful online learning systems.",
+        },
       ],
     },
     {
@@ -50,9 +134,21 @@ const Development = () => {
       title: "Custom Integrations",
       image: "/assist/services/development/customIntegration.png",
       subServices: [
-        { id: "01", title: "Database Design & API Integration", desc: "Seamless data connectivity." },
-        { id: "02", title: "System Integration & Custom Software", desc: "Unified custom solutions." },
-        { id: "03", title: "CRM Integration", desc: "Smarter customer management." },
+        {
+          id: "01",
+          title: "Database Design & API Integration",
+          desc: "Seamless data connectivity.",
+        },
+        {
+          id: "02",
+          title: "System Integration & Custom Software",
+          desc: "Unified custom solutions.",
+        },
+        {
+          id: "03",
+          title: "CRM Integration",
+          desc: "Smarter customer management.",
+        },
       ],
     },
     {
@@ -60,13 +156,33 @@ const Development = () => {
       title: "AI & Cloud Solutions",
       image: "/assist/services/development/AICloud.png",
       subServices: [
-        { id: "01", title: "Advanced AI Development", desc: "Smart AI solutions." },
-        { id: "02", title: "Cloud Hosting Services", desc: "Secure cloud hosting." },
-        { id: "03", title: "Advanced Solutions", desc: "Innovative tech services." },
+        {
+          id: "01",
+          title: "Advanced AI Development",
+          desc: "Smart AI solutions.",
+        },
+        {
+          id: "02",
+          title: "Cloud Hosting Services",
+          desc: "Secure cloud hosting.",
+        },
+        {
+          id: "03",
+          title: "Advanced Solutions",
+          desc: "Innovative tech services.",
+        },
         { id: "04", title: "Node.js Development", desc: "Fast Node.js apps." },
         { id: "05", title: "React Development", desc: "Dynamic React apps." },
-        { id: "06", title: "Laravel Development", desc: "Powerful Laravel sites." },
-        { id: "07", title: "No-Code Development", desc: "Build without coding." },
+        {
+          id: "06",
+          title: "Laravel Development",
+          desc: "Powerful Laravel sites.",
+        },
+        {
+          id: "07",
+          title: "No-Code Development",
+          desc: "Build without coding.",
+        },
       ],
     },
   ];
@@ -111,7 +227,7 @@ const Development = () => {
           {categories.map((category) => (
             <div key={category.id}>
               <div
-              className={`relative font-jost font-normal xl:text-[64px]  md:text-5xl text-3xl leading-[100%] tracking-[0.03em] flex justify-between items-center py-5 cursor-pointer transition-opacity duration-300 ${
+                className={`relative font-jost font-normal xl:text-[64px]  md:text-5xl text-3xl leading-[100%] tracking-[0.03em] flex justify-between items-center py-5 cursor-pointer transition-opacity duration-300 ${
                   openCategory === category.id ? "opacity-100" : "opacity-40"
                 }`}
                 onClick={() => toggleCategory(category.id)}
@@ -140,7 +256,18 @@ const Development = () => {
                     transition={{ duration: 0.35, ease: "easeInOut" }}
                     className="overflow-hidden"
                   >
-                      <div className="py-10 flex flex-col items-center gap-2 text-center px-4">
+                    {openCategory === category.id && (
+                      <div className="mt-10 flex justify-center">
+                        <Image
+                          src={category.image}
+                          alt={category.title}
+                          width={400}
+                          height={377}
+                          className=" w-64 h-36  rounded-2xl rotate-12  object-cover z-10 lg:hidden "
+                        />
+                      </div>
+                    )}
+                    <div className="py-10 flex flex-col items-center gap-2 text-center px-4">
                       <p className="font-jost font-bold md:text-3xl text-2xl leading-6 text-primary">
                         Our Value
                       </p>
@@ -183,7 +310,7 @@ const Development = () => {
 
         <div className="mt-34 flex justify-center items-center flex-col relative">
           <div className="absolute -top-20">
-             <Icons name="gradientServices" width={300} height={100}/>
+            <Icons name="gradientServices" width={300} height={100} />
           </div>
 
           {/* <div className="relative subContainer h-[640px] flex items-center justify-center">

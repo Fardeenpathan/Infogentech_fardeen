@@ -1,13 +1,24 @@
-
-"use client"
+"use client";
 import { motion } from "framer-motion";
 import Icons from "@/components/ui/Icon";
 import Link from "next/link";
 
 const IndAllServices = ({ activeService }) => {
   const services = [
-    { id: 1, icon: "DesignInd", label: "Design", text: "Driving Growth Online", slug: "design" },
-    { id: 2, icon: "DevelopmentInd", label: "Development", text: "Driving Growth Online", slug: "development" },
+    {
+      id: 1,
+      icon: "DesignInd",
+      label: "Design",
+      text: "Driving Growth Online",
+      slug: "design",
+    },
+    {
+      id: 2,
+      icon: "DevelopmentInd",
+      label: "Development",
+      text: "Driving Growth Online",
+      slug: "development",
+    },
     {
       id: 3,
       icon: "MarketingInd",
@@ -15,7 +26,13 @@ const IndAllServices = ({ activeService }) => {
       text: "Driving Growth Online",
       slug: "digital-marketing",
     },
-    { id: 4, icon: "ContentInd", label: "Content", text: "Driving Growth Online", slug: "content" },
+    {
+      id: 4,
+      icon: "ContentInd",
+      label: "Content",
+      text: "Driving Growth Online",
+      slug: "content",
+    },
   ];
 
   return (
@@ -50,9 +67,7 @@ const IndAllServices = ({ activeService }) => {
                 }`}
               >
                 {isActive && (
-                  <motion.div
-                    className="absolute inset-0 bg-primary rounded-2xl z-0"
-                  />
+                  <motion.div className="absolute inset-0 bg-primary rounded-2xl z-0" />
                 )}
                 <div className="relative z-10 flex flex-col items-center">
                   <Icons

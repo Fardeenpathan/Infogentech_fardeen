@@ -11,9 +11,11 @@ export function IndMiniNavbar() {
   const pathname = usePathname();
   return (
     <div className=" absolute bg-transparent  mx-auto z-50 container  w-full text-white font-montserrat">
-      <div className={` flex items-center  justify-between px-4 py-4 overflow-hidden ${
+      <div
+        className={` flex items-center  justify-between px-4 py-4 overflow-hidden ${
           pathname === "/" ? "border-b-2 border-[#8E8E8E]" : ""
-        }`}>
+        }`}
+      >
         <div className="flex items-center  space-x-1.5">
           <Link href="/" className="flex items-center gap-1.5">
             <Image
@@ -26,7 +28,7 @@ export function IndMiniNavbar() {
         </div>
         <button onClick={() => setIsOpen(true)} className="cursor-pointer">
           <svg
-            width="29" 
+            width="29"
             height="21"
             viewBox="0 0 29 21"
             fill="none"
