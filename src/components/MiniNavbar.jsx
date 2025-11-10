@@ -94,7 +94,7 @@ export function MiniNavbar() {
         >
           <div className="flex justify-between px-5 py-2 border-[1px] radius">
             <div className="flex items-center ">
-              <Link href="/" className="flex items-center gap-1.5">
+              <Link href="/us" className="flex items-center gap-1.5">
                 <svg
                   width="45"
                   height="45"
@@ -187,7 +187,7 @@ export function MiniNavbar() {
                 >
                   <li>
                     <Link
-                      href="/services/design"
+                      href="/us/services/design"
                       onClick={() => setIsOpen(false)}
                       className="block hover:text-[#dfdcdc] text-[22px] mb-2 font-jost border-b-[1px]"
                     >
@@ -196,7 +196,7 @@ export function MiniNavbar() {
                   </li>
                   <li>
                     <Link
-                      href="/services/development"
+                      href="/us/services/development"
                       onClick={() => setIsOpen(false)}
                       className="block hover:text-[#dfdcdc] text-[22px] mb-2 font-jost border-b-[1px]"
                     >
@@ -205,7 +205,7 @@ export function MiniNavbar() {
                   </li>
                   <li>
                     <Link
-                      href="/services/digital-marketing"
+                      href="/us/services/digital-marketing"
                       onClick={() => setIsOpen(false)}
                       className="block hover:text-[#dfdcdc] text-[22px] mb-2 font-jost border-b-[1px]"
                     >
@@ -214,7 +214,7 @@ export function MiniNavbar() {
                   </li>
                    <li>
                     <Link
-                      href="/services/content"
+                      href="/us/services/content"
                       onClick={() => setIsOpen(false)}
                       className="block hover:text-[#dfdcdc] text-[22px] mb-2 font-jost border-b-[1px]"
                     >
@@ -225,35 +225,35 @@ export function MiniNavbar() {
               )}
             </AnimatePresence>
             <Link
-              href="/portfolio/design"
+              href="/us/portfolio/design"
               onClick={() => setIsOpen(false)}
               className="block hover:text-[#dfdcdc] font-bold text-[28px]  border-b-[1px]"
             >
               Portfolio
             </Link>
             <Link
-              href="/blog"
+              href="/us/blog"
               onClick={() => setIsOpen(false)}
               className="block hover:text-[#dfdcdc] font-bold text-[28px]  border-b-[1px]"
             >
               Blog
             </Link>
             <Link
-              href="/contact"
+              href="/us/contact"
               onClick={() => setIsOpen(false)}
               className="block hover:text-[#dfdcdc] font-bold text-[28px]  border-b-[1px]"
             >
               Contact us
             </Link>
             <Link
-              href="/about"
+              href="/us/about"
               onClick={() => setIsOpen(false)}
               className="block hover:text-[#dfdcdc] font-bold text-[28px] mb-2"
             >
               About us
             </Link>
             <Link
-              href="/contact"
+              href="/us/contact"
               onClick={() => setIsOpen(false)}
               className=" hover:text-[#dfdcdc] font-bold mt-2 text-[28px]  flex justify-center "
             >

@@ -72,7 +72,7 @@ const About = () => {
               guarantee—because your success is what drives us every day.
             </motion.p>
 
-            <div className="xl:grid grid-cols-2 md:grid-cols-4 gap-4 font-jost justify-between mt-10 hidden">
+            <div className="xl:grid grid-cols-2 md:grid-cols-4 gap-4 font-jost justify-between mt-10 hidden ">
               {stats.map((item, index) => (
                 <motion.div
                   key={index}

@@ -32,12 +32,17 @@ export function Footer() {
         <div className="flex flex-wrap justify-between items-center">
           <div className="w-full grid md:grid-cols-3 grid-cols-1 mt-6.5">
             <div>
-              <a className="flex items-center mb-4 gap-1.5" href="/">
-                <Icons name="LogoFooter" />
-                <p className="font-avalors text-2xl leading-8 tracking-[3px] font-bold">
-                  INFOGENTECH
-                </p>
-              </a>
+              <Link
+                href="/"
+                className="flex items-center gap-1.5 cursor-pointer mb-2"
+              >
+                <Image
+                  src="/logoGroup.png"
+                  alt="Infogentech"
+                  width={212}
+                  height={46}
+                />
+              </Link>
               <p className="text-gray-400 text-xl mb-4 font-jost ">
                 Infogentech delivers smart digital solutions that move with the
                 times, crafted for every generation, inspired by change. We
@@ -56,27 +61,42 @@ export function Footer() {
                 </p>
               </div>
               <div className=" max-w-[300px] text-white border-1 mt-7.5"></div>
-              <div className="flex gap-10 mt-3.5 items-center">
+              <div className="flex gap-6 md:gap-10 mt-3.5 items-center">
                 <Image
                   src="/assist/img/dmca.png"
                   alt="valueImg"
                   width={108}
                   height={54}
-                  style={{ objectFit: 'cover' }}
+                  style={{ objectFit: "cover" }}
                 />
-                <Link href="https://www.linkedin.com/company/infogentech/"  target="_blank">
+                <Link
+                  href="https://www.linkedin.com/company/infogentech/"
+                  target="_blank"
+                >
                   <Icons name="LinkedIn" />
                 </Link>
-                <Link href="https://www.youtube.com/@infogentech"  target="_blank">
+                <Link
+                  href="https://www.youtube.com/@infogentech"
+                  target="_blank"
+                >
                   <Icons name="Youtubes" />
                 </Link>
-                <Link href="https://www.threads.com/@infogentech_"  target="_blank">
+                <Link
+                  href="https://www.threads.com/@infogentech_"
+                  target="_blank"
+                >
                   <Icons name="Threads" />
                 </Link>
-                <Link href="https://in.pinterest.com/infogentech/"  target="_blank">
+                <Link
+                  href="https://in.pinterest.com/infogentech/"
+                  target="_blank"
+                >
                   <Icons name="Pinterest" />
                 </Link>
-                <Link href="https://www.instagram.com/infogentech_/" target="_blank">
+                <Link
+                  href="https://www.instagram.com/infogentech_/"
+                  target="_blank"
+                >
                   <Icons name="Instagrams" />
                 </Link>
               </div>

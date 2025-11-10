@@ -36,17 +36,17 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <div className="mx-auto pb-10 container sm:px-10 px-4 xl:mt-30 mt-20">
+    <div className="mx-auto md:pb-18 pb-10 container sm:px-10 px-4 xl:mt-30 mt-20">
       <TopicHeader
         name="Our Services"
         subheading="Explore Our Digital Solutions"
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mt-6 relative container mx-auto">
-        {services.map((service, index) => (
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mt-6 relative container mx-auto px-6">
+        {services.map((service) => (
           <div
             key={service.id}
-            className={`bg-[#15152A] rounded-md  p-5 shadow-[0px_0px_54px_24px_#1C1C38] flex flex-col justify-between hover:scale-105 transition-transform duration-500 cursor-pointer
+            className={`bg-[#15152A] rounded-md  md:p-5 p-3 shadow-[0px_0px_54px_24px_#1C1C38] flex flex-col justify-between hover:scale-105 transition-transform duration-500 cursor-pointer
               
             `}
           >
@@ -54,7 +54,7 @@ export default function ServicesSection() {
               <span className="font-jost font-normal text-[32px] leading-[100%] tracking-[3%] opacity-10">
                 {service.id}
               </span>
-              <p className="mt-10">
+              <p className="md:mt-10 mt-2.5">
                 <Image
                   src={service.imageIcon}
                   alt={service.title}
@@ -71,7 +71,7 @@ export default function ServicesSection() {
               >
                 {service.title}
               </h2>
-              <p className="text-[#C4C4C4] lg:text-lg text-sm mt-9 leading-relaxed font-kumbh-sans">
+              <p className="text-[#C4C4C4] lg:text-lg text-sm md:mt-9 mt-2.5 leading-relaxed font-kumbh-sans">
                 {service.desc}
               </p>
             </div>
@@ -84,8 +84,8 @@ export default function ServicesSection() {
         ))}
 
         <div className="overflow-hidden">
-          <div className="absolute moving-text-container -z-30 -top-30">
-            <div className="moving-text-content font-['Jost'] font-avalors font-normal text-[120px] tracking-[0.03em] uppercase bg-gradient-to-b from-[#C4C4C4] to-[#FFFFFF] bg-clip-text text-transparent opacity-15 moving-text-container">
+          <div className="absolute moving-text-container -z-30 md:-top-23 -top-8 ">
+            <div className="moving-text-content font-['Jost'] font-avalors font-normal md:text-[120px] text-4xl tracking-[0.03em] uppercase bg-gradient-to-b from-[#C4C4C4] to-[#FFFFFF] bg-clip-text text-transparent opacity-15 moving-text-container">
               <div className="flex gap-56">
                 {Array.from({ length: 20 }, (_, i) => (
                   <p key={i}>INFOGENTECH</p>
@@ -93,8 +93,8 @@ export default function ServicesSection() {
               </div>
             </div>
           </div>
-          <div className="absolute moving-text-container -z-30 -bottom-20 ">
-            <div className="moving-text-left font-['Jost'] font-avalors font-normal text-[120px] tracking-[0.03em] uppercase bg-gradient-to-b from-[#C4C4C4] to-[#FFFFFF] bg-clip-text text-transparent opacity-15 moving-text-container">
+          <div className="absolute moving-text-container -z-30 md:-bottom-20 -bottom-1 ">
+            <div className="moving-text-left font-['Jost'] font-avalors font-normal md:text-[120px] text-4xl tracking-[0.03em] uppercase bg-gradient-to-b from-[#C4C4C4] to-[#FFFFFF] bg-clip-text text-transparent opacity-15 moving-text-container">
               <div className="flex gap-56">
                 {Array.from({ length: 20 }, (_, i) => (
                   <p key={i}>INFOGENTECH</p>
