@@ -47,13 +47,13 @@ const DigitalMarketing = () => {
             {project.title}
           </p>
           <Link
-            href={`/portfolio/development/${project.slug}`}
+            href={`/us/portfolio/development/${project.slug}`}
             className="hidden lg:block"
           >
             <Icons name="Arrow" height={26} width={59} color="#C4C4C4" />
           </Link>
           <Link
-            href={`/portfolio/development/${project.slug}`}
+            href={`/us/portfolio/development/${project.slug}`}
             className="block lg:hidden"
           >
             <Icons name="Arrow" height={14} width={26} color="#C4C4C4" />

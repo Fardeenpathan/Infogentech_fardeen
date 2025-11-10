@@ -23,7 +23,7 @@ export function Navbar() {
 
   const linkClasses = (href) =>
     `transition-colors ${
-      pathname === href
+      pathname.includes(href)
         ? "text-primary font-semibold"
         : "text-white hover:text-primary"
     }`;
@@ -77,7 +77,7 @@ export function Navbar() {
                 onMouseLeave={() => setIsServicesHovered(false)}
               >
                 <button className=" flex items-center justify-center cursor-pointer">
-                  Services
+                  <p className={linkClasses("/us/services/")}>Services</p>
                   <Icons name="Downarrow" />
                 </button>
                 <AnimatePresence>
@@ -97,7 +97,7 @@ export function Navbar() {
               </div>
               <Link
                 href="/us/portfolio/design"
-                className={linkClasses("/us/portfolio/design")}
+                className={linkClasses("/us/portfolio/")}
               >
                 Portfolio
               </Link>

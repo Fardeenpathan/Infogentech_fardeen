@@ -14,7 +14,7 @@ export default function ScheduleCall() {
       </p>
       <div className="p-[2px] rounded-xl bg-[linear-gradient(95.64deg,#6807FF_31.79%,#5900E5_64.61%,#AB00E6_78.22%)]">
         <a
-          href="/contact"
+          href="/us/contact"
           className="flex gap-2 flex-row sm:text-lg text-nowrap font-jost sm:px-10 px-3 sm:py-3 py-2 text-sm md:radius rounded-sm bg-transparent border border-white/10 justify-center items-center backdrop-blur-[51.97px] custom-shadow"
         >
           <Icons name="Calls" />

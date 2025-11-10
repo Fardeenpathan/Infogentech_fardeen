@@ -1,6 +1,5 @@
 "use client"
 import Image from "next/image";
-import Link from "next/link";
 import Icons from "@/components/ui/Icon";
 import { motion } from "framer-motion";
 
@@ -13,7 +12,7 @@ const PortfolioProjectCard = ({ project, index , route }) => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
       viewport={{ once: true }}
-      href={`/portfolio/${route}/${project.slug}`}
+      href={`/us/portfolio/${route}/${project.slug}`}
     >
       <div className="w-full max-w-[774px]">
         <div className="w-full max-w-[774px] h-70 md:h-110 lg:h-120">
@@ -41,7 +40,7 @@ const PortfolioProjectCard = ({ project, index , route }) => {
               />
             </p>
             <p
-              href={`/portfolio/${route}/${project.slug}`}
+              href={`/us/portfolio/${route}/${project.slug}`}
               className="block lg:hidden"
             >
               <Icons
