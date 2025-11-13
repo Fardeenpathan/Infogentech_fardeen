@@ -54,100 +54,106 @@ title: "Infogentech | Home",
 
 export default function Home() {
   const schemaData = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "@id": "https://infogentech.com/#website",
-        url: "https://infogentech.com/",
-        name: "Infogentech Softwares LLP",
-        description:
-          "Discover how innovation in software, technology, and digital marketing drives business growth. Explore strategies for success in today’s digital-first world.",
-        potentialAction: {
-          "@type": "SearchAction",
-          target: "https://infogentech.com/?s={search_term_string}",
-          "query-input": "required name=search_term_string",
-        },
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://infogentech.com/#organization",
+      "name": "Infogentech | Empowering Your Digital Evolution",
+      "url": "https://infogentech.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://infogentech.com/favicon.ico"
       },
-      {
-        "@type": "WebPage",
-        "@id": "https://infogentech.com/#webpage",
-        url: "https://infogentech.com/",
-        name: "Infogentech | Digital Marketing Company in Delhi NCR",
-        description:
-          "Discover how innovation in software, technology, and digital marketing drives business growth. Explore strategies for success in today’s digital-first world.",
+      "sameAs": [
+        "https://www.facebook.com/infogentechsoftwares/",
+        "https://www.instagram.com/infogentech_/",
+        "https://www.youtube.com/@infogentech",
+        "https://www.linkedin.com/company/infogentech/",
+        "https://in.pinterest.com/infogentech/",
+        "https://www.threads.com/@infogentech_"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://infogentech.com/#website",
+      "url": "https://infogentech.com/",
+      "name": "Infogentech Softwares LLP",
+      "description": "Discover how innovation in software, technology, and digital marketing drives business growth. Explore strategies for success in today’s digital-first world.",
+      "publisher": {
+        "@id": "https://infogentech.com/#organization"
       },
-      {
-        "@type": "Organization",
-        "@id": "https://infogentech.com/#organization",
-        name: "Infogentech | Digital Marketing Company in Delhi NCR",
-        url: "https://infogentech.com/",
-        logo: {
-          "@type": "ImageObject",
-          url: "https://infogentech.com/assets/images/logo-light.webp",
-        },
-        sameAs: [
-          "https://www.facebook.com/infogentechsoftwares/",
-          "https://x.com/info_gentech",
-          "https://www.instagram.com/info_gentech/",
-          "https://www.youtube.com/@infogentech",
-          "https://www.linkedin.com/company/infogentech/",
-          "https://pinterest.com/infogentech/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://infogentech.com/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://infogentech.com/#webpage",
+      "url": "https://infogentech.com/",
+      "name": "Infogentech | Empowering Your Digital Evolution",
+      "description": "Discover how innovation in software, technology, and digital marketing drives business growth. Explore strategies for success in today’s digital-first world.",
+      "isPartOf": {
+        "@id": "https://infogentech.com/#website"
+      },
+      "about": {
+        "@id": "https://infogentech.com/#organization"
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://infogentech.com/#localbusiness",
+      "name": "Infogentech Softwares LLP",
+      "image": "https://infogentech.com/assets/images/logo-light.webp",
+      "url": "https://infogentech.com/",
+      "telephone": "9910130963",
+      "priceRange": "$",
+      "description": "Discover how innovation in software, technology, and digital marketing drives business growth. Explore strategies for success in today’s digital-first world.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "A85, First Floor, GT Karnal Road INDL. Area, Near Vardhman Mall",
+        "addressLocality": "New Delhi",
+        "postalCode": "110033",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 28.6951556,
+        "longitude": 77.1912943
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.0",
+        "bestRating": "5",
+        "ratingCount": "1100"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
         ],
+        "opens": "10:00",
+        "closes": "21:00"
       },
-      {
-        "@type": "LocalBusiness",
-        "@id": "https://infogentech.com/#localbusiness",
-        name: "Infogentech Softwares LLP",
-        image: "https://infogentech.com/assets/images/logo-light.webp",
-        url: "https://infogentech.com/",
-        telephone: "9910130963",
-        priceRange: "$",
-        description:
-          "Discover how innovation in software, technology, and digital marketing drives business growth. Explore strategies for success in today’s digital-first world.",
-        address: {
-          "@type": "PostalAddress",
-          streetAddress:
-            "A85, First Floor, GT Karnal Road INDL. Area, Near Vardhman Mall",
-          addressLocality: "New Delhi",
-          postalCode: "110033",
-          addressCountry: "IN",
-        },
-        geo: {
-          "@type": "GeoCoordinates",
-          latitude: 28.6951556,
-          longitude: 77.1912943,
-        },
-        aggregateRating: {
-          "@type": "AggregateRating",
-          ratingValue: "4.0",
-          bestRating: "5",
-          ratingCount: "1100",
-        },
-        openingHoursSpecification: {
-          "@type": "OpeningHoursSpecification",
-          dayOfWeek: [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday",
-          ],
-          opens: "10:00",
-          closes: "21:00",
-        },
-        sameAs: [
-          "https://www.facebook.com/infogentechsoftwares/",
-          "https://x.com/info_gentech",
-          "https://www.instagram.com/info_gentech/",
-          "https://www.youtube.com/@infogentech",
-          "https://www.linkedin.com/company/infogentech/",
-          "https://pinterest.com/infogentech/",
-        ],
-      },
-    ],
-  };
+      "sameAs": [
+        "https://www.facebook.com/infogentechsoftwares/",
+        "https://x.com/info_gentech",
+        "https://www.instagram.com/info_gentech/",
+        "https://www.youtube.com/@infogentech",
+        "https://www.linkedin.com/company/infogentech/",
+        "https://pinterest.com/infogentech/"
+      ]
+    }
+  ]
+}
+  
 
   return (
     <>
@@ -158,4 +164,4 @@ export default function Home() {
       <IndHeroPage />
     </>
   );
-}
+};

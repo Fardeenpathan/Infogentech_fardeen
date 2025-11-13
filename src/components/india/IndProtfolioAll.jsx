@@ -9,34 +9,34 @@ const IndAllServices = ({ activeService }) => {
       id: 1,
       icon: "DesignInd",
       label: "Design",
-      text: "Driving Growth Online",
+      text: "Design That Impacts ",
       slug: "design",
     },
     {
       id: 2,
       icon: "DevelopmentInd",
       label: "Development",
-      text: "Driving Growth Online",
+      text: " Innovating With Code",
       slug: "development",
     },
     {
       id: 3,
       icon: "MarketingInd",
       label: "Digital Marketing",
-      text: "Driving Growth Online",
+      text: "Growing Digital Reach",
       slug: "digital-marketing",
     },
     {
       id: 4,
       icon: "ContentInd",
       label: "Content",
-      text: "Driving Growth Online",
+      text: "Crafting Powerful Stories",
       slug: "content",
     },
   ];
 
   return (
-    <div className="relative -top-24 justify-self-center grid md:grid-cols-4 grid-cols-2 md:mt-5 xl:mt-0 text-nowrap mt-4 rounded-2xl shadow-2xl z-10 subContainer px-4 bg-white">
+    <div className="relative -top-24 justify-self-center grid md:grid-cols-4 grid-cols-2 md:mt-5 xl:mt-0 text-nowrap mt-4 rounded-2xl shadow-2xl z-10 subContainer bg-white">
       {services.map((service, index) => {
         const isActive = activeService === service.slug;
 
@@ -67,7 +67,12 @@ const IndAllServices = ({ activeService }) => {
                 }`}
               >
                 {isActive && (
-                  <motion.div className="absolute inset-0 bg-primary rounded-2xl z-0" />
+                  <motion.div
+                    className="absolute top-0 bottom-0 left-0 bg-primary rounded-2xl z-0"
+                    animate={{ x: `${index * 100}%` }}
+                    transition={{ duration: 0.5, ease: "easeInOut" }}
+                    style={{ width: "25%" }}
+                  />
                 )}
                 <div className="relative z-10 flex flex-col items-center">
                   <Icons
@@ -78,14 +83,14 @@ const IndAllServices = ({ activeService }) => {
                   />
                   <h4
                     className={`font-montserrat lg:text-2xl text-sm mb-2.5 mt-4 font-medium ${
-                      isActive ? "text-white !text-lg" : "text-primary"
+                      isActive ? "text-white !text-sm" : "text-primary"
                     }`}
                   >
                     {service.label}
                   </h4>
                   <p
                     className={`font-montserrat lg:text-lg text-sm font-medium ${
-                      isActive ? "text-white !text-sm" : "text-gray-200"
+                      isActive ? "text-white !text-[12px]" : "text-gray-200"
                     }`}
                   >
                     {service.text}

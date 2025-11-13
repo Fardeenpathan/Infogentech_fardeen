@@ -9,32 +9,31 @@ const IndAllServices = ({ activeService }) => {
       id: 1,
       icon: "DesignInd",
       label: "Design",
-      text: "Driving Growth Online",
+      text: "Design That Impacts",
       slug: "design",
     },
     {
       id: 2,
       icon: "DevelopmentInd",
       label: "Development",
-      text: "Driving Growth Online",
+      text: "Innovating With Code",
       slug: "development",
     },
     {
       id: 3,
       icon: "MarketingInd",
       label: "Digital Marketing",
-      text: "Driving Growth Online",
+      text: "Growing Digital Reach",
       slug: "digital-marketing",
     },
     {
       id: 4,
       icon: "ContentInd",
       label: "Content",
-      text: "Driving Growth Online",
+      text: "Crafting Powerful Stories",
       slug: "content",
     },
   ];
-
   return (
     <div className="relative -top-24 justify-self-center grid md:grid-cols-4 grid-cols-2 md:mt-5 xl:mt-0 text-nowrap mt-4 rounded-2xl shadow-2xl z-10 subContainer bg-white">
       {services.map((service, index) => {
@@ -62,7 +61,7 @@ const IndAllServices = ({ activeService }) => {
               <div
                 className={`flex flex-col py-10 justify-center items-center relative ${
                   isActive
-                    ? "bg-primary lg:scale-160 scale-110 rounded-xl mr-1 !px-2.5"
+                    ? "bg-primary lg:scale-160 md:scale-110 scale-100 rounded-xl mr-1 !px-2.5"
                     : ""
                 }`}
               >
