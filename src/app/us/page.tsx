@@ -85,7 +85,7 @@ export default function Home() {
                 "@type": "Organization",
                 "@id": "https://infogentech.com/#organization",
                 "name": "Infogentech | Empowering Your Digital Evolution",
-                "url": "https://infogentech.com/",
+                "url": "https://infogentech.com/us/",
                 "logo": {
                   "@type": "ImageObject",
                   "url": "https://infogentech.com/favicon.ico"
@@ -102,7 +102,7 @@ export default function Home() {
               {
                 "@type": "WebSite",
                 "@id": "https://infogentech.com/#website",
-                "url": "https://infogentech.com/",
+                "url": "https://infogentech.com/us/",
                 "name": "Infogentech Softwares LLP",
                 "description": "Discover how innovation in software, technology, and digital marketing drives business growth. Explore strategies for success in today’s digital-first world.",
                 "publisher": {
@@ -117,7 +117,7 @@ export default function Home() {
               {
                 "@type": "WebPage",
                 "@id": "https://infogentech.com/#webpage",
-                "url": "https://infogentech.com/",
+                "url": "https://infogentech.com/us/",
                 "name": "Infogentech | Empowering Your Digital Evolution",
                 "description": "Discover how innovation in software, technology, and digital marketing drives business growth. Explore strategies for success in today’s digital-first world.",
                 "isPartOf": {
