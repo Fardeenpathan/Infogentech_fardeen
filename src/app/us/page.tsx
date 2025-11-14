@@ -1,58 +1,7 @@
-export const metadata = {
-title: "Infogentech | Home",
-  icons: {
-    icon: "https://infogentech.com/favicon.ico",
-    shortcut: "https://infogentech.com/favicon.ico",
-    apple: "https://infogentech.com/favicon.ico",
-  },
-  description:
-    "Discover how innovation in software, technology, and digital marketing drives business growth. Explore strategies for success in today’s digital-first world.",
-  keywords:
-    "digital marketing company, digital marketing company in Delhi NCR, digital marketing services, online marketing services, web development services, IT services, SEO services in Delhi, SEO services, digital marketing agency near me, social media marketing",
-    
-  openGraph: {
-    title:
-      "Innovation Success with Software, Technology & Digital Marketing",
-    description:
-      "Discover how innovation in software, technology, and digital marketing drives business growth. Explore strategies for success in today’s digital-first world.",
-    url: "https://infogentech.com/us/",
-    siteName: "infogentech",
-    images: [
-      {
-        url: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
-        width: 200,
-        height: 60,
-        alt: "Infogentech Logo",
-      },
-    ],
-    type: "website",
-  },
-  twitter: {
-    card: "summary",
-    site: "@infogentech",
-    title:
-      "Innovation Success with Software, Technology & Digital Marketing",
-    description:
-      "Discover how innovation in software, technology, and digital marketing drives business growth. Explore strategies for success in today’s digital-first world.",
-    images: [
-      "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
-    ],
-  },
-  alternates: {
-    canonical: "https://infogentech.com/us/",
-  },
-  other: {
-    "geo.region": "US",
-    "http-equiv": "x-ua-compatible",
-    "google-site-verification": "GKXtUSJnxyTpAU8aFry0DST64cl9JHxL8eCn2rJlKso",
-    distribution: "global",
-  },
-};
-
-"use client";
-import { HeroSection } from "@/components/hero-section";
-import ServicesSection from "@/components/ServicesSection";
-import { StatsSection } from "@/components/StatsSection";
+"use client"
+import { HeroSection } from "@/components/hero-section.jsx";
+import ServicesSection from "@/components/ServicesSection.jsx";
+import { StatsSection } from "@/components/StatsSection.jsx";
 import OurValues from "@/components/OurValues";
 import ScheduleCall from "@/components/ScheduleCall";
 import StrategicProcess from "@/components/StrategicProcess";
