@@ -27,7 +27,7 @@ export default function Navbar() {
   }, [lastScrollY]);
 
   const linkClasses = (href) => {
-    const isActive = pathname.includes(href);
+    const isActive = href==="/" ? pathname === "/" : pathname.includes(href); 
     return `transition-colors cursor-pointer ${
       isActive ? "text-primary font-semibold" : "text-white hover:text-primary"
     }`;

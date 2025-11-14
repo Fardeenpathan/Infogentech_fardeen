@@ -23,7 +23,7 @@ export function Navbar() {
 
   const linkClasses = (href) =>
     `transition-colors ${
-      pathname.includes(href)
+      href==="/" ? pathname === "/" : pathname.includes(href)
         ? "text-primary font-semibold"
         : "text-white hover:text-primary"
     }`;
