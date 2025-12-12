@@ -1,5 +1,6 @@
 export const metadata = {
-  title: "Web & App Development | CMS, AI & Cloud Solutions | Infogentech Softwares LLP",
+   title:
+    "Web & App Development | CMS, AI & Cloud Solutions | Infogentech Softwares LLP",
   description:
     "Expert Web & App Development, CMS Development, Custom Integrations, and AI & Cloud Solutions to elevate your digital presence and business performance.",
   keywords: [
@@ -72,7 +73,17 @@ const Development = () => {
       title: "Web & App Development",
       description:
         "Build high-performing, scalable websites and mobile applications tailored to your business goals.",
-      image: "/assist/services/development/webAp.jpeg",
+      image: [
+        {
+          src: "/assist/img/blogs.png",
+          link: "/project/1",
+        },
+        {
+          src: "/assist/img/blogs.png",
+          link: "/project/2",
+        },
+      ],
+      icon: "ServiceGraphic",
       subServices: [
         { id: "01", title: "Website Development" },
         { id: "02", title: "Custom Websites & Business Landing Pages" },
@@ -97,7 +108,17 @@ const Development = () => {
       title: "CMS Development",
       description:
         "Flexible and user-friendly content management systems like WordPress, Shopify, and more.",
-      image: "/assist/services/development/cms.png",
+      image: [
+        {
+          src: "/assist/img/blogs.png",
+          link: "/project/1",
+        },
+        {
+          src: "/assist/img/blogs.png",
+          link: "/project/2",
+        },
+      ],
+      icon: "ServiceGraphic",
       subServices: [
         { id: "01", title: "WordPress (Custom Themes & Plugins)" },
         { id: "02", title: "Shopify Store Development & Customization" },
@@ -111,7 +132,17 @@ const Development = () => {
       title: "Custom Integrations",
       description:
         "Seamless integration of APIs, databases, and third-party platforms to enhance functionality.",
-      image: "/assist/services/development/customIntegration.png",
+      image: [
+        {
+          src: "/assist/img/blogs.png",
+          link: "/project/1",
+        },
+        {
+          src: "/assist/img/blogs.png",
+          link: "/project/2",
+        },
+      ],
+      icon: "ServiceGraphic",
       subServices: [
         { id: "01", title: "Database Design & API Integration" },
         { id: "02", title: "System Integration & Custom Software" },
@@ -123,7 +154,17 @@ const Development = () => {
       title: "AI & Cloud Solutions",
       description:
         "Next-gen solutions using artificial intelligence, cloud hosting, and modern frameworks.",
-      image: "/assist/services/development/AICloud.png",
+      image: [
+        {
+          src: "/assist/img/blogs.png",
+          link: "/project/1",
+        },
+        {
+          src: "/assist/img/blogs.png",
+          link: "/project/2",
+        },
+      ],
+      icon: "Servicelogo",
       subServices: [
         { id: "01", title: "Advanced AI Development" },
         { id: "02", title: "Cloud Hosting Services" },

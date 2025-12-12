@@ -150,7 +150,7 @@ const Marketing = () => {
     },
     {
       id: "04",
-      title: "Audience Engagement Strategy",
+      title: "Social Media marketing",
       image: "/assist/services/marketing/marketing.png",
       subServices: [
         {
