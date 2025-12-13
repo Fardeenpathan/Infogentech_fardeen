@@ -88,7 +88,7 @@ const Marketing = () => {
         },
       ],
     
-      icon: "ServiceGraphic",
+      icon: "Servicemarketing",
      link: "/services/marketing-strategy",
     },
     {
@@ -106,7 +106,7 @@ const Marketing = () => {
           link: "/project/2",
         },
       ],
-      icon: "ServiceGraphic",
+      icon: "Servicesocialmedia",
       link:"/services/digital-marketing/social-media-marketing",
     },
     {
@@ -124,7 +124,7 @@ const Marketing = () => {
           link: "/project/2",
         },
       ],
-       icon: "ServiceGraphic",
+       icon: "Serviceseo",
       link: "/services/digital-marketing/seo-services"
     },
     {
@@ -142,7 +142,7 @@ const Marketing = () => {
           link: "/project/2",
         },
       ],
-      icon: "ServiceGraphic",
+      icon: "Servicecontent",
       subServices: [
         { id: "01", title: "Blog Writing & SEO Copy" },
         { id: "02", title: "Social Content & Captions" },
@@ -166,7 +166,7 @@ const Marketing = () => {
           link: "/project/2",
         },
       ],
-      icon: "ServiceGraphic",
+      icon: "Serviceanalytics",
       subServices: [
         { id: "01", title: "Google Analytics Setup" },
         { id: "02", title: "Performance Monitoring & CRO" },
@@ -189,7 +189,7 @@ const Marketing = () => {
           link: "/project/2",
         },
       ],
-      icon: "ServiceGraphic",
+      icon: "Serviceperformance",
       subServices: [
         { id: "01", title: "Pay-Per-Click Advertising (PPC)" },
         { id: "02", title: "Google Ads Campaign Management" },
@@ -220,7 +220,7 @@ const Marketing = () => {
           link: "/project/2",
         },
       ],
-      icon: "ServiceGraphic",
+      icon: "Serviceautomation",
       subServices: [
         { id: "01", title: "Email Marketing" },
         { id: "02", title: "Email Campaign Design" },

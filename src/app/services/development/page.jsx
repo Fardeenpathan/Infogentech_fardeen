@@ -83,7 +83,7 @@ const Development = () => {
           link: "/project/2",
         },
       ],
-      icon: "ServiceGraphic",
+      icon: "Servicewebandapp",
       subServices: [
         { id: "01", title: "Website Development" },
         { id: "02", title: "Custom Websites & Business Landing Pages" },
@@ -118,7 +118,7 @@ const Development = () => {
           link: "/project/2",
         },
       ],
-      icon: "ServiceGraphic",
+      icon: "Servicecms",
       subServices: [
         { id: "01", title: "WordPress (Custom Themes & Plugins)" },
         { id: "02", title: "Shopify Store Development & Customization" },
@@ -142,7 +142,7 @@ const Development = () => {
           link: "/project/2",
         },
       ],
-      icon: "ServiceGraphic",
+      icon: "Servicecustomintegration",
       subServices: [
         { id: "01", title: "Database Design & API Integration" },
         { id: "02", title: "System Integration & Custom Software" },
@@ -164,7 +164,7 @@ const Development = () => {
           link: "/project/2",
         },
       ],
-      icon: "Servicelogo",
+      icon: "Serviceaiandcloud",
       subServices: [
         { id: "01", title: "Advanced AI Development" },
         { id: "02", title: "Cloud Hosting Services" },

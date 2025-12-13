@@ -80,6 +80,9 @@ const categories = [
   }
 ],
 
+icon: "Servicephoto",
+
+
       subServices: [
         { id: "01", title: "Video Production & Motion Design" },
         { id: "02", title: "Video Production" },
@@ -109,6 +112,9 @@ const categories = [
     link: "/project/2"
   }
 ],
+
+icon: "Servicevisual",
+
       subServices: [
         { id: "01", title: "Infographic Design" },
         { id: "02", title: "Visual & Written Content" },
@@ -131,6 +137,7 @@ const categories = [
     link: "/project/2"
   }
 ],
+icon:"Serviceaudio",
       subServices: [
         { id: "01", title: "Sound & Music Design" },
         { id: "02", title: "Video Production & Motion Design" },
@@ -153,6 +160,7 @@ const categories = [
     link: "/project/2"
   }
 ],
+icon: "Serviceblog",
       subServices: [
         { id: "01", title: "Blog Writing & SEO Articles" },
         { id: "02", title: "Case Studies & Whitepapers" },
