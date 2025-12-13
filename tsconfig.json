@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -11,7 +15,7 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "incremental": true,
     "plugins": [
       {
@@ -19,9 +23,30 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": [
+        "./src/*"
+      ]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/ui/card.jsx", "src/components/ui/Button.jsx", "src/components/StatsSection.jsx", "src/components/ServicesSection.jsx", "src/components/Footer.jsx", "src/components/servicesDropdown.jsx", "src/app/layout.jsx", "src/components/Navbar.jsx", "src/components/stats-item.jsx", "src/components/hero-section.jsx", "src/components/ui/vertical-line.jsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/components/ui/card.jsx",
+    "src/components/ui/Button.jsx",
+    "src/components/StatsSection.jsx",
+    "src/components/ServicesSection.jsx",
+    "src/components/Footer.jsx",
+    "src/components/servicesDropdown.jsx",
+    "src/app/layout.jsx",
+    "src/components/Navbar.jsx",
+    "src/components/stats-item.jsx",
+    "src/components/hero-section.jsx",
+    "src/components/ui/vertical-line.jsx",
+    ".next/dev/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
