@@ -66,16 +66,16 @@ const Content = () => {
 const categories = [
   {
       id: "01",
-      title: "Photo & Video Production",
+      title: "Photo & Video",
       description:
         "High-quality video and photography solutions to bring your brand story to life visually.",
    image: [
   {
-     src: "/assist/img/blogs.png",
+     src: "/assist/services/content/Photo1.jpg",
     link: "/project/1"
   },
   {
-   src: "/assist/img/blogs.png",
+   src: "/assist/services/content/Photo2.png",
     link: "/project/2"
   }
 ],
@@ -104,11 +104,11 @@ icon: "Servicephoto",
         "Strategic visuals and storytelling to engage audiences across platforms with impactful design.",
     image: [
   {
-    src: "/assist/img/blogs.png",
+    src: "/assist/services/content/Visual1.png",
     link: "/project/1"
   },
   {
-    src: "/assist/img/blogs.png",
+    src: "/assist/services/content/Visual2.png",
     link: "/project/2"
   }
 ],
@@ -129,11 +129,11 @@ icon: "Servicevisual",
         "Dynamic audio and motion design to elevate digital experiences and captivate your audience.",
     image: [
   {
-    src: "/assist/img/blogs.png",
+    src: "/assist/services/content/Audio1.png",
     link: "/project/1"
   },
   {
-   src: "/assist/img/blogs.png",
+   src: "/assist/services/content/Audio2.png",
     link: "/project/2"
   }
 ],
@@ -152,11 +152,11 @@ icon:"Serviceaudio",
         "SEO-optimized blog writing and professional content tailored for traffic and engagement.",
     image: [
   {
-    src: "/assist/img/blogs.png",
+    src: "/assist/services/content/Blog1.png",
     link: "/project/1"
   },
 {
-    src: "/assist/img/blogs.png",
+    src: "/assist/services/content/Blog2.png", 
     link: "/project/2"
   }
 ],

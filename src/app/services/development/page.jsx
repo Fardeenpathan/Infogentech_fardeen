@@ -75,11 +75,11 @@ const Development = () => {
         "Build high-performing, scalable websites and mobile applications tailored to your business goals.",
       image: [
         {
-          src: "/assist/img/blogs.png",
+          src: "/assist/services/development/web1.png",
           link: "/project/1",
         },
         {
-          src: "/assist/img/blogs.png",
+          src: "/assist/services/development/web2.png",
           link: "/project/2",
         },
       ],
@@ -110,11 +110,11 @@ const Development = () => {
         "Flexible and user-friendly content management systems like WordPress, Shopify, and more.",
       image: [
         {
-          src: "/assist/img/blogs.png",
+          src: "/assist/services/development/cms1.png",
           link: "/project/1",
         },
         {
-          src: "/assist/img/blogs.png",
+          src: "/assist/services/development/cms2.png",
           link: "/project/2",
         },
       ],
@@ -134,11 +134,11 @@ const Development = () => {
         "Seamless integration of APIs, databases, and third-party platforms to enhance functionality.",
       image: [
         {
-          src: "/assist/img/blogs.png",
+          src: "/assist/services/development/custom1.png",
           link: "/project/1",
         },
         {
-          src: "/assist/img/blogs.png",
+          src: "/assist/services/development/custom2.png",
           link: "/project/2",
         },
       ],
@@ -156,11 +156,11 @@ const Development = () => {
         "Next-gen solutions using artificial intelligence, cloud hosting, and modern frameworks.",
       image: [
         {
-          src: "/assist/img/blogs.png",
+          src: "/assist/services/development/ai_cloud1.png",
           link: "/project/1",
         },
         {
-          src: "/assist/img/blogs.png",
+          src: "/assist/services/development/ai_cloud2.png",
           link: "/project/2",
         },
       ],
