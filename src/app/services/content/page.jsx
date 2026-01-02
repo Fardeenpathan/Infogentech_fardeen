@@ -186,4 +186,3 @@ icon: "Serviceblog",
 
 export default Content;
 
-// changes
