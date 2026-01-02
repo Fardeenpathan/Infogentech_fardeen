@@ -79,11 +79,11 @@ const Marketing = () => {
         "Create comprehensive strategies focused on long-term brand growth, audience engagement, and ROI.",
        image: [
         {
-          src: "/assist/img/blogs.png",
+          src: "/assist/services/marketing/marketing1.png",
           link: "/project/1",
         },
         {
-          src: "/assist/img/blogs.png",
+          src: "/assist/services/marketing/marketing2.png",
           link: "/project/2",
         },
       ],
@@ -98,11 +98,11 @@ const Marketing = () => {
         "Grow and retain loyal audiences through social campaigns, influencer outreach, and strategic content.",
         image: [
         {
-          src: "/assist/img/blogs.png",
+          src: "/assist/services/marketing/social1.png",
           link: "/project/1",
         },
         {
-          src: "/assist/img/blogs.png",
+          src: "/assist/services/marketing/social2.png",
           link: "/project/2",
         },
       ],
@@ -111,16 +111,16 @@ const Marketing = () => {
     },
     {
       id: "05",
-      title: "Search Engine Optimization (SEO)",
+      title: "SEO Performance",
       description:
         "Optimize your website for better visibility, organic traffic, and search engine rankings.",
         image: [
         {
-          src: "/assist/img/blogs.png",
+          src: "/assist/services/marketing/seo1.png",
           link: "/project/1",
         },
         {
-          src: "/assist/img/blogs.png",
+          src: "/assist/services/marketing/seo2.png",
           link: "/project/2",
         },
       ],
@@ -134,11 +134,11 @@ const Marketing = () => {
         "Create valuable and consistent content to attract, engage, and convert your target audience.",
       image: [
         {
-          src: "/assist/img/blogs.png",
+          src: "/assist/services/marketing/content Marketing1.png",
           link: "/project/1",
         },
         {
-          src: "/assist/img/blogs.png",
+          src: "/assist/services/marketing/content Marketing2.png",
           link: "/project/2",
         },
       ],
@@ -158,11 +158,11 @@ const Marketing = () => {
         "Track campaign performance with custom dashboards and actionable insights to guide decision-making.",
         image: [
         {
-          src: "/assist/img/blogs.png",
+          src: "/assist/services/marketing/Analytics1.png",
           link: "/project/1",
         },
         {
-          src: "/assist/img/blogs.png",
+          src: "/assist/services/marketing/Analytics2.png",
           link: "/project/2",
         },
       ],
@@ -181,11 +181,11 @@ const Marketing = () => {
         "Targeted, measurable campaigns to drive traffic, sales, and conversion through various ad platforms.",
       image: [
         {
-          src: "/assist/img/blogs.png",
+          src: "/assist/services/marketing/performance1.png",
           link: "/project/1",
         },
         {
-          src: "/assist/img/blogs.png",
+          src: "/assist/services/marketing/performance2.png",
           link: "/project/2",
         },
       ],
@@ -212,11 +212,11 @@ const Marketing = () => {
         "Automate marketing flows and nurture customer relationships through personalized messaging.",
       image: [
         {
-          src: "/assist/img/blogs.png",
+          src: "/assist/services/marketing/crm1.png",
           link: "/project/1",
         },
         {
-          src: "/assist/img/blogs.png",
+          src: "/assist/services/marketing/crm2.png",
           link: "/project/2",
         },
       ],

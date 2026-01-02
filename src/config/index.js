@@ -16,8 +16,8 @@ const config = {
       health: '/api/health',
       
       // Admin endpoints
-      adminContacts: '/api/admin/contacts',
-      adminContactsStats: '/api/admin/contacts/stats',
+      adminContacts:    '/api/admin/contacts',
+      adminContactsStats:   '/api/admin/contacts/stats',
       adminContactsExport: '/api/admin/contacts/export',
       adminContactById: (id) => `/api/admin/contacts/${id}`,
       adminContactNotes: (id) => `/api/admin/contacts/${id}/notes`,
