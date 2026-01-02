@@ -68,7 +68,7 @@ const Design = () => {
   const categories = [
     {
       id: "01",
-      title: "Graphic Design",
+      title: "Graphic Design", 
       description:
         "Creative visual content for print and digital platforms to elevate your brand presence.",
          image: [
@@ -107,11 +107,11 @@ const Design = () => {
         "Craft a powerful brand identity with strategic design and messaging.",
    image: [
         {
-          src: "/assist/img/blogs.png",
+          src: "/assist/services/design/Branding1.png",
           link: "/project/1",
         },
         {
-          src: "/assist/img/blogs.png",
+          src: "/assist/services/design/Branding2.png",
           link: "/project/2",
         },
       ],
@@ -124,11 +124,11 @@ const Design = () => {
         "Custom logo designs that capture your brand’s personality and values.",
         image: [
         {
-          src: "/assist/img/blogs.png",
+          src: "/assist/services/design/LOGO1.png",
           link: "/project/1",
         },
         {
-          src: "/assist/img/blogs.png",
+          src: "/assist/services/design/LOGO2.png",
           link: "/project/2",
         },
       ],

@@ -12,7 +12,7 @@ const Content = () => {
   const categories = [
     {
       id: "01",
-      title: "Photo & Video Production",
+      title: "Photo & Video Production", 
       subServices: [
         {
           id: "01",
