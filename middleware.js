@@ -37,7 +37,6 @@ export async function middleware(request) {
   // If visitor is from US and is on a non-/us root/common route, optionally
   // redirect them to the US equivalent for convenience.
   if (isUS && !isUSPath) {
-    const usEquivalent = `/us${pathname}`;
     const commonRoutes = [
       '/',
       '/about',
@@ -51,8 +50,16 @@ export async function middleware(request) {
       '/contact'
     ];
 
-    const hasUSEquivalent = commonRoutes.some(route => pathname === '/' ? route === '/' : pathname.startsWith(route));
+    // Check if pathname matches a common route (exact match or with subpath)
+    const hasUSEquivalent = commonRoutes.some(route => {
+      if (route === '/') {
+        return pathname === '/';
+      }
+      return pathname === route || pathname.startsWith(route + '/');
+    });
+
     if (hasUSEquivalent) {
+      const usEquivalent = `/us${pathname}`;
       return NextResponse.redirect(new URL(usEquivalent, request.url));
     }
   }
@@ -72,3 +79,4 @@ export const config = {
     '/((?!api|_next/static|_next/image|favicon.ico|fonts).*)',
   ],
 };
+
