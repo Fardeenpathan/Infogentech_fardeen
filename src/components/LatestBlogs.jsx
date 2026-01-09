@@ -27,8 +27,7 @@ export default function LatestBlogs() {
 
         if (countryCode && pathname) {
           const routeType = getRouteType(pathname);
-          // Temporarily disabled to debug blog loading issues
-          // addCountryFilters(params, countryCode, routeType);
+          addCountryFilters(params, countryCode, routeType);
         }
 
         url += "?" + params.toString();

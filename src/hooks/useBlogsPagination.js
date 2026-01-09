@@ -46,11 +46,10 @@ export const useBlogsPagination = (categories, limit = 12) => {
       }
       
       // Add country and region filtering based on detected country and route type
-      // Temporarily disabled to debug blog loading issues
-      // if (countryCode && pathname) {
-      //   const routeType = getRouteType(pathname);
-      //   addCountryFilters(params, countryCode, routeType);
-      // }
+      if (countryCode && pathname) {
+        const routeType = getRouteType(pathname);
+        addCountryFilters(params, countryCode, routeType);
+      }
       
       url += '?' + params.toString();
       
