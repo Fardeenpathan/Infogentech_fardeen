@@ -9,7 +9,7 @@ export const metadata = {
     "Landing Page Design",
     "Corporate Identity Design",
     "Logo Design",
-  ],
+  ], 
   metadataBase: new URL("https://infogentech.com"),
   alternates: {
     canonical: "/services/design",

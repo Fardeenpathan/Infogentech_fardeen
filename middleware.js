@@ -81,5 +81,3 @@ export const config = {
   ],
 };
 
-
-// end of code 
