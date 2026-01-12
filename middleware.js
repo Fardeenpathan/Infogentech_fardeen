@@ -50,14 +50,11 @@ export async function middleware(request) {
       '/contact'
     ];
 
-    // Check if pathname matches a common route (exact match or with subpath)
     const hasUSEquivalent = commonRoutes.some(route => {
-      if (route === '/') {
-        return pathname === '/';
-      }
+      if (route === '/') return pathname === '/';
       return pathname === route || pathname.startsWith(route + '/');
     });
-
+    
     if (hasUSEquivalent) {
       const usEquivalent = `/us${pathname}`;
       return NextResponse.redirect(new URL(usEquivalent, request.url));
@@ -79,5 +76,3 @@ export const config = {
     '/((?!api|_next/static|_next/image|favicon.ico|fonts).*)',
   ],
 };
-
-
