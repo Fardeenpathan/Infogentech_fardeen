@@ -3,35 +3,31 @@
 export async function middleware(request) {
   const { pathname } = request.nextUrl;
 
-  if (
-    pathname.startsWith('/admin') ||
-    pathname.startsWith('/api') ||
-    pathname.startsWith('/_next') ||
-    pathname.startsWith('/us') ||      
-    pathname.includes('.') ||
-    pathname === '/blocked'
-  ) {
+
+  if (pathname.startsWith('/admin') || 
+      pathname.startsWith('/api') ||
+      pathname.startsWith('/_next') || 
+      pathname.includes('.') ||
+      pathname === '/blocked') {
     return NextResponse.next();
   }
 
-  /*  COUNTRY DETECTION */
-  let country = 'IN';
+  let country = 'IN'; 
 
   if (process.env.NODE_ENV === 'development') {
+    // For localhost testing, default to 'US' so it redirects to /us
     country = process.env.TEST_COUNTRY || 'US';
   } else {
-    country =
-      request.geo?.country ||
-      request.headers.get('CF-IPCountry') ||
-      request.headers.get('X-Forwarded-Country') ||
-      request.headers.get('CloudFront-Viewer-Country') ||
-      'IN'; 
+    country = request.geo?.country || 
+              request.headers.get('CF-IPCountry') || 
+              request.headers.get('X-Forwarded-Country') ||
+              request.headers.get('CloudFront-Viewer-Country') ||
+              'US'; // Default to US on production if no geo data
   }
 
   const isIndianUser = country === 'IN';
   const isUSPath = pathname.startsWith('/us');
 
-  /* 🇮🇳 INDIAN USERS */
   if (isIndianUser) {
     if (isUSPath) {
       return NextResponse.redirect(new URL('/blocked', request.url));
@@ -39,36 +35,34 @@ export async function middleware(request) {
     return NextResponse.next();
   }
 
-  const redirected = request.cookies.get('geo_redirected');
-
-  if (!isIndianUser && !redirected) {
-    const commonRoutes = [
-      '/',
-      '/about',
-      '/blog',
-      '/portfolio',
-      '/services',
-      '/faq',
-      '/help-center',
-      '/privacy-policy',
-      '/terms-and-conditions',
-      '/contact',
-    ];
-
-    const hasUSEquivalent = commonRoutes.some(route =>
-      pathname === route || pathname.startsWith(route + '/')
-    );
-
-    if (hasUSEquivalent) {
-      const res = NextResponse.redirect(
-        new URL(`/us${pathname}`, request.url)
+  // For non-Indian users (including when country detection fails)
+  if (!isIndianUser) {
+    if (!isUSPath) {
+      const usEquivalent = `/us${pathname}`;
+      
+      const commonRoutes = [
+        '/about',
+        '/blog',
+        '/portfolio',
+        '/services',
+        '/faq',
+        '/help-center',
+        '/privacy-policy',
+        '/terms-and-conditions',
+        '/contact'
+      ];
+      
+      const hasUSEquivalent = commonRoutes.some(route => 
+        pathname.startsWith(route)
       );
 
-      res.cookies.set('geo_redirected', '1', { path: '/' });
-      return res;
+      if (pathname === '/' || hasUSEquivalent) {
+        return NextResponse.redirect(new URL(usEquivalent, request.url));
+      } else {
+        return NextResponse.redirect(new URL('/blocked', request.url));
+      }
     }
-
-    return NextResponse.redirect(new URL('/blocked', request.url));
+    return NextResponse.next();
   }
 
   return NextResponse.next();
@@ -76,6 +70,13 @@ export async function middleware(request) {
 
 export const config = {
   matcher: [
-    '/((?!api|_next/static|_next/image|favicon.ico|fonts|blocked).*)',
+    /*
+     * Match all request paths except for the ones starting with:
+     * - api (API routes)  
+     * - _next/static (static files)
+     * - _next/image (image optimization files)
+     * - favicon.ico (favicon file)
+     */
+    '/((?!api|_next/static|_next/image|favicon.ico|fonts).*)',
   ],
 };
