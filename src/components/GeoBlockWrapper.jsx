@@ -51,7 +51,7 @@ async function fetchCountryFromProviders() {
     },
     {
       name: 'ipgeolocation.io',
-      url: 'https://api.ipgeolocation.io/ipgeo?apiKey=e5226fd031af4b939667e11e921d59e5',
+      url: 'https://api.ipgeolocation.io/ipgeo?apiKey=free',
       parseResponse: (d) => d?.country_code2 ? { code: d.country_code2, name: d.country_name } : null
     }
   ];
