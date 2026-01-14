@@ -37,49 +37,49 @@ const BlockedPage = ({ isUSRoute = false }) => (
   </div>
 );
 
-// async function fetchCountryFromProviders() {
-//   const providers = [
-//     {
-//       name: 'ipapi.co',
-//       url: 'https://ipapi.co/json/',
-//       parseResponse: (d) => d?.country_code ? { code: d.country_code, name: d.country_name || d.country } : null
-//     },
-//     {
-//       name: 'ipwhois.app', 
-//       url: 'https://ipwhois.app/json/',
-//       parseResponse: (d) => d?.country_code ? { code: d.country_code, name: d.country } : null
-//     },
-//     {
-//       name: 'ipgeolocation.io',
-//       url: 'https://api.ipgeolocation.io/ipgeo?apiKey=free',
-//       parseResponse: (d) => d?.country_code2 ? { code: d.country_code2, name: d.country_name } : null
-//     }
-//   ];
+async function fetchCountryFromProviders() {
+  const providers = [
+    {
+      name: 'ipapi.co',
+      url: 'https://ipapi.co/json/',
+      parseResponse: (d) => d?.country_code ? { code: d.country_code, name: d.country_name || d.country } : null
+    },
+    {
+      name: 'ipwhois.app', 
+      url: 'https://ipwhois.app/json/',
+      parseResponse: (d) => d?.country_code ? { code: d.country_code, name: d.country } : null
+    },
+    {
+      name: 'ipgeolocation.io',
+      url: 'https://api.ipgeolocation.io/ipgeo?apiKey=free',
+      parseResponse: (d) => d?.country_code2 ? { code: d.country_code2, name: d.country_name } : null
+    }
+  ];
 
-//   for (const provider of providers) {
-//     try {
-//       const res = await fetch(provider.url, { 
-//         cache: 'no-store',
-//         headers: {
-//           'Accept': 'application/json',
-//         }
-//       });
+  for (const provider of providers) {
+    try {
+      const res = await fetch(provider.url, { 
+        cache: 'no-store',
+        headers: {
+          'Accept': 'application/json',
+        }
+      });
       
-//       if (res.ok) {
-//         const data = await res.json();
-//         const result = provider.parseResponse(data);
-//         if (result) {
-//           return result;
-//         }
-//       }
-//     } catch (e) {
-//       console.warn(`❌ ${provider.name} failed:`, e.message);
-//     }
-//   }
+      if (res.ok) {
+        const data = await res.json();
+        const result = provider.parseResponse(data);
+        if (result) {
+          return result;
+        }
+      }
+    } catch (e) {
+      console.warn(`❌ ${provider.name} failed:`, e.message);
+    }
+  }
 
-//   console.error('🚫 All geo providers failed');
-//   return null;
-// }
+  console.error('🚫 All geo providers failed');
+  return null;
+}
 
 export default function GeoBlockWrapper({ children }) {
   const [isAllowed, setIsAllowed] = useState(null); // null = checking
@@ -190,3 +190,4 @@ export default function GeoBlockWrapper({ children }) {
 
   return children;
 }
+
