@@ -61,7 +61,7 @@ switch (block.type) {
 }
 
 export async function generateMetadata({ params }) {
-  const slug = params.slug;
+  const { slug } = await params;
   const data = await fetchBlogBySlug(slug);
   if (!data) {
     return { title: "Blog | Infogentech", description: "Infogentech" };
@@ -94,7 +94,7 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function Page({ params }) {
-  const slug = params.slug;
+  const { slug } = await params;
   const dataPromise = fetchBlogBySlug(slug);
 
   if (!dataPromise) {
