@@ -16,8 +16,10 @@ export function middleware(request) {
 
   let country = "IN";
 
+  // Country detection
   if (process.env.NODE_ENV === "development") {
-    country = (process.env.TEST_COUNTRY || "US").toUpperCase();
+    // ⚠️ Default IN rakho
+    country = (process.env.TEST_COUNTRY || "IN").toUpperCase();
   } else {
     country =
       request.geo?.country ||
@@ -29,33 +31,23 @@ export function middleware(request) {
   const isUS = country === "US";
   const isUSPath = pathname.startsWith("/us");
 
-  // Block non-US users from /us
-  if (isUSPath && !isUS) {
+  /* ============================
+     🇮🇳 Indian users
+     - /blog allowed
+     - /us blocked
+  ============================ */
+  if (!isUS && isUSPath) {
     return NextResponse.redirect(new URL("/blocked", request.url));
   }
 
-  // Redirect US users to /us version
+  /* ============================
+     🇺🇸 US users
+     - /us/blog allowed
+     - /blog blocked
+     - NO auto redirect
+  ============================ */
   if (isUS && !isUSPath) {
-    const commonRoutes = [
-      "/",
-      "/about",
-      "/blog",
-      "/portfolio",
-      "/services",
-      "/faq",
-      "/help-center",
-      "/privacy-policy",
-      "/terms-and-conditions",
-      "/contact",
-    ];
-
-    const shouldRedirect = commonRoutes.some(
-      (route) => pathname === route || pathname.startsWith(route + "/")
-    );
-
-    if (shouldRedirect) {
-      return NextResponse.redirect(new URL(/us${pathname}, request.url));
-    }
+    return NextResponse.redirect(new URL("/blocked", request.url));
   }
 
   return NextResponse.next();
