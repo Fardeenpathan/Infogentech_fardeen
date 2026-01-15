@@ -1,59 +1,60 @@
-﻿import { NextResponse } from 'next/server';
+﻿import { NextResponse } from "next/server";
 
-export async function middleware(request) {
+export function middleware(request) {
   const { pathname } = request.nextUrl;
 
-
-  if (pathname.startsWith('/admin') || 
-      pathname.startsWith('/api') ||
-      pathname.startsWith('/_next') || 
-      pathname.includes('.') ||
-      pathname === '/blocked') {
+  // Ignore admin, api, next assets, files
+  if (
+    pathname.startsWith("/admin") ||
+    pathname.startsWith("/api") ||
+    pathname.startsWith("/_next") ||
+    pathname.includes(".") ||
+    pathname === "/blocked"
+  ) {
     return NextResponse.next();
   }
 
-  let country = 'IN'; 
-  // Determine country from Next.js geo (preferred) or common edge headers.
-  // Do NOT default to 'US' — treat unknown as non-US to avoid exposing `/us`.
-  if (process.env.NODE_ENV === 'development') {
-    country = (process.env.TEST_COUNTRY || 'US').toUpperCase();
+  let country = "IN";
+
+  if (process.env.NODE_ENV === "development") {
+    country = (process.env.TEST_COUNTRY || "US").toUpperCase();
   } else {
-    country = (request.geo?.country ||
-               request.headers.get('x-vercel-ip-country') ||
-               request.headers.get('cf-ipcountry') ||
-               request.headers.get('x-forwarded-country') ||
-               request.headers.get('cloudfront-viewer-country') ||
-               '')?.toUpperCase();
+    country =
+      request.geo?.country ||
+      request.headers.get("x-vercel-ip-country") ||
+      request.headers.get("cf-ipcountry") ||
+      "";
   }
 
-  const isUS = country === 'US';
-  const isUSPath = pathname.startsWith('/us');
+  const isUS = country === "US";
+  const isUSPath = pathname.startsWith("/us");
 
-  // If the path is the US site, only allow when country === 'US'
+  // Block non-US users from /us
   if (isUSPath && !isUS) {
-    return NextResponse.redirect(new URL('/blocked', request.url));
+    return NextResponse.redirect(new URL("/blocked", request.url));
   }
 
-  // If visitor is from US and is on a non-/us root/common route, optionally
-  // redirect them to the US equivalent for convenience.
+  // Redirect US users to /us version
   if (isUS && !isUSPath) {
-    const usEquivalent = `/us${pathname}`;
     const commonRoutes = [
-      '/',
-      '/about',
-      '/blog',
-      '/portfolio',
-      '/services',
-      '/faq',
-      '/help-center',
-      '/privacy-policy',
-      '/terms-and-conditions',
-      '/contact'
+      "/",
+      "/about",
+      "/blog",
+      "/portfolio",
+      "/services",
+      "/faq",
+      "/help-center",
+      "/privacy-policy",
+      "/terms-and-conditions",
+      "/contact",
     ];
 
-    const hasUSEquivalent = commonRoutes.some(route => pathname === '/' ? route === '/' : pathname.startsWith(route));
-    if (hasUSEquivalent) {
-      return NextResponse.redirect(new URL(usEquivalent, request.url));
+    const shouldRedirect = commonRoutes.some(
+      (route) => pathname === route || pathname.startsWith(route + "/")
+    );
+
+    if (shouldRedirect) {
+      return NextResponse.redirect(new URL(/us${pathname}, request.url));
     }
   }
 
@@ -62,13 +63,6 @@ export async function middleware(request) {
 
 export const config = {
   matcher: [
-    /*
-     * Match all request paths except for the ones starting with:
-     * - api (API routes)  
-     * - _next/static (static files)
-     * - _next/image (image optimization files)
-     * - favicon.ico (favicon file)
-     */
-    '/((?!api|_next/static|_next/image|favicon.ico|fonts).*)',
+    "/((?!_next/static|_next/image|favicon.ico|fonts).*)",
   ],
 };
