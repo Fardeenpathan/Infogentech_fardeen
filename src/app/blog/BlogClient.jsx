@@ -41,11 +41,7 @@ const Blogs = () => {
         }
       } catch (error) {
         console.error("Error fetching categories:", error);
-        const fallbackCategories = category.map((cat) => ({
-          name: cat,
-          slug: cat.toLowerCase().replace(/\s+/g, "-"),
-        }));
-        setCategories(fallbackCategories);
+        // Keep the default "All" category if API fails
       }
     };
 
