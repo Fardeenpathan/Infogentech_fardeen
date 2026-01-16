@@ -122,4 +122,3 @@ export default async function Page({ params }) {
   return <BlogClient blog={blog} slug={slug} />;
 }
  
-
