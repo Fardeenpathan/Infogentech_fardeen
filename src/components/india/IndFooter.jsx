@@ -72,7 +72,7 @@ export function IndFooter() {
                  <Link href="https://www.threads.com/@infogentech_"  target="_blank">
                   <Icons name="Threads" />
                 </Link>
-                 <Link href="https://in.pinterest.com/infogentech/"  target="_blank">
+                 <Link href="https://in.pinterest.com/infogentech_/"  target="_blank">
                   <Icons name="Pinterest" />
                 </Link>
                  <Link href="https://www.instagram.com/infogentech_/"  target="_blank">

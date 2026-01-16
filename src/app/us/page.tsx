@@ -44,7 +44,7 @@ export default function Home() {
                   "https://www.instagram.com/infogentech_/",
                   "https://www.youtube.com/@infogentech",
                   "https://www.linkedin.com/company/infogentech/",
-                  "https://in.pinterest.com/infogentech/",
+                  "https://in.pinterest.com/infogentech_/",
                   "https://www.threads.com/@infogentech_"
                 ]
               },

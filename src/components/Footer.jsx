@@ -88,7 +88,7 @@ export function Footer() {
                   <Icons name="Threads" />
                 </Link>
                 <Link
-                  href="https://in.pinterest.com/infogentech/"
+                  href="https://in.pinterest.com/infogentech_/"
                   target="_blank"
                 >
                   <Icons name="Pinterest" />
