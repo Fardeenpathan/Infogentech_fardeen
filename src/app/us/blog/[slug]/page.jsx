@@ -98,7 +98,7 @@ export default async function Page({ params }) {
       </div>
     );
   }
-
+    
   const data = await dataPromise;
 
   if (!data) {
@@ -122,3 +122,5 @@ export default async function Page({ params }) {
   return <BlogClient blog={blog} slug={slug} />;
 }
  
+
+
