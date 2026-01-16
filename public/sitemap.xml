@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<<<<<<< HEAD
 <url><loc>https://infogentech.com/about</loc><lastmod>2026-01-15T09:58:58.788Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 <url><loc>https://infogentech.com/admin/blogs/advanced/create</loc><lastmod>2026-01-15T09:58:58.790Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 <url><loc>https://infogentech.com/admin/blogs/create</loc><lastmod>2026-01-15T09:58:58.790Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
@@ -48,4 +49,54 @@
 <url><loc>https://infogentech.com/us/services/digital-marketing</loc><lastmod>2026-01-15T09:58:58.791Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 <url><loc>https://infogentech.com/us/services</loc><lastmod>2026-01-15T09:58:58.791Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 <url><loc>https://infogentech.com/us/terms-and-conditions</loc><lastmod>2026-01-15T09:58:58.791Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+=======
+<url><loc>https://infogentech.com/about</loc><lastmod>2026-01-02T12:42:44.441Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://infogentech.com/admin/blogs/advanced/create</loc><lastmod>2026-01-02T12:42:44.444Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://infogentech.com/admin/blogs/create</loc><lastmod>2026-01-02T12:42:44.444Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://infogentech.com/admin/blogs</loc><lastmod>2026-01-02T12:42:44.444Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://infogentech.com/admin/categories</loc><lastmod>2026-01-02T12:42:44.444Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://infogentech.com/admin/contacts</loc><lastmod>2026-01-02T12:42:44.444Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://infogentech.com/admin/dashboard</loc><lastmod>2026-01-02T12:42:44.444Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://infogentech.com/admin/login</loc><lastmod>2026-01-02T12:42:44.444Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://infogentech.com/admin</loc><lastmod>2026-01-02T12:42:44.444Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://infogentech.com/admin/settings</loc><lastmod>2026-01-02T12:42:44.444Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://infogentech.com/blocked</loc><lastmod>2026-01-02T12:42:44.444Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://infogentech.com/blog</loc><lastmod>2026-01-02T12:42:44.444Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://infogentech.com/contact</loc><lastmod>2026-01-02T12:42:44.444Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://infogentech.com/faq</loc><lastmod>2026-01-02T12:42:44.444Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://infogentech.com/help-center</loc><lastmod>2026-01-02T12:42:44.444Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://infogentech.com</loc><lastmod>2026-01-02T12:42:44.444Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://infogentech.com/portfolio/content</loc><lastmod>2026-01-02T12:42:44.444Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://infogentech.com/portfolio/design</loc><lastmod>2026-01-02T12:42:44.444Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://infogentech.com/portfolio/development</loc><lastmod>2026-01-02T12:42:44.444Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://infogentech.com/portfolio/digital-marketing</loc><lastmod>2026-01-02T12:42:44.444Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://infogentech.com/portfolio</loc><lastmod>2026-01-02T12:42:44.444Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://infogentech.com/privacy-policy</loc><lastmod>2026-01-02T12:42:44.444Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://infogentech.com/robots.txt</loc><lastmod>2026-01-02T12:42:44.444Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://infogentech.com/services/content</loc><lastmod>2026-01-02T12:42:44.444Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://infogentech.com/services/design</loc><lastmod>2026-01-02T12:42:44.444Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://infogentech.com/services/development</loc><lastmod>2026-01-02T12:42:44.444Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://infogentech.com/services/digital-marketing</loc><lastmod>2026-01-02T12:42:44.444Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://infogentech.com/services</loc><lastmod>2026-01-02T12:42:44.444Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://infogentech.com/terms-and-conditions</loc><lastmod>2026-01-02T12:42:44.444Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://infogentech.com/us/about</loc><lastmod>2026-01-02T12:42:44.444Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://infogentech.com/us/blocked</loc><lastmod>2026-01-02T12:42:44.444Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://infogentech.com/us/blog</loc><lastmod>2026-01-02T12:42:44.444Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://infogentech.com/us/contact</loc><lastmod>2026-01-02T12:42:44.444Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://infogentech.com/us/faq</loc><lastmod>2026-01-02T12:42:44.444Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://infogentech.com/us/help-center</loc><lastmod>2026-01-02T12:42:44.444Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://infogentech.com/us</loc><lastmod>2026-01-02T12:42:44.444Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://infogentech.com/us/portfolio/content</loc><lastmod>2026-01-02T12:42:44.444Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://infogentech.com/us/portfolio/design</loc><lastmod>2026-01-02T12:42:44.444Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://infogentech.com/us/portfolio/development</loc><lastmod>2026-01-02T12:42:44.444Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://infogentech.com/us/portfolio/digital-marketing</loc><lastmod>2026-01-02T12:42:44.444Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://infogentech.com/us/portfolio</loc><lastmod>2026-01-02T12:42:44.444Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://infogentech.com/us/privacy-policy</loc><lastmod>2026-01-02T12:42:44.444Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://infogentech.com/us/services/content</loc><lastmod>2026-01-02T12:42:44.444Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://infogentech.com/us/services/design</loc><lastmod>2026-01-02T12:42:44.444Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://infogentech.com/us/services/development</loc><lastmod>2026-01-02T12:42:44.444Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://infogentech.com/us/services/digital-marketing</loc><lastmod>2026-01-02T12:42:44.444Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://infogentech.com/us/services</loc><lastmod>2026-01-02T12:42:44.444Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://infogentech.com/us/terms-and-conditions</loc><lastmod>2026-01-02T12:42:44.444Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+>>>>>>> 9061b17813c3b0effe29a4b3ec660ff01cfeffc3
 </urlset>
