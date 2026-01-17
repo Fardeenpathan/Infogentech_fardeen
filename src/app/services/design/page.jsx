@@ -69,6 +69,7 @@ const Design = () => {
     {
       id: "01",
       title: "Graphic Design", 
+      link: '/services/design/graphicDesign',
       description:
         "Creative visual content for print and digital platforms to elevate your brand presence.",
          image: [
