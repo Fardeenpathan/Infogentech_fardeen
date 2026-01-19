@@ -134,11 +134,11 @@ const Marketing = () => {
         "Create valuable and consistent content to attract, engage, and convert your target audience.",
       image: [
         {
-          src: "/assist/services/marketing/content Marketing1.png",
+          src: "/assist/services/marketing/contentmarketing1.png",
           link: "/project/1",
         },
         {
-          src: "/assist/services/marketing/content Marketing2.png",
+          src: "/assist/services/marketing/contentmarketing2.png",
           link: "/project/2",
         },
       ],
