@@ -156,7 +156,7 @@ const Development = () => {
         "Next-gen solutions using artificial intelligence, cloud hosting, and modern frameworks.",
       image: [
         {
-          src: "/assist/services/development/aicloud1.png",
+          src: "/assist/services/marketing/marketing2.png",
           link: "/project/1",
         },
         {
