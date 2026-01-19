@@ -6,7 +6,7 @@ const designProjects = [
     image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761825962/blog-app/blogs/blogs/1761825957729-case_study_british_raj_1.jpg", 
     subImage: "/assist/portfolio/design/birtishRajDesign02.png",
     description:
-      "BookPremiumFare.com is a travel booking platform offering premium and discounted airfares. It offers convenient booking, up-to-date airfare, and secure checkout, and draws organic traffic.",
+      "The British Raj is an engaging animated video project that presents the complex history of the British Raj through a clear, compelling, and visually rich narrative.",
     date: "April 2025 ",
     duration: "6 weeks",
     tools: ["adobe", "animate cc", "premiere pro"],
@@ -29,9 +29,9 @@ const designProjects = [
       "Storytelling",
     ],
     points: [
-      "SEO Content: Keyword-optimized pages and meta tags.",
-      "Blog & Guides: Composed travel tips, offers, and destination pieces.",
-      "Content Updates: Updating content regularly to enhance relevance and search performance.",
+      "Storytelling that is research-driven and historically accurate with motion graphics and character illustrations.",
+      "Enhance viewer understanding and retention by simplifying timelines, infographics, and cinematic transitions.",
+      "Showcased Infogentech’s expertise in visual storytelling and video production, and delivered a strong educational impact.",
     ],
   },
   {
@@ -40,6 +40,7 @@ const designProjects = [
     slug: "portfolio-logo",
     image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761829933/blog-app/blogs/blogs/1761829930032-logo_portfolio_1_1.jpg",
     subImage: "/assist/portfolio/design/logos.png",
+    description:"A complete showcase of Infogentech’s branding expertise, highlighting logo design, visual systems, and real-world brand application.",
     date: "March 2025",
     duration: "2 weeks",
     tools: ["Adobe Illustrator", "Figma"],
@@ -49,9 +50,9 @@ const designProjects = [
     modules: ["Logo Design", "Brand Identity", "Vector Graphics"],
     expertise: ["Brand Design", "Visual Identity", "Typography"],
     points: [
-      "Created modern and minimalist logo designs",
-      "Developed brand identity guidelines",
-      "Delivered scalable vector formats"
+      "Explained versatility across industries through logos, typography, color systems, and mockups.",
+      "Showcases end-to-end branding solutions, from concept development to practical usage.",
+      "Support Infogentech’s strength in making scalable, distinctive brand identities that speak clarity and impact."
     ],
     
   },
