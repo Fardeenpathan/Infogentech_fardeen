@@ -1,19 +1,21 @@
+"use client";
 import Link from "next/link";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
 export default function IndServiceDetails() {
-    const testimonial =[
+    const testimonial = [
         {
-            
-            des: 'we spend description',
-            img: '',
-            name:'Suraj Kumar',
+            des: '"You made it so simple. My new site is so much faster & easier to work"',
+            img: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
+            name: 'Suraj Kumar',
             designation: 'Founder of Taskio'
         },
 
         {
-            
-            des: 'we spend description 2',
-            img: '',
-            name:'Ashish verma',
+            des: '"we spend description 2 You made it so simple. My new site is so much faster"',
+            img: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
+            name: 'Ashish verma',
             designation: 'CEO of company'
         },
 
@@ -44,13 +46,36 @@ export default function IndServiceDetails() {
                 <div className="">
                     <div></div>
 
-                    <div className="px-6 py-16 bg-[#EAE6FF] rounded-2xl mb-12">
-{/* testimonial */}
+                    <div className="px-6 py-8 bg-[#EAE6FF] rounded-2xl mb-12">
+                        {/* testimonial */}
+                        <Swiper
+                            loop
+                            speed={1000}
+                            autoplay={{ delay: 3000, disableOnInteraction: false }}
+                            modules={[Autoplay]}
+                            className="w-[350px]"
+                        >
+                            {testimonial.map((item, i) => (
+                                <SwiperSlide key={i} className="text-center space-y-4">
+                                    <p className="text-[30px] leading-10 px-6 font-semibold">
+                                        {item.des}
+                                    </p>
+                                    <div className="flex flex-col-2 gap-4 text-center justify-center">
+                                        <img
+                                            src={item.img}
+                                            alt={item.name}
+                                            className="w-14 h-14 rounded-full object-cover"
+                                        />
+                                        <div>
+                                        <p className="text-[24px] text-primary">{item.name}</p>
+                                        <p className="text-[18px] text-black">{item.designation}</p>
+                                        </div>
+                                    </div>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
 
- 
-
-
-{/* end of testiminal */}
+                        {/* end of testiminal */}
 
                     </div>
 
