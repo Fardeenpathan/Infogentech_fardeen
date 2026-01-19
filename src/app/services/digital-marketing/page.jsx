@@ -98,11 +98,11 @@ const Marketing = () => {
         "Grow and retain loyal audiences through social campaigns, influencer outreach, and strategic content.",
         image: [
         {
-          src: "/assist/services/marketing/social1.png",
+          src: "/assist/services/marketing/media1.png",
           link: "/project/1",
         },
         {
-          src: "/assist/services/marketing/social2.png",
+          src: "/assist/services/marketing/media2.png",
           link: "/project/2",
         },
       ],
@@ -134,11 +134,11 @@ const Marketing = () => {
         "Create valuable and consistent content to attract, engage, and convert your target audience.",
       image: [
         {
-          src: "/assist/services/marketing/contentmarketing1.png",
+          src: "/assist/services/marketing/marketingcontent1.png",
           link: "/project/1",
         },
         {
-          src: "/assist/services/marketing/contentmarketing2.png",
+          src: "/assist/services/marketing/marketingcontent2.png",
           link: "/project/2",
         },
       ],
