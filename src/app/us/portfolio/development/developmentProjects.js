@@ -50,8 +50,12 @@ const developmentProjects = [
     image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761992949/blog-app/blogs/blogs/1761992942007-shaadi-karwadu-landing-page-(3)-min.jpg",
     subImage: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761551557/blog-app/blogs/blogs/1761551548973-shaddikarvado.jpg",
     description:
-      "Madirakshi, an emerging digital platform, became our marketing partner to improve their app onboarding experience. We redefined the onboarding flow to retain and satisfy our customers while ensuring that they adopt the features. Figma and WordPress aided in creating a fluid, useful process and a higher level of engagement while bringing long engagement periods and customer success with it.",
-    points: [],
+      "ShaadiKarwaDu is a full-featured wedding planning website designed to make every stage of the couple’s journey seamless, elegant, and stress-free.",
+    points: [
+      "Combine user experience with visuals to showcase venues, vendors, services, and real wedding stories.",
+      "Structured content, categories, and galleries to help users easily discover inspiration and plan details.",
+      "Position ShaadiKarwaDu as an all-in-one digital destination for modern wedding planning across India."
+    ],
     date: "May 2025 ",
     duration: "8 weeks ",
     tools: [
@@ -127,8 +131,12 @@ const developmentProjects = [
     image: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761287094/lpb53tidbisvfzjal0ew.png",
     subImage: "/assist/portfolio/development/avartajewellery.png",
     description:
-      "Avarta Jewellery is a luxury brand that has a reputation for classic beauty and contemporary workmanship. They collaborated with us to design and develop a rich site. We provided the construction of category-based collections, blogs, customer resource, and e-commerce functionality, which would be smooth and user-friendly, so that the experience provided would be interesting to the jewellery lovers of today.",
-    points: [],
+      "Avarta Jewellery is a UI/UX design and web development project that focuses on creating a refined and trustworthy online jewelry shopping experience.",
+    points: [
+      "Infogentech applied a structured design thinking process, from user research and personas to flows, architecture, and visual design.",
+      "Boost confidence by developing a clean interface with clear navigation, trust signals, and a detailed presentation.",
+      "Delivered a modern, elegant digital experience that is aligned with premium jewellery branding."
+    ],
     date: "May – July 2025",
     duration: "6 weeks ",
     tools: [

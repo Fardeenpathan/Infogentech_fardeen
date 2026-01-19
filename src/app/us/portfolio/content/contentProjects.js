@@ -5,7 +5,7 @@ const contentProjects = [
     "slug": "bookPremiumFare-Transforming-Online-Travel-Booking",
     "image": "https://res.cloudinary.com/dpmceu66e/image/upload/v1761830232/blog-app/blogs/blogs/1761830229052-bookpremiumfare_case_study.jpg",
     "subImage": "/assist/portfolio/content/bookPremiumFare.webp",
-    "description": "BookPremiumFare.com is a travel booking platform offering premium and discounted airfares. It offers convenient booking, up-to-date airfare, and secure checkout, and draws organic traffic.",
+    "description": "Infogentech built a modern, scalable travel booking website for BookPremiumFare and drove strong organic growth via performance SEO.",
     "date": "May 2025",
     "duration": "5 Months (Ongoing)",
     tools: ["Next.js", "Google Search Console", "SEMrush"],
@@ -21,9 +21,9 @@ const contentProjects = [
     ],
     expertise: ["UI/UX Design", "Frontend Development", "SEO Strategy"],
     "points": [
-      "SEO Content: Keyword-optimized pages and meta tags.",
-      "Blog & Guides: Composed travel tips, offers, and destination pieces.",
-      "Content Updates: Updating content regularly to enhance relevance and search performance."
+      "Developed a fast, mobile-friendly UI/UX integrating flight search, booking, and secure checkout.",
+      "Optimized search visibility through keyword research, on-page/technical SEO, and content optimization.",
+      "Created SEO-optimized landing pages and blog content to attract organic traffic and improve conversions."
     ]
   },
 
@@ -33,7 +33,7 @@ const contentProjects = [
     "slug": "CertStudyMaterial-Online-IT-Certification-Platform",
     "image": "https://res.cloudinary.com/dpmceu66e/image/upload/v1761827385/blog-app/blogs/blogs/1761827381575-cert_study_material_case_study_1.jpg",
     "subImage": "/assist/portfolio/content/certStu.png",
-    "description": "CertStudyMaterial.com is an online platform dedicated to helping IT professionals prepare for certifications across cloud, networking, cybersecurity, and programming domains. It offers updated study guides, practice exams, and expert resources that simplify learning and boost success rates.",
+    "description": "CertStudyMaterial partnered with Infogentech for an SEO and content strategy to boost organic presence in the competitive IT certification market.",
     "date": "February – August 2025 ",
     "duration": "6 Months ",
     tools: ["WordPress","Ahrefs", "Google Search Console", "SEMrush"],
@@ -49,9 +49,9 @@ const contentProjects = [
     ],
     expertise: ["Content Writing & Optimization", "On-page & Off-page SEO","Technical SEO ", "Keyword Research", "Performance Tracking"],
     "points": [
-      "SEO Content: Keyword-rich certification pages, structured guides, and optimized metadata.",
-      "Blog & Guides: Crafted exam tips, career insights, and technology updates.",
-      "Content Updates: Regularly refreshed materials to align with latest exam objectives and industry standards, improving learner confidence and search visibility."
+      "Conducted keyword research, enhanced meta tags, and optimized content for certification-related queries.",
+      "Developed exam-focused study resources and practice materials based on learner search intent.",
+      "Improved site speed, mobile experience, internal links, and ongoing performance monitoring boosted organic growth."
     ]
   },
 ]
