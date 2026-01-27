@@ -59,7 +59,7 @@ const IndServicesDetailFaqs = ({ servicedetailsfaqs }) => {
      <h2 className="font-jost text-[24px] font-bold leading-[38px] text-primary">
           FAQs
         </h2>
-        <h2 className="font-jost text-[46px] font-bold leading-[38px] text-black py-4">Everything You Need to Know</h2>
+        <h2 className="font-jost text-[46px] font-bold leading-[44px] text-black py-4">Everything You Need to Know</h2>
 
       <div className="mt-8  w-full">
         <motion.div
