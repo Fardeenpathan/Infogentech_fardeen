@@ -4332,6 +4332,12 @@ const FaqArrow = () => (
 </svg>
 
 )
+
+const ServiceSidebarArrow = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6 17L11 12L6 7M13 17L18 12L13 7" stroke="#8752FF" strokeWidth="2" strokeLinecap="round" stroke-linejoin="round"/>
+</svg>
+)
   
 const BestQuality =()=>(
   <svg width="42" height="45" viewBox="0 0 42 45" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -6671,6 +6677,7 @@ const Icons = {
   Money,
   ServeBest,
   FaqArrow,
+  ServiceSidebarArrow,
   Quote,
   IndHomeService2,
   IndHomeService1,
