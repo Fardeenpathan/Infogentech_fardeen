@@ -59,7 +59,7 @@ const IndServicesDetailFaqs = ({ servicedetailsfaqs }) => {
      <h2 className="font-jost text-[24px] font-bold leading-[38px] text-primary">
           FAQs
         </h2>
-        <h2 className="font-jost text-[46px] font-bold leading-[44px] text-black py-4">Everything You Need to Know</h2>
+        <h2 className="font-jost text-[46px] font-bold leading-[46px] text-black py-4">Everything You Need to Know</h2>
 
       <div className="mt-8  w-full">
         <motion.div
@@ -90,7 +90,7 @@ const IndServicesDetailFaqs = ({ servicedetailsfaqs }) => {
                     onClick={() => toggleFAQ(faq.id)}
                   >
                     <div className="text-gray-600 flex items-center gap-4 md:text-2xl text-[16px]">
-                      <span className="text-4xl font-normal opacity-40">
+                      <span className="lg:text-4xl text-3xl font-normal opacity-40">
                         0{index + 1}
                       </span>
                       {faq.question}
