@@ -110,7 +110,7 @@ const GraphicDesign = () => {
           </div>
         </div>
         <div className="pt-12">
-          <hr className="w-full border-t-4" />
+          <hr className="w-full border-t-4 border-[#EBE8FD]" />
         </div>
         <IndServicesDetailFaqs servicedetailsfaqs={servicedetailsfaqs} />
       </div>

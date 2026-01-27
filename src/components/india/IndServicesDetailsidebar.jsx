@@ -61,10 +61,10 @@ export default function IndServicesDetailsidebar() {
                                     <img
                                         src={item.img}
                                         alt={item.name}
-                                        className="w-14 h-14 rounded-full object-cover"
+                                        className="w-16 h-16 rounded-full object-cover"
                                     />
                                     <div>
-                                        <p className="text-[24px] text-primary">{item.name}</p>
+                                        <p className="text-[24px] text-primary font-semibold">{item.name}</p>
                                         <p className="text-[18px] text-black">{item.designation}</p>
                                     </div>
                                 </div>
