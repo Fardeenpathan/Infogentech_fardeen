@@ -412,3 +412,8 @@ body {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;     /* Firefox */
 }
+
+
+.swiper-pagination-bullet-active{
+  background-color: #8752FF !important;
+}
