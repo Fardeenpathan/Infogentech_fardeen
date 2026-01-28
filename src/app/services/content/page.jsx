@@ -67,6 +67,7 @@ const categories = [
   {
       id: "01",
       title: "Photo & Video",
+      link: '/services/content/photo-and-video',
       description:
         "High-quality video and photography solutions to bring your brand story to life visually.",
    image: [
@@ -100,6 +101,7 @@ icon: "Servicephoto",
     {
       id: "02",
       title: "Visual Content Design",
+      link: '/services/content/visual-content-design',
       description:
         "Strategic visuals and storytelling to engage audiences across platforms with impactful design.",
     image: [
@@ -125,6 +127,7 @@ icon: "Servicevisual",
     {
       id: "03",
       title: "Audio & Motion Graphics",
+      link: '/services/content/audio-and-motion-graphics',
       description:
         "Dynamic audio and motion design to elevate digital experiences and captivate your audience.",
     image: [
@@ -148,6 +151,7 @@ icon:"Serviceaudio",
     {
       id: "04",
       title: "Blog Posts & Articles",
+      link: '/services/content/blog-posts-and-articles',
       description:
         "SEO-optimized blog writing and professional content tailored for traffic and engagement.",
     image: [
