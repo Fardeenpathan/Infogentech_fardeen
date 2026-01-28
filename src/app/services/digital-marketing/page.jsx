@@ -182,7 +182,7 @@ const Marketing = () => {
      {
       id: "02",
       title: "Performance Marketing",
-      link: '/services/digital-marketing/perfomancemarketing',
+      link: '/services/digital-marketing/performance-marketing',
       description:
         "Targeted, measurable campaigns to drive traffic, sales, and conversion through various ad platforms.",
       image: [
