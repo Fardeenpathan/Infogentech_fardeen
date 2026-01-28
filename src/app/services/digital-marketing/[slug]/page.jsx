@@ -32,7 +32,7 @@ const ServiceShow = () => {
               width={1400}
               height={460}
               className="w-full lg:h-140 h-84 object-fill -z-10 rounded-3xl"
-            />
+            /> 
           )}
           {service.heading && (
             <div className="md:mt-18 mt-4 px-2">
@@ -188,7 +188,7 @@ const ServiceShow = () => {
             </div>
           )}
 
-          {service.heading7 && (
+          {service?.heading7 && (
             <div className="md:mt-12 mt-6 px-2">
               <h2 className="font-montserrat font-bold lg:text-4xl md:text-3xl text-2xl text-gray-400 mb-4">
                 {service.heading7}
@@ -196,7 +196,7 @@ const ServiceShow = () => {
             </div>
           )}
 
-          {service.paraTitle7 && (
+          {service?.paraTitle7 && (
             <div className="md:mt-6 mt-4 font-montserrat text-lg leading-[30px] w-full px-2 space-y-4">
               {service.paraTitle7.map((para, index) => (
                 <p key={index} className="text-gray-700">{para}</p>

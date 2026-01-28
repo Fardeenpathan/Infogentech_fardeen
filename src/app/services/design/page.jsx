@@ -87,6 +87,7 @@ const Design = () => {
     {
       id: "02",
       title: "UI/UX Design",
+      link: '/services/design/ui-ux-design',
       description:
         "User-centered design strategies to create engaging and functional digital experiences.",
       image: [
@@ -104,6 +105,7 @@ const Design = () => {
     {
       id: "03",
       title: "Branding",
+      link: '/services/design/brandingdesign',
       description:
         "Craft a powerful brand identity with strategic design and messaging.",
    image: [
@@ -121,6 +123,7 @@ const Design = () => {
     {
       id: "04",
       title: "Logo Design",
+      link: '/services/design/logodesign',
       description:
         "Custom logo designs that capture your brand’s personality and values.",
         image: [

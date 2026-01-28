@@ -75,6 +75,7 @@ const Marketing = () => {
     {
       id: "01",
       title: "Marketing Strategy",
+      
       description:
         "Create comprehensive strategies focused on long-term brand growth, audience engagement, and ROI.",
        image: [
@@ -89,11 +90,12 @@ const Marketing = () => {
       ],
     
       icon: "Servicemarketing",
-     link: "/services/marketing-strategy",
+     link: "/services/digital-marketing/marketing-strategy",
     },
     {
       id: "04",
       title: "Social Media marketing",
+      link: '/services/digital-marketing/socialmediamarketing',
       description:
         "Grow and retain loyal audiences through social campaigns, influencer outreach, and strategic content.",
         image: [
@@ -107,11 +109,12 @@ const Marketing = () => {
         },
       ],
       icon: "Servicesocialmedia",
-      link:"/services/digital-marketing/social-media-marketing",
+      
     },
     {
       id: "05",
       title: "SEO Performance",
+      link: '/services/digital-marketing/seo-services',
       description:
         "Optimize your website for better visibility, organic traffic, and search engine rankings.",
         image: [
@@ -125,11 +128,12 @@ const Marketing = () => {
         },
       ],
        icon: "Serviceseo",
-      link: "/services/digital-marketing/seo-services"
+      link: "/services/digital-marketing/seoperformance"
     },
     {
       id: "06",
       title: "Content Marketing",
+      link: '/services/digital-marketing/content-marketing',
       description:
         "Create valuable and consistent content to attract, engage, and convert your target audience.",
       image: [
@@ -154,6 +158,7 @@ const Marketing = () => {
     {
       id: "07",
       title: "Analytics & Reporting",
+      link: '/services/digital-marketing/analytics-and-reporting',
       description:
         "Track campaign performance with custom dashboards and actionable insights to guide decision-making.",
         image: [
@@ -177,6 +182,7 @@ const Marketing = () => {
      {
       id: "02",
       title: "Performance Marketing",
+      link: '/services/digital-marketing/perfomancemarketing',
       description:
         "Targeted, measurable campaigns to drive traffic, sales, and conversion through various ad platforms.",
       image: [
@@ -208,6 +214,7 @@ const Marketing = () => {
     {
       id: "03",
       title: "CRM & Automation",
+      link: '/services/digital-marketing/crm-and-automation',
       description:
         "Automate marketing flows and nurture customer relationships through personalized messaging.",
       image: [

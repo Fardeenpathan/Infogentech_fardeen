@@ -71,6 +71,7 @@ const Development = () => {
     {
       id: "01",
       title: "Web & App Development",
+      link: '/services/development/web-app-development',
       description:
         "Build high-performing, scalable websites and mobile applications tailored to your business goals.",
       image: [
@@ -106,6 +107,7 @@ const Development = () => {
     {
       id: "02",
       title: "CMS Development",
+      link: '/services/development/cmsdevelopment',
       description:
         "Flexible and user-friendly content management systems like WordPress, Shopify, and more.",
       image: [
@@ -130,6 +132,7 @@ const Development = () => {
     {
       id: "03",
       title: "Custom Integrations",
+      link: '/services/development/customintegrations',
       description:
         "Seamless integration of APIs, databases, and third-party platforms to enhance functionality.",
       image: [
@@ -152,6 +155,7 @@ const Development = () => {
     {
       id: "04",
       title: "AI & Cloud Solutions",
+      link: '/services/development/ai-cloud-solutions',
       description:
         "Next-gen solutions using artificial intelligence, cloud hosting, and modern frameworks.",
       image: [
