@@ -11,7 +11,7 @@ const GraphicDesign = () => {
   }
 
   const servicedetailcontent = {
-    img1: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
+    img1: '/assist/services/design/graphic_detail.png',
     heading1:'Creative Graphic Design Services for Strong Brand Identity',
     para1: 'Infogentech provides businesses with professional graphic design services that deliver effective visual solutions to create strong corporate identities. Strong visual elements are crucial components for both brand image development and customer trust. Our designers develop powerful design solutions that execute our clients branding message through their logo, website, and marketing materials design needs. Our design services create unique visual content while maintaining consistent branding elements, innovative solutions, and targeted objectives. The strategic design process and meticulous work make us a trustworthy partner for businesses seeking graphic design services.',
     heading2: 'Complete Design Solutions That Drive Engagement',
@@ -57,7 +57,7 @@ const GraphicDesign = () => {
         isActive: true,
       },
     ],
-  };
+  };  
 
 
   const servicedetailscategorysidebarfaqs = {
