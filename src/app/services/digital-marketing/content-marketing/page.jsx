@@ -8,10 +8,11 @@ const contentmarketing = () => {
   const servicedetailheader =
   {
     name: 'Content Marketing',
-    des: 'Smart IT solutions that optimize operations, strengthen security, and drive business growth.',
+    des: 'Content Marketing Services That Build Authority & Accelerate Growth',
   } 
 
   const servicedetailcontent = {
+<<<<<<< Updated upstream
     img1: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770895470/content_hero_aw6ucj.jpg',
     heading1: '1. Design functional website fast',
     para1: 'When you’re designing your site, it’s easy to get caught up in adding too many elements to your pages. You want your site to be visually appealing, you continually add elements to add another dimension of visual interest to your page. This can lead to your site getting cluttered and overwhelming. The other issue is that, if certain elements don’t have a purpose on your site, it can leave your audience confused. Every element on your site should have a purpose. Imagine putting a call to action (CTA) button that doesn’t lead to a new page.',
@@ -21,6 +22,17 @@ const contentmarketing = () => {
     img3: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770895477/content_2_nno0fs.png',
     img4: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770895485/content_3_ss8udl.png',
     para3: 'When you’re design beautiful websites, you want to focus on designs for the user. Your audience will be engaging on your site and learning more about your business. It’s important that you build a site that works for them. As you construct your awesome website design.',
+=======
+    img1: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
+    heading1: '1. Strategic Content Marketing That Builds Authority and Engagement',
+    para1: 'Infogentech uses storytelling techniques with messaging methods and customer interaction efforts to help brands achieve business growth. Our content marketing services create brand recognition, generate sales leads, and build enduring customer trust. The leading content marketing agency India produces effective digital marketing campaigns using its research capabilities with creative abilities, and advanced technological resources. Our company creates content in various formats, from social media posts to complete articles and SEO optimized materials, helping businesses reach their target audience and enhance their online presence.',
+    heading2: '2. End-to-End Content Marketing Services for Measurable Growth',
+    para2: 'Our complete content marketing solutions include marketing strategies, content marketing approaches, and social media content that reach customers at every stage of their buying process. Our content marketing agency India creates various content types, including blog posts, videos, infographics, and campaigns, to meet your business objectives. Our seo content writing helps businesses to achieve better search engine results, higher website traffic, and ',
+    img2: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
+    img3: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
+    img4: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
+    para3: 'increased customer conversions. The content marketing solutions developed by Infogentech use artistic storytelling techniques combined with analytical data information to help organizations establish their authority and enhance their online brand presence.',
+>>>>>>> Stashed changes
 
   }
 
@@ -28,23 +40,23 @@ const contentmarketing = () => {
     faqs: [
       {
         id: 1,
-        question: "What is Graphic Design?",
-        answer: "Graphic design is the art of visual communication.",
+        question: "1. How is social media content creation solving businesses' problems today?",
+        answer: "Social media content creation is a way for brands to be seen and considered at all times. It is a way to share stories, updates, and visuals that are not just valuable but also very attractive to the audience. The right way of doing it brings community engagement, increases trust, and makes it possible for the followers to mingle with your brand more frequently.",
         order: 1,
         isActive: true,
       },
       {
         id: 2,
-        question: "Why is graphic design important?",
-        answer: "It builds brand identity and trust.",
+        question: "2. How does Digital content marketing support brand growth?",
+        answer: "Digital content marketing is an excellent method for connecting with the audience on different online platforms with helpful and entertaining information. It builds up the brand, increases trustworthiness, and invites customers to check your brand. Slowly but surely, it attracts more visitors, leads, and customer interest by being the one with the message in the places where your audience is most active online.",
         order: 2,
         isActive: true,
       },
 
       {
         id: 3,
-        question: "Why is graphic design important?",
-        answer: "It builds brand identity and trust.",
+        question: "3. What are the ways marketing services help a business?",
+        answer: "Content marketing services enable businesses to share essential information in a systematic and consistent way. Among the advantages are brand authority, search visibility, and getting the correct audience. These services are able to create trust, promote interactions, and give any brand steady, long-term growth through the regular provision of useful content.",
         order: 3,
         isActive: true,
       },
@@ -52,8 +64,8 @@ const contentmarketing = () => {
 
       {
         id: 4,
-        question: "Why is graphic design important?",
-        answer: "It builds brand identity and trust.",
+        question: "4. How does seo content writing improve online visibility?",
+        answer: "seo content writing uses researched keywords and helpful information to match what people search for. If your content provides clear answers to actual queries, then search engines will place it higher in their rankings. This results in an increase in organic traffic, authority establishment, and your website will attract regular and loyal users for a long time.",
         order: 4,
         isActive: true,
       },
@@ -65,31 +77,31 @@ const contentmarketing = () => {
     faqs: [
       {
         id: 1,
-        question: "What is Graphic Design?",
-        answer: "When you’re designing your site, it’s easy to get caught up in adding too many elements to your pages. You want your site to be visually appealing, you continually add elements to add another dimension of visual interest to your page. ",
+        question: "1. What is content marketing?",
+        answer: "Content marketing is the creation and distribution of content tailored to a business's needs to attract its target audience. It is a marketing approach. ",
         order: 1,
         isActive: true,
       },
       {
         id: 2,
-        question: "Why is graphic design important?",
-        answer: "When you’re designing your site, it’s easy to get caught up in adding too many elements to your pages. You want your site to be visually appealing, you continually add elements to add another dimension of visual interest to your page. ",
+        question: "2. Why is the importance of content marketing for a business?",
+        answer: "Good content is a source of knowledge for the audience. Although content marketing boosts SEO, it is also cost-effective and builds trust for the business. ",
         order: 2,
         isActive: true,
       },
 
       {
         id: 3,
-        question: "Why is graphic design important?",
-        answer: "When you’re designing your site, it’s easy to get caught up in adding too many elements to your pages. You want your site to be visually appealing, you continually add elements to add another dimension of visual interest to your page. ",
+        question: "3. What ways are included in digital content marketing?",
+        answer: "Digital content marketing includes blog posts for information and emails for updates and news. Videos are used to elaborate on the information in creative ways. Podcasts and ebooks are also used. ",
         order: 3,
         isActive: true,
       },
 
       {
         id: 4,
-        question: "Why is graphic design important?",
-        answer: "When you’re designing your site, it’s easy to get caught up in adding too many elements to your pages. You want your site to be visually appealing, you continually add elements to add another dimension of visual interest to your page. ",
+        question: "4. What does a content marketing agency India do? ",
+        answer: "A content marketing agency India conducts content audits and research activities. It also develops a content strategy, produces various types of content to define brand voice and messaging, and delivers precise performance reports. ",
         order: 4,
         isActive: true,
       },

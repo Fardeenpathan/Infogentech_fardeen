@@ -8,10 +8,11 @@ const uiuixdesign = () => {
   const servicedetailheader =
   {
     name: 'UI/UX Design',
-    des: 'Smart IT solutions that optimize operations, strengthen security, and drive business growth.',
+    des: 'Turning Digital Products Into Seamless User Experiences',
   }
 
   const servicedetailcontent = {
+<<<<<<< Updated upstream
     img1: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770887331/ui_hero_zgw05q.png',
     heading1: '1. Design functional website fast',
     para1: 'When you’re designing your site, it’s easy to get caught up in adding too many elements to your pages. You want your site to be visually appealing, you continually add elements to add another dimension of visual interest to your page. This can lead to your site getting cluttered and overwhelming. The other issue is that, if certain elements don’t have a purpose on your site, it can leave your audience confused. Every element on your site should have a purpose. Imagine putting a call to action (CTA) button that doesn’t lead to a new page.',
@@ -21,6 +22,17 @@ const uiuixdesign = () => {
     img3: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770887750/ui_2_vqmzbi.png',
     img4: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770887753/ui_3_h2tqlb.jpg',
     para3: 'When you’re design beautiful websites, you want to focus on designs for the user. Your audience will be engaging on your site and learning more about your business. It’s important that you build a site that works for them. As you construct your awesome website design.',
+=======
+    img1: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
+    heading1: '1. UI & UX Design Services That Elevate Digital Experiences',
+    para1: 'Infogentech is a leading ui ux design agency delivering strategic ui and ux design solutions that enhance digital experiences and drive user satisfaction. In todays competitive business environment, companies need to understand UI UX design as it determines how users will interact with their products. Our team creates user friendly designs for websites, apps, and platforms, helping businesses turn visitors into regular customers. Infogentech achieves seamless and purposeful digital product interactions, meeting user expectations through a combination of research and design creativity.',
+    heading2: '2. User-Centered UI & UX Solutions Built for Growth',
+    para2: 'Our UI UX design process involves user research with interaction flows and usability testing. We do interface refinement to achieve valuable outcomes. Infogentech educates businesses about UI UX design while developing solutions that support business growth. From creating structured workflows to developing a strong ui ux designer portfolio, Infogentech supports long-term digital growth.',
+    img2: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
+    img3: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
+    img4: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
+    para3: 'Companies looking for a “UI UX design course near me” use our design expertise to create accessible, functional experiences that maintain visual design consistency to improve their brand value and product performance.',
+>>>>>>> Stashed changes
 
   }
 
@@ -28,23 +40,23 @@ const uiuixdesign = () => {
     faqs: [
       {
         id: 1,
-        question: "What is Graphic Design?",
-        answer: "Graphic design is the art of visual communication.",
+        question: "1. How do ui and ux design improve product performance?",
+        answer: "An excellent UI and UX design provides users with a better experience by making it easier to browse the site, lessening the obstacles, and providing attractive visual points of interaction. They take design decisions that are supported by research and that help to increase sales, participation, and a seamless customer experience that leads to the lasting success of the product.",
         order: 1,
         isActive: true,
       },
       {
         id: 2,
-        question: "Why is graphic design important?",
-        answer: "It builds brand identity and trust.",
+        question: "2. Why is a ui ux designer portfolio important when selecting a design partner?",
+        answer: "An excellent portfolio of a ui ux designer is like a mirror that reflects the designer's experience, creativity, and problem-solving skills. It is a way for the companies to get a clear picture of the ui ux designer's style, strengths, and methods, and thus make sure that the designer is in line with their brand vision and that a top-notch digital experience is provided.",
         order: 2,
         isActive: true,
       },
 
       {
         id: 3,
-        question: "Why is graphic design important?",
-        answer: "It builds brand identity and trust.",
+        question: "3. How can a ui ux design course near me help teams improve their product quality?",
+        answer: "A UI UX design course near me will enhance the understanding of user behavior, accessibility, interface strategy, and usability testing within the team. This education notably helps the companies in making decisions that are design-wise informed, which will, in turn, enhance the performance of the product and ensure that the company builds the experience that really matches the expectations of the user.",
         order: 3,
         isActive: true,
       },
@@ -52,8 +64,8 @@ const uiuixdesign = () => {
 
       {
         id: 4,
-        question: "Why is graphic design important?",
-        answer: "It builds brand identity and trust.",
+        question: "4. What advantages does a ui ux design agency offer compared to freelancers?",
+        answer: "A professional UI UX design agency brings forth several benefits, like a well-organized process, a team of professionals from various sectors, and uniformity. The collaboration of research, design, testing, and iterations in a single agency leads to the development of cohesive results, faster delivery, and strategic solutions that go hand in hand with the long-term business goals of the company.",
         order: 4,
         isActive: true,
       },
@@ -65,31 +77,31 @@ const uiuixdesign = () => {
     faqs: [
       {
         id: 1,
-        question: "What is Graphic Design?",
-        answer: "When you’re designing your site, it’s easy to get caught up in adding too many elements to your pages. You want your site to be visually appealing, you continually add elements to add another dimension of visual interest to your page. ",
+        question: "1. What is Ui Ux design?",
+        answer: "The term UI describes User Interface, which controls how users interact with an application or website through its visual elements. User Experience (UX) defines the complete interaction that users have with a particular product application or website. ",
         order: 1,
         isActive: true,
       },
       {
         id: 2,
-        question: "Why is graphic design important?",
-        answer: "When you’re designing your site, it’s easy to get caught up in adding too many elements to your pages. You want your site to be visually appealing, you continually add elements to add another dimension of visual interest to your page. ",
+        question: "2. What is a Ui Ux designer portfolio?",
+        answer: "A Ui Ux designer portfolio is the collection of the best work a designer has done, which showcases their skills and creativity. Portfolio can be in digital or paper form. ",
         order: 2,
         isActive: true,
       },
 
       {
         id: 3,
-        question: "Why is graphic design important?",
-        answer: "When you’re designing your site, it’s easy to get caught up in adding too many elements to your pages. You want your site to be visually appealing, you continually add elements to add another dimension of visual interest to your page. ",
+        question: "3. Why Ui ux design is important?",
+        answer: "Ui Ux design work with the appearance, experience, and user interaction with the product. Having good Ui Ux design for the product helps users have for better useful experience. ",
         order: 3,
         isActive: true,
       },
 
       {
         id: 4,
-        question: "Why is graphic design important?",
-        answer: "When you’re designing your site, it’s easy to get caught up in adding too many elements to your pages. You want your site to be visually appealing, you continually add elements to add another dimension of visual interest to your page. ",
+        question: "4. What are the components of ui and ux design?",
+        answer: "The components include user research to gather information and wireframing to create a blueprint. Then, prototyping to build interactive models, and visual design to work on the visual aspect. Finally, testing to identify any issues. ",
         order: 4,
         isActive: true,
       },
