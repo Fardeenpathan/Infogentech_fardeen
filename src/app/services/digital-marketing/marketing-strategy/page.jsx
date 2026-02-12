@@ -12,17 +12,6 @@ const marketingstrategy = () => {
   }
 
   const servicedetailcontent = {
-<<<<<<< Updated upstream
-    img1: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770892005/mark_hero_wgdmnj.png',
-    heading1: '1. Design functional website fast',
-    para1: 'When you’re designing your site, it’s easy to get caught up in adding too many elements to your pages. You want your site to be visually appealing, you continually add elements to add another dimension of visual interest to your page. This can lead to your site getting cluttered and overwhelming. The other issue is that, if certain elements don’t have a purpose on your site, it can leave your audience confused. Every element on your site should have a purpose. Imagine putting a call to action (CTA) button that doesn’t lead to a new page.',
-    heading2: '2. Design for the user first',
-    para2: 'People would constantly try to click on the button, and it would leave them confused as to why it doesn’t take them somewhere. Or, think what would happen if a website design prompted users to “Call now” on a top-of-the-funnel blog',
-    img2: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770892013/mark_2_t3ztlq.png',
-    img3: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770892010/mark_1_z4rf6l.png',
-    img4: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770892015/mark_3_dmh3rm.png',
-    para3: 'When you’re design beautiful websites, you want to focus on designs for the user. Your audience will be engaging on your site and learning more about your business. It’s important that you build a site that works for them. As you construct your awesome website design.',
-=======
     img1: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
     heading1: '1. Marketing Strategy That Powers Business Growth',
     para1: 'At Infogentech, we create a powerful marketing strategy that transforms business goals into measurable results. The complete marketing strategy directs all marketing activities through all channels. Our approach combines research methods with audience to create effective brand communication that enables your business to compete in the marketplace. We create tailored marketing plans for both startups and established businesses, which develop their messaging strategies and market positioning. Infogentech enables businesses to achieve higher engagement levels and better ROI results, and continuous business expansion by removing uncertainty from their operations.',
@@ -32,7 +21,6 @@ const marketingstrategy = () => {
     img3: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
     img4: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
     para3: 'Infogentech creates strategic solutions by combining market knowledge and creative capabilities, helping organizations achieve their goals and develop sustainable competitive advantages.',
->>>>>>> Stashed changes
 
   }
 

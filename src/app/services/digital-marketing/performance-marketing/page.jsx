@@ -12,17 +12,6 @@ const performancemarketing = () => {
   }
 
   const servicedetailcontent = {
-<<<<<<< Updated upstream
-    img1: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770896036/perform_hero_izh8zl.jpg',
-    heading1: '1. Design functional website fast',
-    para1: 'When you’re designing your site, it’s easy to get caught up in adding too many elements to your pages. You want your site to be visually appealing, you continually add elements to add another dimension of visual interest to your page. This can lead to your site getting cluttered and overwhelming. The other issue is that, if certain elements don’t have a purpose on your site, it can leave your audience confused. Every element on your site should have a purpose. Imagine putting a call to action (CTA) button that doesn’t lead to a new page.',
-    heading2: '2. Design for the user first',
-    para2: 'People would constantly try to click on the button, and it would leave them confused as to why it doesn’t take them somewhere. Or, think what would happen if a website design prompted users to “Call now” on a top-of-the-funnel blog',
-    img2: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770896041/perform_2_jqlcx2.jpg',
-    img3: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770896198/perform_3_c84gbz.png',
-    img4: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770896126/perform_3_ca4vfj.png',
-    para3: 'When you’re design beautiful websites, you want to focus on designs for the user. Your audience will be engaging on your site and learning more about your business. It’s important that you build a site that works for them. As you construct your awesome website design.',
-=======
     img1: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
     heading1: '1. Performance Marketing Strategies That Deliver Real Business Results',
     para1: 'Infogentech operates as a performance marketing agency that drives brand expansion through its precision marketing. Our performance marketing services help businesses achieve actual results by creating multiple digital marketing channels that generate leads and drive conversions. We use analytics and targeting methods to boost our clients investment returns through our performance marketing services. Among leading performance marketing companies, Infogentech stands out with transparent processes and measurable results, making us a reliable choice for businesses seeking performance marketing companies in India that deliver consistent and scalable growth.',
@@ -31,8 +20,7 @@ const performancemarketing = () => {
     img2: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
     img3: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
     img4: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
-    para3: 'actual data and insights to enhance our marketing methods. We, as a performance marketing agency, help growing businesses achieve better engagement and success through our services.',
->>>>>>> Stashed changes
+    para3: 'Actual data and insights to enhance our marketing methods. We, as a performance marketing agency, help growing businesses achieve better engagement and success through our services.',
 
   }
 
