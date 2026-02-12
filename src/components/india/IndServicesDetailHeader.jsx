@@ -9,6 +9,6 @@ export default function IndServicesDetailHeader({servicedetailheader}) {
       <p className="font-montserrat lg:text-lg text-sm max-w-4xl mx-auto text-center text-gray-600 font-medium px-2">
         {servicedetailheader.des}
       </p>
-    </div>
+    </div> 
     );
 }

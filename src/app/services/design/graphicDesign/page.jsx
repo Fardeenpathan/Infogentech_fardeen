@@ -11,14 +11,14 @@ const GraphicDesign = () => {
   }
 
   const servicedetailcontent = {
-    img1: '/assist/services/design/graphic_detail.png',
+    img1: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770886515/graph_hero_um6eaw.png',
     heading1:'Creative Graphic Design Services for Strong Brand Identity',
     para1: 'Infogentech provides businesses with professional graphic design services that deliver effective visual solutions to create strong corporate identities. Strong visual elements are crucial components for both brand image development and customer trust. Our designers develop powerful design solutions that execute our clients branding message through their logo, website, and marketing materials design needs. Our design services create unique visual content while maintaining consistent branding elements, innovative solutions, and targeted objectives. The strategic design process and meticulous work make us a trustworthy partner for businesses seeking graphic design services.',
     heading2: 'Complete Design Solutions That Drive Engagement',
     para2: 'Our graphic design services start with branding and website visuals and extend to creating social media graphics. Designers create designs to meet your brand objectives while establishing connections with your audience on different platforms. Infogentech functions as a reliable graphic design company merging artistic talent with business knowledge for measurable outcomes.',
-    img2: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
-    img3: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
-    img4: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
+    img2: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770886612/graph_1_hqwhnk.png',
+    img3: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770886687/8_pvc0oo.png',
+    img4: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770886986/graph_3_ornffn.png',
     para3: 'Our graphic design portfolio displays successful projects for different industries. Our design solutions help clients improve their brand visibility, build brand trust, and create long-term effects.',
 
   }

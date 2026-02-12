@@ -2,14 +2,14 @@ import IndHeroPage from "@/components/india/IndHeroPage";
 import React from "react";
 
 export const metadata = {
-title: "Infogentech | Home",
+title: "Infogentech | Top Digital Marketing Agency in India | SEO, Ads, Web Design",
   icons: {
     icon: "https://infogentech.com/favicon.ico",
     shortcut: "https://infogentech.com/favicon.ico",
     apple: "https://infogentech.com/favicon.ico",
   },
   description:
-    "Discover how innovation in software, technology, and digital marketing drives business growth. Explore strategies for success in today’s digital-first world.",
+    " Are you looking for measurable growth? Our digital marketing experts provide SEO, PPC, social media, and web strategies that increase traffic, leads, and ROI",
   keywords:
     "digital marketing company, digital marketing company in Delhi NCR, digital marketing services, online marketing services, web development services, IT services, SEO services in Delhi, SEO services, digital marketing agency near me, social media marketing",
     
