@@ -20,7 +20,7 @@ const performancemarketing = () => {
     img2: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
     img3: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
     img4: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
-    para3: 'Actual data and insights to enhance our marketing methods. We, as a performance marketing agency, help growing businesses achieve better engagement and success through our services.',
+    para3: 'actual data and insights to enhance our marketing methods. We, as a performance marketing agency, help growing businesses achieve better engagement and success through our services.',
 
   }
 

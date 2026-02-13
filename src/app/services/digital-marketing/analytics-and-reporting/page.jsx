@@ -8,19 +8,19 @@ const analyticsandreporting = () => {
   const servicedetailheader =
   {
     name: 'Analytics and Reporting',
-    des: 'Smart IT solutions that optimize operations, strengthen security, and drive business growth.',
+    des: 'Smart Analytics for Better Performance and Conversions',
   }
 
   const servicedetailcontent = {
     img1: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770895746/analytics_hero_jzqcqj.png',
-    heading1: '1. Design functional website fast',
-    para1: 'When you’re designing your site, it’s easy to get caught up in adding too many elements to your pages. You want your site to be visually appealing, you continually add elements to add another dimension of visual interest to your page. This can lead to your site getting cluttered and overwhelming. The other issue is that, if certain elements don’t have a purpose on your site, it can leave your audience confused. Every element on your site should have a purpose. Imagine putting a call to action (CTA) button that doesn’t lead to a new page.',
-    heading2: '2. Design for the user first',
-    para2: 'People would constantly try to click on the button, and it would leave them confused as to why it doesn’t take them somewhere. Or, think what would happen if a website design prompted users to “Call now” on a top-of-the-funnel blog',
+    heading1: '1. Data-Driven Analytics and Reporting for Smarter Decisions',
+    para1: 'Infogentech delivers comprehensive analytical report and performance analytics solutions that help businesses understand user behavior and improve results. Our team provides Google Analytics and GA4 Setup in Delhi to establish precise tracking systems and goal configurations while delivering valuable insights. We transform unprocessed data into understandable reports that show website performance and campaign success. With expert  tracking systems and detailed analytical reports, Infogentech enables businesses to discover growth prospects  and make established decisions for their digital expansion.',
+    heading2: '2. GA4, Tag Manager, and CRO Monitoring Services in Delhi',
+    para2: 'Our Analytics & Reporting services include GA4 setup for business in Delhi, Google Tag Manager setup Delhi, and advanced CRO & Performance Monitoring Services in Delhi. Our company delivers precise event tracking, conversion goals, and performance dashboards, all designed to meet your specific business needs. Infogentech combines performance analytics with conversion rate optimization, ensuring every campaign and page delivers measurable value.',
     img2: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770895668/analytics_1_njiyny.png',
     img3: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770895672/analytics_3_bgabpw.png',
     img4: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770895850/analytics_2_rsa5yz.png',
-    para3: 'When you’re design beautiful websites, you want to focus on designs for the user. Your audience will be engaging on your site and learning more about your business. It’s important that you build a site that works for them. As you construct your awesome website design.',
+    para3: 'Our solutions start from technical setup and continue through ongoing analysis to provide businesses with solutions that deliver better results through data-driven strategies.',
 
   }
 
@@ -28,23 +28,23 @@ const analyticsandreporting = () => {
     faqs: [
       {
         id: 1,
-        question: "What is Graphic Design?",
-        answer: "Graphic design is the art of visual communication.",
+        question: "1. Why should I choose Google Analytics & GA4 Setup in Delhi for my website?",
+        answer: "The GA4 Setup ensures proper tracking and reliable data collection. It also provides clear performance insights for smarter marketing decisions.",
         order: 1,
         isActive: true,
       },
       {
         id: 2,
-        question: "Why is graphic design important?",
-        answer: "It builds brand identity and trust.",
+        question: "2. How does Google Tag Manager setup Delhi improve analytics and reporting?",
+        answer: "Google Tag Manager setup Delhi simplifies tracking and manages tags easily. It also ensures accurate data collection for better performance monitoring.",
         order: 2,
         isActive: true,
       },
 
       {
         id: 3,
-        question: "Why is graphic design important?",
-        answer: "It builds brand identity and trust.",
+        question: "3. What is the path to understanding customer behaviour?",
+        answer: "Analytics shows how visitors find your site and what they click. It also shows how long they stay and where they drop off. All this helps you understand behavior and improve experiences.",
         order: 3,
         isActive: true,
       },
@@ -52,8 +52,8 @@ const analyticsandreporting = () => {
 
       {
         id: 4,
-        question: "Why is graphic design important?",
-        answer: "It builds brand identity and trust.",
+        question: "4. How do CRO & Performance Monitoring Services in Delhi help businesses?",
+        answer: "CRO & Performance Monitoring Services in Delhi use performance analytics and testing to improve conversions and optimize user journeys. It also increases overall marketing effectiveness.",
         order: 4,
         isActive: true,
       },
@@ -65,31 +65,31 @@ const analyticsandreporting = () => {
     faqs: [
       {
         id: 1,
-        question: "What is Graphic Design?",
-        answer: "When you’re designing your site, it’s easy to get caught up in adding too many elements to your pages. You want your site to be visually appealing, you continually add elements to add another dimension of visual interest to your page. ",
+        question: "1. What is analytics and reporting?",
+        answer: "Analytics and reporting are the processes of tracking and analyzing data to understand performance. This results in better business decisions. ",
         order: 1,
         isActive: true,
       },
       {
         id: 2,
-        question: "Why is graphic design important?",
-        answer: "When you’re designing your site, it’s easy to get caught up in adding too many elements to your pages. You want your site to be visually appealing, you continually add elements to add another dimension of visual interest to your page. ",
+        question: "2. Why are analytics and reporting helpful for businesses?",
+        answer: "Analytics and reporting are important because they show and measure performance. These results for businesses make smarter and data-driven decisions. ",
         order: 2,
         isActive: true,
       },
 
       {
         id: 3,
-        question: "Why is graphic design important?",
-        answer: "When you’re designing your site, it’s easy to get caught up in adding too many elements to your pages. You want your site to be visually appealing, you continually add elements to add another dimension of visual interest to your page. ",
+        question: "3. How does performance analytics help improve results?",
+        answer: "Performance analytics improves results by identifying what works and what doesn’t. It also helps to understand where strategies should be optimized. ",
         order: 3,
         isActive: true,
       },
 
       {
         id: 4,
-        question: "Why is graphic design important?",
-        answer: "When you’re designing your site, it’s easy to get caught up in adding too many elements to your pages. You want your site to be visually appealing, you continually add elements to add another dimension of visual interest to your page. ",
+        question: "4. What does GA4 setup do for a website or app?",
+        answer: "GA4 setup tracks user behavior, conversions, and engagement to provide accurate insights for marketing and product improvements. ",
         order: 4,
         isActive: true,
       },

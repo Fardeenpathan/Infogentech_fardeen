@@ -8,19 +8,19 @@ const photoandvideo = () => {
   const servicedetailheader =
   {
     name: 'Photo and Video',
-    des: 'Smart IT solutions that optimize operations, strengthen security, and drive business growth.',
+    des: 'Creative Photo and Video Production That Brings Brands to Life',
   }
 
   const servicedetailcontent = {
     img1: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
-    heading1: '1. Design functional website fast',
-    para1: 'When you’re designing your site, it’s easy to get caught up in adding too many elements to your pages. You want your site to be visually appealing, you continually add elements to add another dimension of visual interest to your page. This can lead to your site getting cluttered and overwhelming. The other issue is that, if certain elements don’t have a purpose on your site, it can leave your audience confused. Every element on your site should have a purpose. Imagine putting a call to action (CTA) button that doesn’t lead to a new page.',
-    heading2: '2. Design for the user first',
-    para2: 'People would constantly try to click on the button, and it would leave them confused as to why it doesn’t take them somewhere. Or, think what would happen if a website design prompted users to “Call now” on a top-of-the-funnel blog',
+    heading1: '1. Strategic Video Production That Supports Real Marketing Goals',
+    para1: 'At Infogentech, photo and video production serve as a creative process that functions as a strategic asset to drive business development. Our video production process creates messages that viewers can easily understand, paired with powerful visual content that aligns with your marketing goals. The team develops all assets to achieve three main objectives: enhancing visibility, increasing user interactions, and driving sales. We create content that delivers value through our visual work, including video editing and image creation, and complete platform-ready visuals that support your brand on websites and marketing campaigns.',
+    heading2: '2. Creative 2D animation and 3D Animation for Engaging Brand Stories',
+    para2: 'Infogentech uses advanced 2D animation and 3D animation with storytelling techniques to create visual content that attracts viewers while presenting complex concepts. Our team creates animated explainers and product visuals, along with promotional video content, to target various customer journey stages. The team develops projects through a strategy-first approach that establishes a consistent brand voice across all platforms and marketing activities. Our video production solutions use creative elements and technological components, along with ',
     img2: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770896639/photo_1_yoxx8r.jpg',
     img3: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
     img4: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
-    para3: 'When you’re design beautiful websites, you want to focus on designs for the user. Your audience will be engaging on your site and learning more about your business. It’s important that you build a site that works for them. As you construct your awesome website design.',
+    para3: 'performance data analysis, to create content that helps brands become known and increase viewer interactions in measurable terms.',
 
   }
 
@@ -28,23 +28,23 @@ const photoandvideo = () => {
     faqs: [
       {
         id: 1,
-        question: "What is Graphic Design?",
-        answer: "Graphic design is the art of visual communication.",
+        question: "1. Why is marketing strategy important for Photo & Video Production?",
+        answer: "A solid plan aligns visuals with business objectives and targets the right audience. It also yields measurable outcomes rather than merely drawing attention to one aspect, thereby taking aesthetic value for granted.",
         order: 1,
         isActive: true,
       },
       {
         id: 2,
-        question: "Why is graphic design important?",
-        answer: "It builds brand identity and trust.",
+        question: "2. Can visual content really impact conversions?",
+        answer: "Yes. The engagement, trust, and decision-making processes, which are the main factors influencing conversion rates, are all significantly improved by strategically positioned images and videos.",
         order: 2,
         isActive: true,
       },
 
       {
         id: 3,
-        question: "Why is graphic design important?",
-        answer: "It builds brand identity and trust.",
+        question: "3. How do you decide where visuals should be used?",
+        answer: "We research the audience's behavior, the platform's performance, and the objectives the campaign hopes to achieve to ensure the best placements and format are created.",
         order: 3,
         isActive: true,
       },
@@ -52,8 +52,8 @@ const photoandvideo = () => {
 
       {
         id: 4,
-        question: "Why is graphic design important?",
-        answer: "It builds brand identity and trust.",
+        question: "4. Is the photo & video production marketing strategy suitable for startups?",
+        answer: "Absolutely. It is a scalable photo and video marketing strategy customized for businesses of all sizes and specific industries.",
         order: 4,
         isActive: true,
       },
@@ -65,31 +65,31 @@ const photoandvideo = () => {
     faqs: [
       {
         id: 1,
-        question: "What is Graphic Design?",
-        answer: "When you’re designing your site, it’s easy to get caught up in adding too many elements to your pages. You want your site to be visually appealing, you continually add elements to add another dimension of visual interest to your page. ",
+        question: "1. What is a promotional video?",
+        answer: "A promotional video or promo video is a video used for the express purpose of promoting a specific marketing initiative, sale, or event. ",
         order: 1,
         isActive: true,
       },
       {
         id: 2,
-        question: "Why is graphic design important?",
-        answer: "When you’re designing your site, it’s easy to get caught up in adding too many elements to your pages. You want your site to be visually appealing, you continually add elements to add another dimension of visual interest to your page. ",
+        question: "2. What are the types of promotional videos?",
+        answer: "Promotional videos include product video and intro videos. It also includes product launch, event, and explainer videos. Faq videos and testimonial videos are an important type. ",
         order: 2,
         isActive: true,
       },
 
       {
         id: 3,
-        question: "Why is graphic design important?",
-        answer: "When you’re designing your site, it’s easy to get caught up in adding too many elements to your pages. You want your site to be visually appealing, you continually add elements to add another dimension of visual interest to your page. ",
+        question: "3. What are the benefits of promotional videos?",
+        answer: "Promotional videos boost conversions and sales and deliver strong ROI. It also promotes trust and improves brand recall. ",
         order: 3,
         isActive: true,
       },
 
       {
         id: 4,
-        question: "Why is graphic design important?",
-        answer: "When you’re designing your site, it’s easy to get caught up in adding too many elements to your pages. You want your site to be visually appealing, you continually add elements to add another dimension of visual interest to your page. ",
+        question: "4. How to Use 2D Animation in Social Media Marketing?",
+        answer: "Businesses should create animated ads and leverage explainer videos to improve understanding. Businesses can use animated GIFs and stickers together with their animated storytelling and reel features. ",
         order: 4,
         isActive: true,
       },

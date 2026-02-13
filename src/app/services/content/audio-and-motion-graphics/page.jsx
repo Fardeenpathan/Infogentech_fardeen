@@ -8,19 +8,19 @@ const audioandmotiongraphics = () => {
   const servicedetailheader =
   {
     name: 'Audio and Motion Graphics',
-    des: 'Smart IT solutions that optimize operations, strengthen security, and drive business growth.',
+    des: 'Turning Audio and Animation Into Powerful Visual Stories',
   }
 
   const servicedetailcontent = {
     img1: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770897059/motion_hero_k23wva.png',
-    heading1: '1. Design functional website fast',
-    para1: 'When you’re designing your site, it’s easy to get caught up in adding too many elements to your pages. You want your site to be visually appealing, you continually add elements to add another dimension of visual interest to your page. This can lead to your site getting cluttered and overwhelming. The other issue is that, if certain elements don’t have a purpose on your site, it can leave your audience confused. Every element on your site should have a purpose. Imagine putting a call to action (CTA) button that doesn’t lead to a new page.',
-    heading2: '2. Design for the user first',
-    para2: 'People would constantly try to click on the button, and it would leave them confused as to why it doesn’t take them somewhere. Or, think what would happen if a website design prompted users to “Call now” on a top-of-the-funnel blog',
+    heading1: '1. Audio and Motion Graphics That Bring Stories to Life',
+    para1: 'At Infogentech, Audio and Motion Graphics create interactive digital experiences through the combination of sound elements, motion design, and storytelling techniques. Our team uses music design, professional audio editing tools, and visual motion graphics to deliver clear and impactful messages. The production process delivers all elements through script to video conversion and concept animation. The brand message improvement is to create an understandable and unforgettable audience experience. We produce content that maintains viewer interest while creating emotional bonds through our synchronized audio and animation, and video production methods.',
+    heading2: '2. Strategic Motion Design and Video Production Solutions',
+    para2: 'Our motion design and video production services create visuals that serve specific purposes, making complex concepts easier to understand and better engaging viewers. Our process starts with explainer scripts and ends with fully animated sequences to create smooth transitions and clear messaging. Visual designers who work as motion graphics designers create artistic content that meets practical requirements, while our audio editing team guarantees high-quality sound across different platforms.',
     img2: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770897062/motion_1_muzuul.jpg',
     img3: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
     img4: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
-    para3: 'When you’re design beautiful websites, you want to focus on designs for the user. Your audience will be engaging on your site and learning more about your business. It’s important that you build a site that works for them. As you construct your awesome website design.',
+    para3: 'By combining script to video workflows, animation, and music design, Infogentech produces motion graphics solutions that support marketing, education, and corporate communication goals.',
 
   }
 
@@ -28,23 +28,23 @@ const audioandmotiongraphics = () => {
     faqs: [
       {
         id: 1,
-        question: "What is Graphic Design?",
-        answer: "Graphic design is the art of visual communication.",
+        question: "1. What does animate from audio mean?",
+        answer: "It means creating motion visuals synchronized with sound, allowing audio elements to drive animation and visual storytelling.",
         order: 1,
         isActive: true,
       },
       {
         id: 2,
-        question: "Why is graphic design important?",
-        answer: "It builds brand identity and trust.",
+        question: "2. Why should I convert video to audio?",
+        answer: "The process of transforming video into audio serves to repurpose the content of podcasts, audio-based marketing, and learning platforms, thus making the content more accessible and usable.",
         order: 2,
         isActive: true,
       },
 
       {
         id: 3,
-        question: "Why is graphic design important?",
-        answer: "It builds brand identity and trust.",
+        question: "3. Do you provide custom motion graphics design?",
+        answer: "Yes, our motion graphics designers are there to create a custom visual that specifically fits a brand, message, and target audience.",
         order: 3,
         isActive: true,
       },
@@ -52,8 +52,8 @@ const audioandmotiongraphics = () => {
 
       {
         id: 4,
-        question: "Why is graphic design important?",
-        answer: "It builds brand identity and trust.",
+        question: "4. Can you handle both audio editing and motion design?",
+        answer: "Absolutely. Our integrated workflow encompasses professional audio editing services and advanced motion design, delivering seamless results.",
         order: 4,
         isActive: true,
       },
@@ -65,31 +65,31 @@ const audioandmotiongraphics = () => {
     faqs: [
       {
         id: 1,
-        question: "What is Graphic Design?",
-        answer: "When you’re designing your site, it’s easy to get caught up in adding too many elements to your pages. You want your site to be visually appealing, you continually add elements to add another dimension of visual interest to your page. ",
+        question: "1. What is motion graphics?",
+        answer: "When talking about motion graphic design, creatives refer to the combination of text and design elements set in motion. ",
         order: 1,
         isActive: true,
       },
       {
         id: 2,
-        question: "Why is graphic design important?",
-        answer: "When you’re designing your site, it’s easy to get caught up in adding too many elements to your pages. You want your site to be visually appealing, you continually add elements to add another dimension of visual interest to your page. ",
+        question: "2. What are motion graphics used for? ",
+        answer: "Motion graphics are used for TV opening credits and advertising credits. It is also used for news broadcasting and social media memes. ",
         order: 2,
         isActive: true,
       },
 
       {
         id: 3,
-        question: "Why is graphic design important?",
-        answer: "When you’re designing your site, it’s easy to get caught up in adding too many elements to your pages. You want your site to be visually appealing, you continually add elements to add another dimension of visual interest to your page. ",
+        question: "3. Why are motion graphics important for a brand?",
+        answer: "Motion Graphics are great for explaining complex concepts and products while conveying your brand. A service explanation can be more straightforward as well. ",
         order: 3,
         isActive: true,
       },
 
       {
         id: 4,
-        question: "Why is graphic design important?",
-        answer: "When you’re designing your site, it’s easy to get caught up in adding too many elements to your pages. You want your site to be visually appealing, you continually add elements to add another dimension of visual interest to your page. ",
+        question: "4. What does a motion graphic designer do?",
+        answer: "A motion graphic designer is to create purposeful animations for the brand. ",
         order: 4,
         isActive: true,
       },

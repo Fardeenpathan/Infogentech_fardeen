@@ -8,19 +8,19 @@ const customintegrations = () => {
   const servicedetailheader =
   {
     name: 'Custom Integrations',
-    des: 'Smart IT solutions that optimize operations, strengthen security, and drive business growth.',
+    des: 'Connecting Your Tools, Data, and Platforms Into One Powerful System',
   }
 
   const servicedetailcontent = {
     img1: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
-    heading1: '1. Design functional website fast',
-    para1: 'When you’re designing your site, it’s easy to get caught up in adding too many elements to your pages. You want your site to be visually appealing, you continually add elements to add another dimension of visual interest to your page. This can lead to your site getting cluttered and overwhelming. The other issue is that, if certain elements don’t have a purpose on your site, it can leave your audience confused. Every element on your site should have a purpose. Imagine putting a call to action (CTA) button that doesn’t lead to a new page.',
-    heading2: '2. Design for the user first',
-    para2: 'People would constantly try to click on the button, and it would leave them confused as to why it doesn’t take them somewhere. Or, think what would happen if a website design prompted users to “Call now” on a top-of-the-funnel blog',
+    heading1: '1. Custom Integration Services That Connect Your Business Systems',
+    para1: 'Infogentech delivers custom integration solutions that connect your tools, platforms, and workflows into one seamless environment. Our crm integration services and ERP and crm integration solutions ensure smooth data flow between sales, operations, and finance systems. Whether you need crm integration with ERP, payment gateway integration, or a secure payment gateway integration api, we build reliable connections tailored to your needs. Through our system integration services and api integration services, we eliminate manual tasks, reduce errors, and create efficient, scalable processes for modern businesses.',
+    heading2: '2. Scalable SaaS and Data Integration for Smarter Automation',
+    para2: 'Our custom integration approach includes saas integration services, data integration services, and software automation services that simplify complex operations. Infogentech connects cloud platforms, internal tools, and third-party applications into a unified ecosystem. From crm integration services to full system integration services, we focus on security, performance, and flexibility.',
     img2: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770891368/cust_1_uswhk0.png',
     img3: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770891377/cust_2_z2cyxz.png',
     img4: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770891385/cust_3_c730px.png',
-    para3: 'When you’re design beautiful websites, you want to focus on designs for the user. Your audience will be engaging on your site and learning more about your business. It’s important that you build a site that works for them. As you construct your awesome website design.',
+    para3: 'Whether it’s payment gateway integration, syncing customer records, or automating workflows through api integration services, our solutions help businesses operate faster, reduce operational friction, and support long-term digital growth.',
 
   }
 
@@ -28,23 +28,23 @@ const customintegrations = () => {
     faqs: [
       {
         id: 1,
-        question: "What is Graphic Design?",
-        answer: "Graphic design is the art of visual communication.",
+        question: "1. What are crm integration services, and why are they important?",
+        answer: "CRM integration services connect customer data across systems and enable better sales tracking. It also automates and reports while ensuring accurate information flows between applications and teams.",
         order: 1,
         isActive: true,
       },
       {
         id: 2,
-        question: "Why is graphic design important?",
-        answer: "It builds brand identity and trust.",
+        question: "2. How does erp and crm integration benefit business operations?",
+        answer: "ERP and CRM integration connect financial and operational data along with customer data. It improves decision-making and reduces manual work. ERP and crm integration also ensures seamless communication across departments and business systems.",
         order: 2,
         isActive: true,
       },
 
       {
         id: 3,
-        question: "Why is graphic design important?",
-        answer: "It builds brand identity and trust.",
+        question: "3. What is the role of api integration services in software automation?",
+        answer: "API integration services connect applications and enable software automation services. It also allows systems to exchange data securely, improving efficiency, reducing manual tasks, and streamlining workflows.",
         order: 3,
         isActive: true,
       },
@@ -52,8 +52,8 @@ const customintegrations = () => {
 
       {
         id: 4,
-        question: "Why is graphic design important?",
-        answer: "It builds brand identity and trust.",
+        question: "4. How do saas integration services and data integration services help businesses grow?",
+        answer: "SaaS integration services and data integration services connect cloud tools, synchronize information, automate processes, and provide a unified system that improves productivity and scalability.",
         order: 4,
         isActive: true,
       },
@@ -65,31 +65,31 @@ const customintegrations = () => {
     faqs: [
       {
         id: 1,
-        question: "What is Graphic Design?",
-        answer: "When you’re designing your site, it’s easy to get caught up in adding too many elements to your pages. You want your site to be visually appealing, you continually add elements to add another dimension of visual interest to your page. ",
+        question: "1. What are crm integration services for businesses?",
+        answer: "CRM integration services connect customer data across platforms and help teams manage leads. It also automates tasks and improves sales and service efficiency. ",
         order: 1,
         isActive: true,
       },
       {
         id: 2,
-        question: "Why is graphic design important?",
-        answer: "When you’re designing your site, it’s easy to get caught up in adding too many elements to your pages. You want your site to be visually appealing, you continually add elements to add another dimension of visual interest to your page. ",
+        question: "2. Why is ERP and crm integration important?",
+        answer: "ERP and CRM integration connect operations and customer data and reduce manual work. It also improves reporting accuracy and helps teams make better decisions. ",
         order: 2,
         isActive: true,
       },
 
       {
         id: 3,
-        question: "Why is graphic design important?",
-        answer: "When you’re designing your site, it’s easy to get caught up in adding too many elements to your pages. You want your site to be visually appealing, you continually add elements to add another dimension of visual interest to your page. ",
+        question: "3. What is payment gateway integration?",
+        answer: "Payment gateway integration is the technical process of linking a website, app, or system with a payment processor to handle online transactions securely. ",
         order: 3,
         isActive: true,
       },
 
       {
         id: 4,
-        question: "Why is graphic design important?",
-        answer: "When you’re designing your site, it’s easy to get caught up in adding too many elements to your pages. You want your site to be visually appealing, you continually add elements to add another dimension of visual interest to your page. ",
+        question: "4. How do api integration services improve automation?",
+        answer: "API integration services connect different software systems and automate data exchange. It also reduces manual tasks and helps businesses run faster and more efficiently. ",
         order: 4,
         isActive: true,
       },
