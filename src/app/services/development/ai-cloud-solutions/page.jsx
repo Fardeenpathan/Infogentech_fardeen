@@ -28,14 +28,14 @@ const aicloudsolutions = () => {
     faqs: [
       {
         id: 1,
-        question: "1. How do AI & Cloud solutions support business growth in India?",
+        question: "How do AI & Cloud solutions support business growth in India?",
         answer: "The combination of AI with safe cloud infrastructure, if done correctly, will drive significant expansion in AI development, enabling automation, making data-driven insights more secure, and promoting growth in an even better way.",
         order: 1,
         isActive: true,
       },
       {
         id: 2,
-        question: "2. Why choose Infogentech among AI companies in India?",
+        question: "Why choose Infogentech among AI companies in India?",
         answer: "Infogentech offers customized AI & cloud solutions built on Google Cloud AI, with a focus on scalability and security.",
         order: 2,
         isActive: true,
@@ -43,7 +43,7 @@ const aicloudsolutions = () => {
 
       {
         id: 3,
-        question: "3. What role does Google Cloud AI play in your services?",
+        question: "What role does Google Cloud AI play in your services?",
         answer: "Google Cloud AI provides companies with the opportunity to leverage powerful analytics, machine learning, and secure AI deployment across their applications, all of which meet enterprise standards.",
         order: 3,
         isActive: true,
@@ -52,7 +52,7 @@ const aicloudsolutions = () => {
 
       {
         id: 4,
-        question: "4. Do you use Google Cloud AI Platform for AI deployment?",
+        question: "Do you use Google Cloud AI Platform for AI deployment?",
         answer: "The Google Cloud AI platform provides training, deployment, and management for AI experiments.",
         order: 4,
         isActive: true,

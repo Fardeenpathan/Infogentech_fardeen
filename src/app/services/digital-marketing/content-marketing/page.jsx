@@ -28,14 +28,14 @@ const contentmarketing = () => {
     faqs: [
       {
         id: 1,
-        question: "1. How is social media content creation solving businesses' problems today?",
+        question: "How is social media content creation solving businesses' problems today?",
         answer: "Social media content creation is a way for brands to be seen and considered at all times. It is a way to share stories, updates, and visuals that are not just valuable but also very attractive to the audience. The right way of doing it brings community engagement, increases trust, and makes it possible for the followers to mingle with your brand more frequently.",
         order: 1,
         isActive: true,
       },
       {
         id: 2,
-        question: "2. How does Digital content marketing support brand growth?",
+        question: "How does Digital content marketing support brand growth?",
         answer: "Digital content marketing is an excellent method for connecting with the audience on different online platforms with helpful and entertaining information. It builds up the brand, increases trustworthiness, and invites customers to check your brand. Slowly but surely, it attracts more visitors, leads, and customer interest by being the one with the message in the places where your audience is most active online.",
         order: 2,
         isActive: true,
@@ -43,7 +43,7 @@ const contentmarketing = () => {
 
       {
         id: 3,
-        question: "3. What are the ways marketing services help a business?",
+        question: "What are the ways marketing services help a business?",
         answer: "Content marketing services enable businesses to share essential information in a systematic and consistent way. Among the advantages are brand authority, search visibility, and getting the correct audience. These services are able to create trust, promote interactions, and give any brand steady, long-term growth through the regular provision of useful content.",
         order: 3,
         isActive: true,
@@ -52,7 +52,7 @@ const contentmarketing = () => {
 
       {
         id: 4,
-        question: "4. How does seo content writing improve online visibility?",
+        question: "How does seo content writing improve online visibility?",
         answer: "seo content writing uses researched keywords and helpful information to match what people search for. If your content provides clear answers to actual queries, then search engines will place it higher in their rankings. This results in an increase in organic traffic, authority establishment, and your website will attract regular and loyal users for a long time.",
         order: 4,
         isActive: true,

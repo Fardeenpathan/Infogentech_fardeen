@@ -28,14 +28,14 @@ const socialmediamarketing = () => {
     faqs: [
       {
         id: 1,
-        question: "1. Can social media marketing services help a business make connections with its audience?",
+        question: "Can social media marketing services help a business make connections with its audience?",
         answer: "The services of social media marketing assist companies in establishing tighter relations by producing pertinent content, answering clients, and understanding the likes and dislikes of the target group. Through active communication and well-directed tactics, companies earn confidence, better their interaction.",
         order: 1,
         isActive: true,
       },
       {
         id: 2,
-        question: "2. Why do many businesses decide to choose social media marketing companies near me?",
+        question: "Why do many businesses decide to choose social media marketing companies near me?",
         answer: "A lot of companies tend to look for social media marketing companies near me as they prioritize fast interaction, comprehension of the area, and a less complicated partnership. The local crew can come up with tactics that are in line with the prevailing trends and also assist in making the campaigns more appealing to the target audience.",
         order: 2,
         isActive: true,
@@ -43,7 +43,7 @@ const socialmediamarketing = () => {
 
       {
         id: 3,
-        question: "3. Why should small businesses focus on marketing regularly?",
+        question: "Why should small businesses focus on marketing regularly?",
         answer: "Through social media marketing, small businesses achieve multiple benefits which include reaching local customers and building customer relationships while they promote their services and grow their business in an economical way.",
         order: 3,
         isActive: true,
@@ -52,7 +52,7 @@ const socialmediamarketing = () => {
 
       {
         id: 4,
-        question: "4. Why choose Infogentech over other social media marketing companies near me?",
+        question: "Why choose Infogentech over other social media marketing companies near me?",
         answer: "Infogentech provides customized approaches that combine data-backed marketing efforts with imaginative narrative development and open assessment methods to achieve steady business expansion while delivering specific outcomes.",
         order: 4,
         isActive: true,

@@ -28,14 +28,14 @@ const customintegrations = () => {
     faqs: [
       {
         id: 1,
-        question: "1. What are crm integration services, and why are they important?",
+        question: "What are crm integration services, and why are they important?",
         answer: "CRM integration services connect customer data across systems and enable better sales tracking. It also automates and reports while ensuring accurate information flows between applications and teams.",
         order: 1,
         isActive: true,
       },
       {
         id: 2,
-        question: "2. How does erp and crm integration benefit business operations?",
+        question: "How does erp and crm integration benefit business operations?",
         answer: "ERP and CRM integration connect financial and operational data along with customer data. It improves decision-making and reduces manual work. ERP and crm integration also ensures seamless communication across departments and business systems.",
         order: 2,
         isActive: true,
@@ -43,7 +43,7 @@ const customintegrations = () => {
 
       {
         id: 3,
-        question: "3. What is the role of api integration services in software automation?",
+        question: "What is the role of api integration services in software automation?",
         answer: "API integration services connect applications and enable software automation services. It also allows systems to exchange data securely, improving efficiency, reducing manual tasks, and streamlining workflows.",
         order: 3,
         isActive: true,
@@ -52,7 +52,7 @@ const customintegrations = () => {
 
       {
         id: 4,
-        question: "4. How do saas integration services and data integration services help businesses grow?",
+        question: "How do saas integration services and data integration services help businesses grow?",
         answer: "SaaS integration services and data integration services connect cloud tools, synchronize information, automate processes, and provide a unified system that improves productivity and scalability.",
         order: 4,
         isActive: true,

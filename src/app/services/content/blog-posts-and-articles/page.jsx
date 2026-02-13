@@ -28,14 +28,14 @@ const blogpostsandarticles = () => {
     faqs: [
       {
         id: 1,
-        question: "1. How does Infogentech ensure blogs are SEO-friendly?",
+        question: "How does Infogentech ensure blogs are SEO-friendly?",
         answer: "We research keywords and apply a structured blog writing format. Then we follow our best practices on how to write a blog that aligns with search intent and user needs.",
         order: 1,
         isActive: true,
       },
       {
         id: 2,
-        question: "2. Do you follow a specific article writing format?",
+        question: "Do you follow a specific article writing format?",
         answer: "Yes, we employ the structured article writing format for making sure that all of our articles are clear to a human reader, have good readability, and rank well.",
         order: 2,
         isActive: true,
@@ -43,7 +43,7 @@ const blogpostsandarticles = () => {
 
       {
         id: 3,
-        question: "3. Can blogs be reused for newsletters?",
+        question: "Can blogs be reused for newsletters?",
         answer: "Absolutely. Our blogs are written with writing a newsletter in mind and can easily be adapted to a professional newsletter format.",
         order: 3,
         isActive: true,
@@ -52,7 +52,7 @@ const blogpostsandarticles = () => {
 
       {
         id: 4,
-        question: "4. Do you include case studies in blog content?",
+        question: "Do you include case studies in blog content?",
         answer: "Yes, when relevant, we integrate case study elements using a clear case study format to support credibility and storytelling.",
         order: 4,
         isActive: true,

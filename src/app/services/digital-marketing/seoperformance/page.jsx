@@ -28,14 +28,14 @@ const seoperformance = () => {
     faqs: [
       {
         id: 1,
-        question: "1. Why do businesses need strong seo services today?",
+        question: "Why do businesses need strong seo services today?",
         answer: "When carried out correctly, SEO services guarantee that your site is found by the right audience. A constant trickle of visitors, development of trust, and eventually, long-term digital growth, which is not dependent on ads or short-term marketing tactics, are the results of higher rankings.",
         order: 1,
         isActive: true,
       },
       {
         id: 2,
-        question: "2. How does search engine marketing support business visibility?",
+        question: "How does search engine marketing support business visibility?",
         answer: "Search engine marketing is about reaching customers, prospecting customers already searching for products and services similar to what you provide. Showing ads and having campaigns that are well thought out and targeted makes it easier to spot potential customers at the precise time when they require your assistance.",
         order: 2,
         isActive: true,
@@ -43,7 +43,7 @@ const seoperformance = () => {
 
       {
         id: 3,
-        question: "3. What makes choosing an seo agency near me helpful for my business?",
+        question: "What makes choosing an seo agency near me helpful for my business?",
         answer: "Communicating with an SEO agency near me is quite easy and fast. They are familiar with the local audience, the regional trends, and the competitors in the area, which supports the growth of your business and the attraction of customers who will interact with your business more.",
         order: 3,
         isActive: true,
@@ -52,7 +52,7 @@ const seoperformance = () => {
 
       {
         id: 4,
-        question: "4. How can the best seo company in India support long-term growth?",
+        question: "How can the best seo company in India support long-term growth?",
         answer: "The best SEO agency in India employs white hat techniques, thorough research, and gradual optimization. This method allows your brand to secure long-term visibility, better positions on the search engines, and unceasingly increasing organic traffic that is not affected by the changes in the market trends.",
         order: 4,
         isActive: true,

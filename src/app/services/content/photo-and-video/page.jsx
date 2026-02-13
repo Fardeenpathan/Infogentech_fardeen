@@ -28,14 +28,14 @@ const photoandvideo = () => {
     faqs: [
       {
         id: 1,
-        question: "1. Why is marketing strategy important for Photo & Video Production?",
+        question: "Why is marketing strategy important for Photo & Video Production?",
         answer: "A solid plan aligns visuals with business objectives and targets the right audience. It also yields measurable outcomes rather than merely drawing attention to one aspect, thereby taking aesthetic value for granted.",
         order: 1,
         isActive: true,
       },
       {
         id: 2,
-        question: "2. Can visual content really impact conversions?",
+        question: "Can visual content really impact conversions?",
         answer: "Yes. The engagement, trust, and decision-making processes, which are the main factors influencing conversion rates, are all significantly improved by strategically positioned images and videos.",
         order: 2,
         isActive: true,
@@ -43,7 +43,7 @@ const photoandvideo = () => {
 
       {
         id: 3,
-        question: "3. How do you decide where visuals should be used?",
+        question: "How do you decide where visuals should be used?",
         answer: "We research the audience's behavior, the platform's performance, and the objectives the campaign hopes to achieve to ensure the best placements and format are created.",
         order: 3,
         isActive: true,
@@ -52,7 +52,7 @@ const photoandvideo = () => {
 
       {
         id: 4,
-        question: "4. Is the photo & video production marketing strategy suitable for startups?",
+        question: "Is the photo & video production marketing strategy suitable for startups?",
         answer: "Absolutely. It is a scalable photo and video marketing strategy customized for businesses of all sizes and specific industries.",
         order: 4,
         isActive: true,

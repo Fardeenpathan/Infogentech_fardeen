@@ -28,14 +28,14 @@ const cmsdevelopment = () => {
     faqs: [
       {
         id: 1,
-        question: "1. How do you make CMS platforms easy to use for teams?",
+        question: "How do you make CMS platforms easy to use for teams?",
         answer: "We create CMS platforms that come with user-friendly dashboards, clean interfaces, and seamless workflows, enabling your staff to manage content efficiently and accurately. If your system is being created under the supervision of an experienced WordPress developer, then you are getting a natural interaction that will cut down on the need for training and will increase the output of content.",
         order: 1,
         isActive: true,
       },
       {
         id: 2,
-        question: "2. Do you handle CMS projects for businesses of any size?",
+        question: "Do you handle CMS projects for businesses of any size?",
         answer: "Yes, we do cooperate with startups, medium sized companies, and large corporations. A custom software development company that is dependable, we specifically design each CMS for your structure, workflows, and aims. No matter if you are looking for simple content tools or a massive content system, we guarantee the whole process will be very efficient.",
         order: 2,
         isActive: true,
@@ -43,7 +43,7 @@ const cmsdevelopment = () => {
 
       {
         id: 3,
-        question: "3. Can your CMS solutions support larger digital goals?",
+        question: "Can your CMS solutions support larger digital goals?",
         answer: "Absolutely. Our CMS tools are designed for growth and connectivity with the tools that foster marketing, operations, and customer interaction. The coupling of the CMS with the right digital transformation services makes it a key component in the modernization of company processes and in the improvement of online content management.",
         order: 3,
         isActive: true,
@@ -52,7 +52,7 @@ const cmsdevelopment = () => {
 
       {
         id: 4,
-        question: "4. Do you provide integration support for existing software tools?",
+        question: "Do you provide integration support for existing software tools?",
         answer: "Yes, we do integrate CMS platforms with third party applications like CRMs, ERPs, and analytics systems, among others. It is through the fusion of our solid architecture with our expertise in application development that we create a seamless digital environment where data is transmitted easily among all the key business tools.",
         order: 4,
         isActive: true,

@@ -28,14 +28,14 @@ const webandappdevelopment = () => {
     faqs: [
       {
         id: 1,
-        question: "1. How do I choose the right Website development company?",
+        question: "How do I choose the right Website development company?",
         answer: "You should check the experience, technology skillset, communication, and portfolio of a website development company before choosing them. Make sure the company smartly understands your business goals and presents transparent and budget pricing. This will give a good idea of a development company, resulting in high-quality development, scaling, security, and delivery of premium digital solutions.",
         order: 1,
         isActive: true,
       },
       {
         id: 2,
-        question: "2. Does it take much time to build a website? ",
+        question: "Does it take much time to build a website? ",
         answer: "The time taken is affected by design, content, and features. The process could be sped up, but planning is important. Understanding the Website development cost in India alongside the timeline also helps you plan your project smoothly and set realistic expectations.",
         order: 2,
         isActive: true,
@@ -43,7 +43,7 @@ const webandappdevelopment = () => {
 
       {
         id: 3,
-        question: "3. Why do businesses invest in web development services?",
+        question: "Why do businesses invest in web development services?",
         answer: "Companies invest in web development services in order to enhance their online existence, attract users, and increase transactions. Web development services that meet industry standards establish a professional image for businesses while enhancing their digital functions and delivering customers a consistent online experience on multiple devices.",
         order: 3,
         isActive: true,
@@ -52,7 +52,7 @@ const webandappdevelopment = () => {
 
       {
         id: 4,
-        question: "4. Do mobile apps need regular updates after they are launched?",
+        question: "Do mobile apps need regular updates after they are launched?",
         answer: "Yes, continued updates for new devices and up-to-date operating systems will benefit the stability and availability of any particular application. While planning updates, many businesses also consider the App development cost in India so they can maintain their app properly and keep users satisfied over time.",
         order: 4,
         isActive: true,

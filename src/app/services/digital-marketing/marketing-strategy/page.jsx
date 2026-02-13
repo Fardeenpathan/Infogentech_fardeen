@@ -28,14 +28,14 @@ const marketingstrategy = () => {
     faqs: [
       {
         id: 1,
-        question: "1. How to understand marketing strategy clearly, and what is the need for it?",
+        question: "How to understand marketing strategy clearly, and what is the need for it?",
         answer: "A marketing strategy is a carefully crafted plan that lays out the ways a business gets to its target customers, builds up its brand image, and finally, realizes its quantifiable goals. A marketing strategy that is clear and precise not just acts as a compass for the companies to navigate correctly, but also allows them to cut off unnecessary expenses and ensure that there is a uniform communication of the brand message through all the marketing channels.",
         order: 1,
         isActive: true,
       },
       {
         id: 2,
-        question: "2. How does brand marketing strategy support long-term success?",
+        question: "How does brand marketing strategy support long-term success?",
         answer: "An effectively planned brand marketing strategy develops recognition, trustworthiness, and an emotional relationship with the consumers. By creating a strong brand identity, along with an overall marketing strategy, it guarantees that there will be a uniform brand message and it enables firms to be visible in the competitive markets for a longer time.",
         order: 2,
         isActive: true,
@@ -43,7 +43,7 @@ const marketingstrategy = () => {
 
       {
         id: 3,
-        question: "3. What type of marketing strategy should be preferred?",
+        question: "What type of marketing strategy should be preferred?",
         answer: "The marketing strategy shall be aligned with the business objectives, industry attributes, and customer preferences. Digital first or performance driven methods of marketing are more suitable for companies with a growth mindset, whereas the already well-known brands can still keep their confidence and visibility in the market through a potent brand marketing strategy.",
         order: 3,
         isActive: true,
@@ -52,7 +52,7 @@ const marketingstrategy = () => {
 
       {
         id: 4,
-        question: "4. How does a marketing strategy plan help improve results?",
+        question: "How does a marketing strategy plan help improve results?",
         answer: "One of the major instruments in the global marketing plan is the Marketing Strategy Plan, since it comprehensively displays the whole execution process with the goals, target audiences, channels, and performance metrics included. Additionally, when the marketing strategy is wisely planned, the companies get the power to synchronize their departments, monitor their performance, and make constant adjustments to increase their ROI.",
         order: 4,
         isActive: true,

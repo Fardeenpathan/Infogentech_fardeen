@@ -28,14 +28,14 @@ const brandingdesign = () => {
     faqs: [
       {
         id: 1,
-        question: "1. How does your Brand Design process benefit a growing business?",
+        question: "How does your Brand Design process benefit a growing business?",
         answer: "Our Brand Design procedure is centered around research, transparency, and visual uniformity, thus making your company more visible. Strong planning leads to the creation of brands that are very much in touch with the public and will remain in the market, even as the market changes. Each phase ensures your brand effectively communicates and supports growth that lasts.",
         order: 1,
         isActive: true,
       },
       {
         id: 2,
-        question: "2. Why should I hire a Branding agency for my business?",
+        question: "Why should I hire a Branding agency for my business?",
         answer: "A Branding Agency of a professional caliber provides you with the assistance of highly skilled strategists, designers, and storytellers who create a seamless brand experience. They take care of your identity, which is consistent across platforms and is liked by the right audience. This professional technique makes your brand seem trustworthy, unforgettable, and ready for the future.",
         order: 2,
         isActive: true,
@@ -43,7 +43,7 @@ const brandingdesign = () => {
 
       {
         id: 3,
-        question: "3. What does brand identity design include in your service?",
+        question: "What does brand identity design include in your service?",
         answer: "Our brand identity design service includes defining your visual identity, tone, colors, logo, messaging, and overall brand structure. This method guarantees that your vision and values are reflected across all touchpoints. Through strategic identity development, your brand is made to be more easily identifiable, and it gradually earns trust in both the digital and physical spaces.",
         order: 3,
         isActive: true,
@@ -52,7 +52,7 @@ const brandingdesign = () => {
 
       {
         id: 4,
-        question: "4. Do you offer digital branding services for online platforms?",
+        question: "Do you offer digital branding services for online platforms?",
         answer: "The digital branding services we provide enable businesses to create strong online identities, which help them establish their online presence. The visual elements and messaging components, together with our design frameworks, maintain their continuous pattern throughout our website and social media, and digital marketing execution. Your brand achieves both visibility and communication clarity, which allows it to engage with all modern digital audiences.",
         order: 4,
         isActive: true,

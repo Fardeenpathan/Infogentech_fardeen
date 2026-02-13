@@ -28,14 +28,14 @@ const uiuixdesign = () => {
     faqs: [
       {
         id: 1,
-        question: "1. How do ui and ux design improve product performance?",
+        question: "How do ui and ux design improve product performance?",
         answer: "An excellent UI and UX design provides users with a better experience by making it easier to browse the site, lessening the obstacles, and providing attractive visual points of interaction. They take design decisions that are supported by research and that help to increase sales, participation, and a seamless customer experience that leads to the lasting success of the product.",
         order: 1,
         isActive: true,
       },
       {
         id: 2,
-        question: "2. Why is a ui ux designer portfolio important when selecting a design partner?",
+        question: "Why is a ui ux designer portfolio important when selecting a design partner?",
         answer: "An excellent portfolio of a ui ux designer is like a mirror that reflects the designer's experience, creativity, and problem-solving skills. It is a way for the companies to get a clear picture of the ui ux designer's style, strengths, and methods, and thus make sure that the designer is in line with their brand vision and that a top-notch digital experience is provided.",
         order: 2,
         isActive: true,
@@ -43,7 +43,7 @@ const uiuixdesign = () => {
 
       {
         id: 3,
-        question: "3. How can a ui ux design course near me help teams improve their product quality?",
+        question: "How can a ui ux design course near me help teams improve their product quality?",
         answer: "A UI UX design course near me will enhance the understanding of user behavior, accessibility, interface strategy, and usability testing within the team. This education notably helps the companies in making decisions that are design-wise informed, which will, in turn, enhance the performance of the product and ensure that the company builds the experience that really matches the expectations of the user.",
         order: 3,
         isActive: true,
@@ -52,7 +52,7 @@ const uiuixdesign = () => {
 
       {
         id: 4,
-        question: "4. What advantages does a ui ux design agency offer compared to freelancers?",
+        question: "What advantages does a ui ux design agency offer compared to freelancers?",
         answer: "A professional UI UX design agency brings forth several benefits, like a well-organized process, a team of professionals from various sectors, and uniformity. The collaboration of research, design, testing, and iterations in a single agency leads to the development of cohesive results, faster delivery, and strategic solutions that go hand in hand with the long-term business goals of the company.",
         order: 4,
         isActive: true,

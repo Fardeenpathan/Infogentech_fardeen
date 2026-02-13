@@ -28,14 +28,14 @@ const audioandmotiongraphics = () => {
     faqs: [
       {
         id: 1,
-        question: "1. What does animate from audio mean?",
+        question: "What does animate from audio mean?",
         answer: "It means creating motion visuals synchronized with sound, allowing audio elements to drive animation and visual storytelling.",
         order: 1,
         isActive: true,
       },
       {
         id: 2,
-        question: "2. Why should I convert video to audio?",
+        question: "Why should I convert video to audio?",
         answer: "The process of transforming video into audio serves to repurpose the content of podcasts, audio-based marketing, and learning platforms, thus making the content more accessible and usable.",
         order: 2,
         isActive: true,
@@ -43,7 +43,7 @@ const audioandmotiongraphics = () => {
 
       {
         id: 3,
-        question: "3. Do you provide custom motion graphics design?",
+        question: "Do you provide custom motion graphics design?",
         answer: "Yes, our motion graphics designers are there to create a custom visual that specifically fits a brand, message, and target audience.",
         order: 3,
         isActive: true,
@@ -52,7 +52,7 @@ const audioandmotiongraphics = () => {
 
       {
         id: 4,
-        question: "4. Can you handle both audio editing and motion design?",
+        question: "Can you handle both audio editing and motion design?",
         answer: "Absolutely. Our integrated workflow encompasses professional audio editing services and advanced motion design, delivering seamless results.",
         order: 4,
         isActive: true,

@@ -28,14 +28,14 @@ const visualcontentdesign = () => {
     faqs: [
       {
         id: 1,
-        question: "1. What does Visual Content Design include?",
+        question: "What does Visual Content Design include?",
         answer: "Visual Content Design includes layout design, typography systems, visual storytelling, and infographic creation aligned with your content strategy.",
         order: 1,
         isActive: true,
       },
       {
         id: 2,
-        question: "2. Does visual content improve with typography?",
+        question: "Does visual content improve with typography?",
         answer: "Yes, Typography improves readability and sets tone. It also strengthens brand identity, making content easier to understand and more engaging.",
         order: 2,
         isActive: true,
@@ -43,7 +43,7 @@ const visualcontentdesign = () => {
 
       {
         id: 3,
-        question: "3. How do your content strategy services support visual design?",
+        question: "How do your content strategy services support visual design?",
         answer: "Our content strategy services ensure visuals align with messaging, user needs, and business goals for consistent communication.",
         order: 3,
         isActive: true,
@@ -52,7 +52,7 @@ const visualcontentdesign = () => {
 
       {
         id: 4,
-        question: "4. Why are infographics important in visual content?",
+        question: "Why are infographics important in visual content?",
         answer: "An infographic helps simplify complex information and improve engagement. It also increases retention by visual storytelling.",
         order: 4,
         isActive: true,

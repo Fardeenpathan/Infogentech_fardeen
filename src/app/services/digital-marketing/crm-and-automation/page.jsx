@@ -28,14 +28,14 @@ const crmandautomation = () => {
     faqs: [
       {
         id: 1,
-        question: "1. What CRM integration services do?",
+        question: "What CRM integration services do?",
         answer: "CRM integration services connect customer data across platforms and help teams manage leads. It also automates tasks and improves sales while supporting processes.",
         order: 1,
         isActive: true,
       },
       {
         id: 2,
-        question: "2. Why is erp and crm integration important?",
+        question: "Why is erp and crm integration important?",
         answer: "ERP and CRM integration connect operations and customer data. This reduces manual work and improves reporting accuracy, resulting in streamlined business workflows.",
         order: 2,
         isActive: true,
@@ -43,7 +43,7 @@ const crmandautomation = () => {
 
       {
         id: 3,
-        question: "3. What is payment gateway integration?",
+        question: "What is payment gateway integration?",
         answer: "Payment gateway integration connects your website or app to secure payment systems which enabling fast, safe, and automated online transactions.",
         order: 3,
         isActive: true,
@@ -52,7 +52,7 @@ const crmandautomation = () => {
 
       {
         id: 4,
-        question: "4. How do SAAS integration services and software automation services help?",
+        question: "How do SAAS integration services and software automation services help?",
         answer: "SaaS integration services and software automation services connect tools, automate tasks, and improve efficiency by reducing manual processes across business systems.",
         order: 4,
         isActive: true,

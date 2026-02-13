@@ -28,14 +28,14 @@ const performancemarketing = () => {
     faqs: [
       {
         id: 1,
-        question: "1. What makes Performance marketing important for growing a business today?",
+        question: "What makes Performance marketing important for growing a business today?",
         answer: "When companies do performance marketing, they can focus entirely on activities that deliver real, concrete results, such as new clients or sales. It results in less spending on non-productive ads, has better audience segmentation, and makes the marketing activities measurable, thus allowing controlled and predictable business growth.",
         order: 1,
         isActive: true,
       },
       {
         id: 2,
-        question: "2. How can a Performance marketing agency support my brand better than traditional marketing?",
+        question: "How can a Performance marketing agency support my brand better than traditional marketing?",
         answer: "A Performance marketing agency meticulously monitors every customer movement and makes campaign decisions based on the data. As a result, you get a sharper understanding, greater power, and better profits than the usual methods, which mostly depend on intuition and assumptions.",
         order: 2,
         isActive: true,
@@ -43,7 +43,7 @@ const performancemarketing = () => {
 
       {
         id: 3,
-        question: "3. Why should a business work with a Performance marketing company?",
+        question: "Why should a business work with a Performance marketing company?",
         answer: "The performance marketing company provides its expertise through tested equipment and proven techniques that help businesses avoid costly errors. The company handles all aspects of advertising, which enables its clients to achieve dependable results while managing their advertising expenses.",
         order: 3,
         isActive: true,
@@ -52,7 +52,7 @@ const performancemarketing = () => {
 
       {
         id: 4,
-        question: "4. How do the right Performance marketing services contribute to business growth?",
+        question: "How do the right Performance marketing services contribute to business growth?",
         answer: "When using performance marketing services, you will empathize with your audience, get your campaigns more targeted, and see a gradual increase in conversions. There is always openness, optimization, and data-driven decision-making, which not only help increase your brand's online performance but also support its long-term expansion.",
         order: 4,
         isActive: true,

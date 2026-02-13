@@ -28,14 +28,14 @@ const analyticsandreporting = () => {
     faqs: [
       {
         id: 1,
-        question: "1. Why should I choose Google Analytics & GA4 Setup in Delhi for my website?",
+        question: "Why should I choose Google Analytics & GA4 Setup in Delhi for my website?",
         answer: "The GA4 Setup ensures proper tracking and reliable data collection. It also provides clear performance insights for smarter marketing decisions.",
         order: 1,
         isActive: true,
       },
       {
         id: 2,
-        question: "2. How does Google Tag Manager setup Delhi improve analytics and reporting?",
+        question: "How does Google Tag Manager setup Delhi improve analytics and reporting?",
         answer: "Google Tag Manager setup Delhi simplifies tracking and manages tags easily. It also ensures accurate data collection for better performance monitoring.",
         order: 2,
         isActive: true,
@@ -43,7 +43,7 @@ const analyticsandreporting = () => {
 
       {
         id: 3,
-        question: "3. What is the path to understanding customer behaviour?",
+        question: "What is the path to understanding customer behaviour?",
         answer: "Analytics shows how visitors find your site and what they click. It also shows how long they stay and where they drop off. All this helps you understand behavior and improve experiences.",
         order: 3,
         isActive: true,
@@ -52,7 +52,7 @@ const analyticsandreporting = () => {
 
       {
         id: 4,
-        question: "4. How do CRO & Performance Monitoring Services in Delhi help businesses?",
+        question: "How do CRO & Performance Monitoring Services in Delhi help businesses?",
         answer: "CRO & Performance Monitoring Services in Delhi use performance analytics and testing to improve conversions and optimize user journeys. It also increases overall marketing effectiveness.",
         order: 4,
         isActive: true,

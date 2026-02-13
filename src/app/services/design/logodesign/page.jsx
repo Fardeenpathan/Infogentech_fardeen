@@ -28,14 +28,14 @@ const logodesign = () => {
     faqs: [
       {
         id: 1,
-        question: "1. Why is a strong logo design important for any brand?",
+        question: "Why is a strong logo design important for any brand?",
         answer: "A well-made logo design is a powerful tool that allows people to quickly identify your brand and understand the meaning of your business. It turns into the face of your image, gains trust, makes your brand remembered, and aids your marketing in every way through the internet, printed materials, and every place where you interact with your customers.",
         order: 1,
         isActive: true,
       },
       {
         id: 2,
-        question: "2. How is a good company logo design process done?",
+        question: "How is a good company logo design process done?",
         answer: "A well-executed company logo design process takes understanding your brand's values, industry, and target audience as its starting point. You receive a number of ideas, updates, and the final visuals that are appropriate for packing, online use, signs, and other marketing tools, which helps you to have a uniform and professional image all over the places.",
         order: 2,
         isActive: true,
@@ -43,7 +43,7 @@ const logodesign = () => {
 
       {
         id: 3,
-        question: "3. How does creative logo design help a business stand out?",
+        question: "How does creative logo design help a business stand out?",
         answer: "Creative logo design enables a brand to express its character through its fundamental elements, colors, and overall style. It is a way to get noticed in a flash and create an unforgettable identity, particularly in the competitive markets where distinct visuals can alter customers' feelings and connections with your enterprise.",
         order: 3,
         isActive: true,
@@ -52,7 +52,7 @@ const logodesign = () => {
 
       {
         id: 4,
-        question: "4. Why is music logo design different from regular logos?",
+        question: "Why is music logo design different from regular logos?",
         answer: "Music logo design is about conveying the feeling, the artistic identity, style of the musicians, studios, or performers. It merges art and symbols together, thus giving artists a chance to visually depict their sound, genre, and personality, which later helps fans recognize their work.",
         order: 4,
         isActive: true,
