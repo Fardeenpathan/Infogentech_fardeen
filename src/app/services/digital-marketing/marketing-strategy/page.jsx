@@ -12,14 +12,14 @@ const marketingstrategy = () => {
   }
 
   const servicedetailcontent = {
-    img1: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
+    img1: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770892005/mark_hero_wgdmnj.png',
     heading1: '1. Marketing Strategy That Powers Business Growth',
     para1: 'At Infogentech, we create a powerful marketing strategy that transforms business goals into measurable results. The complete marketing strategy directs all marketing activities through all channels. Our approach combines research methods with audience to create effective brand communication that enables your business to compete in the marketplace. We create tailored marketing plans for both startups and established businesses, which develop their messaging strategies and market positioning. Infogentech enables businesses to achieve higher engagement levels and better ROI results, and continuous business expansion by removing uncertainty from their operations.',
     heading2: '2. Strategic Planning and Execution for Brand Success',
     para2: 'Infogentechs process for the right marketing strategy includes your industry, goals, and customer behavior, enabling us to achieve greater resource efficiency. Our marketing strategy plan will be achieved through our chosen channels and established messaging systems. Our company executes a complete brand marketing strategy that establishes brand recognition and customer trust while building customer loyalty.',
-    img2: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
-    img3: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
-    img4: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
+    img2: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770892013/mark_2_t3ztlq.png',
+    img3: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770892010/mark_1_z4rf6l.png',
+    img4: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770892015/mark_3_dmh3rm.png',
     para3: 'Infogentech creates strategic solutions by combining market knowledge and creative capabilities, helping organizations achieve their goals and develop sustainable competitive advantages.',
 
   }

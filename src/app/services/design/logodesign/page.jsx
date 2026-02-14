@@ -17,9 +17,9 @@ const logodesign = () => {
     para1: 'At Infogentech, we believe a strong logo design is the foundation of every successful brand. Your logo serves as your businesses visual identity, which displays core values and brand identity. Our logo design services combine three elements: strategic planning, research, and creative design. Creative design is to create distinctive brand identities. Our process begins with designing thoughtful logo concepts, which we refine into precise company logos that demonstrate clear design principles. Businesses trust Infogentech for creative logo design ideas that build recognition and establish a memorable presence in competitive markets.',
     heading2: '2. Custom Logo Design Services Tailored for Every Industry',
     para2: 'Our complete logo design services provide customized solutions for startups and enterprises, including creative professionals. We use a systematic approach that begins with brand discovery and concept development and ends with our final delivery. Our team provides flexible solutions that include professional company logo design for corporate needs, bold creative logo design for contemporary brands, and distinctive music logo design that shows artistic expression.',
-    img2: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
-    img3: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
-    img4: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
+    img2: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770888842/logo_3_g7vb2m.png',
+    img3: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770888437/logo_2_ewpjbl.png',
+    img4: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770888430/logo_1_d4hva3.png',
     para3: 'At Infogentech, we create visual designs that transform ideas into adaptable solutions for websites, packaging, and promotional materials, maintaining brand identity over time.',
 
   }

@@ -12,14 +12,14 @@ const cmsdevelopment = () => {
   }
 
   const servicedetailcontent = {
-    img1: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
+    img1: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770890078/cms_hero_rdvyhx.png',
     heading1: '1. Comprehensive CMS Development for Seamless Content Control',
     para1: 'Infogentech offers comprehensive CMS Development services that enable businesses to maintain full control over their digital content management processes. Our company develops custom software solutions that create user-friendly, secure systems that adapt to our clients specific operations. Our expert WordPress developer team builds flexible platforms that simplify content updates while improving team productivity and collaboration. By integrating modern digital transformation services, software development services, and application development services, we create CMS environments that eliminate technical complexity and empower businesses to maintain a strong, consistent online presence.',
     heading2: '2. Scalable Custom Software Solutions Built for Long-Term Growth',
     para2: 'Infogentech develops custom software solutions through its strategic development process to create enterprise-level content management systems that enable automated operations and system integrations. Our software development services create systems that perform reliably by integrating with customer relationship management systems, enterprise resource planning systems, and marketing software tools to support efficient digital operations. Our specialized application development services, together with expert WordPress developer support, enable us to develop content management solutions. Infogentech develops advanced content ',
-    img2: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
-    img3: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
-    img4: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
+    img2: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770890088/cms_3_ftysqe.png',
+    img3: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770890091/cms_1_nsslkn.png',
+    img4: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770890106/cms_2_gemenc.png',
     para3: 'management systems that combine technology, usability, and digital transformation services to help modern organizations create efficient workflows.',
 
   }

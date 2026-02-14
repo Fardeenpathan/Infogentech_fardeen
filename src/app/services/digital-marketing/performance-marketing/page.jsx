@@ -12,14 +12,14 @@ const performancemarketing = () => {
   }
 
   const servicedetailcontent = {
-    img1: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
+    img1: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770896036/perform_hero_izh8zl.jpg',
     heading1: '1. Performance Marketing Strategies That Deliver Real Business Results',
     para1: 'Infogentech operates as a performance marketing agency that drives brand expansion through its precision marketing. Our performance marketing services help businesses achieve actual results by creating multiple digital marketing channels that generate leads and drive conversions. We use analytics and targeting methods to boost our clients investment returns through our performance marketing services. Among leading performance marketing companies, Infogentech stands out with transparent processes and measurable results, making us a reliable choice for businesses seeking performance marketing companies in India that deliver consistent and scalable growth.',
     heading2: '2. Scalable Performance Marketing Services Built for Conversions',
     para2: 'Our performance marketing services use strategic planning, multi-channel advertising, and conversion-focused funnels to achieve significant outcomes. Infogentech operates as a contemporary performance marketing agency that designs advertising campaigns according to the specific objectives and target audience, and financial resources of each brand. We use',
-    img2: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
-    img3: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
-    img4: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
+    img2: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770896041/perform_2_jqlcx2.jpg',
+    img3: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770896126/perform_3_ca4vfj.png',
+    img4: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770896198/perform_3_c84gbz.png',
     para3: 'actual data and insights to enhance our marketing methods. We, as a performance marketing agency, help growing businesses achieve better engagement and success through our services.',
 
   }

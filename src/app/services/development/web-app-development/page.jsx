@@ -12,14 +12,14 @@ const webandappdevelopment = () => {
   }
 
   const servicedetailcontent = {
-    img1: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
+    img1: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770889955/web_hero_ziuz94.png',
     heading1: '1. Website Development Company Delivering Scalable Digital Solutions',
     para1: 'Infogentech is a trusted Website development company delivering innovative web development services for businesses building high-performing digital platforms. We create websites and systems that enhance user engagement and drive measurable growth. Our team creates fast and reliable solutions through our development of dynamic interfaces and secure back end web systems. The businesses we help through our web application development services gain improved workflow management. The Website development cost in India is fully transparent to us, which enables companies to budget their expenses while delivering professional results.',
     heading2: '2. End-to-End Mobile App Development for Modern Businesses',
     para2: 'Infogentech provides mobile app development services in India, which enable customers to build applications for Android and iOS, and hybrid platforms. Our experienced team develops user-friendly applications that deliver high performance for businesses that search for "app developers near me". We develop applications that fulfill customer requirements through our ',
-    img2: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
-    img3: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
-    img4: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
+    img2: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770889835/web_2_mkdczw.png',
+    img3: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770889829/web_3_pe2gqv.png',
+    img4: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770889838/web_1_diukj5.png',
     para3: 'intuitive design and seamless performance. Our transparent approach includes clear estimates of App development cost in India, enabling smarter decisions and better planning. Our web development services and apps provide brands with digital growth solutions that support their development.',
 
   }

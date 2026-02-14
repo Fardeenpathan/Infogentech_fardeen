@@ -12,14 +12,14 @@ const contentmarketing = () => {
   } 
 
   const servicedetailcontent = {
-    img1: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
+    img1: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770895470/content_hero_aw6ucj.jpg',
     heading1: '1. Strategic Content Marketing That Builds Authority and Engagement',
     para1: 'Infogentech uses storytelling techniques with messaging methods and customer interaction efforts to help brands achieve business growth. Our content marketing services create brand recognition, generate sales leads, and build enduring customer trust. The leading content marketing agency India produces effective digital marketing campaigns using its research capabilities with creative abilities, and advanced technological resources. Our company creates content in various formats, from social media posts to complete articles and SEO optimized materials, helping businesses reach their target audience and enhance their online presence.',
     heading2: '2. End-to-End Content Marketing Services for Measurable Growth',
     para2: 'Our complete content marketing solutions include marketing strategies, content marketing approaches, and social media content that reach customers at every stage of their buying process. Our content marketing agency India creates various content types, including blog posts, videos, infographics, and campaigns, to meet your business objectives. Our seo content writing helps businesses to achieve better search engine results, higher website traffic, and ',
-    img2: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
-    img3: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
-    img4: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
+    img2: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770895474/content_1_ncwdqe.png',
+    img3: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770895477/content_2_nno0fs.png',
+    img4: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770895485/content_3_ss8udl.png',
     para3: 'increased customer conversions. The content marketing solutions developed by Infogentech use artistic storytelling techniques combined with analytical data information to help organizations establish their authority and enhance their online brand presence.',
 
   }

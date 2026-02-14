@@ -12,14 +12,14 @@ const socialmediamarketing = () => {
   }
 
   const servicedetailcontent = {
-    img1: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
+    img1: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770894723/social_hero_h9pnsc.jpg',
     heading1: '1. Results-Driven Social Media Marketing Agency for Modern Brands',
     para1: 'Infogentech is a reliable social media marketing agency that helps businesses increase their online presence, connect with their audience, and drive business growth. The combination of our strategic content creation methods, our community management approach, and dedicated social media advertising creates measurable outcomes at our organization. Our social media marketing agency Delhi develops tailored marketing campaigns that help businesses achieve their objectives through improved audience reach and customer interaction. The companies that need trustworthy social media marketing services select Infogentech to deliver effective social media marketing services.',
     heading2: '2. Comprehensive Social Media Marketing Services That Convert',
     para2: 'We provide complete social media marketing services, which include organic growth, paid advertising, performance analysis, and reputation management. Our team delivers creative content through posts and videos while developing social media ads that generate actual customer conversions and build brand loyalty. The top social media marketing companies have recognized our company because we use data insights and performance metrics to',
-    img2: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
-    img3: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
-    img4: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
+    img2: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770892202/social_1_j71ojw.png',
+    img3: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770892220/social_2_xbjnmz.png',
+    img4: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770892416/social_3_wfnu7z.png',
     para3: 'improve our marketing strategies. Infogentech provides customized solutions that enable businesses to expand their online presence through social media marketing better than traditional social media marketing agencies.',
 
   }

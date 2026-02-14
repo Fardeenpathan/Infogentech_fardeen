@@ -12,14 +12,14 @@ const uiuixdesign = () => {
   }
 
   const servicedetailcontent = {
-    img1: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
+    img1: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770887331/ui_hero_zgw05q.png',
     heading1: '1. UI & UX Design Services That Elevate Digital Experiences',
     para1: 'Infogentech is a leading ui ux design agency delivering strategic ui and ux design solutions that enhance digital experiences and drive user satisfaction. In todays competitive business environment, companies need to understand UI UX design as it determines how users will interact with their products. Our team creates user friendly designs for websites, apps, and platforms, helping businesses turn visitors into regular customers. Infogentech achieves seamless and purposeful digital product interactions, meeting user expectations through a combination of research and design creativity.',
     heading2: '2. User-Centered UI & UX Solutions Built for Growth',
     para2: 'Our UI UX design process involves user research with interaction flows and usability testing. We do interface refinement to achieve valuable outcomes. Infogentech educates businesses about UI UX design while developing solutions that support business growth. From creating structured workflows to developing a strong ui ux designer portfolio, Infogentech supports long-term digital growth.',
-    img2: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
-    img3: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
-    img4: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
+    img2: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770887496/ui_1_fysqwz.png',
+    img3: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770887750/ui_2_vqmzbi.png',
+    img4: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770887753/ui_3_h2tqlb.jpg',
     para3: 'Companies looking for a “UI UX design course near me” use our design expertise to create accessible, functional experiences that maintain visual design consistency to improve their brand value and product performance.',
 
   }

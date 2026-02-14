@@ -17,9 +17,9 @@ const brandingdesign = () => {
     para1: 'Infogentech is a results-driven branding agency that creates effective Brand Design solutions to help businesses establish a unique market identity. All branding efforts need visual elements to build trust with audiences and drive lasting brand recognition. Through strategic brand identity design, we assist businesses with their core values through all communication channels. Our company provides professional logo design services with branding solutions by combining creativity and storytelling. A branding agency in India, Infogentech, develops brand experiences that allow deep customer connections and drive business growth.',
     heading2: '2. End-to-End Branding Services for Modern Businesses',
     para2: 'Our branding services include brand development with digital branding, designed for scalability and long-term success. The digital branding strategies create unified brand systems that enhance online visibility across websites, social media, and other digital platforms. The initial stage of every project requires us to study your business goals and create brand identity designs that align with your desired visual outcome. Infogentech provides essential branding services, ensuring consistency across new product launches and existing brand',
-    img2: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
-    img3: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
-    img4: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
+    img2: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770888059/brand_1_lbrfxd.jpg',
+    img3: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770888312/brand_3_ptgluu.png',
+    img4: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770888333/brand_2_t5wlrr.jpg',
     para3: 'transformations. Our branding agency in India helps brands achieve market success with purposeful brand evolution and brand identity development.',
 
   }

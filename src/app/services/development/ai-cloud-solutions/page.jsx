@@ -17,9 +17,9 @@ const aicloudsolutions = () => {
     para1: 'Infogentech provides advanced cloud solutions and AI in India, which enable operational modernization and workflow automation. As one of the emerging AI companies in India, we integrate AI with secure cloud systems to convert data into actionable business insights. We provide services that include intelligent automation and predictive analytics, and cloud-native systems that enable organizations to achieve better results while decreasing their operational difficulties. Our company develops dependable, scalable systems that utilize Google Cloud AI and top-level architectures.',
     heading2: '2. Google Cloud AI Integration for High-Performance Business Applications',
     para2: 'Our approach focuses on designing, developing, and deploying intelligent systems that use Google Cloud AI and the Google Cloud AI Platform. Infogentech provides complete cloud AI solutions that span AI model training and deployment, cloud hosting, and modern application development. We create high-performance applications while maintaining ongoing development to support business expansion.',
-    img2: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
-    img3: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
-    img4: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
+    img2: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770891569/cloud_1_bgaxzx.png',
+    img3: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770891579/cloud_2_h6ebwb.png',
+    img4: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770891743/cloud_3_d8jdgf.png',
     para3: 'Our team assists organizations with AI implementation, making Infogentech an authentic partner for AI and cloud transformation projects across industries.',
 
   }

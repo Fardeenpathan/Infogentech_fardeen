@@ -17,9 +17,9 @@ const seoperformance = () => {
     para1: 'Infogentech offers SEO services based on performance metrics to boost online visibility and drive sustainable business growth. Our company operates as a reliable seo agency India, while our expertise enables us to provide complete search engine optimization services that help businesses achieve higher search engine rankings. Our method combines natural optimization strategies with paid search advertising to achieve maximum audience reach and optimized conversion rates. Our customized digital marketing strategies provide measurable outcomes and enhanced brand visibility, and continuous market expansion for businesses searching for the best SEO companies.',
     heading2: '2. Strategic Search Engine Marketing for Long-Term Digital Success',
     para2: 'Our comprehensive seo services India cover technical SEO, on-page optimization, content creation, and high-quality link building to strengthen your website’s foundation. Recognized among the best seo agencies and best seo companies, Infogentech focuses on ethical, data-driven practices that deliver lasting performance. Our marketing solutions begin with local SEO agency near me services and extend to developing national marketing campaigns. Our ',
-    img2: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
-    img3: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
-    img4: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
+    img2: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770894999/seo_1_nthmoe.png',
+    img3: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770895007/seo_2_im5m5l.png',
+    img4: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770895040/seo_4_ehta3a.png',
     para3: 'transparent reporting system, combined with continuous improvement strategies, will help your business generate leads and increase conversion rates to achieve digital success.',
 
   }
