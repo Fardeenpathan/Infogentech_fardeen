@@ -78,7 +78,6 @@ export default function IndServicesDetailsidebar() {
                             </SwiperSlide>
                         ))}
                     </Swiper>
-
                     {/* end of testiminal */}
 
                 </div>
