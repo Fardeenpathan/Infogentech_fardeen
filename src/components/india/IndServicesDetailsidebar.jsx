@@ -89,6 +89,7 @@ export default function IndServicesDetailsidebar() {
                         <h2 className="text-[26px] text-white font-montserrat font-semibold mb-6">
                             Do You Need Any Consulting Service?
                         </h2>
+                        
                         <Link
                             href="/contact"
                             className="border-[#d4d2f5] bg-primary text-white rounded-4xl py-2 px-6 font-semibold inline-block"
