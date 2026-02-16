@@ -23,7 +23,7 @@ export default function IndServiceCard({ categories }) {
                   <Icons name={category.icon} />
                 </div>
 
-        <h3 className="font-avalors font-normal text-xl sm:text-[36px] lg:text-2xl leading-[120%] capitalize text-gray-400">
+        <h3 className="font-avalors font-normal text-[14px] sm:text-[36px] lg:text-2xl leading-[120%] capitalize text-gray-400">
                   {category.title}
                 </h3>
                 
@@ -38,10 +38,10 @@ export default function IndServiceCard({ categories }) {
                   </div>
                 </div>
                </Link>
-                <span className="text-nowrap text-[18px] md:text-xl font-semibold text-gray-600">
+                <span className="text-nowrap md:text-[18px] text-[14px] md:text-xl font-semibold text-gray-600">
                   Learn more
                 </span>
-
+ 
                 </div>
                 
             
