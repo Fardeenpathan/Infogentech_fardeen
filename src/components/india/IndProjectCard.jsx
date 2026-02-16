@@ -28,7 +28,7 @@ export default function IndProjectCard({ category }) {
                 height={600}
                 className="w-full h-35 md:h-45 rounded-2xl object-fit"
               />
-              <a
+              {/* <a
                 href={img.link}
                 className="flex items-center md:gap-4 gap-2 cursor-pointer absolute bottom-4 left-2 md:left-4"
               >
@@ -40,7 +40,7 @@ export default function IndProjectCard({ category }) {
                 <span className="text-nowrap md:text-xl text-[16px] text-white">
                   Open Projects
                 </span>
-              </a>
+              </a> */}
             </div>
           ))}
         </div>

@@ -111,11 +111,11 @@ const Design = () => {
    image: [
         {
           src: "/assist/services/design/Branding1.png",
-          link: "/project/1",
+          // link: "/project/1",
         },
         {
           src: "/assist/services/design/Branding2.png",
-          link: "/project/2",
+          // link: "/project/2",
         },
       ],
       icon: "ServiceBranding",
@@ -129,11 +129,11 @@ const Design = () => {
         image: [
         {
           src: "/assist/services/design/LOGO1.png",
-          link: "/project/1",
+          // link: "/project/1",
         },
         {
           src: "/assist/services/design/LOGO2.png",
-          link: "/project/2",
+          // link: "/project/2",
         },
       ],
       icon: "Servicelogo",

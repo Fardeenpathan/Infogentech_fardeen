@@ -126,7 +126,7 @@ const SlugPage = () => {
                 </div>
 
                 <div className="flex flex-col gap-3 items-center md:items-end col-span-2 lg:col-span-1 w-fit pb-2">
-                             {project.url && (
+                             {project.url && project.buttonText &&(
                                <a
                                  href={project.url}
                                  target="_blank"
@@ -148,6 +148,10 @@ const SlugPage = () => {
                                </a>
                              )}
                            </div>
+
+
+                      
+
               </div>
             </div>
           </div>

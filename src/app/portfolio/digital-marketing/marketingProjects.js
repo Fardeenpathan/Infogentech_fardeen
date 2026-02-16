@@ -8,7 +8,7 @@ const marketingProjects = [
     description:
       "AirlineReservationWindow is a digital marketing and UX initiative aimed at creating a strong presence in a competitive flight booking market.",
     url: " ",
-    buttonText: " ",
+    // buttonText: " ",
     points: [
       "Infogentech implemented SEO, content marketing, and UX enhancements to improve visibility and conversions.",
       "Took data insights from Google Search Console to guide performance-driven optimizations.",
@@ -83,7 +83,7 @@ const marketingProjects = [
       "Brand Partnership Readiness ",
     ],
       url: " ",
-    buttonText: " ",
+    // buttonText: " ",
   },
   {
     id: 4,
@@ -126,7 +126,7 @@ const marketingProjects = [
       "Data-Driven Optimization ",
     ],
       url: " ",
-    buttonText: " ",
+    // buttonText: " ",
   },
   {
     id: 5,
@@ -170,7 +170,7 @@ const marketingProjects = [
       "Ad Budget Scaling & ROI Optimization ",
     ],
       url: " ",
-    buttonText: " ",
+    // buttonText: " ",
   },
   {
     id: 6,
@@ -212,7 +212,7 @@ const marketingProjects = [
       "Revenue Modeling & ROI Optimization",
     ],
       url: " ",
-    buttonText: " ",
+    // buttonText: " ",
   },
   {
     id: 7,
@@ -250,7 +250,7 @@ const marketingProjects = [
       "Performance Tracking ",
     ],
       url: " ",
-    buttonText: " ",
+    // buttonText: " ",
   },
   {
     id: 8,
@@ -289,7 +289,7 @@ const marketingProjects = [
       "Keyword Research & Analytics ",
     ],
       url: " ",
-    buttonText: " ",
+    // buttonText: " ",
   },
   {
     id: 9,
@@ -328,7 +328,7 @@ const marketingProjects = [
       "Content Optimization ",
     ],
       url: " ",
-    buttonText: " ",
+    // buttonText: " ",
   },
 ];
 

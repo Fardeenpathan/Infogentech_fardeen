@@ -83,7 +83,7 @@ export default function IndServicesDetailsidebar() {
 
                 </div>
 
-                <div className="relative bg-[url('https://res.cloudinary.com/dx2di0mvx/image/upload/v1771233507/Consulting_xziji2.png')] bg-cover bg-center px-6 py-16 text-center rounded-2xl overflow-hidden">
+                <div className="relative bg-[url('https://res.cloudinary.com/dx2di0mvx/image/upload/v1771239869/Consulting_d4foz2.jpg')] bg-cover bg-center px-6 py-16 text-center rounded-2xl overflow-hidden">
                     <div className="absolute inset-0 bg-black/60"></div>
                     <div className="relative z-10">
                         <h2 className="text-[26px] text-white font-montserrat font-semibold mb-6">

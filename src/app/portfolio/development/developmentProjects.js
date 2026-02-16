@@ -84,7 +84,7 @@ const developmentProjects = [
       "Content & Storytelling",
     ],
      url: " ",
-    buttonText: " ",
+    // buttonText: " ",
   },
   // {
   //   id: 3,

@@ -46,7 +46,7 @@ const designProjects = [
     tools: ["Adobe Illustrator", "Figma"],
     location: "India (Remote)",
     url: " ",
-    buttonText: " ",
+    // buttonText: " ",
     modules: ["Logo Design", "Brand Identity", "Vector Graphics"],
     expertise: ["Brand Design", "Visual Identity", "Typography"],
     points: [
