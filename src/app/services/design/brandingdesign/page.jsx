@@ -12,7 +12,7 @@ const brandingdesign = () => {
   }
 
   const servicedetailcontent = {
-    img1: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
+    img1: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1771231013/Branding_hero_wx7oho.png',
     heading1: '1. Strategic Brand Design That Builds Recognition',
     para1: 'Infogentech is a results-driven branding agency that creates effective Brand Design solutions to help businesses establish a unique market identity. All branding efforts need visual elements to build trust with audiences and drive lasting brand recognition. Through strategic brand identity design, we assist businesses with their core values through all communication channels. Our company provides professional logo design services with branding solutions by combining creativity and storytelling. A branding agency in India, Infogentech, develops brand experiences that allow deep customer connections and drive business growth.',
     heading2: '2. End-to-End Branding Services for Modern Businesses',
@@ -23,6 +23,7 @@ const brandingdesign = () => {
     para3: 'transformations. Our branding agency in India helps brands achieve market success with purposeful brand evolution and brand identity development.',
 
   }
+
 
   const servicedetailsfaqs = {
     faqs: [

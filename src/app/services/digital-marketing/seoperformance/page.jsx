@@ -12,7 +12,7 @@ const seoperformance = () => {
   }
 
   const servicedetailcontent = {
-    img1: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
+    img1: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1771231492/SEO_3_dpffef.png',
     heading1: '1. SEO Services That Improve Rankings and Visibility',
     para1: 'Infogentech offers SEO services based on performance metrics to boost online visibility and drive sustainable business growth. Our company operates as a reliable seo agency India, while our expertise enables us to provide complete search engine optimization services that help businesses achieve higher search engine rankings. Our method combines natural optimization strategies with paid search advertising to achieve maximum audience reach and optimized conversion rates. Our customized digital marketing strategies provide measurable outcomes and enhanced brand visibility, and continuous market expansion for businesses searching for the best SEO companies.',
     heading2: '2. Strategic Search Engine Marketing for Long-Term Digital Success',

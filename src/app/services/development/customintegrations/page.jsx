@@ -12,7 +12,7 @@ const customintegrations = () => {
   }
 
   const servicedetailcontent = {
-    img1: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
+    img1: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1771231307/Custom_hero_a9cyyf.png',
     heading1: '1. Custom Integration Services That Connect Your Business Systems',
     para1: 'Infogentech delivers custom integration solutions that connect your tools, platforms, and workflows into one seamless environment. Our crm integration services and ERP and crm integration solutions ensure smooth data flow between sales, operations, and finance systems. Whether you need crm integration with ERP, payment gateway integration, or a secure payment gateway integration api, we build reliable connections tailored to your needs. Through our system integration services and api integration services, we eliminate manual tasks, reduce errors, and create efficient, scalable processes for modern businesses.',
     heading2: '2. Scalable SaaS and Data Integration for Smarter Automation',

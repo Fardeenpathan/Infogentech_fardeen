@@ -7,24 +7,31 @@ import Link from "next/link";
 export default function IndServicesDetailsidebar() {
     const testimonial = [
         {
-            des: '"You made it so simple. My new site is so much faster & easier to work"',
+            des: '"Infogentech helped us streamline our digital presence with thoughtful strategy, design, and reliable development support."',
             img: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
-            name: 'Suraj Kumar',
-            designation: 'Founder of Taskio'
+            name: 'Alok Khanna',
+            designation: 'Aikya Apparels'
         },
 
         {
-            des: '"we spend description 2 You made it so simple. My new site."',
+            des: '"Working with Infogentech improved our brand clarity, website performance, and overall online customer engagement."',
             img: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
-            name: 'Ashish verma',
-            designation: 'CEO of company'
+            name: 'Pankaj',
+            designation: 'SD Global'
         },
 
         {
-            des: '"third we spend description 2 You made it so simple. My new site."',
+            des: '"The Infogentech team understood our goals quickly and delivered practical solutions that made a real difference."',
             img: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
-            name: 'Sandeep Das ',
-            designation: 'M.D of company'
+            name: 'Tejbir',
+            designation: 'Envoys Electronics'
+        },
+
+        {
+            des: '"From design to marketing, Infogentech handled everything professionally and helped us grow with confidence."',
+            img: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
+            name: 'Kanika',
+            designation: 'Geetanjali Homestate'
         },
 
     ]
@@ -54,15 +61,15 @@ export default function IndServicesDetailsidebar() {
                     >
                         {testimonial.map((item, i) => (
                             <SwiperSlide key={i} className="text-left space-y-4 pb-12">
-                                <p className="text-[30px] leading-10 px-6 font-semibold text-black">
+                                <p className="text-[22px] leading-6 px-6 font-semibold text-black">
                                     {item.des}
                                 </p>
                                 <div className="flex flex-col-2 gap-4 px-6">
-                                    <img
+                                    {/* <img
                                         src={item.img}
                                         alt={item.name}
                                         className="w-16 h-16 rounded-full object-cover"
-                                    />
+                                    /> */}
                                     <div>
                                         <p className="text-[24px] text-primary font-semibold">{item.name}</p>
                                         <p className="text-[18px] text-black">{item.designation}</p>
@@ -76,7 +83,7 @@ export default function IndServicesDetailsidebar() {
 
                 </div>
 
-                <div className="relative bg-[url('https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png')] bg-cover bg-center px-6 py-16 text-center rounded-2xl overflow-hidden">
+                <div className="relative bg-[url('https://res.cloudinary.com/dx2di0mvx/image/upload/v1771233507/Consulting_xziji2.png')] bg-cover bg-center px-6 py-16 text-center rounded-2xl overflow-hidden">
                     <div className="absolute inset-0 bg-black/60"></div>
                     <div className="relative z-10">
                         <h2 className="text-[26px] text-white font-montserrat font-semibold mb-6">

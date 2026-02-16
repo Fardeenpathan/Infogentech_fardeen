@@ -12,7 +12,7 @@ const logodesign = () => {
   }
 
   const servicedetailcontent = {
-    img1: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
+    img1: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1771231101/logo_hero_v27yuf.png',
     heading1: '1. Strategic Logo Design That Builds a Powerful Brand Identity',
     para1: 'At Infogentech, we believe a strong logo design is the foundation of every successful brand. Your logo serves as your businesses visual identity, which displays core values and brand identity. Our logo design services combine three elements: strategic planning, research, and creative design. Creative design is to create distinctive brand identities. Our process begins with designing thoughtful logo concepts, which we refine into precise company logos that demonstrate clear design principles. Businesses trust Infogentech for creative logo design ideas that build recognition and establish a memorable presence in competitive markets.',
     heading2: '2. Custom Logo Design Services Tailored for Every Industry',

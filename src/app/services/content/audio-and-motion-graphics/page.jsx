@@ -18,8 +18,8 @@ const audioandmotiongraphics = () => {
     heading2: '2. Strategic Motion Design and Video Production Solutions',
     para2: 'Our motion design and video production services create visuals that serve specific purposes, making complex concepts easier to understand and better engaging viewers. Our process starts with explainer scripts and ends with fully animated sequences to create smooth transitions and clear messaging. Visual designers who work as motion graphics designers create artistic content that meets practical requirements, while our audio editing team guarantees high-quality sound across different platforms.',
     img2: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770897062/motion_1_muzuul.jpg',
-    img3: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
-    img4: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
+    img3: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1771231728/motion_1_agatj7.png',
+    img4: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1771231732/Motion_2_toqc4g.png',
     para3: 'By combining script to video workflows, animation, and music design, Infogentech produces motion graphics solutions that support marketing, education, and corporate communication goals.',
 
   }

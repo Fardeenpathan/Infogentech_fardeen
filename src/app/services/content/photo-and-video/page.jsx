@@ -12,14 +12,14 @@ const photoandvideo = () => {
   }
 
   const servicedetailcontent = {
-    img1: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
+    img1: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1771231589/photo_3_c80whk.png',
     heading1: '1. Strategic Video Production That Supports Real Marketing Goals',
     para1: 'At Infogentech, photo and video production serve as a creative process that functions as a strategic asset to drive business development. Our video production process creates messages that viewers can easily understand, paired with powerful visual content that aligns with your marketing goals. The team develops all assets to achieve three main objectives: enhancing visibility, increasing user interactions, and driving sales. We create content that delivers value through our visual work, including video editing and image creation, and complete platform-ready visuals that support your brand on websites and marketing campaigns.',
     heading2: '2. Creative 2D animation and 3D Animation for Engaging Brand Stories',
     para2: 'Infogentech uses advanced 2D animation and 3D animation with storytelling techniques to create visual content that attracts viewers while presenting complex concepts. Our team creates animated explainers and product visuals, along with promotional video content, to target various customer journey stages. The team develops projects through a strategy-first approach that establishes a consistent brand voice across all platforms and marketing activities. Our video production solutions use creative elements and technological components, along with ',
     img2: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770896639/photo_1_yoxx8r.jpg',
-    img3: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
-    img4: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
+    img3: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1771231661/2D_m8kanu.png',
+    img4: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1771231664/3D_jkvh0z.png',
     para3: 'performance data analysis, to create content that helps brands become known and increase viewer interactions in measurable terms.',
 
   }

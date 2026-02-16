@@ -19,7 +19,7 @@ const blogpostsandarticles = () => {
     para2: 'Beyond blogs and articles, Infogentech creates compelling case study content and professional email campaigns. The case study format that we develop results into persuasive marketing stories that support sales activities. We know how to write attractive newsletters and create content that your audience will find interesting every time they read it.',
     img2: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770897190/2_2_h3yc5o.jpg',
     img3: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1770897212/blog_2_zqzsbx.png',
-    img4: 'https://res.cloudinary.com/dpmceu66e/image/upload/v1762256798/blog-app/blogs/blogs/1762256795276-frame_338.png',
+    img4: 'https://res.cloudinary.com/dx2di0mvx/image/upload/v1771233056/Blog_3_tqel9y.png',
     para3: 'Our structured formats and strategic storytelling method work together to create content that is both informative and helps brands get more exposure on a variety of platforms.',
 
   }
