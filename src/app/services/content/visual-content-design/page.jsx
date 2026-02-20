@@ -1,3 +1,62 @@
+export const metadata = {
+  title: "Visual Content Design | Design and Content Strategy Services",
+  description:
+    "Infogentech approaches Visual Content Design through a strategic process uniting creative elements with purposeful design.",
+  keywords: [
+    "Visual Content Design",
+    "visual content design services",
+    "Visual design for business"
+  ], 
+  metadataBase: new URL("https://infogentech.com"),
+  alternates: {
+    canonical: "/services/content/visual-content-design",
+    languages: {
+      "en-US": "/services/content/visual-content-design",
+    },
+  },
+  openGraph: {
+    title: "Visual Content Design | Design and Content Strategy Services",
+    description:
+      "Infogentech approaches Visual Content Design through a strategic process uniting creative elements with purposeful design.",
+    url: "https://infogentech.com/services/content/visual-content-design",
+    siteName: "Infogentech",
+    images: [
+      {
+        url: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
+        width: 200,
+        height: 60,
+        alt: "Infogentech Logo",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Visual Content Design | Design and Content Strategy Services",
+    description:
+      "Infogentech approaches Visual Content Design through a strategic process uniting creative elements with purposeful design.",
+    site: "@infogentech",
+    images: [
+      "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
+    ],
+  },
+  robots: "index, follow, all",
+  authors: [{ name: "InfoGenTech" }],
+  publisher: "InfoGenTech",
+  alternates: {
+    canonical: "https://infogentech.com/services/content/visual-content-design",
+    languages: {
+      "en-US": "https://infogentech.com/services/content/visual-content-design",
+    },
+  },
+  other: {
+    "geo.region": "IN",
+    "http-equiv": "x-ua-compatible",
+    distribution: "global",
+  },
+};
+
+
 import IndServicesDetailHeader from "@/components/india/IndServicesDetailHeader";
 import IndServiceDetails from "@/components/india/IndServicesDetail";
 import IndServicesDetailFaqs from "@/components/india/IndServicesDetailFaqs";

@@ -1,3 +1,62 @@
+export const metadata = {
+  title: "CRM and Automation | CRM Integration Services",
+  description:
+    "Infogentech offers reliable crm integration services that connect your customer data with core business systems for smoother operations.",
+  keywords: [
+      "CRM and Automation", 
+      "crm automation software", 
+      "automation in crm"
+    ],
+  metadataBase: new URL("https://infogentech.com"),
+  alternates: {
+    canonical: "/services/digital-marketing/crm-and-automation",
+    languages: {
+      "en-US": "/services/digital-marketing/crm-and-automation",
+    },
+  },
+  openGraph: {
+    title: "CRM and Automation | CRM Integration Services",
+    description:
+      "Infogentech offers reliable crm integration services that connect your customer data with core business systems for smoother operations.",
+    url: "https://infogentech.com/services/digital-marketing/crm-and-automation",
+    siteName: "Infogentech",
+    images: [
+      {
+        url: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
+        width: 200,
+        height: 60,
+        alt: "Infogentech Logo",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CRM and Automation | CRM Integration Services",
+    description:
+      "Infogentech offers reliable crm integration services that connect your customer data with core business systems for smoother operations.",
+    site: "@infogentech",
+    images: [
+      "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
+    ],
+  },
+  robots: "index, follow, all",
+  authors: [{ name: "InfoGenTech" }],
+  publisher: "InfoGenTech",
+  alternates: {
+    canonical: "https://infogentech.com/services/digital-marketing/crm-and-automation",
+    languages: {
+      "en-US": "https://infogentech.com/services/digital-marketing/crm-and-automation",
+    },
+  },
+  other: {
+    "geo.region": "IN",
+    "http-equiv": "x-ua-compatible",
+    distribution: "global",
+  },
+};
+
+
 import IndServicesDetailHeader from "@/components/india/IndServicesDetailHeader";
 import IndServiceDetails from "@/components/india/IndServicesDetail";
 import IndServicesDetailFaqs from "@/components/india/IndServicesDetailFaqs";

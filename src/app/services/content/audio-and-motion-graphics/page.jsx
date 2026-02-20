@@ -1,3 +1,61 @@
+export const metadata = {
+  title: "Audio and Motion Graphics | Strategic Motion Design and Video",
+  description:
+    "Our motion design, video production services create visuals that serve specific purposes, making complex concepts easier to understand and better engaging viewers.",
+  keywords: [
+    "Audio and Motion Graphics",
+    "Audio and Motion Graphics services"
+  ], 
+  metadataBase: new URL("https://infogentech.com"),
+  alternates: {
+    canonical: "/services/content/audio-and-motion-graphics",
+    languages: {
+      "en-US": "/services/content/audio-and-motion-graphics",
+    },
+  },
+  openGraph: {
+    title: "Audio and Motion Graphics | Strategic Motion Design and Video",
+    description:
+      "Our motion design, video production services create visuals that serve specific purposes, making complex concepts easier to understand and better engaging viewers.",
+    url: "https://infogentech.com/services/content/audio-and-motion-graphics",
+    siteName: "Infogentech",
+    images: [
+      {
+        url: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
+        width: 200,
+        height: 60,
+        alt: "Infogentech Logo",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Audio and Motion Graphics | Strategic Motion Design and Video",
+    description:
+      "Our motion design, video production services create visuals that serve specific purposes, making complex concepts easier to understand and better engaging viewers.",
+    site: "@infogentech",
+    images: [
+      "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
+    ],
+  },
+  robots: "index, follow, all",
+  authors: [{ name: "InfoGenTech" }],
+  publisher: "InfoGenTech",
+  alternates: {
+    canonical: "https://infogentech.com/services/content/audio-and-motion-graphics",
+    languages: {
+      "en-US": "https://infogentech.com/services/content/audio-and-motion-graphics",
+    },
+  },
+  other: {
+    "geo.region": "IN",
+    "http-equiv": "x-ua-compatible",
+    distribution: "global",
+  },
+};
+
+
 import IndServicesDetailHeader from "@/components/india/IndServicesDetailHeader";
 import IndServiceDetails from "@/components/india/IndServicesDetail";
 import IndServicesDetailFaqs from "@/components/india/IndServicesDetailFaqs";
@@ -6,7 +64,7 @@ import IndServicesDetailCategoryFaqs from "@/components/india/IndServicesDetails
 
 const audioandmotiongraphics = () => {
   const servicedetailheader =
-  {
+  { 
     name: 'Audio and Motion Graphics',
     des: 'Turning Audio and Animation Into Powerful Visual Stories',
   }

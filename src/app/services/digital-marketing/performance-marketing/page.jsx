@@ -1,3 +1,66 @@
+export const metadata = {
+  title: "Performance Marketing | Strategies That Deliver Real Results",
+  description:
+    "Infogentech operates as a performance marketing agency that drives brand expansion through its precision marketing.",
+  keywords: [
+      "Performance Marketing", 
+      "online performance marketing",
+       "performance marketing digital", 
+       "social performance marketing", 
+       "campaign performance"
+    ],
+  metadataBase: new URL("https://infogentech.com"),
+  alternates: {
+    canonical: "/services/digital-marketing/performance-marketing",
+    languages: {
+      "en-US": "/services/digital-marketing/performance-marketing",
+    },
+  },
+  openGraph: {
+    title: "Performance Marketing | Strategies That Deliver Real Results",
+    description:
+      "Infogentech operates as a performance marketing agency that drives brand expansion through its precision marketing.",
+    url: "https://infogentech.com/services/digital-marketing/performance-marketing",
+    siteName: "Infogentech",
+    images: [
+      {
+        url: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
+        width: 200,
+        height: 60,
+        alt: "Infogentech Logo",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Performance Marketing | Strategies That Deliver Real Results",
+    description:
+      "Infogentech operates as a performance marketing agency that drives brand expansion through its precision marketing.",
+    site: "@infogentech",
+    images: [
+      "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
+    ],
+  },
+  robots: "index, follow, all",
+  authors: [{ name: "InfoGenTech" }],
+  publisher: "InfoGenTech",
+  alternates: {
+    canonical: "https://infogentech.com/services/digital-marketing/performance-marketing",
+    languages: {
+      "en-US": "https://infogentech.com/services/digital-marketing/performance-marketing",
+    },
+  },
+  other: {
+    "geo.region": "IN",
+    "http-equiv": "x-ua-compatible",
+    distribution: "global",
+  },
+};
+
+
+
+
 import IndServicesDetailHeader from "@/components/india/IndServicesDetailHeader";
 import IndServiceDetails from "@/components/india/IndServicesDetail";
 import IndServicesDetailFaqs from "@/components/india/IndServicesDetailFaqs";

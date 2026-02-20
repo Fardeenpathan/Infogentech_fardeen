@@ -1,3 +1,64 @@
+export const metadata = {
+  title: "CMS Development | CMS Development services",
+  description:
+    "Infogentech offers comprehensive CMS Development services that enable businesses to maintain full control over their digital content management processes.",
+  keywords: [
+    "cms development services",
+    "cms developer services",
+    "cms web development services",
+    "custom cms development company",
+    "professional cms development company"
+  ], 
+  metadataBase: new URL("https://infogentech.com"),
+  alternates: {
+    canonical: "/services/development/cmsdevelopment",
+    languages: {
+      "en-US": "/services/development/cmsdevelopment",
+    },
+  },
+  openGraph: {
+    title: "CMS Development | CMS Development services",
+    description:
+      "Infogentech offers comprehensive CMS Development services that enable businesses to maintain full control over their digital content management processes.",
+    url: "https://infogentech.com/services/development/cmsdevelopment",
+    siteName: "Infogentech",
+    images: [
+      {
+        url: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
+        width: 200,
+        height: 60,
+        alt: "Infogentech Logo",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CMS Development | CMS Development services",
+    description:
+      "Infogentech offers comprehensive CMS Development services that enable businesses to maintain full control over their digital content management processes.",
+    site: "@infogentech",
+    images: [
+      "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
+    ],
+  },
+  robots: "index, follow, all",
+  authors: [{ name: "InfoGenTech" }],
+  publisher: "InfoGenTech",
+  alternates: {
+    canonical: "https://infogentech.com/services/development/cmsdevelopment",
+    languages: {
+      "en-US": "https://infogentech.com/services/development/cmsdevelopment",
+    },
+  },
+  other: {
+    "geo.region": "IN",
+    "http-equiv": "x-ua-compatible",
+    distribution: "global",
+  },
+};
+
+
 import IndServicesDetailHeader from "@/components/india/IndServicesDetailHeader";
 import IndServiceDetails from "@/components/india/IndServicesDetail";
 import IndServicesDetailFaqs from "@/components/india/IndServicesDetailFaqs";

@@ -1,3 +1,66 @@
+export const metadata = {
+  title: "Logo Design | Custom Logo Design Services",
+  description:
+    "Our complete logo design services provide customized solutions for startups and enterprises, including creative professionals.",
+  keywords: [
+    "logo designer near me",
+    "professional logo design",
+    "best logo design company",
+    "logo design near me",
+    "best logo designers",
+    "best logo design company"
+  ], 
+  metadataBase: new URL("https://infogentech.com"),
+  alternates: {
+    canonical: "/services/design/logodesign",
+    languages: {
+      "en-US": "/services/design/logodesign",
+    },
+  },
+  openGraph: {
+    title: "Logo Design | Custom Logo Design Services",
+    description:
+      "Our complete logo design services provide customized solutions for startups and enterprises, including creative professionals.",
+    url: "https://infogentech.com/services/design/logodesign",
+    siteName: "Infogentech",
+    images: [
+      {
+        url: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
+        width: 200,
+        height: 60,
+        alt: "Infogentech Logo",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Logo Design | Custom Logo Design Services",
+    description:
+      "Our complete logo design services provide customized solutions for startups and enterprises, including creative professionals.",
+    site: "@infogentech",
+    images: [
+      "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
+    ],
+  },
+  robots: "index, follow, all",
+  authors: [{ name: "InfoGenTech" }],
+  publisher: "InfoGenTech",
+  alternates: {
+    canonical: "https://infogentech.com/services/design/logodesign",
+    languages: {
+      "en-US": "https://infogentech.com/services/design/logodesign",
+    },
+  },
+  other: {
+    "geo.region": "IN",
+    "http-equiv": "x-ua-compatible",
+    distribution: "global",
+  },
+};
+
+
+
 import IndServicesDetailHeader from "@/components/india/IndServicesDetailHeader";
 import IndServiceDetails from "@/components/india/IndServicesDetail";
 import IndServicesDetailFaqs from "@/components/india/IndServicesDetailFaqs";

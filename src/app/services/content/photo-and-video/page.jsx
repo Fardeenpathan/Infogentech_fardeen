@@ -1,3 +1,64 @@
+export const metadata = {
+  title: "Photo and Video | Creative 2D animation and 3D Animation",
+  description:
+    "Infogentech combines advanced 2D and 3D animation with strong storytelling to create engaging visuals that simplify complex concepts",
+  keywords: [
+    "2d animation and 3d animation",
+    "2d animation Services",
+    "3d animation services"
+  ], 
+  metadataBase: new URL("https://infogentech.com"),
+  alternates: {
+    canonical: "/services/content/photo-and-video",
+    languages: {
+      "en-US": "/services/content/photo-and-video",
+    },
+  },
+  openGraph: {
+    title: "Photo and Video | Creative 2D animation and 3D Animation",
+    description:
+      "Infogentech combines advanced 2D and 3D animation with strong storytelling to create engaging visuals that simplify complex concepts",
+    url: "https://infogentech.com/services/content/photo-and-video",
+    siteName: "Infogentech",
+    images: [
+      {
+        url: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
+        width: 200,
+        height: 60,
+        alt: "Infogentech Logo",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Photo and Video | Creative 2D animation and 3D Animation",
+    description:
+      "Infogentech combines advanced 2D and 3D animation with strong storytelling to create engaging visuals that simplify complex concepts",
+    site: "@infogentech",
+    images: [
+      "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
+    ],
+  },
+  robots: "index, follow, all",
+  authors: [{ name: "InfoGenTech" }],
+  publisher: "InfoGenTech",
+  alternates: {
+    canonical: "https://infogentech.com/services/content/photo-and-video",
+    languages: {
+      "en-US": "https://infogentech.com/services/content/photo-and-video",
+    },
+  },
+  other: {
+    "geo.region": "IN",
+    "http-equiv": "x-ua-compatible",
+    distribution: "global",
+  },
+};
+
+
+
+
 import IndServicesDetailHeader from "@/components/india/IndServicesDetailHeader";
 import IndServiceDetails from "@/components/india/IndServicesDetail";
 import IndServicesDetailFaqs from "@/components/india/IndServicesDetailFaqs";

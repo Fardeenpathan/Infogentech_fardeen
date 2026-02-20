@@ -1,3 +1,64 @@
+export const metadata = {
+  title: "UI/UX Design | Design Services",
+  description:
+    "Infogentech is a leading ui ux design agency delivering strategic ui and ux design solutions that enhance digital experiences and drive user satisfaction.",
+  keywords: [
+    "ux design agency", 
+    "ui ux design agency", 
+    "ui ux design services",
+    "ui ux design company",
+    "ui ux web design"
+  ], 
+  metadataBase: new URL("https://infogentech.com"),
+  alternates: {
+    canonical: "/services/design/ui-ux-design",
+    languages: {
+      "en-US": "/services/design/ui-ux-design",
+    },
+  },
+  openGraph: {
+    title: "UI/UX Design | Design Services",
+    description:
+      "Infogentech is a leading ui ux design agency delivering strategic ui and ux design solutions that enhance digital experiences and drive user satisfaction.",
+    url: "https://infogentech.com/services/design/ui-ux-design",
+    siteName: "Infogentech",
+    images: [
+      {
+        url: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
+        width: 200,
+        height: 60,
+        alt: "Infogentech Logo",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "UI/UX Design | Design Services",
+    description:
+      "Infogentech is a leading ui ux design agency delivering strategic ui and ux design solutions that enhance digital experiences and drive user satisfaction.",
+    site: "@infogentech",
+    images: [
+      "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
+    ],
+  },
+  robots: "index, follow, all",
+  authors: [{ name: "InfoGenTech" }],
+  publisher: "InfoGenTech",
+  alternates: {
+    canonical: "https://infogentech.com/services/design/ui-ux-design",
+    languages: {
+      "en-US": "https://infogentech.com/services/design/ui-ux-design",
+    },
+  },
+  other: {
+    "geo.region": "IN",
+    "http-equiv": "x-ua-compatible",
+    distribution: "global",
+  },
+};
+
+
 import IndServicesDetailHeader from "@/components/india/IndServicesDetailHeader";
 import IndServiceDetails from "@/components/india/IndServicesDetail";
 import IndServicesDetailFaqs from "@/components/india/IndServicesDetailFaqs";

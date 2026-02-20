@@ -1,3 +1,65 @@
+export const metadata = {
+  title: "Marketing Strategy | That Powers Business Growth",
+  description:
+    "We create a powerful marketing strategy that transforms business goals into measurable results.",
+  keywords: [
+    "marketing plan",
+    "best marketing strategies",
+    "marketing your business", 
+    "B2B Marketing", 
+    "marketing campaign plan"
+  ],
+  metadataBase: new URL("https://infogentech.com"),
+  alternates: {
+    canonical: "/services/digital-marketing/marketing-strategy",
+    languages: {
+      "en-US": "/services/digital-marketing/marketing-strategy",
+    },
+  },
+  openGraph: {
+    title: "Marketing Strategy | That Powers Business Growth",
+    description:
+      "We create a powerful marketing strategy that transforms business goals into measurable results.",
+    url: "https://infogentech.com/services/digital-marketing/marketing-strategy",
+    siteName: "Infogentech",
+    images: [
+      {
+        url: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
+        width: 200,
+        height: 60,
+        alt: "Infogentech Logo",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Marketing Strategy | That Powers Business Growth",
+    description:
+      "We create a powerful marketing strategy that transforms business goals into measurable results.",
+    site: "@infogentech",
+    images: [
+      "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
+    ],
+  },
+  robots: "index, follow, all",
+  authors: [{ name: "InfoGenTech" }],
+  publisher: "InfoGenTech",
+  alternates: {
+    canonical: "https://infogentech.com/services/digital-marketing/marketing-strategy",
+    languages: {
+      "en-US": "https://infogentech.com/services/digital-marketing/marketing-strategy",
+    },
+  },
+  other: {
+    "geo.region": "IN",
+    "http-equiv": "x-ua-compatible",
+    distribution: "global",
+  },
+};
+
+
+
 import IndServicesDetailHeader from "@/components/india/IndServicesDetailHeader";
 import IndServiceDetails from "@/components/india/IndServicesDetail";
 import IndServicesDetailFaqs from "@/components/india/IndServicesDetailFaqs";

@@ -1,7 +1,7 @@
 export const metadata = {
-  title: "Graphic Design| UI/UX Design | Branding & Logo Design | Infogentech Softwares LLP",
+  title: "Graphic Design| UI/UX Design | Branding & Logo Design",
   description:
-    "Enhance your brand with expert Graphic Design, UI/UX Design, Branding, and Logo Design services that create impactful digital experiences.",
+    "Infogentech is a web design agency, providing web design and development services across India.",
   keywords: [
     "Graphic Design",
     "UI/UX Design",
@@ -9,6 +9,10 @@ export const metadata = {
     "Landing Page Design",
     "Corporate Identity Design",
     "Logo Design",
+    "web design agency",
+    "design and development services", 
+    "web design and development services in delhi NCR", 
+    "Website Creation"
   ], 
   metadataBase: new URL("https://infogentech.com"),
   alternates: {
@@ -20,7 +24,7 @@ export const metadata = {
   openGraph: {
     title: "Graphic Design, UI/UX Design, Branding & Logo Design | Infogentech Softwares LLP",
     description:
-      "Enhance your brand with expert Graphic Design, UI/UX Design, Branding, and Logo Design services that create impactful digital experiences.",
+      "Infogentech is a web design agency, providing web design and development services across India.",
     url: "https://infogentech.com/services/design",
     siteName: "Infogentech",
     images: [
@@ -37,7 +41,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Graphic Design, UI/UX Design, Branding & Logo Design | Infogentech Softwares LLP",
     description:
-      "Enhance your brand with expert Graphic Design, UI/UX Design, Branding, and Logo Design services that create impactful digital experiences.",
+      "Infogentech is a web design agency, providing web design and development services across India.",
     site: "@infogentech",
     images: [
       "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",

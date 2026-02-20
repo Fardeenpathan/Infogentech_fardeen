@@ -1,3 +1,65 @@
+export const metadata = {
+  title: "Analytics and Reporting | Data-Driven Analytic for Smarter Decisions",
+  description:
+    "Infogentech delivers comprehensive analytical report and performance analytics solutions that help businesses understand user behavior and improve results.",
+  keywords: [
+      "data analytics report",
+      "data analytics and reporting",
+      "reporting and data analytics", 
+      "reports in analytics"
+    ],
+  metadataBase: new URL("https://infogentech.com"),
+  alternates: {
+    canonical: "/services/digital-marketing/analytics-and-reporting",
+    languages: {
+      "en-US": "/services/digital-marketing/analytics-and-reporting",
+    },
+  },
+  openGraph: {
+    title: "Analytics and Reporting | Data-Driven Analytic for Smarter Decisions",
+    description:
+      "Infogentech delivers comprehensive analytical report and performance analytics solutions that help businesses understand user behavior and improve results.",
+    url: "https://infogentech.com/services/digital-marketing/analytics-and-reporting",
+    siteName: "Infogentech",
+    images: [
+      {
+        url: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
+        width: 200,
+        height: 60,
+        alt: "Infogentech Logo",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Analytics and Reporting | Data-Driven Analytic for Smarter Decisions",
+    description:
+      "Infogentech delivers comprehensive analytical report and performance analytics solutions that help businesses understand user behavior and improve results.",
+    site: "@infogentech",
+    images: [
+      "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
+    ],
+  },
+  robots: "index, follow, all",
+  authors: [{ name: "InfoGenTech" }],
+  publisher: "InfoGenTech",
+  alternates: {
+    canonical: "https://infogentech.com/services/digital-marketing/analytics-and-reporting",
+    languages: {
+      "en-US": "https://infogentech.com/services/digital-marketing/analytics-and-reporting",
+    },
+  },
+  other: {
+    "geo.region": "IN",
+    "http-equiv": "x-ua-compatible",
+    distribution: "global",
+  },
+};
+
+
+
+
 import IndServicesDetailHeader from "@/components/india/IndServicesDetailHeader";
 import IndServiceDetails from "@/components/india/IndServicesDetail";
 import IndServicesDetailFaqs from "@/components/india/IndServicesDetailFaqs";

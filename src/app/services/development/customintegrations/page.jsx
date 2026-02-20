@@ -1,3 +1,61 @@
+export const metadata = {
+  title: "Custom Integrations | Connect Your Business with Systems",
+  description:
+    "Our custom integration approach includes saas integration services, data integration services, and software automation services that simplify complex operations.",
+  keywords: [
+    "custom integrations",
+     "custom integrations services"
+  ], 
+  metadataBase: new URL("https://infogentech.com"),
+  alternates: {
+    canonical: "/services/development/customintegrations",
+    languages: {
+      "en-US": "/services/development/customintegrations",
+    },
+  },
+  openGraph: {
+    title: "Custom Integrations | Connect Your Business with Systems",
+    description:
+      "Our custom integration approach includes saas integration services, data integration services, and software automation services that simplify complex operations.",
+    url: "https://infogentech.com/services/development/customintegrations",
+    siteName: "Infogentech",
+    images: [
+      {
+        url: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
+        width: 200,
+        height: 60,
+        alt: "Infogentech Logo",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Custom Integrations | Connect Your Business with Systems",
+    description:
+      "Our custom integration approach includes saas integration services, data integration services, and software automation services that simplify complex operations.",
+    site: "@infogentech",
+    images: [
+      "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
+    ],
+  },
+  robots: "index, follow, all",
+  authors: [{ name: "InfoGenTech" }],
+  publisher: "InfoGenTech",
+  alternates: {
+    canonical: "https://infogentech.com/services/development/customintegrations",
+    languages: {
+      "en-US": "https://infogentech.com/services/development/customintegrations",
+    },
+  },
+  other: {
+    "geo.region": "IN",
+    "http-equiv": "x-ua-compatible",
+    distribution: "global",
+  },
+};
+
+
 import IndServicesDetailHeader from "@/components/india/IndServicesDetailHeader";
 import IndServiceDetails from "@/components/india/IndServicesDetail";
 import IndServicesDetailFaqs from "@/components/india/IndServicesDetailFaqs";

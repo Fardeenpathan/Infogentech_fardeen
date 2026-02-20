@@ -1,3 +1,63 @@
+export const metadata = {
+  title: "Blog Posts And Articles | Strategic Writing for Better Visibility",
+  description:
+    "Infogentech provides professional blog and article writing services designed to improve visibility, build authority, and communicate ideas clearly.",
+  keywords: [
+    "blog posts and articles services", 
+    "Content services"
+  ], 
+  metadataBase: new URL("https://infogentech.com"),
+  alternates: {
+    canonical: "/services/content/blog-posts-and-articles",
+    languages: {
+      "en-US": "/services/content/blog-posts-and-articles",
+    },
+  },
+  openGraph: {
+    title: "Blog Posts And Articles | Strategic Writing for Better Visibility",
+    description:
+      "Infogentech provides professional blog and article writing services designed to improve visibility, build authority, and communicate ideas clearly.",
+    url: "https://infogentech.com/services/content/blog-posts-and-articles",
+    siteName: "Infogentech",
+    images: [
+      {
+        url: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
+        width: 200,
+        height: 60,
+        alt: "Infogentech Logo",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blog Posts And Articles | Strategic Writing for Better Visibility",
+    description:
+      "Infogentech provides professional blog and article writing services designed to improve visibility, build authority, and communicate ideas clearly.",
+    site: "@infogentech",
+    images: [
+      "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
+    ],
+  },
+  robots: "index, follow, all",
+  authors: [{ name: "InfoGenTech" }],
+  publisher: "InfoGenTech",
+  alternates: {
+    canonical: "https://infogentech.com/services/content/blog-posts-and-articles",
+    languages: {
+      "en-US": "https://infogentech.com/services/content/blog-posts-and-articles",
+    },
+  },
+  other: {
+    "geo.region": "IN",
+    "http-equiv": "x-ua-compatible",
+    distribution: "global",
+  },
+};
+
+
+
+
 import IndServicesDetailHeader from "@/components/india/IndServicesDetailHeader";
 import IndServiceDetails from "@/components/india/IndServicesDetail";
 import IndServicesDetailFaqs from "@/components/india/IndServicesDetailFaqs";

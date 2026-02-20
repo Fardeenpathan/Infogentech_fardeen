@@ -1,7 +1,7 @@
 export const metadata = {
-  title: "Marketing Strategy & Performance | SEO & CRM Solutions | Infogentech Softwares LLP",
+  title: "Digital Marketing | SEO & CRM Solutions | Infogentech",
   description:
-    "Boost your business with expert Marketing Strategy, Performance Marketing, CRM & Automation, SEO, Content Marketing, and Audience Engagement Strategy.",
+    "Digital Marketing Services Agency in India. top digital marketing company in Delhi, India",
   keywords: [
     "B2B Content Strategies",
     "ROI-Driven Campaign Strategies",
@@ -14,6 +14,12 @@ export const metadata = {
     "Keyword Research & Competitor Analysis",
     "Blog Writing & SEO Copy",
     "Google Analytics Setup",
+    "top digital marketing company in Delhi", 
+    "specializing in SEO",
+    "SMM",
+    "website design", 
+    "PPC services", 
+    "B2B digital marketing"
   ],
   metadataBase: new URL("https://infogentech.com"),
   alternates: {
@@ -23,9 +29,9 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Marketing Strategy & Performance | SEO & CRM Solutions | Infogentech Softwares LLP",
+    title: "Digital Marketing | SEO & CRM Solutions | Infogentech",
     description:
-      "Boost your business with expert Marketing Strategy, Performance Marketing, CRM & Automation, SEO, Content Marketing, and Audience Engagement Strategy.",
+      "Digital Marketing Services Agency in India. top digital marketing company in Delhi, India",
     url: "https://infogentech.com/services/digital-marketing",
     siteName: "Infogentech",
     images: [
@@ -40,9 +46,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Marketing Strategy & Performance | SEO & CRM Solutions | Infogentech Softwares LLP",
+    title: "Digital Marketing | SEO & CRM Solutions | Infogentech",
     description:
-      "Boost your business with expert Marketing Strategy, Performance Marketing, CRM & Automation, SEO, Content Marketing, and Audience Engagement Strategy.",
+      "Digital Marketing Services Agency in India. top digital marketing company in Delhi, India",
     site: "@infogentech",
     images: [
       "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",

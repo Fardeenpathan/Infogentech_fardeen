@@ -1,3 +1,64 @@
+export const metadata = {
+  title: "Social Media Marketing | Agency for Brands",
+  description:
+    "We provide complete social media marketing services, include organic growth, paid advertising, performance analysis, & reputation management",
+  keywords: [
+    "social media advertising",
+    "social media marketing company",
+    "social media promotion",
+    "social media marketing near me"
+  ],
+  metadataBase: new URL("https://infogentech.com"),
+  alternates: {
+    canonical: "/services/digital-marketing/socialmediamarketing",
+    languages: {
+      "en-US": "/services/digital-marketing/socialmediamarketing",
+    },
+  },
+  openGraph: {
+    title: "Social Media Marketing | Agency for Brands",
+    description:
+      "We provide complete social media marketing services, include organic growth, paid advertising, performance analysis, & reputation management",
+    url: "https://infogentech.com/services/digital-marketing/socialmediamarketing",
+    siteName: "Infogentech",
+    images: [
+      {
+        url: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
+        width: 200,
+        height: 60,
+        alt: "Infogentech Logo",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Social Media Marketing | Agency for Brands",
+    description:
+      "We provide complete social media marketing services, include organic growth, paid advertising, performance analysis, & reputation management",
+    site: "@infogentech",
+    images: [
+      "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
+    ],
+  },
+  robots: "index, follow, all",
+  authors: [{ name: "InfoGenTech" }],
+  publisher: "InfoGenTech",
+  alternates: {
+    canonical: "https://infogentech.com/services/digital-marketing/socialmediamarketing",
+    languages: {
+      "en-US": "https://infogentech.com/services/digital-marketing/socialmediamarketing",
+    },
+  },
+  other: {
+    "geo.region": "IN",
+    "http-equiv": "x-ua-compatible",
+    distribution: "global",
+  },
+};
+
+
+
 import IndServicesDetailHeader from "@/components/india/IndServicesDetailHeader";
 import IndServiceDetails from "@/components/india/IndServicesDetail";
 import IndServicesDetailFaqs from "@/components/india/IndServicesDetailFaqs";

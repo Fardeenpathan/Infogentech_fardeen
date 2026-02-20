@@ -1,3 +1,65 @@
+export const metadata = {
+  title: "Content Marketing | End-to-End Content Marketing Services",
+  description:
+    "Our complete content marketing solutions include marketing strategies, content marketing approaches at every stage of their buying process.",
+  keywords: [
+      "content marketing agency",
+      "content marketing agency near me",
+      "content company",
+      "digital content company",
+      "content for digital marketing agency"
+    ],
+  metadataBase: new URL("https://infogentech.com"),
+  alternates: {
+    canonical: "/services/digital-marketing/content-marketing",
+    languages: {
+      "en-US": "/services/digital-marketing/content-marketing",
+    },
+  },
+  openGraph: {
+    title: "Content Marketing | End-to-End Content Marketing Services",
+    description:
+      "Our complete content marketing solutions include marketing strategies, content marketing approaches at every stage of their buying process.",
+    url: "https://infogentech.com/services/digital-marketing/content-marketing",
+    siteName: "Infogentech",
+    images: [
+      {
+        url: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
+        width: 200,
+        height: 60,
+        alt: "Infogentech Logo",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Content Marketing | End-to-End Content Marketing Services",
+    description:
+      "Our complete content marketing solutions include marketing strategies, content marketing approaches at every stage of their buying process.",
+    site: "@infogentech",
+    images: [
+      "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
+    ],
+  },
+  robots: "index, follow, all",
+  authors: [{ name: "InfoGenTech" }],
+  publisher: "InfoGenTech",
+  alternates: {
+    canonical: "https://infogentech.com/services/digital-marketing/content-marketing",
+    languages: {
+      "en-US": "https://infogentech.com/services/digital-marketing/content-marketing",
+    },
+  },
+  other: {
+    "geo.region": "IN",
+    "http-equiv": "x-ua-compatible",
+    distribution: "global",
+  },
+};
+
+
+
 import IndServicesDetailHeader from "@/components/india/IndServicesDetailHeader";
 import IndServiceDetails from "@/components/india/IndServicesDetail";
 import IndServicesDetailFaqs from "@/components/india/IndServicesDetailFaqs";

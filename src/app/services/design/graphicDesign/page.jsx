@@ -1,3 +1,66 @@
+export const metadata = {
+  title: "Graphic Design | Strong Brand Identity",
+  description:
+    "Infogentech provides businesses with professional graphic design services that deliver effective visual solutions to create strong corporate identities.",
+  keywords: [
+    "graphic design company",
+    "graphic design company website",
+    "graphic design services website",
+    "visual design company",
+    "corporate graphic design"
+  ], 
+  metadataBase: new URL("https://infogentech.com"),
+  alternates: {
+    canonical: "/services/design/graphicDesign",
+    languages: {
+      "en-US": "/services/design/graphicDesign",
+    },
+  },
+  openGraph: {
+    title: "Graphic Design | Strong Brand Identity",
+    description:
+      "Infogentech provides businesses with professional graphic design services that deliver effective visual solutions to create strong corporate identities.",
+    url: "https://infogentech.com/services/design/graphicDesign",
+    siteName: "Infogentech",
+    images: [
+      {
+        url: "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
+        width: 200,
+        height: 60,
+        alt: "Infogentech Logo",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Graphic Design | Strong Brand Identity",
+    description:
+      "Infogentech provides businesses with professional graphic design services that deliver effective visual solutions to create strong corporate identities.",
+    site: "@infogentech",
+    images: [
+      "https://res.cloudinary.com/dpmceu66e/image/upload/v1761122550/blog-app/blogs/blogs/1761122539255-group_2147224477.png",
+    ],
+  },
+  robots: "index, follow, all",
+  authors: [{ name: "InfoGenTech" }],
+  publisher: "InfoGenTech",
+  alternates: {
+    canonical: "https://infogentech.com/services/design/graphicDesign",
+    languages: {
+      "en-US": "https://infogentech.com/services/design/graphicDesign",
+    },
+  },
+  other: {
+    "geo.region": "IN",
+    "http-equiv": "x-ua-compatible",
+    distribution: "global",
+  },
+};
+
+
+
+
 import IndServicesDetailHeader from "@/components/india/IndServicesDetailHeader";
 import IndServiceDetails from "@/components/india/IndServicesDetail";
 import IndServicesDetailFaqs from "@/components/india/IndServicesDetailFaqs";
