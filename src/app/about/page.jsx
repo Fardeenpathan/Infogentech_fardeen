@@ -9,7 +9,7 @@ export const metadata = {
     languages: {
       "en-US": "/about",
     },
-  },
+  }, 
   openGraph: {
     title: "About Us | Infogentech Softwares LLP",
     description:

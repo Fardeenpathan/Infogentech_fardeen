@@ -5,7 +5,7 @@ export const metadata = {
   keywords: [
     "web application development",
     "web app agency",
-    "website building apps",
+    "website building apps", 
     "web development agency",
     "web development company",
     "best web development companies"
@@ -46,12 +46,12 @@ export const metadata = {
   robots: "index, follow, all",
   authors: [{ name: "InfoGenTech" }],
   publisher: "InfoGenTech",
-  alternates: {
-    canonical: "https://infogentech.com/services/development/web-app-development",
-    languages: {
-      "en-US": "https://infogentech.com/services/development/web-app-development",
-    },
-  },
+  // alternates: {
+  //   canonical: "https://infogentech.com/services/development/web-app-development",
+  //   languages: {
+  //     "en-US": "https://infogentech.com/services/development/web-app-development",
+  //   },
+  // },
   other: {
     "geo.region": "IN",
     "http-equiv": "x-ua-compatible",
